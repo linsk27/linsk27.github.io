@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>https://linsk27.github.io/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 26 Mar 2024 17:35:30 +0800</lastBuildDate>
+    <atom:link href="https://linsk27.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>First</title>
+      <link>https://linsk27.github.io/post/first/</link>
+      <pubDate>Tue, 26 Mar 2024 17:35:30 +0800</pubDate>
+      <guid>https://linsk27.github.io/post/first/</guid>
+      <description>一. 如何用docker安装wechat （包含打开关闭和删除方法）&#xA;https://blog.csdn.net/a772304419/article/details/121652257&#xA;二. 如何安装搜狗输入法 教程链接： https://blog.csdn.net/code_change_era/article/details/113834432&#xA;注意事项：装完后重启生效,可自己在全局配置更改快捷键输入法切换&#xA;三. 激活Typora的linux系统操作 主教程链接： https://zhuanlan.zhihu.com/p/636193675&#xA;1. 在执行curl &amp;ndash;proto &amp;lsquo;=https&amp;rsquo; &amp;ndash;tlsv1.2 -sSf https://sh.rustup.rs | sh的时候需要安装加速 解决链接： https://zhuanlan.zhihu.com/p/126201430&#xA;2.【Rust】cargo update或者cargo build国内被墙失败解决办法 解决链接： https://blog.csdn.net/m0_52788502/article/details/123012518</description>
+    </item>
+  </channel>
+</rss>
