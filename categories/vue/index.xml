@@ -9,10 +9,10 @@
         <copyright>爱吃鱼的小林 - linsk</copyright>
         <lastBuildDate>Sat, 12 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/categories/vue/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>v-if和v-for不该同时作用于一个模块</title>
-        <link>https://linsk27.github.io/p/test-chinese/</link>
+        <link>https://linsk27.github.io/p/v-if%E5%92%8Cv-for%E4%B8%8D%E8%AF%A5%E5%90%8C%E6%97%B6%E4%BD%9C%E7%94%A8%E4%BA%8E%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97/</link>
         <pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/p/test-chinese/</guid>
+        <guid>https://linsk27.github.io/p/v-if%E5%92%8Cv-for%E4%B8%8D%E8%AF%A5%E5%90%8C%E6%97%B6%E4%BD%9C%E7%94%A8%E4%BA%8E%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97/</guid>
         <description>&lt;h1 id=&#34;v-if和v-for不该同时作用于一个模块&#34;&gt;v-if和v-for不该同时作用于一个模块
 &lt;/h1&gt;&lt;p&gt;这个错误信息 &lt;code&gt;[vue/no-use-v-if-with-v-for]&lt;/code&gt; 是由 ESLint 的 Vue.js 插件 &lt;code&gt;eslint-plugin-vue&lt;/code&gt; 产生的。它指出在你的 Vue.js 模板中，&lt;code&gt;v-if&lt;/code&gt; 和 &lt;code&gt;v-for&lt;/code&gt; 指令被不当地一起使用在了同一个元素上。&lt;/p&gt;
 &lt;h3 id=&#34;为什么会产生这个错误&#34;&gt;为什么会产生这个错误？

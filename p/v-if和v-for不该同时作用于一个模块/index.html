@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Guide to emoji usage in Hugo">
-<title>Emoji Support</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Vue warn">
+<title>v-if和v-for不该同时作用于一个模块</title>
 
-<link rel='canonical' href='https://linsk27.github.io/p/emoji-support/'>
+<link rel='canonical' href='https://linsk27.github.io/p/v-if%E5%92%8Cv-for%E4%B8%8D%E8%AF%A5%E5%90%8C%E6%97%B6%E4%BD%9C%E7%94%A8%E4%BA%8E%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Emoji Support">
-<meta property='og:description' content="Guide to emoji usage in Hugo">
-<meta property='og:url' content='https://linsk27.github.io/p/emoji-support/'>
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="v-if和v-for不该同时作用于一个模块">
+<meta property='og:description' content="Vue warn">
+<meta property='og:url' content='https://linsk27.github.io/p/v-if%E5%92%8Cv-for%E4%B8%8D%E8%AF%A5%E5%90%8C%E6%97%B6%E4%BD%9C%E7%94%A8%E4%BA%8E%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97/'>
 <meta property='og:site_name' content='爱吃鱼的小林 - linsk'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='emoji' /><meta property='article:published_time' content='2019-03-05T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2019-03-05T00:00:00&#43;00:00'/><meta property='og:image' content='https://linsk27.github.io/p/emoji-support/the-creative-exchange-d2zvqp3fpro-unsplash.jpg' />
-<meta name="twitter:title" content="Emoji Support">
-<meta name="twitter:description" content="Guide to emoji usage in Hugo"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://linsk27.github.io/p/emoji-support/the-creative-exchange-d2zvqp3fpro-unsplash.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-10-12T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-10-12T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="v-if和v-for不该同时作用于一个模块">
+<meta name="twitter:description" content="Vue warn">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -260,30 +259,60 @@
     </ol>
 </aside>
 
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#为什么会产生这个错误">为什么会产生这个错误？</a></li>
+        <li><a href="#如何修复这个错误">如何修复这个错误？</a>
+          <ol>
+            <li><a href="#错误的示例">错误的示例：</a></li>
+            <li><a href="#正确的示例">正确的示例：</a></li>
+          </ol>
+        </li>
+        <li><a href="#总结">总结</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
             <main class="main full-width">
-    <article class="has-image main-article">
+    <article class="main-article">
     <header class="article-header">
-        <div class="article-image">
-            <a href="/p/emoji-support/">
-                <img src="/p/emoji-support/the-creative-exchange-d2zvqp3fpro-unsplash_hu4784715761958561598.jpg"
-                        srcset="/p/emoji-support/the-creative-exchange-d2zvqp3fpro-unsplash_hu4784715761958561598.jpg 800w, /p/emoji-support/the-creative-exchange-d2zvqp3fpro-unsplash_hu3085507343512068137.jpg 1600w"
-                        width="800" 
-                        height="566" 
-                        loading="lazy"
-                        alt="Featured image of post Emoji Support" />
-                
-            </a>
-        </div>
-    
 
     <div class="article-details">
     
     <header class="article-category">
         
-            <a href="/categories/test/" style="background-color: #2a9d8f; color: #fff;">
-                Test
+            <a href="/categories/vue/" >
+                Vue
             </a>
         
     </header>
@@ -291,12 +320,12 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/emoji-support/">Emoji Support</a>
+            <a href="/p/v-if%E5%92%8Cv-for%E4%B8%8D%E8%AF%A5%E5%90%8C%E6%97%B6%E4%BD%9C%E7%94%A8%E4%BA%8E%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97/">v-if和v-for不该同时作用于一个模块</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            Guide to emoji usage in Hugo
+            Vue warn
         </h3>
         
     </div>
@@ -317,7 +346,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">2019-03-05</time>
+                <time class="article-time--published">2024-10-12</time>
             </div>
         
 
@@ -333,41 +362,52 @@
     <section class="article-content">
     
     
-    <p>Emoji can be enabled in a Hugo project in a number of ways.</p>
-<p>The <a class="link" href="https://gohugo.io/functions/emojify/"  target="_blank" rel="noopener"
-    ><code>emojify</code></a> function can be called directly in templates or <a class="link" href="https://gohugo.io/templates/shortcode-templates/#inline-shortcodes"  target="_blank" rel="noopener"
-    >Inline Shortcodes</a>.</p>
-<p>To enable emoji globally, set <code>enableEmoji</code> to <code>true</code> in your site&rsquo;s <a class="link" href="https://gohugo.io/getting-started/configuration/"  target="_blank" rel="noopener"
-    >configuration</a> and then you can type emoji shorthand codes directly in content files; e.g.</p>
-<p><span class="nowrap"><span class="emojify">🙈</span> <code>:see_no_evil:</code></span>  <span class="nowrap"><span class="emojify">🙉</span> <code>:hear_no_evil:</code></span>  <span class="nowrap"><span class="emojify">🙊</span> <code>:speak_no_evil:</code></span></p>
-<br>
-<p>The <a class="link" href="http://www.emoji-cheat-sheet.com/"  target="_blank" rel="noopener"
-    >Emoji cheat sheet</a> is a useful reference for emoji shorthand codes.</p>
-<hr>
-<p><strong>N.B.</strong> The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.</p>
-<div class="highlight"><div class="chroma">
+    <h1 id="v-if和v-for不该同时作用于一个模块">v-if和v-for不该同时作用于一个模块
+</h1><p>这个错误信息 <code>[vue/no-use-v-if-with-v-for]</code> 是由 ESLint 的 Vue.js 插件 <code>eslint-plugin-vue</code> 产生的。它指出在你的 Vue.js 模板中，<code>v-if</code> 和 <code>v-for</code> 指令被不当地一起使用在了同一个元素上。</p>
+<h3 id="为什么会产生这个错误">为什么会产生这个错误？
+</h3><p>在 Vue.js 中，当 <code>v-if</code> 和 <code>v-for</code> 同时用在同一个元素上时，Vue 会先处理 <code>v-for</code>，然后处理 <code>v-if</code>。这意味着即使 <code>v-if</code> 最终会过滤掉一些元素，<code>v-for</code> 仍然会遍历整个列表，这可能会导致不必要的计算开销，特别是在处理大型列表时。</p>
+<h3 id="如何修复这个错误">如何修复这个错误？
+</h3><p>根据 ESLint 的建议，你应该将 <code>v-if</code> 移动到包含 <code>v-for</code> 的父元素（或“包装元素”）上。这样可以确保 <code>v-if</code> 的条件判断只执行一次，而不是对 <code>v-for</code> 生成的每个元素都执行。</p>
+<h4 id="错误的示例">错误的示例：
+</h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">.emoji {
-</span></span><span class="line"><span class="cl">  font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
-</span></span><span class="line"><span class="cl">}</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-for</span><span class="o">=</span><span class="s">&#34;item in items&#34;</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&#34;item.active&#34;</span> <span class="na">:key</span><span class="o">=</span><span class="s">&#34;item.id&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  {{ item.name }}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
+</div><p>在这个例子中，<code>v-if</code> 会在每次迭代时都执行，检查 <code>item.active</code> 是否为真。</p>
+<h4 id="正确的示例">正确的示例：
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&#34;hasActiveItems&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-for</span><span class="o">=</span><span class="s">&#34;item in activeItems&#34;</span> <span class="na">:key</span><span class="o">=</span><span class="s">&#34;item.id&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{ item.name }}
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
+</div><p>在这个修正后的例子中，首先通过一个计算属性 <code>hasActiveItems</code> 或在 <code>data</code>、<code>computed</code> 或 <code>methods</code> 中定义的逻辑来检查是否有活跃的项。如果有，则使用 <code>v-for</code> 来渲染这些活跃的项。这里的 <code>activeItems</code> 应该是一个只包含活跃项的数组。</p>
+<h3 id="总结">总结
+</h3><p>通过将 <code>v-if</code> 移动到 <code>v-for</code> 的外部，你可以优化你的 Vue 组件的性能，避免不必要的渲染和计算。这也是 Vue.js 官方文档和 ESLint 插件推荐的最佳实践。</p>
+
 </section>
 
 
     <footer class="article-footer">
     
-    <section class="article-tags">
-        
-            <a href="/tags/emoji/">Emoji</a>
-        
-    </section>
-
 
     </footer>
 
@@ -378,63 +418,6 @@
     
 
     
-
-<aside class="related-content--wrapper">
-    <h2 class="section-title">相关文章</h2>
-    <div class="related-content">
-        <div class="flex article-list--tile">
-            
-                
-<article class="has-image">
-    <a href="/p/test-chinese/">
-        
-        
-            <div class="article-image">
-                <img src="/p/test-chinese/helena-hertz-wWZzXlDpMog-unsplash.46f61e8ea6a2df8fc5bf1d24a17c44a6_hu3238087930799200081.jpg" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post Chinese Test"
-                        data-key="test-chinese" 
-                        data-hash="md5-RvYejqai34/Fvx0koXxEpg==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Chinese Test</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/placeholder-text/">
-        
-        
-            <div class="article-image">
-                <img src="/p/placeholder-text/matt-le-SJSpo9hQf7s-unsplash.8eae06664ddfb3e8dc6e000756cb703b_hu13612953062116952428.jpg" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post Placeholder Text"
-                        
-                        data-hash="md5-jq4GZk3fs&#43;jcbgAHVstwOw==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Placeholder Text</h2>
-        </div>
-    </a>
-</article>
-
-            
-        </div>
-    </div>
-</aside>
 
      
     
