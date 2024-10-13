@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
-    <head>
-	<meta name="generator" content="Hugo 0.135.0"><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="演示说明">
-<title>爱吃鱼的小林 - linsk</title>
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="写后台弹窗会遇见的问题">
+<title>el-select标签存在的数据匹配问题</title>
 
-<link rel='canonical' href='https://linsk27.github.io/'>
+<link rel='canonical' href='https://linsk27.github.io/p/el-select%E6%A0%87%E7%AD%BE%E5%AD%98%E5%9C%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="爱吃鱼的小林 - linsk">
-<meta property='og:description' content="演示说明">
-<meta property='og:url' content='https://linsk27.github.io/'>
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="el-select标签存在的数据匹配问题">
+<meta property='og:description' content="写后台弹窗会遇见的问题">
+<meta property='og:url' content='https://linsk27.github.io/p/el-select%E6%A0%87%E7%AD%BE%E5%AD%98%E5%9C%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98/'>
 <meta property='og:site_name' content='爱吃鱼的小林 - linsk'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2024-10-13T00:00:00&#43;00:00 '/>
-<meta name="twitter:title" content="爱吃鱼的小林 - linsk">
-<meta name="twitter:description" content="演示说明"><link rel="alternate" type="application/rss&#43;xml" href="https://linsk27.github.io/index.xml">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-10-13T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-10-13T00:00:00&#43;00:00'/><meta property='og:image' content='https://linsk27.github.io/p/el-select%E6%A0%87%E7%AD%BE%E5%AD%98%E5%9C%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg' />
+<meta name="twitter:title" content="el-select标签存在的数据匹配问题">
+<meta name="twitter:description" content="写后台弹窗会遇见的问题"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://linsk27.github.io/p/el-select%E6%A0%87%E7%AD%BE%E5%AD%98%E5%9C%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
-    <body class="">
+    <body class="
+    article-page
+    ">
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
@@ -133,7 +135,7 @@
         
         
         
-        <li  class='current' >
+        <li >
             <a href='/' >
                 
                 
@@ -261,69 +263,10 @@
     <aside class="sidebar right-sidebar sticky">
         
             
-                <form action="/search/" class="search-form widget" >
-        <p>
-            <label>搜索</label>
-            <input name="keyword" required placeholder="输入关键词..." />
-        
-            <button title="搜索">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="10" cy="10" r="7" />
-  <line x1="21" y1="21" x2="15" y2="15" />
-</svg>
-
-
-
-            </button>
-        </p>
-    </form>
-            
-        
-            
-                <section class="widget archives">
+                
+    <section class="widget archives">
         <div class="widget-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
-</svg>
-
-
-
-        </div>
-        <h2 class="widget-title section-title">归档</h2>
-
-        
-        
-        
-        
-        
-        <div class="widget-archive--list">
-            <div class="archives-year">
-                    <a href="/archives/#2024">
-                        
-                            <span class="year">2024</span>
-                            <span class="count">3</span>
-                        
-                    </a> 
-                </div>
-            <div class="archives-year">
-                    <a href="/archives/#2019">
-                        
-                            <span class="year">2019</span>
-                            <span class="count">1</span>
-                        
-                    </a> 
-                </div>
-            
-        </div>
-    </section>
-            
-        
-            
-                <section class="widget tagCloud">
-    <div class="widget-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <line x1="5" y1="9" x2="19" y2="9" />
   <line x1="5" y1="15" x2="19" y2="15" />
@@ -333,29 +276,18 @@
 
 
 
-    </div>
-    <h2 class="widget-title section-title">分类</h2>
-
-    <div class="tagCloud-tags">
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
         
-            <a href="/categories/vue/" class="font_size_3">
-                Vue
-            </a>
-        
-            <a href="/categories/element/" class="font_size_1">
-                Element
-            </a>
-        
-            <a href="/categories/syntax/" class="font_size_1">
-                Syntax
-            </a>
-        
-            <a href="/categories/themes/" class="font_size_1">
-                Themes
-            </a>
-        
-    </div>
-</section>
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#一-使用方法">一 使用方法</a></li>
+    <li><a href="#二-传值问题匹配功能">二 传值问题（匹配功能）</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
 
             
         
@@ -363,15 +295,7 @@
 
 
             <main class="main full-width">
-    
-    
-    
-    
-
-    <section class="article-list">
-        
-            
-<article class="has-image">
+    <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
             <a href="/p/el-select%E6%A0%87%E7%AD%BE%E5%AD%98%E5%9C%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98/">
@@ -441,221 +365,136 @@
 </div>
 
 </header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="一-使用方法">一 使用方法
+</h2><p><code>userList</code>数据循环在列表，下拉框显示的值为<code>userList</code>里面的<code>label</code>字段的值，实际值为对应<code>label</code>的<code>uuid</code>值，如下面例子中输出选中<code>小王</code>的值应该为<code>01</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Vue" data-lang="Vue"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">el-select</span> <span class="nt">v-model</span><span class="o">=</span><span class="s">&#34;form&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">el-option</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">v-for</span><span class="o">=</span><span class="s">&#34;item in userList&#34;</span><span class="p">
+</span></span></span><span class="line"><span class="cl"><span class="p"></span>      <span class="nt">:key</span><span class="o">=</span><span class="s">&#34;item.uuid&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">:label</span><span class="o">=</span><span class="s">&#34;item.username&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">:value</span><span class="o">=</span><span class="s">&#34;item.uuid&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">el-select</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">userList</span> <span class="o">=</span> <span class="nx">ref</span><span class="p">([{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">username</span><span class="o">:</span><span class="s1">&#39;小王&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">uuid</span><span class="o">:</span><span class="s1">&#39;01&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}])</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">form</span> <span class="o">=</span> <span class="nx">ref</span><span class="o">&lt;</span><span class="nx">any</span><span class="o">&gt;</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="二-传值问题匹配功能">二 传值问题（匹配功能）
+</h2><p>当我们在子组件进行表单操作的时候，需要从父组件往子组件传相关操作数据的值，若传入<code>form</code>的值是<code>小王</code>，则<code>form</code>在下拉框中显示的值为<code>小王</code>,实际值也为<code>小王</code>，若传入的值为<code>01</code>,则下拉框中显示的值为<code>小王</code>，实际值依旧为<code>01</code></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+
+    
 </article>
-        
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
             
-<article class="has-image">
-    <header class="article-header">
-        <div class="article-image">
-            <a href="/p/v-if%E5%92%8Cv-for%E4%B8%8D%E8%AF%A5%E5%90%8C%E6%97%B6%E4%BD%9C%E7%94%A8%E4%BA%8E%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97/">
-                <img src="/p/v-if%E5%92%8Cv-for%E4%B8%8D%E8%AF%A5%E5%90%8C%E6%97%B6%E4%BD%9C%E7%94%A8%E4%BA%8E%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97/pawel-czerwinski-8uZPynIu-rQ-unsplash_hu13459586684579990428.jpg"
-                        srcset="/p/v-if%E5%92%8Cv-for%E4%B8%8D%E8%AF%A5%E5%90%8C%E6%97%B6%E4%BD%9C%E7%94%A8%E4%BA%8E%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97/pawel-czerwinski-8uZPynIu-rQ-unsplash_hu13459586684579990428.jpg 800w, /p/v-if%E5%92%8Cv-for%E4%B8%8D%E8%AF%A5%E5%90%8C%E6%97%B6%E4%BD%9C%E7%94%A8%E4%BA%8E%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97/pawel-czerwinski-8uZPynIu-rQ-unsplash_hu3425483315149503896.jpg 1600w"
-                        width="800" 
-                        height="534" 
-                        loading="lazy"
-                        alt="Featured image of post v-if和v-for不该同时作用于一个模块" />
                 
-            </a>
-        </div>
-    
-
-    <div class="article-details">
-    
-    <header class="article-category">
+<article class="has-image">
+    <a href="/p/v-if%E5%92%8Cv-for%E4%B8%8D%E8%AF%A5%E5%90%8C%E6%97%B6%E4%BD%9C%E7%94%A8%E4%BA%8E%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97/">
         
-            <a href="/categories/vue/" >
-                Vue
-            </a>
         
-    </header>
-    
-
-    <div class="article-title-wrapper">
-        <h2 class="article-title">
-            <a href="/p/v-if%E5%92%8Cv-for%E4%B8%8D%E8%AF%A5%E5%90%8C%E6%97%B6%E4%BD%9C%E7%94%A8%E4%BA%8E%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97/">v-if和v-for不该同时作用于一个模块</a>
-        </h2>
-    
-        
-        <h3 class="article-subtitle">
-            Vue warn
-        </h3>
-        
-    </div>
-
-    
-    
-    
-    
-    <footer class="article-time">
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-  <circle cx="18" cy="18" r="4" />
-  <path d="M15 3v4" />
-  <path d="M7 3v4" />
-  <path d="M3 11h16" />
-  <path d="M18 16.496v1.504l1 1" />
-</svg>
-                <time class="article-time--published">2024-10-12</time>
+            <div class="article-image">
+                <img src="/p/v-if%E5%92%8Cv-for%E4%B8%8D%E8%AF%A5%E5%90%8C%E6%97%B6%E4%BD%9C%E7%94%A8%E4%BA%8E%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97/pawel-czerwinski-8uZPynIu-rQ-unsplash.c514d916917173a48a42e0114b469961_hu7626638945853200361.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post v-if和v-for不该同时作用于一个模块"
+                        
+                        data-hash="md5-xRTZFpFxc6SKQuARS0aZYQ==">
+                
             </div>
         
 
-        
-    </footer>
-    
-
-    
-</div>
-
-</header>
-</article>
-        
-            
-<article class="has-image">
-    <header class="article-header">
-        <div class="article-image">
-            <a href="/p/vue3%E4%B8%AD%E7%9A%84pinia%E5%AF%BC%E5%85%A5%E5%92%8C%E6%8C%81%E4%B9%85%E5%8C%96%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85/">
-                <img src="/p/vue3%E4%B8%AD%E7%9A%84pinia%E5%AF%BC%E5%85%A5%E5%92%8C%E6%8C%81%E4%B9%85%E5%8C%96%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85/pawel-czerwinski-8uZPynIu-rQ-unsplash_hu13459586684579990428.jpg"
-                        srcset="/p/vue3%E4%B8%AD%E7%9A%84pinia%E5%AF%BC%E5%85%A5%E5%92%8C%E6%8C%81%E4%B9%85%E5%8C%96%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85/pawel-czerwinski-8uZPynIu-rQ-unsplash_hu13459586684579990428.jpg 800w, /p/vue3%E4%B8%AD%E7%9A%84pinia%E5%AF%BC%E5%85%A5%E5%92%8C%E6%8C%81%E4%B9%85%E5%8C%96%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85/pawel-czerwinski-8uZPynIu-rQ-unsplash_hu3425483315149503896.jpg 1600w"
-                        width="800" 
-                        height="534" 
-                        loading="lazy"
-                        alt="Featured image of post vue3中的pinia导入和持久化插件安装" />
-                
-            </a>
+        <div class="article-details">
+            <h2 class="article-title">v-if和v-for不该同时作用于一个模块</h2>
         </div>
-    
+    </a>
+</article>
 
-    <div class="article-details">
-    
-    <header class="article-category">
+            
+                
+<article class="has-image">
+    <a href="/p/vue3%E4%B8%AD%E7%9A%84pinia%E5%AF%BC%E5%85%A5%E5%92%8C%E6%8C%81%E4%B9%85%E5%8C%96%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85/">
         
-            <a href="/categories/vue/" >
-                Vue
-            </a>
         
-    </header>
-    
-
-    <div class="article-title-wrapper">
-        <h2 class="article-title">
-            <a href="/p/vue3%E4%B8%AD%E7%9A%84pinia%E5%AF%BC%E5%85%A5%E5%92%8C%E6%8C%81%E4%B9%85%E5%8C%96%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85/">vue3中的pinia导入和持久化插件安装</a>
-        </h2>
-    
-        
-        <h3 class="article-subtitle">
-            Vue Pinia
-        </h3>
-        
-    </div>
-
-    
-    
-    
-    
-    <footer class="article-time">
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-  <circle cx="18" cy="18" r="4" />
-  <path d="M15 3v4" />
-  <path d="M7 3v4" />
-  <path d="M3 11h16" />
-  <path d="M18 16.496v1.504l1 1" />
-</svg>
-                <time class="article-time--published">2024-10-12</time>
+            <div class="article-image">
+                <img src="/p/vue3%E4%B8%AD%E7%9A%84pinia%E5%AF%BC%E5%85%A5%E5%92%8C%E6%8C%81%E4%B9%85%E5%8C%96%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85/pawel-czerwinski-8uZPynIu-rQ-unsplash.c514d916917173a48a42e0114b469961_hu7626638945853200361.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post vue3中的pinia导入和持久化插件安装"
+                        
+                        data-hash="md5-xRTZFpFxc6SKQuARS0aZYQ==">
+                
             </div>
         
 
-        
-    </footer>
-    
-
-    
-</div>
-
-</header>
-</article>
-        
-            
-<article class="has-image">
-    <header class="article-header">
-        <div class="article-image">
-            <a href="/p/markdown-syntax-guide/">
-                <img src="/p/markdown-syntax-guide/the-creative-exchange-d2zvqp3fpro-unsplash_hu4784715761958561598.jpg"
-                        srcset="/p/markdown-syntax-guide/the-creative-exchange-d2zvqp3fpro-unsplash_hu4784715761958561598.jpg 800w, /p/markdown-syntax-guide/the-creative-exchange-d2zvqp3fpro-unsplash_hu3085507343512068137.jpg 1600w"
-                        width="800" 
-                        height="566" 
-                        loading="lazy"
-                        alt="Featured image of post Markdown Syntax Guide" />
-                
-            </a>
+        <div class="article-details">
+            <h2 class="article-title">vue3中的pinia导入和持久化插件安装</h2>
         </div>
-    
-
-    <div class="article-details">
-    
-    <header class="article-category">
-        
-            <a href="/categories/themes/" >
-                Themes
-            </a>
-        
-            <a href="/categories/syntax/" >
-                Syntax
-            </a>
-        
-    </header>
-    
-
-    <div class="article-title-wrapper">
-        <h2 class="article-title">
-            <a href="/p/markdown-syntax-guide/">Markdown Syntax Guide</a>
-        </h2>
-    
-        
-        <h3 class="article-subtitle">
-            Sample article showcasing basic Markdown syntax and formatting for HTML elements.
-        </h3>
-        
-    </div>
-
-    
-    
-    
-    
-    <footer class="article-time">
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-  <circle cx="18" cy="18" r="4" />
-  <path d="M15 3v4" />
-  <path d="M7 3v4" />
-  <path d="M3 11h16" />
-  <path d="M18 16.496v1.504l1 1" />
-</svg>
-                <time class="article-time--published">2019-03-11</time>
-            </div>
-        
-
-        
-    </footer>
-    
-
-    
-</div>
-
-</header>
+    </a>
 </article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
         
-    </section>
-<footer class="site-footer">
+    
+
+    <footer class="site-footer">
     <section class="copyright">
         &copy; 
         
@@ -669,6 +508,85 @@
         主题 <b></b>%!(EXTRA string=3.26.0) 由  设计
     </section>
 </footer>
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
             </main>
         </div>
         <script 
