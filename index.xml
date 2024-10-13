@@ -13,7 +13,7 @@
         <pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate>
         
         <guid>https://linsk27.github.io/p/v-if%E5%92%8Cv-for%E4%B8%8D%E8%AF%A5%E5%90%8C%E6%97%B6%E4%BD%9C%E7%94%A8%E4%BA%8E%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97/</guid>
-        <description>&lt;p&gt;&lt;code&gt;[vue/no-use-v-if-with-v-for]&lt;/code&gt; 这个错误信息是由 ESLint 的 Vue.js 插件 &lt;code&gt;eslint-plugin-vue&lt;/code&gt; 产生的。它指出在你的 Vue.js 模板中，&lt;code&gt;v-if&lt;/code&gt; 和 &lt;code&gt;v-for&lt;/code&gt; 指令被不当地一起使用在了同一个元素上。&lt;/p&gt;
+        <description>&lt;img src="https://linsk27.github.io/p/v-if%E5%92%8Cv-for%E4%B8%8D%E8%AF%A5%E5%90%8C%E6%97%B6%E4%BD%9C%E7%94%A8%E4%BA%8E%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg" alt="Featured image of post v-if和v-for不该同时作用于一个模块" /&gt;&lt;p&gt;&lt;code&gt;[vue/no-use-v-if-with-v-for]&lt;/code&gt; 这个错误信息是由 ESLint 的 Vue.js 插件 &lt;code&gt;eslint-plugin-vue&lt;/code&gt; 产生的。它指出在你的 Vue.js 模板中，&lt;code&gt;v-if&lt;/code&gt; 和 &lt;code&gt;v-for&lt;/code&gt; 指令被不当地一起使用在了同一个元素上。&lt;/p&gt;
 &lt;h3 id=&#34;为什么会产生这个错误&#34;&gt;为什么会产生这个错误？
 &lt;/h3&gt;&lt;p&gt;在 Vue.js 中，当 &lt;code&gt;v-if&lt;/code&gt; 和 &lt;code&gt;v-for&lt;/code&gt; 同时用在同一个元素上时，Vue 会先处理 &lt;code&gt;v-for&lt;/code&gt;，然后处理 &lt;code&gt;v-if&lt;/code&gt;。这意味着即使 &lt;code&gt;v-if&lt;/code&gt; 最终会过滤掉一些元素，&lt;code&gt;v-for&lt;/code&gt; 仍然会遍历整个列表，这可能会导致不必要的计算开销，特别是在处理大型列表时。&lt;/p&gt;
 &lt;h3 id=&#34;如何修复这个错误&#34;&gt;如何修复这个错误？
@@ -60,7 +60,7 @@
         <pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate>
         
         <guid>https://linsk27.github.io/p/vue3%E4%B8%AD%E7%9A%84pinia%E5%AF%BC%E5%85%A5%E5%92%8C%E6%8C%81%E4%B9%85%E5%8C%96%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85/</guid>
-        <description>&lt;h2 id=&#34;一-yarn的安装&#34;&gt;一. yarn的安装
+        <description>&lt;img src="https://linsk27.github.io/p/vue3%E4%B8%AD%E7%9A%84pinia%E5%AF%BC%E5%85%A5%E5%92%8C%E6%8C%81%E4%B9%85%E5%8C%96%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg" alt="Featured image of post vue3中的pinia导入和持久化插件安装" /&gt;&lt;h2 id=&#34;一-yarn的安装&#34;&gt;一. yarn的安装
 &lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;使用Windows &lt;a class=&#34;link&#34; href=&#34;https://so.csdn.net/so/search?q=powershell&amp;amp;spm=1001.2101.3001.7020&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;powershell&lt;/a&gt;（管理员）A命令行： npm install -g yarn，并且使用yarn -v查看是否安装成功&lt;/li&gt;

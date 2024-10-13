@@ -436,11 +436,10 @@ $$</p>
     <section class="powerby">
         
             目前评论留言功能还未开放，如有侵权或者疑问请联系邮箱1809578063qq.com进行留言 欢迎大家积极交流 <br/>
-        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        使用  构建 <br />
+        主题 <b></b>%!(EXTRA string=3.26.0) 由  设计
     </section>
 </footer>
-
 
     
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
@@ -538,6 +537,17 @@ $$</p>
         document.head.appendChild(customFont);
     }());
 </script>
+<style>
+  @font-face {
+    font-family: '鱼体';
+    src: url(https://linsk27.github.io/font/fish.ttf) format('truetype');
+  }
+
+  :root {
+    --base-font-family: '鱼体';
+    --code-font-family: '鱼体';
+  }
+</style>
 
     </body>
 </html>
