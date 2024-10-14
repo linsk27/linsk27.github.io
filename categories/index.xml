@@ -7,7 +7,23 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>爱吃鱼的小林 - linsk</copyright>
-        <lastBuildDate>Sun, 13 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 14 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Js</title>
+        <link>https://linsk27.github.io/categories/js/</link>
+        <pubDate>Mon, 14 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://linsk27.github.io/categories/js/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Vue</title>
+        <link>https://linsk27.github.io/categories/vue/</link>
+        <pubDate>Mon, 14 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://linsk27.github.io/categories/vue/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Element</title>
         <link>https://linsk27.github.io/categories/element/</link>
         <pubDate>Sun, 13 Oct 2024 00:00:00 +0000</pubDate>
@@ -16,11 +32,19 @@
         <description></description>
         </item>
         <item>
-        <title>Vue</title>
-        <link>https://linsk27.github.io/categories/vue/</link>
+        <title>Ts</title>
+        <link>https://linsk27.github.io/categories/ts/</link>
         <pubDate>Sun, 13 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/categories/vue/</guid>
+        <guid>https://linsk27.github.io/categories/ts/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Install</title>
+        <link>https://linsk27.github.io/categories/install/</link>
+        <pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://linsk27.github.io/categories/install/</guid>
         <description></description>
         </item>
         <item>
