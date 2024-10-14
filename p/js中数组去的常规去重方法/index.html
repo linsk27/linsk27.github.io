@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://linsk27.github.io/p/js%E4%B8%AD%E6%95%B0%E7%BB%84%E5%8E%BB%E7%9A%84%E5%B8%B8%E8%A7%84%E5%8E%BB%E9%87%8D%E6%96%B9%E6%B3%95/'>
 
-<link rel="stylesheet" href="/scss/style.min.6dee14e190d87eb0d0742160d48ee85cf91a626a79088c0150a32ccf7cb97db3.css"><meta property='og:title' content="js中数组去的常规去重方法">
+<link rel="stylesheet" href="/scss/style.min.20897f7927ebac2f3875c4afd611290557fba97fe7c486f5a0ed663a764d41bd.css"><meta property='og:title' content="js中数组去的常规去重方法">
 <meta property='og:description' content="数组去重方法 1. 通过 filter 过滤函数 JavaScript 的 Array.prototype.filter() 方法可以创建一个新数组，其包含通过所提供函数实现的测试的所有元素。利用这个特性，我们可以对数组进行去重。\n1 2 3 4 5 const array = [1, 2, 2, 3, 4, 4, 5]; const uniqueArray = array.filter((item, index, self) =&gt; { return self.indexOf(item) === index; }); console.log(uniqueArray); // 输出: [1, 2, 3, 4, 5] 2. 通过 new Set() 集合进行去重 Set 是 ES6 引入的一种新的数据结构，它类似于数组，但是成员的值都是唯一的，没有重复的值。我们可以利用这个特性进行数组去重。\n">
 <meta property='og:url' content='https://linsk27.github.io/p/js%E4%B8%AD%E6%95%B0%E7%BB%84%E5%8E%BB%E7%9A%84%E5%B8%B8%E8%A7%84%E5%8E%BB%E9%87%8D%E6%96%B9%E6%B3%95/'>
 <meta property='og:site_name' content='爱吃鱼的小林 - linsk'>
@@ -555,7 +555,11 @@
     
     2024 爱吃鱼的小林 - linsk·<i class="fas fa-bell"></i>共嘟嘟了 2080字·共 5篇文章</br><span><p>
 </section>
-
+    
+<section class="running-time">
+本博客已稳定运行
+<span id="runningdays" class="running-days"></span>
+</section>
     
     <section class="powerby">
 
@@ -676,13 +680,26 @@
 </style>
 <div id="particles-js"></div>
 
-<script src=https://linsk27.github.io/background/sakura.js></script>
 
 <script src=https://linsk27.github.io/background/particles.min.js></script>
 <script>
   particlesJS.load('particles-js', "https://linsk27.github.io/background/particlesjs-config.json", function() {
     console.log('particles.js loaded - callback');
   });
+</script>
+
+<script>
+    let s1 = '2024-10-12'; 
+    s1 = new Date(s1.replace(/-/g, "/"));
+    let s2 = new Date();
+    let timeDifference = s2.getTime() - s1.getTime();
+
+    let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+    let result = days + "天" + hours + "小时" + minutes + "分钟";
+    document.getElementById('runningdays').innerHTML = result;
 </script>
 
 <style>

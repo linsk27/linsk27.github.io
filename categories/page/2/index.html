@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://linsk27.github.io/categories/'>
 
-<link rel="stylesheet" href="/scss/style.min.6dee14e190d87eb0d0742160d48ee85cf91a626a79088c0150a32ccf7cb97db3.css"><meta property='og:title' content="Categories">
+<link rel="stylesheet" href="/scss/style.min.20897f7927ebac2f3875c4afd611290557fba97fe7c486f5a0ed663a764d41bd.css"><meta property='og:title' content="Categories">
 <meta property='og:description' content="演示说明">
 <meta property='og:url' content='https://linsk27.github.io/categories/'>
 <meta property='og:site_name' content='爱吃鱼的小林 - linsk'>
@@ -465,7 +465,11 @@
     
     2024 爱吃鱼的小林 - linsk·<i class="fas fa-bell"></i>共嘟嘟了 2080字·共 5篇文章</br><span><p>
 </section>
-
+    
+<section class="running-time">
+本博客已稳定运行
+<span id="runningdays" class="running-days"></span>
+</section>
     
     <section class="powerby">
 
@@ -508,13 +512,26 @@
 </style>
 <div id="particles-js"></div>
 
-<script src=https://linsk27.github.io/background/sakura.js></script>
 
 <script src=https://linsk27.github.io/background/particles.min.js></script>
 <script>
   particlesJS.load('particles-js', "https://linsk27.github.io/background/particlesjs-config.json", function() {
     console.log('particles.js loaded - callback');
   });
+</script>
+
+<script>
+    let s1 = '2024-10-12'; 
+    s1 = new Date(s1.replace(/-/g, "/"));
+    let s2 = new Date();
+    let timeDifference = s2.getTime() - s1.getTime();
+
+    let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+    let result = days + "天" + hours + "小时" + minutes + "分钟";
+    document.getElementById('runningdays').innerHTML = result;
 </script>
 
 <style>
