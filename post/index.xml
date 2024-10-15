@@ -105,84 +105,102 @@
 &lt;h1 id=&#34;三开始安装系统&#34;&gt;三.开始安装系统
 &lt;/h1&gt;&lt;h2 id=&#34;1系统安装由于安装时没有进行截图这里的图片摘录自网上&#34;&gt;1.系统安装（由于安装时没有进行截图，这里的图片摘录自网上
 &lt;/h2&gt;&lt;p&gt;(1).重启电脑，并且在开机画面出现后按本机电脑的【快捷键】（各品牌电脑的启动选择不一样，我的电脑是华硕，点击【ESC】按键）进入启动选择界面&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://img-blog.csdnimg.cn/img_convert/86aaaf2269d1953459c969176c0c3412.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2024/10/15/XNKZs5TdaeiDxBU.png&#34;
 	
 	
 	
 	loading=&#34;lazy&#34;
+	
+		alt=&#34;1.png&#34;
 	
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;(2).点击UEFI选项即选择自己的u盘介质&lt;/p&gt;
 &lt;p&gt;(3).进入后我这里选择的是第一项【尝试或者安装ubantu】，然后进入安装界面&lt;/p&gt;
 &lt;p&gt;(4).选择中文并且安装Ubuntu&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://img-blog.csdnimg.cn/img_convert/312e6ece75924453e6d3d77ba530d856.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2024/10/15/PR2pW93veyt5knl.png&#34;
 	
 	
 	
 	loading=&#34;lazy&#34;
+	
+		alt=&#34;2.png&#34;
 	
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;(5).选择chinese后，点击【继续】&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://img-blog.csdnimg.cn/img_convert/09d99ab2076681a882899ba53b5d7b79.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2024/10/15/GwHRZdfKJhzTyYl.png&#34;
 	
 	
 	
 	loading=&#34;lazy&#34;
+	
+		alt=&#34;3.png&#34;
 	
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;(6).点击【继续】&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://img-blog.csdnimg.cn/img_convert/18456171bf0b8a6a15f1f1c15ef6a474.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2024/10/15/r1xifobWV8TkMtA.png&#34;
 	
 	
 	
 	loading=&#34;lazy&#34;
+	
+		alt=&#34;4.png&#34;
 	
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;(7).选择【其他选项】&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://img-blog.csdnimg.cn/img_convert/4f2aa1dd0b8a52431f63d7f5f6433f18.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2024/10/15/uDkcfgXmlNJWyS4.png&#34;
 	
 	
 	
 	loading=&#34;lazy&#34;
+	
+		alt=&#34;5.png&#34;
 	
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;(8).到这个时候会有两种情况，&lt;/p&gt;
 &lt;p&gt;第一种是“这台计算机似乎没有安装操作系统”，此时说明为单系统刷机，点击【继续】即可，本文讲的是双系统安装&lt;/p&gt;
 &lt;p&gt;第二种是双系统安装，此时会进入分盘界面，选择空闲磁盘进行四次分区&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://img-blog.csdnimg.cn/img_convert/3fed25efc9e84df8e7f77950a8c87dac.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2024/10/15/4ZoNG8sSCQKxwcD.jpg&#34;
 	
 	
 	
 	loading=&#34;lazy&#34;
+	
+		alt=&#34;6.png&#34;
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://img-blog.csdnimg.cn/img_convert/b029db582bc47f9d7914bb6e7aace831.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2024/10/15/FiaUf1wsRO4zSGT.jpg&#34;
 	
 	
 	
 	loading=&#34;lazy&#34;
+	
+		alt=&#34;7.png&#34;
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://img-blog.csdnimg.cn/img_convert/f647942ce8443b1126def904bef129a9.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2024/10/15/3mV7i6HzXSAxTEB.jpg&#34;
 	
 	
 	
 	loading=&#34;lazy&#34;
+	
+		alt=&#34;8.png&#34;
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://img-blog.csdnimg.cn/img_convert/0a54e6aee3847cfcc16dcb519af056a7.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2024/10/15/MFjhT4pHCbPUJY8.jpg&#34;
 	
 	
 	
 	loading=&#34;lazy&#34;
+	
+		alt=&#34;9.png&#34;
 	
 	
 &gt;&lt;/p&gt;
@@ -191,11 +209,13 @@
 &lt;p&gt;(11)安装完成后重启&lt;/p&gt;
 &lt;h2 id=&#34;2完成安装&#34;&gt;2.完成安装
 &lt;/h2&gt;&lt;p&gt;(1)重启后，每次开机时会出现三个选项，点击ubuntu进入ubuntu系统，点击win回到原系统&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://img-blog.csdnimg.cn/img_convert/cb4a75d0a4ee92ada4cd83d0a23c552c.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2024/10/15/39WNi2BnFcIxwTt.jpg&#34;
 	
 	
 	
 	loading=&#34;lazy&#34;
+	
+		alt=&#34;10.png&#34;
 	
 	
 &gt;&lt;/p&gt;
