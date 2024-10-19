@@ -16,14 +16,6 @@
         <description></description>
         </item>
         <item>
-        <title>美化</title>
-        <link>https://linsk27.github.io/categories/%E7%BE%8E%E5%8C%96/</link>
-        <pubDate>Sat, 19 Oct 2024 00:00:00 +0000</pubDate>
-        
-        <guid>https://linsk27.github.io/categories/%E7%BE%8E%E5%8C%96/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>Linux</title>
         <link>https://linsk27.github.io/categories/linux/</link>
         <pubDate>Mon, 14 Oct 2024 00:00:00 +0000</pubDate>
@@ -32,44 +24,20 @@
         <description></description>
         </item>
         <item>
-        <title>前端</title>
-        <link>https://linsk27.github.io/categories/%E5%89%8D%E7%AB%AF/</link>
-        <pubDate>Mon, 14 Oct 2024 00:00:00 +0000</pubDate>
-        
-        <guid>https://linsk27.github.io/categories/%E5%89%8D%E7%AB%AF/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Install</title>
-        <link>https://linsk27.github.io/categories/install/</link>
-        <pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate>
-        
-        <guid>https://linsk27.github.io/categories/install/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Syntax</title>
-        <link>https://linsk27.github.io/categories/syntax/</link>
-        <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://linsk27.github.io/categories/syntax/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Themes</title>
-        <link>https://linsk27.github.io/categories/themes/</link>
-        <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://linsk27.github.io/categories/themes/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Test</title>
-        <link>https://linsk27.github.io/categories/test/</link>
+        <title>美化</title>
+        <link>https://linsk27.github.io/categories/%E7%BE%8E%E5%8C%96/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/categories/test/</guid>
-        <description>&lt;img src="https://linsk27.github.io/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post Test" /&gt;</description>
+        <guid>https://linsk27.github.io/categories/%E7%BE%8E%E5%8C%96/</guid>
+        <description>&lt;img src="https://linsk27.github.io/categories/%E7%BE%8E%E5%8C%96/hua.png" alt="Featured image of post 美化" /&gt;</description>
+        </item>
+        <item>
+        <title>前端</title>
+        <link>https://linsk27.github.io/categories/%E5%89%8D%E7%AB%AF/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://linsk27.github.io/categories/%E5%89%8D%E7%AB%AF/</guid>
+        <description>&lt;img src="https://linsk27.github.io/categories/%E5%89%8D%E7%AB%AF/what-is-vue-3.png" alt="Featured image of post 前端" /&gt;</description>
         </item>
         
     </channel>
