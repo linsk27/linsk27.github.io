@@ -12,7 +12,7 @@
         <pubDate>Sat, 19 Oct 2024 00:00:00 +0000</pubDate>
         
         <guid>https://linsk27.github.io/p/hugo%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/</guid>
-        <description>&lt;h2 id=&#34;修改站点背景颜色&#34;&gt;修改站点背景颜色
+        <description>&lt;img src="https://linsk27.github.io/p/hugo%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/hugo.jpg" alt="Featured image of post 【Hugo】主题美化教程" /&gt;&lt;h2 id=&#34;修改站点背景颜色&#34;&gt;修改站点背景颜色
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;在&amp;quot;assets/scss/variables.scss&amp;quot;中找到&lt;/li&gt;
 &lt;/ul&gt;
