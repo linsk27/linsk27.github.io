@@ -104,7 +104,7 @@
         <pubDate>Mon, 14 Oct 2024 00:00:00 +0000</pubDate>
         
         <guid>https://linsk27.github.io/p/js%E4%B8%AD%E6%95%B0%E7%BB%84%E5%8E%BB%E7%9A%84%E5%B8%B8%E8%A7%84%E5%8E%BB%E9%87%8D%E6%96%B9%E6%B3%95/</guid>
-        <description>&lt;img src="https://linsk27.github.io/p/js%E4%B8%AD%E6%95%B0%E7%BB%84%E5%8E%BB%E7%9A%84%E5%B8%B8%E8%A7%84%E5%8E%BB%E9%87%8D%E6%96%B9%E6%B3%95/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg" alt="Featured image of post js中数组去的常规去重方法" /&gt;&lt;h1 id=&#34;数组去重方法&#34;&gt;数组去重方法
+        <description>&lt;h1 id=&#34;数组去重方法&#34;&gt;数组去重方法
 &lt;/h1&gt;&lt;h2 id=&#34;1-通过-filter-过滤函数&#34;&gt;1. 通过 &lt;code&gt;filter&lt;/code&gt; 过滤函数
 &lt;/h2&gt;&lt;p&gt;JavaScript 的 &lt;code&gt;Array.prototype.filter()&lt;/code&gt; 方法可以创建一个新数组，其包含通过所提供函数实现的测试的所有元素。利用这个特性，我们可以对数组进行去重。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -169,7 +169,7 @@
         <pubDate>Mon, 14 Oct 2024 00:00:00 +0000</pubDate>
         
         <guid>https://linsk27.github.io/p/linux%E7%9A%84%E5%AE%89%E8%A3%85ubuntu/</guid>
-        <description>&lt;img src="https://linsk27.github.io/p/linux%E7%9A%84%E5%AE%89%E8%A3%85ubuntu/the-creative-exchange-d2zvqp3fpro-unsplash.jpg" alt="Featured image of post Linux的安装（Ubuntu）" /&gt;&lt;ul&gt;
+        <description>&lt;ul&gt;
 &lt;li&gt;该文章图片从网上摘录&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;对linux的初步准备&#34;&gt;对linux的初步准备
@@ -319,7 +319,7 @@
         <pubDate>Sun, 13 Oct 2024 00:00:00 +0000</pubDate>
         
         <guid>https://linsk27.github.io/p/el-select%E6%A0%87%E7%AD%BE%E5%AD%98%E5%9C%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98/</guid>
-        <description>&lt;img src="https://linsk27.github.io/p/el-select%E6%A0%87%E7%AD%BE%E5%AD%98%E5%9C%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg" alt="Featured image of post el-select标签存在的数据匹配问题" /&gt;&lt;h2 id=&#34;一-使用方法&#34;&gt;一 使用方法
+        <description>&lt;h2 id=&#34;一-使用方法&#34;&gt;一 使用方法
 &lt;/h2&gt;&lt;p&gt;&lt;code&gt;userList&lt;/code&gt;数据循环在列表，下拉框显示的值为&lt;code&gt;userList&lt;/code&gt;里面的&lt;code&gt;label&lt;/code&gt;字段的值，实际值为对应&lt;code&gt;label&lt;/code&gt;的&lt;code&gt;uuid&lt;/code&gt;值，如下面例子中输出选中&lt;code&gt;小王&lt;/code&gt;的值应该为&lt;code&gt;01&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -373,7 +373,7 @@
         <pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate>
         
         <guid>https://linsk27.github.io/p/v-if%E5%92%8Cv-for%E4%B8%8D%E8%AF%A5%E5%90%8C%E6%97%B6%E4%BD%9C%E7%94%A8%E4%BA%8E%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97/</guid>
-        <description>&lt;img src="https://linsk27.github.io/p/v-if%E5%92%8Cv-for%E4%B8%8D%E8%AF%A5%E5%90%8C%E6%97%B6%E4%BD%9C%E7%94%A8%E4%BA%8E%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg" alt="Featured image of post v-if和v-for不该同时作用于一个模块" /&gt;&lt;p&gt;&lt;code&gt;[vue/no-use-v-if-with-v-for]&lt;/code&gt; 这个错误信息是由 ESLint 的 Vue.js 插件 &lt;code&gt;eslint-plugin-vue&lt;/code&gt; 产生的。它指出在你的 Vue.js 模板中，&lt;code&gt;v-if&lt;/code&gt; 和 &lt;code&gt;v-for&lt;/code&gt; 指令被不当地一起使用在了同一个元素上。&lt;/p&gt;
+        <description>&lt;p&gt;&lt;code&gt;[vue/no-use-v-if-with-v-for]&lt;/code&gt; 这个错误信息是由 ESLint 的 Vue.js 插件 &lt;code&gt;eslint-plugin-vue&lt;/code&gt; 产生的。它指出在你的 Vue.js 模板中，&lt;code&gt;v-if&lt;/code&gt; 和 &lt;code&gt;v-for&lt;/code&gt; 指令被不当地一起使用在了同一个元素上。&lt;/p&gt;
 &lt;h3 id=&#34;为什么会产生这个错误&#34;&gt;为什么会产生这个错误？
 &lt;/h3&gt;&lt;p&gt;在 Vue.js 中，当 &lt;code&gt;v-if&lt;/code&gt; 和 &lt;code&gt;v-for&lt;/code&gt; 同时用在同一个元素上时，Vue 会先处理 &lt;code&gt;v-for&lt;/code&gt;，然后处理 &lt;code&gt;v-if&lt;/code&gt;。这意味着即使 &lt;code&gt;v-if&lt;/code&gt; 最终会过滤掉一些元素，&lt;code&gt;v-for&lt;/code&gt; 仍然会遍历整个列表，这可能会导致不必要的计算开销，特别是在处理大型列表时。&lt;/p&gt;
 &lt;h3 id=&#34;如何修复这个错误&#34;&gt;如何修复这个错误？
@@ -420,7 +420,7 @@
         <pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate>
         
         <guid>https://linsk27.github.io/p/vue3%E4%B8%AD%E7%9A%84pinia%E5%AF%BC%E5%85%A5%E5%92%8C%E6%8C%81%E4%B9%85%E5%8C%96%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85/</guid>
-        <description>&lt;img src="https://linsk27.github.io/p/vue3%E4%B8%AD%E7%9A%84pinia%E5%AF%BC%E5%85%A5%E5%92%8C%E6%8C%81%E4%B9%85%E5%8C%96%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg" alt="Featured image of post vue3中的pinia导入和持久化插件安装" /&gt;&lt;h2 id=&#34;一-yarn的安装&#34;&gt;一. yarn的安装
+        <description>&lt;h2 id=&#34;一-yarn的安装&#34;&gt;一. yarn的安装
 &lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;使用Windows &lt;a class=&#34;link&#34; href=&#34;https://so.csdn.net/so/search?q=powershell&amp;amp;spm=1001.2101.3001.7020&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;powershell&lt;/a&gt;（管理员）A命令行： npm install -g yarn，并且使用yarn -v查看是否安装成功&lt;/li&gt;

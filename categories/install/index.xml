@@ -13,7 +13,7 @@
         <pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate>
         
         <guid>https://linsk27.github.io/p/vue3%E4%B8%AD%E7%9A%84pinia%E5%AF%BC%E5%85%A5%E5%92%8C%E6%8C%81%E4%B9%85%E5%8C%96%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85/</guid>
-        <description>&lt;img src="https://linsk27.github.io/p/vue3%E4%B8%AD%E7%9A%84pinia%E5%AF%BC%E5%85%A5%E5%92%8C%E6%8C%81%E4%B9%85%E5%8C%96%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg" alt="Featured image of post vue3中的pinia导入和持久化插件安装" /&gt;&lt;h2 id=&#34;一-yarn的安装&#34;&gt;一. yarn的安装
+        <description>&lt;h2 id=&#34;一-yarn的安装&#34;&gt;一. yarn的安装
 &lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;使用Windows &lt;a class=&#34;link&#34; href=&#34;https://so.csdn.net/so/search?q=powershell&amp;amp;spm=1001.2101.3001.7020&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;powershell&lt;/a&gt;（管理员）A命令行： npm install -g yarn，并且使用yarn -v查看是否安装成功&lt;/li&gt;
