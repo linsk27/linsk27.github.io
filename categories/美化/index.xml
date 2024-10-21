@@ -39,7 +39,7 @@
     &gt;Hugo | Hugo-stack-theme 主题魔改版&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;友链的添加&#34;&gt;友链的添加
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;在&amp;quot;content\page\links&amp;quot;的 index.md 中有详细解释，图标可通过图床或者本地渲染，模仿格式即可，或可直接把文件内容换为&lt;/li&gt;
+&lt;li&gt;在&amp;quot;content/page/links&amp;quot;的 index.md 中有详细解释，图标可通过图床或者本地渲染，模仿格式即可，或可直接把文件内容换为&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -175,7 +175,7 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;修改分类标签的颜色&#34;&gt;修改分类标签的颜色
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;在”content\categories”创建与分类同名的文件夹，并且在文件夹中创建“_index.md”文件并添加下面的内容,文件内会有一个 Test 的例子，可以模仿 Test 文件夹里面的内容&lt;/li&gt;
+&lt;li&gt;在”content/categories”创建与分类同名的文件夹，并且在文件夹中创建“_index.md”文件并添加下面的内容,文件内会有一个 Test 的例子，可以模仿 Test 文件夹里面的内容&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
