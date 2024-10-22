@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="hugo博客搭建后的一些美化记录，会长期更新~">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="hugo 博客搭建后的一些美化记录，会长期更新~">
 <title>【Hugo】主题美化教程</title>
 
 <link rel='canonical' href='https://linsk27.github.io/p/hugo%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/'>
 
 <link rel="stylesheet" href="/scss/style.min.cc4c751d5711a97ccea26295202348172d8c64c858fd3cab421df0416c784521.css"><meta property='og:title' content="【Hugo】主题美化教程">
-<meta property='og:description' content="hugo博客搭建后的一些美化记录，会长期更新~">
+<meta property='og:description' content="hugo 博客搭建后的一些美化记录，会长期更新~">
 <meta property='og:url' content='https://linsk27.github.io/p/hugo%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/'>
 <meta property='og:site_name' content='爱吃鱼的小林 - linsk'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-10-19T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-10-22T21:50:39&#43;08:00'/><meta property='og:image' content='https://linsk27.github.io/p/hugo%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/hugo.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-10-19T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-10-22T22:28:43&#43;08:00'/><meta property='og:image' content='https://linsk27.github.io/p/hugo%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/hugo.jpg' />
 <meta name="twitter:title" content="【Hugo】主题美化教程">
-<meta name="twitter:description" content="hugo博客搭建后的一些美化记录，会长期更新~"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="hugo 博客搭建后的一些美化记录，会长期更新~"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://linsk27.github.io/p/hugo%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/hugo.jpg' />
     <link rel="shortcut icon" href="/favicon.png" />
 
@@ -264,7 +264,13 @@
   <ol>
     <li><a href="#修改站点背景颜色">修改站点背景颜色</a></li>
     <li><a href="#友链的添加">友链的添加</a></li>
-    <li><a href="#显示文章更新时间">显示文章更新时间</a></li>
+    <li><a href="#显示文章更新时间">显示文章更新时间</a>
+      <ol>
+        <li><a href="#手动添加更新时间">手动添加更新时间</a></li>
+        <li><a href="#自动添加更新时间">自动添加更新时间</a></li>
+        <li><a href="#更新时间显示在卡片">更新时间显示在卡片</a></li>
+      </ol>
+    </li>
     <li><a href="#修改分类标签的颜色">修改分类标签的颜色</a></li>
   </ol>
 </nav>
@@ -315,7 +321,7 @@
     
         
         <h3 class="article-subtitle">
-            hugo博客搭建后的一些美化记录，会长期更新~
+            hugo 博客搭建后的一些美化记录，会长期更新~
         </h3>
         
 
@@ -354,9 +360,9 @@
             </div>
 
 
-    <span class="card-wordcount">
-        809 字
-    </span>
+    <time class="card-wordcount">
+        1k 字
+    </time>
 
 
     </footer>
@@ -374,9 +380,9 @@
     
     
     <h2 id="修改站点背景颜色">修改站点背景颜色
-</h2><ul>
+</h2><ol>
 <li>在&quot;assets/scss/variables.scss&quot;中找到</li>
-</ul>
+</ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -385,9 +391,9 @@
 <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="na">--body-background</span><span class="o">:</span> <span class="mh">#f6f6f6</span><span class="p">;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><ul>
+</div><ol start="2">
 <li>或在&quot;assets/scss/customs.scss&quot;中找到</li>
-</ul>
+</ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -399,9 +405,9 @@
 </div><p>参考自：<a class="link" href="https://mantyke.icu/posts/2022/stack-theme-mod/"  target="_blank" rel="noopener"
     >Hugo | Hugo-stack-theme 主题魔改版</a></p>
 <h2 id="友链的添加">友链的添加
-</h2><ul>
+</h2><ol>
 <li>在&quot;content/page/links&quot;的 index.md 中有详细解释，图标可通过图床或者本地渲染，模仿格式即可，或可直接把文件内容换为</li>
-</ul>
+</ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -439,9 +445,54 @@
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="显示文章更新时间">显示文章更新时间
-</h2><ul>
-<li>在配置文件 hugo.yaml 中加入以下配置</li>
+</h2><h3 id="手动添加更新时间">手动添加更新时间
+</h3><ol>
+<li>hugo 默认位置为 archetypes/default.md 或者主题下目录下 xx 主题/archetypes/posts.md，加<code>lastmod</code>字段，在创建文章模板里添加以下一行，创建时会以主题目录下的模板来创建。</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">lastmod</span><span class="p">:</span><span class="w"> </span>{<span class="w"> </span>{<span class="w"> </span><span class="l">.Date } }</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>添加<code>lastmod</code>，有个好处就是可自由修改这个字段的时间。</li>
 </ul>
+<ol start="2">
+<li>在 <code>config.toml/yaml/json</code> 中写明调整这里顺序即可</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">frontmatter</span><span class="p">:</span><span class="w"> </span><span class="l">lastmod = [&#34;:git&#34;, &#34;lastmod&#34;, &#34;:fileModTime&#34;, &#34;:defalut&#34;]</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="自动添加更新时间">自动添加更新时间
+</h3><ol>
+<li>记得在<code>config.toml/yaml/json</code>开启 gitinfo</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c">#获取git信息</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">enableGitInfo = true</span><span class="w"> </span><span class="c">#设为true</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>这样就提交代码时，就会去读取 <code>git 时间</code>，来更新文章的更新时间!</li>
+</ul>
+<p>但是后面我发现了一个问题：每次重新 <code>git push</code> 之后所有文件最近更新时间 mtime 都变成推送的时刻，这是 git 的一个部署配置问题,因此我搜索了许多博客，终于在<a class="link" href="https://cloud.tencent.com/developer/article/2096668"  target="_blank" rel="noopener"
+    >hugo github action|vecel 部署后文章更新时间异常修复</a>这篇文章找到了解决方法，总的来说：</p>
+<ol>
+<li>在 <code>.github/workflows/xx.yml</code>,新增以下配置，主要是<code>quotePath</code>，默认情况下，文件名包含中文时，git 会使用引号吧文件名括起来，这会导致 action 中无法读取:GitInfo 变量，所以要设置<code>Disable quotePath</code></li>
+</ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -450,41 +501,128 @@
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># 更新时间：优先读取git时间 -&gt; git时间不存在，就读取本地文件修改时间</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">frontmatter</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">lastmod</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="p">:</span><span class="l">git</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="p">:</span><span class="l">fileModTime</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># 允许获取Git信息</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">enableGitInfo</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl">- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Git Configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
+</span></span></span><span class="line"><span class="cl"><span class="sd">          git config --global core.quotePath false
+</span></span></span><span class="line"><span class="cl"><span class="sd">          git config --global core.autocrlf false
+</span></span></span><span class="line"><span class="cl"><span class="sd">          git config --global core.safecrlf true
+</span></span></span><span class="line"><span class="cl"><span class="sd">          git config --global core.ignorecase false</span><span class="w">          
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><p>这样就提交代码时，就会去读取 git 时间，来更新文章的更新时间!</p>
-<p>但是后面我发现了一个问题:</p>
-<blockquote>
-<p>每次重新 git clone 之后所有文件最近更新时间 mtime 都变成克隆的时刻，这是 git 的一个 bug</p>
-</blockquote>
-<p>因此我搜索了许多博客，终于在<a class="link" href="https://mantyke.icu/posts/2021/47a5331b/"  target="_blank" rel="noopener"
-    >小球飞鱼</a>这篇文章找到了解决方法：</p>
-<ol>
-<li>在 config.yaml 中写明</li>
+</div><ol start="2">
+<li>使用<code>checkout</code>的话 <code>fetch-depth</code> 需要设为 0，<code>depth</code>默认是为 1，默认只拉取分支最近一次 commit，可能会导致一些文章的 GitInfo 变量无法获取，设为 0 代表拉去所有分支所有提交。</li>
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
+</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">frontmatter</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">lastmod</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;:git&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;lastmod&#34;</span><span class="p">]</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/checkout@v4</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">fetch-depth</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="c">#设为0</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><ul>
+</div><p>以下是我的最终的yml配置文件,大家可以参考</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">deploy</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># 代码提交到main分支时触发github action</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">on</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">push</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">main</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">jobs</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">deploy</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">env</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">TZ</span><span class="p">:</span><span class="w"> </span><span class="l">Asia/Shanghai</span><span class="w"> </span><span class="c"># 添加正确的时区</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Checkout</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/checkout@v4</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">fetch-depth</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Git Configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
+</span></span></span><span class="line"><span class="cl"><span class="sd">            git config --global core.quotePath false
+</span></span></span><span class="line"><span class="cl"><span class="sd">            git config --global core.autocrlf false
+</span></span></span><span class="line"><span class="cl"><span class="sd">            git config --global core.safecrlf true
+</span></span></span><span class="line"><span class="cl"><span class="sd">            git config --global core.ignorecase false</span><span class="w">            
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Setup Hugo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-hugo@v3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">hugo-version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;latest&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">extended</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Build Web</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">hugo -D</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Deploy Web</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-gh-pages@v4</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">PERSONAL_TOKEN</span><span class="p">:</span><span class="w"> </span><span class="l">${{ secrets.TOKEN }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">EXTERNAL_REPOSITORY</span><span class="p">:</span><span class="w"> </span><span class="l">linsk27/linsk27.github.io</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">PUBLISH_BRANCH</span><span class="p">:</span><span class="w"> </span><span class="l">main</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">PUBLISH_DIR</span><span class="p">:</span><span class="w"> </span><span class="l">./public</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">commit_message</span><span class="p">:</span><span class="w"> </span><span class="l">auto deploy</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="更新时间显示在卡片">更新时间显示在卡片
+</h3><ol>
 <li>stack 主题的文章更新时间在文章底部
 <img src="https://s2.loli.net/2024/10/19/Lb9NdU6pcv52C7f.jpg"
 	
@@ -497,7 +635,7 @@
 	
 ></li>
 <li>若想在文章开头就显示更新时间，修改 layouts/partials/article/components/detail.html，在指定位置引入以下代码</li>
-</ul>
+</ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -549,14 +687,12 @@
 		alt="1729318619383.png"
 	
 	
->
-参考自：<a class="link" href="https://letere-gzj.github.io/hugo-stack/p/hugo/custom-stack-theme/"  target="_blank" rel="noopener"
-    >莱特雷 - letter</a></li>
+></li>
 </ul>
 <h2 id="修改分类标签的颜色">修改分类标签的颜色
-</h2><ul>
+</h2><ol>
 <li>在”content/categories”创建与分类同名的文件夹，并且在文件夹中创建“_index.md”文件并添加下面的内容,文件内会有一个 Test 的例子，可以模仿 Test 文件夹里面的内容</li>
-</ul>
+</ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -690,7 +826,7 @@
         
     &copy; 
     
-    2024 爱吃鱼的小林 - linsk·<i class="fas fa-bell"></i>共嘟嘟了 4521字·共 8篇文章</br><span><p>
+    2024 爱吃鱼的小林 - linsk·<i class="fas fa-bell"></i>共嘟嘟了 5083字·共 8篇文章</br><span><p>
 </section>
     
 <section class="running-time">
