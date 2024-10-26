@@ -95,7 +95,7 @@
 &lt;li&gt;添加&lt;code&gt;lastmod&lt;/code&gt;，有个好处就是可自由修改这个字段的时间。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;在 &lt;code&gt;config.toml/yaml/json&lt;/code&gt; 中写明调整这里顺序即可&lt;/li&gt;
+&lt;li&gt;在 &amp;ldquo;config.toml/yaml/json/&amp;rdquo; 中写明调整这里顺序即可&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -107,7 +107,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;自动添加更新时间&#34;&gt;自动添加更新时间
 &lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;记得在&lt;code&gt;config.toml/yaml/json&lt;/code&gt;开启 gitinfo&lt;/li&gt;
+&lt;li&gt;记得在&amp;quot;config.toml/yaml/json&amp;quot;开启 gitinfo&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -125,7 +125,7 @@
 &lt;p&gt;但是后面我发现了一个问题：每次重新 &lt;code&gt;git push&lt;/code&gt; 之后所有文件最近更新时间 mtime 都变成推送的时刻，这是 git 的一个部署配置问题,因此我搜索了许多博客，终于在&lt;a class=&#34;link&#34; href=&#34;https://cloud.tencent.com/developer/article/2096668&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;hugo github action|vecel 部署后文章更新时间异常修复&lt;/a&gt;这篇文章找到了解决方法，总的来说：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;在 &lt;code&gt;.github/workflows/xx.yml&lt;/code&gt;,新增以下配置，主要是&lt;code&gt;quotePath&lt;/code&gt;，默认情况下，文件名包含中文时，git 会使用引号吧文件名括起来，这会导致 action 中无法读取:GitInfo 变量，所以要设置&lt;code&gt;Disable quotePath&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;在 &amp;ldquo;.github/workflows/xx.yml&amp;rdquo;,新增以下配置，主要是&lt;code&gt;quotePath&lt;/code&gt;，默认情况下，文件名包含中文时，git 会使用引号吧文件名括起来，这会导致 action 中无法读取:GitInfo 变量，所以要设置&lt;code&gt;Disable quotePath&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -266,7 +266,7 @@
 	
 	
 &gt;&lt;/li&gt;
-&lt;li&gt;若想在文章开头就显示更新时间，修改 layouts/partials/article/components/detail.html，在指定位置引入以下代码&lt;/li&gt;
+&lt;li&gt;若想在文章开头就显示更新时间，修改 &amp;ldquo;layouts/partials/article/components/detail.html&amp;rdquo;，在指定位置引入以下代码&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -323,7 +323,7 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;显示文章字数统计&#34;&gt;显示文章字数统计
 &lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;在&lt;code&gt;config.toml/yaml/json&lt;/code&gt;的&lt;code&gt;.params.article&lt;/code&gt;中，添加&lt;/li&gt;
+&lt;li&gt;在&amp;quot;config.toml/yaml/json&amp;quot;的&lt;code&gt;.params.article&lt;/code&gt;中，添加&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -334,7 +334,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;注意的是默认 WordCount 是不统计中文字数的，你需要在&lt;code&gt;config.toml/yaml/json&lt;/code&gt;中添加&lt;/li&gt;
+&lt;li&gt;注意的是默认 WordCount 是不统计中文字数的，你需要在&amp;quot;config.toml/yaml/json&amp;quot;中添加&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -345,7 +345,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;在&lt;code&gt;layouts/partials/article/components/details.html&lt;/code&gt;中的 &lt;code&gt;&amp;lt;footer class=&amp;quot;article-time&amp;quot;&amp;gt;&lt;/code&gt;内，打开本地 hugo 静态调试，按照位置添加&lt;/li&gt;
+&lt;li&gt;在&amp;quot;layouts/partials/article/components/details.html&amp;quot;中的 &lt;code&gt;&amp;lt;footer class=&amp;quot;article-time&amp;quot;&amp;gt;&lt;/code&gt;内，打开本地 hugo 静态调试，按照位置添加&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -372,7 +372,7 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;修改分类标签的颜色&#34;&gt;修改分类标签的颜色
 &lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;在&lt;code&gt;content/categories&lt;/code&gt;创建与分类同名的文件夹，并且在文件夹中创建&lt;code&gt;_index.md&lt;/code&gt;文件并添加下面的内容,文件内会有一个 Test 的例子，可以模仿 Test 文件夹里面的内容&lt;/li&gt;
+&lt;li&gt;在&amp;quot;content/categories&amp;quot;创建与分类同名的文件夹，并且在文件夹中创建&amp;quot;_index.md&amp;quot;文件并添加下面的内容,文件内会有一个 Test 的例子，可以模仿 Test 文件夹里面的内容&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -393,7 +393,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;style&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;background&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;#80aba9&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;//分类标签底色&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;color&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;#fff&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nn&#34;&gt;---&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nn&#34;&gt;---&lt;/span&gt;-&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description>
