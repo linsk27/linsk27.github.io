@@ -33,10 +33,10 @@
 &lt;/h2&gt;&lt;h3 id=&#34;安装与配置sunshine&#34;&gt;安装与配置sunshine
 &lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;点击&lt;strong&gt;sunshine&lt;/strong&gt;的&lt;code&gt;exe&lt;/code&gt;文件进行运行安装（安装任何东西尽量不安装到系统盘）,然后右击电脑屏幕右下角的sunshine图标，点击&lt;strong&gt;open sunshine&lt;/strong&gt;进入sunshine的管理界面，具体界面类似点2的图。&lt;/p&gt;
+&lt;p&gt;点击&lt;strong&gt;sunshine&lt;/strong&gt;的&lt;code&gt;.exe&lt;/code&gt;文件进行运行安装（安装任何东西尽量不安装到系统盘）,然后右击电脑屏幕右下角的sunshine图标，点击&lt;strong&gt;open sunshine&lt;/strong&gt;进入sunshine的管理界面，具体界面类似点2的图。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;先点击齿轮图形（设置），把页面变为中文简体方便操作，记得点击保存，然后点击apply（应用），此时会自动重启sunshine程序，如果没有启动则右键右下角的sunshine图标，点击Restart。&lt;/p&gt;
+&lt;p&gt;先点击齿轮图形（设置），把页面设置为中文简体方便操作，记得点击保存，然后点击apply（应用），此时会自动重启sunshine程序，如果没有启动则右键右下角的sunshine图标，点击Restart。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2024/11/02/pOYE1J2zxStmVvb.png&#34;
@@ -50,7 +50,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;同2点开设置后，点击&lt;strong&gt;network&lt;/strong&gt;板块，根据图片设置&lt;code&gt;UPnP&lt;/code&gt;为“启用”，设置&lt;code&gt;ip地址族&lt;/code&gt;为“IPv4+IPv6”，这个对后面串流有用。最后把&lt;code&gt;公网加密模式&lt;/code&gt;设置为“禁用”，点击保存并且应用，重启sunshine步骤。&lt;/li&gt;
+&lt;li&gt;同第2点开设置后，点击&lt;strong&gt;network&lt;/strong&gt;板块，根据图片设置&lt;code&gt;UPnP&lt;/code&gt;为“启用”，设置&lt;code&gt;ip地址族&lt;/code&gt;为“IPv4+IPv6”，这个对后面串流有用。最后把&lt;code&gt;公网加密模式&lt;/code&gt;设置为“禁用”，点击保存并且应用，重启sunshine步骤。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2024/11/03/iKJAzGqkcNlf82d.png&#34;
 	
@@ -91,7 +91,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;设备通常打开&lt;strong&gt;moonlight&lt;/strong&gt;后，在相同局域网下，设备会显示同个局域网下的电脑设备，如图1。此时可以平板直接点击电脑设备进行连接，然后会出现ping码，通常电脑会出现ping码弹窗，没有的话打开&lt;strong&gt;sunshine&lt;/strong&gt;控制台，点击ping进行输入。通常第一次连接之后，只要在平板不删除设备，就不会再要求输入ping码。&lt;/li&gt;
+&lt;li&gt;设备通常打开&lt;strong&gt;moonlight&lt;/strong&gt;后，在相同局域网下，设备会显示同个局域网下的电脑设备，如第一点的图所示。此时可以平板直接点击电脑设备进行连接，然后会出现ping码，通常电脑会出现ping码弹窗，没有的话打开&lt;strong&gt;sunshine&lt;/strong&gt;控制台，点击ping选项进行输入。通常第一次连接之后，只要平板不删除电脑设备，就不会再要求输入ping码。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2024/11/03/CTv9K4YyXbVMBGN.png&#34;
 	
@@ -104,7 +104,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;如果没有，则可在电脑按下&lt;code&gt;Win+R&lt;/code&gt;,输入&lt;code&gt;cmd&lt;/code&gt;打开终端，然后输入&lt;code&gt;ipconfig&lt;/code&gt;显示局域网的&lt;code&gt;ipv4或ipv6&lt;/code&gt;的地址，如图没有ipv6地址，选择字段只有&lt;code&gt;IPv4地址&lt;/code&gt;和&lt;code&gt;IPv6 地址&lt;/code&gt;字样才有效，关于ipv6对远程串流帮助较大。&lt;/p&gt;
+&lt;p&gt;如果没有显示电脑设备，则可在电脑按下&lt;code&gt;Win+R&lt;/code&gt;,输入&lt;code&gt;cmd&lt;/code&gt;打开终端，然后输入&lt;code&gt;ipconfig&lt;/code&gt;来获取局域网的&lt;code&gt;ipv4或ipv6&lt;/code&gt;的地址（我这个网络没有ipv6地址）。然后选择字段为&lt;code&gt;IPv4地址&lt;/code&gt;或&lt;code&gt;IPv6 地址&lt;/code&gt;的字样才有效。ipv6对远程串流帮助较大。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2024/11/03/9cHN4LDXOUy6iPn.png&#34;
 	
 	
@@ -115,7 +115,7 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;然后点击平板端的&lt;strong&gt;moonlight&lt;/strong&gt;，点击加号图标，直接输入ipv4或者ipv6地址，即可显示电脑设备&lt;/p&gt;
+&lt;p&gt;然后点击平板端的&lt;strong&gt;moonlight&lt;/strong&gt;，点击加号图标，直接输入ipv4或者ipv6地址，即可显示电脑设备。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ol start=&#34;4&#34;&gt;
 &lt;li&gt;这个时候你的平板设备应该就成功复制了电脑屏幕，并且几乎只有100ms的延迟！&lt;/li&gt;
@@ -172,7 +172,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;最后打开&lt;strong&gt;sunshine&lt;/strong&gt;控制台，打开设置的video选项，输入显示器的名称&lt;code&gt;\\.\DISPLAY11&lt;/code&gt;，点击保存并且应用，然后平板进行moonlight重连，这个时候，就会扩展成功！&lt;/li&gt;
+&lt;li&gt;最后打开&lt;strong&gt;sunshine&lt;/strong&gt;控制台，点击齿轮设置，打开video选项，输入显示器的名称&lt;code&gt;\\.\DISPLAY11&lt;/code&gt;，点击保存并且应用，然后平板进行&lt;strong&gt;moonlight&lt;/strong&gt;重连，这个时候，就会扩展成功！&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2024/11/03/1uWMdoIwi9B7fOs.png&#34;
 	
@@ -185,7 +185,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;ol start=&#34;5&#34;&gt;
-&lt;li&gt;最后打开电脑端控制台，点击显示器的选项，可以对平板显示器进行位置调动。&lt;/li&gt;
+&lt;li&gt;打开&lt;code&gt;Win+I&lt;/code&gt;打开电脑设置，进入“显示”模块，对平板显示器进行位置调动，方便扩展。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2024/11/03/md7rKf1lOLIRBoc.png&#34;
 	
@@ -197,11 +197,23 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;注意&#34;&gt;注意！！！
-&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;当时搞完这个扩展显示器，后面我出现很多次连不上的现象，原来是因为我&lt;strong&gt;sunshine&lt;/strong&gt;设置了video的显示器的原因，但是我并没有打开虚拟显示器没有创建，导致我的平板无法连接到电脑，因此要么你把sunshine的video清空，会默认复制屏幕，要么你就打开虚拟显示器并且创建，保持sunshine和虚拟显示器的名称设置相同即可！！&lt;/li&gt;
+&lt;h3 id=&#34;注意不断连不上可查看此处&#34;&gt;注意！！！不断连不上可查看此处
+&lt;/h3&gt;&lt;p&gt;当时搞完这个扩展显示器，后面我出现很多次连不上的现象&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;失败原因：&lt;/li&gt;
 &lt;/ul&gt;
-</description>
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;sunshine&lt;/strong&gt;设置了video的显示器名称后，就只会抓取该名称的显示器进行显示，如果没有生成该虚拟显示器，则其他设备的moonlight就无法链接到电脑设备&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;解决方法：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;方式1：把&lt;strong&gt;sunshine&lt;/strong&gt;的video选项里的video清空，这样就会默认复制屏幕。&lt;/p&gt;
+&lt;p&gt;方式2：打开虚拟显示器并且创建，保持&lt;strong&gt;sunshine&lt;/strong&gt;的video设置和&lt;strong&gt;虚拟显示器&lt;/strong&gt;的名称设置相同即可！！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;实现远程串流&#34;&gt;实现远程串流
+&lt;/h2&gt;</description>
         </item>
         <item>
         <title>【Nexus】桌面美化教程</title>

@@ -10,7 +10,7 @@
 <meta property='og:description' content="如何把平板变为扩展屏？如何在外通过手机平板等其他设备远程操控电脑，实现游玩steam游戏和进行轻量级开发！">
 <meta property='og:url' content='https://linsk27.github.io/p/moonlight-sunshine%E5%AE%9E%E7%8E%B0%E6%89%A9%E5%B1%95%E5%B1%8F%E5%92%8C%E8%BF%9C%E7%A8%8B%E4%B8%B2%E6%B5%81/'>
 <meta property='og:site_name' content='爱吃鱼的小林 - linsk'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-11-02T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-11-03T02:20:13&#43;08:00'/><meta property='og:image' content='https://linsk27.github.io/p/moonlight-sunshine%E5%AE%9E%E7%8E%B0%E6%89%A9%E5%B1%95%E5%B1%8F%E5%92%8C%E8%BF%9C%E7%A8%8B%E4%B8%B2%E6%B5%81/moonlight.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-11-02T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-11-03T16:01:52&#43;08:00'/><meta property='og:image' content='https://linsk27.github.io/p/moonlight-sunshine%E5%AE%9E%E7%8E%B0%E6%89%A9%E5%B1%95%E5%B1%8F%E5%92%8C%E8%BF%9C%E7%A8%8B%E4%B8%B2%E6%B5%81/moonlight.jpg' />
 <meta name="twitter:title" content="moonlight+sunshine实现扩展屏和远程串流">
 <meta name="twitter:description" content="如何把平板变为扩展屏？如何在外通过手机平板等其他设备远程操控电脑，实现游玩steam游戏和进行轻量级开发！"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://linsk27.github.io/p/moonlight-sunshine%E5%AE%9E%E7%8E%B0%E6%89%A9%E5%B1%95%E5%B1%8F%E5%92%8C%E8%BF%9C%E7%A8%8B%E4%B8%B2%E6%B5%81/moonlight.jpg' />
@@ -272,9 +272,10 @@
     <li><a href="#实现屏幕扩展">实现屏幕扩展</a>
       <ol>
         <li><a href="#配置与安装parsecvdisplay虚拟显示器">配置与安装ParsecVDisplay（虚拟显示器）</a></li>
-        <li><a href="#注意">注意！！！</a></li>
+        <li><a href="#注意不断连不上可查看此处">注意！！！不断连不上可查看此处</a></li>
       </ol>
     </li>
+    <li><a href="#实现远程串流">实现远程串流</a></li>
   </ol>
 </nav>
         </div>
@@ -359,7 +360,7 @@
             </div>|
         
             <div>
-      <i class="article-time--reading" style="color: #ff8e2d;"></i>1525 个字
+      <i class="article-time--reading" style="color: #ff8e2d;"></i>1619 个字
             </div>
 
     </footer>
@@ -395,10 +396,10 @@
 </h2><h3 id="安装与配置sunshine">安装与配置sunshine
 </h3><ol>
 <li>
-<p>点击<strong>sunshine</strong>的<code>exe</code>文件进行运行安装（安装任何东西尽量不安装到系统盘）,然后右击电脑屏幕右下角的sunshine图标，点击<strong>open sunshine</strong>进入sunshine的管理界面，具体界面类似点2的图。</p>
+<p>点击<strong>sunshine</strong>的<code>.exe</code>文件进行运行安装（安装任何东西尽量不安装到系统盘）,然后右击电脑屏幕右下角的sunshine图标，点击<strong>open sunshine</strong>进入sunshine的管理界面，具体界面类似点2的图。</p>
 </li>
 <li>
-<p>先点击齿轮图形（设置），把页面变为中文简体方便操作，记得点击保存，然后点击apply（应用），此时会自动重启sunshine程序，如果没有启动则右键右下角的sunshine图标，点击Restart。</p>
+<p>先点击齿轮图形（设置），把页面设置为中文简体方便操作，记得点击保存，然后点击apply（应用），此时会自动重启sunshine程序，如果没有启动则右键右下角的sunshine图标，点击Restart。</p>
 </li>
 </ol>
 <p><img src="https://s2.loli.net/2024/11/02/pOYE1J2zxStmVvb.png"
@@ -412,7 +413,7 @@
 	
 ></p>
 <ol start="3">
-<li>同2点开设置后，点击<strong>network</strong>板块，根据图片设置<code>UPnP</code>为“启用”，设置<code>ip地址族</code>为“IPv4+IPv6”，这个对后面串流有用。最后把<code>公网加密模式</code>设置为“禁用”，点击保存并且应用，重启sunshine步骤。</li>
+<li>同第2点开设置后，点击<strong>network</strong>板块，根据图片设置<code>UPnP</code>为“启用”，设置<code>ip地址族</code>为“IPv4+IPv6”，这个对后面串流有用。最后把<code>公网加密模式</code>设置为“禁用”，点击保存并且应用，重启sunshine步骤。</li>
 </ol>
 <p><img src="https://s2.loli.net/2024/11/03/iKJAzGqkcNlf82d.png"
 	
@@ -453,7 +454,7 @@
 	
 ></p>
 <ol start="3">
-<li>设备通常打开<strong>moonlight</strong>后，在相同局域网下，设备会显示同个局域网下的电脑设备，如图1。此时可以平板直接点击电脑设备进行连接，然后会出现ping码，通常电脑会出现ping码弹窗，没有的话打开<strong>sunshine</strong>控制台，点击ping进行输入。通常第一次连接之后，只要在平板不删除设备，就不会再要求输入ping码。</li>
+<li>设备通常打开<strong>moonlight</strong>后，在相同局域网下，设备会显示同个局域网下的电脑设备，如第一点的图所示。此时可以平板直接点击电脑设备进行连接，然后会出现ping码，通常电脑会出现ping码弹窗，没有的话打开<strong>sunshine</strong>控制台，点击ping选项进行输入。通常第一次连接之后，只要平板不删除电脑设备，就不会再要求输入ping码。</li>
 </ol>
 <p><img src="https://s2.loli.net/2024/11/03/CTv9K4YyXbVMBGN.png"
 	
@@ -466,7 +467,7 @@
 	
 ></p>
 <blockquote>
-<p>如果没有，则可在电脑按下<code>Win+R</code>,输入<code>cmd</code>打开终端，然后输入<code>ipconfig</code>显示局域网的<code>ipv4或ipv6</code>的地址，如图没有ipv6地址，选择字段只有<code>IPv4地址</code>和<code>IPv6 地址</code>字样才有效，关于ipv6对远程串流帮助较大。</p>
+<p>如果没有显示电脑设备，则可在电脑按下<code>Win+R</code>,输入<code>cmd</code>打开终端，然后输入<code>ipconfig</code>来获取局域网的<code>ipv4或ipv6</code>的地址（我这个网络没有ipv6地址）。然后选择字段为<code>IPv4地址</code>或<code>IPv6 地址</code>的字样才有效。ipv6对远程串流帮助较大。</p>
 <p><img src="https://s2.loli.net/2024/11/03/9cHN4LDXOUy6iPn.png"
 	
 	
@@ -477,7 +478,7 @@
 	
 	
 ></p>
-<p>然后点击平板端的<strong>moonlight</strong>，点击加号图标，直接输入ipv4或者ipv6地址，即可显示电脑设备</p>
+<p>然后点击平板端的<strong>moonlight</strong>，点击加号图标，直接输入ipv4或者ipv6地址，即可显示电脑设备。</p>
 </blockquote>
 <ol start="4">
 <li>这个时候你的平板设备应该就成功复制了电脑屏幕，并且几乎只有100ms的延迟！</li>
@@ -534,7 +535,7 @@
 	
 ></p>
 <ol start="4">
-<li>最后打开<strong>sunshine</strong>控制台，打开设置的video选项，输入显示器的名称<code>\\.\DISPLAY11</code>，点击保存并且应用，然后平板进行moonlight重连，这个时候，就会扩展成功！</li>
+<li>最后打开<strong>sunshine</strong>控制台，点击齿轮设置，打开video选项，输入显示器的名称<code>\\.\DISPLAY11</code>，点击保存并且应用，然后平板进行<strong>moonlight</strong>重连，这个时候，就会扩展成功！</li>
 </ol>
 <p><img src="https://s2.loli.net/2024/11/03/1uWMdoIwi9B7fOs.png"
 	
@@ -547,7 +548,7 @@
 	
 ></p>
 <ol start="5">
-<li>最后打开电脑端控制台，点击显示器的选项，可以对平板显示器进行位置调动。</li>
+<li>打开<code>Win+I</code>打开电脑设置，进入“显示”模块，对平板显示器进行位置调动，方便扩展。</li>
 </ol>
 <p><img src="https://s2.loli.net/2024/11/03/md7rKf1lOLIRBoc.png"
 	
@@ -559,11 +560,23 @@
 	
 	
 ></p>
-<h3 id="注意">注意！！！
-</h3><ul>
-<li>当时搞完这个扩展显示器，后面我出现很多次连不上的现象，原来是因为我<strong>sunshine</strong>设置了video的显示器的原因，但是我并没有打开虚拟显示器没有创建，导致我的平板无法连接到电脑，因此要么你把sunshine的video清空，会默认复制屏幕，要么你就打开虚拟显示器并且创建，保持sunshine和虚拟显示器的名称设置相同即可！！</li>
+<h3 id="注意不断连不上可查看此处">注意！！！不断连不上可查看此处
+</h3><p>当时搞完这个扩展显示器，后面我出现很多次连不上的现象</p>
+<ul>
+<li>失败原因：</li>
 </ul>
-
+<blockquote>
+<p><strong>sunshine</strong>设置了video的显示器名称后，就只会抓取该名称的显示器进行显示，如果没有生成该虚拟显示器，则其他设备的moonlight就无法链接到电脑设备</p>
+</blockquote>
+<ul>
+<li>解决方法：</li>
+</ul>
+<blockquote>
+<p>方式1：把<strong>sunshine</strong>的video选项里的video清空，这样就会默认复制屏幕。</p>
+<p>方式2：打开虚拟显示器并且创建，保持<strong>sunshine</strong>的video设置和<strong>虚拟显示器</strong>的名称设置相同即可！！</p>
+</blockquote>
+<h2 id="实现远程串流">实现远程串流
+</h2>
 </section>
 
 
@@ -664,7 +677,7 @@
         
     &copy; 
     
-    2024 爱吃鱼的小林 - linsk·<i class="fas fa-bell"></i>共嘟嘟了 7763字·共 9篇文章</br><span><p>
+    2024 爱吃鱼的小林 - linsk·<i class="fas fa-bell"></i>共嘟嘟了 7857字·共 9篇文章</br><span><p>
 </section>
     
 <section class="running-time">
