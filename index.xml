@@ -7,6 +7,92 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>爱吃鱼的小林 - linsk</copyright><atom:link href="https://linsk27.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>gitee仓库的第一次推送遇见的错误</title>
+        <link>https://linsk27.github.io/p/gitee%E4%BB%93%E5%BA%93%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%8E%A8%E9%80%81%E9%81%87%E8%A7%81%E7%9A%84%E9%94%99%E8%AF%AF/</link>
+        <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://linsk27.github.io/p/gitee%E4%BB%93%E5%BA%93%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%8E%A8%E9%80%81%E9%81%87%E8%A7%81%E7%9A%84%E9%94%99%E8%AF%AF/</guid>
+        <description>&lt;img src="https://linsk27.github.io/p/gitee%E4%BB%93%E5%BA%93%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%8E%A8%E9%80%81%E9%81%87%E8%A7%81%E7%9A%84%E9%94%99%E8%AF%AF/error.jpg" alt="Featured image of post gitee仓库的第一次推送遇见的错误" /&gt;&lt;ul&gt;
+&lt;li&gt;加黑处为命令行输入&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;推送失败gitee仓库缺少公钥&#34;&gt;推送失败，gitee仓库缺少公钥
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;git push origin lsk_dev&lt;/strong&gt;
+The authenticity of host &amp;lsquo;gitee.com (180.76.198.77)&amp;rsquo; can&amp;rsquo;t be established.
+ED25519 key fingerprint is SHA256:+ULzij2u99B9eWYFTw1Q4ErYG/aepHLbu96PAUCoV88.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? y
+Please type &amp;lsquo;yes&amp;rsquo;, &amp;rsquo;no&amp;rsquo; or the fingerprint: yes
+Warning: Permanently added &amp;lsquo;gitee.com&amp;rsquo; (ED25519) to the list of known hosts.
+&lt;a class=&#34;link&#34; href=&#34;mailto:git@gitee.com&#34; &gt;git@gitee.com&lt;/a&gt;: Permission denied (publickey).
+fatal: Could not read from remote repository.&lt;/p&gt;
+&lt;p&gt;Please make sure you have the correct access rights
+and the repository exists.&lt;/p&gt;
+&lt;h2 id=&#34;检查与自己gitee仓库连接失败没有显示hellow&#34;&gt;检查与自己gitee仓库连接失败，没有显示hellow
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;ssh -T &lt;a class=&#34;link&#34; href=&#34;mailto:git@gitee.com&#34; &gt;git@gitee.com&lt;/a&gt;&lt;/strong&gt;**
+&lt;a class=&#34;link&#34; href=&#34;mailto:git@gitee.com&#34; &gt;git@gitee.com&lt;/a&gt;: Permission denied (publickey).&lt;/p&gt;
+&lt;h2 id=&#34;进行公钥配置&#34;&gt;进行公钥配置
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;ssh-keygen -t rsa -C &amp;ldquo;&lt;a class=&#34;link&#34; href=&#34;mailto:14062626&amp;#43;linsk27@user.noreply.gitee.com&#34; &gt;14062626+linsk27@user.noreply.gitee.com&lt;/a&gt;&amp;rdquo;&lt;/strong&gt;&lt;br&gt;
+Generating public/private rsa key pair.
+Enter file in which to save the key (C:\Users\lsk69/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in C:\Users\lsk69/.ssh/id_rsa
+Your public key has been saved in C:\Users\lsk69/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:SOV+Ur+E321Pw+9NL77mSgZm6V8lc+W3LJi3rN5qXG8 &lt;a class=&#34;link&#34; href=&#34;mailto:14062626&amp;#43;linsk27@user.noreply.gitee.com&#34; &gt;14062626+linsk27@user.noreply.gitee.com&lt;/a&gt;
+The key&amp;rsquo;s randomart image is:
++&amp;mdash;[RSA 3072]&amp;mdash;-+
+|        .        |
+|       o         |
+|      . . .     .|
+|     . o . +   ..|
+|      . S B o o =|
+|         * +o+o&lt;em&gt;o|
+|          oo&lt;/em&gt;o+==|
+|           &lt;em&gt;+.=E&lt;/em&gt;|
+|          o+=O=+*|
++&amp;mdash;-[SHA256]&amp;mdash;&amp;ndash;+&lt;/p&gt;
+&lt;h2 id=&#34;获取公钥失败&#34;&gt;获取公钥失败
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;ssh-agent -s&lt;/strong&gt;
+unable to start ssh-agent service, error :1058&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Fix Error &lt;strong&gt;unable to start ssh-agent service, error: 1058(xxxx)&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;win + R, Go To &lt;code&gt;services.msc&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Find And Check Is &lt;code&gt;OpenSSH Authentication Agent&lt;/code&gt; Service Running&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;再次运行公钥获取成功连接成功&#34;&gt;再次运行公钥获取成功，连接成功
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;ssh-agent -s&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ssh -T &lt;a class=&#34;link&#34; href=&#34;mailto:git@gitee.com&#34; &gt;git@gitee.com&lt;/a&gt;&lt;/strong&gt;
+Hi linsk27(@linsk27)! You&amp;rsquo;ve successfully authenticated, but GITEE.COM does not provide shell access.&lt;/p&gt;
+&lt;h3 id=&#34;复制公钥数据到gitee仓库的公钥设置&#34;&gt;复制公钥数据到gitee仓库的公钥（设置）
+&lt;/h3&gt;&lt;p&gt;把ssh密钥添加到码云
+打开C盘–&amp;gt;用户–&amp;gt;你的用户名–&amp;gt;找到.ssh文件夹。找到id_rsa.pub（日过有多个用最新的那个），用记事本打开，复制整个文本粘贴到gitee（点头像，进入gitee设置面板，SSH设置，将复制的文本粘贴到公钥，标题会自动生成，然后点击添加，根据提示输入密码就可以了。）&lt;/p&gt;
+&lt;h2 id=&#34;重新推送成功&#34;&gt;重新推送成功
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;git push origin lsk_dev&lt;/strong&gt;
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (16/16), 2.19 KiB | 2.19 MiB/s, done.
+Total 16 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Powered by GITEE.COM [1.1.5]
+remote: Set trace flag 824c4db5
+remote: Create a pull request for &amp;rsquo;lsk_dev&amp;rsquo; on Gitee by visiting:
+remote: &lt;a class=&#34;link&#34; href=&#34;https://gitee.com/larrry/competition-system/pull/new/larrry:lsk_dev...larrry:main&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://gitee.com/larrry/competition-system/pull/new/larrry:lsk_dev...larrry:main&lt;/a&gt;
+To gitee.com:larrry/competition-system.git&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;[new branch]      lsk_dev -&amp;gt; lsk_dev&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>moonlight&#43;sunshine实现扩展屏和远程串流</title>
         <link>https://linsk27.github.io/p/moonlight-sunshine%E5%AE%9E%E7%8E%B0%E6%89%A9%E5%B1%95%E5%B1%8F%E5%92%8C%E8%BF%9C%E7%A8%8B%E4%B8%B2%E6%B5%81/</link>
         <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
