@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://linsk27.github.io/search/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="搜索">
+<link rel="stylesheet" href="/scss/style.min.fbf253db0840fa60a44bdee4d2c8fd44c1d1eb868b87abb8810e1c39fabaf536.css"><meta property='og:title' content="搜索">
 <meta property='og:description' content="">
 <meta property='og:url' content='https://linsk27.github.io/search/'>
 <meta property='og:site_name' content='404_@林达'>
@@ -281,6 +281,7 @@
 </footer>
 
 
+
             </main>
         </div>
         <script 
@@ -298,6 +299,15 @@
 
         document.head.appendChild(customFont);
     }());
+</script>
+<script src="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.css" crossorigin="anonymous" />
+<script>
+    NProgress.start();
+    document.addEventListener("readystatechange", () => {
+        if (document.readyState === "interactive") NProgress.inc(0.8);
+        if (document.readyState === "complete") NProgress.done();
+    });
 </script>
 
     </body>
