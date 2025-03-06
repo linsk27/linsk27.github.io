@@ -219,6 +219,511 @@
 &lt;/div&gt;</description>
         </item>
         <item>
+        <title>moonlight&#43;sunshine实现扩展屏和远程串流</title>
+        <link>https://linsk27.github.io/p/moonlight-sunshine%E5%AE%9E%E7%8E%B0%E6%89%A9%E5%B1%95%E5%B1%8F%E5%92%8C%E8%BF%9C%E7%A8%8B%E4%B8%B2%E6%B5%81/</link>
+        <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://linsk27.github.io/p/moonlight-sunshine%E5%AE%9E%E7%8E%B0%E6%89%A9%E5%B1%95%E5%B1%8F%E5%92%8C%E8%BF%9C%E7%A8%8B%E4%B8%B2%E6%B5%81/</guid>
+        <description>&lt;img src="https://linsk27.github.io/p/moonlight-sunshine%E5%AE%9E%E7%8E%B0%E6%89%A9%E5%B1%95%E5%B1%8F%E5%92%8C%E8%BF%9C%E7%A8%8B%E4%B8%B2%E6%B5%81/moonlight.jpg" alt="Featured image of post moonlight&#43;sunshine实现扩展屏和远程串流" /&gt;&lt;h2 id=&#34;工具合集&#34;&gt;工具合集
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;sunshine&lt;/strong&gt;是一个提供给moonlight进行串流的工具&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;moonlight&lt;/strong&gt;是一个可以方便的将Windows电脑画面传输到各主流操作系统的客户端软件上的工具&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;虚拟显示器&lt;/strong&gt;可以实现屏幕扩展的工具。在这里可以与串流实现配合。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;链接：https://pan.baidu.com/s/1_zhprVgFAOsemp3jEvslsA
+提取码：lrx1&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;实现屏幕复制&#34;&gt;实现屏幕复制
+&lt;/h2&gt;&lt;h3 id=&#34;安装与配置sunshine&#34;&gt;安装与配置sunshine
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;点击&lt;strong&gt;sunshine&lt;/strong&gt;的&lt;code&gt;.exe&lt;/code&gt;文件进行运行安装（安装任何东西尽量不安装到系统盘）,然后右击电脑屏幕右下角的sunshine图标，点击&lt;strong&gt;open sunshine&lt;/strong&gt;进入sunshine的管理界面，具体界面类似点2的图。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;先点击齿轮图形（设置），把页面设置为中文简体方便操作，记得点击保存，然后点击apply（应用），此时会自动重启sunshine程序，如果没有启动则右键右下角的sunshine图标，点击Restart。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2024/11/02/pOYE1J2zxStmVvb.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;同第2点开设置后，点击&lt;strong&gt;network&lt;/strong&gt;板块，根据图片设置&lt;code&gt;UPnP&lt;/code&gt;为“启用”，设置&lt;code&gt;ip地址族&lt;/code&gt;为“IPv4+IPv6”，这个对后面串流有用。最后把&lt;code&gt;公网加密模式&lt;/code&gt;设置为“禁用”，点击保存并且应用，重启sunshine步骤。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2024/11/03/iKJAzGqkcNlf82d.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;安装与配置moonlight&#34;&gt;安装与配置moonlight
+&lt;/h3&gt;&lt;p&gt;该演示为安卓端，pc端大同小异，同样可看下面教程&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在上面给的网盘内直接安装或者谷歌商店安装&lt;strong&gt;moonlight&lt;/strong&gt;,进入moonlight界面&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2024/11/03/kBxJ7d4LPEjhnsc.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;bc3d4af29323d45ea1ca8af22f682c9.jpg&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;点击齿轮图形（设置），可以根据自己设备的分辨率进行设置，其中码率对远程串流会有较大影响，个人认为局域网连接可以直接拉满&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2024/11/03/IAiYeK7GbNJkv3c.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;7a29f1d3060d789a9a37851f2b6cc69.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;设备通常打开&lt;strong&gt;moonlight&lt;/strong&gt;后，在相同局域网下，设备会显示同个局域网下的电脑设备，如第一点的图所示。此时可以平板直接点击电脑设备进行连接，然后会出现ping码，通常电脑会出现ping码弹窗，没有的话打开&lt;strong&gt;sunshine&lt;/strong&gt;控制台，点击ping选项进行输入。通常第一次连接之后，只要平板不删除电脑设备，就不会再要求输入ping码。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2024/11/03/CTv9K4YyXbVMBGN.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果没有显示电脑设备，则可在电脑按下&lt;code&gt;Win+R&lt;/code&gt;,输入&lt;code&gt;cmd&lt;/code&gt;打开终端，然后输入&lt;code&gt;ipconfig&lt;/code&gt;来获取局域网的&lt;code&gt;ipv4或ipv6&lt;/code&gt;的地址（我这个网络没有ipv6地址）。然后选择字段为&lt;code&gt;IPv4地址&lt;/code&gt;或&lt;code&gt;IPv6 地址&lt;/code&gt;的字样才有效。ipv6对远程串流帮助较大。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2024/11/03/9cHN4LDXOUy6iPn.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;然后点击平板端的&lt;strong&gt;moonlight&lt;/strong&gt;，点击加号图标，直接输入ipv4或者ipv6地址，即可显示电脑设备。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;这个时候你的平板设备应该就成功复制了电脑屏幕，并且几乎只有100ms的延迟！&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;实现屏幕扩展&#34;&gt;实现屏幕扩展
+&lt;/h2&gt;&lt;h3 id=&#34;配置与安装parsecvdisplay虚拟显示器&#34;&gt;配置与安装ParsecVDisplay（虚拟显示器）
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;在网盘内或者自行选择下载虚拟显示器软件，打开后如图。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2024/11/03/ZE4GxJ8QkW7CNHA.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;点击&lt;code&gt;ADD DISPLAY&lt;/code&gt;,添加虚拟显示器，随后点击显示器查看属性。但是通常会有bug，比如显示&lt;code&gt;\\.\DISPLAY1&lt;/code&gt;,说明添加与原屏幕冲突，需要再添加一次，然后可以点击这个1的屏幕然后进行删除。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2024/11/03/HN2sFDfmMOKSqzy.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;有正确的显示器之后，点击显示器查看显示器参数，如图为&lt;code&gt;\\.\DISPLAY11&lt;/code&gt;。同时，对该虚拟显示器的刷新率和帧率参数进行配置。最后点击&lt;code&gt;CUSTOM&lt;/code&gt;按键，输入这些参数。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2024/11/03/grRCI6kVQnNMoH5.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2024/11/03/hnf9q7mw3HCpXeL.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;最后打开&lt;strong&gt;sunshine&lt;/strong&gt;控制台，点击齿轮设置，打开video选项，输入显示器的名称&lt;code&gt;\\.\DISPLAY11&lt;/code&gt;，点击保存并且应用，然后平板进行&lt;strong&gt;moonlight&lt;/strong&gt;重连，这个时候，就会扩展成功！&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2024/11/03/1uWMdoIwi9B7fOs.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;打开&lt;code&gt;Win+I&lt;/code&gt;打开电脑设置，进入“显示”模块，对平板显示器进行位置调动，方便扩展。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2024/11/03/md7rKf1lOLIRBoc.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;注意不断连不上可查看此处&#34;&gt;注意！！！不断连不上可查看此处
+&lt;/h3&gt;&lt;p&gt;当时搞完这个扩展显示器，后面我出现很多次连不上的现象&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;失败原因：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;sunshine&lt;/strong&gt;设置了video的显示器名称后，就只会抓取该名称的显示器进行显示，如果没有生成该虚拟显示器，则其他设备的moonlight就无法链接到电脑设备&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;解决方法：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;方式1：把&lt;strong&gt;sunshine&lt;/strong&gt;的video选项里的video清空，这样就会默认复制屏幕。&lt;/p&gt;
+&lt;p&gt;方式2：打开虚拟显示器并且创建，保持&lt;strong&gt;sunshine&lt;/strong&gt;的video设置和&lt;strong&gt;虚拟显示器&lt;/strong&gt;的名称设置相同即可！！&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;实现远程串流&#34;&gt;实现远程串流
+&lt;/h2&gt;</description>
+        </item>
+        <item>
+        <title>什么是防抖和节流？什么时候去用？</title>
+        <link>https://linsk27.github.io/p/%E4%BB%80%E4%B9%88%E6%98%AF%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%8E%BB%E7%94%A8/</link>
+        <pubDate>Sat, 26 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://linsk27.github.io/p/%E4%BB%80%E4%B9%88%E6%98%AF%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%8E%BB%E7%94%A8/</guid>
+        <description>&lt;h2 id=&#34;什么是防抖debounce&#34;&gt;什么是防抖（Debounce）？
+&lt;/h2&gt;&lt;h3 id=&#34;防抖-多次触发-只执行最后一次&#34;&gt;防抖 （多次触发 只执行最后一次）
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;原理：在高频率触发某个响应事件时，在规定时间间隔内如果没有再次触发，则属于最后一次完成交互，触发相对应的方法&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;常用：在用户输入搜索词的过程中，每一次输入都会触发 input 事件，但显然没必要每次都发送请求，只有当用户停止输入后，系统才发送一次最终的请求&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;手搓代码：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 1.封装防抖函数
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;debounce&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;fn&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;time&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// 4.创建一个标记用来存放定时器的返回值
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;timeout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;// 5.每当用户触发input事件  把前一个 setTimeout 清楚掉
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;nx&#34;&gt;clearTimeout&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;timeout&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;// 6.然后又创建一个新的 setTimeout, 这样就能保证输入字符后等待的间隔内 还有字符输入的话，就不会执行 setTimeout里面的内容
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;nx&#34;&gt;timeout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;setTimeout&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;c1&#34;&gt;// 7.这里进行防抖的内容
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;      &lt;span class=&#34;nx&#34;&gt;fn&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;time&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 2.获取inpt元素
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;inp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;document&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;getElementById&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;inp&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 8. 测试防抖临时使用的函数
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;sayHi&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;防抖成功&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 3.给inp绑定input事件  调用封装的防抖函数  传入要执行的内容与间隔事件
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;inp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;addEventListener&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;input&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;debounce&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;sayHi&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;什么是节流throttle&#34;&gt;什么是节流（Throttle）？
+&lt;/h2&gt;&lt;h3 id=&#34;节流-时间间隔内-只允许执行一次&#34;&gt;节流 （时间间隔内 只允许执行一次）
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;原理：在高频率触发某个有响应方法的事件时，第一次触发响应事件，计时器开始计时，规定时间内继续交互不触发事件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;常用：鼠标滚轮滑动触发下拉刷新、王者的英雄技能刷新&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;手搓代码：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-JavaScript&#34; data-lang=&#34;JavaScript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 1.封装节流函数
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;throttle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;fn&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;time&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;//3. 通过闭包保存一个 &amp;#34;节流阀&amp;#34; 默认为false
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;temp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;//8.触发事件被调用 判断&amp;#34;节流阀&amp;#34; 是否为true  如果为true就直接trurn出去不做任何操作
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;temp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;c1&#34;&gt;//4. 如果节流阀为false  立即将节流阀设置为true
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;      &lt;span class=&#34;nx&#34;&gt;temp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//节流阀设置为true
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;      &lt;span class=&#34;c1&#34;&gt;//5.  开启定时器
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;      &lt;span class=&#34;nx&#34;&gt;setTimeout&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;//6. 将外部传入的函数的执行放在setTimeout中
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;nx&#34;&gt;fn&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;apply&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;arguments&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;//7. 最后在setTimeout执行完毕后再把标记&amp;#39;节流阀&amp;#39;为false(关键)  表示可以执行下一次循环了。当定时器没有执行的时候标记永远是true，在开头被return掉
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;nx&#34;&gt;temp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;time&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;sayHi&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// 打印当前 document 的宽高
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;target&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;innerWidth&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;target&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;innerHeight&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 2.绑定事件，绑定时就调用节流函数
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 敲黑板！！！ 这里是重点 绑定是就要调用一下封装的节流函数 触发事件是触发封装函数内部的函数
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;window&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;addEventListener&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;resize&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;throttle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;sayHi&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;高效方式实现防抖和节流&#34;&gt;高效方式实现防抖和节流
+&lt;/h2&gt;&lt;h3 id=&#34;使用-loadash-库实现防抖和节流&#34;&gt;使用 Loadash 库实现防抖和节流
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;lodash 是一个留下的 JavaScript 实用工具库，提供了高效的防抖和节流函数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;使用步骤&#34;&gt;使用步骤
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;安装 lodash&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;l&#34;&gt;npm install lodash&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;使用防抖和节流&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;debounce&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;lodash/debounce&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;throttle&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;lodash/throttle&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 防抖示例
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;debouncedSearch&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;debounce&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;handleSearch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;300&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;searchInput&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;addEventListener&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;input&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;debouncedSearch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 节流示例
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;throttledScroll&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;throttle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;handleScroll&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;200&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;window&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;addEventListener&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;scroll&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;throttledScroll&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;设置合适的时间间隔&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;防抖和节流的核心在于事件频率控制，因此根据实际场景合理设置时间参数非常关键。过长的延迟可能导致响应不及时，而过短的间隔可能会影响性能提升效果。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;通常，防抖的延迟在200ms到500ms之间，节流的时间间隔在100ms到300ms之间。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>入门前端？如何少走弯路！！！</title>
+        <link>https://linsk27.github.io/p/%E5%85%A5%E9%97%A8%E5%89%8D%E7%AB%AF%E5%A6%82%E4%BD%95%E5%B0%91%E8%B5%B0%E5%BC%AF%E8%B7%AF/</link>
+        <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://linsk27.github.io/p/%E5%85%A5%E9%97%A8%E5%89%8D%E7%AB%AF%E5%A6%82%E4%BD%95%E5%B0%91%E8%B5%B0%E5%BC%AF%E8%B7%AF/</guid>
+        <description>&lt;h2 id=&#34;作为一个入门程序员&#34;&gt;作为一个入门程序员
+&lt;/h2&gt;&lt;p&gt;大学程序员大多依靠网络上的教学视频进行学习，但这往往效率较慢，知识面也相对局限。因此，多关注优秀的博客文章、浏览有趣的论坛，并养成阅读书籍的习惯才是重中之重！&lt;/p&gt;
+&lt;h3 id=&#34;计算机网络基础&#34;&gt;计算机网络基础
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://book.douban.com/subject/24737674/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;图解 TCP/IP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://book.douban.com/subject/25863515/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;图解 HTTP&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;算法和数据结构&#34;&gt;算法和数据结构
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://book.douban.com/subject/26979890/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;算法图解&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;数据库&#34;&gt;数据库
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.howie6879.com/post/2016/03_mysql-tutorial/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MySQL 基本操作&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;linux&#34;&gt;Linux
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zorrozou.github.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;穷佐罗的 Linux 图书&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://101.lug.ustc.edu.cn/Ch01/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;中国科技大学的 Linux 图书&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;同时，以下这些网站对学习也有帮助：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.runoob.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;菜鸟教程&lt;/a&gt;: 适合入门、学习基础的网站&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://juejin.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;稀土掘金&lt;/a&gt;: 程序员社区交流网站，比 CSDN 更好，类似的还有 &lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;博客园&lt;/a&gt; 和 &lt;a class=&#34;link&#34; href=&#34;https://www.51cto.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;51CTO&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CSDN&lt;/a&gt;: 虽然口碑不佳，但偶尔可以在其中找到解决方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;怎么学前端&#34;&gt;怎么学前端？
+&lt;/h2&gt;&lt;p&gt;在学习前端的初期，主要关注以下内容：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;页面构建&lt;/strong&gt;：使用 HTML、CSS 等技术构建页面的基本结构和样式。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;交互实现&lt;/strong&gt;：通过 JavaScript 等技术实现用户与页面的交互功能，如按钮点击、表单提交等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;初期掌握好前端三件套（HTML、CSS、JavaScript）是必不可少的。在写代码的过程中，&lt;strong&gt;将页面想象为一个个盒子&lt;/strong&gt;，对学习前端大有裨益！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;工具&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/play&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;在线调试代码: Playground | MDN&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;合集教学&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;官方详细文档：&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MDN HTML 基础&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;这个也不错，更易懂：&lt;a class=&#34;link&#34; href=&#34;https://web.qianguyihao.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;千古图文教程&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;css&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/pengfeiw/css-tutorial/blob/master/chapters/001&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CSS 教程&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;JavaScript&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://tsejx.github.io/javascript-guidebook/basic-concept/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;JavaScript 指南&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;个人新手推荐（有运行实例）：&lt;a class=&#34;link&#34; href=&#34;https://zh.javascript.info/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;现代 JavaScript 教程&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;趣味实战&#34;&gt;趣味实战
+&lt;/h2&gt;&lt;p&gt;在视频和文章学习后，可以通过一些挑战或游戏来巩固所学知识：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://flexboxfroggy.com/#zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Flexbox 弹性布局青蛙小游戏&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/bradtraversy/50projects50days&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;50 Projects in 50 Days&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://cn-vuejs-challenges.netlify.app/challenges.html#category=Built-ins&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Vue.js 挑战&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;工具&#34;&gt;工具
+&lt;/h2&gt;&lt;p&gt;程序员不仅要会编程，还要会使用各种工具：&lt;/p&gt;
+&lt;h3 id=&#34;markdown&#34;&gt;Markdown
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Markdown&lt;/strong&gt; 是一种轻量级的标记语言，程序员必不可少的文档工具。语法简单明了，掌握后可以帮助程序员更快速地编写文档、博客和笔记。&lt;/p&gt;
+&lt;h3 id=&#34;vs-code&#34;&gt;VS Code
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;VS Code&lt;/strong&gt; 拥有强大的插件生态系统，可以安装不同的插件来增强功能，适用于各种编程语言的开发。对于前端开发者来说，VS Code 提供了丰富的语言支持（如 HTML、CSS、JavaScript 等）以及大量实用插件，如代码片段、自动补全和 Git 控制等。&lt;/p&gt;
+&lt;h3 id=&#34;版本控制工具-git&#34;&gt;版本控制工具 Git
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Git&lt;/strong&gt; 是目前最流行的分布式版本控制系统，具有高效的分支管理和合并功能，支持大型项目的开发与维护。使用 Git，程序员可以进行代码的提交、拉取、推送等操作，同时方便地查看代码历史记录和比较不同版本之间的差异。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;例如，可以从 GitHub 仓库中 clone 项目文件，再通过相关 Git 命令连接该项目仓库，创建自己的分支后，使用拉取、合并等 Git 命令将自己的分支版本上传到远程仓库，实现项目互联。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>【Hugo】主题美化教程</title>
         <link>https://linsk27.github.io/p/hugo%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/</link>
         <pubDate>Sat, 19 Oct 2024 00:00:00 +0000</pubDate>
@@ -614,6 +1119,97 @@
 </description>
         </item>
         <item>
+        <title>【Nexus】桌面美化教程</title>
+        <link>https://linsk27.github.io/p/nexus%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/</link>
+        <pubDate>Tue, 15 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://linsk27.github.io/p/nexus%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/</guid>
+        <description>&lt;img src="https://linsk27.github.io/p/nexus%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/nexus6.png" alt="Featured image of post 【Nexus】桌面美化教程" /&gt;&lt;blockquote&gt;
+&lt;h2 id=&#34;nexus-下载安装&#34;&gt;nexus 下载安装
+&lt;/h2&gt;&lt;p&gt;nuxes 下载链接&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;链接：https://pan.baidu.com/s/1M-cotx78rZfoPAqLzMquGA&lt;/li&gt;
+&lt;li&gt;提取码：ogh0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1.点击.exe 文件进行安装后显示
+&lt;img src=&#34;https://s2.loli.net/2024/10/15/y7WlQ1btfcv6rAi.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;nexus.png&#34;
+	
+	
+&gt; 2.任务栏透明（可以都去实现）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;方式一：安装 translucenTtb​ 插件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;方式二：在设置设置任务栏自动隐藏图标&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;将桌面的图标都隐藏&lt;/p&gt;
+&lt;h2 id=&#34;进行-nexus-配置不做过多的图片解释可以自己一边调试一边研究找出自己最爱的风格&#34;&gt;进行 nexus 配置（不做过多的图片解释，可以自己一边调试一边研究，找出自己最爱的风格）
+&lt;/h2&gt;&lt;p&gt;1.点击 nexus 任务栏的 nexus 打开软件&lt;/p&gt;
+&lt;p&gt;2.点击位置将停靠设置在底部，并且根据自己的喜好进行偏移参数调整后点击应用&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2024/10/15/2yktEV3HubrXROC.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;nexus2.png&#34;
+	
+	
+&gt; 3.点击“行为”,打开 dock 透明度，将 dock 透明度拉满&lt;/p&gt;
+&lt;p&gt;4.点击“效果”，把悬浮之类的效果都可以设置为弹跳，同时设置水波纹效果等&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2024/10/15/CENAPTIqhwWaFvg.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;nexue3.png&#34;
+	
+	
+&gt; 5. 点击“一般”，勾选隐藏系统任务栏(可勾可不勾)，勾选右下角操作栏消失&lt;/p&gt;
+&lt;h2 id=&#34;图标的添加&#34;&gt;图标的添加
+&lt;/h2&gt;&lt;p&gt;1.右键 nuxes 的自带图标，将没用的图标删除&lt;/p&gt;
+&lt;p&gt;2.右键 nexes 的自带 win 图标，点击创建 dock 项目&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2024/10/15/8rftON4vIPFQ5gC.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;nexues4.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;3.点击查找，获取对应需要的软件 exe 文件后会自动完善信息，点击确定即可&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2024/10/15/xH7G5zSieunyI1J.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;nexus5.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;4.配置完成&lt;/p&gt;
+&lt;h2 id=&#34;添加音频条和时钟组件&#34;&gt;添加音频条和时钟组件
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;日后出更新以及教程噢~~&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;恭喜你完成本文教程最终配置效果如封面图可以通过-wallpaper-找个动态壁纸制作属于自己好看的桌面&#34;&gt;恭喜你完成本文教程，最终配置效果如封面图，可以通过 wallpaper 找个动态壁纸，制作属于自己好看的桌面！
+&lt;/h2&gt;&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
         <title>Linux的安装（Ubuntu）</title>
         <link>https://linsk27.github.io/p/linux%E7%9A%84%E5%AE%89%E8%A3%85ubuntu/</link>
         <pubDate>Mon, 14 Oct 2024 00:00:00 +0000</pubDate>
@@ -815,6 +1411,53 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;二-传值问题匹配功能&#34;&gt;二 传值问题（匹配功能）
 &lt;/h2&gt;&lt;p&gt;当我们在子组件进行表单操作的时候，需要从父组件往子组件传相关操作数据的值，若传入&lt;code&gt;form&lt;/code&gt;的值是&lt;code&gt;小王&lt;/code&gt;，则&lt;code&gt;form&lt;/code&gt;在下拉框中显示的值为&lt;code&gt;小王&lt;/code&gt;,实际值也为&lt;code&gt;小王&lt;/code&gt;，若传入的值为&lt;code&gt;01&lt;/code&gt;,则下拉框中显示的值为&lt;code&gt;小王&lt;/code&gt;，实际值依旧为&lt;code&gt;01&lt;/code&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>v-if和v-for为何不该同时作用于一个模块？</title>
+        <link>https://linsk27.github.io/p/v-if%E5%92%8Cv-for%E4%B8%BA%E4%BD%95%E4%B8%8D%E8%AF%A5%E5%90%8C%E6%97%B6%E4%BD%9C%E7%94%A8%E4%BA%8E%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97/</link>
+        <pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://linsk27.github.io/p/v-if%E5%92%8Cv-for%E4%B8%BA%E4%BD%95%E4%B8%8D%E8%AF%A5%E5%90%8C%E6%97%B6%E4%BD%9C%E7%94%A8%E4%BA%8E%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97/</guid>
+        <description>&lt;p&gt;&lt;code&gt;[vue/no-use-v-if-with-v-for]&lt;/code&gt; 这个错误信息是由 ESLint 的 Vue.js 插件 &lt;code&gt;eslint-plugin-vue&lt;/code&gt; 产生的。它指出在你的 Vue.js 模板中，&lt;code&gt;v-if&lt;/code&gt; 和 &lt;code&gt;v-for&lt;/code&gt; 指令被不当地一起使用在了同一个元素上。&lt;/p&gt;
+&lt;h3 id=&#34;为什么会产生这个错误&#34;&gt;为什么会产生这个错误？
+&lt;/h3&gt;&lt;p&gt;在 Vue.js 中，当 &lt;code&gt;v-if&lt;/code&gt; 和 &lt;code&gt;v-for&lt;/code&gt; 同时用在同一个元素上时，Vue 会先处理 &lt;code&gt;v-for&lt;/code&gt;，然后处理 &lt;code&gt;v-if&lt;/code&gt;。这意味着即使 &lt;code&gt;v-if&lt;/code&gt; 最终会过滤掉一些元素，&lt;code&gt;v-for&lt;/code&gt; 仍然会遍历整个列表，这可能会导致不必要的计算开销，特别是在处理大型列表时。&lt;/p&gt;
+&lt;h3 id=&#34;如何修复这个错误&#34;&gt;如何修复这个错误？
+&lt;/h3&gt;&lt;p&gt;根据 ESLint 的建议，你应该将 &lt;code&gt;v-if&lt;/code&gt; 移动到包含 &lt;code&gt;v-for&lt;/code&gt; 的父元素（或“包装元素”）上。这样可以确保 &lt;code&gt;v-if&lt;/code&gt; 的条件判断只执行一次，而不是对 &lt;code&gt;v-for&lt;/code&gt; 生成的每个元素都执行。&lt;/p&gt;
+&lt;h4 id=&#34;错误的示例&#34;&gt;错误的示例：
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;v-for&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;item in items&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;v-if&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;item.active&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;:key&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;item.id&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  {{ item.name }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;在这个例子中，&lt;code&gt;v-if&lt;/code&gt; 会在每次迭代时都执行，检查 &lt;code&gt;item.active&lt;/code&gt; 是否为真。&lt;/p&gt;
+&lt;h4 id=&#34;正确的示例&#34;&gt;正确的示例：
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;v-if&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;hasActiveItems&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;v-for&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;item in activeItems&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;:key&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;item.id&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    {{ item.name }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;在这个修正后的例子中，首先通过一个计算属性 &lt;code&gt;hasActiveItems&lt;/code&gt; 或在 &lt;code&gt;data&lt;/code&gt;、&lt;code&gt;computed&lt;/code&gt; 或 &lt;code&gt;methods&lt;/code&gt; 中定义的逻辑来检查是否有活跃的项。如果有，则使用 &lt;code&gt;v-for&lt;/code&gt; 来渲染这些活跃的项。这里的 &lt;code&gt;activeItems&lt;/code&gt; 应该是一个只包含活跃项的数组。&lt;/p&gt;
+&lt;h3 id=&#34;总结&#34;&gt;总结
+&lt;/h3&gt;&lt;p&gt;通过将 &lt;code&gt;v-if&lt;/code&gt; 移动到 &lt;code&gt;v-for&lt;/code&gt; 的外部，你可以优化你的 Vue 组件的性能，避免不必要的渲染和计算。这也是 Vue.js 官方文档和 ESLint 插件推荐的最佳实践。&lt;/p&gt;
 </description>
         </item>
         

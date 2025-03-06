@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>资源 on 404_@林达</title>
+        <link>https://linsk27.github.io/categories/%E8%B5%84%E6%BA%90/</link>
+        <description>Recent content in 资源 on 404_@林达</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>404_@林达</copyright>
+        <lastBuildDate>Sun, 20 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/categories/%E8%B5%84%E6%BA%90/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>入门前端？如何少走弯路！！！</title>
+        <link>https://linsk27.github.io/p/%E5%85%A5%E9%97%A8%E5%89%8D%E7%AB%AF%E5%A6%82%E4%BD%95%E5%B0%91%E8%B5%B0%E5%BC%AF%E8%B7%AF/</link>
+        <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://linsk27.github.io/p/%E5%85%A5%E9%97%A8%E5%89%8D%E7%AB%AF%E5%A6%82%E4%BD%95%E5%B0%91%E8%B5%B0%E5%BC%AF%E8%B7%AF/</guid>
+        <description>&lt;h2 id=&#34;作为一个入门程序员&#34;&gt;作为一个入门程序员
+&lt;/h2&gt;&lt;p&gt;大学程序员大多依靠网络上的教学视频进行学习，但这往往效率较慢，知识面也相对局限。因此，多关注优秀的博客文章、浏览有趣的论坛，并养成阅读书籍的习惯才是重中之重！&lt;/p&gt;
+&lt;h3 id=&#34;计算机网络基础&#34;&gt;计算机网络基础
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://book.douban.com/subject/24737674/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;图解 TCP/IP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://book.douban.com/subject/25863515/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;图解 HTTP&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;算法和数据结构&#34;&gt;算法和数据结构
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://book.douban.com/subject/26979890/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;算法图解&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;数据库&#34;&gt;数据库
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.howie6879.com/post/2016/03_mysql-tutorial/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MySQL 基本操作&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;linux&#34;&gt;Linux
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zorrozou.github.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;穷佐罗的 Linux 图书&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://101.lug.ustc.edu.cn/Ch01/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;中国科技大学的 Linux 图书&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;同时，以下这些网站对学习也有帮助：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.runoob.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;菜鸟教程&lt;/a&gt;: 适合入门、学习基础的网站&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://juejin.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;稀土掘金&lt;/a&gt;: 程序员社区交流网站，比 CSDN 更好，类似的还有 &lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;博客园&lt;/a&gt; 和 &lt;a class=&#34;link&#34; href=&#34;https://www.51cto.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;51CTO&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CSDN&lt;/a&gt;: 虽然口碑不佳，但偶尔可以在其中找到解决方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;怎么学前端&#34;&gt;怎么学前端？
+&lt;/h2&gt;&lt;p&gt;在学习前端的初期，主要关注以下内容：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;页面构建&lt;/strong&gt;：使用 HTML、CSS 等技术构建页面的基本结构和样式。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;交互实现&lt;/strong&gt;：通过 JavaScript 等技术实现用户与页面的交互功能，如按钮点击、表单提交等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;初期掌握好前端三件套（HTML、CSS、JavaScript）是必不可少的。在写代码的过程中，&lt;strong&gt;将页面想象为一个个盒子&lt;/strong&gt;，对学习前端大有裨益！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;工具&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/play&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;在线调试代码: Playground | MDN&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;合集教学&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;官方详细文档：&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MDN HTML 基础&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;这个也不错，更易懂：&lt;a class=&#34;link&#34; href=&#34;https://web.qianguyihao.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;千古图文教程&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;css&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/pengfeiw/css-tutorial/blob/master/chapters/001&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CSS 教程&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;JavaScript&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://tsejx.github.io/javascript-guidebook/basic-concept/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;JavaScript 指南&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;个人新手推荐（有运行实例）：&lt;a class=&#34;link&#34; href=&#34;https://zh.javascript.info/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;现代 JavaScript 教程&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;趣味实战&#34;&gt;趣味实战
+&lt;/h2&gt;&lt;p&gt;在视频和文章学习后，可以通过一些挑战或游戏来巩固所学知识：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://flexboxfroggy.com/#zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Flexbox 弹性布局青蛙小游戏&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/bradtraversy/50projects50days&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;50 Projects in 50 Days&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://cn-vuejs-challenges.netlify.app/challenges.html#category=Built-ins&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Vue.js 挑战&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;工具&#34;&gt;工具
+&lt;/h2&gt;&lt;p&gt;程序员不仅要会编程，还要会使用各种工具：&lt;/p&gt;
+&lt;h3 id=&#34;markdown&#34;&gt;Markdown
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Markdown&lt;/strong&gt; 是一种轻量级的标记语言，程序员必不可少的文档工具。语法简单明了，掌握后可以帮助程序员更快速地编写文档、博客和笔记。&lt;/p&gt;
+&lt;h3 id=&#34;vs-code&#34;&gt;VS Code
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;VS Code&lt;/strong&gt; 拥有强大的插件生态系统，可以安装不同的插件来增强功能，适用于各种编程语言的开发。对于前端开发者来说，VS Code 提供了丰富的语言支持（如 HTML、CSS、JavaScript 等）以及大量实用插件，如代码片段、自动补全和 Git 控制等。&lt;/p&gt;
+&lt;h3 id=&#34;版本控制工具-git&#34;&gt;版本控制工具 Git
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Git&lt;/strong&gt; 是目前最流行的分布式版本控制系统，具有高效的分支管理和合并功能，支持大型项目的开发与维护。使用 Git，程序员可以进行代码的提交、拉取、推送等操作，同时方便地查看代码历史记录和比较不同版本之间的差异。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;例如，可以从 GitHub 仓库中 clone 项目文件，再通过相关 Git 命令连接该项目仓库，创建自己的分支后，使用拉取、合并等 Git 命令将自己的分支版本上传到远程仓库，实现项目互联。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
