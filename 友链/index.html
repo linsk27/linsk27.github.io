@@ -265,10 +265,12 @@
     
     
     
+
     
 
     
 </div>
+
 
 </header>
 
@@ -320,7 +322,9 @@
 
 
         <span>404_@林达所作</span>
+
     </section>
+
     </footer>
 
 
@@ -503,6 +507,25 @@
         if (document.readyState === "interactive") NProgress.inc(0.8);
         if (document.readyState === "complete") NProgress.done();
     });
+</script>
+
+<script defer src="https://cn.vercount.one/js"></script>
+<script>
+    function showHideView() {
+        
+        let viewCounts = document.querySelectorAll("#viewCount");
+        if (viewCounts) {
+            
+            let article =  document.querySelector(".article-page");
+            if (!article) {
+                viewCounts.forEach(ele => {
+                    ele.style.display = 'none';
+                });
+            }
+        }
+    }
+    
+    showHideView();
 </script>
 
     </body>

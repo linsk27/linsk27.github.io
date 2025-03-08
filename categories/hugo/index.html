@@ -10,7 +10,7 @@
 <meta property='og:description' content="该Blog暂时记录技术笔记">
 <meta property='og:url' content='https://linsk27.github.io/categories/hugo/'>
 <meta property='og:site_name' content='404_@林达'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-03-07T00:00:00&#43;00:00 '/>
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-03-08T00:00:00&#43;00:00 '/>
 <meta name="twitter:title" content="Category: Hugo - 404_@林达">
 <meta name="twitter:description" content="该Blog暂时记录技术笔记"><link rel="alternate" type="application/rss&#43;xml" href="https://linsk27.github.io/categories/hugo/index.xml">
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -282,7 +282,7 @@
                     <a href="/archives/#2025">
                         
                             <span class="year">2025</span>
-                            <span class="count">1</span>
+                            <span class="count">2</span>
                         
                     </a> 
                 </div>
@@ -317,7 +317,7 @@
 
     <div class="tagCloud-tags">
         
-            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="font_size_6">
+            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="font_size_7">
                 前端
             </a>
         
@@ -436,6 +436,25 @@
         if (document.readyState === "interactive") NProgress.inc(0.8);
         if (document.readyState === "complete") NProgress.done();
     });
+</script>
+
+<script defer src="https://cn.vercount.one/js"></script>
+<script>
+    function showHideView() {
+        
+        let viewCounts = document.querySelectorAll("#viewCount");
+        if (viewCounts) {
+            
+            let article =  document.querySelector(".article-page");
+            if (!article) {
+                viewCounts.forEach(ele => {
+                    ele.style.display = 'none';
+                });
+            }
+        }
+    }
+    
+    showHideView();
 </script>
 
     </body>
