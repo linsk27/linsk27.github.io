@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="提升搜索排名（通过标题/描述优化）、减少重复内容惩罚（通过 `canonical`)、增强社交传播效果（通过 **OpenGraph**社交媒体优化）。">
+<title>SEO优化手段---Canonical</title>
+
+<link rel='canonical' href='https://linsk27.github.io/p/seo%E4%BC%98%E5%8C%96%E6%89%8B%E6%AE%B5---canonical/'>
+
+<link rel="stylesheet" href="/scss/style.min.99214e393042866ab6eeadd1148e6314298a9af12f66703f67da5358cf149e3e.css"><meta property='og:title' content="SEO优化手段---Canonical">
+<meta property='og:description' content="提升搜索排名（通过标题/描述优化）、减少重复内容惩罚（通过 `canonical`)、增强社交传播效果（通过 **OpenGraph**社交媒体优化）。">
+<meta property='og:url' content='https://linsk27.github.io/p/seo%E4%BC%98%E5%8C%96%E6%89%8B%E6%AE%B5---canonical/'>
+<meta property='og:site_name' content='404_@林达'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-10-15T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-10-15T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="SEO优化手段---Canonical">
+<meta name="twitter:description" content="提升搜索排名（通过标题/描述优化）、减少重复内容惩罚（通过 `canonical`)、增强社交传播效果（通过 **OpenGraph**社交媒体优化）。">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended">
+
+
+        <div id="article-toolbar" style="position: sticky;top: 5px;z-index: 1000;">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>返回</span>
+            </a>
+        </div>
+    
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#1-什么是canonical标签"><strong>1. 什么是Canonical标签？</strong></a></li>
+        <li><a href="#2-为什么需要添加canonical标签"><strong>2. 为什么需要添加Canonical标签？</strong></a>
+          <ol>
+            <li><a href="#场景举例"><strong>场景举例</strong></a></li>
+          </ol>
+        </li>
+        <li><a href="#3-如何正确使用canonical标签"><strong>3. 如何正确使用Canonical标签？</strong></a></li>
+        <li><a href="#4-与301重定向的区别"><strong>4. 与301重定向的区别</strong></a></li>
+        <li><a href="#5-常见错误"><strong>5. 常见错误</strong></a></li>
+        <li><a href="#6-验证是否生效"><strong>6. 验证是否生效</strong></a></li>
+        <li><a href="#7-nuxt3举例实现方法"><strong>7. Nuxt3举例实现方法</strong></a>
+          <ol>
+            <li><a href="#优化前">优化前</a></li>
+            <li><a href="#潜在问题"><strong>潜在问题</strong></a></li>
+            <li><a href="#优化后">优化后</a></li>
+            <li><a href="#代码整体对-seo-的价值"><strong>代码整体对 SEO 的价值</strong></a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/seo/" >
+                SEO
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/seo%E4%BC%98%E5%8C%96%E6%89%8B%E6%AE%B5---canonical/">SEO优化手段---Canonical</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            提升搜索排名（通过标题/描述优化）、减少重复内容惩罚（通过 `canonical`)、增强社交传播效果（通过 **OpenGraph**社交媒体优化）。
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2024-10-15</time>
+            </div>
+	        
+        <div id="viewCount">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-eye"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" /></svg>
+            <time class="article-time--reading">
+                
+                <span id="vercount_value_page_pv">loading... </span>次
+            </time>
+        </div>
+
+        
+
+        
+    </footer>
+    
+
+    
+
+    
+</div>
+
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p><code>&lt;link rel=&quot;canonical&quot; href=&quot;xxxx/t&quot;&gt;</code></p>
+<p><strong>主要目的：<strong>解决 <strong>重复内容（Duplicate Content）</strong> 问题，并明确告知</strong>搜索引擎</strong>哪个是页面的“规范版本”（Canonical URL）。</p>
+<h3 id="1-什么是canonical标签"><strong>1. 什么是Canonical标签？</strong>
+</h3><ul>
+<li>
+<p><strong>作用</strong>：当同一内容（页面）可通过多个不同URL访问时（例如带参数的URL、分页、移动端/PC端不同URL等），搜索引擎可能认为这些是重复内容，导致权重分散。通过 <code>rel=&quot;canonical&quot;</code> 标签，可以指定一个 <strong>规范URL</strong>，告诉搜索引擎“这个URL是主要版本，请优先收录和排名”。</p>
+</li>
+<li>
+<p><strong>语法</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;canonical&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://example.com/规范URL&#34;</span> <span class="p">/&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<hr>
+<h3 id="2-为什么需要添加canonical标签"><strong>2. 为什么需要添加Canonical标签？</strong>
+</h3><h4 id="场景举例"><strong>场景举例</strong>
+</h4><ol>
+<li>
+<p><strong>URL参数导致的重复内容</strong></p>
+<ul>
+<li>例如：<br>
+<code>https://example.com/product?id=1</code>（排序参数）<br>
+<code>https://example.com/product?id=1&amp;sort=price</code></li>
+<li>搜索引擎可能认为这是两个不同页面，但实际内容相同。通过设置规范URL为 <code>https://example.com/product?id=1</code>，可集中权重。</li>
+</ul>
+</li>
+<li>
+<p><strong>分页内容</strong></p>
+<ul>
+<li>例如：<br>
+<code>https://example.com/blog?page=1</code><br>
+<code>https://example.com/blog?page=2</code></li>
+<li>可以在分页页面中设置规范URL指向主页面（如 <code>https://example.com/blog</code>），或为每个分页指定各自的规范URL。</li>
+</ul>
+</li>
+<li>
+<p><strong>移动端与桌面端不同URL</strong></p>
+<ul>
+<li>例如：<br>
+<code>https://m.example.com/page</code>（移动端）<br>
+<code>https://www.example.com/page</code>（桌面端）</li>
+<li>可以在移动端页面<strong>添加规范标签指向桌面端URL</strong>，或反之（根据SEO策略决定）。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="3-如何正确使用canonical标签"><strong>3. 如何正确使用Canonical标签？</strong>
+</h3><ul>
+<li><strong>规范URL必须是可访问的</strong>：确保 <code>href</code> 中的URL是真实存在的、200状态码的页面。</li>
+<li><strong>绝对URL优先</strong>：建议使用完整URL（如 <code>https://example.com/t</code>），而非相对路径（<code>/t</code>）。</li>
+<li><strong>避免链轮问题</strong>：多个页面不能互相指向对方作为规范URL（例如A→B，B→A），会导致搜索引擎无法识别。</li>
+<li><strong>分页处理</strong>：
+<ul>
+<li>如果分页内容独立，每个分页应指定自己的规范URL。</li>
+<li>如果希望集中权重到主页面，所有分页的规范URL指向主页面。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="4-与301重定向的区别"><strong>4. 与301重定向的区别</strong>
+</h3><ul>
+<li><strong>301重定向</strong>：将用户和搜索引擎永久跳转到新URL，旧URL不再存在。
+<strong>适用场景</strong>：页面迁移、URL结构变更。</li>
+<li><strong>Canonical标签</strong>：仅提示搜索引擎规范URL，用户仍可访问原URL。
+<strong>适用场景</strong>：内容相同或高度相似的多个URL需要共存（如参数化URL）。</li>
+</ul>
+<hr>
+<h3 id="5-常见错误"><strong>5. 常见错误</strong>
+</h3><ul>
+<li><strong>指向非规范域名</strong>：例如将 <code>https://example.com/t</code> 的规范URL设为 <code>https://otherdomain.com/t</code>，可能导致权重流失。</li>
+<li><strong>忽略动态参数</strong>：若规范URL带参数，需确保参数不影响内容（如 <code>?utm_source=...</code> 可保留，但排序参数需排除）。</li>
+<li><strong>在非HTML页面使用</strong>：如PDF、图片等非HTML文件中添加无效。</li>
+</ul>
+<hr>
+<h3 id="6-验证是否生效"><strong>6. 验证是否生效</strong>
+</h3><ul>
+<li>
+<p>使用 <strong>Google Search Console</strong> 的“URL检查”工具，查看Google是否识别了规范URL。</p>
+</li>
+<li>
+<p>通过浏览器开发者工具查看页面源代码，确认标签正确添加。</p>
+</li>
+<li>
+<p>点击<strong>Ctrl+U</strong></p>
+<p><img src="https://s2.loli.net/2025/03/14/HSGViwmn6B8N2YT.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+</li>
+</ul>
+<hr>
+<h3 id="7-nuxt3举例实现方法"><strong>7. Nuxt3举例实现方法</strong>
+</h3><h4 id="优化前">优化前
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// 步骤1:获取本地地址或.env路径(可用其他方法实现)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">requestURL</span> <span class="o">=</span> <span class="nx">useRequestURL</span><span class="p">().</span><span class="nx">href</span><span class="o">??</span><span class="s1">&#39;&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 动态设置 SEO Meta 标签
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">useHead</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">title</span><span class="o">:</span> <span class="nx">fit</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">seo_setting</span><span class="p">.</span><span class="nx">title</span><span class="o">??</span><span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="c1">// 标题
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">meta</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;description&#39;</span><span class="p">,</span> <span class="nx">content</span><span class="o">:</span> <span class="nx">fit</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">seo_setting</span><span class="p">.</span><span class="nx">desc</span><span class="o">??</span><span class="s2">&#34;&#34;</span> <span class="p">},</span> <span class="c1">// 描述
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;keywords&#39;</span><span class="p">,</span> <span class="nx">content</span><span class="o">:</span> <span class="nx">fit</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">seo_setting</span><span class="p">.</span><span class="nx">keyword</span><span class="o">??</span><span class="s1">&#39;&#39;</span> <span class="p">},</span> <span class="c1">// 关键词
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 社交媒体优化（OpenGraph）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">{</span> <span class="nx">property</span><span class="o">:</span> <span class="s1">&#39;og:title&#39;</span><span class="p">,</span> <span class="nx">content</span><span class="o">:</span> <span class="nx">fit</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">seo_setting</span><span class="p">.</span><span class="nx">title</span><span class="o">??</span><span class="s1">&#39;&#39;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span> <span class="nx">property</span><span class="o">:</span> <span class="s1">&#39;og:description&#39;</span><span class="p">,</span> <span class="nx">content</span><span class="o">:</span> <span class="nx">fit</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">seo_setting</span><span class="p">.</span><span class="nx">desc</span><span class="o">??</span><span class="s1">&#39;&#39;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">],</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">link</span><span class="o">:</span><span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="nx">rel</span><span class="o">:</span><span class="s1">&#39;canonical&#39;</span><span class="p">,</span><span class="nx">href</span><span class="o">:</span><span class="nx">requestURL</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="潜在问题"><strong>潜在问题</strong>
+</h4><ul>
+<li><strong>useRequestURL().href的使用风险：</strong></li>
+</ul>
+<blockquote>
+<p>在 SSR（服务器端渲染） 时可能无法正确获取完整 URL（例如在静态导出或反向代理场景下）。如果 href 为空字符串，生成的 canonical 标签会变成 <code>&lt;link rel=&quot;canonical&quot; href=&quot;&quot;&gt;</code>，这会被搜索引擎视为无效或错误的规范 URL，导致 SEO 权重流失</p></blockquote>
+<ul>
+<li><strong>动态数据为空的兜底逻辑</strong></li>
+</ul>
+<blockquote>
+<p><code>fit[0].seo_setting.title??&quot;&quot;</code> 依赖外部数据（如 API 响应），如果 <code>fit</code> 数组为空或字段缺失，会导致 <code>title</code>、<code>description</code> 等关键标签为空字符串，搜索引擎会认为页面信息不完整，影响排名。</p></blockquote>
+<ul>
+<li><strong>代码健壮性改进建议</strong></li>
+</ul>
+<blockquote>
+<p>确保 <code>fit[0].seo_setting</code> 存在且字段完整，避免渲染时崩溃.</p></blockquote>
+<h4 id="优化后">优化后
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// 获取本地地址
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">requestURL</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">server</span> 
+</span></span><span class="line"><span class="cl">  <span class="o">?</span> <span class="nx">useRequestURL</span><span class="p">().</span><span class="nx">href</span> <span class="c1">// SSR 环境：直接获取完整 URL
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="o">:</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">;</span> <span class="c1">// 客户端：使用浏览器 URL
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 动态设置 SEO Meta 标签
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">useHead</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">title</span><span class="o">:</span> <span class="nx">fit</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">seo_setting</span><span class="p">.</span><span class="nx">title</span><span class="o">??</span><span class="s2">&#34;默认标题&#34;</span><span class="p">,</span> <span class="c1">// 标题
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">meta</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;description&#39;</span><span class="p">,</span> <span class="nx">content</span><span class="o">:</span> <span class="nx">fit</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">seo_setting</span><span class="p">.</span><span class="nx">desc</span><span class="o">??</span><span class="s2">&#34;默认描述&#34;</span> <span class="p">},</span> <span class="c1">// 描述
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;keywords&#39;</span><span class="p">,</span> <span class="nx">content</span><span class="o">:</span> <span class="nx">fit</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">seo_setting</span><span class="p">.</span><span class="nx">keyword</span><span class="o">??</span><span class="s1">&#39;默认关键词&#39;</span> <span class="p">},</span> <span class="c1">// 关键词
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 社交媒体优化（OpenGraph）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">{</span> <span class="nx">property</span><span class="o">:</span> <span class="s1">&#39;og:title&#39;</span><span class="p">,</span> <span class="nx">content</span><span class="o">:</span> <span class="nx">fit</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">seo_setting</span><span class="p">.</span><span class="nx">title</span><span class="o">??</span><span class="s1">&#39;默认描述&#39;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span> <span class="nx">property</span><span class="o">:</span> <span class="s1">&#39;og:description&#39;</span><span class="p">,</span> <span class="nx">content</span><span class="o">:</span> <span class="nx">fit</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">seo_setting</span><span class="p">.</span><span class="nx">desc</span><span class="o">??</span><span class="s1">&#39;默认描述&#39;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">],</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">link</span><span class="o">:</span><span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="nx">rel</span><span class="o">:</span><span class="s1">&#39;canonical&#39;</span><span class="p">,</span><span class="nx">href</span><span class="o">:</span><span class="nx">requestURL</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="代码整体对-seo-的价值"><strong>代码整体对 SEO 的价值</strong>
+</h4><ul>
+<li>
+<p><strong>核心作用 ：</strong></p>
+<p>通过动态设置元标签和规范链接，解决 、关键词匹配 、权重集中 、跨平台展示三大 SEO 核心问题。</p>
+</li>
+<li>
+<p><strong>直接收益 ：</strong></p>
+<p>提升搜索排名（通过标题/描述优化）、减少重复内容惩罚（通过 <code>canonical</code>)、增强社交传播效果（通过 <strong>OpenGraph</strong>社交媒体优化）。</p>
+</li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>404_@林达所作</span>
+
+    </section>
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2025 404_@林达
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<script src="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.css" crossorigin="anonymous" />
+<script>
+    NProgress.start();
+    document.addEventListener("readystatechange", () => {
+        if (document.readyState === "interactive") NProgress.inc(0.8);
+        if (document.readyState === "complete") NProgress.done();
+    });
+</script>
+
+<script defer src="https://cn.vercount.one/js"></script>
+<script>
+    function showHideView() {
+        
+        let viewCounts = document.querySelectorAll("#viewCount");
+        if (viewCounts) {
+            
+            let article =  document.querySelector(".article-page");
+            if (!article) {
+                viewCounts.forEach(ele => {
+                    ele.style.display = 'none';
+                });
+            }
+        }
+    }
+    
+    showHideView();
+</script>
+
+    </body>
+</html>
