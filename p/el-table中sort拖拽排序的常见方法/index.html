@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://linsk27.github.io/p/el-table%E4%B8%ADsort%E6%8B%96%E6%8B%BD%E6%8E%92%E5%BA%8F%E7%9A%84%E5%B8%B8%E8%A7%81%E6%96%B9%E6%B3%95/'>
 
-<link rel="stylesheet" href="/scss/style.min.99214e393042866ab6eeadd1148e6314298a9af12f66703f67da5358cf149e3e.css"><meta property='og:title' content="el-table中sort(拖拽排序)的常见方法">
+<link rel="stylesheet" href="/scss/style.min.ae980efe75c2d32a27c41480b58278d4965834ce6891c8a5facafd3d3d5e22e2.css"><meta property='og:title' content="el-table中sort(拖拽排序)的常见方法">
 <meta property='og:description' content="el-table中sort的常见方法 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 const sort = async (newIndex: number, oldIndex: number) =&gt; { if (newIndex === oldIndex) return; const newData = [...tableData.value.rows]; const [movedItem] = newData.splice(oldIndex, 1); newData.splice(newIndex, 0, movedItem); newData.forEach((item, index) =&gt; { item.index = index; }); // Vue3 响应式更新方式 tableData.value = { ...tableData.value, rows: [...newData] // 强制替换整个数组触发更新 }; sortData.value.tag_groups = newData.map(item =&gt; ({ tag_group_id: item.tag_group_id, index: item.index })); isData .value += 1; // 每次拖拽后更新 key } ">
 <meta property='og:url' content='https://linsk27.github.io/p/el-table%E4%B8%ADsort%E6%8B%96%E6%8B%BD%E6%8E%92%E5%BA%8F%E7%9A%84%E5%B8%B8%E8%A7%81%E6%96%B9%E6%B3%95/'>
 <meta property='og:site_name' content='404_@林达'>
