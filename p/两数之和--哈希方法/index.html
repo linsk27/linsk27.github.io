@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="\n低于O(n^2)的写法，使用 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 /** *原理： * 1. 遍历nums *\t2. 通过hash.has()搜索哈希表内的对应值 *\t3. 没有对应值则存入哈希表，继续下一个数据搜索哈希表内对应值 *\t4. 搜索到对应值，终止循环 * 例子：nums:[2,8,11,15,3,7] target:9 */ var twoSum = function (nums, target) { let hash = new Map() for (let i = 0; i &lt; nums.length; i++) { // 首次哈希表为空，搜索不到数据 // 如果哈希表内搜索不到nums[i]对应相加数据为target的答案，则先存入哈希表，让下个循环的nums[i]进行搜索 if (!hash.has(target - nums[i])) hash.set(nums[i],i) // 哈希表搜索到答案则直接返回 else return [hash.get(target-nums[i]), i] } }; let hash = new Map(); 是 JavaScript 中使用 Map 对象创建一个哈希表（Hash Table）的写法。Map 是 ES6 引入的一种数据结构，用于存储键值对（key-value pairs），类似于普通对象（{}），但功能更强大且灵活。\n">
+<title>两数之和--哈希方法</title>
+
+<link rel='canonical' href='https://linsk27.github.io/p/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C--%E5%93%88%E5%B8%8C%E6%96%B9%E6%B3%95/'>
+
+<link rel="stylesheet" href="/scss/style.min.ae980efe75c2d32a27c41480b58278d4965834ce6891c8a5facafd3d3d5e22e2.css"><meta property='og:title' content="两数之和--哈希方法">
+<meta property='og:description' content="\n低于O(n^2)的写法，使用 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 /** *原理： * 1. 遍历nums *\t2. 通过hash.has()搜索哈希表内的对应值 *\t3. 没有对应值则存入哈希表，继续下一个数据搜索哈希表内对应值 *\t4. 搜索到对应值，终止循环 * 例子：nums:[2,8,11,15,3,7] target:9 */ var twoSum = function (nums, target) { let hash = new Map() for (let i = 0; i &lt; nums.length; i++) { // 首次哈希表为空，搜索不到数据 // 如果哈希表内搜索不到nums[i]对应相加数据为target的答案，则先存入哈希表，让下个循环的nums[i]进行搜索 if (!hash.has(target - nums[i])) hash.set(nums[i],i) // 哈希表搜索到答案则直接返回 else return [hash.get(target-nums[i]), i] } }; let hash = new Map(); 是 JavaScript 中使用 Map 对象创建一个哈希表（Hash Table）的写法。Map 是 ES6 引入的一种数据结构，用于存储键值对（key-value pairs），类似于普通对象（{}），但功能更强大且灵活。\n">
+<meta property='og:url' content='https://linsk27.github.io/p/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C--%E5%93%88%E5%B8%8C%E6%96%B9%E6%B3%95/'>
+<meta property='og:site_name' content='404_@林达'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='' /><meta property='article:published_time' content='2025-03-16T23:10:13&#43;08:00'/><meta property='article:modified_time' content='2025-03-16T23:10:13&#43;08:00'/><meta property='og:image' content='https://linsk27.github.io/avatar.png' />
+<meta name="twitter:title" content="两数之和--哈希方法">
+<meta name="twitter:description" content="\n低于O(n^2)的写法，使用 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 /** *原理： * 1. 遍历nums *\t2. 通过hash.has()搜索哈希表内的对应值 *\t3. 没有对应值则存入哈希表，继续下一个数据搜索哈希表内对应值 *\t4. 搜索到对应值，终止循环 * 例子：nums:[2,8,11,15,3,7] target:9 */ var twoSum = function (nums, target) { let hash = new Map() for (let i = 0; i &lt; nums.length; i++) { // 首次哈希表为空，搜索不到数据 // 如果哈希表内搜索不到nums[i]对应相加数据为target的答案，则先存入哈希表，让下个循环的nums[i]进行搜索 if (!hash.has(target - nums[i])) hash.set(nums[i],i) // 哈希表搜索到答案则直接返回 else return [hash.get(target-nums[i]), i] } }; let hash = new Map(); 是 JavaScript 中使用 Map 对象创建一个哈希表（Hash Table）的写法。Map 是 ES6 引入的一种数据结构，用于存储键值对（key-value pairs），类似于普通对象（{}），但功能更强大且灵活。\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://linsk27.github.io/avatar.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended">
+
+
+        <div id="article-toolbar" style="position: sticky;top: 5px;z-index: 1000;">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>返回</span>
+            </a>
+        </div>
+    
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#1"><strong>1. <code>Map</code> 的核心特性</strong></a></li>
+        <li><a href="#2-基本用法"><strong>2. 基本用法</strong></a>
+          <ol>
+            <li><a href="#初始化与操作">初始化与操作</a></li>
+            <li><a href="#遍历-map">遍历 Map</a></li>
+          </ol>
+        </li>
+        <li><a href="#3-与普通对象"><strong>3. 与普通对象 <code>{}</code> 的区别</strong></a></li>
+        <li><a href="#4-使用场景"><strong>4. 使用场景</strong></a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C--%E5%93%88%E5%B8%8C%E6%96%B9%E6%B3%95/">
+                
+                    <img src="/avatar.png" loading="lazy" alt="Featured image of post 两数之和--哈希方法" />
+                
+            </a>
+        </div>
+
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C--%E5%93%88%E5%B8%8C%E6%96%B9%E6%B3%95/">两数之和--哈希方法</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025-03-16</time>
+            </div>
+	        
+        <div id="viewCount">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-eye"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" /></svg>
+            <time class="article-time--reading">
+                
+                <span id="vercount_value_page_pv">loading... </span>次
+            </time>
+        </div>
+
+        
+
+        
+    </footer>
+    
+
+    
+
+    
+</div>
+
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p><img src="https://s2.loli.net/2025/03/16/lp6rdvbM2GtfhJL.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<ul>
+<li>低于O(n^2)的写法，使用</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"> <span class="cm">/** 
+</span></span></span><span class="line"><span class="cl"><span class="cm">  *原理：
+</span></span></span><span class="line"><span class="cl"><span class="cm">  * 1. 遍历nums
+</span></span></span><span class="line"><span class="cl"><span class="cm">  *	2. 通过hash.has()搜索哈希表内的对应值
+</span></span></span><span class="line"><span class="cl"><span class="cm">  *	3. 没有对应值则存入哈希表，继续下一个数据搜索哈希表内对应值
+</span></span></span><span class="line"><span class="cl"><span class="cm">  *	4. 搜索到对应值，终止循环
+</span></span></span><span class="line"><span class="cl"><span class="cm">  * 例子：nums:[2,8,11,15,3,7]  target:9
+</span></span></span><span class="line"><span class="cl"><span class="cm">  */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">twoSum</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">nums</span><span class="p">,</span> <span class="nx">target</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nx">hash</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Map</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">nums</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 首次哈希表为空，搜索不到数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 如果哈希表内搜索不到nums[i]对应相加数据为target的答案，则先存入哈希表，让下个循环的nums[i]进行搜索
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">hash</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="nx">target</span> <span class="o">-</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">]))</span> <span class="nx">hash</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span><span class="nx">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 哈希表搜索到答案则直接返回
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">else</span> <span class="k">return</span> <span class="p">[</span><span class="nx">hash</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">target</span><span class="o">-</span><span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">]),</span> <span class="nx">i</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>let hash = new Map();</code> 是 JavaScript 中使用 <strong><code>Map</code> 对象</strong>创建一个哈希表（Hash Table）的写法。<code>Map</code> 是 ES6 引入的一种数据结构，用于存储<strong>键值对（key-value pairs）</strong>，类似于普通对象（<code>{}</code>），但功能更强大且灵活。</p>
+<hr>
+<h3 id="1"><strong>1. <code>Map</code> 的核心特性</strong>
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>特性</th>
+          <th>描述</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>键的类型任意</strong></td>
+          <td>键可以是任何数据类型（对象、函数、基本类型等），而普通对象的键只能是字符串或 Symbol。</td>
+      </tr>
+      <tr>
+          <td><strong>有序性</strong></td>
+          <td>键值对的插入顺序会被保留，遍历时按插入顺序返回。</td>
+      </tr>
+      <tr>
+          <td><strong>可直接获取大小</strong></td>
+          <td>通过 <code>hash.size</code> 直接获取键值对数量，而普通对象需要 <code>Object.keys(obj).length</code>。</td>
+      </tr>
+      <tr>
+          <td><strong>高性能增删查</strong></td>
+          <td>在频繁增删键值对时，性能通常优于普通对象。</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h3 id="2-基本用法"><strong>2. 基本用法</strong>
+</h3><h4 id="初始化与操作">初始化与操作
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// 创建一个空 Map
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">let</span> <span class="nx">hash</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Map</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 添加键值对：使用 set(key, value)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">hash</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">&#34;name&#34;</span><span class="p">,</span> <span class="s2">&#34;Alice&#34;</span><span class="p">);</span>    <span class="c1">// 键是字符串
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">hash</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="mi">42</span><span class="p">,</span> <span class="s2">&#34;Answer&#34;</span><span class="p">);</span>       <span class="c1">// 键是数字
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">hash</span><span class="p">.</span><span class="nx">set</span><span class="p">({},</span> <span class="s2">&#34;empty object&#34;</span><span class="p">);</span> <span class="c1">// 键是对象
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 获取值：使用 get(key)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hash</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&#34;name&#34;</span><span class="p">));</span> <span class="c1">// 输出 &#34;Alice&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 检查键是否存在：使用 has(key)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hash</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="mi">42</span><span class="p">));</span>     <span class="c1">// true
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 删除键值对：使用 delete(key)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">hash</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 清空所有键值对：使用 clear()
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">hash</span><span class="p">.</span><span class="nx">clear</span><span class="p">();</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="遍历-map">遍历 Map
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// 使用 for...of 遍历键值对
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="p">[</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">]</span> <span class="k">of</span> <span class="nx">hash</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 获取所有键：keys()
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hash</span><span class="p">.</span><span class="nx">keys</span><span class="p">());</span>   <span class="c1">// 输出所有键的迭代器
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 获取所有值：values()
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hash</span><span class="p">.</span><span class="nx">values</span><span class="p">());</span> <span class="c1">// 输出所有值的迭代器
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 获取所有键值对：entries()
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hash</span><span class="p">.</span><span class="nx">entries</span><span class="p">());</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h3 id="3-与普通对象"><strong>3. 与普通对象 <code>{}</code> 的区别</strong>
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>普通对象 <code>{}</code></th>
+          <th><code>Map</code></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>键的类型</strong></td>
+          <td>仅支持字符串或 Symbol</td>
+          <td>支持任意类型（包括对象、函数等）</td>
+      </tr>
+      <tr>
+          <td><strong>顺序保证</strong></td>
+          <td>ES6 后保持插入顺序（但不绝对可靠）</td>
+          <td>严格按插入顺序遍历</td>
+      </tr>
+      <tr>
+          <td><strong>大小获取</strong></td>
+          <td>需手动计算 <code>Object.keys(obj).length</code></td>
+          <td>直接通过 <code>map.size</code></td>
+      </tr>
+      <tr>
+          <td><strong>性能</strong></td>
+          <td>频繁增删时性能较差</td>
+          <td>频繁增删时性能更好</td>
+      </tr>
+      <tr>
+          <td><strong>继承原型链属性</strong></td>
+          <td>可能意外继承原型链上的属性</td>
+          <td>不会继承原型链属性</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h3 id="4-使用场景"><strong>4. 使用场景</strong>
+</h3><ul>
+<li>
+<p><strong>需要键为复杂类型</strong>（如对象、函数）时：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">funcKey</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{};</span>
+</span></span><span class="line"><span class="cl"><span class="nx">hash</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">funcKey</span><span class="p">,</span> <span class="s2">&#34;Function as key&#34;</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>需要保持插入顺序</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">orderedMap</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Map</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="nx">orderedMap</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">&#34;second&#34;</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">orderedMap</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">&#34;first&#34;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">([...</span><span class="nx">orderedMap</span><span class="p">.</span><span class="nx">keys</span><span class="p">()]);</span> <span class="c1">// [&#34;second&#34;, &#34;first&#34;]
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>需要高效增删操作</strong>（如缓存、临时数据存储）：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">cache</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Map</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="nx">cache</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">&#34;user:123&#34;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;Alice&#34;</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="nx">cache</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="s2">&#34;user:123&#34;</span><span class="p">);</span> <span class="c1">// 快速删除
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>404_@林达所作</span>
+
+    </section>
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2025 404_@林达
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<script src="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.css" crossorigin="anonymous" />
+<script>
+    NProgress.start();
+    document.addEventListener("readystatechange", () => {
+        if (document.readyState === "interactive") NProgress.inc(0.8);
+        if (document.readyState === "complete") NProgress.done();
+    });
+</script>
+
+<script defer src="https://cn.vercount.one/js"></script>
+<script>
+    function showHideView() {
+        
+        let viewCounts = document.querySelectorAll("#viewCount");
+        if (viewCounts) {
+            
+            let article =  document.querySelector(".article-page");
+            if (!article) {
+                viewCounts.forEach(ele => {
+                    ele.style.display = 'none';
+                });
+            }
+        }
+    }
+    
+    showHideView();
+</script>
+
+    </body>
+</html>
