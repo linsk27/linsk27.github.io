@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Webpack 是一个 **静态模块打包工具**，用于将多个模块、文件和资源进行打包，以便在浏览器中高效加载和运行。">
+<title>Webpack初步接触</title>
+
+<link rel='canonical' href='https://linsk27.github.io/p/0321-webpack%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6/'>
+
+<link rel="stylesheet" href="/scss/style.min.ae980efe75c2d32a27c41480b58278d4965834ce6891c8a5facafd3d3d5e22e2.css"><meta property='og:title' content="Webpack初步接触">
+<meta property='og:description' content="Webpack 是一个 **静态模块打包工具**，用于将多个模块、文件和资源进行打包，以便在浏览器中高效加载和运行。">
+<meta property='og:url' content='https://linsk27.github.io/p/0321-webpack%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6/'>
+<meta property='og:site_name' content='404_@林达'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='webpack' /><meta property='article:published_time' content='2025-03-21T11:49:00&#43;08:00'/><meta property='article:modified_time' content='2025-03-21T11:49:00&#43;08:00'/><meta property='og:image' content='https://linsk27.github.io/p/0321-webpack%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6/webpack.png' />
+<meta name="twitter:title" content="Webpack初步接触">
+<meta name="twitter:description" content="Webpack 是一个 **静态模块打包工具**，用于将多个模块、文件和资源进行打包，以便在浏览器中高效加载和运行。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://linsk27.github.io/p/0321-webpack%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6/webpack.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended">
+
+
+        <div id="article-toolbar" style="position: sticky;top: 5px;z-index: 1000;">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>返回</span>
+            </a>
+        </div>
+    
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#一什么是-webpack">一、什么是 Webpack？</a>
+      <ol>
+        <li><a href="#核心功能">核心功能：</a></li>
+      </ol>
+    </li>
+    <li><a href="#二webpack-构建流程">二、Webpack 构建流程</a>
+      <ol>
+        <li><a href="#插件机制">插件机制</a></li>
+      </ol>
+    </li>
+    <li><a href="#三常见-loaders">三、常见 Loaders</a></li>
+    <li><a href="#四常见-plugins">四、常见 Plugins</a></li>
+    <li><a href="#五loader-与-plugin-的区别">五、Loader 与 Plugin 的区别</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/0321-webpack%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6/">
+                <img src="/p/0321-webpack%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6/webpack_hu_1b41442ee2abba36.png"
+                        srcset="/p/0321-webpack%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6/webpack_hu_1b41442ee2abba36.png 800w, /p/0321-webpack%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6/webpack_hu_1b32c1fc20458295.png 1600w"
+                        width="800" 
+                        height="415" 
+                        loading="lazy"
+                        alt="Featured image of post Webpack初步接触" />
+                
+            </a>
+        </div>
+
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E5%B7%A5%E7%A8%8B/" >
+                工程
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/0321-webpack%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6/">Webpack初步接触</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Webpack 是一个 **静态模块打包工具**，用于将多个模块、文件和资源进行打包，以便在浏览器中高效加载和运行。
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025-03-21</time>
+            </div>
+	        
+        <div id="viewCount">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-eye"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" /></svg>
+            <time class="article-time--reading">
+                
+                <span id="vercount_value_page_pv">loading... </span>次
+            </time>
+        </div>
+
+        
+
+        
+    </footer>
+    
+
+    
+
+    
+</div>
+
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="webpack-初步接触">Webpack 初步接触
+</h1><h2 id="一什么是-webpack">一、什么是 Webpack？
+</h2><p><strong>Webpack</strong> 是一个 <strong>静态模块打包工具</strong>，用于将多个模块、文件和资源进行打包，以便在浏览器中高效加载和运行。</p>
+<h3 id="核心功能">核心功能：
+</h3><ol>
+<li><strong>模块打包</strong><br>
+整合 JS、CSS、图片等资源，提升代码可维护性和复用性。</li>
+<li><strong>依赖管理</strong><br>
+自动解析模块依赖关系，确保正确加载顺序，降低手动管理复杂度。</li>
+<li><strong>代码转换与优化</strong><br>
+通过 Loaders 转换代码（如 ES6 → ES5），并优化输出体积。</li>
+<li><strong>开发支持</strong><br>
+支持 HMR（热更新）、Source Maps 调试、代码分割等，提升开发效率。</li>
+<li><strong>生态系统</strong><br>
+丰富的插件（Plugins）和加载器（Loaders）扩展功能。</li>
+</ol>
+<hr>
+<h2 id="二webpack-构建流程">二、Webpack 构建流程
+</h2><p>构建过程是<strong>串行</strong>的，主要分为以下阶段：</p>
+<ol>
+<li><strong>初始化参数</strong><br>
+合并配置文件与命令行参数，生成最终配置。</li>
+<li><strong>启动编译</strong><br>
+初始化 <code>Compiler</code> 对象，加载插件并调用 <code>run</code> 方法。</li>
+<li><strong>确定入口</strong><br>
+根据 <code>entry</code> 配置定位所有入口文件。</li>
+<li><strong>编译模块</strong><br>
+递归处理模块依赖：
+<ul>
+<li>调用 Loaders 转换文件内容（如编译 Sass → CSS）</li>
+<li>解析模块依赖关系，直至所有模块处理完成。</li>
+</ul>
+</li>
+<li><strong>输出资源</strong><br>
+将模块组合为 <strong>Chunk</strong>，生成最终文件（如 JS/CSS 文件）。</li>
+<li><strong>写入文件系统</strong><br>
+根据 <code>output</code> 配置输出文件到指定路径。</li>
+</ol>
+<h3 id="插件机制">插件机制
+</h3><p>Webpack 在构建生命周期广播事件（如 <code>compile</code>、<code>emit</code>），插件通过监听事件调用 API 修改输出结果。</p>
+<hr>
+<h2 id="三常见-loaders">三、常见 Loaders
+</h2><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>Loader</th>
+          <th>功能描述</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>raw-loader</code></td>
+          <td>导入文件原始内容（如文本文件）。</td>
+      </tr>
+      <tr>
+          <td><code>file-loader</code></td>
+          <td>将文件输出到指定目录，返回 URL 路径。</td>
+      </tr>
+      <tr>
+          <td><code>url-loader</code></td>
+          <td>小于阈值的文件转为 Base64，否则调用 <code>file-loader</code>。</td>
+      </tr>
+      <tr>
+          <td><code>babel-loader</code></td>
+          <td>转换 ES6+ 代码为向后兼容的 JavaScript。</td>
+      </tr>
+      <tr>
+          <td><code>ts-loader</code></td>
+          <td>编译 TypeScript 为 JavaScript。</td>
+      </tr>
+      <tr>
+          <td><code>sass-loader</code></td>
+          <td>编译 Sass/SCSS 为 CSS。</td>
+      </tr>
+      <tr>
+          <td><code>css-loader</code></td>
+          <td>解析 CSS 文件中的 <code>@import</code> 和 <code>url()</code>。</td>
+      </tr>
+      <tr>
+          <td><code>style-loader</code></td>
+          <td>将 CSS 注入到 DOM 的 <code>&lt;style&gt;</code> 标签中。</td>
+      </tr>
+      <tr>
+          <td><code>eslint-loader</code></td>
+          <td>静态检查 JavaScript 代码规范。</td>
+      </tr>
+      <tr>
+          <td><code>vue-loader</code></td>
+          <td>处理 Vue 单文件组件（<code>.vue</code>）。</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h2 id="四常见-plugins">四、常见 Plugins
+</h2><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>Plugin</th>
+          <th>功能描述</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>DefinePlugin</code></td>
+          <td>定义全局常量（如环境变量）。</td>
+      </tr>
+      <tr>
+          <td><code>HtmlWebpackPlugin</code></td>
+          <td>自动生成 HTML 文件并注入资源。</td>
+      </tr>
+      <tr>
+          <td><code>MiniCssExtractPlugin</code></td>
+          <td>将 CSS 提取为独立文件。</td>
+      </tr>
+      <tr>
+          <td><code>UglifyJsPlugin</code></td>
+          <td>压缩 JavaScript 代码。</td>
+      </tr>
+      <tr>
+          <td><code>CleanWebpackPlugin</code></td>
+          <td>构建前清理输出目录。</td>
+      </tr>
+      <tr>
+          <td><code>WebpackBundleAnalyzer</code></td>
+          <td>可视化分析打包体积。</td>
+      </tr>
+      <tr>
+          <td><code>SpeedMeasurePlugin</code></td>
+          <td>统计各 Loader/Plugin 的构建耗时。</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h2 id="五loader-与-plugin-的区别">五、Loader 与 Plugin 的区别
+</h2><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>特性</th>
+          <th>Loader</th>
+          <th>Plugin</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>核心功能</strong></td>
+          <td>转换特定类型文件（如编译 Sass）。</td>
+          <td>扩展 Webpack 功能（如代码压缩、资源注入）。</td>
+      </tr>
+      <tr>
+          <td><strong>使用场景</strong></td>
+          <td>处理单个文件的转换逻辑。</td>
+          <td>监听构建事件，执行全局操作。</td>
+      </tr>
+      <tr>
+          <td><strong>配置方式</strong></td>
+          <td>在 <code>module.rules</code> 中定义，按文件类型匹配。</td>
+          <td>在 <code>plugins</code> 数组中实例化，可传入参数。</td>
+      </tr>
+      <tr>
+          <td><strong>实现原理</strong></td>
+          <td>基于函数链式调用处理文件内容。</td>
+          <td>基于 Tapable 事件流，在生命周期钩子中干预构建。</td>
+      </tr>
+  </tbody>
+</table></div>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/webpack/">Webpack</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>404_@林达所作</span>
+
+    </section>
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2025 404_@林达
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<script src="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.css" crossorigin="anonymous" />
+<script>
+    NProgress.start();
+    document.addEventListener("readystatechange", () => {
+        if (document.readyState === "interactive") NProgress.inc(0.8);
+        if (document.readyState === "complete") NProgress.done();
+    });
+</script>
+
+<script defer src="https://cn.vercount.one/js"></script>
+<script>
+    function showHideView() {
+        
+        let viewCounts = document.querySelectorAll("#viewCount");
+        if (viewCounts) {
+            
+            let article =  document.querySelector(".article-page");
+            if (!article) {
+                viewCounts.forEach(ele => {
+                    ele.style.display = 'none';
+                });
+            }
+        }
+    }
+    
+    showHideView();
+</script>
+
+    </body>
+</html>

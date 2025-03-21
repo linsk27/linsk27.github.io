@@ -7,7 +7,15 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>404_@林达</copyright>
-        <lastBuildDate>Sun, 16 Mar 2025 23:10:13 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 21 Mar 2025 11:49:00 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Webpack</title>
+        <link>https://linsk27.github.io/tags/webpack/</link>
+        <pubDate>Fri, 21 Mar 2025 11:49:00 +0800</pubDate>
+        
+        <guid>https://linsk27.github.io/tags/webpack/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>算法</title>
         <link>https://linsk27.github.io/tags/%E7%AE%97%E6%B3%95/</link>
         <pubDate>Sun, 16 Mar 2025 23:10:13 +0800</pubDate>
