@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Hugo on 404_@林达</title>
-        <link>https://linsk27.github.io/categories/hugo/</link>
+        <link>https://linsk27.github.io/tags/hugo/</link>
         <description>Recent content in Hugo on 404_@林达</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>404_@林达</copyright>
-        <lastBuildDate>Sat, 19 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/categories/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 19 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>【Hugo】主题美化教程</title>
         <link>https://linsk27.github.io/p/hugo%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/</link>
         <pubDate>Sat, 19 Oct 2024 00:00:00 +0000</pubDate>
