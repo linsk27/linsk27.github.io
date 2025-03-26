@@ -238,7 +238,7 @@
 <li><strong><code>open()</code>方法</strong>：
 <ul>
 <li>第三个参数<code>true</code>表示异步请求</li>
-<li><code>readyState</code>状态说明：
+<li><code>readyState</code>状态（标识XMLHttpRequest对象处于什么状态）说明：
 <ul>
 <li>0: 未初始化</li>
 <li>1: 已建立连接</li>
@@ -252,7 +252,29 @@
 <li><strong>手动处理JSON</strong>：需通过<code>JSON.parse()</code>转换响应文本</li>
 <li><strong>错误处理缺失</strong>：未处理4xx/5xx状态码</li>
 </ol>
-<hr>
+<p><strong>GET和POST请求数据区别</strong>
+使用Get请求时,参数在URL中显示,而使用Post方式,则放在send里面
+使用Get请求发送数据量小,Post请求发送数据量大
+使用Get请求安全性低，会被缓存，而Post请求反之 关于第一点区别，详情见下面两张图：</p>
+<p><img src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/12/18/167bcf83ea7b3fbb~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+>
+<img src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/12/18/167bcf7bd65db770~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<blockquote>
+<p>参考文献：<a class="link" href="https://juejin.cn/post/6844903618764603399"  target="_blank" rel="noopener"
+    >Ajax原理一篇就够了</a></p></blockquote>
 <h2 id="二fetch-api">二、Fetch API
 </h2><h3 id="核心特性-1">核心特性
 </h3><ul>

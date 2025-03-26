@@ -59,7 +59,7 @@
 &lt;li&gt;&lt;strong&gt;&lt;code&gt;open()&lt;/code&gt;方法&lt;/strong&gt;：
 &lt;ul&gt;
 &lt;li&gt;第三个参数&lt;code&gt;true&lt;/code&gt;表示异步请求&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;readyState&lt;/code&gt;状态说明：
+&lt;li&gt;&lt;code&gt;readyState&lt;/code&gt;状态（标识XMLHttpRequest对象处于什么状态）说明：
 &lt;ul&gt;
 &lt;li&gt;0: 未初始化&lt;/li&gt;
 &lt;li&gt;1: 已建立连接&lt;/li&gt;
@@ -73,7 +73,29 @@
 &lt;li&gt;&lt;strong&gt;手动处理JSON&lt;/strong&gt;：需通过&lt;code&gt;JSON.parse()&lt;/code&gt;转换响应文本&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;错误处理缺失&lt;/strong&gt;：未处理4xx/5xx状态码&lt;/li&gt;
 &lt;/ol&gt;
-&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;GET和POST请求数据区别&lt;/strong&gt;
+使用Get请求时,参数在URL中显示,而使用Post方式,则放在send里面
+使用Get请求发送数据量小,Post请求发送数据量大
+使用Get请求安全性低，会被缓存，而Post请求反之 关于第一点区别，详情见下面两张图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/12/18/167bcf83ea7b3fbb~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+&lt;img src=&#34;https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/12/18/167bcf7bd65db770~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;参考文献：&lt;a class=&#34;link&#34; href=&#34;https://juejin.cn/post/6844903618764603399&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Ajax原理一篇就够了&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;二fetch-api&#34;&gt;二、Fetch API
 &lt;/h2&gt;&lt;h3 id=&#34;核心特性-1&#34;&gt;核心特性
 &lt;/h3&gt;&lt;ul&gt;
