@@ -13,19 +13,19 @@
         <pubDate>Thu, 27 Mar 2025 22:33:37 +0800</pubDate>
         
         <guid>https://linsk27.github.io/p/0327-%E5%88%9D%E5%AD%A6promise%E5%AF%B9%E8%B1%A1/</guid>
-        <description>&lt;h2 id=&#34;初学promise对象异步基础&#34;&gt;初学Promise对象，异步基础
-&lt;/h2&gt;&lt;ul&gt;
+        <description>&lt;h1 id=&#34;初学promise对象异步基础&#34;&gt;初学Promise对象，异步基础
+&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;推荐实践代码，自己动手调试，更容易理解原理&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;一-基础&#34;&gt;一. 基础
-&lt;/h3&gt;&lt;h4 id=&#34;三个状态重要&#34;&gt;三个状态（重要）
-&lt;/h4&gt;&lt;ul&gt;
+&lt;h2 id=&#34;一-基础&#34;&gt;一. 基础
+&lt;/h2&gt;&lt;h3 id=&#34;三个状态重要&#34;&gt;三个状态（重要）
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;pendding 等待状态&lt;/li&gt;
 &lt;li&gt;fullfilled 完成状态&lt;/li&gt;
 &lt;li&gt;rejected 失败状态&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;状态流向以及回调函数resolve和reject&#34;&gt;状态流向以及回调函数resolve和reject
-&lt;/h4&gt;&lt;p&gt;Promise状态流向只有两种，而且状态一旦改变，则不会再变&lt;/p&gt;
+&lt;h3 id=&#34;状态流向以及回调函数resolve和reject&#34;&gt;状态流向以及回调函数resolve和reject
+&lt;/h3&gt;&lt;p&gt;Promise状态流向只有两种，而且状态一旦改变，则不会再变&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;调用reolve函数，则 pendding =&amp;gt; fullfilled&lt;/li&gt;
 &lt;li&gt;调用rejecte函数，则pendding =&amp;gt; rejected&lt;/li&gt;
@@ -51,8 +51,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// PromiseResult: 1
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;消费者-thencatch&#34;&gt;消费者 .then、.catch
-&lt;/h4&gt;&lt;p&gt;最重要最基础的一个就是 .then&lt;/p&gt;
+&lt;/div&gt;&lt;h3 id=&#34;消费者-thencatch&#34;&gt;消费者 .then、.catch
+&lt;/h3&gt;&lt;p&gt;最重要最基础的一个就是 .then&lt;/p&gt;
 &lt;p&gt;个人见解就是then就是对Promise对象的一个总结反馈，判断对象的状态并且执行fullfilled后的函数&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -127,9 +127,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;二-promiseapi&#34;&gt;二. Promise.API
-&lt;/h3&gt;&lt;h4 id=&#34;awaitasync&#34;&gt;await+async
-&lt;/h4&gt;&lt;ul&gt;
+&lt;/div&gt;&lt;h2 id=&#34;二-promiseapi&#34;&gt;二. Promise.API
+&lt;/h2&gt;&lt;h3 id=&#34;awaitasync&#34;&gt;await+async
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Promise&lt;/strong&gt; 通过链式调用（如 .then() 和 .catch()）管理异步操作的成功或失败；&lt;/p&gt;
 &lt;/li&gt;
@@ -140,8 +140,8 @@
 &lt;p&gt;&lt;strong&gt;await&lt;/strong&gt; 用于暂停 async 函数的执行，等待后面的 Promise 解析完成，然后直接获得解析结果，从而让异步代码写起来更像同步代码，避免了冗长的 .then() 链。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;promiseall&#34;&gt;Promise.all
-&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h3 id=&#34;promiseall&#34;&gt;Promise.all
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -230,8 +230,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;promiseallsettled&#34;&gt;Promise.allsettled
-&lt;/h4&gt;&lt;p&gt;如果任意的 promise reject，则 &lt;code&gt;Promise.all&lt;/code&gt; 整个将会 reject。当我们需要 &lt;strong&gt;所有&lt;/strong&gt; 结果都成功时，它对这种“全有或全无”的情况很有用&lt;/p&gt;
+&lt;/div&gt;&lt;h3 id=&#34;promiseallsettled&#34;&gt;Promise.allsettled
+&lt;/h3&gt;&lt;p&gt;如果任意的 promise reject，则 &lt;code&gt;Promise.all&lt;/code&gt; 整个将会 reject。当我们需要 &lt;strong&gt;所有&lt;/strong&gt; 结果都成功时，它对这种“全有或全无”的情况很有用&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Promise.allSettled&lt;/code&gt; 等待所有的 promise 都被 settle，无论结果如何。结果数组会是这样的：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;对成功的响应，结果数组对应元素的内容为 &lt;code&gt;{status:&amp;quot;fulfilled&amp;quot;, value:result}&lt;/code&gt;，&lt;/li&gt;
@@ -281,8 +281,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;参考文献&#34;&gt;参考文献
-&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://zh.javascript.info/promise-api&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;/div&gt;&lt;h2 id=&#34;参考文献&#34;&gt;参考文献
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://zh.javascript.info/promise-api&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;js小红书&lt;/a&gt;
 &lt;a class=&#34;link&#34; href=&#34;https://es6.ruanyifeng.com/#docs/promise&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;ECMAScript 6 入门&lt;/a&gt;
