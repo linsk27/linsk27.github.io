@@ -17,7 +17,7 @@
 &lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;推荐实践代码，自己动手调试，更容易理解原理&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;一-基础&#34;&gt;一. 基础
+&lt;h2 id=&#34;基础&#34;&gt;基础
 &lt;/h2&gt;&lt;h3 id=&#34;三个状态重要&#34;&gt;三个状态（重要）
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;pendding 等待状态&lt;/li&gt;
@@ -127,7 +127,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;二-promiseapi&#34;&gt;二. Promise.API
+&lt;/div&gt;&lt;h2 id=&#34;promiseapi&#34;&gt;Promise.API
 &lt;/h2&gt;&lt;h3 id=&#34;awaitasync&#34;&gt;await+async
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
