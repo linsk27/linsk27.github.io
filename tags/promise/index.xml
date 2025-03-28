@@ -282,12 +282,13 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;参考文献&#34;&gt;参考文献
-&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://zh.javascript.info/promise-api&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;js小红书&lt;/a&gt;
-&lt;a class=&#34;link&#34; href=&#34;https://es6.ruanyifeng.com/#docs/promise&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;ECMAScript 6 入门&lt;/a&gt;
-&lt;a class=&#34;link&#34; href=&#34;https://juejin.cn/post/6945319439772434469?searchId=2025032616115712FC98819AC079FA38B1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;一道让我失眠的 Promise 面试题&lt;/a&gt;&lt;/p&gt;
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://zh.javascript.info/promise-api&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;js小红书&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://es6.ruanyifeng.com/#docs/promise&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ECMAScript 6 入门&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://juejin.cn/post/6945319439772434469?searchId=2025032616115712FC98819AC079FA38B1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;一道让我失眠的 Promise 面试题&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 </description>
         </item>
         
