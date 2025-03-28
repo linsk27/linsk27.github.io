@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Promise 是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。该文章按本人学习常用的进行讲解">
+<title>初学Promise对象</title>
+
+<link rel='canonical' href='https://linsk27.github.io/p/0327-%E5%88%9D%E5%AD%A6promise%E5%AF%B9%E8%B1%A1/'>
+
+<link rel="stylesheet" href="/scss/style.min.ae980efe75c2d32a27c41480b58278d4965834ce6891c8a5facafd3d3d5e22e2.css"><meta property='og:title' content="初学Promise对象">
+<meta property='og:description' content="Promise 是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。该文章按本人学习常用的进行讲解">
+<meta property='og:url' content='https://linsk27.github.io/p/0327-%E5%88%9D%E5%AD%A6promise%E5%AF%B9%E8%B1%A1/'>
+<meta property='og:site_name' content='404_@林达'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Javascript' /><meta property='article:tag' content='Promise' /><meta property='article:published_time' content='2025-03-27T22:33:37&#43;08:00'/><meta property='article:modified_time' content='2025-03-27T22:33:37&#43;08:00'/><meta property='og:image' content='https://linsk27.github.io/avatar.png' />
+<meta name="twitter:title" content="初学Promise对象">
+<meta name="twitter:description" content="Promise 是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。该文章按本人学习常用的进行讲解"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://linsk27.github.io/avatar.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended">
+
+
+        <div id="article-toolbar" style="position: sticky;top: 5px;z-index: 1000;">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>返回</span>
+            </a>
+        </div>
+    
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#初学promise对象异步基础">初学Promise对象，异步基础</a>
+      <ol>
+        <li><a href="#一-基础">一. 基础</a>
+          <ol>
+            <li><a href="#三个状态重要">三个状态（重要）</a></li>
+            <li><a href="#状态流向以及回调函数resolve和reject">状态流向以及回调函数resolve和reject</a></li>
+            <li><a href="#消费者-thencatch">消费者 .then、.catch</a></li>
+          </ol>
+        </li>
+        <li><a href="#二-promiseapi">二. Promise.API</a>
+          <ol>
+            <li><a href="#awaitasync">await+async</a></li>
+            <li><a href="#promiseall">Promise.all</a></li>
+            <li><a href="#promiseallsettled">Promise.allsettled</a></li>
+          </ol>
+        </li>
+        <li><a href="#参考文献">参考文献</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/0327-%E5%88%9D%E5%AD%A6promise%E5%AF%B9%E8%B1%A1/">
+                
+                    <img src="/avatar.png" loading="lazy" alt="Featured image of post 初学Promise对象" />
+                
+            </a>
+        </div>
+
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E5%89%8D%E7%AB%AF/" >
+                前端
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/0327-%E5%88%9D%E5%AD%A6promise%E5%AF%B9%E8%B1%A1/">初学Promise对象</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Promise 是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。该文章按本人学习常用的进行讲解
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025-03-27</time>
+            </div>
+	        
+        <div id="viewCount">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-eye"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" /></svg>
+            <time class="article-time--reading">
+                
+                <span id="vercount_value_page_pv">loading... </span>次
+            </time>
+        </div>
+
+        
+
+        
+    </footer>
+    
+
+    
+
+    
+</div>
+
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="初学promise对象异步基础">初学Promise对象，异步基础
+</h2><ul>
+<li>推荐实践代码，自己动手调试，更容易理解原理</li>
+</ul>
+<h3 id="一-基础">一. 基础
+</h3><h4 id="三个状态重要">三个状态（重要）
+</h4><ul>
+<li>pendding 等待状态</li>
+<li>fullfilled 完成状态</li>
+<li>rejected 失败状态</li>
+</ul>
+<h4 id="状态流向以及回调函数resolve和reject">状态流向以及回调函数resolve和reject
+</h4><p>Promise状态流向只有两种，而且状态一旦改变，则不会再变</p>
+<ol>
+<li>调用reolve函数，则 pendding =&gt; fullfilled</li>
+<li>调用rejecte函数，则pendding =&gt; rejected</li>
+<li>只接收第一个参数调用后改变状态，其他的忽略</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">promise</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">resolve</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">reject</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span> <span class="c1">// 被忽略
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">promise</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// PromiseState : fullfilled
+</span></span></span><span class="line"><span class="cl"><span class="c1">// PromiseResult: 1
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="消费者-thencatch">消费者 .then、.catch
+</h4><p>最重要最基础的一个就是 .then</p>
+<p>个人见解就是then就是对Promise对象的一个总结反馈，判断对象的状态并且执行fullfilled后的函数</p>
+<ul>
+<li>
+<p>.then 的第一个参数是一个函数，该函数将在 promise resolved 且接收到结果后执行。</p>
+</li>
+<li>
+<p>.then 的第二个参数也是一个函数，该函数将在 promise rejected 且接收到 error 信息后执行。</p>
+</li>
+</ul>
+<p>下面例子，可自己通过注释选择resolve还是reject</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">promise</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// setTimeout(() =&gt; resolve(&#34;done!&#34;), 1000);
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">reject</span><span class="p">(</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&#34;Whoops!&#34;</span><span class="p">)),</span> <span class="mi">1000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// reject 运行 .then 中的第二个函数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">promise</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">result</span> <span class="p">=&gt;</span> <span class="nx">alert</span><span class="p">(</span><span class="nx">result</span><span class="p">),</span> <span class="c1">// 不运行
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">error</span> <span class="p">=&gt;</span> <span class="nx">alert</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="c1">// 1 秒后显示 &#34;Error: Whoops!&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果我们只对某个状态的情况感兴趣，那么我们可以只为 .then 提供一个函数参数：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">promise</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="nx">resolve</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">resolve</span><span class="p">(</span><span class="s2">&#34;done!&#34;</span><span class="p">),</span> <span class="mi">1000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// setTimeout(() =&gt; reject(&#34;fail!&#34;), 1000);
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">promise</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">alert</span><span class="p">);</span> <span class="c1">// 1 秒后显示 &#34;done!&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1">// promise.catch(alert); // 1 秒后显示 &#34;fail!&#34;
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>实际情况成功的情况较为常见，并且.then和.catch也可以通过链式写法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">resolve</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="nx">value</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span> <span class="c1">// 输出: 42
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">});</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="二-promiseapi">二. Promise.API
+</h3><h4 id="awaitasync">await+async
+</h4><ul>
+<li>
+<p><strong>Promise</strong> 通过链式调用（如 .then() 和 .catch()）管理异步操作的成功或失败；</p>
+</li>
+<li>
+<p><strong>async</strong> 修饰的函数总会返回一个 Promise，无论返回的是普通值还是 Promise 本身；</p>
+</li>
+<li>
+<p><strong>await</strong> 用于暂停 async 函数的执行，等待后面的 Promise 解析完成，然后直接获得解析结果，从而让异步代码写起来更像同步代码，避免了冗长的 .then() 链。</p>
+</li>
+</ul>
+<h4 id="promiseall">Promise.all
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">([</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 每个数组对象都是**异步微任务**，因此1和2瞬间输出
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// 对象5 需要等待 对象4 await执行完毕后执行，即3秒后输出3
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="nx">resolve</span> <span class="p">=&gt;</span> <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">resolve</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="mi">4000</span><span class="p">)),</span> <span class="c1">// 对象0，value4
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="c1">// 对象1，undefined（不是promise对象）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="nx">resolve</span> <span class="p">=&gt;</span> <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">resolve</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="mi">2000</span><span class="p">)),</span> <span class="c1">// 对象2，value2
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="c1">// 对象3，undefined
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kr">await</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="nx">resolve</span> <span class="p">=&gt;</span> <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">resolve</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="mi">3000</span><span class="p">)),</span>  <span class="c1">// 对象4，value3
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="c1">// 对象5，undefined
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">]).</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span> <span class="c1">// 4秒后所有异步任务执行完毕，输出
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">0</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">1</span><span class="o">:</span><span class="kc">undefined</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">2</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">3</span><span class="o">:</span><span class="kc">undefined</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">4</span><span class="o">:</span><span class="mi">3</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">5</span><span class="o">:</span><span class="kc">undefined</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>全部完成才会运行.then，如果有某一个失败，则不执行.then</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nb">Promise</span><span class="p">.</span><span class="nx">allSettled</span><span class="p">([</span>
+</span></span><span class="line"><span class="cl">  <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="nx">resolve</span> <span class="p">=&gt;</span> <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">resolve</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="mi">4000</span><span class="p">)),</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">  <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span><span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">reject</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="mi">2000</span><span class="p">)),</span> <span class="c1">// 这里使用reject
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">await</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="nx">resolve</span> <span class="p">=&gt;</span> <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">resolve</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="mi">3000</span><span class="p">)),</span> 
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl"><span class="p">]).</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">0</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">1</span><span class="o">:</span><span class="kc">undefined</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">2</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">3</span><span class="o">:</span><span class="kc">undefined</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">4</span><span class="o">:</span><span class="mi">3</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">5</span><span class="o">:</span><span class="kc">undefined</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="promiseallsettled">Promise.allsettled
+</h4><p>如果任意的 promise reject，则 <code>Promise.all</code> 整个将会 reject。当我们需要 <strong>所有</strong> 结果都成功时，它对这种“全有或全无”的情况很有用</p>
+<p><code>Promise.allSettled</code> 等待所有的 promise 都被 settle，无论结果如何。结果数组会是这样的：</p>
+<ul>
+<li>对成功的响应，结果数组对应元素的内容为 <code>{status:&quot;fulfilled&quot;, value:result}</code>，</li>
+<li>对出现 error 的响应，结果数组对应元素的内容为 <code>{status:&quot;rejected&quot;, reason:error}</code>。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nb">Promise</span><span class="p">.</span><span class="nx">allsettled</span><span class="p">([</span>
+</span></span><span class="line"><span class="cl">  <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="nx">resolve</span> <span class="p">=&gt;</span> <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">resolve</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="mi">4000</span><span class="p">)),</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">  <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span><span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">reject</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="mi">2000</span><span class="p">)),</span> <span class="c1">// 这里使用reject
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">await</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="nx">resolve</span> <span class="p">=&gt;</span> <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">resolve</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="mi">3000</span><span class="p">)),</span> 
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl"><span class="p">]).</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 控制台输出
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">0</span><span class="o">:</span><span class="p">{</span><span class="nx">status</span><span class="o">:</span><span class="nx">fullfiled</span><span class="p">,</span><span class="nx">value</span><span class="o">:</span><span class="mi">4</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">1</span><span class="o">:</span><span class="p">{</span><span class="nx">status</span><span class="o">:</span><span class="nx">fullfiled</span><span class="p">,</span><span class="nx">value</span><span class="o">:</span><span class="kc">undefined</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">2</span><span class="o">:</span><span class="p">{</span><span class="nx">status</span><span class="o">:</span><span class="nx">rejected</span><span class="p">,</span><span class="nx">reson</span><span class="o">:</span><span class="mi">2</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">3</span><span class="o">:</span><span class="p">{</span><span class="nx">status</span><span class="o">:</span><span class="nx">fullfiled</span><span class="p">,</span><span class="nx">value</span><span class="o">:</span><span class="kc">undefined</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">4</span><span class="o">:</span><span class="p">{</span><span class="nx">status</span><span class="o">:</span><span class="nx">fullfiled</span><span class="p">,</span><span class="nx">value</span><span class="o">:</span><span class="mi">3</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">5</span><span class="o">:</span><span class="p">{</span><span class="nx">status</span><span class="o">:</span><span class="nx">fullfiled</span><span class="p">,</span><span class="nx">value</span><span class="o">:</span><span class="kc">undefined</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="参考文献">参考文献
+</h3><p><a class="link" href="https://zh.javascript.info/promise-api"  target="_blank" rel="noopener"
+    >js小红书</a>
+<a class="link" href="https://es6.ruanyifeng.com/#docs/promise"  target="_blank" rel="noopener"
+    >ECMAScript 6 入门</a>
+<a class="link" href="https://juejin.cn/post/6945319439772434469?searchId=2025032616115712FC98819AC079FA38B1"  target="_blank" rel="noopener"
+    >一道让我失眠的 Promise 面试题</a></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/javascript/">Javascript</a>
+        
+            <a href="/tags/promise/">Promise</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>404_@林达所作</span>
+
+    </section>
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/%E4%BB%80%E4%B9%88%E6%98%AF%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%8E%BB%E7%94%A8/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">什么是防抖和节流？什么时候去用？</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/js%E4%B8%AD%E6%95%B0%E7%BB%84%E5%8E%BB%E7%9A%84%E5%B8%B8%E8%A7%84%E5%8E%BB%E9%87%8D%E6%96%B9%E6%B3%95/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">js中数组去的常规去重方法</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/0322-%E4%B8%89%E7%A7%8D%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">XMLHttpRequest、Axios 与 Fetch 在 Vue3 中的深度解析</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/el-table%E4%B8%ADsort%E6%8B%96%E6%8B%BD%E6%8E%92%E5%BA%8F%E7%9A%84%E5%B8%B8%E8%A7%81%E6%96%B9%E6%B3%95/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">el-table中sort(拖拽排序)的常见方法</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E6%82%AC%E6%B5%AE%E5%87%BA%E7%8E%B0%E7%AE%AD%E5%A4%B4%E7%9B%92%E5%AD%90%E7%9A%84%E5%86%99%E6%B3%95/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E6%82%AC%E6%B5%AE%E5%87%BA%E7%8E%B0%E7%AE%AD%E5%A4%B4%E7%9B%92%E5%AD%90%E7%9A%84%E5%86%99%E6%B3%95/hover.e7138c8c19bc0876d6cd8b59aa3ffb8f_hu_beed4232f655bb9b.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 悬浮出现箭头盒子的写法"
+                        
+                        data-hash="md5-5xOMjBm8CHbWzYtZqj/7jw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">悬浮出现箭头盒子的写法</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2025 404_@林达
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<script src="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.css" crossorigin="anonymous" />
+<script>
+    NProgress.start();
+    document.addEventListener("readystatechange", () => {
+        if (document.readyState === "interactive") NProgress.inc(0.8);
+        if (document.readyState === "complete") NProgress.done();
+    });
+</script>
+
+<script defer src="https://cn.vercount.one/js"></script>
+<script>
+    function showHideView() {
+        
+        let viewCounts = document.querySelectorAll("#viewCount");
+        if (viewCounts) {
+            
+            let article =  document.querySelector(".article-page");
+            if (!article) {
+                viewCounts.forEach(ele => {
+                    ele.style.display = 'none';
+                });
+            }
+        }
+    }
+    
+    showHideView();
+</script>
+
+    </body>
+</html>
