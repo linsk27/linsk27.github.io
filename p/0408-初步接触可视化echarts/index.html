@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="初步接触可视化Echarts 什么是Echarts 如何写一个图表 图表步骤 初始化 echarts 实例\n1 2 3 4 let myChart = null onMounted(()=&gt;{ myChart = echarts.init(target.value) }) 构建 option 配置对象\n1 2 const options = { } 通过 实例.setOption(option) 挂载到对应盒子上\n1 myChart.setOption(options) 图表配置 柱形图 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 const options = { // X轴展示数据 xAxis:{ show: false, // x方向作为值展示 type: &#39;value&#39;, // 设置最大值的配置 max: function (value) { // 动态最大值设置为所有数据中的最大值1.2倍，防止样式问题 return parseInt(value.max * 1.2) } }, // y轴展示数据 yAxis:{ // 作为列名展示 type: &#39;category&#39;, // 列名数组，默认从下到上 data: props.data.regions?.map((item) =&gt; item.name), // 反向展示 inverse: true, // 不展示线 axisLine: { show: false }, // 不展示刻度 axisTick: { show: false }, // 展示列名并且label颜色设置 axisLabel: { color: &#39;#9eb1cd&#39; }, }, // 图表绘制的位置，对应上下左右 grid:{ top: 0, right: 0, left: 0, bottom: 0, // 标签包含进去 containLabel: true }, // 核心配置 series:[ { // 柱形图 type: &#39;bar&#39;, // 展示的数据 data: props.data.regions?.map((item) =&gt; ({ name: item.name, value: item.value })), // 柱状条背景开关 showBackground: true, // 柱状条背景色 backGroundStyle: { color: &#39;rgba(180, 180, 180, 0.2)&#39; }, // 每个轴的样式 itemStyle: { color: &#39;#5d98CE&#39;, barBorderRadius: 10, shadowColor: &#39;rgba(0,0,0,0.3)&#39;, shadowBlur: 5, }, // 柱子宽度 barWidth: 12, // 字体的显示 label: { show: true, position: &#39;right&#39;, textStyle: { color: &#39;#fff&#39;, } // 为数据加上百分比，c代表数据 formatter:&#39;{c}%&#39; } } ], } 雷达图 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 const option = { // 雷达坐标系配置 radar: { // 坐标系（外部）名字配置 name: { textStyle: { color: &#39;#05D5FF&#39;, fontSize: 14 } }, // 雷达图形状 shape: &#39;polygon&#39;, center: [&#39;50%&#39;, &#39;50%&#39;], radius: &#39;80%&#39;, // 起始位置(开始角度) startAngle: 120, // 轴线配置 axisLine: { lineStyle: { color: &#39;rgba(5,213,255,0.8)&#39; } }, // 网格线，为true才能形成闭环 splitLine: { show: true, lineStyle: { width: 1, color: &#39;rgba(5,213,255,0.8)&#39; } }, // 指示器,就是name部分的坐标系（外部）名字 indicator: props.data.risks.map((item) =&gt; ({ name: item.name, max: 100 })), // 拆分区域，false网格内颜色区分更明显 splitArea: { show: false } }, // 坐标极点 polar: { center: [&#39;50%&#39;, &#39;50%&#39;], radius: &#39;0%&#39; }, // 坐标角度 angleAxis: { min: 0, // 分割线分割间隔 interval: 5, // 刻度显示是否为逆时针增长, clockwise: false }, // 径向轴 radiusAxis: { min: 0, interval: 20, splitLine: { show: false } }, // 图表核心配置 series: [ { type: &#39;radar&#39;, // 指定形状 symbol: &#39;circle&#39;, // 内部数据拐角大小 symbolSize: 10, itemStyle: { normal: { color: &#39;#05D5FF&#39; } }, areaStyle: { normal: { color: &#39;#05D5FF&#39;, opacity: 0.5 } }, lineStyle: { width: 2, color: &#39;#&#39; }, label: { normal: { // 内部数据文本 show: true, color: &#39;#fff&#39; } }, data: [ { value: props.data.risks.map((item) =&gt; item.value) } ] } ] } 环形图 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 const getSeriesData = () =&gt; { const series = [] props.data.abnormals.forEach((item, index) =&gt; { // 上层 series.push({ name: item.name, type: &#39;pie&#39;, // 逆时针排列 clockWise: false, // 取消悬浮动画 hoverAnimation: false, // 实现半径依次递减 radius: [73 - index * 15 + &#39;%&#39;, 68 - index * 15 + &#39;%&#39;], center: [&#39;50%&#39;, &#39;50%&#39;], label: { show: false }, data: [ { value: item.value, name: item.name }, { value: 1000, itemStyle: { color: &#39;rgba(0,0,0,0)&#39;, borderWidth: 0, }, tooltip: { show: false }, hoverAnimation: false } ] }) // 底层 series.push({ name: item.name, type: &#39;pie&#39;, // 不希望收到任何事件 silent: true, z: 1, // 逆时针排列 clockWise: false, // 取消悬浮动画 hoverAnimation: false, // 实现半径依次递减 radius: [73 - index * 15 + &#39;%&#39;, 68 - index * 15 + &#39;%&#39;], center: [&#39;50%&#39;, &#39;50%&#39;], label: { show: false }, data: [ { value: 7.5, name: item.name, itemStyle: { color: &#39;rgba(3,31,62)&#39;, borderWidth: 0, }, tooltip: { show: false, }, hoverAnimation: false }, { value: 2.5, itemStyle: { color: &#39;rgba(0,0,0,0)&#39;, borderWidth: 0, }, tooltip: { show: false, }, hoverAnimation: false } ] }) }); return series } const option = { // 图例配置 legend: { show: true, // 图例颜色块形状 icon: &#39;circle&#39;, top: &#39;8%&#39;, left: &#39;52%&#39;, // 图例数据文本 data: props.data.abnormals.map((item) =&gt; item.name), // 负数以列展示 width: -5, // 色块宽高 itemWidth: 10, itemHeight: 10, // 图例间距 itemGap: 6, textStyle: { fontSize: 12, lineHeight: 5, color: &#39;#fff&#39; } }, // 悬浮提示层 tooltip: { show: true, // 触发器 trigger: &#39;item&#39;, // 展示内容,a代表系列名，b代表数据名，c代表数据值,d代表百分比比例 formatter: &#39;{a}&lt;br&gt;{b}:{c}({d}%)&#39; }, yAxis: [ { type: &#39;category&#39;, // 反向展示 inverse: true, axisLine: { show: false } } ], xAxis: [ { show: false } ], // 由于饼图过多，通过方法进行配置 series: getSeriesData() } 关系图 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 const option = { xAxis: { show: false, type: &#39;value&#39; }, yAxis: { show: false, type: &#39;value&#39; }, series: [ { type: &#39;graph&#39;, // 表示不需要任何布局类型 layout: &#39;none&#39;, // 该系列需要使用的坐标系：“二维直角坐标系” coordinateSystem: &#39;cartesian2d&#39;, // 节点大小 symbolSize: 26, z: 3, // 边界的萧条标签文字 edgeLabel: { // 默认 normal: { show: true, color: &#39;#fff&#39;, testStyle: { fontSize: 14 }, // 文本模拟内容 formatter: function (params) { return params.data.speed } } }, label: { normal: { show: true, position: &#39;bottom&#39;, color: &#39;#5E5E5E&#39; } }, // 边两端的标记类型,数据流动图标类型 edgeSymbol: [&#39;none&#39;, &#39;arrow&#39;], edgeSymbolSize: 8, data: props.data.relations.map(item =&gt; { if (item.id !== 0) { return { name: item.name, category: 0, active: true, speed: `${item.speed}kb/s`, value: item.value, } } else { return { name: item.name, value: item.value, symbolSize: 100, itemStyle: { color: { colorStops: [ { offset: 0, color: &#39;#157eff&#39; }, { offset: 1, color: &#39;#35c2ff&#39; }, ] } }, label: { normal: { fontSize: 14 } } } } }), // 节点间的数据关系 links: props.data.relations.map((item, index) =&gt; ({ source: item.source, target: item.target, speed: `${item.speed}kb/s`, lineStyle: { normal: { color: &#39;#12b5d0&#39;, // 曲线率 curveness: 0.2 } }, label: { show: true, position: &#39;middle&#39;, // 是否对文字进行偏移 offset: [10, 0] } })) }, { type: &#39;lines&#39;, // 该系列需要使用的坐标系：“二维直角坐标系” coordinateSystem: &#39;cartesian2d&#39;, z: 1, // 线条的特效配置 effect: { show: true, smooth: false, trailLength: 0, symbol: &#39;arrow&#39;, color: &#39;rgba(55,155,255,0.6)&#39;, symbolSize: 12 }, lineStyle: { normal: { curveness: 0.2 } }, data: [ [{ coord: [0, 300] }, { coord: [50, 200] }], [{ coord: [0, 100] }, { coord: [50, 200] }], [{ coord: [50, 200] }, { coord: [100, 100] }], [{ coord: [50, 200] }, { coord: [100, 300] }] ] } ] } ">
+<title>0408 初步接触可视化Echarts</title>
+
+<link rel='canonical' href='https://linsk27.github.io/p/0408-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6%E5%8F%AF%E8%A7%86%E5%8C%96echarts/'>
+
+<link rel="stylesheet" href="/scss/style.min.ae980efe75c2d32a27c41480b58278d4965834ce6891c8a5facafd3d3d5e22e2.css"><meta property='og:title' content="0408 初步接触可视化Echarts">
+<meta property='og:description' content="初步接触可视化Echarts 什么是Echarts 如何写一个图表 图表步骤 初始化 echarts 实例\n1 2 3 4 let myChart = null onMounted(()=&gt;{ myChart = echarts.init(target.value) }) 构建 option 配置对象\n1 2 const options = { } 通过 实例.setOption(option) 挂载到对应盒子上\n1 myChart.setOption(options) 图表配置 柱形图 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 const options = { // X轴展示数据 xAxis:{ show: false, // x方向作为值展示 type: &#39;value&#39;, // 设置最大值的配置 max: function (value) { // 动态最大值设置为所有数据中的最大值1.2倍，防止样式问题 return parseInt(value.max * 1.2) } }, // y轴展示数据 yAxis:{ // 作为列名展示 type: &#39;category&#39;, // 列名数组，默认从下到上 data: props.data.regions?.map((item) =&gt; item.name), // 反向展示 inverse: true, // 不展示线 axisLine: { show: false }, // 不展示刻度 axisTick: { show: false }, // 展示列名并且label颜色设置 axisLabel: { color: &#39;#9eb1cd&#39; }, }, // 图表绘制的位置，对应上下左右 grid:{ top: 0, right: 0, left: 0, bottom: 0, // 标签包含进去 containLabel: true }, // 核心配置 series:[ { // 柱形图 type: &#39;bar&#39;, // 展示的数据 data: props.data.regions?.map((item) =&gt; ({ name: item.name, value: item.value })), // 柱状条背景开关 showBackground: true, // 柱状条背景色 backGroundStyle: { color: &#39;rgba(180, 180, 180, 0.2)&#39; }, // 每个轴的样式 itemStyle: { color: &#39;#5d98CE&#39;, barBorderRadius: 10, shadowColor: &#39;rgba(0,0,0,0.3)&#39;, shadowBlur: 5, }, // 柱子宽度 barWidth: 12, // 字体的显示 label: { show: true, position: &#39;right&#39;, textStyle: { color: &#39;#fff&#39;, } // 为数据加上百分比，c代表数据 formatter:&#39;{c}%&#39; } } ], } 雷达图 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 const option = { // 雷达坐标系配置 radar: { // 坐标系（外部）名字配置 name: { textStyle: { color: &#39;#05D5FF&#39;, fontSize: 14 } }, // 雷达图形状 shape: &#39;polygon&#39;, center: [&#39;50%&#39;, &#39;50%&#39;], radius: &#39;80%&#39;, // 起始位置(开始角度) startAngle: 120, // 轴线配置 axisLine: { lineStyle: { color: &#39;rgba(5,213,255,0.8)&#39; } }, // 网格线，为true才能形成闭环 splitLine: { show: true, lineStyle: { width: 1, color: &#39;rgba(5,213,255,0.8)&#39; } }, // 指示器,就是name部分的坐标系（外部）名字 indicator: props.data.risks.map((item) =&gt; ({ name: item.name, max: 100 })), // 拆分区域，false网格内颜色区分更明显 splitArea: { show: false } }, // 坐标极点 polar: { center: [&#39;50%&#39;, &#39;50%&#39;], radius: &#39;0%&#39; }, // 坐标角度 angleAxis: { min: 0, // 分割线分割间隔 interval: 5, // 刻度显示是否为逆时针增长, clockwise: false }, // 径向轴 radiusAxis: { min: 0, interval: 20, splitLine: { show: false } }, // 图表核心配置 series: [ { type: &#39;radar&#39;, // 指定形状 symbol: &#39;circle&#39;, // 内部数据拐角大小 symbolSize: 10, itemStyle: { normal: { color: &#39;#05D5FF&#39; } }, areaStyle: { normal: { color: &#39;#05D5FF&#39;, opacity: 0.5 } }, lineStyle: { width: 2, color: &#39;#&#39; }, label: { normal: { // 内部数据文本 show: true, color: &#39;#fff&#39; } }, data: [ { value: props.data.risks.map((item) =&gt; item.value) } ] } ] } 环形图 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 const getSeriesData = () =&gt; { const series = [] props.data.abnormals.forEach((item, index) =&gt; { // 上层 series.push({ name: item.name, type: &#39;pie&#39;, // 逆时针排列 clockWise: false, // 取消悬浮动画 hoverAnimation: false, // 实现半径依次递减 radius: [73 - index * 15 + &#39;%&#39;, 68 - index * 15 + &#39;%&#39;], center: [&#39;50%&#39;, &#39;50%&#39;], label: { show: false }, data: [ { value: item.value, name: item.name }, { value: 1000, itemStyle: { color: &#39;rgba(0,0,0,0)&#39;, borderWidth: 0, }, tooltip: { show: false }, hoverAnimation: false } ] }) // 底层 series.push({ name: item.name, type: &#39;pie&#39;, // 不希望收到任何事件 silent: true, z: 1, // 逆时针排列 clockWise: false, // 取消悬浮动画 hoverAnimation: false, // 实现半径依次递减 radius: [73 - index * 15 + &#39;%&#39;, 68 - index * 15 + &#39;%&#39;], center: [&#39;50%&#39;, &#39;50%&#39;], label: { show: false }, data: [ { value: 7.5, name: item.name, itemStyle: { color: &#39;rgba(3,31,62)&#39;, borderWidth: 0, }, tooltip: { show: false, }, hoverAnimation: false }, { value: 2.5, itemStyle: { color: &#39;rgba(0,0,0,0)&#39;, borderWidth: 0, }, tooltip: { show: false, }, hoverAnimation: false } ] }) }); return series } const option = { // 图例配置 legend: { show: true, // 图例颜色块形状 icon: &#39;circle&#39;, top: &#39;8%&#39;, left: &#39;52%&#39;, // 图例数据文本 data: props.data.abnormals.map((item) =&gt; item.name), // 负数以列展示 width: -5, // 色块宽高 itemWidth: 10, itemHeight: 10, // 图例间距 itemGap: 6, textStyle: { fontSize: 12, lineHeight: 5, color: &#39;#fff&#39; } }, // 悬浮提示层 tooltip: { show: true, // 触发器 trigger: &#39;item&#39;, // 展示内容,a代表系列名，b代表数据名，c代表数据值,d代表百分比比例 formatter: &#39;{a}&lt;br&gt;{b}:{c}({d}%)&#39; }, yAxis: [ { type: &#39;category&#39;, // 反向展示 inverse: true, axisLine: { show: false } } ], xAxis: [ { show: false } ], // 由于饼图过多，通过方法进行配置 series: getSeriesData() } 关系图 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 const option = { xAxis: { show: false, type: &#39;value&#39; }, yAxis: { show: false, type: &#39;value&#39; }, series: [ { type: &#39;graph&#39;, // 表示不需要任何布局类型 layout: &#39;none&#39;, // 该系列需要使用的坐标系：“二维直角坐标系” coordinateSystem: &#39;cartesian2d&#39;, // 节点大小 symbolSize: 26, z: 3, // 边界的萧条标签文字 edgeLabel: { // 默认 normal: { show: true, color: &#39;#fff&#39;, testStyle: { fontSize: 14 }, // 文本模拟内容 formatter: function (params) { return params.data.speed } } }, label: { normal: { show: true, position: &#39;bottom&#39;, color: &#39;#5E5E5E&#39; } }, // 边两端的标记类型,数据流动图标类型 edgeSymbol: [&#39;none&#39;, &#39;arrow&#39;], edgeSymbolSize: 8, data: props.data.relations.map(item =&gt; { if (item.id !== 0) { return { name: item.name, category: 0, active: true, speed: `${item.speed}kb/s`, value: item.value, } } else { return { name: item.name, value: item.value, symbolSize: 100, itemStyle: { color: { colorStops: [ { offset: 0, color: &#39;#157eff&#39; }, { offset: 1, color: &#39;#35c2ff&#39; }, ] } }, label: { normal: { fontSize: 14 } } } } }), // 节点间的数据关系 links: props.data.relations.map((item, index) =&gt; ({ source: item.source, target: item.target, speed: `${item.speed}kb/s`, lineStyle: { normal: { color: &#39;#12b5d0&#39;, // 曲线率 curveness: 0.2 } }, label: { show: true, position: &#39;middle&#39;, // 是否对文字进行偏移 offset: [10, 0] } })) }, { type: &#39;lines&#39;, // 该系列需要使用的坐标系：“二维直角坐标系” coordinateSystem: &#39;cartesian2d&#39;, z: 1, // 线条的特效配置 effect: { show: true, smooth: false, trailLength: 0, symbol: &#39;arrow&#39;, color: &#39;rgba(55,155,255,0.6)&#39;, symbolSize: 12 }, lineStyle: { normal: { curveness: 0.2 } }, data: [ [{ coord: [0, 300] }, { coord: [50, 200] }], [{ coord: [0, 100] }, { coord: [50, 200] }], [{ coord: [50, 200] }, { coord: [100, 100] }], [{ coord: [50, 200] }, { coord: [100, 300] }] ] } ] } ">
+<meta property='og:url' content='https://linsk27.github.io/p/0408-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6%E5%8F%AF%E8%A7%86%E5%8C%96echarts/'>
+<meta property='og:site_name' content='404_@林达'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Echarts' /><meta property='article:tag' content='可视化' /><meta property='article:published_time' content='2025-04-08T17:44:12&#43;08:00'/><meta property='article:modified_time' content='2025-04-08T17:44:12&#43;08:00'/>
+<meta name="twitter:title" content="0408 初步接触可视化Echarts">
+<meta name="twitter:description" content="初步接触可视化Echarts 什么是Echarts 如何写一个图表 图表步骤 初始化 echarts 实例\n1 2 3 4 let myChart = null onMounted(()=&gt;{ myChart = echarts.init(target.value) }) 构建 option 配置对象\n1 2 const options = { } 通过 实例.setOption(option) 挂载到对应盒子上\n1 myChart.setOption(options) 图表配置 柱形图 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 const options = { // X轴展示数据 xAxis:{ show: false, // x方向作为值展示 type: &#39;value&#39;, // 设置最大值的配置 max: function (value) { // 动态最大值设置为所有数据中的最大值1.2倍，防止样式问题 return parseInt(value.max * 1.2) } }, // y轴展示数据 yAxis:{ // 作为列名展示 type: &#39;category&#39;, // 列名数组，默认从下到上 data: props.data.regions?.map((item) =&gt; item.name), // 反向展示 inverse: true, // 不展示线 axisLine: { show: false }, // 不展示刻度 axisTick: { show: false }, // 展示列名并且label颜色设置 axisLabel: { color: &#39;#9eb1cd&#39; }, }, // 图表绘制的位置，对应上下左右 grid:{ top: 0, right: 0, left: 0, bottom: 0, // 标签包含进去 containLabel: true }, // 核心配置 series:[ { // 柱形图 type: &#39;bar&#39;, // 展示的数据 data: props.data.regions?.map((item) =&gt; ({ name: item.name, value: item.value })), // 柱状条背景开关 showBackground: true, // 柱状条背景色 backGroundStyle: { color: &#39;rgba(180, 180, 180, 0.2)&#39; }, // 每个轴的样式 itemStyle: { color: &#39;#5d98CE&#39;, barBorderRadius: 10, shadowColor: &#39;rgba(0,0,0,0.3)&#39;, shadowBlur: 5, }, // 柱子宽度 barWidth: 12, // 字体的显示 label: { show: true, position: &#39;right&#39;, textStyle: { color: &#39;#fff&#39;, } // 为数据加上百分比，c代表数据 formatter:&#39;{c}%&#39; } } ], } 雷达图 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 const option = { // 雷达坐标系配置 radar: { // 坐标系（外部）名字配置 name: { textStyle: { color: &#39;#05D5FF&#39;, fontSize: 14 } }, // 雷达图形状 shape: &#39;polygon&#39;, center: [&#39;50%&#39;, &#39;50%&#39;], radius: &#39;80%&#39;, // 起始位置(开始角度) startAngle: 120, // 轴线配置 axisLine: { lineStyle: { color: &#39;rgba(5,213,255,0.8)&#39; } }, // 网格线，为true才能形成闭环 splitLine: { show: true, lineStyle: { width: 1, color: &#39;rgba(5,213,255,0.8)&#39; } }, // 指示器,就是name部分的坐标系（外部）名字 indicator: props.data.risks.map((item) =&gt; ({ name: item.name, max: 100 })), // 拆分区域，false网格内颜色区分更明显 splitArea: { show: false } }, // 坐标极点 polar: { center: [&#39;50%&#39;, &#39;50%&#39;], radius: &#39;0%&#39; }, // 坐标角度 angleAxis: { min: 0, // 分割线分割间隔 interval: 5, // 刻度显示是否为逆时针增长, clockwise: false }, // 径向轴 radiusAxis: { min: 0, interval: 20, splitLine: { show: false } }, // 图表核心配置 series: [ { type: &#39;radar&#39;, // 指定形状 symbol: &#39;circle&#39;, // 内部数据拐角大小 symbolSize: 10, itemStyle: { normal: { color: &#39;#05D5FF&#39; } }, areaStyle: { normal: { color: &#39;#05D5FF&#39;, opacity: 0.5 } }, lineStyle: { width: 2, color: &#39;#&#39; }, label: { normal: { // 内部数据文本 show: true, color: &#39;#fff&#39; } }, data: [ { value: props.data.risks.map((item) =&gt; item.value) } ] } ] } 环形图 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 const getSeriesData = () =&gt; { const series = [] props.data.abnormals.forEach((item, index) =&gt; { // 上层 series.push({ name: item.name, type: &#39;pie&#39;, // 逆时针排列 clockWise: false, // 取消悬浮动画 hoverAnimation: false, // 实现半径依次递减 radius: [73 - index * 15 + &#39;%&#39;, 68 - index * 15 + &#39;%&#39;], center: [&#39;50%&#39;, &#39;50%&#39;], label: { show: false }, data: [ { value: item.value, name: item.name }, { value: 1000, itemStyle: { color: &#39;rgba(0,0,0,0)&#39;, borderWidth: 0, }, tooltip: { show: false }, hoverAnimation: false } ] }) // 底层 series.push({ name: item.name, type: &#39;pie&#39;, // 不希望收到任何事件 silent: true, z: 1, // 逆时针排列 clockWise: false, // 取消悬浮动画 hoverAnimation: false, // 实现半径依次递减 radius: [73 - index * 15 + &#39;%&#39;, 68 - index * 15 + &#39;%&#39;], center: [&#39;50%&#39;, &#39;50%&#39;], label: { show: false }, data: [ { value: 7.5, name: item.name, itemStyle: { color: &#39;rgba(3,31,62)&#39;, borderWidth: 0, }, tooltip: { show: false, }, hoverAnimation: false }, { value: 2.5, itemStyle: { color: &#39;rgba(0,0,0,0)&#39;, borderWidth: 0, }, tooltip: { show: false, }, hoverAnimation: false } ] }) }); return series } const option = { // 图例配置 legend: { show: true, // 图例颜色块形状 icon: &#39;circle&#39;, top: &#39;8%&#39;, left: &#39;52%&#39;, // 图例数据文本 data: props.data.abnormals.map((item) =&gt; item.name), // 负数以列展示 width: -5, // 色块宽高 itemWidth: 10, itemHeight: 10, // 图例间距 itemGap: 6, textStyle: { fontSize: 12, lineHeight: 5, color: &#39;#fff&#39; } }, // 悬浮提示层 tooltip: { show: true, // 触发器 trigger: &#39;item&#39;, // 展示内容,a代表系列名，b代表数据名，c代表数据值,d代表百分比比例 formatter: &#39;{a}&lt;br&gt;{b}:{c}({d}%)&#39; }, yAxis: [ { type: &#39;category&#39;, // 反向展示 inverse: true, axisLine: { show: false } } ], xAxis: [ { show: false } ], // 由于饼图过多，通过方法进行配置 series: getSeriesData() } 关系图 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 const option = { xAxis: { show: false, type: &#39;value&#39; }, yAxis: { show: false, type: &#39;value&#39; }, series: [ { type: &#39;graph&#39;, // 表示不需要任何布局类型 layout: &#39;none&#39;, // 该系列需要使用的坐标系：“二维直角坐标系” coordinateSystem: &#39;cartesian2d&#39;, // 节点大小 symbolSize: 26, z: 3, // 边界的萧条标签文字 edgeLabel: { // 默认 normal: { show: true, color: &#39;#fff&#39;, testStyle: { fontSize: 14 }, // 文本模拟内容 formatter: function (params) { return params.data.speed } } }, label: { normal: { show: true, position: &#39;bottom&#39;, color: &#39;#5E5E5E&#39; } }, // 边两端的标记类型,数据流动图标类型 edgeSymbol: [&#39;none&#39;, &#39;arrow&#39;], edgeSymbolSize: 8, data: props.data.relations.map(item =&gt; { if (item.id !== 0) { return { name: item.name, category: 0, active: true, speed: `${item.speed}kb/s`, value: item.value, } } else { return { name: item.name, value: item.value, symbolSize: 100, itemStyle: { color: { colorStops: [ { offset: 0, color: &#39;#157eff&#39; }, { offset: 1, color: &#39;#35c2ff&#39; }, ] } }, label: { normal: { fontSize: 14 } } } } }), // 节点间的数据关系 links: props.data.relations.map((item, index) =&gt; ({ source: item.source, target: item.target, speed: `${item.speed}kb/s`, lineStyle: { normal: { color: &#39;#12b5d0&#39;, // 曲线率 curveness: 0.2 } }, label: { show: true, position: &#39;middle&#39;, // 是否对文字进行偏移 offset: [10, 0] } })) }, { type: &#39;lines&#39;, // 该系列需要使用的坐标系：“二维直角坐标系” coordinateSystem: &#39;cartesian2d&#39;, z: 1, // 线条的特效配置 effect: { show: true, smooth: false, trailLength: 0, symbol: &#39;arrow&#39;, color: &#39;rgba(55,155,255,0.6)&#39;, symbolSize: 12 }, lineStyle: { normal: { curveness: 0.2 } }, data: [ [{ coord: [0, 300] }, { coord: [50, 200] }], [{ coord: [0, 100] }, { coord: [50, 200] }], [{ coord: [50, 200] }, { coord: [100, 100] }], [{ coord: [50, 200] }, { coord: [100, 300] }] ] } ] } ">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended">
+
+
+        <div id="article-toolbar" style="position: sticky;top: 5px;z-index: 1000;">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>返回</span>
+            </a>
+        </div>
+    
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#什么是echarts">什么是Echarts</a></li>
+    <li><a href="#如何写一个图表">如何写一个图表</a>
+      <ol>
+        <li><a href="#图表步骤">图表步骤</a></li>
+        <li><a href="#图表配置">图表配置</a>
+          <ol>
+            <li><a href="#柱形图">柱形图</a></li>
+            <li><a href="#雷达图">雷达图</a></li>
+            <li><a href="#环形图">环形图</a></li>
+            <li><a href="#关系图">关系图</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E5%89%8D%E7%AB%AF/" >
+                前端
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/0408-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6%E5%8F%AF%E8%A7%86%E5%8C%96echarts/">0408 初步接触可视化Echarts</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025-04-08</time>
+            </div>
+	        
+        <div id="viewCount">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-eye"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" /></svg>
+            <time class="article-time--reading">
+                
+                <span id="vercount_value_page_pv">loading... </span>次
+            </time>
+        </div>
+
+        
+
+        
+    </footer>
+    
+
+    
+
+    
+</div>
+
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="初步接触可视化echarts">初步接触可视化Echarts
+</h1><h2 id="什么是echarts">什么是Echarts
+</h2><h2 id="如何写一个图表">如何写一个图表
+</h2><h3 id="图表步骤">图表步骤
+</h3><ol>
+<li>
+<p>初始化 echarts 实例</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">myChart</span> <span class="o">=</span> <span class="kc">null</span>
+</span></span><span class="line"><span class="cl"><span class="nx">onMounted</span><span class="p">(()=&gt;{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">myChart</span> <span class="o">=</span> <span class="nx">echarts</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>构建 option 配置对象</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>通过 实例.setOption(option) 挂载到对应盒子上</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">myChart</span><span class="p">.</span><span class="nx">setOption</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<h3 id="图表配置">图表配置
+</h3><h4 id="柱形图">柱形图
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"> <span class="c1">// X轴展示数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span> <span class="nx">xAxis</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">show</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="c1">// x方向作为值展示
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;value&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="c1">// 设置最大值的配置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     <span class="nx">max</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="c1">// 动态最大值设置为所有数据中的最大值1.2倍，防止样式问题
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>         <span class="k">return</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">value</span><span class="p">.</span><span class="nx">max</span> <span class="o">*</span> <span class="mf">1.2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">     <span class="p">}</span>
+</span></span><span class="line"><span class="cl"> <span class="p">},</span>
+</span></span><span class="line"><span class="cl"> <span class="c1">// y轴展示数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span> <span class="nx">yAxis</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="c1">// 作为列名展示
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;category&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="c1">// 列名数组，默认从下到上
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     <span class="nx">data</span><span class="o">:</span> <span class="nx">props</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">regions</span><span class="o">?</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">item</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">item</span><span class="p">.</span><span class="nx">name</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">     <span class="c1">// 反向展示
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     <span class="nx">inverse</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="c1">// 不展示线
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     <span class="nx">axisLine</span><span class="o">:</span> <span class="p">{</span> <span class="nx">show</span><span class="o">:</span> <span class="kc">false</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">     <span class="c1">// 不展示刻度
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     <span class="nx">axisTick</span><span class="o">:</span> <span class="p">{</span> <span class="nx">show</span><span class="o">:</span> <span class="kc">false</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">     <span class="c1">// 展示列名并且label颜色设置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     <span class="nx">axisLabel</span><span class="o">:</span> <span class="p">{</span> <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#9eb1cd&#39;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl"> <span class="p">},</span>
+</span></span><span class="line"><span class="cl"> <span class="c1">// 图表绘制的位置，对应上下左右
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span> <span class="nx">grid</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">top</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">right</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">left</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">bottom</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="c1">// 标签包含进去
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     <span class="nx">containLabel</span><span class="o">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"> <span class="p">},</span>
+</span></span><span class="line"><span class="cl"> <span class="c1">// 核心配置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span> <span class="nx">series</span><span class="o">:</span><span class="p">[</span>
+</span></span><span class="line"><span class="cl">     <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="c1">// 柱形图
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>         <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;bar&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="c1">// 展示的数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>         <span class="nx">data</span><span class="o">:</span> <span class="nx">props</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">regions</span><span class="o">?</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">item</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">({</span>
+</span></span><span class="line"><span class="cl">             <span class="nx">name</span><span class="o">:</span> <span class="nx">item</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">             <span class="nx">value</span><span class="o">:</span> <span class="nx">item</span><span class="p">.</span><span class="nx">value</span>
+</span></span><span class="line"><span class="cl">         <span class="p">})),</span>
+</span></span><span class="line"><span class="cl">         <span class="c1">// 柱状条背景开关
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>         <span class="nx">showBackground</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="c1">// 柱状条背景色
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>         <span class="nx">backGroundStyle</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">             <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;rgba(180, 180, 180, 0.2)&#39;</span>
+</span></span><span class="line"><span class="cl">         <span class="p">},</span>
+</span></span><span class="line"><span class="cl">         <span class="c1">// 每个轴的样式
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>         <span class="nx">itemStyle</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">             <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#5d98CE&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">             <span class="nx">barBorderRadius</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">             <span class="nx">shadowColor</span><span class="o">:</span> <span class="s1">&#39;rgba(0,0,0,0.3)&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">             <span class="nx">shadowBlur</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="p">},</span>
+</span></span><span class="line"><span class="cl">         <span class="c1">// 柱子宽度
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>         <span class="nx">barWidth</span><span class="o">:</span> <span class="mi">12</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="c1">// 字体的显示
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>         <span class="nx">label</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">             <span class="nx">show</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">             <span class="nx">position</span><span class="o">:</span> <span class="s1">&#39;right&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">             <span class="nx">textStyle</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                 <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#fff&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">             <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            	<span class="c1">// 为数据加上百分比，c代表数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>             <span class="nx">formatter</span><span class="o">:</span><span class="s1">&#39;{c}%&#39;</span>
+</span></span><span class="line"><span class="cl">         <span class="p">}</span>
+</span></span><span class="line"><span class="cl">     <span class="p">}</span>
+</span></span><span class="line"><span class="cl"> <span class="p">],</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="雷达图">雷达图
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
+</span><span class="lnt">85
+</span><span class="lnt">86
+</span><span class="lnt">87
+</span><span class="lnt">88
+</span><span class="lnt">89
+</span><span class="lnt">90
+</span><span class="lnt">91
+</span><span class="lnt">92
+</span><span class="lnt">93
+</span><span class="lnt">94
+</span><span class="lnt">95
+</span><span class="lnt">96
+</span><span class="lnt">97
+</span><span class="lnt">98
+</span><span class="lnt">99
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">option</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 雷达坐标系配置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">radar</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 坐标系（外部）名字配置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">name</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">textStyle</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#05D5FF&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">fontSize</span><span class="o">:</span> <span class="mi">14</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 雷达图形状
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">shape</span><span class="o">:</span> <span class="s1">&#39;polygon&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">center</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;50%&#39;</span><span class="p">,</span> <span class="s1">&#39;50%&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">radius</span><span class="o">:</span> <span class="s1">&#39;80%&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 起始位置(开始角度)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">startAngle</span><span class="o">:</span> <span class="mi">120</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 轴线配置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">axisLine</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">lineStyle</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;rgba(5,213,255,0.8)&#39;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 网格线，为true才能形成闭环
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">splitLine</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">show</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">lineStyle</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">width</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;rgba(5,213,255,0.8)&#39;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 指示器,就是name部分的坐标系（外部）名字
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">indicator</span><span class="o">:</span> <span class="nx">props</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">risks</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">item</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">({</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">name</span><span class="o">:</span> <span class="nx">item</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">max</span><span class="o">:</span> <span class="mi">100</span>
+</span></span><span class="line"><span class="cl">            <span class="p">})),</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 拆分区域，false网格内颜色区分更明显
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">splitArea</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">show</span><span class="o">:</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 坐标极点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">polar</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">center</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;50%&#39;</span><span class="p">,</span> <span class="s1">&#39;50%&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">radius</span><span class="o">:</span> <span class="s1">&#39;0%&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 坐标角度
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">angleAxis</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">min</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 分割线分割间隔
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">interval</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 刻度显示是否为逆时针增长,
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">clockwise</span><span class="o">:</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 径向轴
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">radiusAxis</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">min</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">interval</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">splitLine</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">show</span><span class="o">:</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 图表核心配置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">series</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;radar&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">// 指定形状
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="nx">symbol</span><span class="o">:</span> <span class="s1">&#39;circle&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">// 内部数据拐角大小
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="nx">symbolSize</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">itemStyle</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">normal</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#05D5FF&#39;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="p">},</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">areaStyle</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">normal</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#05D5FF&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">opacity</span><span class="o">:</span> <span class="mf">0.5</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="p">},</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">lineStyle</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">width</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#&#39;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">},</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">label</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">normal</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="c1">// 内部数据文本
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                        <span class="nx">show</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#fff&#39;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="p">},</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">data</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">value</span><span class="o">:</span> <span class="nx">props</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">risks</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">item</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">item</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="环形图">环形图
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">getSeriesData</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">series</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">props</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">abnormals</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">item</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"> <span class="c1">// 上层
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span> <span class="nx">series</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">name</span><span class="o">:</span> <span class="nx">item</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;pie&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="c1">// 逆时针排列
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     <span class="nx">clockWise</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="c1">// 取消悬浮动画
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     <span class="nx">hoverAnimation</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="c1">// 实现半径依次递减
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     <span class="nx">radius</span><span class="o">:</span> <span class="p">[</span><span class="mi">73</span> <span class="o">-</span> <span class="nx">index</span> <span class="o">*</span> <span class="mi">15</span> <span class="o">+</span> <span class="s1">&#39;%&#39;</span><span class="p">,</span> <span class="mi">68</span> <span class="o">-</span> <span class="nx">index</span> <span class="o">*</span> <span class="mi">15</span> <span class="o">+</span> <span class="s1">&#39;%&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">center</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;50%&#39;</span><span class="p">,</span> <span class="s1">&#39;50%&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">label</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nx">show</span><span class="o">:</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">     <span class="p">},</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">data</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">         <span class="p">{</span>
+</span></span><span class="line"><span class="cl">             <span class="nx">value</span><span class="o">:</span> <span class="nx">item</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">             <span class="nx">name</span><span class="o">:</span> <span class="nx">item</span><span class="p">.</span><span class="nx">name</span>
+</span></span><span class="line"><span class="cl">         <span class="p">},</span>
+</span></span><span class="line"><span class="cl">         <span class="p">{</span>
+</span></span><span class="line"><span class="cl">             <span class="nx">value</span><span class="o">:</span> <span class="mi">1000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">             <span class="nx">itemStyle</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                 <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;rgba(0,0,0,0)&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                 <span class="nx">borderWidth</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">             <span class="p">},</span>
+</span></span><span class="line"><span class="cl">             <span class="nx">tooltip</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                 <span class="nx">show</span><span class="o">:</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">             <span class="p">},</span>
+</span></span><span class="line"><span class="cl">             <span class="nx">hoverAnimation</span><span class="o">:</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">         <span class="p">}</span>
+</span></span><span class="line"><span class="cl">     <span class="p">]</span>
+</span></span><span class="line"><span class="cl"> <span class="p">})</span>
+</span></span><span class="line"><span class="cl"> <span class="c1">// 底层
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span> <span class="nx">series</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">name</span><span class="o">:</span> <span class="nx">item</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;pie&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="c1">// 不希望收到任何事件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     <span class="nx">silent</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">z</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="c1">// 逆时针排列
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     <span class="nx">clockWise</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="c1">// 取消悬浮动画
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     <span class="nx">hoverAnimation</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="c1">// 实现半径依次递减
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     <span class="nx">radius</span><span class="o">:</span> <span class="p">[</span><span class="mi">73</span> <span class="o">-</span> <span class="nx">index</span> <span class="o">*</span> <span class="mi">15</span> <span class="o">+</span> <span class="s1">&#39;%&#39;</span><span class="p">,</span> <span class="mi">68</span> <span class="o">-</span> <span class="nx">index</span> <span class="o">*</span> <span class="mi">15</span> <span class="o">+</span> <span class="s1">&#39;%&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">center</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;50%&#39;</span><span class="p">,</span> <span class="s1">&#39;50%&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">label</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nx">show</span><span class="o">:</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">     <span class="p">},</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">data</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">         <span class="p">{</span>
+</span></span><span class="line"><span class="cl">             <span class="nx">value</span><span class="o">:</span> <span class="mf">7.5</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">             <span class="nx">name</span><span class="o">:</span> <span class="nx">item</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">             <span class="nx">itemStyle</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                 <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;rgba(3,31,62)&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                 <span class="nx">borderWidth</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">             <span class="p">},</span>
+</span></span><span class="line"><span class="cl">             <span class="nx">tooltip</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                 <span class="nx">show</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">             <span class="p">},</span>
+</span></span><span class="line"><span class="cl">             <span class="nx">hoverAnimation</span><span class="o">:</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">         <span class="p">},</span>
+</span></span><span class="line"><span class="cl">         <span class="p">{</span>
+</span></span><span class="line"><span class="cl">             <span class="nx">value</span><span class="o">:</span> <span class="mf">2.5</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">             <span class="nx">itemStyle</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                 <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;rgba(0,0,0,0)&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                 <span class="nx">borderWidth</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">             <span class="p">},</span>
+</span></span><span class="line"><span class="cl">             <span class="nx">tooltip</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                 <span class="nx">show</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">             <span class="p">},</span>
+</span></span><span class="line"><span class="cl">             <span class="nx">hoverAnimation</span><span class="o">:</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">         <span class="p">}</span>
+</span></span><span class="line"><span class="cl">     <span class="p">]</span>
+</span></span><span class="line"><span class="cl"> <span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="k">return</span> <span class="nx">series</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">option</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"> <span class="c1">// 图例配置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span> <span class="nx">legend</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">show</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="c1">// 图例颜色块形状
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     <span class="nx">icon</span><span class="o">:</span> <span class="s1">&#39;circle&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">top</span><span class="o">:</span> <span class="s1">&#39;8%&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">left</span><span class="o">:</span> <span class="s1">&#39;52%&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="c1">// 图例数据文本
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     <span class="nx">data</span><span class="o">:</span> <span class="nx">props</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">abnormals</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">item</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">item</span><span class="p">.</span><span class="nx">name</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">     <span class="c1">// 负数以列展示
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     <span class="nx">width</span><span class="o">:</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="c1">// 色块宽高
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     <span class="nx">itemWidth</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">itemHeight</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="c1">// 图例间距
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     <span class="nx">itemGap</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">textStyle</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nx">fontSize</span><span class="o">:</span> <span class="mi">12</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nx">lineHeight</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#fff&#39;</span>
+</span></span><span class="line"><span class="cl">     <span class="p">}</span>
+</span></span><span class="line"><span class="cl"> <span class="p">},</span>
+</span></span><span class="line"><span class="cl"> <span class="c1">// 悬浮提示层
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span> <span class="nx">tooltip</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">show</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="c1">// 触发器
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     <span class="nx">trigger</span><span class="o">:</span> <span class="s1">&#39;item&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="c1">// 展示内容,a代表系列名，b代表数据名，c代表数据值,d代表百分比比例
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     <span class="nx">formatter</span><span class="o">:</span> <span class="s1">&#39;{a}&lt;br&gt;{b}:{c}({d}%)&#39;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">},</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">yAxis</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">     <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;category&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="c1">// 反向展示
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>         <span class="nx">inverse</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nx">axisLine</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">             <span class="nx">show</span><span class="o">:</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">         <span class="p">}</span>
+</span></span><span class="line"><span class="cl">     <span class="p">}</span>
+</span></span><span class="line"><span class="cl"> <span class="p">],</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">xAxis</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">     <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nx">show</span><span class="o">:</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">     <span class="p">}</span>
+</span></span><span class="line"><span class="cl"> <span class="p">],</span>
+</span></span><span class="line"><span class="cl"> <span class="c1">// 由于饼图过多，通过方法进行配置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span> <span class="nx">series</span><span class="o">:</span> <span class="nx">getSeriesData</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="关系图">关系图
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">option</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">xAxis</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">show</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;value&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">yAxis</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">show</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;value&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">series</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;graph&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">// 表示不需要任何布局类型
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="nx">layout</span><span class="o">:</span> <span class="s1">&#39;none&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">// 该系列需要使用的坐标系：“二维直角坐标系”
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="nx">coordinateSystem</span><span class="o">:</span> <span class="s1">&#39;cartesian2d&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">// 节点大小
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="nx">symbolSize</span><span class="o">:</span> <span class="mi">26</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">z</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">// 边界的萧条标签文字
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="nx">edgeLabel</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">// 默认
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                    <span class="nx">normal</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">show</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#fff&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">testStyle</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                            <span class="nx">fontSize</span><span class="o">:</span> <span class="mi">14</span>
+</span></span><span class="line"><span class="cl">                        <span class="p">},</span>
+</span></span><span class="line"><span class="cl">                        <span class="c1">// 文本模拟内容
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                        <span class="nx">formatter</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                            <span class="k">return</span> <span class="nx">params</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">speed</span>
+</span></span><span class="line"><span class="cl">                        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="p">},</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">label</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">normal</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">show</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">position</span><span class="o">:</span> <span class="s1">&#39;bottom&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#5E5E5E&#39;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="p">},</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">// 边两端的标记类型,数据流动图标类型
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="nx">edgeSymbol</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="s1">&#39;arrow&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">edgeSymbolSize</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">data</span><span class="o">:</span> <span class="nx">props</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">relations</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">item</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">if</span> <span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">id</span> <span class="o">!==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="k">return</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                            <span class="nx">name</span><span class="o">:</span> <span class="nx">item</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                            <span class="nx">category</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                            <span class="nx">active</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                            <span class="nx">speed</span><span class="o">:</span> <span class="sb">`</span><span class="si">${</span><span class="nx">item</span><span class="p">.</span><span class="nx">speed</span><span class="si">}</span><span class="sb">kb/s`</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                            <span class="nx">value</span><span class="o">:</span> <span class="nx">item</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="k">return</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                            <span class="nx">name</span><span class="o">:</span> <span class="nx">item</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                            <span class="nx">value</span><span class="o">:</span> <span class="nx">item</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                            <span class="nx">symbolSize</span><span class="o">:</span> <span class="mi">100</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                            <span class="nx">itemStyle</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                                <span class="nx">color</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                                    <span class="nx">colorStops</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                                        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                                            <span class="nx">offset</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                                            <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#157eff&#39;</span>
+</span></span><span class="line"><span class="cl">                                        <span class="p">},</span>
+</span></span><span class="line"><span class="cl">                                        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                                            <span class="nx">offset</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                                            <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#35c2ff&#39;</span>
+</span></span><span class="line"><span class="cl">                                        <span class="p">},</span>
+</span></span><span class="line"><span class="cl">                                    <span class="p">]</span>
+</span></span><span class="line"><span class="cl">                                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">                            <span class="nx">label</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                                <span class="nx">normal</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                                    <span class="nx">fontSize</span><span class="o">:</span> <span class="mi">14</span>
+</span></span><span class="line"><span class="cl">                                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}),</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">// 节点间的数据关系
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="nx">links</span><span class="o">:</span> <span class="nx">props</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">relations</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">item</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">({</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">source</span><span class="o">:</span> <span class="nx">item</span><span class="p">.</span><span class="nx">source</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">target</span><span class="o">:</span> <span class="nx">item</span><span class="p">.</span><span class="nx">target</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">speed</span><span class="o">:</span> <span class="sb">`</span><span class="si">${</span><span class="nx">item</span><span class="p">.</span><span class="nx">speed</span><span class="si">}</span><span class="sb">kb/s`</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">lineStyle</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">normal</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                            <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#12b5d0&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                            <span class="c1">// 曲线率
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                            <span class="nx">curveness</span><span class="o">:</span> <span class="mf">0.2</span>
+</span></span><span class="line"><span class="cl">                        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">label</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">show</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">position</span><span class="o">:</span> <span class="s1">&#39;middle&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                        <span class="c1">// 是否对文字进行偏移
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                        <span class="nx">offset</span><span class="o">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}))</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;lines&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">// 该系列需要使用的坐标系：“二维直角坐标系”
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="nx">coordinateSystem</span><span class="o">:</span> <span class="s1">&#39;cartesian2d&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">z</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">// 线条的特效配置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="nx">effect</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">show</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">smooth</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">trailLength</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">symbol</span><span class="o">:</span> <span class="s1">&#39;arrow&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;rgba(55,155,255,0.6)&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">symbolSize</span><span class="o">:</span> <span class="mi">12</span>
+</span></span><span class="line"><span class="cl">                <span class="p">},</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">lineStyle</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">normal</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">curveness</span><span class="o">:</span> <span class="mf">0.2</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="p">},</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">data</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">[{</span> <span class="nx">coord</span><span class="o">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">300</span><span class="p">]</span> <span class="p">},</span> <span class="p">{</span> <span class="nx">coord</span><span class="o">:</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">200</span><span class="p">]</span> <span class="p">}],</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">[{</span> <span class="nx">coord</span><span class="o">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span> <span class="p">},</span> <span class="p">{</span> <span class="nx">coord</span><span class="o">:</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">200</span><span class="p">]</span> <span class="p">}],</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">[{</span> <span class="nx">coord</span><span class="o">:</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">200</span><span class="p">]</span> <span class="p">},</span> <span class="p">{</span> <span class="nx">coord</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span> <span class="p">}],</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">[{</span> <span class="nx">coord</span><span class="o">:</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">200</span><span class="p">]</span> <span class="p">},</span> <span class="p">{</span> <span class="nx">coord</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">300</span><span class="p">]</span> <span class="p">}]</span>
+</span></span><span class="line"><span class="cl">                <span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/echarts/">Echarts</a>
+        
+            <a href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/">可视化</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>404_@林达所作</span>
+
+    </section>
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/0406-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6nuxt3/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">初步接触nuxt3</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/0327-%E5%88%9D%E5%AD%A6promise%E5%AF%B9%E8%B1%A1/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">初学Promise对象</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/0322-%E4%B8%89%E7%A7%8D%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">XMLHttpRequest、Axios 与 Fetch 在 Vue3 中的深度解析</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/el-table%E4%B8%ADsort%E6%8B%96%E6%8B%BD%E6%8E%92%E5%BA%8F%E7%9A%84%E5%B8%B8%E8%A7%81%E6%96%B9%E6%B3%95/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">el-table中sort(拖拽排序)的常见方法</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E6%82%AC%E6%B5%AE%E5%87%BA%E7%8E%B0%E7%AE%AD%E5%A4%B4%E7%9B%92%E5%AD%90%E7%9A%84%E5%86%99%E6%B3%95/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E6%82%AC%E6%B5%AE%E5%87%BA%E7%8E%B0%E7%AE%AD%E5%A4%B4%E7%9B%92%E5%AD%90%E7%9A%84%E5%86%99%E6%B3%95/hover.e7138c8c19bc0876d6cd8b59aa3ffb8f_hu_beed4232f655bb9b.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 悬浮出现箭头盒子的写法"
+                        
+                        data-hash="md5-5xOMjBm8CHbWzYtZqj/7jw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">悬浮出现箭头盒子的写法</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2025 404_@林达
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<script src="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.css" crossorigin="anonymous" />
+<script>
+    NProgress.start();
+    document.addEventListener("readystatechange", () => {
+        if (document.readyState === "interactive") NProgress.inc(0.8);
+        if (document.readyState === "complete") NProgress.done();
+    });
+</script>
+
+<script defer src="https://cn.vercount.one/js"></script>
+<script>
+    function showHideView() {
+        
+        let viewCounts = document.querySelectorAll("#viewCount");
+        if (viewCounts) {
+            
+            let article =  document.querySelector(".article-page");
+            if (!article) {
+                viewCounts.forEach(ele => {
+                    ele.style.display = 'none';
+                });
+            }
+        }
+    }
+    
+    showHideView();
+</script>
+
+    </body>
+</html>
