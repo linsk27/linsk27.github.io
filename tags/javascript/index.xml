@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>404_@林达</copyright>
-        <lastBuildDate>Thu, 27 Mar 2025 22:33:37 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 08 Apr 2025 15:43:37 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>初学Promise对象</title>
         <link>https://linsk27.github.io/p/0327-%E5%88%9D%E5%AD%A6promise%E5%AF%B9%E8%B1%A1/</link>
         <pubDate>Thu, 27 Mar 2025 22:33:37 +0800</pubDate>
@@ -130,16 +130,12 @@
 &lt;/div&gt;&lt;h2 id=&#34;promiseapi&#34;&gt;Promise.API
 &lt;/h2&gt;&lt;h3 id=&#34;awaitasync&#34;&gt;await+async
 &lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Promise&lt;/strong&gt; 通过链式调用（如 .then() 和 .catch()）管理异步操作的成功或失败；&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;async&lt;/strong&gt; 修饰的函数总会返回一个 Promise，无论返回的是普通值还是 Promise 本身；&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;await&lt;/strong&gt; 用于暂停 async 函数的执行，等待后面的 Promise 解析完成，然后直接获得解析结果，从而让异步代码写起来更像同步代码，避免了冗长的 .then() 链。&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Promise&lt;/strong&gt; 通过链式调用（如 .then() 和 .catch()）管理异步操作的成功或失败；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;async&lt;/strong&gt; 修饰的函数&lt;strong&gt;总会返回一个 Promise&lt;/strong&gt;，无论返回的是普通值还是 Promise 本身；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;await&lt;/strong&gt; await语句之后的代码处于微队列，用于暂停 async 函数的执行，等待后面的 Promise 解析完成，然后直接获得解析结果，从而让异步代码写起来更像同步代码，避免了冗长的 .then() 链。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;await 等待的不一定是promise对象，也有可能为await 1; ==&amp;gt; await Promise.resolve(1)&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;promiseall&#34;&gt;Promise.all
 &lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
