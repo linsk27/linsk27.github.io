@@ -3915,183 +3915,8 @@
         <pubDate>Mon, 28 Oct 2024 00:00:00 +0000</pubDate>
         
         <guid>https://linsk27.github.io/%E7%94%9F%E6%B4%BB/</guid>
-        <description>&lt;h2 id=&#34;-知识拓扑学&#34;&gt;🌀 知识拓扑学
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;flowchart TD
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    量子语法[&amp;#34;console.log(&amp;#39;Hello, World!&amp;#39;)&amp;#34;] --&amp;gt; 语义星云[&amp;#34;语言的波函数坍缩&amp;#34;]
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    类型系统[&amp;#34;TypeScript泛型约束&amp;#34;] --&amp;gt; 认知暗礁[&amp;#34;集合论的柏拉图洞穴&amp;#34;]
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    响应式原理[&amp;#34;Vue3的Proxy魔法&amp;#34;] --&amp;gt; 时间褶皱[&amp;#34;观察者模式的相对论&amp;#34;]
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;-信号与噪声&#34;&gt;📡 信号与噪声
-&lt;/h2&gt;&lt;h3 id=&#34;技术频率&#34;&gt;技术频率
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-plaintext&#34; data-lang=&#34;plaintext&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[ 本周接收信号 ]
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;◈ Next.js 14：服务端组件的引力透镜
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;◈ Tauri 2.0：桌面开发的超新星爆发
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;◈ WebAssembly GC：跨越边界的量子隧穿
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[ 长期背景辐射 ]
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;◇ 《SICP》：λ演算的启示录
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;◇ 《代码大全》：软件工程的人类学
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;◇ 《黑客与画家》：硅谷的游吟诗集
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;-抽象拼图&#34;&gt;🧩 抽象拼图
-&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;正在解构的模块&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;存在主义&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;意识&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;自我&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;useRef&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;useEffect&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;他者&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;document&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;querySelector&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;#世界&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;他者&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;removeEventListener&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;click&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;认知碰撞&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;strong&gt;未完成的命题&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-typescript&#34; data-lang=&#34;typescript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;interface&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;真理&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;可证伪性&lt;/span&gt;: &lt;span class=&#34;kt&#34;&gt;Hypothesis&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;Falsifiable&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;优雅程度&lt;/span&gt;: &lt;span class=&#34;kt&#34;&gt;number&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;extends&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;美&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;never&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;unknown&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;-维度对话&#34;&gt;🌌 维度对话
-&lt;/h2&gt;&lt;h3 id=&#34;午夜编译器&#34;&gt;午夜编译器
-&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;&amp;ldquo;当我们在&lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt;嵌套中寻找意义，是否正在构建数字巴别塔？&amp;rdquo;&lt;br&gt;
-&amp;ldquo;&lt;code&gt;async/await&lt;/code&gt;的语法糖，能否包裹存在主义的焦虑？&amp;rdquo;&lt;br&gt;
-&amp;ldquo;虚拟DOM的diff算法，是否是赫拉克利特之河的现代诠释？&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;-思想接口&#34;&gt;📮 思想接口
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-typescript&#34; data-lang=&#34;typescript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;通信协议&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;载体&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;email&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;github&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;matrix&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;协议栈&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;RFC&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5322&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;Git&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;2.43&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;XMPP&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;XEP&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0384&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;对话请求&lt;/span&gt;: &lt;span class=&#34;kt&#34;&gt;Promise&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;思想碰撞&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;fetch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s1&#34;&gt;&amp;#39;mailto:your@email.com?subject=类型安全的寒暄&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;-递归现实&#34;&gt;🌐 递归现实
-&lt;/h2&gt;&lt;div style=&#34;columns: 2; gap: 2rem;&#34;&gt;
-&lt;p&gt;&lt;strong&gt;自指涉系统&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;认知模型&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://www.w3.org/1999/xhtml&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;元认知&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;cp&#34;&gt;&amp;lt;![CDATA[ 我正在思考我在思考这件事 ]]&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;元认知&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;认知模型&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;strong&gt;无限镜像&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;ontology&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;after&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;content&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;现实是编译时类型检查&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;animation&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;recursion&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;infinite&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;keyframes&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;recursion&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;content&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;现实是运行时类型推断&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;
-&lt;hr&gt;
-&lt;center&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;mailto:your@email.com&#34; &gt;&lt;img src=&#34;https://img.shields.io/badge/%e8%ae%a4%e7%9f%a5%e5%a5%87%e7%82%b9-6C5CE7?style=for-the-badge&amp;amp;logo=telegram&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;语义漂流&#34;
-	
-	
-&gt;&lt;/a&gt;&lt;br&gt;
-&lt;small&gt;&amp;ldquo;我们不是代码的造物主，而是它的翻译官&amp;rdquo;&lt;/small&gt;&lt;/p&gt;
-&lt;/center&gt;
-&lt;h1 id=&#34;我的学习计划建议&#34;&gt;我的学习计划建议
-&lt;/h1&gt;&lt;p&gt;以下是我基于你的情况（实习，晚上和周末全天可用，学习内容涉及 Nginx、React 入门、Python 后端、进阶 JS 和进阶 TS）制定的一份 5 个月学习计划。计划也分为三个阶段，从基础搭建到工程实践，同时在每个阶段都建议做阶段性总结、笔记记录和项目验证。&lt;/p&gt;
+        <description>&lt;h1 id=&#34;我的学习计划建议&#34;&gt;我的学习计划建议
+&lt;/h1&gt;&lt;p&gt;以下是我基于你的情况（实习，晚上和周末全天可用，学习内容涉及 Nginx、React 入门、Python 后端、进阶 JS 和进阶 TS）制定的一份 5 个月学习计划。计划分为三个阶段，从基础搭建到工程实践，同时在每个阶段均建议做阶段性总结、笔记记录和项目验证。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -4100,14 +3925,14 @@
 &lt;/ul&gt;&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;第一阶段基础打牢与初步整合4155317周&#34;&gt;第一阶段：基础打牢与初步整合（4.15～5.31，7周）
-&lt;/h2&gt;&lt;h3 id=&#34;目标&#34;&gt;&lt;strong&gt;目标&lt;/strong&gt;
+&lt;/h2&gt;&lt;h3 id=&#34;目标&#34;&gt;目标
 &lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Nginx 基础&lt;/strong&gt;：掌握安装、静态文件部署与基本反向代理。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;JavaScript 基础及进阶&lt;/strong&gt;：复习 JS 核心概念、闭包、异步编程，打牢语言底层功底。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;React 与 TS 入门&lt;/strong&gt;：初步接触使用 TypeScript 编写 React 应用。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Python 后端初探&lt;/strong&gt;：选择 Flask，开发简单的 REST API 服务。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;资源推荐&#34;&gt;&lt;strong&gt;资源推荐&lt;/strong&gt;
+&lt;h3 id=&#34;资源推荐&#34;&gt;资源推荐
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Nginx&lt;/strong&gt;
 &lt;ul&gt;
@@ -4120,7 +3945,7 @@
 &lt;li&gt;&lt;strong&gt;JavaScript&lt;/strong&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://javascript.info/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;JavaScript.info&lt;/a&gt;（系统全面）&lt;/li&gt;
+    &gt;JavaScript.info&lt;/a&gt; （系统全面）&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/getify/You-Dont-Know-JS&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;You Don&amp;rsquo;t Know JS (简版阅读)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -4138,49 +3963,49 @@
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://flask.palletsprojects.com/en/2.2.x/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Flask 官方文档&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=MwZwr5Tvyxo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Flask Web Development Tutorial&lt;/a&gt;（YouTube教程）&lt;/li&gt;
+    &gt;Flask Web Development Tutorial&lt;/a&gt; （YouTube 教程）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;周计划安排&#34;&gt;&lt;strong&gt;周计划安排&lt;/strong&gt;
+&lt;h3 id=&#34;周计划安排&#34;&gt;周计划安排
 &lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;平日晚上（1.5-2小时/晚）&lt;/strong&gt;
+&lt;li&gt;&lt;strong&gt;平日晚上（1.5-2 小时/晚）&lt;/strong&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Nginx&lt;/strong&gt;：前两周每天投入 20-30 分钟阅读配置实践（安装、反向代理等）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;JavaScript&lt;/strong&gt;：针对闭包、异步、模块化，每晚学习和代码片段练习 30-40 分钟。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;React+TS&lt;/strong&gt;：每周2-3晚学习 JSX、组件及 TS 基本类型。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Nginx&lt;/strong&gt;：前两周每天投入 20-30 分钟进行配置实践（安装、反向代理等）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;JavaScript&lt;/strong&gt;：针对闭包、异步、模块化，每晚学习 30-40 分钟并进行代码片段练习。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;React+TS&lt;/strong&gt;：每周选取 2-3 个晚上学习 JSX、组件及 TypeScript 基本类型。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;每个周末（4-6小时/天）&lt;/strong&gt;
+&lt;li&gt;&lt;strong&gt;每个周末（4-6 小时/天）&lt;/strong&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;项目实践&lt;/strong&gt;：
 &lt;ul&gt;
-&lt;li&gt;第1-2周：搭建本地 Nginx 环境，部署一个简单的静态网页（如个人主页或简历页面）；完成几个 JS 小练习。&lt;/li&gt;
-&lt;li&gt;第3-4周：构建小型 React 项目（例如 TodoList），初步使用 TS 编写组件。&lt;/li&gt;
+&lt;li&gt;第1-2周：搭建本地 Nginx 环境，部署一个简单的静态网页（例如个人主页或简历页面）；完成几个 JS 小练习。&lt;/li&gt;
+&lt;li&gt;第3-4周：构建一个小型 React 项目（例如 TodoList），初步使用 TS 编写组件。&lt;/li&gt;
 &lt;li&gt;第5-7周：用 Flask 编写基础 API（例如用户注册、数据 CRUD），前端调用 API；整合 Nginx 做简单反向代理测试。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;预留时间复盘笔记，写博客记录学习体会。&lt;/li&gt;
+&lt;li&gt;同时预留时间复盘笔记，撰写博客记录学习体会。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;第二阶段深度进阶与技术整合617156周&#34;&gt;第二阶段：深度进阶与技术整合（6.1～7.15，6周）
-&lt;/h2&gt;&lt;h3 id=&#34;目标-1&#34;&gt;&lt;strong&gt;目标&lt;/strong&gt;
+&lt;/h2&gt;&lt;h3 id=&#34;目标-1&#34;&gt;目标
 &lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;JS 高级部分&lt;/strong&gt;：深入异步机制、事件循环、设计模式、模块化与性能优化；通过实战练习加深理解。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;JS 高级部分&lt;/strong&gt;：深入理解异步机制、事件循环、设计模式、模块化与性能优化；通过实战练习加深理解。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;TS 进阶&lt;/strong&gt;：掌握泛型、高级类型、类型守卫及实战中的工具类型。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;React 状态管理&lt;/strong&gt;：学习 Context API 或 Redux Toolkit，设计中等复杂度前端应用。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Python ORM &amp;amp; 数据库&lt;/strong&gt;：结合 SQLAlchemy 完成简单数据持久化（也可以考虑 Django ORM，但建议继续使用 Flask 保持一致）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Python ORM &amp;amp; 数据库&lt;/strong&gt;：结合 SQLAlchemy 完成简单数据持久化（也可考虑 Django ORM，但建议在保持一致性的前提下继续使用 Flask）。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;资源推荐-1&#34;&gt;&lt;strong&gt;资源推荐&lt;/strong&gt;
+&lt;h3 id=&#34;资源推荐-1&#34;&gt;资源推荐
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;高级 JS&lt;/strong&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/getify/You-Dont-Know-JS&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;You Don&amp;rsquo;t Know JS (进阶篇)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://javascript30.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;JavaScript 30&lt;/a&gt;（动手实践）&lt;/li&gt;
+    &gt;JavaScript 30&lt;/a&gt; （动手实践）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;高级 TS&lt;/strong&gt;
@@ -4204,7 +4029,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;周计划安排-1&#34;&gt;&lt;strong&gt;周计划安排&lt;/strong&gt;
+&lt;h3 id=&#34;周计划安排-1&#34;&gt;周计划安排
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;平日晚上&lt;/strong&gt;
 &lt;ul&gt;
@@ -4215,34 +4040,34 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;项目深化&lt;/strong&gt;：
 &lt;ul&gt;
-&lt;li&gt;构建一个博客系统或小型社交平台后端，用 Flask 结合 SQLAlchemy 完成完整 CRUD；前端用 React+TS 完成应用展示与状态管理，使用 Redux 或 Context 管理全局状态。&lt;/li&gt;
-&lt;li&gt;实现 Nginx 负载均衡的模拟（例如同时启动两个 Flask 实例），体验 HTTPS 配置（可使用 Let&amp;rsquo;s Encrypt 测试版）。&lt;/li&gt;
+&lt;li&gt;构建一个博客系统或小型社交平台后端，用 Flask 结合 SQLAlchemy 完成完整 CRUD；前端使用 React+TS 展示应用并进行状态管理，借助 Redux 或 Context 管理全局状态。&lt;/li&gt;
+&lt;li&gt;实现 Nginx 负载均衡的模拟（例如同时启动两个 Flask 实例），体验 HTTPS 配置（可尝试使用 Let&amp;rsquo;s Encrypt 测试版）。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;提前写好代码文档，进行代码 Review，提高工程化能力。&lt;/li&gt;
+&lt;li&gt;提前编写代码文档，进行代码 Review，提高工程化能力。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;第三阶段全栈项目与工程化实践7169148周&#34;&gt;第三阶段：全栈项目与工程化实践（7.16～9.14，8周）
-&lt;/h2&gt;&lt;h3 id=&#34;目标-2&#34;&gt;&lt;strong&gt;目标&lt;/strong&gt;
+&lt;/h2&gt;&lt;h3 id=&#34;目标-2&#34;&gt;目标
 &lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;全栈集成项目&lt;/strong&gt;：设计并开发一个技术论坛或信息管理系统，涵盖用户权限、内容发布及实时通知（可尝试 WebSocket 实现实时交互）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;性能与工程优化&lt;/strong&gt;：进行前端 Bundle 分析、后端性能优化（如引入缓存 Redis），学习项目测试（单元测试、集成测试）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;CI/CD 实践&lt;/strong&gt;：配置 GitHub Actions 或其他自动化部署，完成项目从开发到上线的全流程。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;全栈集成项目&lt;/strong&gt;：设计并开发一个技术论坛或信息管理系统，涵盖用户权限、内容发布及实时通知（可尝试使用 WebSocket 实现实时交互）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;性能与工程优化&lt;/strong&gt;：进行前端 Bundle 分析、后端性能优化（如引入 Redis 缓存），并学习项目测试（单元测试、集成测试）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CI/CD 实践&lt;/strong&gt;：配置 GitHub Actions 或其他自动化部署工具，完成项目从开发到上线的全流程。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;资源推荐-2&#34;&gt;&lt;strong&gt;资源推荐&lt;/strong&gt;
+&lt;h3 id=&#34;资源推荐-2&#34;&gt;资源推荐
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;全栈架构&lt;/strong&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://fullstackopen.com/en/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Full Stack Open&lt;/a&gt;（赫尔辛基大学课程，非常全面）&lt;/li&gt;
+    &gt;Full Stack Open&lt;/a&gt; （赫尔辛基大学课程，非常全面）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;性能优化&lt;/strong&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://web.dev/learn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Web.dev - Performance&lt;/a&gt;（Google 官方指南）&lt;/li&gt;
+    &gt;Web.dev - Performance&lt;/a&gt; （Google 官方指南）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;CI/CD&lt;/strong&gt;
@@ -4250,38 +4075,38 @@
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://testdriven.io/blog/github-actions-python/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;GitHub Actions for Python&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://jestjs.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Jest + React Testing Library&lt;/a&gt;（前端测试）&lt;/li&gt;
+    &gt;Jest + React Testing Library&lt;/a&gt; （前端测试）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;周计划安排-2&#34;&gt;&lt;strong&gt;周计划安排&lt;/strong&gt;
+&lt;h3 id=&#34;周计划安排-2&#34;&gt;周计划安排
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;平日晚上&lt;/strong&gt;
 &lt;ul&gt;
-&lt;li&gt;每晚记录项目需求和设计文档，逐步迭代项目功能；学习单元测试和自动化部署基础知识。&lt;/li&gt;
+&lt;li&gt;每晚记录项目需求和设计文档，逐步迭代项目功能；同时学习单元测试和自动化部署的基础知识。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;每个周末&lt;/strong&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;全栈项目开发&lt;/strong&gt;：
 &lt;ul&gt;
-&lt;li&gt;第1-4周：开发论坛或信息管理系统的核心功能，前后端联调，解决 Nginx 反向代理问题。&lt;/li&gt;
-&lt;li&gt;第5-6周：引入性能优化方案（代码分割、缓存策略、异步任务队列等）、编写测试代码。&lt;/li&gt;
-&lt;li&gt;第7-8周：配置 CI/CD 流水线，整理项目文档，录制项目演示视频，完成项目的最终复盘与部署。&lt;/li&gt;
+&lt;li&gt;第1-4周：开发论坛或信息管理系统的核心功能，完成前后端联调，并解决 Nginx 反向代理问题。&lt;/li&gt;
+&lt;li&gt;第5-6周：引入性能优化方案（如代码分割、缓存策略、异步任务队列等），编写必要的测试代码。&lt;/li&gt;
+&lt;li&gt;第7-8周：配置 CI/CD 流水线，整理项目文档，录制项目演示视频，并完成项目的最终复盘与部署。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;定期总结反思，调整项目难点和分工，确保项目能完整运行并在求职时展示项目能力。&lt;/li&gt;
+&lt;li&gt;定期总结反思，调整项目难点和分工，确保项目完整运行并在求职时展示项目成果。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h1 id=&#34;补充学习工具与建议&#34;&gt;补充学习工具与建议
-&lt;/h1&gt;&lt;ul&gt;
+&lt;h2 id=&#34;补充学习工具与建议&#34;&gt;补充学习工具与建议
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;笔记工具&lt;/strong&gt;：推荐使用 &lt;a class=&#34;link&#34; href=&#34;https://obsidian.md/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Obsidian&lt;/a&gt; 建立知识库，整理各阶段学习要点和代码片段。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;版本控制&lt;/strong&gt;：全程使用 Git 管理项目代码，定期提交并在 GitHub 建立项目仓库。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;社区交流&lt;/strong&gt;：多利用 StackOverflow、掘金、CNode 等社区讨论问题，参与线上技术交流群（如 Discord 的 Reactiflux）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;实践为主&lt;/strong&gt;：每遇到新概念尽快写代码实验，养成边学边写的习惯。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;版本控制&lt;/strong&gt;：全程使用 Git 管理项目代码，定期提交并在 GitHub 上建立项目仓库。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;社区交流&lt;/strong&gt;：多利用 StackOverflow、掘金、CNode 等社区讨论问题，并参与线上技术交流群（如 Discord 的 Reactiflux）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实践为主&lt;/strong&gt;：每遇新概念尽快写代码实验，养成边学边写的习惯。&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         </item>
