@@ -7,7 +7,15 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>404_@林达</copyright>
-        <lastBuildDate>Sat, 12 Apr 2025 17:44:12 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 23 Apr 2025 12:25:57 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Nginx</title>
+        <link>https://linsk27.github.io/tags/nginx/</link>
+        <pubDate>Wed, 23 Apr 2025 12:25:57 +0800</pubDate>
+        
+        <guid>https://linsk27.github.io/tags/nginx/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Echarts</title>
         <link>https://linsk27.github.io/tags/echarts/</link>
         <pubDate>Tue, 08 Apr 2025 17:44:12 +0800</pubDate>

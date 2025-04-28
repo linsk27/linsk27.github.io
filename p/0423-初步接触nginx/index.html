@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="什么是 Nginx？ Nginx（engine x） 是一个高性能的 HTTP 和反向代理服务器，同时也是一个 IMAP/POP3/SMTP 邮件代理服务器。\n由 Igor Sysoev 编写，最初用于俄罗斯访问量最大的网站之一。如今，它广泛应用于各类网站的：\n">
+<title>初步接触Nginx</title>
+
+<link rel='canonical' href='https://linsk27.github.io/p/0423-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6nginx/'>
+
+<link rel="stylesheet" href="/scss/style.min.ae980efe75c2d32a27c41480b58278d4965834ce6891c8a5facafd3d3d5e22e2.css"><meta property='og:title' content="初步接触Nginx">
+<meta property='og:description' content="什么是 Nginx？ Nginx（engine x） 是一个高性能的 HTTP 和反向代理服务器，同时也是一个 IMAP/POP3/SMTP 邮件代理服务器。\n由 Igor Sysoev 编写，最初用于俄罗斯访问量最大的网站之一。如今，它广泛应用于各类网站的：\n">
+<meta property='og:url' content='https://linsk27.github.io/p/0423-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6nginx/'>
+<meta property='og:site_name' content='404_@林达'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Nginx' /><meta property='article:published_time' content='2025-04-23T12:25:57&#43;08:00'/><meta property='article:modified_time' content='2025-04-23T12:25:57&#43;08:00'/>
+<meta name="twitter:title" content="初步接触Nginx">
+<meta name="twitter:description" content="什么是 Nginx？ Nginx（engine x） 是一个高性能的 HTTP 和反向代理服务器，同时也是一个 IMAP/POP3/SMTP 邮件代理服务器。\n由 Igor Sysoev 编写，最初用于俄罗斯访问量最大的网站之一。如今，它广泛应用于各类网站的：\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended">
+
+
+        <div id="article-toolbar" style="position: sticky;top: 5px;z-index: 1000;">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>返回</span>
+            </a>
+        </div>
+    
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#什么是-nginx">什么是 Nginx？</a></li>
+        <li><a href="#为什么使用-nginx">为什么使用 Nginx？</a></li>
+        <li><a href="#安装-nginx">安装 Nginx</a>
+          <ol>
+            <li><a href="#1-安装依赖">1. 安装依赖</a></li>
+            <li><a href="#2-下载并解压-nginx">2. 下载并解压 Nginx</a></li>
+            <li><a href="#3-编译安装">3. 编译安装</a></li>
+          </ol>
+        </li>
+        <li><a href="#-常用命令整理">🚀 常用命令整理</a>
+          <ol>
+            <li><a href="#检查是否启动成功">检查是否启动成功</a></li>
+          </ol>
+        </li>
+        <li><a href="#配置与测试">配置与测试</a>
+          <ol>
+            <li><a href="#-配置文件示例nginxconf">📄 配置文件示例（<code>nginx.conf</code>）</a></li>
+            <li><a href="#测试是否成功">测试是否成功</a></li>
+          </ol>
+        </li>
+        <li><a href="#-注意事项">⚠️ 注意事项</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E5%B7%A5%E7%A8%8B/" >
+                工程
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/0423-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6nginx/">初步接触Nginx</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025-04-23</time>
+            </div>
+	        
+        <div id="viewCount">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-eye"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" /></svg>
+            <time class="article-time--reading">
+                
+                <span id="vercount_value_page_pv">loading... </span>次
+            </time>
+        </div>
+
+        
+
+        
+    </footer>
+    
+
+    
+
+    
+</div>
+
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h3 id="什么是-nginx">什么是 Nginx？
+</h3><p><strong>Nginx（engine x）</strong> 是一个高性能的 <strong>HTTP 和反向代理服务器</strong>，同时也是一个 <strong>IMAP/POP3/SMTP 邮件代理服务器</strong>。</p>
+<p>由 Igor Sysoev 编写，最初用于俄罗斯访问量最大的网站之一。如今，它广泛应用于各类网站的：</p>
+<ul>
+<li>静态资源服务（如 HTML、CSS、JS、图片等）</li>
+<li>反向代理（把请求转发到后端服务）</li>
+<li>负载均衡（分发请求以提升性能与可用性）</li>
+<li>HTTPS / SSL 支持</li>
+<li>动态请求的缓存与压缩处理</li>
+</ul>
+<h3 id="为什么使用-nginx">为什么使用 Nginx？
+</h3><p>Nginx 被广泛采用的原因包括：</p>
+<ul>
+<li>🚀 <strong>高性能</strong>：可以支撑成千上万个并发连接</li>
+<li>⚙️ <strong>资源占用小</strong>：内存占用远低于 Apache</li>
+<li>🔁 <strong>反向代理 + 负载均衡</strong>：非常适合部署在微服务架构中</li>
+<li>🔒 <strong>支持 HTTPS / SSL</strong></li>
+<li>🔧 <strong>模块化配置</strong>：配置灵活，易于扩展</li>
+</ul>
+<hr>
+<h3 id="安装-nginx">安装 Nginx
+</h3><h4 id="1-安装依赖">1. 安装依赖
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yum install gcc gcc-c++
+</span></span><span class="line"><span class="cl">yum install -y pcre pcre-devel
+</span></span><span class="line"><span class="cl">yum install -y zlib zlib-devel
+</span></span><span class="line"><span class="cl">yum install -y openssl openssl-devel
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="2-下载并解压-nginx">2. 下载并解压 Nginx
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> /usr/local
+</span></span><span class="line"><span class="cl">wget http://nginx.org/download/nginx-1.22.1.tar.gz
+</span></span><span class="line"><span class="cl">tar -zxvf nginx-1.22.1.tar.gz
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> nginx-1.22.1
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="3-编译安装">3. 编译安装
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./configure --with-http_ssl_module  <span class="c1"># 添加 SSL 模块支持</span>
+</span></span><span class="line"><span class="cl">make                                 <span class="c1"># 编译</span>
+</span></span><span class="line"><span class="cl">make install                         <span class="c1"># 安装</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h3 id="-常用命令整理">🚀 常用命令整理
+</h3><p>在 <code>/usr/local/nginx/sbin</code> 目录下运行：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./nginx              <span class="c1"># 启动 Nginx</span>
+</span></span><span class="line"><span class="cl">./nginx -s reload    <span class="c1"># 热重载配置</span>
+</span></span><span class="line"><span class="cl">./nginx -s stop      <span class="c1"># 停止 Nginx</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="检查是否启动成功">检查是否启动成功
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ps -ef <span class="p">|</span> grep nginx
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>输出示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root    <span class="m">706455</span>   <span class="m">1</span>    <span class="m">0</span> 12:34 ?  nginx: master process ./nginx
+</span></span><span class="line"><span class="cl">nobody  <span class="m">706456</span>   ...  <span class="m">0</span> 12:34 ?  nginx: worker process
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>判断启动状态：</p>
+<ul>
+<li>✔️ <strong>正常</strong>：出现 <code>master process</code> 和 <code>worker process</code></li>
+<li>❌ <strong>异常</strong>：只有 <code>master</code> 没有 <code>worker</code>，说明配置有误</li>
+<li>⚠️ <strong>多个进程</strong>：说明重复启动了，建议先执行 <code>pkill nginx</code></li>
+</ul>
+<hr>
+<h3 id="配置与测试">配置与测试
+</h3><h4 id="-配置文件示例nginxconf">📄 配置文件示例（<code>nginx.conf</code>）
+</h4><p>路径：<code>/usr/local/nginx/conf/nginx.conf</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nginx" data-lang="nginx"><span class="line"><span class="cl"><span class="k">worker_processes</span>  <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">events</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">worker_connections</span>  <span class="mi">1024</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">http</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">include</span>       <span class="s">mime.types</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">default_type</span>  <span class="s">application/octet-stream</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kn">sendfile</span>        <span class="no">on</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">keepalive_timeout</span>  <span class="mi">65</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kn">server</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kn">listen</span>       <span class="mi">8080</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kn">server_name</span>  <span class="s">localhost</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kn">location</span> <span class="s">/</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="kn">root</span>   <span class="s">/usr/local/nginx/html/dist</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="kn">index</span>  <span class="s">index.html</span> <span class="s">index.htm</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kn">error_page</span>   <span class="mi">500</span> <span class="mi">502</span> <span class="mi">503</span> <span class="mi">504</span>  <span class="s">/50x.html</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h4 id="测试是否成功">测试是否成功
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl http://&lt;你的公网IP&gt;:8080
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>如果返回页面内容，说明 Nginx 成功响应</li>
+<li>否则检查防火墙 / 端口是否开放</li>
+</ul>
+<hr>
+<h3 id="-注意事项">⚠️ 注意事项
+</h3><ul>
+<li><strong>监听端口为 8080</strong>（非默认 80），需特别注意防火墙设置</li>
+<li>如果你使用的是 <strong>阿里云服务器</strong>，请在控制台：
+<ul>
+<li>找到安全组 → 编辑入方向规则 → 开放 <strong>8080 端口</strong></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>即使云服务器厂商（如阿里云、腾讯云等）的“安全组”已经开放端口，如果 服务器操作系统内部 还有防火墙规则没有放行对应端口，也会导致无法访问。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">systemctl status firewalld
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 若正在运行，执行查看端口开放情况</span>
+</span></span><span class="line"><span class="cl">firewall-cmd --list-all
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 若未开放指定端口，可执行</span>
+</span></span><span class="line"><span class="cl">firewall-cmd --permanent --add-port<span class="o">=</span>8080/tcp
+</span></span><span class="line"><span class="cl">firewall-cmd --reload
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 再次执行查看端口开放情况</span>
+</span></span><span class="line"><span class="cl">firewall-cmd --list-all
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">##实操</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@iZbp15al0g417943ohz4h1Z ~<span class="o">]</span><span class="c1"># firewall-cmd --list-all</span>
+</span></span><span class="line"><span class="cl">public <span class="o">(</span>active<span class="o">)</span>
+</span></span><span class="line"><span class="cl">target: default
+</span></span><span class="line"><span class="cl">icmp-block-inversion: no
+</span></span><span class="line"><span class="cl">interfaces: eth0
+</span></span><span class="line"><span class="cl">sources: 
+</span></span><span class="line"><span class="cl">services: cockpit dhcpv6-client ssh
+</span></span><span class="line"><span class="cl">ports: 20/tcp 21/tcp 22/tcp 80/tcp 443/tcp 8888/tcp 39000-40000/tcp 9999/tcp 8080/tcp <span class="c1"># 没有8989端口</span>
+</span></span><span class="line"><span class="cl">protocols: 
+</span></span><span class="line"><span class="cl">forward: no
+</span></span><span class="line"><span class="cl">masquerade: no
+</span></span><span class="line"><span class="cl">forward-ports: 
+</span></span><span class="line"><span class="cl">source-ports: 
+</span></span><span class="line"><span class="cl">icmp-blocks: 
+</span></span><span class="line"><span class="cl">rich rules: 
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@iZbp15al0g417943ohz4h1Z ~<span class="o">]</span><span class="c1"># firewall-cmd --permanent --add-port=8989/tcp</span>
+</span></span><span class="line"><span class="cl">success
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@iZbp15al0g417943ohz4h1Z ~<span class="o">]</span><span class="c1"># firewall-cmd --reload</span>
+</span></span><span class="line"><span class="cl">^<span class="o">[[</span>Asuccess
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@iZbp15al0g417943ohz4h1Z ~<span class="o">]</span><span class="c1"># firewall-cmd --list-all</span>
+</span></span><span class="line"><span class="cl">public <span class="o">(</span>active<span class="o">)</span>
+</span></span><span class="line"><span class="cl">target: default
+</span></span><span class="line"><span class="cl">icmp-block-inversion: no
+</span></span><span class="line"><span class="cl">interfaces: eth0
+</span></span><span class="line"><span class="cl">sources: 
+</span></span><span class="line"><span class="cl">services: cockpit dhcpv6-client ssh
+</span></span><span class="line"><span class="cl">ports: 20/tcp 21/tcp 22/tcp 80/tcp 443/tcp 8888/tcp 39000-40000/tcp 9999/tcp 8080/tcp 8989/tcp
+</span></span><span class="line"><span class="cl">protocols: 
+</span></span><span class="line"><span class="cl">forward: no
+</span></span><span class="line"><span class="cl">masquerade: no
+</span></span><span class="line"><span class="cl">forward-ports: 
+</span></span><span class="line"><span class="cl">source-ports: 
+</span></span><span class="line"><span class="cl">icmp-blocks: 
+</span></span><span class="line"><span class="cl">rich rules: 
+</span></span></code></pre></td></tr></table>
+</div>
+</div></blockquote>
+<ul>
+<li>若你更喜欢默认 HTTP 端口 <code>80</code>，可将 <code>listen 8080</code> 改为 <code>listen 80</code></li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/nginx/">Nginx</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>404_@林达所作</span>
+
+    </section>
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/0321-webpack%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6/">
+        
+        
+            <div class="article-image">
+                <img src="/p/0321-webpack%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6/webpack.f485e224ca7ad1002ddcc3f447ca97fc_hu_7866d274ce09ebfa.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Webpack初步接触"
+                        data-key="0321 Webpack初步接触" 
+                        data-hash="md5-9IXiJMp60QAt3MP0R8qX/A==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Webpack初步接触</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/0315-%E4%BB%80%E4%B9%88%E6%98%AFseo/">
+        
+        
+            <div class="article-image">
+                <img src="/p/0315-%E4%BB%80%E4%B9%88%E6%98%AFseo/SEO.4b516944fa2f62ea7d76532a57a364e8_hu_7ffb7c7fddd4543f.jpeg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 什么是SEO？"
+                        data-key="0315 什么是SEO？" 
+                        data-hash="md5-S1FpRPovYup9dlMqV6Nk6A==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">什么是SEO？</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/seo%E4%BC%98%E5%8C%96%E6%89%8B%E6%AE%B5---canonical/">
+        
+        
+            <div class="article-image">
+                <img src="/p/seo%E4%BC%98%E5%8C%96%E6%89%8B%E6%AE%B5---canonical/SEO.4b516944fa2f62ea7d76532a57a364e8_hu_7ffb7c7fddd4543f.jpeg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post SEO优化手段---Canonical"
+                        data-key="SEO优化手段---Canonical" 
+                        data-hash="md5-S1FpRPovYup9dlMqV6Nk6A==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">SEO优化手段---Canonical</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/gitee%E4%BB%93%E5%BA%93%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%8E%A8%E9%80%81%E9%81%87%E8%A7%81%E7%9A%84%E9%94%99%E8%AF%AF/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/p/gitee%E4%BB%93%E5%BA%93%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%8E%A8%E9%80%81%E9%81%87%E8%A7%81%E7%9A%84%E9%94%99%E8%AF%AF/error.svg" loading="lazy" data-key="" data-hash="/p/gitee%E4%BB%93%E5%BA%93%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%8E%A8%E9%80%81%E9%81%87%E8%A7%81%E7%9A%84%E9%94%99%E8%AF%AF/error.svg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">gitee仓库的第一次推送遇见的错误</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2025 404_@林达
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<script src="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.css" crossorigin="anonymous" />
+<script>
+    NProgress.start();
+    document.addEventListener("readystatechange", () => {
+        if (document.readyState === "interactive") NProgress.inc(0.8);
+        if (document.readyState === "complete") NProgress.done();
+    });
+</script>
+
+<script defer src="https://cn.vercount.one/js"></script>
+<script>
+    function showHideView() {
+        
+        let viewCounts = document.querySelectorAll("#viewCount");
+        if (viewCounts) {
+            
+            let article =  document.querySelector(".article-page");
+            if (!article) {
+                viewCounts.forEach(ele => {
+                    ele.style.display = 'none';
+                });
+            }
+        }
+    }
+    
+    showHideView();
+</script>
+
+    </body>
+</html>
