@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="什么是 Nginx？ Nginx（engine x） 是一个高性能的 HTTP 和反向代理服务器，同时也是一个 IMAP/POP3/SMTP 邮件代理服务器。\n由 Igor Sysoev 编写，最初用于俄罗斯访问量最大的网站之一。如今，它广泛应用于各类网站的：\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 初步接触 Nginx 什么是 Nginx？ Nginx（engine x） 是一个高性能的 HTTP 和反向代理服务器，同时也是一个 IMAP/POP3/SMTP 邮件代理服务器。\n由 Igor Sysoev 编写，最初用于俄罗斯访问量最大的网站之一。如今，它广泛应用于各类网站的：\n">
 <title>初步接触Nginx</title>
 
 <link rel='canonical' href='https://linsk27.github.io/p/0423-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6nginx/'>
 
-<link rel="stylesheet" href="/scss/style.min.ae980efe75c2d32a27c41480b58278d4965834ce6891c8a5facafd3d3d5e22e2.css"><meta property='og:title' content="初步接触Nginx">
-<meta property='og:description' content="什么是 Nginx？ Nginx（engine x） 是一个高性能的 HTTP 和反向代理服务器，同时也是一个 IMAP/POP3/SMTP 邮件代理服务器。\n由 Igor Sysoev 编写，最初用于俄罗斯访问量最大的网站之一。如今，它广泛应用于各类网站的：\n">
+<link rel="stylesheet" href="/scss/style.min.bc2abce7b280c937652ff91193111ba640a7a3d53e370803422a6138d0c6e249.css"><meta property='og:title' content="初步接触Nginx">
+<meta property='og:description' content=" 初步接触 Nginx 什么是 Nginx？ Nginx（engine x） 是一个高性能的 HTTP 和反向代理服务器，同时也是一个 IMAP/POP3/SMTP 邮件代理服务器。\n由 Igor Sysoev 编写，最初用于俄罗斯访问量最大的网站之一。如今，它广泛应用于各类网站的：\n">
 <meta property='og:url' content='https://linsk27.github.io/p/0423-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6nginx/'>
 <meta property='og:site_name' content='404_@林达'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Nginx' /><meta property='article:published_time' content='2025-04-23T12:25:57&#43;08:00'/><meta property='article:modified_time' content='2025-04-23T12:25:57&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Nginx' /><meta property='article:published_time' content='2025-04-23T12:25:57&#43;08:00'/><meta property='article:modified_time' content='2025-06-01T12:25:57&#43;08:00'/>
 <meta name="twitter:title" content="初步接触Nginx">
-<meta name="twitter:description" content="什么是 Nginx？ Nginx（engine x） 是一个高性能的 HTTP 和反向代理服务器，同时也是一个 IMAP/POP3/SMTP 邮件代理服务器。\n由 Igor Sysoev 编写，最初用于俄罗斯访问量最大的网站之一。如今，它广泛应用于各类网站的：\n">
+<meta name="twitter:description" content=" 初步接触 Nginx 什么是 Nginx？ Nginx（engine x） 是一个高性能的 HTTP 和反向代理服务器，同时也是一个 IMAP/POP3/SMTP 邮件代理服务器。\n由 Igor Sysoev 编写，最初用于俄罗斯访问量最大的网站之一。如今，它广泛应用于各类网站的：\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -80,7 +80,7 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li>
+    <li><a href="#初步接触-nginx">初步接触 Nginx</a>
       <ol>
         <li><a href="#什么是-nginx">什么是 Nginx？</a></li>
         <li><a href="#为什么使用-nginx">为什么使用 Nginx？</a></li>
@@ -105,6 +105,15 @@
         <li><a href="#-注意事项">⚠️ 注意事项</a></li>
       </ol>
     </li>
+  </ol>
+
+  <ol>
+    <li><a href="#一准备条件">一、准备条件</a></li>
+    <li><a href="#二建立-ssl-凭证目录并上传ssl凭证档案">二、建立 SSL 凭证目录并上传ssl凭证档案</a></li>
+    <li><a href="#三撰写-nginx-https-配置档">三、撰写 Nginx HTTPS 配置档</a></li>
+    <li><a href="#四测试与重载-nginx">四、测试与重载 Nginx</a></li>
+    <li><a href="#五验证-https-启用">五、验证 HTTPS 启用</a></li>
+    <li><a href="#备注">备注</a></li>
   </ol>
 </nav>
         </div>
@@ -183,7 +192,10 @@
     <section class="article-content">
     
     
-    <h3 id="什么是-nginx">什么是 Nginx？
+    <hr>
+<h2 id="初步接触-nginx">初步接触 Nginx
+</h2><hr>
+<h3 id="什么是-nginx">什么是 Nginx？
 </h3><p><strong>Nginx（engine x）</strong> 是一个高性能的 <strong>HTTP 和反向代理服务器</strong>，同时也是一个 <strong>IMAP/POP3/SMTP 邮件代理服务器</strong>。</p>
 <p>由 Igor Sysoev 编写，最初用于俄罗斯访问量最大的网站之一。如今，它广泛应用于各类网站的：</p>
 <ul>
@@ -319,31 +331,53 @@
 </span><span class="lnt">23
 </span><span class="lnt">24
 </span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-nginx" data-lang="nginx"><span class="line"><span class="cl"><span class="k">worker_processes</span>  <span class="mi">1</span><span class="p">;</span>
+<pre tabindex="0" class="chroma"><code class="language-nginx" data-lang="nginx"><span class="line"><span class="cl"><span class="c1"># 定义工作进程数量，通常设置为 CPU 核心数，这里示例用1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">worker_processes</span>  <span class="mi">1</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">events</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kn">worker_connections</span>  <span class="mi">1024</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 每个工作进程允许的最大连接数（含客户端和服务器端连接）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kn">worker_connections</span>  <span class="mi">1024</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">http</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kn">include</span>       <span class="s">mime.types</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kn">default_type</span>  <span class="s">application/octet-stream</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 引入 MIME 类型映射文件，用来识别文件扩展名对应的内容类型
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kn">include</span>       <span class="s">mime.types</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 默认的 MIME 类型，文件类型未匹配时使用
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kn">default_type</span>  <span class="s">application/octet-stream</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="kn">sendfile</span>        <span class="no">on</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kn">keepalive_timeout</span>  <span class="mi">65</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 启用高效文件传输方式，减少系统调用次数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kn">sendfile</span>        <span class="no">on</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 连接保持活动的超时时间（秒），超过此时间关闭连接
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kn">keepalive_timeout</span>  <span class="mi">65</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="kn">server</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="kn">listen</span>       <span class="mi">8080</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="kn">server_name</span>  <span class="s">localhost</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 监听端口8080，HTTP服务默认端口是80，这里改为8080示例
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kn">listen</span>       <span class="mi">8080</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 服务器名称，支持域名或IP，这里用localhost作为本机测试
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kn">server_name</span>  <span class="s">localhost</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="kn">location</span> <span class="s">/</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="kn">root</span>   <span class="s">/usr/local/nginx/html/dist</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="kn">index</span>  <span class="s">index.html</span> <span class="s">index.htm</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># 网站根目录，Nginx 会从这里查找文件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="kn">root</span>   <span class="s">/usr/local/nginx/html/dist</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># 默认首页文件，访问目录时默认加载的文件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="kn">index</span>  <span class="s">index.html</span> <span class="s">index.htm</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="kn">error_page</span>   <span class="mi">500</span> <span class="mi">502</span> <span class="mi">503</span> <span class="mi">504</span>  <span class="s">/50x.html</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 定义错误页面，当出现500、502、503、504错误时，跳转到该页面
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kn">error_page</span>   <span class="mi">500</span> <span class="mi">502</span> <span class="mi">503</span> <span class="mi">504</span>  <span class="s">/50x.html</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
@@ -442,43 +476,212 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="o">[</span>root@iZbp15al0g417943ohz4h1Z ~<span class="o">]</span><span class="c1"># firewall-cmd --list-all</span>
 </span></span><span class="line"><span class="cl">public <span class="o">(</span>active<span class="o">)</span>
-</span></span><span class="line"><span class="cl">target: default
-</span></span><span class="line"><span class="cl">icmp-block-inversion: no
-</span></span><span class="line"><span class="cl">interfaces: eth0
-</span></span><span class="line"><span class="cl">sources: 
-</span></span><span class="line"><span class="cl">services: cockpit dhcpv6-client ssh
-</span></span><span class="line"><span class="cl">ports: 20/tcp 21/tcp 22/tcp 80/tcp 443/tcp 8888/tcp 39000-40000/tcp 9999/tcp 8080/tcp <span class="c1"># 没有8989端口</span>
-</span></span><span class="line"><span class="cl">protocols: 
-</span></span><span class="line"><span class="cl">forward: no
-</span></span><span class="line"><span class="cl">masquerade: no
-</span></span><span class="line"><span class="cl">forward-ports: 
-</span></span><span class="line"><span class="cl">source-ports: 
-</span></span><span class="line"><span class="cl">icmp-blocks: 
-</span></span><span class="line"><span class="cl">rich rules: 
+</span></span><span class="line"><span class="cl">  target: default
+</span></span><span class="line"><span class="cl">  icmp-block-inversion: no
+</span></span><span class="line"><span class="cl">  interfaces: eth0
+</span></span><span class="line"><span class="cl">  sources: 
+</span></span><span class="line"><span class="cl">  services: cockpit dhcpv6-client ssh
+</span></span><span class="line"><span class="cl">  ports: 20/tcp 21/tcp 22/tcp 80/tcp 443/tcp 8888/tcp 39000-40000/tcp 9999/tcp 8080/tcp <span class="c1"># 没有8989端口</span>
+</span></span><span class="line"><span class="cl">  protocols: 
+</span></span><span class="line"><span class="cl">  forward: no
+</span></span><span class="line"><span class="cl">  masquerade: no
+</span></span><span class="line"><span class="cl">  forward-ports: 
+</span></span><span class="line"><span class="cl">  source-ports: 
+</span></span><span class="line"><span class="cl">  icmp-blocks: 
+</span></span><span class="line"><span class="cl">  rich rules: 
 </span></span><span class="line"><span class="cl"><span class="o">[</span>root@iZbp15al0g417943ohz4h1Z ~<span class="o">]</span><span class="c1"># firewall-cmd --permanent --add-port=8989/tcp</span>
 </span></span><span class="line"><span class="cl">success
 </span></span><span class="line"><span class="cl"><span class="o">[</span>root@iZbp15al0g417943ohz4h1Z ~<span class="o">]</span><span class="c1"># firewall-cmd --reload</span>
 </span></span><span class="line"><span class="cl">^<span class="o">[[</span>Asuccess
 </span></span><span class="line"><span class="cl"><span class="o">[</span>root@iZbp15al0g417943ohz4h1Z ~<span class="o">]</span><span class="c1"># firewall-cmd --list-all</span>
 </span></span><span class="line"><span class="cl">public <span class="o">(</span>active<span class="o">)</span>
-</span></span><span class="line"><span class="cl">target: default
-</span></span><span class="line"><span class="cl">icmp-block-inversion: no
-</span></span><span class="line"><span class="cl">interfaces: eth0
-</span></span><span class="line"><span class="cl">sources: 
-</span></span><span class="line"><span class="cl">services: cockpit dhcpv6-client ssh
-</span></span><span class="line"><span class="cl">ports: 20/tcp 21/tcp 22/tcp 80/tcp 443/tcp 8888/tcp 39000-40000/tcp 9999/tcp 8080/tcp 8989/tcp
-</span></span><span class="line"><span class="cl">protocols: 
-</span></span><span class="line"><span class="cl">forward: no
-</span></span><span class="line"><span class="cl">masquerade: no
-</span></span><span class="line"><span class="cl">forward-ports: 
-</span></span><span class="line"><span class="cl">source-ports: 
-</span></span><span class="line"><span class="cl">icmp-blocks: 
-</span></span><span class="line"><span class="cl">rich rules: 
+</span></span><span class="line"><span class="cl">  target: default
+</span></span><span class="line"><span class="cl">  icmp-block-inversion: no
+</span></span><span class="line"><span class="cl">  interfaces: eth0
+</span></span><span class="line"><span class="cl">  sources: 
+</span></span><span class="line"><span class="cl">  services: cockpit dhcpv6-client ssh
+</span></span><span class="line"><span class="cl">  ports: 20/tcp 21/tcp 22/tcp 80/tcp 443/tcp 8888/tcp 39000-40000/tcp 9999/tcp 8080/tcp 8989/tcp
+</span></span><span class="line"><span class="cl">  protocols: 
+</span></span><span class="line"><span class="cl">  forward: no
+</span></span><span class="line"><span class="cl">  masquerade: no
+</span></span><span class="line"><span class="cl">  forward-ports: 
+</span></span><span class="line"><span class="cl">  source-ports: 
+</span></span><span class="line"><span class="cl">  icmp-blocks: 
+</span></span><span class="line"><span class="cl">  rich rules: 
 </span></span></code></pre></td></tr></table>
 </div>
 </div></blockquote>
 <ul>
 <li>若你更喜欢默认 HTTP 端口 <code>80</code>，可将 <code>listen 8080</code> 改为 <code>listen 80</code></li>
+</ul>
+<h1 id="nginx-配置-lindablogxyz-域名启用-https">Nginx 配置 lindablog.xyz 域名启用 HTTPS
+</h1><h2 id="一准备条件">一、准备条件
+</h2><ul>
+<li>部署项目文件位置：<code>/usr/local/nginx/html/dist</code></li>
+<li>阿里云申请 SSL 凭证档案（我申请的是免费证书3月一换）：
+<ul>
+<li><code>jnalindablog.xyz.pem</code>（凭证）</li>
+<li><code>jnalindablog.xyz.key</code>（私钥）</li>
+</ul>
+</li>
+</ul>
+<h2 id="二建立-ssl-凭证目录并上传ssl凭证档案">二、建立 SSL 凭证目录并上传ssl凭证档案
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir -p /usr/local/nginx/ssl
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="三撰写-nginx-https-配置档">三、撰写 Nginx HTTPS 配置档
+</h2><p>在 <code>/usr/local/nginx/conf/nginx.conf</code> 中加入：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nginx" data-lang="nginx"><span class="line"><span class="cl"><span class="k">worker_processes</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">events</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">worker_connections</span> <span class="mi">1024</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">http</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">include</span>       <span class="s">mime.types</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">default_type</span>  <span class="s">application/octet-stream</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kn">sendfile</span>        <span class="no">on</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">keepalive_timeout</span> <span class="mi">65</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 加入這一行：引用你自定義的 server 配置檔案
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kn">include</span> <span class="s">/usr/local/nginx/conf/conf.d/*.conf</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在 <code>/usr/local/nginx/conf/conf.d/lindablog.conf</code> 中加入：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nginx" data-lang="nginx"><span class="line"><span class="cl"><span class="k">server</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 监听 443 端口并启用 SSL/TLS，提供 HTTPS 服务
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kn">listen</span> <span class="mi">443</span> <span class="s">ssl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 服务器域名，配置成你的网站域名
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kn">server_name</span> <span class="s">lindablog.xyz</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># SSL 证书文件路径，公钥证书
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kn">ssl_certificate</span>     <span class="s">/usr/local/nginx/ssl/jnalindablog.xyz.pem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># SSL 私钥文件路径，和证书匹配的私钥
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kn">ssl_certificate_key</span> <span class="s">/usr/local/nginx/ssl/jnalindablog.xyz.key</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 允许使用的 TLS 协议版本，推荐启用 1.2 和 1.3
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kn">ssl_protocols</span> <span class="s">TLSv1.2</span> <span class="s">TLSv1.3</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 加密套件，排除掉弱加密算法，确保连接安全
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kn">ssl_ciphers</span> <span class="s">HIGH:!aNULL:!MD5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 网站根目录，存放前端静态文件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kn">root</span> <span class="s">/usr/local/nginx/html/dist</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 默认首页文件，访问根路径时默认加载
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kn">index</span> <span class="s">index.html</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kn">location</span> <span class="s">/</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># try_files 尝试访问请求的 URI，如果不存在，则返回 index.html
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1"># 主要用于 SPA（单页应用）支持路由刷新
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kn">try_files</span> <span class="nv">$uri</span> <span class="nv">$uri/</span> <span class="s">/index.html</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">server</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 监听 HTTP 的 80 端口，用于重定向所有请求到 HTTPS
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 服务器域名
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kn">server_name</span> <span class="s">lindablog.xyz</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 所有访问 80 端口的请求，都重定向（301永久重定向）到对应的 HTTPS 地址
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kn">return</span> <span class="mi">301</span> <span class="s">https://</span><span class="nv">$host$request_uri</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="四测试与重载-nginx">四、测试与重载 Nginx
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/usr/local/nginx/sbin/nginx -t
+</span></span><span class="line"><span class="cl">/usr/local/nginx/sbin/nginx -s reload
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="五验证-https-启用">五、验证 HTTPS 启用
+</h2><ul>
+<li>浏览器访问 <code>https://lindablog.xyz</code>，网址列显示锁头符号 🔒</li>
+<li>点击锁头查看凭证细节或者右键检查找到隐私与安全</li>
+<li>使用线上工具检查：
+<ul>
+<li><a class="link" href="https://www.ssllabs.com/ssltest/"  target="_blank" rel="noopener"
+    >SSL Labs 测试</a></li>
+<li><a class="link" href="https://www.sslshopper.com/ssl-checker.html"  target="_blank" rel="noopener"
+    >SSL Shopper 检查</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="备注">备注
+</h2><ul>
+<li><code>.pem</code> 与 <code>.crt</code> 可通用于 Nginx</li>
 </ul>
 
 </section>
@@ -507,7 +710,19 @@
 
     </section>
 
-    </footer>
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 Jun 01, 2025 12:25 &#43;0800
+        </span>
+    </section></footer>
 
 
     
