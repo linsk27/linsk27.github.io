@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>linsk27 on linsk27 | AI Coding 与前端项目</title>
+        <title>linsk27 on linsk27 | AI 辅助开发与前端项目</title>
         <link>https://linsk27-github-io.vercel.app/</link>
-        <description>Recent content in linsk27 on linsk27 | AI Coding 与前端项目</description>
+        <description>Recent content in linsk27 on linsk27 | AI 辅助开发与前端项目</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>linsk27</copyright>
@@ -465,11 +465,11 @@
         <pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://linsk27-github-io.vercel.app/about/</guid>
-        <description>&lt;img src="https://linsk27-github-io.vercel.app/img/projects/dev-cockpit-local-development-dashboard.png" alt="Featured image of post 关于 linsk27" /&gt;&lt;p&gt;我是 linsk27，主要把前端、全栈和 AI Coding 相关想法做成可以运行、可以验证、可以继续迭代的项目。我的 GitHub 主页是 &lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;img src="https://linsk27-github-io.vercel.app/img/projects/dev-cockpit-local-development-dashboard.png" alt="Featured image of post 关于 linsk27" /&gt;&lt;p&gt;我是 linsk27，主要把前端、全栈和 AI 辅助开发相关想法做成可以运行、可以验证、可以继续迭代的项目。我的 GitHub 主页是 &lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;github.com/linsk27&lt;/a&gt;，项目入口是 &lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;关注方向&#34;&gt;关注方向
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;AI Coding 与开发者工具：让本地开发、Pull Request review 和 agent skills 管理更清晰。&lt;/li&gt;
+&lt;li&gt;AI 辅助开发与开发者工具：让本地开发、Pull Request review 和 agent skills 管理更清晰。&lt;/li&gt;
 &lt;li&gt;Vue、TypeScript 与 Nuxt：持续整理可运行的前端应用、移动端页面和数据大屏。&lt;/li&gt;
 &lt;li&gt;Flask、MySQL 与全栈实践：把前端页面、后端接口和数据持久化连成完整项目。&lt;/li&gt;
 &lt;li&gt;ECharts 与数据可视化：沉淀 dashboard、智慧社区、能源监测和业务看板类界面。&lt;/li&gt;
