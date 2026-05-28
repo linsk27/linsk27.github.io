@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="涉及到渲染的性能问题">
-<title>v-if和v-for为何不该同时作用于一个模块？</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="echarts-learn 是 linsk27 的 Vue、Nuxt 和 ECharts 数据可视化练习项目，展示 dashboard 布局、柱状图、雷达图、关系图、环形图、词云和数据看板页面组织方式。">
+<meta name="keywords" content="echarts-learn, Vue ECharts dashboard, ECharts data visualization, Nuxt dashboard, data visualization practice, chart interaction, Vue chart project, dashboard UI"><title>echarts-learn</title>
 
-<link rel='canonical' href='https://linsk27-github-io.vercel.app/p/v-if%E5%92%8Cv-for%E4%B8%BA%E4%BD%95%E4%B8%8D%E8%AF%A5%E5%90%8C%E6%97%B6%E4%BD%9C%E7%94%A8%E4%BA%8E%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97/'>
+<link rel='canonical' href='https://linsk27-github-io.vercel.app/projects/echarts-learn/'>
 
-<link rel="stylesheet" href="/scss/style.min.f932406a37ca0c631a380f2245d21f66d455112aa8bf9590e52e54c4a962056a.css"><meta property='og:title' content="v-if和v-for为何不该同时作用于一个模块？">
-<meta property='og:description' content="涉及到渲染的性能问题">
-<meta property='og:url' content='https://linsk27-github-io.vercel.app/p/v-if%E5%92%8Cv-for%E4%B8%BA%E4%BD%95%E4%B8%8D%E8%AF%A5%E5%90%8C%E6%97%B6%E4%BD%9C%E7%94%A8%E4%BA%8E%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97/'>
+<link rel="stylesheet" href="/scss/style.min.f932406a37ca0c631a380f2245d21f66d455112aa8bf9590e52e54c4a962056a.css"><meta property='og:title' content="echarts-learn">
+<meta property='og:description' content="echarts-learn 是 linsk27 的 Vue、Nuxt 和 ECharts 数据可视化练习项目，展示 dashboard 布局、柱状图、雷达图、关系图、环形图、词云和数据看板页面组织方式。">
+<meta property='og:url' content='https://linsk27-github-io.vercel.app/projects/echarts-learn/'>
 <meta property='og:site_name' content='linsk27 | AI Coding 与前端项目'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Vue' /><meta property='article:published_time' content='2024-10-12T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-10-12T00:00:00&#43;00:00'/>
-<meta name="twitter:title" content="v-if和v-for为何不该同时作用于一个模块？">
-<meta name="twitter:description" content="涉及到渲染的性能问题">
+<meta property='og:type' content='article'><meta property='article:section' content='Page' /><meta property='article:published_time' content='2026-05-28T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-05-28T00:00:00&#43;00:00'/><meta property='og:image' content='https://linsk27-github-io.vercel.app/img/projects/echarts-learn-dashboard.png' />
+<meta name="twitter:title" content="echarts-learn">
+<meta name="twitter:description" content="echarts-learn 是 linsk27 的 Vue、Nuxt 和 ECharts 数据可视化练习项目，展示 dashboard 布局、柱状图、雷达图、关系图、环形图、词云和数据看板页面组织方式。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://linsk27-github-io.vercel.app/img/projects/echarts-learn-dashboard.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
 <script type="application/ld+json">
 {
@@ -197,18 +198,10 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li>
-      <ol>
-        <li><a href="#为什么会产生这个错误">为什么会产生这个错误？</a></li>
-        <li><a href="#如何修复这个错误">如何修复这个错误？</a>
-          <ol>
-            <li><a href="#错误的示例">错误的示例：</a></li>
-            <li><a href="#正确的示例">正确的示例：</a></li>
-          </ol>
-        </li>
-        <li><a href="#总结">总结</a></li>
-      </ol>
-    </li>
+    <li><a href="#适合谁">适合谁</a></li>
+    <li><a href="#项目价值">项目价值</a></li>
+    <li><a href="#技术方向">技术方向</a></li>
+    <li><a href="#项目入口">项目入口</a></li>
   </ol>
 </nav>
         </div>
@@ -220,28 +213,29 @@
 
 
             <main class="main full-width">
-    <article class="main-article">
+    <article class="has-image main-article">
     <header class="article-header">
+        <div class="article-image">
+            <a href="/projects/echarts-learn/">
+                
+                    <img src="/img/projects/echarts-learn-dashboard.png" loading="lazy" alt="Featured image of post echarts-learn" />
+                
+            </a>
+        </div>
+
+    
 
     <div class="article-details">
-    
-    <header class="article-category">
-        
-            <a href="/categories/%E5%89%8D%E7%AB%AF/" >
-                前端
-            </a>
-        
-    </header>
     
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/v-if%E5%92%8Cv-for%E4%B8%BA%E4%BD%95%E4%B8%8D%E8%AF%A5%E5%90%8C%E6%97%B6%E4%BD%9C%E7%94%A8%E4%BA%8E%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97/">v-if和v-for为何不该同时作用于一个模块？</a>
+            <a href="/projects/echarts-learn/">echarts-learn</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            涉及到渲染的性能问题
+            echarts-learn 是 linsk27 的 Vue、Nuxt 和 ECharts 数据可视化练习项目，展示 dashboard 布局、柱状图、雷达图、关系图、环形图、词云和数据看板页面组织方式。
         </h3>
         
     </div>
@@ -263,7 +257,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">2024-10-12</time>
+                <time class="article-time--published">2026-05-28</time>
             </div>
 	        
         <div id="viewCount">
@@ -291,57 +285,50 @@
     <section class="article-content">
     
     
-    <p><code>[vue/no-use-v-if-with-v-for]</code> 这个错误信息是由 ESLint 的 Vue.js 插件 <code>eslint-plugin-vue</code> 产生的。它指出在你的 Vue.js 模板中，<code>v-if</code> 和 <code>v-for</code> 指令被不当地一起使用在了同一个元素上。</p>
-<h3 id="为什么会产生这个错误">为什么会产生这个错误？
-</h3><p>在 Vue.js 中，当 <code>v-if</code> 和 <code>v-for</code> 同时用在同一个元素上时，Vue 会先处理 <code>v-for</code>，然后处理 <code>v-if</code>。这意味着即使 <code>v-if</code> 最终会过滤掉一些元素，<code>v-for</code> 仍然会遍历整个列表，这可能会导致不必要的计算开销，特别是在处理大型列表时。</p>
-<h3 id="如何修复这个错误">如何修复这个错误？
-</h3><p>根据 ESLint 的建议，你应该将 <code>v-if</code> 移动到包含 <code>v-for</code> 的父元素（或“包装元素”）上。这样可以确保 <code>v-if</code> 的条件判断只执行一次，而不是对 <code>v-for</code> 生成的每个元素都执行。</p>
-<h4 id="错误的示例">错误的示例：
-</h4><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-for</span><span class="o">=</span><span class="s">&#34;item in items&#34;</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&#34;item.active&#34;</span> <span class="na">:key</span><span class="o">=</span><span class="s">&#34;item.id&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  {{ item.name }}
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>在这个例子中，<code>v-if</code> 会在每次迭代时都执行，检查 <code>item.active</code> 是否为真。</p>
-<h4 id="正确的示例">正确的示例：
-</h4><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&#34;hasActiveItems&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-for</span><span class="o">=</span><span class="s">&#34;item in activeItems&#34;</span> <span class="na">:key</span><span class="o">=</span><span class="s">&#34;item.id&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    {{ item.name }}
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>在这个修正后的例子中，首先通过一个计算属性 <code>hasActiveItems</code> 或在 <code>data</code>、<code>computed</code> 或 <code>methods</code> 中定义的逻辑来检查是否有活跃的项。如果有，则使用 <code>v-for</code> 来渲染这些活跃的项。这里的 <code>activeItems</code> 应该是一个只包含活跃项的数组。</p>
-<h3 id="总结">总结
-</h3><p>通过将 <code>v-if</code> 移动到 <code>v-for</code> 的外部，你可以优化你的 Vue 组件的性能，避免不必要的渲染和计算。这也是 Vue.js 官方文档和 ESLint 插件推荐的最佳实践。</p>
+    <p>echarts-learn 是一个 Vue、Nuxt 和 ECharts 数据可视化练习项目，用来展示多图表 dashboard 的页面组织方式。它覆盖柱状图、雷达图、关系图、环形图、词云和数据总览，适合用来参考 ECharts data visualization、Vue chart project 和 dashboard UI 的组合方式。</p>
+<p><img src="/img/projects/echarts-learn-dashboard.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="ECharts dashboard screenshot"
+	
+	
+></p>
+<h2 id="适合谁">适合谁
+</h2><ul>
+<li>想参考 Vue 和 ECharts 如何组合成数据大屏的人。</li>
+<li>正在做 dashboard UI、数据看板、监控页面或图表交互练习的人。</li>
+<li>需要柱状图、雷达图、关系图、环形图和词云组合示例的人。</li>
+<li>想看 Nuxt 项目如何组织组件和页面入口的人。</li>
+</ul>
+<h2 id="项目价值">项目价值
+</h2><p>这个项目的重点不是单个图表，而是把多个可视化组件放在同一个页面里，形成一个完整的数据看板。对搜索 Vue ECharts dashboard、ECharts data visualization、Nuxt dashboard 或 chart interaction demo 的人来说，这个页面可以直接说明项目的展示效果和代码入口。</p>
+<p>截图来自本地运行项目并使用同结构演示数据生成。这样可以避免远程示例数据接口不可访问时只截到加载态，同时保留项目真实的页面布局和组件结构。</p>
+<h2 id="技术方向">技术方向
+</h2><ul>
+<li>Vue</li>
+<li>Nuxt</li>
+<li>ECharts</li>
+<li>数据可视化</li>
+<li>dashboard UI</li>
+<li>图表组件拆分</li>
+<li>数据看板页面组织</li>
+</ul>
+<h2 id="项目入口">项目入口
+</h2><ul>
+<li>GitHub 仓库：<a class="link" href="https://github.com/linsk27/echarts-learn"  target="_blank" rel="noopener"
+    >linsk27/echarts-learn</a></li>
+<li>项目总览：<a class="link" href="/projects/" >linsk27 Projects</a></li>
+</ul>
+<p>如果这个 ECharts 数据可视化项目对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续补充图表说明、运行文档和可复用示例的主要信号。</p>
 
 </section>
 
 
     <footer class="article-footer">
     
-    <section class="article-tags">
-        
-            <a href="/tags/vue/">Vue</a>
-        
-    </section>
-
 
     
     <section class="article-copyright">
@@ -366,91 +353,6 @@
     
 
     
-
-<aside class="related-content--wrapper">
-    <h2 class="section-title">相关文章</h2>
-    <div class="related-content">
-        <div class="flex article-list--tile">
-            
-                
-<article class="has-image">
-    <a href="/p/%E6%82%AC%E6%B5%AE%E5%87%BA%E7%8E%B0%E7%AE%AD%E5%A4%B4%E7%9B%92%E5%AD%90%E7%9A%84%E5%86%99%E6%B3%95/">
-        
-        
-            <div class="article-image">
-                <img src="/p/%E6%82%AC%E6%B5%AE%E5%87%BA%E7%8E%B0%E7%AE%AD%E5%A4%B4%E7%9B%92%E5%AD%90%E7%9A%84%E5%86%99%E6%B3%95/hover.e7138c8c19bc0876d6cd8b59aa3ffb8f_hu_20335af393ebe834.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post 悬浮出现箭头盒子的写法"
-                        
-                        data-hash="md5-5xOMjBm8CHbWzYtZqj/7jw==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">悬浮出现箭头盒子的写法</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/%E4%BB%80%E4%B9%88%E6%98%AF%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%8E%BB%E7%94%A8/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">什么是防抖和节流？什么时候去用？</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/js%E4%B8%AD%E6%95%B0%E7%BB%84%E5%8E%BB%E7%9A%84%E5%B8%B8%E8%A7%84%E5%8E%BB%E9%87%8D%E6%96%B9%E6%B3%95/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">js中数组去的常规去重方法</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/el-select%E6%A0%87%E7%AD%BE%E5%AD%98%E5%9C%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">el-select标签存在的数据匹配问题</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/0603-%E6%89%8B%E6%92%B8%E5%A5%BD%E7%9C%8B%E6%9F%B1%E7%8A%B6%E5%9B%BE%E7%9A%84%E8%AE%B0%E5%BD%95/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">手撸好看柱状图的记录</h2>
-        </div>
-    </a>
-</article>
-
-            
-        </div>
-    </div>
-</aside>
 
      
     

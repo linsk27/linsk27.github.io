@@ -102,6 +102,53 @@
 </description>
         </item>
         <item>
+        <title>bilibili-nuxt3</title>
+        <link>https://linsk27-github-io.vercel.app/projects/bilibili-nuxt3/</link>
+        <pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://linsk27-github-io.vercel.app/projects/bilibili-nuxt3/</guid>
+        <description>&lt;img src="https://linsk27-github-io.vercel.app/img/projects/bilibili-nuxt3-mobile-preview.jpg" alt="Featured image of post bilibili-nuxt3" /&gt;&lt;p&gt;bilibili-nuxt3 是一个 Nuxt 3、Vue、TypeScript 和 Vant 移动端项目实战，围绕视频列表、频道导航、视频详情、分页加载、服务端渲染和 SEO 信息配置展开。它适合作为 Nuxt 3 project、Vue mobile app、Nuxt SSR SEO 和前端移动端页面结构的参考。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27-github-io.vercel.app/img/projects/bilibili-nuxt3-mobile-preview.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;bilibili Nuxt3 mobile preview&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;适合谁&#34;&gt;适合谁
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;想参考 Nuxt 3、Vue 和 TypeScript 移动端项目结构的人。&lt;/li&gt;
+&lt;li&gt;正在学习 SSR、SEO meta、文件路由和首屏数据获取的人。&lt;/li&gt;
+&lt;li&gt;需要 Vant UI、频道导航、视频列表和详情页示例的人。&lt;/li&gt;
+&lt;li&gt;想做移动端前端项目实战、课程项目或简历作品的人。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目价值&#34;&gt;项目价值
+&lt;/h2&gt;&lt;p&gt;这个项目的价值在于它把 Nuxt 的服务端渲染、SEO 信息配置、文件路由、移动端适配和数据交互放在一个完整示例里。相比普通组件练习，它更接近真实移动端内容应用，适合用来观察首页信息流、频道 tab、视频卡片和详情页之间的组织方式。&lt;/p&gt;
+&lt;p&gt;项目预览图来自仓库 README。历史线上预览链接当前连接不稳定，因此这个项目页优先保留稳定的截图、技术说明和 GitHub 仓库入口，后续演示站恢复后再补充新的在线入口。&lt;/p&gt;
+&lt;h2 id=&#34;技术方向&#34;&gt;技术方向
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Nuxt 3&lt;/li&gt;
+&lt;li&gt;Vue&lt;/li&gt;
+&lt;li&gt;TypeScript&lt;/li&gt;
+&lt;li&gt;Vant UI&lt;/li&gt;
+&lt;li&gt;SSR&lt;/li&gt;
+&lt;li&gt;SEO meta&lt;/li&gt;
+&lt;li&gt;移动端 vw 适配&lt;/li&gt;
+&lt;li&gt;视频列表与详情页&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目入口&#34;&gt;项目入口
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/bilibili-nuxt3&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;linsk27/bilibili-nuxt3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果这个 Nuxt 3 移动端项目对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续完善预览、运行文档和项目说明的主要信号。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Dev Cockpit</title>
         <link>https://linsk27-github-io.vercel.app/projects/dev-cockpit/</link>
         <pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate>
@@ -145,6 +192,52 @@
 &lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;如果这个工具方向对你有用，欢迎在 GitHub 仓库点 Star。Star 是我判断是否继续优先完善这个项目的主要信号。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>echarts-learn</title>
+        <link>https://linsk27-github-io.vercel.app/projects/echarts-learn/</link>
+        <pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://linsk27-github-io.vercel.app/projects/echarts-learn/</guid>
+        <description>&lt;img src="https://linsk27-github-io.vercel.app/img/projects/echarts-learn-dashboard.png" alt="Featured image of post echarts-learn" /&gt;&lt;p&gt;echarts-learn 是一个 Vue、Nuxt 和 ECharts 数据可视化练习项目，用来展示多图表 dashboard 的页面组织方式。它覆盖柱状图、雷达图、关系图、环形图、词云和数据总览，适合用来参考 ECharts data visualization、Vue chart project 和 dashboard UI 的组合方式。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27-github-io.vercel.app/img/projects/echarts-learn-dashboard.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;ECharts dashboard screenshot&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;适合谁&#34;&gt;适合谁
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;想参考 Vue 和 ECharts 如何组合成数据大屏的人。&lt;/li&gt;
+&lt;li&gt;正在做 dashboard UI、数据看板、监控页面或图表交互练习的人。&lt;/li&gt;
+&lt;li&gt;需要柱状图、雷达图、关系图、环形图和词云组合示例的人。&lt;/li&gt;
+&lt;li&gt;想看 Nuxt 项目如何组织组件和页面入口的人。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目价值&#34;&gt;项目价值
+&lt;/h2&gt;&lt;p&gt;这个项目的重点不是单个图表，而是把多个可视化组件放在同一个页面里，形成一个完整的数据看板。对搜索 Vue ECharts dashboard、ECharts data visualization、Nuxt dashboard 或 chart interaction demo 的人来说，这个页面可以直接说明项目的展示效果和代码入口。&lt;/p&gt;
+&lt;p&gt;截图来自本地运行项目并使用同结构演示数据生成。这样可以避免远程示例数据接口不可访问时只截到加载态，同时保留项目真实的页面布局和组件结构。&lt;/p&gt;
+&lt;h2 id=&#34;技术方向&#34;&gt;技术方向
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Vue&lt;/li&gt;
+&lt;li&gt;Nuxt&lt;/li&gt;
+&lt;li&gt;ECharts&lt;/li&gt;
+&lt;li&gt;数据可视化&lt;/li&gt;
+&lt;li&gt;dashboard UI&lt;/li&gt;
+&lt;li&gt;图表组件拆分&lt;/li&gt;
+&lt;li&gt;数据看板页面组织&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目入口&#34;&gt;项目入口
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/echarts-learn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;linsk27/echarts-learn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果这个 ECharts 数据可视化项目对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续补充图表说明、运行文档和可复用示例的主要信号。&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -321,12 +414,40 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;如果你想看 Vue blog project、front-end learning notes、content presentation 或内容型应用结构，可以先看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/vue-blog/&#34; &gt;Vue-blog 详情页&lt;/a&gt;，再进入 &lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/Vue-blog&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;GitHub 仓库&lt;/a&gt;。&lt;/p&gt;
-&lt;h2 id=&#34;其他项目&#34;&gt;其他项目
+&lt;h3 id=&#34;echarts-learn&#34;&gt;echarts-learn
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/echarts-learn/&#34; &gt;echarts-learn&lt;/a&gt; 是一个 Vue、Nuxt 和 ECharts 数据可视化练习项目，展示 dashboard 布局、柱状图、雷达图、关系图、环形图和词云等页面组合。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27-github-io.vercel.app/img/projects/echarts-learn-dashboard.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;ECharts dashboard screenshot&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;如果你想看 Vue ECharts dashboard、ECharts data visualization、Nuxt dashboard 或图表组件组织方式，可以先看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/echarts-learn/&#34; &gt;echarts-learn 详情页&lt;/a&gt;，再进入 &lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/echarts-learn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub 仓库&lt;/a&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;bilibili-nuxt3&#34;&gt;bilibili-nuxt3
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/bilibili-nuxt3/&#34; &gt;bilibili-nuxt3&lt;/a&gt; 是一个 Nuxt 3、Vue、TypeScript 和 Vant 移动端项目实战，展示 SSR、SEO、频道导航、视频列表和详情页结构。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27-github-io.vercel.app/img/projects/bilibili-nuxt3-mobile-preview.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;bilibili Nuxt3 mobile preview&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;如果你想看 Nuxt 3 project、Nuxt SSR SEO、Vue mobile app 或 Vant UI 移动端页面结构，可以先看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/bilibili-nuxt3/&#34; &gt;bilibili-nuxt3 详情页&lt;/a&gt;，再进入 &lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/bilibili-nuxt3&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub 仓库&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;后续项目&#34;&gt;后续项目
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/echarts-learn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;echarts-learn&lt;/a&gt;：Vue 与 ECharts 数据可视化练习，关注图表表达和交互细节。&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/bilibili-nuxt3&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;bilibili-nuxt3&lt;/a&gt;：Nuxt 3 与 TypeScript 应用结构练习。&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/skills-manage&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;skills-manage&lt;/a&gt;：AI coding agent skills 管理工具，后续适合补成独立项目页。&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/feidu&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;feidu&lt;/a&gt;：Vue 前端项目，后续需要先确认线上演示和项目定位再整理。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;如果项目对你有帮助，欢迎在对应 GitHub 仓库点 Star。Star 是我判断后续优先完善哪个项目的最清晰信号。&lt;/p&gt;
 </description>
