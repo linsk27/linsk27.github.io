@@ -1,71 +1,92 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>Pages on 404_@林达</title>
-        <link>https://linsk27.github.io/page/</link>
-        <description>Recent content in Pages on 404_@林达</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language>
-        <copyright>404_@林达</copyright>
-        <lastBuildDate>Tue, 15 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/page/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>生活</title>
-        <link>https://linsk27.github.io/%E7%94%9F%E6%B4%BB/</link>
-        <pubDate>Mon, 28 Oct 2024 00:00:00 +0000</pubDate>
-        
-        <guid>https://linsk27.github.io/%E7%94%9F%E6%B4%BB/</guid>
-        <description>&lt;h1 id=&#34;我的学习计划建议&#34;&gt;我的学习计划建议
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on linsk27 | AI Coding 与前端项目</title><link>https://linsk27-github-io.vercel.app/page/</link><description>Recent content in Pages on linsk27 | AI Coding 与前端项目</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>linsk27</copyright><lastBuildDate>Thu, 28 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27-github-io.vercel.app/page/index.xml" rel="self" type="application/rss+xml"/><item><title>项目</title><link>https://linsk27-github-io.vercel.app/projects/</link><pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27-github-io.vercel.app/projects/</guid><description>&lt;p&gt;这里集中放我当前更希望被看到的项目。它们都不是单纯的练习截图，而是围绕真实开发场景整理出来的作品：本地开发现场恢复、Pull Request 证据检查、Vue 与 Flask 全栈系统，以及 AI 产品界面原型。&lt;/p&gt;
+&lt;h2 id="dev-cockpit"&gt;Dev Cockpit
+&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://github.com/linsk27/local-dev-cockpit" target="_blank" rel="noopener"
+&gt;Dev Cockpit&lt;/a&gt; 是一个本地开发工作台，用来集中查看项目状态、启动命令、日志、端口、Git 状态和 AI 上下文。它适合经常在多个项目之间切换、需要快速恢复开发现场的个人开发者。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27-github-io.vercel.app/img/projects/dev-cockpit-local-development-dashboard.png"
+loading="lazy"
+alt="Dev Cockpit local development dashboard"
+&gt;&lt;/p&gt;
+&lt;p&gt;如果你正在找 local development dashboard、developer workflow tools、AI coding context manager 或 Electron + Vue 的项目，可以从这个仓库开始看。&lt;/p&gt;
+&lt;h2 id="proofpr"&gt;ProofPR
+&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://github.com/linsk27/proof-pr" target="_blank" rel="noopener"
+&gt;ProofPR&lt;/a&gt; 是一个 GitHub Action 和 CLI，用来整理 Pull Request 中的证据信号，包括 secrets、依赖风险、CI 权限、MCP 安全和 review 线索。目标是让开源维护者更快判断一个 PR 是否值得合并、需要补充什么证据。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27-github-io.vercel.app/img/projects/proofpr-github-action-pr-review-report.png"
+loading="lazy"
+alt="ProofPR GitHub Action PR review report"
+&gt;&lt;/p&gt;
+&lt;p&gt;如果你关注 pull request review automation、GitHub Actions security、PR triage、AI generated code review 或 maintainer tools，这个项目会更适合你。&lt;/p&gt;
+&lt;h2 id="ai-vue3-python-flask-blog"&gt;AI-Vue3-python-flask-Blog
+&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://github.com/linsk27/AI-Vue3-python-flask-Blog" target="_blank" rel="noopener"
+&gt;AI-Vue3-python-flask-Blog&lt;/a&gt; 是一个 Vue 3、Flask、MySQL 和 AI 能力组合的博客系统，覆盖前端页面、后端接口、数据持久化和内容管理。它适合作为课程设计、毕业设计、全栈项目练习和二次开发基础。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27-github-io.vercel.app/img/projects/ai-vue-flask-blog-home-page.png"
+loading="lazy"
+alt="AI Vue Flask blog home page"
+&gt;&lt;/p&gt;
+&lt;p&gt;如果你在搜索 Vue Flask full stack project、Vue3 Flask MySQL blog system、AI blog system、graduation project 或 course design，这个仓库会更直接。&lt;/p&gt;
+&lt;h2 id="ai-v0dev-"&gt;AI-v0.dev-
+&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://github.com/linsk27/AI-v0.dev-" target="_blank" rel="noopener"
+&gt;AI-v0.dev-&lt;/a&gt; 是一组 TypeScript 前端原型，用来探索 AI 产品界面、快速页面生成、组件组合和 v0.dev 风格的交互表达。它更适合看界面实验、AI UI prototype、Next.js、Tailwind 和前端产品想法。&lt;/p&gt;
+&lt;h2 id="其他项目"&gt;其他项目
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://github.com/linsk27/echarts-learn" target="_blank" rel="noopener"
+&gt;echarts-learn&lt;/a&gt;：Vue 与 ECharts 数据可视化练习，关注图表表达和交互细节。&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://github.com/linsk27/bilibili-nuxt3" target="_blank" rel="noopener"
+&gt;bilibili-nuxt3&lt;/a&gt;：Nuxt 3 与 TypeScript 应用结构练习。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果项目对你有帮助，欢迎在对应 GitHub 仓库点 Star。Star 是我判断后续优先完善哪个项目的最清晰信号。&lt;/p&gt;</description></item><item><title>生活</title><link>https://linsk27-github-io.vercel.app/%E7%94%9F%E6%B4%BB/</link><pubDate>Mon, 28 Oct 2024 00:00:00 +0000</pubDate><guid>https://linsk27-github-io.vercel.app/%E7%94%9F%E6%B4%BB/</guid><description>&lt;h1 id="我的学习计划建议"&gt;我的学习计划建议
 &lt;/h1&gt;&lt;p&gt;以下是我基于你的情况（实习，晚上和周末全天可用，学习内容涉及 Nginx、React 入门、Python 后端、进阶 JS 和进阶 TS）制定的一份 5 个月学习计划。计划分为三个阶段，从基础搭建到工程实践，同时在每个阶段均建议做阶段性总结、笔记记录和项目验证。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;你可以根据个人进度灵活调整，每周末预留一天用于复盘和补缺。&lt;/li&gt;
 &lt;li&gt;实习期间尽量利用零散时间巩固，周末安排为主要练习时段。&lt;/li&gt;
-&lt;/ul&gt;&lt;/blockquote&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;第一阶段基础打牢与初步整合4155317周&#34;&gt;第一阶段：基础打牢与初步整合（4.15～5.31，7周）
-&lt;/h2&gt;&lt;h3 id=&#34;目标&#34;&gt;目标
+&lt;h2 id="第一阶段基础打牢与初步整合4155317周"&gt;第一阶段：基础打牢与初步整合（4.15～5.31，7周）
+&lt;/h2&gt;&lt;h3 id="目标"&gt;目标
 &lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Nginx 基础&lt;/strong&gt;：掌握安装、静态文件部署与基本反向代理。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;JavaScript 基础及进阶&lt;/strong&gt;：复习 JS 核心概念、闭包、异步编程，打牢语言底层功底。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;React 与 TS 入门&lt;/strong&gt;：初步接触使用 TypeScript 编写 React 应用。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Python 后端初探&lt;/strong&gt;：选择 Flask，开发简单的 REST API 服务。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;资源推荐&#34;&gt;资源推荐
+&lt;h3 id="资源推荐"&gt;资源推荐
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Nginx&lt;/strong&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://nginx.org/en/docs/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Nginx 官方文档&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.digitalocean.com/community/tutorials/how-to-install-nginx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;DigitalOcean Nginx 教程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://nginx.org/en/docs/" target="_blank" rel="noopener"
+&gt;Nginx 官方文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://www.digitalocean.com/community/tutorials/how-to-install-nginx" target="_blank" rel="noopener"
+&gt;DigitalOcean Nginx 教程&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;JavaScript&lt;/strong&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://javascript.info/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;JavaScript.info&lt;/a&gt; （系统全面）&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/getify/You-Dont-Know-JS&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;You Don&amp;rsquo;t Know JS (简版阅读)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://javascript.info/" target="_blank" rel="noopener"
+&gt;JavaScript.info&lt;/a&gt; （系统全面）&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://github.com/getify/You-Dont-Know-JS" target="_blank" rel="noopener"
+&gt;You Don&amp;rsquo;t Know JS (简版阅读)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;React+TS&lt;/strong&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://react-typescript-cheatsheet.netlify.app/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;React TypeScript Cheatsheets&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://reactjs.org/docs/getting-started.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;React 官方文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://react-typescript-cheatsheet.netlify.app/" target="_blank" rel="noopener"
+&gt;React TypeScript Cheatsheets&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://reactjs.org/docs/getting-started.html" target="_blank" rel="noopener"
+&gt;React 官方文档&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Flask&lt;/strong&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://flask.palletsprojects.com/en/2.2.x/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Flask 官方文档&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=MwZwr5Tvyxo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Flask Web Development Tutorial&lt;/a&gt; （YouTube 教程）&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://flask.palletsprojects.com/en/2.2.x/" target="_blank" rel="noopener"
+&gt;Flask 官方文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://www.youtube.com/watch?v=MwZwr5Tvyxo" target="_blank" rel="noopener"
+&gt;Flask Web Development Tutorial&lt;/a&gt; （YouTube 教程）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;周计划安排&#34;&gt;周计划安排
+&lt;h3 id="周计划安排"&gt;周计划安排
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;平日晚上（1.5-2 小时/晚）&lt;/strong&gt;
 &lt;ul&gt;
@@ -88,46 +109,46 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;第二阶段深度进阶与技术整合617156周&#34;&gt;第二阶段：深度进阶与技术整合（6.1～7.15，6周）
-&lt;/h2&gt;&lt;h3 id=&#34;目标-1&#34;&gt;目标
+&lt;h2 id="第二阶段深度进阶与技术整合617156周"&gt;第二阶段：深度进阶与技术整合（6.1～7.15，6周）
+&lt;/h2&gt;&lt;h3 id="目标-1"&gt;目标
 &lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;JS 高级部分&lt;/strong&gt;：深入理解异步机制、事件循环、设计模式、模块化与性能优化；通过实战练习加深理解。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;TS 进阶&lt;/strong&gt;：掌握泛型、高级类型、类型守卫及实战中的工具类型。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;React 状态管理&lt;/strong&gt;：学习 Context API 或 Redux Toolkit，设计中等复杂度前端应用。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Python ORM &amp;amp; 数据库&lt;/strong&gt;：结合 SQLAlchemy 完成简单数据持久化（也可考虑 Django ORM，但建议在保持一致性的前提下继续使用 Flask）。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;资源推荐-1&#34;&gt;资源推荐
+&lt;h3 id="资源推荐-1"&gt;资源推荐
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;高级 JS&lt;/strong&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/getify/You-Dont-Know-JS&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;You Don&amp;rsquo;t Know JS (进阶篇)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://javascript30.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;JavaScript 30&lt;/a&gt; （动手实践）&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://github.com/getify/You-Dont-Know-JS" target="_blank" rel="noopener"
+&gt;You Don&amp;rsquo;t Know JS (进阶篇)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://javascript30.com/" target="_blank" rel="noopener"
+&gt;JavaScript 30&lt;/a&gt; （动手实践）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;高级 TS&lt;/strong&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://basarat.gitbook.io/typescript/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;TypeScript Deep Dive&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/type-challenges/type-challenges&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;TypeScript Challenges (GitHub)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://basarat.gitbook.io/typescript/" target="_blank" rel="noopener"
+&gt;TypeScript Deep Dive&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://github.com/type-challenges/type-challenges" target="_blank" rel="noopener"
+&gt;TypeScript Challenges (GitHub)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;React 状态管理&lt;/strong&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://redux-toolkit.js.org/tutorials/quick-start&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Redux Toolkit Quick Start&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://redux-toolkit.js.org/tutorials/quick-start" target="_blank" rel="noopener"
+&gt;Redux Toolkit Quick Start&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Flask+ORM&lt;/strong&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Flask Mega-Tutorial – Database Integration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database" target="_blank" rel="noopener"
+&gt;Flask Mega-Tutorial – Database Integration&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;周计划安排-1&#34;&gt;周计划安排
+&lt;h3 id="周计划安排-1"&gt;周计划安排
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;平日晚上&lt;/strong&gt;
 &lt;ul&gt;
@@ -147,37 +168,37 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;第三阶段全栈项目与工程化实践7169148周&#34;&gt;第三阶段：全栈项目与工程化实践（7.16～9.14，8周）
-&lt;/h2&gt;&lt;h3 id=&#34;目标-2&#34;&gt;目标
+&lt;h2 id="第三阶段全栈项目与工程化实践7169148周"&gt;第三阶段：全栈项目与工程化实践（7.16～9.14，8周）
+&lt;/h2&gt;&lt;h3 id="目标-2"&gt;目标
 &lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;全栈集成项目&lt;/strong&gt;：设计并开发一个技术论坛或信息管理系统，涵盖用户权限、内容发布及实时通知（可尝试使用 WebSocket 实现实时交互）。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;性能与工程优化&lt;/strong&gt;：进行前端 Bundle 分析、后端性能优化（如引入 Redis 缓存），并学习项目测试（单元测试、集成测试）。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;CI/CD 实践&lt;/strong&gt;：配置 GitHub Actions 或其他自动化部署工具，完成项目从开发到上线的全流程。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;资源推荐-2&#34;&gt;资源推荐
+&lt;h3 id="资源推荐-2"&gt;资源推荐
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;全栈架构&lt;/strong&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://fullstackopen.com/en/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Full Stack Open&lt;/a&gt; （赫尔辛基大学课程，非常全面）&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://fullstackopen.com/en/" target="_blank" rel="noopener"
+&gt;Full Stack Open&lt;/a&gt; （赫尔辛基大学课程，非常全面）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;性能优化&lt;/strong&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://web.dev/learn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Web.dev - Performance&lt;/a&gt; （Google 官方指南）&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://web.dev/learn/" target="_blank" rel="noopener"
+&gt;Web.dev - Performance&lt;/a&gt; （Google 官方指南）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;CI/CD&lt;/strong&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://testdriven.io/blog/github-actions-python/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;GitHub Actions for Python&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://jestjs.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Jest + React Testing Library&lt;/a&gt; （前端测试）&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://testdriven.io/blog/github-actions-python/" target="_blank" rel="noopener"
+&gt;GitHub Actions for Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://jestjs.io/" target="_blank" rel="noopener"
+&gt;Jest + React Testing Library&lt;/a&gt; （前端测试）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;周计划安排-2&#34;&gt;周计划安排
+&lt;h3 id="周计划安排-2"&gt;周计划安排
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;平日晚上&lt;/strong&gt;
 &lt;ul&gt;
@@ -198,75 +219,45 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;补充学习工具与建议&#34;&gt;补充学习工具与建议
+&lt;h2 id="补充学习工具与建议"&gt;补充学习工具与建议
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;笔记工具&lt;/strong&gt;：推荐使用 &lt;a class=&#34;link&#34; href=&#34;https://obsidian.md/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Obsidian&lt;/a&gt; 建立知识库，整理各阶段学习要点和代码片段。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;笔记工具&lt;/strong&gt;：推荐使用 &lt;a class="link" href="https://obsidian.md/" target="_blank" rel="noopener"
+&gt;Obsidian&lt;/a&gt; 建立知识库，整理各阶段学习要点和代码片段。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;版本控制&lt;/strong&gt;：全程使用 Git 管理项目代码，定期提交并在 GitHub 上建立项目仓库。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;社区交流&lt;/strong&gt;：多利用 StackOverflow、掘金、CNode 等社区讨论问题，并参与线上技术交流群（如 Discord 的 Reactiflux）。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;实践为主&lt;/strong&gt;：每遇新概念尽快写代码实验，养成边学边写的习惯。&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        </item>
-        <item>
-        <title>归档</title>
-        <link>https://linsk27.github.io/archives/</link>
-        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://linsk27.github.io/archives/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>搜索</title>
-        <link>https://linsk27.github.io/search/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://linsk27.github.io/search/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>友链</title>
-        <link>https://linsk27.github.io/%E5%8F%8B%E9%93%BE/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://linsk27.github.io/%E5%8F%8B%E9%93%BE/</guid>
-        <description>&lt;p&gt;To use this feature, add &lt;code&gt;links&lt;/code&gt; section to frontmatter.&lt;/p&gt;
+&lt;/ul&gt;</description></item><item><title>归档</title><link>https://linsk27-github-io.vercel.app/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://linsk27-github-io.vercel.app/archives/</guid><description/></item><item><title>搜索</title><link>https://linsk27-github-io.vercel.app/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://linsk27-github-io.vercel.app/search/</guid><description/></item><item><title>友链</title><link>https://linsk27-github-io.vercel.app/%E5%8F%8B%E9%93%BE/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://linsk27-github-io.vercel.app/%E5%8F%8B%E9%93%BE/</guid><description>&lt;p&gt;To use this feature, add &lt;code&gt;links&lt;/code&gt; section to frontmatter.&lt;/p&gt;
 &lt;p&gt;This page&amp;rsquo;s frontmatter:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;links&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;GitHub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;description&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;GitHub is the world&amp;#39;s largest software development platform.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;website&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://github.com&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;TypeScript&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;description&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;website&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://www.typescriptlang.org&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;ts-logo-128.jpg&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Echo&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;description&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;若我与你重逢，事隔经年。我将何以贺你？以眼泪，以沉默。 —— 春逝|&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;website&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://echoblog.com.cn/&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://img.echoblog.com.cn/Fo1tExXWSenqqWpvO_1HQ-Sy0Kum&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;links&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;GitHub&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;GitHub is the world&amp;#39;s largest software development platform.&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;website&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;https://github.com&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;image&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;TypeScript&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;website&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;https://www.typescriptlang.org&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;image&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;ts-logo-128.jpg&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;Echo&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;若我与你重逢，事隔经年。我将何以贺你？以眼泪，以沉默。 —— 春逝|&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;website&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;https://echoblog.com.cn/&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;image&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;https://img.echoblog.com.cn/Fo1tExXWSenqqWpvO_1HQ-Sy0Kum&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;code&gt;image&lt;/code&gt; field accepts both local and external images.&lt;/p&gt;
-</description>
-        </item>
-        
-    </channel>
-</rss>
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;image&lt;/code&gt; field accepts both local and external images.&lt;/p&gt;</description></item></channel></rss>
