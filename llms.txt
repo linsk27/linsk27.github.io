@@ -10,8 +10,8 @@ Project hub: https://linsk27-github-io.vercel.app/projects/
 
 - Dev Cockpit: local development dashboard for restoring project state, commands, logs, ports, Git status, runtime diagnostics, and AI coding context. Project page: https://linsk27-github-io.vercel.app/projects/dev-cockpit/ Repository: https://github.com/linsk27/local-dev-cockpit
 - ProofPR: GitHub Action and CLI for pull request evidence scanning, PR triage, dependency risk, workflow permission checks, secrets detection, MCP security, and maintainer review guidance. Project page: https://linsk27-github-io.vercel.app/projects/proofpr/ Repository: https://github.com/linsk27/proof-pr
-- AI-Vue3-python-flask-Blog: Vue 3, Flask, MySQL and AI blog system for full-stack practice, course design, graduation project, and secondary development. Repository: https://github.com/linsk27/AI-Vue3-python-flask-Blog
-- AI-v0.dev-: Next.js and TypeScript prototype for AI learning dashboards, v0.dev UI experiments, product interface design, progress tracking, and project cards. Repository: https://github.com/linsk27/AI-v0.dev-
+- AI-Vue3-python-flask-Blog: Vue 3, Flask, MySQL and AI blog system for full-stack practice, course design, graduation project, and secondary development. Project page: https://linsk27-github-io.vercel.app/projects/ai-vue-flask-blog/ Repository: https://github.com/linsk27/AI-Vue3-python-flask-Blog Demo: https://ai-vue3-python-flask-blog.vercel.app/
+- AI-v0.dev-: Next.js and TypeScript prototype for AI learning dashboards, v0.dev UI experiments, product interface design, progress tracking, and project cards. Project page: https://linsk27-github-io.vercel.app/projects/ai-v0-dev/ Repository: https://github.com/linsk27/AI-v0.dev-
 - Vue-blog: Vue blog front-end project with article pages, AI center, and data analysis dashboard screens. Repository: https://github.com/linsk27/Vue-blog Demo: https://vue-blog-smoky.vercel.app/
 
 ## Additional projects
