@@ -16,11 +16,8 @@ Project hub: https://linsk27-github-io.vercel.app/projects/
 - Vue-blog: Vue blog front-end project with article pages, AI center, and data analysis dashboard screens. Project page: https://linsk27-github-io.vercel.app/projects/vue-blog/ Repository: https://github.com/linsk27/Vue-blog Demo: https://vue-blog-smoky.vercel.app/
 - echarts-learn: Vue, Nuxt and ECharts data visualization dashboard practice for bar charts, radar charts, relation graphs, ring charts, word cloud, and dashboard UI. Project page: https://linsk27-github-io.vercel.app/projects/echarts-learn/ Repository: https://github.com/linsk27/echarts-learn
 - bilibili-nuxt3: Nuxt 3, Vue, TypeScript and Vant mobile project practice for SSR, SEO, channel navigation, video lists, detail pages, and mobile UI structure. Project page: https://linsk27-github-io.vercel.app/projects/bilibili-nuxt3/ Repository: https://github.com/linsk27/bilibili-nuxt3
-
-## Additional projects
-
-- feidu: Vue front-end project. Repository: https://github.com/linsk27/feidu
+- feidu: Nuxt 3, Vue, Tailwind CSS and ECharts smart community dashboard for community management, security monitoring, CIM platform, energy monitoring, and energy analysis. Project page: https://linsk27-github-io.vercel.app/projects/feidu/ Repository: https://github.com/linsk27/feidu Demo: https://feidu-murex.vercel.app
 
 ## Topics
 
-Vue, TypeScript, JavaScript, React, Next.js, Nuxt, Node.js, Vite, Electron, Tauri, GitHub Actions, AI Coding, Agent Skills, AI coding agent skills manager, developer tools, local development, pull request review automation, Flask, Python, MySQL, ECharts, full-stack projects, AI UI prototype, learning dashboard, Vue blog.
+Vue, TypeScript, JavaScript, React, Next.js, Nuxt, Node.js, Vite, Electron, Tauri, GitHub Actions, AI Coding, Agent Skills, AI coding agent skills manager, developer tools, local development, pull request review automation, Flask, Python, MySQL, ECharts, full-stack projects, AI UI prototype, learning dashboard, Vue blog, smart community dashboard, security monitoring dashboard, energy monitoring dashboard, CIM platform UI.
