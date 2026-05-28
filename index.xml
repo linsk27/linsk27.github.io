@@ -298,6 +298,7 @@
         
         <guid>https://linsk27-github-io.vercel.app/projects/</guid>
         <description>&lt;img src="https://linsk27-github-io.vercel.app/img/projects/feidu-smart-community-dashboard.jpg" alt="Featured image of post linsk27 项目主页" /&gt;&lt;p&gt;这里集中放我当前更希望被看到的项目。它们都不是单纯的练习截图，而是围绕真实开发场景整理出来的作品：本地开发现场恢复、Pull Request 证据检查、AI coding agent skills 管理、智慧社区数据大屏、Vue 与 Flask 全栈系统、AI 产品界面原型，以及可以直接打开的前端成品。&lt;/p&gt;
+&lt;p&gt;如果你想直接从 GitHub 仓库角度筛选，可以看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/github/&#34; &gt;linsk27 GitHub 项目与 Star 入口&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;dev-cockpit&#34;&gt;Dev Cockpit
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/dev-cockpit/&#34; &gt;Dev Cockpit&lt;/a&gt; 是一个本地开发工作台，用来集中查看项目状态、启动命令、日志、端口、Git 状态和 AI 上下文。它适合经常在多个项目之间切换、需要快速恢复开发现场的个人开发者。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://linsk27-github-io.vercel.app/img/projects/dev-cockpit-local-development-dashboard.png&#34;
@@ -605,7 +606,7 @@
         
         <guid>https://linsk27-github-io.vercel.app/about/</guid>
         <description>&lt;img src="https://linsk27-github-io.vercel.app/img/projects/dev-cockpit-local-development-dashboard.png" alt="Featured image of post 关于 linsk27" /&gt;&lt;p&gt;我是 linsk27，主要把前端、全栈和 AI 辅助开发相关想法做成可以运行、可以验证、可以继续迭代的项目。我的 GitHub 主页是 &lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;github.com/linsk27&lt;/a&gt;，项目入口是 &lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;。&lt;/p&gt;
+    &gt;github.com/linsk27&lt;/a&gt;，项目入口是 &lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;，按仓库和 Star 场景整理的入口是 &lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/github/&#34; &gt;linsk27 GitHub 项目与 Star 入口&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;关注方向&#34;&gt;关注方向
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;AI 辅助开发与开发者工具：让本地开发、Pull Request review 和 agent skills 管理更清晰。&lt;/li&gt;
