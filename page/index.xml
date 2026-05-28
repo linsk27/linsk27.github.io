@@ -292,6 +292,94 @@
 </description>
         </item>
         <item>
+        <title>linsk27 GitHub 项目与 Star 入口</title>
+        <link>https://linsk27-github-io.vercel.app/github/</link>
+        <pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://linsk27-github-io.vercel.app/github/</guid>
+        <description>&lt;img src="https://linsk27-github-io.vercel.app/img/projects/skills-manage-central-library.png" alt="Featured image of post linsk27 GitHub 项目与 Star 入口" /&gt;&lt;p&gt;这里是更直接的 GitHub 项目入口。如果你是从搜索结果、GitHub 主页、README 或项目截图点进来，可以按需求选择先看哪个仓库。&lt;/p&gt;
+&lt;p&gt;我的 GitHub 主页是 &lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;github.com/linsk27&lt;/a&gt;，完整项目页是 &lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/&#34; &gt;linsk27 项目主页&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;推荐先看的仓库&#34;&gt;推荐先看的仓库
+&lt;/h2&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;方向&lt;/th&gt;
+					&lt;th&gt;仓库&lt;/th&gt;
+					&lt;th&gt;适合谁&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;本地开发工具&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/local-dev-cockpit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;local-dev-cockpit&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;想看本地开发工作台、项目状态恢复、命令和日志管理的人&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;PR review 工具&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/proof-pr&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;proof-pr&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;关注 Pull Request 证据扫描、GitHub Actions 和维护者 review 工作流的人&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;AI skills 管理&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/skills-manage&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;skills-manage&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;使用 Claude Code、Codex CLI、Cursor、Gemini CLI 等 AI 编程工具的人&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;智慧社区大屏&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/feidu&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;feidu&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;想看 Nuxt 3、Vue、ECharts、Tailwind CSS 数据大屏的人&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;全栈博客系统&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/AI-Vue3-python-flask-Blog&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AI-Vue3-python-flask-Blog&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;需要 Vue 3、Flask、MySQL、AI 博客系统和课程设计参考的人&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;AI UI 原型&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/AI-v0.dev-&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AI-v0.dev-&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;想看 Next.js、TypeScript、Tailwind、shadcn/ui 产品原型的人&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Vue 前端项目&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/Vue-blog&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Vue-blog&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;想看 Vue 博客、内容展示、AI 中心和数据看板页面的人&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;数据可视化练习&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/echarts-learn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;echarts-learn&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;想看 ECharts dashboard、图表组合和 Nuxt 数据可视化的人&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Nuxt 移动端项目&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/bilibili-nuxt3&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;bilibili-nuxt3&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;想看 Nuxt 3、SSR、SEO、Vant 移动端页面结构的人&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;如果你只想快速判断&#34;&gt;如果你只想快速判断
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;想看最完整的开发者工具方向：先看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/dev-cockpit/&#34; &gt;Dev Cockpit&lt;/a&gt; 和 &lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/proofpr/&#34; &gt;ProofPR&lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt;想看 AI 编程相关工具：先看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/skills-manage/&#34; &gt;skills-manage&lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt;想看可视化成品截图：先看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/feidu/&#34; &gt;feidu&lt;/a&gt; 和 &lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/echarts-learn/&#34; &gt;echarts-learn&lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt;想看全栈项目：先看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/ai-vue-flask-blog/&#34; &gt;AI Vue Flask Blog&lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt;想看前端页面练习：先看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/vue-blog/&#34; &gt;Vue-blog&lt;/a&gt; 和 &lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/bilibili-nuxt3/&#34; &gt;bilibili-nuxt3&lt;/a&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;star-说明&#34;&gt;Star 说明
+&lt;/h2&gt;&lt;p&gt;如果某个仓库对你有参考价值，欢迎在 GitHub 上点 Star。Star 对我来说不是装饰，它会直接影响我下一步优先补哪些文档、截图、部署说明和功能。&lt;/p&gt;
+&lt;p&gt;更完整的项目截图、关键词和说明可以看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/&#34; &gt;项目主页&lt;/a&gt;；个人介绍可以看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/about/&#34; &gt;关于 linsk27&lt;/a&gt;。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>linsk27 项目主页</title>
         <link>https://linsk27-github-io.vercel.app/projects/</link>
         <pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate>
