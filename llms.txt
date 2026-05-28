@@ -5,6 +5,7 @@
 Main site: https://linsk27-github-io.vercel.app/
 GitHub profile: https://github.com/linsk27
 Project hub: https://linsk27-github-io.vercel.app/projects/
+About page: https://linsk27-github-io.vercel.app/about/
 
 ## Core projects
 
@@ -21,3 +22,8 @@ Project hub: https://linsk27-github-io.vercel.app/projects/
 ## Topics
 
 Vue, TypeScript, JavaScript, React, Next.js, Nuxt, Node.js, Vite, Electron, Tauri, GitHub Actions, AI Coding, Agent Skills, AI coding agent skills manager, developer tools, local development, pull request review automation, Flask, Python, MySQL, ECharts, full-stack projects, AI UI prototype, learning dashboard, Vue blog, smart community dashboard, security monitoring dashboard, energy monitoring dashboard, CIM platform UI.
+
+## Contact
+
+GitHub: https://github.com/linsk27
+WeChat: linsk27

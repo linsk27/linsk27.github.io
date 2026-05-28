@@ -460,6 +460,41 @@
 </description>
         </item>
         <item>
+        <title>关于 linsk27</title>
+        <link>https://linsk27-github-io.vercel.app/about/</link>
+        <pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://linsk27-github-io.vercel.app/about/</guid>
+        <description>&lt;img src="https://linsk27-github-io.vercel.app/img/projects/dev-cockpit-local-development-dashboard.png" alt="Featured image of post 关于 linsk27" /&gt;&lt;p&gt;我是 linsk27，主要把前端、全栈和 AI Coding 相关想法做成可以运行、可以验证、可以继续迭代的项目。我的 GitHub 主页是 &lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;github.com/linsk27&lt;/a&gt;，项目入口是 &lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;关注方向&#34;&gt;关注方向
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;AI Coding 与开发者工具：让本地开发、Pull Request review 和 agent skills 管理更清晰。&lt;/li&gt;
+&lt;li&gt;Vue、TypeScript 与 Nuxt：持续整理可运行的前端应用、移动端页面和数据大屏。&lt;/li&gt;
+&lt;li&gt;Flask、MySQL 与全栈实践：把前端页面、后端接口和数据持久化连成完整项目。&lt;/li&gt;
+&lt;li&gt;ECharts 与数据可视化：沉淀 dashboard、智慧社区、能源监测和业务看板类界面。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;推荐项目&#34;&gt;推荐项目
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/dev-cockpit/&#34; &gt;Dev Cockpit&lt;/a&gt;：本地开发工作台，用于恢复项目状态、命令、日志、端口、Git 状态和 AI 上下文。&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/proofpr/&#34; &gt;ProofPR&lt;/a&gt;：GitHub Action 和 CLI，用于 Pull Request 证据扫描、风险提示和维护者 review 辅助。&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/skills-manage/&#34; &gt;skills-manage&lt;/a&gt;：Tauri、React 和 TypeScript 桌面应用，用于集中管理 AI coding agent skills。&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/feidu/&#34; &gt;feidu&lt;/a&gt;：Nuxt 3、Vue、Tailwind CSS 和 ECharts 智慧社区数据大屏，覆盖安防监控、CIM 平台和能源监测。&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/ai-vue-flask-blog/&#34; &gt;AI-Vue3-python-flask-Blog&lt;/a&gt;：Vue 3、Flask、MySQL 和 AI 能力组合的博客系统。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;适合搜索这些关键词找到我&#34;&gt;适合搜索这些关键词找到我
+&lt;/h2&gt;&lt;p&gt;linsk27 GitHub、linsk27 projects、Vue TypeScript developer、AI coding tools、developer workflow tools、GitHub Actions review、Nuxt ECharts dashboard、Vue Flask full stack project。&lt;/p&gt;
+&lt;h2 id=&#34;联系方式&#34;&gt;联系方式
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;GitHub：&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;github.com/linsk27&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;微信：linsk27&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果某个项目对你有参考价值，欢迎进入对应 GitHub 仓库点 Star。Star 是我判断后续优先完善哪个项目的主要信号。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>项目</title>
         <link>https://linsk27-github-io.vercel.app/projects/</link>
         <pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate>
@@ -596,208 +631,6 @@
 &lt;p&gt;如果你想看 smart community dashboard、Vue ECharts dashboard、Nuxt 3 data visualization、security monitoring dashboard、energy monitoring dashboard 或 CIM platform UI，可以先看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/feidu/&#34; &gt;feidu 详情页&lt;/a&gt;，再进入 &lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/feidu&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;GitHub 仓库&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;如果项目对你有帮助，欢迎在对应 GitHub 仓库点 Star。Star 是我判断后续优先完善哪个项目的最清晰信号。&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>生活</title>
-        <link>https://linsk27-github-io.vercel.app/%E7%94%9F%E6%B4%BB/</link>
-        <pubDate>Mon, 28 Oct 2024 00:00:00 +0000</pubDate>
-        
-        <guid>https://linsk27-github-io.vercel.app/%E7%94%9F%E6%B4%BB/</guid>
-        <description>&lt;h1 id=&#34;我的学习计划建议&#34;&gt;我的学习计划建议
-&lt;/h1&gt;&lt;p&gt;以下是我基于你的情况（实习，晚上和周末全天可用，学习内容涉及 Nginx、React 入门、Python 后端、进阶 JS 和进阶 TS）制定的一份 5 个月学习计划。计划分为三个阶段，从基础搭建到工程实践，同时在每个阶段均建议做阶段性总结、笔记记录和项目验证。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;你可以根据个人进度灵活调整，每周末预留一天用于复盘和补缺。&lt;/li&gt;
-&lt;li&gt;实习期间尽量利用零散时间巩固，周末安排为主要练习时段。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;第一阶段基础打牢与初步整合4155317周&#34;&gt;第一阶段：基础打牢与初步整合（4.15～5.31，7周）
-&lt;/h2&gt;&lt;h3 id=&#34;目标&#34;&gt;目标
-&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Nginx 基础&lt;/strong&gt;：掌握安装、静态文件部署与基本反向代理。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;JavaScript 基础及进阶&lt;/strong&gt;：复习 JS 核心概念、闭包、异步编程，打牢语言底层功底。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;React 与 TS 入门&lt;/strong&gt;：初步接触使用 TypeScript 编写 React 应用。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Python 后端初探&lt;/strong&gt;：选择 Flask，开发简单的 REST API 服务。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;资源推荐&#34;&gt;资源推荐
-&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Nginx&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://nginx.org/en/docs/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Nginx 官方文档&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.digitalocean.com/community/tutorials/how-to-install-nginx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;DigitalOcean Nginx 教程&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;JavaScript&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://javascript.info/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;JavaScript.info&lt;/a&gt; （系统全面）&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/getify/You-Dont-Know-JS&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;You Don&amp;rsquo;t Know JS (简版阅读)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;React+TS&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://react-typescript-cheatsheet.netlify.app/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;React TypeScript Cheatsheets&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://reactjs.org/docs/getting-started.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;React 官方文档&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Flask&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://flask.palletsprojects.com/en/2.2.x/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Flask 官方文档&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=MwZwr5Tvyxo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Flask Web Development Tutorial&lt;/a&gt; （YouTube 教程）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;周计划安排&#34;&gt;周计划安排
-&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;平日晚上（1.5-2 小时/晚）&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Nginx&lt;/strong&gt;：前两周每天投入 20-30 分钟进行配置实践（安装、反向代理等）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;JavaScript&lt;/strong&gt;：针对闭包、异步、模块化，每晚学习 30-40 分钟并进行代码片段练习。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;React+TS&lt;/strong&gt;：每周选取 2-3 个晚上学习 JSX、组件及 TypeScript 基本类型。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;每个周末（4-6 小时/天）&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;项目实践&lt;/strong&gt;：
-&lt;ul&gt;
-&lt;li&gt;第1-2周：搭建本地 Nginx 环境，部署一个简单的静态网页（例如个人主页或简历页面）；完成几个 JS 小练习。&lt;/li&gt;
-&lt;li&gt;第3-4周：构建一个小型 React 项目（例如 TodoList），初步使用 TS 编写组件。&lt;/li&gt;
-&lt;li&gt;第5-7周：用 Flask 编写基础 API（例如用户注册、数据 CRUD），前端调用 API；整合 Nginx 做简单反向代理测试。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;同时预留时间复盘笔记，撰写博客记录学习体会。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;第二阶段深度进阶与技术整合617156周&#34;&gt;第二阶段：深度进阶与技术整合（6.1～7.15，6周）
-&lt;/h2&gt;&lt;h3 id=&#34;目标-1&#34;&gt;目标
-&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;JS 高级部分&lt;/strong&gt;：深入理解异步机制、事件循环、设计模式、模块化与性能优化；通过实战练习加深理解。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;TS 进阶&lt;/strong&gt;：掌握泛型、高级类型、类型守卫及实战中的工具类型。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;React 状态管理&lt;/strong&gt;：学习 Context API 或 Redux Toolkit，设计中等复杂度前端应用。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Python ORM &amp;amp; 数据库&lt;/strong&gt;：结合 SQLAlchemy 完成简单数据持久化（也可考虑 Django ORM，但建议在保持一致性的前提下继续使用 Flask）。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;资源推荐-1&#34;&gt;资源推荐
-&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;高级 JS&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/getify/You-Dont-Know-JS&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;You Don&amp;rsquo;t Know JS (进阶篇)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://javascript30.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;JavaScript 30&lt;/a&gt; （动手实践）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;高级 TS&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://basarat.gitbook.io/typescript/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;TypeScript Deep Dive&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/type-challenges/type-challenges&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;TypeScript Challenges (GitHub)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;React 状态管理&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://redux-toolkit.js.org/tutorials/quick-start&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Redux Toolkit Quick Start&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Flask+ORM&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Flask Mega-Tutorial – Database Integration&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;周计划安排-1&#34;&gt;周计划安排
-&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;平日晚上&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;每晚选取 1-2 个进阶概念进行深入学习与案例研究（例如异步并发、Promise 链式、泛型练习）。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;每个周末&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;项目深化&lt;/strong&gt;：
-&lt;ul&gt;
-&lt;li&gt;构建一个博客系统或小型社交平台后端，用 Flask 结合 SQLAlchemy 完成完整 CRUD；前端使用 React+TS 展示应用并进行状态管理，借助 Redux 或 Context 管理全局状态。&lt;/li&gt;
-&lt;li&gt;实现 Nginx 负载均衡的模拟（例如同时启动两个 Flask 实例），体验 HTTPS 配置（可尝试使用 Let&amp;rsquo;s Encrypt 测试版）。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;提前编写代码文档，进行代码 Review，提高工程化能力。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;第三阶段全栈项目与工程化实践7169148周&#34;&gt;第三阶段：全栈项目与工程化实践（7.16～9.14，8周）
-&lt;/h2&gt;&lt;h3 id=&#34;目标-2&#34;&gt;目标
-&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;全栈集成项目&lt;/strong&gt;：设计并开发一个技术论坛或信息管理系统，涵盖用户权限、内容发布及实时通知（可尝试使用 WebSocket 实现实时交互）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;性能与工程优化&lt;/strong&gt;：进行前端 Bundle 分析、后端性能优化（如引入 Redis 缓存），并学习项目测试（单元测试、集成测试）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;CI/CD 实践&lt;/strong&gt;：配置 GitHub Actions 或其他自动化部署工具，完成项目从开发到上线的全流程。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;资源推荐-2&#34;&gt;资源推荐
-&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;全栈架构&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://fullstackopen.com/en/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Full Stack Open&lt;/a&gt; （赫尔辛基大学课程，非常全面）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;性能优化&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://web.dev/learn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Web.dev - Performance&lt;/a&gt; （Google 官方指南）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;CI/CD&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://testdriven.io/blog/github-actions-python/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;GitHub Actions for Python&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://jestjs.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Jest + React Testing Library&lt;/a&gt; （前端测试）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;周计划安排-2&#34;&gt;周计划安排
-&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;平日晚上&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;每晚记录项目需求和设计文档，逐步迭代项目功能；同时学习单元测试和自动化部署的基础知识。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;每个周末&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;全栈项目开发&lt;/strong&gt;：
-&lt;ul&gt;
-&lt;li&gt;第1-4周：开发论坛或信息管理系统的核心功能，完成前后端联调，并解决 Nginx 反向代理问题。&lt;/li&gt;
-&lt;li&gt;第5-6周：引入性能优化方案（如代码分割、缓存策略、异步任务队列等），编写必要的测试代码。&lt;/li&gt;
-&lt;li&gt;第7-8周：配置 CI/CD 流水线，整理项目文档，录制项目演示视频，并完成项目的最终复盘与部署。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;定期总结反思，调整项目难点和分工，确保项目完整运行并在求职时展示项目成果。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;补充学习工具与建议&#34;&gt;补充学习工具与建议
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;笔记工具&lt;/strong&gt;：推荐使用 &lt;a class=&#34;link&#34; href=&#34;https://obsidian.md/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Obsidian&lt;/a&gt; 建立知识库，整理各阶段学习要点和代码片段。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;版本控制&lt;/strong&gt;：全程使用 Git 管理项目代码，定期提交并在 GitHub 上建立项目仓库。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;社区交流&lt;/strong&gt;：多利用 StackOverflow、掘金、CNode 等社区讨论问题，并参与线上技术交流群（如 Discord 的 Reactiflux）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;实践为主&lt;/strong&gt;：每遇新概念尽快写代码实验，养成边学边写的习惯。&lt;/li&gt;
-&lt;/ul&gt;
 </description>
         </item>
         <item>
