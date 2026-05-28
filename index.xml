@@ -288,6 +288,79 @@
 </description>
         </item>
         <item>
+        <title>skills-manage</title>
+        <link>https://linsk27-github-io.vercel.app/projects/skills-manage/</link>
+        <pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://linsk27-github-io.vercel.app/projects/skills-manage/</guid>
+        <description>&lt;img src="https://linsk27-github-io.vercel.app/img/projects/skills-manage-central-library.png" alt="Featured image of post skills-manage" /&gt;&lt;p&gt;skills-manage 是一个 Tauri、React 和 TypeScript 桌面应用，用来把多个 AI coding agent 的 skills 管理集中到一个地方。它把 &lt;code&gt;~/.agents/skills/&lt;/code&gt; 作为中心技能库，再通过平台安装、卸载和符号链接，把同一套技能同步到 Claude Code、Codex CLI、Cursor、Gemini CLI、Trae、Windsurf、Aider 等工具。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27-github-io.vercel.app/img/projects/skills-manage-central-library.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;skills-manage central library&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;适合谁&#34;&gt;适合谁
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;同时使用 Claude Code、Codex CLI、Cursor、Gemini CLI 或多个 AI coding agent 的开发者。&lt;/li&gt;
+&lt;li&gt;想把本地 skills、项目 skills、市场 skills 和 GitHub 导入技能统一管理的人。&lt;/li&gt;
+&lt;li&gt;需要批量安装、卸载、搜索、预览和组织 Agent Skills 的人。&lt;/li&gt;
+&lt;li&gt;想参考 Tauri、React、TypeScript 桌面应用结构的人。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目价值&#34;&gt;项目价值
+&lt;/h2&gt;&lt;p&gt;skills-manage 的价值在于它解决了 AI coding agent skills 分散在不同目录、不同工具、不同市场里的管理问题。它提供中央技能库、平台视图、项目扫描、市场浏览、GitHub 仓库导入、Markdown 预览、原始源码查看、AI 解释生成和技能集合等能力，让技能资产更容易沉淀、迁移和复用。&lt;/p&gt;
+&lt;p&gt;如果你搜索的是 AI coding agent skills manager、Claude Code skills、Codex CLI skills、Cursor skills、Agent Skills desktop app 或 Tauri React desktop app，这个项目可以作为一个完整的本地优先应用参考。&lt;/p&gt;
+&lt;h2 id=&#34;功能截图&#34;&gt;功能截图
+&lt;/h2&gt;&lt;h3 id=&#34;技能市场&#34;&gt;技能市场
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://linsk27-github-io.vercel.app/img/projects/skills-manage-marketplace.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;skills-manage marketplace&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;github-仓库导入&#34;&gt;GitHub 仓库导入
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://linsk27-github-io.vercel.app/img/projects/skills-manage-github-import.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;skills-manage GitHub import&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;技术方向&#34;&gt;技术方向
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Tauri 2&lt;/li&gt;
+&lt;li&gt;React&lt;/li&gt;
+&lt;li&gt;TypeScript&lt;/li&gt;
+&lt;li&gt;Vite&lt;/li&gt;
+&lt;li&gt;SQLite&lt;/li&gt;
+&lt;li&gt;Agent Skills&lt;/li&gt;
+&lt;li&gt;本地优先桌面应用&lt;/li&gt;
+&lt;li&gt;多平台技能目录管理&lt;/li&gt;
+&lt;li&gt;技能市场与 GitHub 导入&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目入口&#34;&gt;项目入口
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/skills-manage&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;linsk27/skills-manage&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;下载入口：&lt;a class=&#34;link&#34; href=&#34;https://github.com/iamzhihuix/skills-manage/releases/latest&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;latest release&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果这个 AI coding agent skills 管理工具对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续完善平台适配、市场同步、导入体验和跨工具技能管理的主要信号。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Vue-blog</title>
         <link>https://linsk27-github-io.vercel.app/projects/vue-blog/</link>
         <pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate>
@@ -341,7 +414,7 @@
         <pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://linsk27-github-io.vercel.app/projects/</guid>
-        <description>&lt;img src="https://linsk27-github-io.vercel.app/img/projects/ai-v0-dev-learning-dashboard.png" alt="Featured image of post 项目" /&gt;&lt;p&gt;这里集中放我当前更希望被看到的项目。它们都不是单纯的练习截图，而是围绕真实开发场景整理出来的作品：本地开发现场恢复、Pull Request 证据检查、Vue 与 Flask 全栈系统、AI 产品界面原型，以及可以直接打开的前端成品。&lt;/p&gt;
+        <description>&lt;img src="https://linsk27-github-io.vercel.app/img/projects/ai-v0-dev-learning-dashboard.png" alt="Featured image of post 项目" /&gt;&lt;p&gt;这里集中放我当前更希望被看到的项目。它们都不是单纯的练习截图，而是围绕真实开发场景整理出来的作品：本地开发现场恢复、Pull Request 证据检查、AI coding agent skills 管理、Vue 与 Flask 全栈系统、AI 产品界面原型，以及可以直接打开的前端成品。&lt;/p&gt;
 &lt;h2 id=&#34;dev-cockpit&#34;&gt;Dev Cockpit
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/dev-cockpit/&#34; &gt;Dev Cockpit&lt;/a&gt; 是一个本地开发工作台，用来集中查看项目状态、启动命令、日志、端口、Git 状态和 AI 上下文。它适合经常在多个项目之间切换、需要快速恢复开发现场的个人开发者。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://linsk27-github-io.vercel.app/img/projects/dev-cockpit-local-development-dashboard.png&#34;
@@ -369,6 +442,20 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;如果你关注 pull request review automation、GitHub Actions security、PR triage、AI generated code review 或 maintainer tools，可以先看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/proofpr/&#34; &gt;ProofPR 详情页&lt;/a&gt;，再进入 &lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/proof-pr&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub 仓库&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;skills-manage&#34;&gt;skills-manage
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/skills-manage/&#34; &gt;skills-manage&lt;/a&gt; 是一个 Tauri、React 和 TypeScript 桌面应用，用来集中管理 AI coding agent skills，覆盖中央技能库、平台安装、项目扫描、技能市场、GitHub 导入和技能集合。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27-github-io.vercel.app/img/projects/skills-manage-central-library.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;skills-manage central library&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;如果你正在找 AI coding agent skills manager、Claude Code skills、Codex CLI skills、Cursor skills、Agent Skills desktop app 或 Tauri React desktop app，可以先看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/skills-manage/&#34; &gt;skills-manage 详情页&lt;/a&gt;，再进入 &lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/skills-manage&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;GitHub 仓库&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;ai-vue3-python-flask-blog&#34;&gt;AI-Vue3-python-flask-Blog
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/ai-vue-flask-blog/&#34; &gt;AI-Vue3-python-flask-Blog&lt;/a&gt; 是一个 Vue 3、Flask、MySQL 和 AI 能力组合的博客系统，覆盖前端页面、后端接口、数据持久化和内容管理。它适合作为课程设计、毕业设计、全栈项目练习和二次开发基础。&lt;/p&gt;
@@ -444,8 +531,6 @@
     &gt;GitHub 仓库&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;后续项目&#34;&gt;后续项目
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/skills-manage&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;skills-manage&lt;/a&gt;：AI coding agent skills 管理工具，后续适合补成独立项目页。&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/feidu&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;feidu&lt;/a&gt;：Vue 前端项目，后续需要先确认线上演示和项目定位再整理。&lt;/li&gt;
 &lt;/ul&gt;
