@@ -366,6 +366,28 @@
 			&lt;/tr&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;
+&lt;h2 id=&#34;其他公开仓库&#34;&gt;其他公开仓库
+&lt;/h2&gt;&lt;p&gt;这些不是当前主推项目，但也补上了明确的 GitHub 元信息，避免公开仓库列表里出现空白入口。&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;仓库&lt;/th&gt;
+					&lt;th&gt;说明&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/Agent-test&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Agent-test&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;企业 Agent 后端工程测评仓库 fork，涉及 Python API、异步任务、RAG、权限安全和 Agent 工具调用。&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/fre123-nav&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;fre123-nav&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;免费资源导航站 fork，适合参考导航站、资源聚合、JavaScript 前端和 Vercel 部署。&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;h2 id=&#34;如果你只想快速判断&#34;&gt;如果你只想快速判断
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;想看最完整的开发者工具方向：先看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/dev-cockpit/&#34; &gt;Dev Cockpit&lt;/a&gt; 和 &lt;a class=&#34;link&#34; href=&#34;https://linsk27-github-io.vercel.app/projects/proofpr/&#34; &gt;ProofPR&lt;/a&gt;。&lt;/li&gt;
