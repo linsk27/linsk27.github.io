@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="el-table中sort的常见方法 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 const sort = async (newIndex: number, oldIndex: number) =&gt; { if (newIndex === oldIndex) return; const newData = [...tableData.value.rows]; const [movedItem] = newData.splice(oldIndex, 1); newData.splice(newIndex, 0, movedItem); newData.forEach((item, index) =&gt; { item.index = index; }); // Vue3 响应式更新方式 tableData.value = { ...tableData.value, rows: [...newData] // 强制替换整个数组触发更新 }; sortData.value.tag_groups = newData.map(item =&gt; ({ tag_group_id: item.tag_group_id, index: item.index })); isData .value += 1; // 每次拖拽后更新 key } ">
-<title>el-table中sort(拖拽排序)的常见方法</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Vue-blog 是 linsk27 的 Vue 前端博客项目，展示文章入口、AI 中心、数据分析看板和内容展示页面，适合学习 Vue blog、front-end learning notes 和内容型应用结构。">
+<meta name="keywords" content="Vue-blog, Vue blog project, Vue front-end project, front-end learning notes, content presentation, AI center, data analysis dashboard, Vue, blog, frontend"><title>Vue-blog</title>
 
-<link rel='canonical' href='https://linsk27-github-io.vercel.app/p/el-table%E4%B8%ADsort%E6%8B%96%E6%8B%BD%E6%8E%92%E5%BA%8F%E7%9A%84%E5%B8%B8%E8%A7%81%E6%96%B9%E6%B3%95/'>
+<link rel='canonical' href='https://linsk27-github-io.vercel.app/projects/vue-blog/'>
 
-<link rel="stylesheet" href="/scss/style.min.f932406a37ca0c631a380f2245d21f66d455112aa8bf9590e52e54c4a962056a.css"><meta property='og:title' content="el-table中sort(拖拽排序)的常见方法">
-<meta property='og:description' content="el-table中sort的常见方法 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 const sort = async (newIndex: number, oldIndex: number) =&gt; { if (newIndex === oldIndex) return; const newData = [...tableData.value.rows]; const [movedItem] = newData.splice(oldIndex, 1); newData.splice(newIndex, 0, movedItem); newData.forEach((item, index) =&gt; { item.index = index; }); // Vue3 响应式更新方式 tableData.value = { ...tableData.value, rows: [...newData] // 强制替换整个数组触发更新 }; sortData.value.tag_groups = newData.map(item =&gt; ({ tag_group_id: item.tag_group_id, index: item.index })); isData .value += 1; // 每次拖拽后更新 key } ">
-<meta property='og:url' content='https://linsk27-github-io.vercel.app/p/el-table%E4%B8%ADsort%E6%8B%96%E6%8B%BD%E6%8E%92%E5%BA%8F%E7%9A%84%E5%B8%B8%E8%A7%81%E6%96%B9%E6%B3%95/'>
+<link rel="stylesheet" href="/scss/style.min.f932406a37ca0c631a380f2245d21f66d455112aa8bf9590e52e54c4a962056a.css"><meta property='og:title' content="Vue-blog">
+<meta property='og:description' content="Vue-blog 是 linsk27 的 Vue 前端博客项目，展示文章入口、AI 中心、数据分析看板和内容展示页面，适合学习 Vue blog、front-end learning notes 和内容型应用结构。">
+<meta property='og:url' content='https://linsk27-github-io.vercel.app/projects/vue-blog/'>
 <meta property='og:site_name' content='linsk27 | AI Coding 与前端项目'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Element-Plus' /><meta property='article:tag' content='Typescript' /><meta property='article:published_time' content='2025-03-08T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-03-08T00:00:00&#43;00:00'/>
-<meta name="twitter:title" content="el-table中sort(拖拽排序)的常见方法">
-<meta name="twitter:description" content="el-table中sort的常见方法 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 const sort = async (newIndex: number, oldIndex: number) =&gt; { if (newIndex === oldIndex) return; const newData = [...tableData.value.rows]; const [movedItem] = newData.splice(oldIndex, 1); newData.splice(newIndex, 0, movedItem); newData.forEach((item, index) =&gt; { item.index = index; }); // Vue3 响应式更新方式 tableData.value = { ...tableData.value, rows: [...newData] // 强制替换整个数组触发更新 }; sortData.value.tag_groups = newData.map(item =&gt; ({ tag_group_id: item.tag_group_id, index: item.index })); isData .value += 1; // 每次拖拽后更新 key } ">
+<meta property='og:type' content='article'><meta property='article:section' content='Page' /><meta property='article:published_time' content='2026-05-28T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-05-28T00:00:00&#43;00:00'/><meta property='og:image' content='https://linsk27-github-io.vercel.app/img/projects/vue-blog-demo.png' />
+<meta name="twitter:title" content="Vue-blog">
+<meta name="twitter:description" content="Vue-blog 是 linsk27 的 Vue 前端博客项目，展示文章入口、AI 中心、数据分析看板和内容展示页面，适合学习 Vue blog、front-end learning notes 和内容型应用结构。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://linsk27-github-io.vercel.app/img/projects/vue-blog-demo.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
 <script type="application/ld+json">
 {
@@ -193,7 +194,10 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#el-table中sort的常见方法">el-table中sort的常见方法</a></li>
+    <li><a href="#适合谁">适合谁</a></li>
+    <li><a href="#项目价值">项目价值</a></li>
+    <li><a href="#技术方向">技术方向</a></li>
+    <li><a href="#项目入口">项目入口</a></li>
   </ol>
 </nav>
         </div>
@@ -205,25 +209,30 @@
 
 
             <main class="main full-width">
-    <article class="main-article">
+    <article class="has-image main-article">
     <header class="article-header">
+        <div class="article-image">
+            <a href="/projects/vue-blog/">
+                
+                    <img src="/img/projects/vue-blog-demo.png" loading="lazy" alt="Featured image of post Vue-blog" />
+                
+            </a>
+        </div>
+
+    
 
     <div class="article-details">
-    
-    <header class="article-category">
-        
-            <a href="/categories/%E5%89%8D%E7%AB%AF/" >
-                前端
-            </a>
-        
-    </header>
     
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/el-table%E4%B8%ADsort%E6%8B%96%E6%8B%BD%E6%8E%92%E5%BA%8F%E7%9A%84%E5%B8%B8%E8%A7%81%E6%96%B9%E6%B3%95/">el-table中sort(拖拽排序)的常见方法</a>
+            <a href="/projects/vue-blog/">Vue-blog</a>
         </h2>
     
+        
+        <h3 class="article-subtitle">
+            Vue-blog 是 linsk27 的 Vue 前端博客项目，展示文章入口、AI 中心、数据分析看板和内容展示页面，适合学习 Vue blog、front-end learning notes 和内容型应用结构。
+        </h3>
         
     </div>
 
@@ -244,7 +253,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">2025-03-08</time>
+                <time class="article-time--published">2026-05-28</time>
             </div>
 	        
         <div id="viewCount">
@@ -272,75 +281,52 @@
     <section class="article-content">
     
     
-    <h2 id="el-table中sort的常见方法">el-table中sort的常见方法
-</h2><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">sort</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">newIndex</span><span class="o">:</span> <span class="nx">number</span><span class="p">,</span> <span class="nx">oldIndex</span><span class="o">:</span> <span class="nx">number</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">newIndex</span> <span class="o">===</span> <span class="nx">oldIndex</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">newData</span> <span class="o">=</span> <span class="p">[...</span><span class="nx">tableData</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">rows</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="p">[</span><span class="nx">movedItem</span><span class="p">]</span> <span class="o">=</span> <span class="nx">newData</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">oldIndex</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="nx">newData</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">newIndex</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">movedItem</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">newData</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">item</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">item</span><span class="p">.</span><span class="nx">index</span> <span class="o">=</span> <span class="nx">index</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">});</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Vue3 响应式更新方式
-</span></span></span><span class="line"><span class="cl"><span class="nx">tableData</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="p">{</span> 
-</span></span><span class="line"><span class="cl">  <span class="p">...</span><span class="nx">tableData</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span> 
-</span></span><span class="line"><span class="cl">  <span class="nx">rows</span><span class="o">:</span> <span class="p">[...</span><span class="nx">newData</span><span class="p">]</span> <span class="c1">// 强制替换整个数组触发更新
-</span></span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">sortData</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">tag_groups</span> <span class="o">=</span> <span class="nx">newData</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">item</span> <span class="p">=&gt;</span> <span class="p">({</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">tag_group_id</span><span class="o">:</span> <span class="nx">item</span><span class="p">.</span><span class="nx">tag_group_id</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">index</span><span class="o">:</span> <span class="nx">item</span><span class="p">.</span><span class="nx">index</span>
-</span></span><span class="line"><span class="cl"><span class="p">}));</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">isData</span> <span class="p">.</span><span class="nx">value</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// 每次拖拽后更新 key
-</span></span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div>
+    <p>Vue-blog 是一个 Vue 前端博客项目，用来展示文章入口、AI 中心、数据分析看板和内容型页面结构。它适合作为 Vue blog project、front-end learning notes、content presentation 和前端页面组织方式的参考。</p>
+<p><img src="/img/projects/vue-blog-demo.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Vue blog demo"
+	
+	
+></p>
+<h2 id="适合谁">适合谁
+</h2><ul>
+<li>想参考 Vue 博客首页、文章入口和导航结构的人。</li>
+<li>正在做学习笔记、内容展示或个人博客前端的人。</li>
+<li>需要 AI 中心、数据分析看板和内容型页面组合示例的人。</li>
+<li>想看 Vue 项目如何整理页面层级和视觉入口的人。</li>
+</ul>
+<h2 id="项目价值">项目价值
+</h2><p>Vue-blog 的价值在于它有可访问的线上成品，并且页面结构比普通静态练习更完整。它把博客首页、文章入口、AI 中心和数据分析看板放在同一个前端项目里，适合用来观察内容型应用如何组织导航、视觉层级和页面入口。</p>
+<p>如果你搜索的是 Vue blog project、Vue front-end project、front-end learning notes、content presentation 或 AI center dashboard，这个项目可以作为一个直接可打开的示例。</p>
+<h2 id="技术方向">技术方向
+</h2><ul>
+<li>Vue</li>
+<li>前端页面结构</li>
+<li>博客首页</li>
+<li>内容展示</li>
+<li>AI 中心</li>
+<li>数据分析看板</li>
+<li>学习笔记展示</li>
+</ul>
+<h2 id="项目入口">项目入口
+</h2><ul>
+<li>GitHub 仓库：<a class="link" href="https://github.com/linsk27/Vue-blog"  target="_blank" rel="noopener"
+    >linsk27/Vue-blog</a></li>
+<li>线上演示：<a class="link" href="https://vue-blog-smoky.vercel.app/"  target="_blank" rel="noopener"
+    >vue-blog-smoky.vercel.app</a></li>
+<li>项目总览：<a class="link" href="/projects/" >linsk27 Projects</a></li>
+</ul>
+<p>如果这个 Vue 博客项目对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续完善页面结构、文档和可复用组件示例的主要信号。</p>
+
 </section>
 
 
     <footer class="article-footer">
     
-    <section class="article-tags">
-        
-            <a href="/tags/element-plus/">Element-Plus</a>
-        
-            <a href="/tags/typescript/">Typescript</a>
-        
-    </section>
-
 
     
     <section class="article-copyright">
@@ -365,80 +351,6 @@
     
 
     
-
-<aside class="related-content--wrapper">
-    <h2 class="section-title">相关文章</h2>
-    <div class="related-content">
-        <div class="flex article-list--tile">
-            
-                
-<article class="">
-    <a href="/p/el-select%E6%A0%87%E7%AD%BE%E5%AD%98%E5%9C%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">el-select标签存在的数据匹配问题</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/0603-%E6%89%8B%E6%92%B8%E5%A5%BD%E7%9C%8B%E6%9F%B1%E7%8A%B6%E5%9B%BE%E7%9A%84%E8%AE%B0%E5%BD%95/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">手撸好看柱状图的记录</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/0408-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6%E5%8F%AF%E8%A7%86%E5%8C%96echarts/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">初步接触可视化Echarts</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/0406-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6nuxt3/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">初步接触nuxt3</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/0327-%E5%88%9D%E5%AD%A6promise%E5%AF%B9%E8%B1%A1/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">初学Promise对象</h2>
-        </div>
-    </a>
-</article>
-
-            
-        </div>
-    </div>
-</aside>
 
      
     
