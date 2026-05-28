@@ -1,43 +1,598 @@
-<!doctype html><html lang=zh-cn dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="写后台弹窗会遇见的问题"><title>el-select标签存在的数据匹配问题</title><link rel=canonical href=https://linsk27-github-io.vercel.app/p/el-select%E6%A0%87%E7%AD%BE%E5%AD%98%E5%9C%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98/><link rel=stylesheet href=/scss/style.min.20232342b5a1daea56da236ba30a2ae7f092308770879a3e8e6eb049c97fccbd.css><meta property='og:title' content="el-select标签存在的数据匹配问题"><meta property='og:description' content="写后台弹窗会遇见的问题"><meta property='og:url' content='https://linsk27-github-io.vercel.app/p/el-select%E6%A0%87%E7%AD%BE%E5%AD%98%E5%9C%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98/'><meta property='og:site_name' content='linsk27 | AI Coding 与前端项目'><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='Element-Plus'><meta property='article:tag' content='Vue'><meta property='article:published_time' content='2024-10-13T00:00:00+00:00'><meta property='article:modified_time' content='2024-10-13T00:00:00+00:00'><meta name=twitter:title content="el-select标签存在的数据匹配问题"><meta name=twitter:description content="写后台弹窗会遇见的问题"><link rel="shortcut icon" href=/favicon.ico></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><div id=article-toolbar style=position:sticky;top:5px;z-index:1000><a href=/ class=back-home><svg class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
-<span>返回</span></a></div><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#一-使用方法>一 使用方法</a></li><li><a href=#二-传值问题匹配功能>二 传值问题（匹配功能）</a></li></ol></nav></div></section></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/%E5%89%8D%E7%AB%AF/>前端</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/p/el-select%E6%A0%87%E7%AD%BE%E5%AD%98%E5%9C%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98/>el-select标签存在的数据匹配问题</a></h2><h3 class=article-subtitle>写后台弹窗会遇见的问题</h3></div><footer class=article-time><div><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
-<time class=article-time--published>2024-10-13</time></div><div id=viewCount><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-eye"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12a2 2 0 104 0 2 2 0 00-4 0"/><path d="M21 12c-2.4 4-5.4 6-9 6s-6.6-2-9-6c2.4-4 5.4-6 9-6s6.6 2 9 6"/></svg>
-<time class=article-time--reading><span id=vercount_value_page_pv>loading... </span>次</time></div></footer></div></header><section class=article-content><h2 id=一-使用方法>一 使用方法</h2><p><code>userList</code>数据循环在列表，下拉框显示的值为<code>userList</code>里面的<code>label</code>字段的值，实际值为对应<code>label</code>的<code>uuid</code>值，如下面例子中输出选中<code>小王</code>的值应该为<code>01</code></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-Vue data-lang=Vue><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>template</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>  <span class=p>&lt;</span><span class=nt>el-select</span> <span class=nt>v-model</span><span class=o>=</span><span class=s>&#34;form&#34;</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>el-option</span>
-</span></span><span class=line><span class=cl>      <span class=nt>v-for</span><span class=o>=</span><span class=s>&#34;item in userList&#34;</span><span class=p>
-</span></span></span><span class=line><span class=cl>      <span class=nt>:key</span><span class=o>=</span><span class=s>&#34;item.uuid&#34;</span>
-</span></span><span class=line><span class=cl>      <span class=nt>:label</span><span class=o>=</span><span class=s>&#34;item.username&#34;</span>
-</span></span><span class=line><span class=cl>      <span class=nt>:value</span><span class=o>=</span><span class=s>&#34;item.uuid&#34;</span>
-</span></span><span class=line><span class=cl>    <span class=p>/&gt;</span>
-</span></span><span class=line><span class=cl>  <span class=p>&lt;/</span><span class=nt>el-select</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>template</span><span class=p>&gt;</span>
-</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span><span class=lnt>2
-</span><span class=lnt>3
-</span><span class=lnt>4
-</span><span class=lnt>5
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kr>const</span> <span class=nx>userList</span> <span class=o>=</span> <span class=nx>ref</span><span class=p>([{</span>
-</span></span><span class=line><span class=cl>    <span class=nx>username</span><span class=o>:</span><span class=s1>&#39;小王&#39;</span><span class=p>,</span>
-</span></span><span class=line><span class=cl>    <span class=nx>uuid</span><span class=o>:</span><span class=s1>&#39;01&#39;</span>
-</span></span><span class=line><span class=cl><span class=p>}])</span>
-</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>form</span> <span class=o>=</span> <span class=nx>ref</span><span class=o>&lt;</span><span class=nx>any</span><span class=o>&gt;</span><span class=p>()</span>
-</span></span></code></pre></td></tr></table></div></div><h2 id=二-传值问题匹配功能>二 传值问题（匹配功能）</h2><p>当我们在子组件进行表单操作的时候，需要从父组件往子组件传相关操作数据的值，若传入<code>form</code>的值是<code>小王</code>，则<code>form</code>在下拉框中显示的值为<code>小王</code>,实际值也为<code>小王</code>，若传入的值为<code>01</code>,则下拉框中显示的值为<code>小王</code>，实际值依旧为<code>01</code></p></section><footer class=article-footer><section class=article-tags><a href=/tags/element-plus/>Element-Plus</a>
-<a href=/tags/vue/>Vue</a></section><section class=article-copyright><svg class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
-<span>404_@林达所作</span></section></footer></article><aside class=related-content--wrapper><h2 class=section-title>相关文章</h2><div class=related-content><div class="flex article-list--tile"><article><a href=/p/el-table%E4%B8%ADsort%E6%8B%96%E6%8B%BD%E6%8E%92%E5%BA%8F%E7%9A%84%E5%B8%B8%E8%A7%81%E6%96%B9%E6%B3%95/><div class=article-details><h2 class=article-title>el-table中sort(拖拽排序)的常见方法</h2></div></a></article><article class=has-image><a href=/p/%E6%82%AC%E6%B5%AE%E5%87%BA%E7%8E%B0%E7%AE%AD%E5%A4%B4%E7%9B%92%E5%AD%90%E7%9A%84%E5%86%99%E6%B3%95/><div class=article-image><img src=/p/%E6%82%AC%E6%B5%AE%E5%87%BA%E7%8E%B0%E7%AE%AD%E5%A4%B4%E7%9B%92%E5%AD%90%E7%9A%84%E5%86%99%E6%B3%95/hover.e7138c8c19bc0876d6cd8b59aa3ffb8f_hu_20335af393ebe834.png width=250 height=150 loading=lazy alt="Featured image of post 悬浮出现箭头盒子的写法" data-hash="md5-5xOMjBm8CHbWzYtZqj/7jw=="></div><div class=article-details><h2 class=article-title>悬浮出现箭头盒子的写法</h2></div></a></article><article><a href=/p/%E4%BB%80%E4%B9%88%E6%98%AF%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%8E%BB%E7%94%A8/><div class=article-details><h2 class=article-title>什么是防抖和节流？什么时候去用？</h2></div></a></article><article><a href=/p/js%E4%B8%AD%E6%95%B0%E7%BB%84%E5%8E%BB%E7%9A%84%E5%B8%B8%E8%A7%84%E5%8E%BB%E9%87%8D%E6%96%B9%E6%B3%95/><div class=article-details><h2 class=article-title>js中数组去的常规去重方法</h2></div></a></article><article><a href=/p/v-if%E5%92%8Cv-for%E4%B8%BA%E4%BD%95%E4%B8%8D%E8%AF%A5%E5%90%8C%E6%97%B6%E4%BD%9C%E7%94%A8%E4%BA%8E%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97/><div class=article-details><h2 class=article-title>v-if和v-for为何不该同时作用于一个模块？</h2></div></a></article></div></div></aside><footer class=site-footer><section class=copyright>&copy;
-2024 -
-2026 linsk27</section><section class=powerby>使用 <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> 构建<br>主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.30.0>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-<button class="pswp__button pswp__button--share" title=Share></button>
-<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-</button>
-<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js defer></script><script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script><script src=https://npm.elemecdn.com/nprogress@0.2.0/nprogress.js crossorigin=anonymous></script><link rel=stylesheet href=https://npm.elemecdn.com/nprogress@0.2.0/nprogress.css crossorigin=anonymous><script>NProgress.start(),document.addEventListener("readystatechange",()=>{document.readyState==="interactive"&&NProgress.inc(.8),document.readyState==="complete"&&NProgress.done()})</script><script defer src=https://cn.vercount.one/js></script><script>function showHideView(){let e=document.querySelectorAll("#viewCount");if(e){let t=document.querySelector(".article-page");t||e.forEach(e=>{e.style.display="none"})}}showHideView()</script></body></html>
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="写后台弹窗会遇见的问题">
+<title>el-select标签存在的数据匹配问题</title>
+
+<link rel='canonical' href='https://linsk27-github-io.vercel.app/p/el-select%E6%A0%87%E7%AD%BE%E5%AD%98%E5%9C%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98/'>
+
+<link rel="stylesheet" href="/scss/style.min.f932406a37ca0c631a380f2245d21f66d455112aa8bf9590e52e54c4a962056a.css"><meta property='og:title' content="el-select标签存在的数据匹配问题">
+<meta property='og:description' content="写后台弹窗会遇见的问题">
+<meta property='og:url' content='https://linsk27-github-io.vercel.app/p/el-select%E6%A0%87%E7%AD%BE%E5%AD%98%E5%9C%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98/'>
+<meta property='og:site_name' content='linsk27 | AI Coding 与前端项目'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Element-Plus' /><meta property='article:tag' content='Vue' /><meta property='article:published_time' content='2024-10-13T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-10-13T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="el-select标签存在的数据匹配问题">
+<meta name="twitter:description" content="写后台弹窗会遇见的问题">
+    <link rel="shortcut icon" href="/favicon.ico" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://linsk27-github-io.vercel.app/#person",
+      "name": "linsk27",
+      "url": "https://linsk27-github-io.vercel.app/",
+      "sameAs": [
+        "https://github.com/linsk27",
+        "https://space.bilibili.com/674582664"
+      ],
+      "knowsAbout": [
+        "Vue",
+        "TypeScript",
+        "AI Coding",
+        "GitHub Actions",
+        "Local Development Tools",
+        "Flask",
+        "MySQL",
+        "Data Visualization"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://linsk27-github-io.vercel.app/#website",
+      "name": "linsk27 | AI Coding 与前端项目",
+      "url": "https://linsk27-github-io.vercel.app/",
+      "description": "linsk27 的个人项目主页，记录 Vue、TypeScript、AI Coding、本地开发工具、GitHub Actions、Flask、MySQL 和全栈项目实践。",
+      "publisher": {
+        "@id": "https://linsk27-github-io.vercel.app/#person"
+      }
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://linsk27-github-io.vercel.app/projects/#collection",
+      "name": "linsk27 Projects",
+      "url": "https://linsk27-github-io.vercel.app/projects/",
+      "description": "Dev Cockpit, ProofPR, AI Vue Flask Blog, AI-v0.dev, Vue-blog and other Vue, TypeScript, AI Coding, Flask, MySQL, GitHub Actions projects by linsk27.",
+      "isPartOf": {
+        "@id": "https://linsk27-github-io.vercel.app/#website"
+      },
+      "about": {
+        "@id": "https://linsk27-github-io.vercel.app/#person"
+      },
+      "hasPart": [
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "Dev Cockpit",
+          "codeRepository": "https://github.com/linsk27/local-dev-cockpit",
+          "programmingLanguage": ["TypeScript", "Vue"],
+          "description": "Local development dashboard for restoring project state, commands, logs, ports, Git status, runtime diagnostics, and AI coding context.",
+          "image": "https://linsk27-github-io.vercel.app/img/projects/dev-cockpit-local-development-dashboard.png",
+          "url": "https://linsk27-github-io.vercel.app/projects/#dev-cockpit"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "ProofPR",
+          "codeRepository": "https://github.com/linsk27/proof-pr",
+          "programmingLanguage": ["TypeScript", "JavaScript"],
+          "description": "GitHub Action and CLI for pull request evidence scanning, PR triage, dependency risk, workflow permission checks, secrets detection, MCP security, and maintainer review guidance.",
+          "image": "https://linsk27-github-io.vercel.app/img/projects/proofpr-github-action-pr-review-report.png",
+          "url": "https://linsk27-github-io.vercel.app/projects/#proofpr"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "AI-Vue3-python-flask-Blog",
+          "codeRepository": "https://github.com/linsk27/AI-Vue3-python-flask-Blog",
+          "programmingLanguage": ["Vue", "Python", "TypeScript"],
+          "description": "Vue 3, Flask, MySQL and AI blog system for full-stack practice, course design, graduation project, and secondary development.",
+          "image": "https://linsk27-github-io.vercel.app/img/projects/ai-vue-flask-blog-home-page.png",
+          "url": "https://linsk27-github-io.vercel.app/projects/#ai-vue3-python-flask-blog"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "AI-v0.dev-",
+          "codeRepository": "https://github.com/linsk27/AI-v0.dev-",
+          "programmingLanguage": ["TypeScript", "React"],
+          "description": "Next.js and TypeScript prototype for AI learning dashboards, v0.dev UI experiments, product interface design, progress tracking, and project cards.",
+          "image": "https://linsk27-github-io.vercel.app/img/projects/ai-v0-dev-learning-dashboard.png",
+          "url": "https://linsk27-github-io.vercel.app/projects/#ai-v0dev-"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "Vue-blog",
+          "codeRepository": "https://github.com/linsk27/Vue-blog",
+          "programmingLanguage": ["Vue", "TypeScript"],
+          "description": "Vue blog front-end project with article pages, AI center, and data analysis dashboard screens.",
+          "image": "https://linsk27-github-io.vercel.app/img/projects/vue-blog-demo.png",
+          "url": "https://linsk27-github-io.vercel.app/projects/#vue-blog"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "bilibili-nuxt3",
+          "codeRepository": "https://github.com/linsk27/bilibili-nuxt3",
+          "programmingLanguage": ["TypeScript", "Vue"],
+          "description": "Nuxt 3 and TypeScript practice project for modern front-end app structure.",
+          "url": "https://linsk27-github-io.vercel.app/projects/"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "echarts-learn",
+          "codeRepository": "https://github.com/linsk27/echarts-learn",
+          "programmingLanguage": ["Vue", "JavaScript"],
+          "description": "Vue and ECharts data visualization practice for chart expression and interaction details.",
+          "url": "https://linsk27-github-io.vercel.app/projects/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended">
+
+
+        <div id="article-toolbar" style="position: sticky;top: 5px;z-index: 1000;">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>返回</span>
+            </a>
+        </div>
+    
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#一-使用方法">一 使用方法</a></li>
+    <li><a href="#二-传值问题匹配功能">二 传值问题（匹配功能）</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E5%89%8D%E7%AB%AF/" >
+                前端
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/el-select%E6%A0%87%E7%AD%BE%E5%AD%98%E5%9C%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98/">el-select标签存在的数据匹配问题</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            写后台弹窗会遇见的问题
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2024-10-13</time>
+            </div>
+	        
+        <div id="viewCount">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-eye"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" /></svg>
+            <time class="article-time--reading">
+                
+                <span id="vercount_value_page_pv">loading... </span>次
+            </time>
+        </div>
+
+        
+
+        
+    </footer>
+    
+
+    
+
+    
+</div>
+
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="一-使用方法">一 使用方法
+</h2><p><code>userList</code>数据循环在列表，下拉框显示的值为<code>userList</code>里面的<code>label</code>字段的值，实际值为对应<code>label</code>的<code>uuid</code>值，如下面例子中输出选中<code>小王</code>的值应该为<code>01</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Vue" data-lang="Vue"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">el-select</span> <span class="nt">v-model</span><span class="o">=</span><span class="s">&#34;form&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">el-option</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">v-for</span><span class="o">=</span><span class="s">&#34;item in userList&#34;</span><span class="p">
+</span></span></span><span class="line"><span class="cl">      <span class="nt">:key</span><span class="o">=</span><span class="s">&#34;item.uuid&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">:label</span><span class="o">=</span><span class="s">&#34;item.username&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">:value</span><span class="o">=</span><span class="s">&#34;item.uuid&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">el-select</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">userList</span> <span class="o">=</span> <span class="nx">ref</span><span class="p">([{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">username</span><span class="o">:</span><span class="s1">&#39;小王&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">uuid</span><span class="o">:</span><span class="s1">&#39;01&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}])</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">form</span> <span class="o">=</span> <span class="nx">ref</span><span class="o">&lt;</span><span class="nx">any</span><span class="o">&gt;</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="二-传值问题匹配功能">二 传值问题（匹配功能）
+</h2><p>当我们在子组件进行表单操作的时候，需要从父组件往子组件传相关操作数据的值，若传入<code>form</code>的值是<code>小王</code>，则<code>form</code>在下拉框中显示的值为<code>小王</code>,实际值也为<code>小王</code>，若传入的值为<code>01</code>,则下拉框中显示的值为<code>小王</code>，实际值依旧为<code>01</code></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/element-plus/">Element-Plus</a>
+        
+            <a href="/tags/vue/">Vue</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>404_@林达所作</span>
+
+    </section>
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/el-table%E4%B8%ADsort%E6%8B%96%E6%8B%BD%E6%8E%92%E5%BA%8F%E7%9A%84%E5%B8%B8%E8%A7%81%E6%96%B9%E6%B3%95/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">el-table中sort(拖拽排序)的常见方法</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E6%82%AC%E6%B5%AE%E5%87%BA%E7%8E%B0%E7%AE%AD%E5%A4%B4%E7%9B%92%E5%AD%90%E7%9A%84%E5%86%99%E6%B3%95/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E6%82%AC%E6%B5%AE%E5%87%BA%E7%8E%B0%E7%AE%AD%E5%A4%B4%E7%9B%92%E5%AD%90%E7%9A%84%E5%86%99%E6%B3%95/hover.e7138c8c19bc0876d6cd8b59aa3ffb8f_hu_20335af393ebe834.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 悬浮出现箭头盒子的写法"
+                        
+                        data-hash="md5-5xOMjBm8CHbWzYtZqj/7jw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">悬浮出现箭头盒子的写法</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E4%BB%80%E4%B9%88%E6%98%AF%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%8E%BB%E7%94%A8/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">什么是防抖和节流？什么时候去用？</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/js%E4%B8%AD%E6%95%B0%E7%BB%84%E5%8E%BB%E7%9A%84%E5%B8%B8%E8%A7%84%E5%8E%BB%E9%87%8D%E6%96%B9%E6%B3%95/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">js中数组去的常规去重方法</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/v-if%E5%92%8Cv-for%E4%B8%BA%E4%BD%95%E4%B8%8D%E8%AF%A5%E5%90%8C%E6%97%B6%E4%BD%9C%E7%94%A8%E4%BA%8E%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">v-if和v-for为何不该同时作用于一个模块？</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2026 linsk27
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<script src="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.css" crossorigin="anonymous" />
+<script>
+    NProgress.start();
+    document.addEventListener("readystatechange", () => {
+        if (document.readyState === "interactive") NProgress.inc(0.8);
+        if (document.readyState === "complete") NProgress.done();
+    });
+</script>
+
+<script defer src="https://cn.vercount.one/js"></script>
+<script>
+    function showHideView() {
+        
+        let viewCounts = document.querySelectorAll("#viewCount");
+        if (viewCounts) {
+            
+            let article =  document.querySelector(".article-page");
+            if (!article) {
+                viewCounts.forEach(ele => {
+                    ele.style.display = 'none';
+                });
+            }
+        }
+    }
+    
+    showHideView();
+</script>
+
+    </body>
+</html>
