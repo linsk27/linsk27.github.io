@@ -2,17 +2,17 @@
 
 这是 linsk27 的个人项目主页和作品集入口，中文优先展示我正在做的前端项目、本地开发工具、AI 辅助开发实践、数据可视化大屏和全栈应用。
 
-线上访问：[linsk27-github-io.vercel.app](https://linsk27-github-io.vercel.app)
+线上访问：[linsk27.github.io](https://linsk27.github.io/)
 
 ## 主要入口
 
-- [关于我](https://linsk27-github-io.vercel.app/about/)
-- [项目主页](https://linsk27-github-io.vercel.app/projects/)
-- [GitHub 项目与 Star 入口](https://linsk27-github-io.vercel.app/github/)
-- [Dev Cockpit](https://linsk27-github-io.vercel.app/projects/dev-cockpit/)
-- [ProofPR](https://linsk27-github-io.vercel.app/projects/proofpr/)
-- [skills-manage](https://linsk27-github-io.vercel.app/projects/skills-manage/)
-- [feidu](https://linsk27-github-io.vercel.app/projects/feidu/)
+- [关于我](https://linsk27.github.io/about/)
+- [项目主页](https://linsk27.github.io/projects/)
+- [GitHub 项目与 Star 入口](https://linsk27.github.io/github/)
+- [Dev Cockpit](https://linsk27.github.io/projects/dev-cockpit/)
+- [ProofPR](https://linsk27.github.io/projects/proofpr/)
+- [skills-manage](https://linsk27.github.io/projects/skills-manage/)
+- [feidu](https://linsk27.github.io/projects/feidu/)
 
 ## 项目方向
 
@@ -28,6 +28,6 @@ Vue 3、TypeScript、Nuxt 3、React、Tauri、Electron、Flask、MySQL、ECharts
 
 ## 联系
 
-项目问题欢迎在对应仓库提交 issue。合作或快速联系可以加微信：linsk27。GitHub 项目入口：[linsk27 GitHub 项目与 Star 入口](https://linsk27-github-io.vercel.app/github/)。
+项目问题欢迎在对应仓库提交 issue。合作或快速联系可以加微信：linsk27。GitHub 项目入口：[linsk27 GitHub 项目与 Star 入口](https://linsk27.github.io/github/)。
 
 如果某个项目对你有帮助，欢迎给对应仓库点 Star，这会帮助我判断下一步优先完善哪个方向。

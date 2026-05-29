@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Categories on linsk27 | AI 辅助开发与前端项目</title>
-        <link>https://linsk27-github-io.vercel.app/categories/</link>
+        <link>https://linsk27.github.io/categories/</link>
         <description>Recent content in Categories on linsk27 | AI 辅助开发与前端项目</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>linsk27</copyright>
-        <lastBuildDate>Tue, 03 Jun 2025 01:05:52 +0800</lastBuildDate><atom:link href="https://linsk27-github-io.vercel.app/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 03 Jun 2025 01:05:52 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>前端</title>
-        <link>https://linsk27-github-io.vercel.app/categories/%E5%89%8D%E7%AB%AF/</link>
+        <link>https://linsk27.github.io/categories/%E5%89%8D%E7%AB%AF/</link>
         <pubDate>Tue, 03 Jun 2025 01:05:52 +0800</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/categories/%E5%89%8D%E7%AB%AF/</guid>
+        <guid>https://linsk27.github.io/categories/%E5%89%8D%E7%AB%AF/</guid>
         <description></description>
         </item>
         <item>
         <title>工程</title>
-        <link>https://linsk27-github-io.vercel.app/categories/%E5%B7%A5%E7%A8%8B/</link>
+        <link>https://linsk27.github.io/categories/%E5%B7%A5%E7%A8%8B/</link>
         <pubDate>Tue, 03 Jun 2025 00:58:55 +0800</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/categories/%E5%B7%A5%E7%A8%8B/</guid>
+        <guid>https://linsk27.github.io/categories/%E5%B7%A5%E7%A8%8B/</guid>
         <description></description>
         </item>
         <item>
         <title>算法</title>
-        <link>https://linsk27-github-io.vercel.app/categories/%E7%AE%97%E6%B3%95/</link>
+        <link>https://linsk27.github.io/categories/%E7%AE%97%E6%B3%95/</link>
         <pubDate>Fri, 21 Mar 2025 23:56:52 +0800</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/categories/%E7%AE%97%E6%B3%95/</guid>
+        <guid>https://linsk27.github.io/categories/%E7%AE%97%E6%B3%95/</guid>
         <description></description>
         </item>
         <item>
         <title>工具</title>
-        <link>https://linsk27-github-io.vercel.app/categories/%E5%B7%A5%E5%85%B7/</link>
+        <link>https://linsk27.github.io/categories/%E5%B7%A5%E5%85%B7/</link>
         <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/categories/%E5%B7%A5%E5%85%B7/</guid>
+        <guid>https://linsk27.github.io/categories/%E5%B7%A5%E5%85%B7/</guid>
         <description></description>
         </item>
         <item>
         <title>美化</title>
-        <link>https://linsk27-github-io.vercel.app/categories/%E7%BE%8E%E5%8C%96/</link>
+        <link>https://linsk27.github.io/categories/%E7%BE%8E%E5%8C%96/</link>
         <pubDate>Sat, 19 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/categories/%E7%BE%8E%E5%8C%96/</guid>
+        <guid>https://linsk27.github.io/categories/%E7%BE%8E%E5%8C%96/</guid>
         <description></description>
         </item>
         <item>
         <title>Linux</title>
-        <link>https://linsk27-github-io.vercel.app/categories/linux/</link>
+        <link>https://linsk27.github.io/categories/linux/</link>
         <pubDate>Mon, 14 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/categories/linux/</guid>
+        <guid>https://linsk27.github.io/categories/linux/</guid>
         <description></description>
         </item>
         <item>
         <title>Test</title>
-        <link>https://linsk27-github-io.vercel.app/categories/test/</link>
+        <link>https://linsk27.github.io/categories/test/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/categories/test/</guid>
-        <description>&lt;img src="https://linsk27-github-io.vercel.app/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post Test" /&gt;</description>
+        <guid>https://linsk27.github.io/categories/test/</guid>
+        <description>&lt;img src="https://linsk27.github.io/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post Test" /&gt;</description>
         </item>
         
     </channel>

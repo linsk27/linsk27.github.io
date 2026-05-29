@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on linsk27 | AI 辅助开发与前端项目</title>
-        <link>https://linsk27-github-io.vercel.app/post/</link>
+        <link>https://linsk27.github.io/post/</link>
         <description>Recent content in Posts on linsk27 | AI 辅助开发与前端项目</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>linsk27</copyright>
-        <lastBuildDate>Tue, 03 Jun 2025 01:05:52 +0800</lastBuildDate><atom:link href="https://linsk27-github-io.vercel.app/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 03 Jun 2025 01:05:52 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>手撸好看柱状图的记录</title>
-        <link>https://linsk27-github-io.vercel.app/p/0603-%E6%89%8B%E6%92%B8%E5%A5%BD%E7%9C%8B%E6%9F%B1%E7%8A%B6%E5%9B%BE%E7%9A%84%E8%AE%B0%E5%BD%95/</link>
+        <link>https://linsk27.github.io/p/0603-%E6%89%8B%E6%92%B8%E5%A5%BD%E7%9C%8B%E6%9F%B1%E7%8A%B6%E5%9B%BE%E7%9A%84%E8%AE%B0%E5%BD%95/</link>
         <pubDate>Tue, 03 Jun 2025 01:05:52 +0800</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/p/0603-%E6%89%8B%E6%92%B8%E5%A5%BD%E7%9C%8B%E6%9F%B1%E7%8A%B6%E5%9B%BE%E7%9A%84%E8%AE%B0%E5%BD%95/</guid>
+        <guid>https://linsk27.github.io/p/0603-%E6%89%8B%E6%92%B8%E5%A5%BD%E7%9C%8B%E6%9F%B1%E7%8A%B6%E5%9B%BE%E7%9A%84%E8%AE%B0%E5%BD%95/</guid>
         <description>&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2025/05/29/fjPIURxH1rTybDw.png&#34;
 	
 	
@@ -139,10 +139,10 @@
         </item>
         <item>
         <title>初步接触Docker</title>
-        <link>https://linsk27-github-io.vercel.app/p/0603-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6docker/</link>
+        <link>https://linsk27.github.io/p/0603-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6docker/</link>
         <pubDate>Tue, 03 Jun 2025 00:58:55 +0800</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/p/0603-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6docker/</guid>
+        <guid>https://linsk27.github.io/p/0603-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6docker/</guid>
         <description>&lt;h2 id=&#34;docker-笔记常用命令整理&#34;&gt;Docker 笔记：常用命令整理
 &lt;/h2&gt;&lt;h3 id=&#34;镜像管理&#34;&gt;镜像管理
 &lt;/h3&gt;&lt;ul&gt;
@@ -556,10 +556,10 @@
         </item>
         <item>
         <title>初步接触Nginx</title>
-        <link>https://linsk27-github-io.vercel.app/p/0423-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6nginx/</link>
+        <link>https://linsk27.github.io/p/0423-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6nginx/</link>
         <pubDate>Wed, 23 Apr 2025 12:25:57 +0800</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/p/0423-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6nginx/</guid>
+        <guid>https://linsk27.github.io/p/0423-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6nginx/</guid>
         <description>&lt;hr&gt;
 &lt;h2 id=&#34;初步接触-nginx&#34;&gt;初步接触 Nginx
 &lt;/h2&gt;&lt;hr&gt;
@@ -1055,10 +1055,10 @@
         </item>
         <item>
         <title>初步接触可视化Echarts</title>
-        <link>https://linsk27-github-io.vercel.app/p/0408-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6%E5%8F%AF%E8%A7%86%E5%8C%96echarts/</link>
+        <link>https://linsk27.github.io/p/0408-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6%E5%8F%AF%E8%A7%86%E5%8C%96echarts/</link>
         <pubDate>Tue, 08 Apr 2025 17:44:12 +0800</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/p/0408-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6%E5%8F%AF%E8%A7%86%E5%8C%96echarts/</guid>
+        <guid>https://linsk27.github.io/p/0408-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6%E5%8F%AF%E8%A7%86%E5%8C%96echarts/</guid>
         <description>&lt;h2 id=&#34;什么是echarts&#34;&gt;什么是Echarts
 &lt;/h2&gt;&lt;p&gt;ECharts（全称：&lt;strong&gt;Enterprise Charts&lt;/strong&gt;）是由百度开源的一个基于 JavaScript 的&lt;strong&gt;可视化图表库&lt;/strong&gt;，专门用于构建交互性强、表现丰富的数据可视化图表。&lt;/p&gt;
 &lt;hr&gt;
@@ -2289,10 +2289,10 @@
         </item>
         <item>
         <title>初步接触nuxt3</title>
-        <link>https://linsk27-github-io.vercel.app/p/0406-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6nuxt3/</link>
+        <link>https://linsk27.github.io/p/0406-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6nuxt3/</link>
         <pubDate>Sun, 06 Apr 2025 19:18:28 +0800</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/p/0406-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6nuxt3/</guid>
+        <guid>https://linsk27.github.io/p/0406-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6nuxt3/</guid>
         <description>&lt;h2 id=&#34;关键概念&#34;&gt;关键概念
 &lt;/h2&gt;&lt;h3 id=&#34;导入功能的提升&#34;&gt;导入功能的提升
 &lt;/h3&gt;&lt;h5 id=&#34;components-文件夹组件自动导入&#34;&gt;Components 文件夹组件自动导入
@@ -2767,10 +2767,10 @@
         </item>
         <item>
         <title>初学Promise对象</title>
-        <link>https://linsk27-github-io.vercel.app/p/0327-%E5%88%9D%E5%AD%A6promise%E5%AF%B9%E8%B1%A1/</link>
+        <link>https://linsk27.github.io/p/0327-%E5%88%9D%E5%AD%A6promise%E5%AF%B9%E8%B1%A1/</link>
         <pubDate>Thu, 27 Mar 2025 22:33:37 +0800</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/p/0327-%E5%88%9D%E5%AD%A6promise%E5%AF%B9%E8%B1%A1/</guid>
+        <guid>https://linsk27.github.io/p/0327-%E5%88%9D%E5%AD%A6promise%E5%AF%B9%E8%B1%A1/</guid>
         <description>&lt;h1 id=&#34;初学promise对象异步基础&#34;&gt;初学Promise对象，异步基础
 &lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;推荐实践代码，自己动手调试，更容易理解原理&lt;/li&gt;
@@ -3049,10 +3049,10 @@
         </item>
         <item>
         <title>XMLHttpRequest、Axios 与 Fetch 在 Vue3 中的深度解析</title>
-        <link>https://linsk27-github-io.vercel.app/p/0322-%E4%B8%89%E7%A7%8D%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8/</link>
+        <link>https://linsk27.github.io/p/0322-%E4%B8%89%E7%A7%8D%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8/</link>
         <pubDate>Sat, 22 Mar 2025 12:01:56 +0800</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/p/0322-%E4%B8%89%E7%A7%8D%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8/</guid>
+        <guid>https://linsk27.github.io/p/0322-%E4%B8%89%E7%A7%8D%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8/</guid>
         <description>&lt;h1 id=&#34;xmlhttprequestaxios-与-fetch-在-vue3-中的深度解析&#34;&gt;XMLHttpRequest、Axios 与 Fetch 在 Vue3 中的深度解析
 &lt;/h1&gt;&lt;h2 id=&#34;一xmlhttprequest-xhr&#34;&gt;一、XMLHttpRequest (XHR)
 &lt;/h2&gt;&lt;h3 id=&#34;核心特性&#34;&gt;核心特性
@@ -3486,10 +3486,10 @@
         </item>
         <item>
         <title>链表循环--哈希方法</title>
-        <link>https://linsk27-github-io.vercel.app/p/0321-%E9%93%BE%E8%A1%A8%E5%BE%AA%E7%8E%AF-%E5%93%88%E5%B8%8C%E6%96%B9%E6%B3%95/</link>
+        <link>https://linsk27.github.io/p/0321-%E9%93%BE%E8%A1%A8%E5%BE%AA%E7%8E%AF-%E5%93%88%E5%B8%8C%E6%96%B9%E6%B3%95/</link>
         <pubDate>Fri, 21 Mar 2025 23:56:52 +0800</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/p/0321-%E9%93%BE%E8%A1%A8%E5%BE%AA%E7%8E%AF-%E5%93%88%E5%B8%8C%E6%96%B9%E6%B3%95/</guid>
+        <guid>https://linsk27.github.io/p/0321-%E9%93%BE%E8%A1%A8%E5%BE%AA%E7%8E%AF-%E5%93%88%E5%B8%8C%E6%96%B9%E6%B3%95/</guid>
         <description>&lt;h1 id=&#34;链表环检测算法leetcode-141&#34;&gt;链表环检测算法（LeetCode 141）
 &lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2025/03/21/kg5WbYcUtsVECIL.png&#34;
 	
@@ -3629,11 +3629,11 @@
         </item>
         <item>
         <title>Webpack初步接触</title>
-        <link>https://linsk27-github-io.vercel.app/p/0321-webpack%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6/</link>
+        <link>https://linsk27.github.io/p/0321-webpack%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6/</link>
         <pubDate>Fri, 21 Mar 2025 11:49:00 +0800</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/p/0321-webpack%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6/</guid>
-        <description>&lt;img src="https://linsk27-github-io.vercel.app/p/0321-webpack%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6/webpack.png" alt="Featured image of post Webpack初步接触" /&gt;&lt;h1 id=&#34;webpack-初步接触&#34;&gt;Webpack 初步接触
+        <guid>https://linsk27.github.io/p/0321-webpack%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6/</guid>
+        <description>&lt;img src="https://linsk27.github.io/p/0321-webpack%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6/webpack.png" alt="Featured image of post Webpack初步接触" /&gt;&lt;h1 id=&#34;webpack-初步接触&#34;&gt;Webpack 初步接触
 &lt;/h1&gt;&lt;h2 id=&#34;一什么是-webpack&#34;&gt;一、什么是 Webpack？
 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Webpack&lt;/strong&gt; 是一个 &lt;strong&gt;静态模块打包工具&lt;/strong&gt;，用于将多个模块、文件和资源进行打包，以便在浏览器中高效加载和运行。&lt;/p&gt;
 &lt;h3 id=&#34;核心功能&#34;&gt;核心功能：
@@ -3802,10 +3802,10 @@
         </item>
         <item>
         <title>两数之和--哈希方法</title>
-        <link>https://linsk27-github-io.vercel.app/p/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C--%E5%93%88%E5%B8%8C%E6%96%B9%E6%B3%95/</link>
+        <link>https://linsk27.github.io/p/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C--%E5%93%88%E5%B8%8C%E6%96%B9%E6%B3%95/</link>
         <pubDate>Sun, 16 Mar 2025 23:10:13 +0800</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/p/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C--%E5%93%88%E5%B8%8C%E6%96%B9%E6%B3%95/</guid>
+        <guid>https://linsk27.github.io/p/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C--%E5%93%88%E5%B8%8C%E6%96%B9%E6%B3%95/</guid>
         <description>&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2025/03/16/lp6rdvbM2GtfhJL.png&#34;
 	
 	
@@ -4055,11 +4055,11 @@
         </item>
         <item>
         <title>什么是SEO？</title>
-        <link>https://linsk27-github-io.vercel.app/p/0315-%E4%BB%80%E4%B9%88%E6%98%AFseo/</link>
+        <link>https://linsk27.github.io/p/0315-%E4%BB%80%E4%B9%88%E6%98%AFseo/</link>
         <pubDate>Sat, 15 Mar 2025 13:29:13 +0800</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/p/0315-%E4%BB%80%E4%B9%88%E6%98%AFseo/</guid>
-        <description>&lt;img src="https://linsk27-github-io.vercel.app/p/0315-%E4%BB%80%E4%B9%88%E6%98%AFseo/SEO.jpeg" alt="Featured image of post 什么是SEO？" /&gt;&lt;h3 id=&#34;seo本质&#34;&gt;&lt;strong&gt;SEO本质&lt;/strong&gt;
+        <guid>https://linsk27.github.io/p/0315-%E4%BB%80%E4%B9%88%E6%98%AFseo/</guid>
+        <description>&lt;img src="https://linsk27.github.io/p/0315-%E4%BB%80%E4%B9%88%E6%98%AFseo/SEO.jpeg" alt="Featured image of post 什么是SEO？" /&gt;&lt;h3 id=&#34;seo本质&#34;&gt;&lt;strong&gt;SEO本质&lt;/strong&gt;
 &lt;/h3&gt;&lt;p&gt;&lt;strong&gt;解决两个匹配问题：&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;内容匹配&lt;/strong&gt;：让网站内容精准对应搜索者的真实需求（比如用户搜「如何修复冰箱不制冷」，你的网页必须提供具体解决方案，而非只介绍冰箱品牌）&lt;/li&gt;
@@ -4128,11 +4128,11 @@
         </item>
         <item>
         <title>SEO优化手段---Canonical</title>
-        <link>https://linsk27-github-io.vercel.app/p/seo%E4%BC%98%E5%8C%96%E6%89%8B%E6%AE%B5---canonical/</link>
+        <link>https://linsk27.github.io/p/seo%E4%BC%98%E5%8C%96%E6%89%8B%E6%AE%B5---canonical/</link>
         <pubDate>Fri, 14 Mar 2025 13:29:13 +0800</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/p/seo%E4%BC%98%E5%8C%96%E6%89%8B%E6%AE%B5---canonical/</guid>
-        <description>&lt;img src="https://linsk27-github-io.vercel.app/p/seo%E4%BC%98%E5%8C%96%E6%89%8B%E6%AE%B5---canonical/SEO.jpeg" alt="Featured image of post SEO优化手段---Canonical" /&gt;&lt;p&gt;&lt;code&gt;&amp;lt;link rel=&amp;quot;canonical&amp;quot; href=&amp;quot;xxxx/t&amp;quot;&amp;gt;&lt;/code&gt;&lt;/p&gt;
+        <guid>https://linsk27.github.io/p/seo%E4%BC%98%E5%8C%96%E6%89%8B%E6%AE%B5---canonical/</guid>
+        <description>&lt;img src="https://linsk27.github.io/p/seo%E4%BC%98%E5%8C%96%E6%89%8B%E6%AE%B5---canonical/SEO.jpeg" alt="Featured image of post SEO优化手段---Canonical" /&gt;&lt;p&gt;&lt;code&gt;&amp;lt;link rel=&amp;quot;canonical&amp;quot; href=&amp;quot;xxxx/t&amp;quot;&amp;gt;&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;主要目的：&lt;strong&gt;解决 &lt;strong&gt;重复内容（Duplicate Content）&lt;/strong&gt; 问题，并明确告知&lt;/strong&gt;搜索引擎&lt;/strong&gt;哪个是页面的“规范版本”（Canonical URL）。&lt;/p&gt;
 &lt;h3 id=&#34;1-什么是canonical标签&#34;&gt;&lt;strong&gt;1. 什么是Canonical标签？&lt;/strong&gt;
 &lt;/h3&gt;&lt;ul&gt;
@@ -4354,10 +4354,10 @@
         </item>
         <item>
         <title>el-table中sort(拖拽排序)的常见方法</title>
-        <link>https://linsk27-github-io.vercel.app/p/el-table%E4%B8%ADsort%E6%8B%96%E6%8B%BD%E6%8E%92%E5%BA%8F%E7%9A%84%E5%B8%B8%E8%A7%81%E6%96%B9%E6%B3%95/</link>
+        <link>https://linsk27.github.io/p/el-table%E4%B8%ADsort%E6%8B%96%E6%8B%BD%E6%8E%92%E5%BA%8F%E7%9A%84%E5%B8%B8%E8%A7%81%E6%96%B9%E6%B3%95/</link>
         <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/p/el-table%E4%B8%ADsort%E6%8B%96%E6%8B%BD%E6%8E%92%E5%BA%8F%E7%9A%84%E5%B8%B8%E8%A7%81%E6%96%B9%E6%B3%95/</guid>
+        <guid>https://linsk27.github.io/p/el-table%E4%B8%ADsort%E6%8B%96%E6%8B%BD%E6%8E%92%E5%BA%8F%E7%9A%84%E5%B8%B8%E8%A7%81%E6%96%B9%E6%B3%95/</guid>
         <description>&lt;h2 id=&#34;el-table中sort的常见方法&#34;&gt;el-table中sort的常见方法
 &lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -4417,11 +4417,11 @@
         </item>
         <item>
         <title>悬浮出现箭头盒子的写法</title>
-        <link>https://linsk27-github-io.vercel.app/p/%E6%82%AC%E6%B5%AE%E5%87%BA%E7%8E%B0%E7%AE%AD%E5%A4%B4%E7%9B%92%E5%AD%90%E7%9A%84%E5%86%99%E6%B3%95/</link>
+        <link>https://linsk27.github.io/p/%E6%82%AC%E6%B5%AE%E5%87%BA%E7%8E%B0%E7%AE%AD%E5%A4%B4%E7%9B%92%E5%AD%90%E7%9A%84%E5%86%99%E6%B3%95/</link>
         <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/p/%E6%82%AC%E6%B5%AE%E5%87%BA%E7%8E%B0%E7%AE%AD%E5%A4%B4%E7%9B%92%E5%AD%90%E7%9A%84%E5%86%99%E6%B3%95/</guid>
-        <description>&lt;img src="https://linsk27-github-io.vercel.app/p/%E6%82%AC%E6%B5%AE%E5%87%BA%E7%8E%B0%E7%AE%AD%E5%A4%B4%E7%9B%92%E5%AD%90%E7%9A%84%E5%86%99%E6%B3%95/hover.png" alt="Featured image of post 悬浮出现箭头盒子的写法" /&gt;&lt;h2 id=&#34;模板部分&#34;&gt;模板部分
+        <guid>https://linsk27.github.io/p/%E6%82%AC%E6%B5%AE%E5%87%BA%E7%8E%B0%E7%AE%AD%E5%A4%B4%E7%9B%92%E5%AD%90%E7%9A%84%E5%86%99%E6%B3%95/</guid>
+        <description>&lt;img src="https://linsk27.github.io/p/%E6%82%AC%E6%B5%AE%E5%87%BA%E7%8E%B0%E7%AE%AD%E5%A4%B4%E7%9B%92%E5%AD%90%E7%9A%84%E5%86%99%E6%B3%95/hover.png" alt="Featured image of post 悬浮出现箭头盒子的写法" /&gt;&lt;h2 id=&#34;模板部分&#34;&gt;模板部分
 &lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -4546,11 +4546,11 @@
         </item>
         <item>
         <title>gitee仓库的第一次推送遇见的错误</title>
-        <link>https://linsk27-github-io.vercel.app/p/gitee%E4%BB%93%E5%BA%93%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%8E%A8%E9%80%81%E9%81%87%E8%A7%81%E7%9A%84%E9%94%99%E8%AF%AF/</link>
+        <link>https://linsk27.github.io/p/gitee%E4%BB%93%E5%BA%93%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%8E%A8%E9%80%81%E9%81%87%E8%A7%81%E7%9A%84%E9%94%99%E8%AF%AF/</link>
         <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/p/gitee%E4%BB%93%E5%BA%93%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%8E%A8%E9%80%81%E9%81%87%E8%A7%81%E7%9A%84%E9%94%99%E8%AF%AF/</guid>
-        <description>&lt;img src="https://linsk27-github-io.vercel.app/p/gitee%E4%BB%93%E5%BA%93%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%8E%A8%E9%80%81%E9%81%87%E8%A7%81%E7%9A%84%E9%94%99%E8%AF%AF/error.svg" alt="Featured image of post gitee仓库的第一次推送遇见的错误" /&gt;&lt;h2 id=&#34;推送失败gitee仓库缺少公钥&#34;&gt;推送失败，gitee仓库缺少公钥
+        <guid>https://linsk27.github.io/p/gitee%E4%BB%93%E5%BA%93%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%8E%A8%E9%80%81%E9%81%87%E8%A7%81%E7%9A%84%E9%94%99%E8%AF%AF/</guid>
+        <description>&lt;img src="https://linsk27.github.io/p/gitee%E4%BB%93%E5%BA%93%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%8E%A8%E9%80%81%E9%81%87%E8%A7%81%E7%9A%84%E9%94%99%E8%AF%AF/error.svg" alt="Featured image of post gitee仓库的第一次推送遇见的错误" /&gt;&lt;h2 id=&#34;推送失败gitee仓库缺少公钥&#34;&gt;推送失败，gitee仓库缺少公钥
 &lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -4757,11 +4757,11 @@
         </item>
         <item>
         <title>moonlight&#43;sunshine实现扩展屏和远程串流</title>
-        <link>https://linsk27-github-io.vercel.app/p/moonlight-sunshine%E5%AE%9E%E7%8E%B0%E6%89%A9%E5%B1%95%E5%B1%8F%E5%92%8C%E8%BF%9C%E7%A8%8B%E4%B8%B2%E6%B5%81/</link>
+        <link>https://linsk27.github.io/p/moonlight-sunshine%E5%AE%9E%E7%8E%B0%E6%89%A9%E5%B1%95%E5%B1%8F%E5%92%8C%E8%BF%9C%E7%A8%8B%E4%B8%B2%E6%B5%81/</link>
         <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/p/moonlight-sunshine%E5%AE%9E%E7%8E%B0%E6%89%A9%E5%B1%95%E5%B1%8F%E5%92%8C%E8%BF%9C%E7%A8%8B%E4%B8%B2%E6%B5%81/</guid>
-        <description>&lt;img src="https://linsk27-github-io.vercel.app/p/moonlight-sunshine%E5%AE%9E%E7%8E%B0%E6%89%A9%E5%B1%95%E5%B1%8F%E5%92%8C%E8%BF%9C%E7%A8%8B%E4%B8%B2%E6%B5%81/moonlight.jpg" alt="Featured image of post moonlight&#43;sunshine实现扩展屏和远程串流" /&gt;&lt;h2 id=&#34;工具合集&#34;&gt;工具合集
+        <guid>https://linsk27.github.io/p/moonlight-sunshine%E5%AE%9E%E7%8E%B0%E6%89%A9%E5%B1%95%E5%B1%8F%E5%92%8C%E8%BF%9C%E7%A8%8B%E4%B8%B2%E6%B5%81/</guid>
+        <description>&lt;img src="https://linsk27.github.io/p/moonlight-sunshine%E5%AE%9E%E7%8E%B0%E6%89%A9%E5%B1%95%E5%B1%8F%E5%92%8C%E8%BF%9C%E7%A8%8B%E4%B8%B2%E6%B5%81/moonlight.jpg" alt="Featured image of post moonlight&#43;sunshine实现扩展屏和远程串流" /&gt;&lt;h2 id=&#34;工具合集&#34;&gt;工具合集
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;sunshine&lt;/strong&gt;是一个提供给moonlight进行串流的工具&lt;/p&gt;
@@ -4965,10 +4965,10 @@
         </item>
         <item>
         <title>什么是防抖和节流？什么时候去用？</title>
-        <link>https://linsk27-github-io.vercel.app/p/%E4%BB%80%E4%B9%88%E6%98%AF%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%8E%BB%E7%94%A8/</link>
+        <link>https://linsk27.github.io/p/%E4%BB%80%E4%B9%88%E6%98%AF%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%8E%BB%E7%94%A8/</link>
         <pubDate>Sat, 26 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/p/%E4%BB%80%E4%B9%88%E6%98%AF%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%8E%BB%E7%94%A8/</guid>
+        <guid>https://linsk27.github.io/p/%E4%BB%80%E4%B9%88%E6%98%AF%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%8E%BB%E7%94%A8/</guid>
         <description>&lt;h2 id=&#34;什么是防抖debounce&#34;&gt;什么是防抖（Debounce）？
 &lt;/h2&gt;&lt;h3 id=&#34;防抖-多次触发-只执行最后一次&#34;&gt;防抖 （多次触发 只执行最后一次）
 &lt;/h3&gt;&lt;ul&gt;
@@ -5197,10 +5197,10 @@
         </item>
         <item>
         <title>入门前端？如何少走弯路！！！</title>
-        <link>https://linsk27-github-io.vercel.app/p/%E5%85%A5%E9%97%A8%E5%89%8D%E7%AB%AF%E5%A6%82%E4%BD%95%E5%B0%91%E8%B5%B0%E5%BC%AF%E8%B7%AF/</link>
+        <link>https://linsk27.github.io/p/%E5%85%A5%E9%97%A8%E5%89%8D%E7%AB%AF%E5%A6%82%E4%BD%95%E5%B0%91%E8%B5%B0%E5%BC%AF%E8%B7%AF/</link>
         <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/p/%E5%85%A5%E9%97%A8%E5%89%8D%E7%AB%AF%E5%A6%82%E4%BD%95%E5%B0%91%E8%B5%B0%E5%BC%AF%E8%B7%AF/</guid>
+        <guid>https://linsk27.github.io/p/%E5%85%A5%E9%97%A8%E5%89%8D%E7%AB%AF%E5%A6%82%E4%BD%95%E5%B0%91%E8%B5%B0%E5%BC%AF%E8%B7%AF/</guid>
         <description>&lt;h1 id=&#34;-程序员成长的底层逻辑&#34;&gt;📌 程序员成长的底层逻辑
 &lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;大学自学常见误区：过度依赖视频教程 → 知识碎片化 + 学习低效 + 上水课坐牢!!!!&lt;/p&gt;
@@ -5354,11 +5354,11 @@
         </item>
         <item>
         <title>【Hugo】主题美化教程</title>
-        <link>https://linsk27-github-io.vercel.app/p/hugo%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/</link>
+        <link>https://linsk27.github.io/p/hugo%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/</link>
         <pubDate>Sat, 19 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/p/hugo%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/</guid>
-        <description>&lt;img src="https://linsk27-github-io.vercel.app/p/hugo%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/hugo.jpg" alt="Featured image of post 【Hugo】主题美化教程" /&gt;&lt;h2 id=&#34;修改站点背景颜色&#34;&gt;修改站点背景颜色
+        <guid>https://linsk27.github.io/p/hugo%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/</guid>
+        <description>&lt;img src="https://linsk27.github.io/p/hugo%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/hugo.jpg" alt="Featured image of post 【Hugo】主题美化教程" /&gt;&lt;h2 id=&#34;修改站点背景颜色&#34;&gt;修改站点背景颜色
 &lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;在&amp;quot;assets/scss/variables.scss&amp;quot;中找到&lt;/li&gt;
 &lt;/ol&gt;
@@ -5749,11 +5749,11 @@
         </item>
         <item>
         <title>【Nexus】桌面美化教程</title>
-        <link>https://linsk27-github-io.vercel.app/p/nexus%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/</link>
+        <link>https://linsk27.github.io/p/nexus%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/</link>
         <pubDate>Tue, 15 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/p/nexus%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/</guid>
-        <description>&lt;img src="https://linsk27-github-io.vercel.app/p/nexus%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/nexus6.png" alt="Featured image of post 【Nexus】桌面美化教程" /&gt;&lt;blockquote&gt;
+        <guid>https://linsk27.github.io/p/nexus%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/</guid>
+        <description>&lt;img src="https://linsk27.github.io/p/nexus%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/nexus6.png" alt="Featured image of post 【Nexus】桌面美化教程" /&gt;&lt;blockquote&gt;
 &lt;h2 id=&#34;nexus-下载安装&#34;&gt;nexus 下载安装
 &lt;/h2&gt;&lt;p&gt;nuxes 下载链接&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -5841,10 +5841,10 @@
         </item>
         <item>
         <title>js中数组去的常规去重方法</title>
-        <link>https://linsk27-github-io.vercel.app/p/js%E4%B8%AD%E6%95%B0%E7%BB%84%E5%8E%BB%E7%9A%84%E5%B8%B8%E8%A7%84%E5%8E%BB%E9%87%8D%E6%96%B9%E6%B3%95/</link>
+        <link>https://linsk27.github.io/p/js%E4%B8%AD%E6%95%B0%E7%BB%84%E5%8E%BB%E7%9A%84%E5%B8%B8%E8%A7%84%E5%8E%BB%E9%87%8D%E6%96%B9%E6%B3%95/</link>
         <pubDate>Mon, 14 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/p/js%E4%B8%AD%E6%95%B0%E7%BB%84%E5%8E%BB%E7%9A%84%E5%B8%B8%E8%A7%84%E5%8E%BB%E9%87%8D%E6%96%B9%E6%B3%95/</guid>
+        <guid>https://linsk27.github.io/p/js%E4%B8%AD%E6%95%B0%E7%BB%84%E5%8E%BB%E7%9A%84%E5%B8%B8%E8%A7%84%E5%8E%BB%E9%87%8D%E6%96%B9%E6%B3%95/</guid>
         <description>&lt;h1 id=&#34;数组去重方法&#34;&gt;数组去重方法
 &lt;/h1&gt;&lt;h2 id=&#34;1-通过-filter-过滤函数&#34;&gt;1. 通过 &lt;code&gt;filter&lt;/code&gt; 过滤函数
 &lt;/h2&gt;&lt;p&gt;JavaScript 的 &lt;code&gt;Array.prototype.filter()&lt;/code&gt; 方法可以创建一个新数组，其包含通过所提供函数实现的测试的所有元素。利用这个特性，我们可以对数组进行去重。&lt;/p&gt;
@@ -5906,10 +5906,10 @@
         </item>
         <item>
         <title>Linux的安装（Ubuntu）</title>
-        <link>https://linsk27-github-io.vercel.app/p/linux%E7%9A%84%E5%AE%89%E8%A3%85ubuntu/</link>
+        <link>https://linsk27.github.io/p/linux%E7%9A%84%E5%AE%89%E8%A3%85ubuntu/</link>
         <pubDate>Mon, 14 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/p/linux%E7%9A%84%E5%AE%89%E8%A3%85ubuntu/</guid>
+        <guid>https://linsk27.github.io/p/linux%E7%9A%84%E5%AE%89%E8%A3%85ubuntu/</guid>
         <description>&lt;ul&gt;
 &lt;li&gt;该文章图片从网上摘录&lt;/li&gt;
 &lt;/ul&gt;
@@ -6056,10 +6056,10 @@
         </item>
         <item>
         <title>el-select标签存在的数据匹配问题</title>
-        <link>https://linsk27-github-io.vercel.app/p/el-select%E6%A0%87%E7%AD%BE%E5%AD%98%E5%9C%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98/</link>
+        <link>https://linsk27.github.io/p/el-select%E6%A0%87%E7%AD%BE%E5%AD%98%E5%9C%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98/</link>
         <pubDate>Sun, 13 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/p/el-select%E6%A0%87%E7%AD%BE%E5%AD%98%E5%9C%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98/</guid>
+        <guid>https://linsk27.github.io/p/el-select%E6%A0%87%E7%AD%BE%E5%AD%98%E5%9C%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98/</guid>
         <description>&lt;h2 id=&#34;一-使用方法&#34;&gt;一 使用方法
 &lt;/h2&gt;&lt;p&gt;&lt;code&gt;userList&lt;/code&gt;数据循环在列表，下拉框显示的值为&lt;code&gt;userList&lt;/code&gt;里面的&lt;code&gt;label&lt;/code&gt;字段的值，实际值为对应&lt;code&gt;label&lt;/code&gt;的&lt;code&gt;uuid&lt;/code&gt;值，如下面例子中输出选中&lt;code&gt;小王&lt;/code&gt;的值应该为&lt;code&gt;01&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -6110,10 +6110,10 @@
         </item>
         <item>
         <title>v-if和v-for为何不该同时作用于一个模块？</title>
-        <link>https://linsk27-github-io.vercel.app/p/v-if%E5%92%8Cv-for%E4%B8%BA%E4%BD%95%E4%B8%8D%E8%AF%A5%E5%90%8C%E6%97%B6%E4%BD%9C%E7%94%A8%E4%BA%8E%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97/</link>
+        <link>https://linsk27.github.io/p/v-if%E5%92%8Cv-for%E4%B8%BA%E4%BD%95%E4%B8%8D%E8%AF%A5%E5%90%8C%E6%97%B6%E4%BD%9C%E7%94%A8%E4%BA%8E%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97/</link>
         <pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/p/v-if%E5%92%8Cv-for%E4%B8%BA%E4%BD%95%E4%B8%8D%E8%AF%A5%E5%90%8C%E6%97%B6%E4%BD%9C%E7%94%A8%E4%BA%8E%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97/</guid>
+        <guid>https://linsk27.github.io/p/v-if%E5%92%8Cv-for%E4%B8%BA%E4%BD%95%E4%B8%8D%E8%AF%A5%E5%90%8C%E6%97%B6%E4%BD%9C%E7%94%A8%E4%BA%8E%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97/</guid>
         <description>&lt;p&gt;&lt;code&gt;[vue/no-use-v-if-with-v-for]&lt;/code&gt; 这个错误信息是由 ESLint 的 Vue.js 插件 &lt;code&gt;eslint-plugin-vue&lt;/code&gt; 产生的。它指出在你的 Vue.js 模板中，&lt;code&gt;v-if&lt;/code&gt; 和 &lt;code&gt;v-for&lt;/code&gt; 指令被不当地一起使用在了同一个元素上。&lt;/p&gt;
 &lt;h3 id=&#34;为什么会产生这个错误&#34;&gt;为什么会产生这个错误？
 &lt;/h3&gt;&lt;p&gt;在 Vue.js 中，当 &lt;code&gt;v-if&lt;/code&gt; 和 &lt;code&gt;v-for&lt;/code&gt; 同时用在同一个元素上时，Vue 会先处理 &lt;code&gt;v-for&lt;/code&gt;，然后处理 &lt;code&gt;v-if&lt;/code&gt;。这意味着即使 &lt;code&gt;v-if&lt;/code&gt; 最终会过滤掉一些元素，&lt;code&gt;v-for&lt;/code&gt; 仍然会遍历整个列表，这可能会导致不必要的计算开销，特别是在处理大型列表时。&lt;/p&gt;

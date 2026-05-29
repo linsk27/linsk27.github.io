@@ -2,193 +2,193 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Tags on linsk27 | AI 辅助开发与前端项目</title>
-        <link>https://linsk27-github-io.vercel.app/tags/</link>
+        <link>https://linsk27.github.io/tags/</link>
         <description>Recent content in Tags on linsk27 | AI 辅助开发与前端项目</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>linsk27</copyright>
-        <lastBuildDate>Tue, 03 Jun 2025 01:05:52 +0800</lastBuildDate><atom:link href="https://linsk27-github-io.vercel.app/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 03 Jun 2025 01:05:52 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Mixin Scss</title>
-        <link>https://linsk27-github-io.vercel.app/tags/mixin-scss/</link>
+        <link>https://linsk27.github.io/tags/mixin-scss/</link>
         <pubDate>Tue, 03 Jun 2025 01:05:52 +0800</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/tags/mixin-scss/</guid>
+        <guid>https://linsk27.github.io/tags/mixin-scss/</guid>
         <description></description>
         </item>
         <item>
         <title>Docker</title>
-        <link>https://linsk27-github-io.vercel.app/tags/docker/</link>
+        <link>https://linsk27.github.io/tags/docker/</link>
         <pubDate>Tue, 03 Jun 2025 00:58:55 +0800</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/tags/docker/</guid>
+        <guid>https://linsk27.github.io/tags/docker/</guid>
         <description></description>
         </item>
         <item>
         <title>Nginx</title>
-        <link>https://linsk27-github-io.vercel.app/tags/nginx/</link>
+        <link>https://linsk27.github.io/tags/nginx/</link>
         <pubDate>Wed, 23 Apr 2025 12:25:57 +0800</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/tags/nginx/</guid>
+        <guid>https://linsk27.github.io/tags/nginx/</guid>
         <description></description>
         </item>
         <item>
         <title>Echarts</title>
-        <link>https://linsk27-github-io.vercel.app/tags/echarts/</link>
+        <link>https://linsk27.github.io/tags/echarts/</link>
         <pubDate>Tue, 08 Apr 2025 17:44:12 +0800</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/tags/echarts/</guid>
+        <guid>https://linsk27.github.io/tags/echarts/</guid>
         <description></description>
         </item>
         <item>
         <title>可视化</title>
-        <link>https://linsk27-github-io.vercel.app/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/</link>
+        <link>https://linsk27.github.io/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/</link>
         <pubDate>Tue, 08 Apr 2025 17:44:12 +0800</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/</guid>
+        <guid>https://linsk27.github.io/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/</guid>
         <description></description>
         </item>
         <item>
         <title>Nuxt3</title>
-        <link>https://linsk27-github-io.vercel.app/tags/nuxt3/</link>
+        <link>https://linsk27.github.io/tags/nuxt3/</link>
         <pubDate>Sun, 06 Apr 2025 19:18:28 +0800</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/tags/nuxt3/</guid>
+        <guid>https://linsk27.github.io/tags/nuxt3/</guid>
         <description></description>
         </item>
         <item>
         <title>Javascript</title>
-        <link>https://linsk27-github-io.vercel.app/tags/javascript/</link>
+        <link>https://linsk27.github.io/tags/javascript/</link>
         <pubDate>Thu, 27 Mar 2025 22:33:37 +0800</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/tags/javascript/</guid>
+        <guid>https://linsk27.github.io/tags/javascript/</guid>
         <description></description>
         </item>
         <item>
         <title>Promise</title>
-        <link>https://linsk27-github-io.vercel.app/tags/promise/</link>
+        <link>https://linsk27.github.io/tags/promise/</link>
         <pubDate>Thu, 27 Mar 2025 22:33:37 +0800</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/tags/promise/</guid>
+        <guid>https://linsk27.github.io/tags/promise/</guid>
         <description></description>
         </item>
         <item>
         <title>Axios</title>
-        <link>https://linsk27-github-io.vercel.app/tags/axios/</link>
+        <link>https://linsk27.github.io/tags/axios/</link>
         <pubDate>Sat, 22 Mar 2025 12:01:56 +0800</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/tags/axios/</guid>
+        <guid>https://linsk27.github.io/tags/axios/</guid>
         <description></description>
         </item>
         <item>
         <title>Fetch</title>
-        <link>https://linsk27-github-io.vercel.app/tags/fetch/</link>
+        <link>https://linsk27.github.io/tags/fetch/</link>
         <pubDate>Sat, 22 Mar 2025 12:01:56 +0800</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/tags/fetch/</guid>
+        <guid>https://linsk27.github.io/tags/fetch/</guid>
         <description></description>
         </item>
         <item>
         <title>XMLHttpRequest</title>
-        <link>https://linsk27-github-io.vercel.app/tags/xmlhttprequest/</link>
+        <link>https://linsk27.github.io/tags/xmlhttprequest/</link>
         <pubDate>Sat, 22 Mar 2025 12:01:56 +0800</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/tags/xmlhttprequest/</guid>
+        <guid>https://linsk27.github.io/tags/xmlhttprequest/</guid>
         <description></description>
         </item>
         <item>
         <title>哈希</title>
-        <link>https://linsk27-github-io.vercel.app/tags/%E5%93%88%E5%B8%8C/</link>
+        <link>https://linsk27.github.io/tags/%E5%93%88%E5%B8%8C/</link>
         <pubDate>Fri, 21 Mar 2025 23:56:52 +0800</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/tags/%E5%93%88%E5%B8%8C/</guid>
+        <guid>https://linsk27.github.io/tags/%E5%93%88%E5%B8%8C/</guid>
         <description></description>
         </item>
         <item>
         <title>Webpack</title>
-        <link>https://linsk27-github-io.vercel.app/tags/webpack/</link>
+        <link>https://linsk27.github.io/tags/webpack/</link>
         <pubDate>Fri, 21 Mar 2025 11:49:00 +0800</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/tags/webpack/</guid>
+        <guid>https://linsk27.github.io/tags/webpack/</guid>
         <description></description>
         </item>
         <item>
         <title>SEO</title>
-        <link>https://linsk27-github-io.vercel.app/tags/seo/</link>
+        <link>https://linsk27.github.io/tags/seo/</link>
         <pubDate>Sat, 15 Mar 2025 13:29:13 +0800</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/tags/seo/</guid>
+        <guid>https://linsk27.github.io/tags/seo/</guid>
         <description></description>
         </item>
         <item>
         <title>Element-Plus</title>
-        <link>https://linsk27-github-io.vercel.app/tags/element-plus/</link>
+        <link>https://linsk27.github.io/tags/element-plus/</link>
         <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/tags/element-plus/</guid>
+        <guid>https://linsk27.github.io/tags/element-plus/</guid>
         <description></description>
         </item>
         <item>
         <title>Typescript</title>
-        <link>https://linsk27-github-io.vercel.app/tags/typescript/</link>
+        <link>https://linsk27.github.io/tags/typescript/</link>
         <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/tags/typescript/</guid>
+        <guid>https://linsk27.github.io/tags/typescript/</guid>
         <description></description>
         </item>
         <item>
         <title>Css</title>
-        <link>https://linsk27-github-io.vercel.app/tags/css/</link>
+        <link>https://linsk27.github.io/tags/css/</link>
         <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/tags/css/</guid>
+        <guid>https://linsk27.github.io/tags/css/</guid>
         <description></description>
         </item>
         <item>
         <title>Vue</title>
-        <link>https://linsk27-github-io.vercel.app/tags/vue/</link>
+        <link>https://linsk27.github.io/tags/vue/</link>
         <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/tags/vue/</guid>
+        <guid>https://linsk27.github.io/tags/vue/</guid>
         <description></description>
         </item>
         <item>
         <title>Git</title>
-        <link>https://linsk27-github-io.vercel.app/tags/git/</link>
+        <link>https://linsk27.github.io/tags/git/</link>
         <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/tags/git/</guid>
+        <guid>https://linsk27.github.io/tags/git/</guid>
         <description></description>
         </item>
         <item>
         <title>Moonlight</title>
-        <link>https://linsk27-github-io.vercel.app/tags/moonlight/</link>
+        <link>https://linsk27.github.io/tags/moonlight/</link>
         <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/tags/moonlight/</guid>
+        <guid>https://linsk27.github.io/tags/moonlight/</guid>
         <description></description>
         </item>
         <item>
         <title>Sunshine</title>
-        <link>https://linsk27-github-io.vercel.app/tags/sunshine/</link>
+        <link>https://linsk27.github.io/tags/sunshine/</link>
         <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/tags/sunshine/</guid>
+        <guid>https://linsk27.github.io/tags/sunshine/</guid>
         <description></description>
         </item>
         <item>
         <title>Hugo</title>
-        <link>https://linsk27-github-io.vercel.app/tags/hugo/</link>
+        <link>https://linsk27.github.io/tags/hugo/</link>
         <pubDate>Sat, 19 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/tags/hugo/</guid>
+        <guid>https://linsk27.github.io/tags/hugo/</guid>
         <description></description>
         </item>
         <item>
         <title>Nexus</title>
-        <link>https://linsk27-github-io.vercel.app/tags/nexus/</link>
+        <link>https://linsk27.github.io/tags/nexus/</link>
         <pubDate>Tue, 15 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/tags/nexus/</guid>
+        <guid>https://linsk27.github.io/tags/nexus/</guid>
         <description></description>
         </item>
         

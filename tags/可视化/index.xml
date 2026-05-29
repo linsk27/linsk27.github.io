@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>可视化 on linsk27 | AI 辅助开发与前端项目</title>
-        <link>https://linsk27-github-io.vercel.app/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/</link>
+        <link>https://linsk27.github.io/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/</link>
         <description>Recent content in 可视化 on linsk27 | AI 辅助开发与前端项目</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>linsk27</copyright>
-        <lastBuildDate>Sat, 12 Apr 2025 17:44:12 +0800</lastBuildDate><atom:link href="https://linsk27-github-io.vercel.app/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 12 Apr 2025 17:44:12 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>初步接触可视化Echarts</title>
-        <link>https://linsk27-github-io.vercel.app/p/0408-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6%E5%8F%AF%E8%A7%86%E5%8C%96echarts/</link>
+        <link>https://linsk27.github.io/p/0408-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6%E5%8F%AF%E8%A7%86%E5%8C%96echarts/</link>
         <pubDate>Tue, 08 Apr 2025 17:44:12 +0800</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/p/0408-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6%E5%8F%AF%E8%A7%86%E5%8C%96echarts/</guid>
+        <guid>https://linsk27.github.io/p/0408-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6%E5%8F%AF%E8%A7%86%E5%8C%96echarts/</guid>
         <description>&lt;h2 id=&#34;什么是echarts&#34;&gt;什么是Echarts
 &lt;/h2&gt;&lt;p&gt;ECharts（全称：&lt;strong&gt;Enterprise Charts&lt;/strong&gt;）是由百度开源的一个基于 JavaScript 的&lt;strong&gt;可视化图表库&lt;/strong&gt;，专门用于构建交互性强、表现丰富的数据可视化图表。&lt;/p&gt;
 &lt;hr&gt;

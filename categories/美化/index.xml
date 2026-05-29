@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>美化 on linsk27 | AI 辅助开发与前端项目</title>
-        <link>https://linsk27-github-io.vercel.app/categories/%E7%BE%8E%E5%8C%96/</link>
+        <link>https://linsk27.github.io/categories/%E7%BE%8E%E5%8C%96/</link>
         <description>Recent content in 美化 on linsk27 | AI 辅助开发与前端项目</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>linsk27</copyright>
-        <lastBuildDate>Sat, 19 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27-github-io.vercel.app/categories/%E7%BE%8E%E5%8C%96/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 19 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/categories/%E7%BE%8E%E5%8C%96/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>【Hugo】主题美化教程</title>
-        <link>https://linsk27-github-io.vercel.app/p/hugo%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/</link>
+        <link>https://linsk27.github.io/p/hugo%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/</link>
         <pubDate>Sat, 19 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/p/hugo%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/</guid>
-        <description>&lt;img src="https://linsk27-github-io.vercel.app/p/hugo%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/hugo.jpg" alt="Featured image of post 【Hugo】主题美化教程" /&gt;&lt;h2 id=&#34;修改站点背景颜色&#34;&gt;修改站点背景颜色
+        <guid>https://linsk27.github.io/p/hugo%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/</guid>
+        <description>&lt;img src="https://linsk27.github.io/p/hugo%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/hugo.jpg" alt="Featured image of post 【Hugo】主题美化教程" /&gt;&lt;h2 id=&#34;修改站点背景颜色&#34;&gt;修改站点背景颜色
 &lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;在&amp;quot;assets/scss/variables.scss&amp;quot;中找到&lt;/li&gt;
 &lt;/ol&gt;
@@ -404,11 +404,11 @@
         </item>
         <item>
         <title>【Nexus】桌面美化教程</title>
-        <link>https://linsk27-github-io.vercel.app/p/nexus%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/</link>
+        <link>https://linsk27.github.io/p/nexus%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/</link>
         <pubDate>Tue, 15 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/p/nexus%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/</guid>
-        <description>&lt;img src="https://linsk27-github-io.vercel.app/p/nexus%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/nexus6.png" alt="Featured image of post 【Nexus】桌面美化教程" /&gt;&lt;blockquote&gt;
+        <guid>https://linsk27.github.io/p/nexus%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/</guid>
+        <description>&lt;img src="https://linsk27.github.io/p/nexus%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/nexus6.png" alt="Featured image of post 【Nexus】桌面美化教程" /&gt;&lt;blockquote&gt;
 &lt;h2 id=&#34;nexus-下载安装&#34;&gt;nexus 下载安装
 &lt;/h2&gt;&lt;p&gt;nuxes 下载链接&lt;/p&gt;
 &lt;/blockquote&gt;

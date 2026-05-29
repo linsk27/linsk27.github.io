@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Javascript on linsk27 | AI 辅助开发与前端项目</title>
-        <link>https://linsk27-github-io.vercel.app/tags/javascript/</link>
+        <link>https://linsk27.github.io/tags/javascript/</link>
         <description>Recent content in Javascript on linsk27 | AI 辅助开发与前端项目</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>linsk27</copyright>
-        <lastBuildDate>Tue, 08 Apr 2025 15:43:37 +0800</lastBuildDate><atom:link href="https://linsk27-github-io.vercel.app/tags/javascript/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 08 Apr 2025 15:43:37 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>初学Promise对象</title>
-        <link>https://linsk27-github-io.vercel.app/p/0327-%E5%88%9D%E5%AD%A6promise%E5%AF%B9%E8%B1%A1/</link>
+        <link>https://linsk27.github.io/p/0327-%E5%88%9D%E5%AD%A6promise%E5%AF%B9%E8%B1%A1/</link>
         <pubDate>Thu, 27 Mar 2025 22:33:37 +0800</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/p/0327-%E5%88%9D%E5%AD%A6promise%E5%AF%B9%E8%B1%A1/</guid>
+        <guid>https://linsk27.github.io/p/0327-%E5%88%9D%E5%AD%A6promise%E5%AF%B9%E8%B1%A1/</guid>
         <description>&lt;h1 id=&#34;初学promise对象异步基础&#34;&gt;初学Promise对象，异步基础
 &lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;推荐实践代码，自己动手调试，更容易理解原理&lt;/li&gt;
@@ -291,10 +291,10 @@
         </item>
         <item>
         <title>什么是防抖和节流？什么时候去用？</title>
-        <link>https://linsk27-github-io.vercel.app/p/%E4%BB%80%E4%B9%88%E6%98%AF%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%8E%BB%E7%94%A8/</link>
+        <link>https://linsk27.github.io/p/%E4%BB%80%E4%B9%88%E6%98%AF%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%8E%BB%E7%94%A8/</link>
         <pubDate>Sat, 26 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/p/%E4%BB%80%E4%B9%88%E6%98%AF%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%8E%BB%E7%94%A8/</guid>
+        <guid>https://linsk27.github.io/p/%E4%BB%80%E4%B9%88%E6%98%AF%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%8E%BB%E7%94%A8/</guid>
         <description>&lt;h2 id=&#34;什么是防抖debounce&#34;&gt;什么是防抖（Debounce）？
 &lt;/h2&gt;&lt;h3 id=&#34;防抖-多次触发-只执行最后一次&#34;&gt;防抖 （多次触发 只执行最后一次）
 &lt;/h3&gt;&lt;ul&gt;
@@ -523,10 +523,10 @@
         </item>
         <item>
         <title>js中数组去的常规去重方法</title>
-        <link>https://linsk27-github-io.vercel.app/p/js%E4%B8%AD%E6%95%B0%E7%BB%84%E5%8E%BB%E7%9A%84%E5%B8%B8%E8%A7%84%E5%8E%BB%E9%87%8D%E6%96%B9%E6%B3%95/</link>
+        <link>https://linsk27.github.io/p/js%E4%B8%AD%E6%95%B0%E7%BB%84%E5%8E%BB%E7%9A%84%E5%B8%B8%E8%A7%84%E5%8E%BB%E9%87%8D%E6%96%B9%E6%B3%95/</link>
         <pubDate>Mon, 14 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27-github-io.vercel.app/p/js%E4%B8%AD%E6%95%B0%E7%BB%84%E5%8E%BB%E7%9A%84%E5%B8%B8%E8%A7%84%E5%8E%BB%E9%87%8D%E6%96%B9%E6%B3%95/</guid>
+        <guid>https://linsk27.github.io/p/js%E4%B8%AD%E6%95%B0%E7%BB%84%E5%8E%BB%E7%9A%84%E5%B8%B8%E8%A7%84%E5%8E%BB%E9%87%8D%E6%96%B9%E6%B3%95/</guid>
         <description>&lt;h1 id=&#34;数组去重方法&#34;&gt;数组去重方法
 &lt;/h1&gt;&lt;h2 id=&#34;1-通过-filter-过滤函数&#34;&gt;1. 通过 &lt;code&gt;filter&lt;/code&gt; 过滤函数
 &lt;/h2&gt;&lt;p&gt;JavaScript 的 &lt;code&gt;Array.prototype.filter()&lt;/code&gt; 方法可以创建一个新数组，其包含通过所提供函数实现的测试的所有元素。利用这个特性，我们可以对数组进行去重。&lt;/p&gt;
