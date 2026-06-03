@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tauri on linsk27 | AI 辅助开发与前端项目</title>
+        <link>https://linsk27.github.io/tags/tauri/</link>
+        <description>Recent content in Tauri on linsk27 | AI 辅助开发与前端项目</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>linsk27</copyright>
+        <lastBuildDate>Fri, 29 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/tags/tauri/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>skills-manage AI Skills 管理器</title>
+        <link>https://linsk27.github.io/projects/skills-manage/</link>
+        <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://linsk27.github.io/projects/skills-manage/</guid>
+        <description>&lt;img src="https://linsk27.github.io/img/projects/skills-manage-central-library.png" alt="Featured image of post skills-manage AI Skills 管理器" /&gt;&lt;p&gt;skills-manage 是一个 Tauri、React 和 TypeScript 桌面应用，用来把多个 AI coding agent 的 skills 管理集中到一个地方。它把 &lt;code&gt;~/.agents/skills/&lt;/code&gt; 作为中心技能库，再通过平台安装、卸载和符号链接，把同一套技能同步到 Claude Code、Codex CLI、Cursor、Gemini CLI、Trae、Windsurf、Aider 等工具。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/skills-manage-central-library.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;skills-manage central library&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;适合谁&#34;&gt;适合谁
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;同时使用 Claude Code、Codex CLI、Cursor、Gemini CLI 或多个 AI coding agent 的开发者。&lt;/li&gt;
+&lt;li&gt;想把本地 skills、项目 skills、市场 skills 和 GitHub 导入技能统一管理的人。&lt;/li&gt;
+&lt;li&gt;需要批量安装、卸载、搜索、预览和组织 Agent Skills 的人。&lt;/li&gt;
+&lt;li&gt;想参考 Tauri、React、TypeScript 桌面应用结构的人。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目价值&#34;&gt;项目价值
+&lt;/h2&gt;&lt;p&gt;skills-manage 的价值在于它解决了 AI coding agent skills 分散在不同目录、不同工具、不同市场里的管理问题。它提供中央技能库、平台视图、项目扫描、市场浏览、GitHub 仓库导入、Markdown 预览、原始源码查看、AI 解释生成和技能集合等能力，让技能资产更容易沉淀、迁移和复用。&lt;/p&gt;
+&lt;p&gt;如果你搜索的是 AI coding agent skills manager、Claude Code skills、Codex CLI skills、Cursor skills、Agent Skills desktop app 或 Tauri React desktop app，这个项目可以作为一个完整的本地优先应用参考。&lt;/p&gt;
+&lt;h2 id=&#34;功能截图&#34;&gt;功能截图
+&lt;/h2&gt;&lt;h3 id=&#34;技能市场&#34;&gt;技能市场
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/skills-manage-marketplace.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;skills-manage marketplace&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;github-仓库导入&#34;&gt;GitHub 仓库导入
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/skills-manage-github-import.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;skills-manage GitHub import&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;技术方向&#34;&gt;技术方向
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Tauri 2&lt;/li&gt;
+&lt;li&gt;React&lt;/li&gt;
+&lt;li&gt;TypeScript&lt;/li&gt;
+&lt;li&gt;Vite&lt;/li&gt;
+&lt;li&gt;SQLite&lt;/li&gt;
+&lt;li&gt;Agent Skills&lt;/li&gt;
+&lt;li&gt;本地优先桌面应用&lt;/li&gt;
+&lt;li&gt;多平台技能目录管理&lt;/li&gt;
+&lt;li&gt;技能市场与 GitHub 导入&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目入口&#34;&gt;项目入口
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/skills-manage&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;linsk27/skills-manage&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;下载入口：&lt;a class=&#34;link&#34; href=&#34;https://github.com/iamzhihuix/skills-manage/releases/latest&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;latest release&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果这个 AI coding agent skills 管理工具对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续完善平台适配、市场同步、导入体验和跨工具技能管理的主要信号。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

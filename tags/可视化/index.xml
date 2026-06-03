@@ -7,7 +7,53 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>linsk27</copyright>
-        <lastBuildDate>Sat, 12 Apr 2025 17:44:12 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 29 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>echarts-learn 数据可视化练习</title>
+        <link>https://linsk27.github.io/projects/echarts-learn/</link>
+        <pubDate>Wed, 09 Apr 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://linsk27.github.io/projects/echarts-learn/</guid>
+        <description>&lt;img src="https://linsk27.github.io/img/projects/echarts-learn-dashboard.png" alt="Featured image of post echarts-learn 数据可视化练习" /&gt;&lt;p&gt;echarts-learn 是一个 Vue、Nuxt 和 ECharts 数据可视化练习项目，用来展示多图表 dashboard 的页面组织方式。它覆盖柱状图、雷达图、关系图、环形图、词云和数据总览，适合用来参考 ECharts data visualization、Vue chart project 和 dashboard UI 的组合方式。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/echarts-learn-dashboard.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;ECharts dashboard screenshot&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;适合谁&#34;&gt;适合谁
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;想参考 Vue 和 ECharts 如何组合成数据大屏的人。&lt;/li&gt;
+&lt;li&gt;正在做 dashboard UI、数据看板、监控页面或图表交互练习的人。&lt;/li&gt;
+&lt;li&gt;需要柱状图、雷达图、关系图、环形图和词云组合示例的人。&lt;/li&gt;
+&lt;li&gt;想看 Nuxt 项目如何组织组件和页面入口的人。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目价值&#34;&gt;项目价值
+&lt;/h2&gt;&lt;p&gt;这个项目的重点不是单个图表，而是把多个可视化组件放在同一个页面里，形成一个完整的数据看板。对搜索 Vue ECharts dashboard、ECharts data visualization、Nuxt dashboard 或 chart interaction demo 的人来说，这个页面可以直接说明项目的展示效果和代码入口。&lt;/p&gt;
+&lt;p&gt;截图来自本地运行项目并使用同结构演示数据生成。这样可以避免远程示例数据接口不可访问时只截到加载态，同时保留项目真实的页面布局和组件结构。&lt;/p&gt;
+&lt;h2 id=&#34;技术方向&#34;&gt;技术方向
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Vue&lt;/li&gt;
+&lt;li&gt;Nuxt&lt;/li&gt;
+&lt;li&gt;ECharts&lt;/li&gt;
+&lt;li&gt;数据可视化&lt;/li&gt;
+&lt;li&gt;dashboard UI&lt;/li&gt;
+&lt;li&gt;图表组件拆分&lt;/li&gt;
+&lt;li&gt;数据看板页面组织&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目入口&#34;&gt;项目入口
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/echarts-learn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;linsk27/echarts-learn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果这个 ECharts 数据可视化项目对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续补充图表说明、运行文档和可复用示例的主要信号。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>初步接触可视化Echarts</title>
         <link>https://linsk27.github.io/p/0408-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6%E5%8F%AF%E8%A7%86%E5%8C%96echarts/</link>
         <pubDate>Tue, 08 Apr 2025 17:44:12 +0800</pubDate>

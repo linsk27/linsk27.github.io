@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>linsk27</copyright>
-        <lastBuildDate>Sun, 06 Apr 2025 19:18:28 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/nuxt3/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 29 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/tags/nuxt3/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>初步接触nuxt3</title>
         <link>https://linsk27.github.io/p/0406-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6nuxt3/</link>
         <pubDate>Sun, 06 Apr 2025 19:18:28 +0800</pubDate>
@@ -484,6 +484,104 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>feidu 智慧社区数据大屏</title>
+        <link>https://linsk27.github.io/projects/feidu/</link>
+        <pubDate>Sun, 30 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://linsk27.github.io/projects/feidu/</guid>
+        <description>&lt;img src="https://linsk27.github.io/img/projects/feidu-smart-community-dashboard.jpg" alt="Featured image of post feidu 智慧社区数据大屏" /&gt;&lt;p&gt;feidu 是一个 Nuxt 3、Vue、Tailwind CSS 和 ECharts 组成的智慧社区数据大屏项目。它把社区管理、安防监控、CIM 平台、能源检测和节能分析集中在一个可视化界面里，适合展示智慧社区、园区管理、安防运维和能源数据看板类项目的前端实现方式。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/feidu-smart-community-dashboard.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;feidu smart community dashboard&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;适合谁&#34;&gt;适合谁
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;想参考智慧社区、智慧园区或数据大屏界面实现的人。&lt;/li&gt;
+&lt;li&gt;想学习 Nuxt 3、Vue、Tailwind CSS 和 ECharts 组合方式的人。&lt;/li&gt;
+&lt;li&gt;需要安防监控、CIM 平台、能源检测、节能分析等可视化页面结构的人。&lt;/li&gt;
+&lt;li&gt;想看真实线上演示，而不是只看静态截图的前端学习者。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目价值&#34;&gt;项目价值
+&lt;/h2&gt;&lt;p&gt;feidu 的价值在于它不是单个图表练习，而是把多种业务模块组织成一个完整大屏：左侧展示安防概况、摄像头监控和报警信息，中间展示城市 / 社区 CIM 场景，右侧展示舒适度、能耗、系统能效和机组运行状态。底部还提供社区管理、安保监控、CIM 平台、能源检测和节能分析等模块切换入口。&lt;/p&gt;
+&lt;p&gt;如果你搜索的是 smart community dashboard、Vue ECharts dashboard、Nuxt 3 data visualization、security monitoring dashboard、energy monitoring dashboard 或 CIM platform UI，这个项目可以作为一个可运行的前端大屏参考。&lt;/p&gt;
+&lt;h2 id=&#34;技术方向&#34;&gt;技术方向
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Nuxt 3&lt;/li&gt;
+&lt;li&gt;Vue&lt;/li&gt;
+&lt;li&gt;Tailwind CSS&lt;/li&gt;
+&lt;li&gt;ECharts&lt;/li&gt;
+&lt;li&gt;Element Plus&lt;/li&gt;
+&lt;li&gt;数据可视化大屏&lt;/li&gt;
+&lt;li&gt;智慧社区界面&lt;/li&gt;
+&lt;li&gt;安防监控看板&lt;/li&gt;
+&lt;li&gt;能源监测与节能分析&lt;/li&gt;
+&lt;li&gt;CIM 平台前端展示&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目入口&#34;&gt;项目入口
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/feidu&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;linsk27/feidu&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;线上演示：&lt;a class=&#34;link&#34; href=&#34;https://feidu-murex.vercel.app&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;feidu-murex.vercel.app&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果这个智慧社区数据大屏对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续完善项目文档、模块说明和线上演示体验的主要信号。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>bilibili-nuxt3 Nuxt3 移动端项目</title>
+        <link>https://linsk27.github.io/projects/bilibili-nuxt3/</link>
+        <pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://linsk27.github.io/projects/bilibili-nuxt3/</guid>
+        <description>&lt;img src="https://linsk27.github.io/img/projects/bilibili-nuxt3-mobile-preview.jpg" alt="Featured image of post bilibili-nuxt3 Nuxt3 移动端项目" /&gt;&lt;p&gt;bilibili-nuxt3 是一个 Nuxt 3、Vue、TypeScript 和 Vant 移动端项目实战，围绕视频列表、频道导航、视频详情、分页加载、服务端渲染和 SEO 信息配置展开。它适合作为 Nuxt 3 project、Vue mobile app、Nuxt SSR SEO 和前端移动端页面结构的参考。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/bilibili-nuxt3-mobile-preview.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;bilibili Nuxt3 mobile preview&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;适合谁&#34;&gt;适合谁
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;想参考 Nuxt 3、Vue 和 TypeScript 移动端项目结构的人。&lt;/li&gt;
+&lt;li&gt;正在学习 SSR、SEO meta、文件路由和首屏数据获取的人。&lt;/li&gt;
+&lt;li&gt;需要 Vant UI、频道导航、视频列表和详情页示例的人。&lt;/li&gt;
+&lt;li&gt;想做移动端前端项目实战、课程项目或简历作品的人。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目价值&#34;&gt;项目价值
+&lt;/h2&gt;&lt;p&gt;这个项目的价值在于它把 Nuxt 的服务端渲染、SEO 信息配置、文件路由、移动端适配和数据交互放在一个完整示例里。相比普通组件练习，它更接近真实移动端内容应用，适合用来观察首页信息流、频道 tab、视频卡片和详情页之间的组织方式。&lt;/p&gt;
+&lt;p&gt;项目预览图来自仓库 README。历史线上预览链接当前连接不稳定，因此这个项目页优先保留稳定的截图、技术说明和 GitHub 仓库入口，后续演示站恢复后再补充新的在线入口。&lt;/p&gt;
+&lt;h2 id=&#34;技术方向&#34;&gt;技术方向
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Nuxt 3&lt;/li&gt;
+&lt;li&gt;Vue&lt;/li&gt;
+&lt;li&gt;TypeScript&lt;/li&gt;
+&lt;li&gt;Vant UI&lt;/li&gt;
+&lt;li&gt;SSR&lt;/li&gt;
+&lt;li&gt;SEO meta&lt;/li&gt;
+&lt;li&gt;移动端 vw 适配&lt;/li&gt;
+&lt;li&gt;视频列表与详情页&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目入口&#34;&gt;项目入口
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/bilibili-nuxt3&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;linsk27/bilibili-nuxt3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果这个 Nuxt 3 移动端项目对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续完善预览、运行文档和项目说明的主要信号。&lt;/p&gt;
+</description>
         </item>
         
     </channel>

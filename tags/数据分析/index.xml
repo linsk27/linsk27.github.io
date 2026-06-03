@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>数据分析 on linsk27 | AI 辅助开发与前端项目</title>
+        <link>https://linsk27.github.io/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</link>
+        <description>Recent content in 数据分析 on linsk27 | AI 辅助开发与前端项目</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>linsk27</copyright>
+        <lastBuildDate>Fri, 29 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Vue-blog 前端博客项目</title>
+        <link>https://linsk27.github.io/projects/vue-blog/</link>
+        <pubDate>Wed, 23 Jul 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://linsk27.github.io/projects/vue-blog/</guid>
+        <description>&lt;img src="https://linsk27.github.io/img/projects/vue-blog-demo.png" alt="Featured image of post Vue-blog 前端博客项目" /&gt;&lt;p&gt;Vue-blog 是一个 Vue 前端博客项目，用来展示文章入口、AI 中心、数据分析看板和内容型页面结构。它适合作为 Vue blog project、front-end learning notes、content presentation 和前端页面组织方式的参考。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/vue-blog-demo.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Vue blog demo&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;适合谁&#34;&gt;适合谁
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;想参考 Vue 博客首页、文章入口和导航结构的人。&lt;/li&gt;
+&lt;li&gt;正在做学习笔记、内容展示或个人博客前端的人。&lt;/li&gt;
+&lt;li&gt;需要 AI 中心、数据分析看板和内容型页面组合示例的人。&lt;/li&gt;
+&lt;li&gt;想看 Vue 项目如何整理页面层级和视觉入口的人。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目价值&#34;&gt;项目价值
+&lt;/h2&gt;&lt;p&gt;Vue-blog 的价值在于它有可访问的线上成品，并且页面结构比普通静态练习更完整。它把博客首页、文章入口、AI 中心和数据分析看板放在同一个前端项目里，适合用来观察内容型应用如何组织导航、视觉层级和页面入口。&lt;/p&gt;
+&lt;p&gt;如果你搜索的是 Vue blog project、Vue front-end project、front-end learning notes、content presentation 或 AI center dashboard，这个项目可以作为一个直接可打开的示例。&lt;/p&gt;
+&lt;h2 id=&#34;技术方向&#34;&gt;技术方向
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Vue&lt;/li&gt;
+&lt;li&gt;前端页面结构&lt;/li&gt;
+&lt;li&gt;博客首页&lt;/li&gt;
+&lt;li&gt;内容展示&lt;/li&gt;
+&lt;li&gt;AI 中心&lt;/li&gt;
+&lt;li&gt;数据分析看板&lt;/li&gt;
+&lt;li&gt;学习笔记展示&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目入口&#34;&gt;项目入口
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/Vue-blog&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;linsk27/Vue-blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;线上演示：&lt;a class=&#34;link&#34; href=&#34;https://vue-blog-smoky.vercel.app/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;vue-blog-smoky.vercel.app&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果这个 Vue 博客项目对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续完善页面结构、文档和可复用组件示例的主要信号。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

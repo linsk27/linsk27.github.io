@@ -7,7 +7,293 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>linsk27</copyright>
-        <lastBuildDate>Fri, 07 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/tags/vue/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 29 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/tags/vue/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Dev Cockpit 本地开发工作台</title>
+        <link>https://linsk27.github.io/projects/dev-cockpit/</link>
+        <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://linsk27.github.io/projects/dev-cockpit/</guid>
+        <description>&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-local-development-dashboard.png" alt="Featured image of post Dev Cockpit 本地开发工作台" /&gt;&lt;p&gt;Dev Cockpit 是我用来整理本地开发现场的工具。它关注的问题很直接：当一个人同时维护多个项目时，如何快速知道项目怎么启动、端口是否占用、命令是否可用、Git 状态是否干净，以及哪些上下文需要交给 AI coding agent。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/dev-cockpit-local-development-dashboard.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Dev Cockpit local development dashboard&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;适合谁&#34;&gt;适合谁
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;经常在多个前端、全栈或 AI 项目之间切换的个人开发者。&lt;/li&gt;
+&lt;li&gt;需要快速恢复项目现场、少翻 README、少找命令的人。&lt;/li&gt;
+&lt;li&gt;想把项目状态、日志、端口和 Git 信息集中到一个界面里的人。&lt;/li&gt;
+&lt;li&gt;正在尝试 AI coding workflow，希望把项目上下文整理得更稳定的人。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目价值&#34;&gt;项目价值
+&lt;/h2&gt;&lt;p&gt;Dev Cockpit 不是一个简单的启动器。它更像一个开发现场看板：把项目入口、常用命令、运行日志、端口状态、Git 状态和 AI 上下文放到同一个位置，让开发者少做重复判断。&lt;/p&gt;
+&lt;p&gt;如果你搜索的是 local development dashboard、developer workflow tools、AI coding context manager、Electron Vue dashboard 或 project state manager，这个项目会比普通练手页面更接近真实需求。&lt;/p&gt;
+&lt;h2 id=&#34;技术方向&#34;&gt;技术方向
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;TypeScript&lt;/li&gt;
+&lt;li&gt;Vue&lt;/li&gt;
+&lt;li&gt;Electron&lt;/li&gt;
+&lt;li&gt;本地项目扫描&lt;/li&gt;
+&lt;li&gt;命令与日志管理&lt;/li&gt;
+&lt;li&gt;Git 状态读取&lt;/li&gt;
+&lt;li&gt;AI coding 上下文整理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目入口&#34;&gt;项目入口
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/local-dev-cockpit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;linsk27/local-dev-cockpit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果这个工具方向对你有用，欢迎在 GitHub 仓库点 Star。Star 是我判断是否继续优先完善这个项目的主要信号。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>AI Vue Flask Blog 全栈系统</title>
+        <link>https://linsk27.github.io/projects/ai-vue-flask-blog/</link>
+        <pubDate>Tue, 10 Mar 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://linsk27.github.io/projects/ai-vue-flask-blog/</guid>
+        <description>&lt;img src="https://linsk27.github.io/img/projects/ai-vue-flask-blog-home-page.png" alt="Featured image of post AI Vue Flask Blog 全栈系统" /&gt;&lt;p&gt;AI-Vue3-python-flask-Blog 是一个 Vue 3、Flask、MySQL 和 AI 能力组合的全栈博客系统。它覆盖前端页面、后端接口、数据库持久化、内容管理和 AI 能力接入，适合作为课程设计、毕业设计、全栈项目练习和二次开发基础。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/ai-vue-flask-blog-home-page.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;AI Vue Flask blog home page&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;适合谁&#34;&gt;适合谁
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;需要 Vue 3 + Flask + MySQL 全栈项目参考的学生或初级开发者。&lt;/li&gt;
+&lt;li&gt;正在准备课程设计、毕业设计或项目答辩的人。&lt;/li&gt;
+&lt;li&gt;想学习前后端分离、接口设计、内容管理和数据库持久化的人。&lt;/li&gt;
+&lt;li&gt;想在传统博客系统里加入 AI 能力的人。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目价值&#34;&gt;项目价值
+&lt;/h2&gt;&lt;p&gt;这个项目的核心价值是完整。它不是只有一个前端页面，也不是只有接口示例，而是把页面、接口、数据和内容管理串成一个可继续扩展的系统。对于搜索 Vue Flask full stack project、Vue3 Flask MySQL blog system、AI blog system、graduation project 或 course design 的人，它能提供更直接的参考。&lt;/p&gt;
+&lt;h2 id=&#34;技术方向&#34;&gt;技术方向
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Vue 3&lt;/li&gt;
+&lt;li&gt;Flask&lt;/li&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;li&gt;MySQL&lt;/li&gt;
+&lt;li&gt;Element Plus&lt;/li&gt;
+&lt;li&gt;前后端分离&lt;/li&gt;
+&lt;li&gt;内容管理&lt;/li&gt;
+&lt;li&gt;AI blog system&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目入口&#34;&gt;项目入口
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/AI-Vue3-python-flask-Blog&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;linsk27/AI-Vue3-python-flask-Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;线上演示：&lt;a class=&#34;link&#34; href=&#34;https://ai-vue3-python-flask-blog.vercel.app/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ai-vue3-python-flask-blog.vercel.app&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果这个全栈项目对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续完善文档、部署说明和二次开发示例的主要信号。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Vue-blog 前端博客项目</title>
+        <link>https://linsk27.github.io/projects/vue-blog/</link>
+        <pubDate>Wed, 23 Jul 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://linsk27.github.io/projects/vue-blog/</guid>
+        <description>&lt;img src="https://linsk27.github.io/img/projects/vue-blog-demo.png" alt="Featured image of post Vue-blog 前端博客项目" /&gt;&lt;p&gt;Vue-blog 是一个 Vue 前端博客项目，用来展示文章入口、AI 中心、数据分析看板和内容型页面结构。它适合作为 Vue blog project、front-end learning notes、content presentation 和前端页面组织方式的参考。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/vue-blog-demo.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Vue blog demo&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;适合谁&#34;&gt;适合谁
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;想参考 Vue 博客首页、文章入口和导航结构的人。&lt;/li&gt;
+&lt;li&gt;正在做学习笔记、内容展示或个人博客前端的人。&lt;/li&gt;
+&lt;li&gt;需要 AI 中心、数据分析看板和内容型页面组合示例的人。&lt;/li&gt;
+&lt;li&gt;想看 Vue 项目如何整理页面层级和视觉入口的人。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目价值&#34;&gt;项目价值
+&lt;/h2&gt;&lt;p&gt;Vue-blog 的价值在于它有可访问的线上成品，并且页面结构比普通静态练习更完整。它把博客首页、文章入口、AI 中心和数据分析看板放在同一个前端项目里，适合用来观察内容型应用如何组织导航、视觉层级和页面入口。&lt;/p&gt;
+&lt;p&gt;如果你搜索的是 Vue blog project、Vue front-end project、front-end learning notes、content presentation 或 AI center dashboard，这个项目可以作为一个直接可打开的示例。&lt;/p&gt;
+&lt;h2 id=&#34;技术方向&#34;&gt;技术方向
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Vue&lt;/li&gt;
+&lt;li&gt;前端页面结构&lt;/li&gt;
+&lt;li&gt;博客首页&lt;/li&gt;
+&lt;li&gt;内容展示&lt;/li&gt;
+&lt;li&gt;AI 中心&lt;/li&gt;
+&lt;li&gt;数据分析看板&lt;/li&gt;
+&lt;li&gt;学习笔记展示&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目入口&#34;&gt;项目入口
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/Vue-blog&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;linsk27/Vue-blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;线上演示：&lt;a class=&#34;link&#34; href=&#34;https://vue-blog-smoky.vercel.app/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;vue-blog-smoky.vercel.app&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果这个 Vue 博客项目对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续完善页面结构、文档和可复用组件示例的主要信号。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>echarts-learn 数据可视化练习</title>
+        <link>https://linsk27.github.io/projects/echarts-learn/</link>
+        <pubDate>Wed, 09 Apr 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://linsk27.github.io/projects/echarts-learn/</guid>
+        <description>&lt;img src="https://linsk27.github.io/img/projects/echarts-learn-dashboard.png" alt="Featured image of post echarts-learn 数据可视化练习" /&gt;&lt;p&gt;echarts-learn 是一个 Vue、Nuxt 和 ECharts 数据可视化练习项目，用来展示多图表 dashboard 的页面组织方式。它覆盖柱状图、雷达图、关系图、环形图、词云和数据总览，适合用来参考 ECharts data visualization、Vue chart project 和 dashboard UI 的组合方式。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/echarts-learn-dashboard.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;ECharts dashboard screenshot&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;适合谁&#34;&gt;适合谁
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;想参考 Vue 和 ECharts 如何组合成数据大屏的人。&lt;/li&gt;
+&lt;li&gt;正在做 dashboard UI、数据看板、监控页面或图表交互练习的人。&lt;/li&gt;
+&lt;li&gt;需要柱状图、雷达图、关系图、环形图和词云组合示例的人。&lt;/li&gt;
+&lt;li&gt;想看 Nuxt 项目如何组织组件和页面入口的人。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目价值&#34;&gt;项目价值
+&lt;/h2&gt;&lt;p&gt;这个项目的重点不是单个图表，而是把多个可视化组件放在同一个页面里，形成一个完整的数据看板。对搜索 Vue ECharts dashboard、ECharts data visualization、Nuxt dashboard 或 chart interaction demo 的人来说，这个页面可以直接说明项目的展示效果和代码入口。&lt;/p&gt;
+&lt;p&gt;截图来自本地运行项目并使用同结构演示数据生成。这样可以避免远程示例数据接口不可访问时只截到加载态，同时保留项目真实的页面布局和组件结构。&lt;/p&gt;
+&lt;h2 id=&#34;技术方向&#34;&gt;技术方向
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Vue&lt;/li&gt;
+&lt;li&gt;Nuxt&lt;/li&gt;
+&lt;li&gt;ECharts&lt;/li&gt;
+&lt;li&gt;数据可视化&lt;/li&gt;
+&lt;li&gt;dashboard UI&lt;/li&gt;
+&lt;li&gt;图表组件拆分&lt;/li&gt;
+&lt;li&gt;数据看板页面组织&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目入口&#34;&gt;项目入口
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/echarts-learn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;linsk27/echarts-learn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果这个 ECharts 数据可视化项目对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续补充图表说明、运行文档和可复用示例的主要信号。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>feidu 智慧社区数据大屏</title>
+        <link>https://linsk27.github.io/projects/feidu/</link>
+        <pubDate>Sun, 30 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://linsk27.github.io/projects/feidu/</guid>
+        <description>&lt;img src="https://linsk27.github.io/img/projects/feidu-smart-community-dashboard.jpg" alt="Featured image of post feidu 智慧社区数据大屏" /&gt;&lt;p&gt;feidu 是一个 Nuxt 3、Vue、Tailwind CSS 和 ECharts 组成的智慧社区数据大屏项目。它把社区管理、安防监控、CIM 平台、能源检测和节能分析集中在一个可视化界面里，适合展示智慧社区、园区管理、安防运维和能源数据看板类项目的前端实现方式。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/feidu-smart-community-dashboard.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;feidu smart community dashboard&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;适合谁&#34;&gt;适合谁
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;想参考智慧社区、智慧园区或数据大屏界面实现的人。&lt;/li&gt;
+&lt;li&gt;想学习 Nuxt 3、Vue、Tailwind CSS 和 ECharts 组合方式的人。&lt;/li&gt;
+&lt;li&gt;需要安防监控、CIM 平台、能源检测、节能分析等可视化页面结构的人。&lt;/li&gt;
+&lt;li&gt;想看真实线上演示，而不是只看静态截图的前端学习者。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目价值&#34;&gt;项目价值
+&lt;/h2&gt;&lt;p&gt;feidu 的价值在于它不是单个图表练习，而是把多种业务模块组织成一个完整大屏：左侧展示安防概况、摄像头监控和报警信息，中间展示城市 / 社区 CIM 场景，右侧展示舒适度、能耗、系统能效和机组运行状态。底部还提供社区管理、安保监控、CIM 平台、能源检测和节能分析等模块切换入口。&lt;/p&gt;
+&lt;p&gt;如果你搜索的是 smart community dashboard、Vue ECharts dashboard、Nuxt 3 data visualization、security monitoring dashboard、energy monitoring dashboard 或 CIM platform UI，这个项目可以作为一个可运行的前端大屏参考。&lt;/p&gt;
+&lt;h2 id=&#34;技术方向&#34;&gt;技术方向
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Nuxt 3&lt;/li&gt;
+&lt;li&gt;Vue&lt;/li&gt;
+&lt;li&gt;Tailwind CSS&lt;/li&gt;
+&lt;li&gt;ECharts&lt;/li&gt;
+&lt;li&gt;Element Plus&lt;/li&gt;
+&lt;li&gt;数据可视化大屏&lt;/li&gt;
+&lt;li&gt;智慧社区界面&lt;/li&gt;
+&lt;li&gt;安防监控看板&lt;/li&gt;
+&lt;li&gt;能源监测与节能分析&lt;/li&gt;
+&lt;li&gt;CIM 平台前端展示&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目入口&#34;&gt;项目入口
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/feidu&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;linsk27/feidu&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;线上演示：&lt;a class=&#34;link&#34; href=&#34;https://feidu-murex.vercel.app&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;feidu-murex.vercel.app&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果这个智慧社区数据大屏对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续完善项目文档、模块说明和线上演示体验的主要信号。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>bilibili-nuxt3 Nuxt3 移动端项目</title>
+        <link>https://linsk27.github.io/projects/bilibili-nuxt3/</link>
+        <pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://linsk27.github.io/projects/bilibili-nuxt3/</guid>
+        <description>&lt;img src="https://linsk27.github.io/img/projects/bilibili-nuxt3-mobile-preview.jpg" alt="Featured image of post bilibili-nuxt3 Nuxt3 移动端项目" /&gt;&lt;p&gt;bilibili-nuxt3 是一个 Nuxt 3、Vue、TypeScript 和 Vant 移动端项目实战，围绕视频列表、频道导航、视频详情、分页加载、服务端渲染和 SEO 信息配置展开。它适合作为 Nuxt 3 project、Vue mobile app、Nuxt SSR SEO 和前端移动端页面结构的参考。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/bilibili-nuxt3-mobile-preview.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;bilibili Nuxt3 mobile preview&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;适合谁&#34;&gt;适合谁
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;想参考 Nuxt 3、Vue 和 TypeScript 移动端项目结构的人。&lt;/li&gt;
+&lt;li&gt;正在学习 SSR、SEO meta、文件路由和首屏数据获取的人。&lt;/li&gt;
+&lt;li&gt;需要 Vant UI、频道导航、视频列表和详情页示例的人。&lt;/li&gt;
+&lt;li&gt;想做移动端前端项目实战、课程项目或简历作品的人。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目价值&#34;&gt;项目价值
+&lt;/h2&gt;&lt;p&gt;这个项目的价值在于它把 Nuxt 的服务端渲染、SEO 信息配置、文件路由、移动端适配和数据交互放在一个完整示例里。相比普通组件练习，它更接近真实移动端内容应用，适合用来观察首页信息流、频道 tab、视频卡片和详情页之间的组织方式。&lt;/p&gt;
+&lt;p&gt;项目预览图来自仓库 README。历史线上预览链接当前连接不稳定，因此这个项目页优先保留稳定的截图、技术说明和 GitHub 仓库入口，后续演示站恢复后再补充新的在线入口。&lt;/p&gt;
+&lt;h2 id=&#34;技术方向&#34;&gt;技术方向
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Nuxt 3&lt;/li&gt;
+&lt;li&gt;Vue&lt;/li&gt;
+&lt;li&gt;TypeScript&lt;/li&gt;
+&lt;li&gt;Vant UI&lt;/li&gt;
+&lt;li&gt;SSR&lt;/li&gt;
+&lt;li&gt;SEO meta&lt;/li&gt;
+&lt;li&gt;移动端 vw 适配&lt;/li&gt;
+&lt;li&gt;视频列表与详情页&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目入口&#34;&gt;项目入口
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/bilibili-nuxt3&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;linsk27/bilibili-nuxt3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果这个 Nuxt 3 移动端项目对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续完善预览、运行文档和项目说明的主要信号。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>悬浮出现箭头盒子的写法</title>
         <link>https://linsk27.github.io/p/%E6%82%AC%E6%B5%AE%E5%87%BA%E7%8E%B0%E7%AE%AD%E5%A4%B4%E7%9B%92%E5%AD%90%E7%9A%84%E5%86%99%E6%B3%95/</link>
         <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>

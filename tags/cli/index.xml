@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>CLI on linsk27 | AI 辅助开发与前端项目</title>
+        <link>https://linsk27.github.io/tags/cli/</link>
+        <description>Recent content in CLI on linsk27 | AI 辅助开发与前端项目</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>linsk27</copyright>
+        <lastBuildDate>Thu, 28 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/tags/cli/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>ProofPR PR 证据检查器</title>
+        <link>https://linsk27.github.io/projects/proofpr/</link>
+        <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://linsk27.github.io/projects/proofpr/</guid>
+        <description>&lt;img src="https://linsk27.github.io/img/projects/proofpr-github-action-pr-review-report.png" alt="Featured image of post ProofPR PR 证据检查器" /&gt;&lt;p&gt;ProofPR 是一个面向 Pull Request 审查的 GitHub Action 和 CLI。它的目标不是替代维护者，而是把 PR 里容易被忽略的证据信号先整理出来，让 review 更快进入重点。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/proofpr-github-action-pr-review-report.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;ProofPR GitHub Action PR review report&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;适合谁&#34;&gt;适合谁
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;需要快速判断 PR 风险的开源维护者。&lt;/li&gt;
+&lt;li&gt;想给仓库增加 PR evidence scanning 的团队或个人项目。&lt;/li&gt;
+&lt;li&gt;关注 secrets scanning、dependency review、CI permissions 和 MCP security 的开发者。&lt;/li&gt;
+&lt;li&gt;经常 review AI generated code，希望先看风险信号再看实现细节的人。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目价值&#34;&gt;项目价值
+&lt;/h2&gt;&lt;p&gt;ProofPR 会把 Pull Request 中的多类信号整理成报告，包括 secrets 线索、依赖变化、GitHub Actions 权限、MCP 安全风险和维护者需要优先看的 review 线索。这样做的核心价值是减少重复检查，让维护者更容易判断一个 PR 是否需要补证据、补测试或调整权限。&lt;/p&gt;
+&lt;p&gt;如果你搜索的是 PR review automation、GitHub Action for pull request review、pull request evidence scanning、AI generated code review 或 GitHub Actions security，这个项目就是对应入口。&lt;/p&gt;
+&lt;h2 id=&#34;技术方向&#34;&gt;技术方向
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;GitHub Action&lt;/li&gt;
+&lt;li&gt;CLI&lt;/li&gt;
+&lt;li&gt;TypeScript / JavaScript&lt;/li&gt;
+&lt;li&gt;Pull Request diff 分析&lt;/li&gt;
+&lt;li&gt;Secrets 检测&lt;/li&gt;
+&lt;li&gt;依赖风险检查&lt;/li&gt;
+&lt;li&gt;CI 权限检查&lt;/li&gt;
+&lt;li&gt;MCP security 线索整理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目入口&#34;&gt;项目入口
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/proof-pr&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;linsk27/proof-pr&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果这个项目对你的 PR review 工作流有帮助，欢迎在 GitHub 仓库点 Star。Star 是我判断后续规则和报告质量优先级的主要依据。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
