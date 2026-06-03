@@ -7,7 +7,205 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>linsk27</copyright>
-        <lastBuildDate>Sat, 19 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 03 Jun 2026 12:00:00 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>DigitalPlat 免费域名配置教程：从领取到 Cloudflare 解析</title>
+        <link>https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/</link>
+        <pubDate>Wed, 03 Jun 2026 12:00:00 +0800</pubDate>
+        
+        <guid>https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/</guid>
+        <description>&lt;p&gt;这篇文章记录一次从零领取免费域名并接入 Cloudflare 的过程。示例域名使用 &lt;code&gt;linsk27.dpdns.org&lt;/code&gt;，平台是 DigitalPlat FreeDomain，DNS 托管使用 Cloudflare。&lt;/p&gt;
+&lt;p&gt;免费域名适合学习、测试、个人项目展示和临时服务入口。真正重要的生产项目，还是建议使用自己购买并长期持有的独立域名，方便迁移和品牌沉淀。&lt;/p&gt;
+&lt;h2 id=&#34;准备工作&#34;&gt;准备工作
+&lt;/h2&gt;&lt;p&gt;开始之前需要准备三样东西：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个 DigitalPlat Domains 账号&lt;/li&gt;
+&lt;li&gt;一个 Cloudflare 账号&lt;/li&gt;
+&lt;li&gt;一个想注册的域名前缀，例如 &lt;code&gt;linsk27&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;本文示例最终得到的完整域名是：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;linsk27.dpdns.org
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;如果你想用自己的名字，可以把 &lt;code&gt;linsk27&lt;/code&gt; 换成其他前缀。前缀尽量使用小写字母、数字和短横线，避免使用商标、敏感词或容易被误判滥用的词。&lt;/p&gt;
+&lt;h2 id=&#34;第一步在-digitalplat-里检查域名&#34;&gt;第一步：在 DigitalPlat 里检查域名
+&lt;/h2&gt;&lt;p&gt;登录 DigitalPlat Domains 后，进入左侧的 &lt;code&gt;Register&lt;/code&gt; 页面。&lt;/p&gt;
+&lt;p&gt;在注册页面里填写：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Domain: linsk27
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Suffix: .dpdns.org
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;然后勾选服务条款，点击检查可用性。&lt;/p&gt;
+&lt;p&gt;如果页面提示可用，就可以进入下一步。&lt;code&gt;.dpdns.org&lt;/code&gt; 通常适合免费测试使用；如果选择其他后缀，可能会遇到 slot、订阅或 key 的限制，以页面实际提示为准。&lt;/p&gt;
+&lt;h2 id=&#34;第二步先去-cloudflare-添加站点&#34;&gt;第二步：先去 Cloudflare 添加站点
+&lt;/h2&gt;&lt;p&gt;DigitalPlat 在注册时会要求填写外部 nameserver，所以需要先在 Cloudflare 里添加这个域名。&lt;/p&gt;
+&lt;p&gt;进入 Cloudflare 控制台，点击 &lt;code&gt;Add a site&lt;/code&gt;，输入完整域名：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;linsk27.dpdns.org
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;套餐选择 Free plan 即可。添加完成后，Cloudflare 会分配两个 nameserver，格式一般类似：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gerardo.ns.cloudflare.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sue.ns.cloudflare.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;注意：这里的 nameserver 每个账号或域名可能不同，实际使用时要复制 Cloudflare 页面上给你的两个地址。&lt;/p&gt;
+&lt;h2 id=&#34;第三步回-digitalplat-填写-nameserver&#34;&gt;第三步：回 DigitalPlat 填写 nameserver
+&lt;/h2&gt;&lt;p&gt;回到 DigitalPlat 的注册弹窗，把 Cloudflare 给出的两个 nameserver 填进去：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;NS1: gerardo.ns.cloudflare.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;NS2: sue.ns.cloudflare.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;其他 NS 输入框可以留空。不要填写 &lt;code&gt;ns1.digitalplat.net&lt;/code&gt;、&lt;code&gt;ns2.digitalplat.net&lt;/code&gt; 或类似 DigitalPlat 自己的 nameserver，因为当前注册流程要求使用外部 nameserver。&lt;/p&gt;
+&lt;p&gt;Delegation mode 保持：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;External nameservers only
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;然后选择 &lt;code&gt;Use Free Slot&lt;/code&gt;，点击 &lt;code&gt;Register&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;注册成功后，DigitalPlat 的域名列表里应该能看到这个域名。进入管理页后，可以看到注册日期、到期时间和当前 nameserver。&lt;/p&gt;
+&lt;h2 id=&#34;第四步等待-cloudflare-检测生效&#34;&gt;第四步：等待 Cloudflare 检测生效
+&lt;/h2&gt;&lt;p&gt;回到 Cloudflare 的域名 Overview 页面，会看到类似提示：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Waiting for your registrar to propagate your new nameservers
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这是正常状态。点击 &lt;code&gt;Check nameservers now&lt;/code&gt; 可以手动触发检查。&lt;/p&gt;
+&lt;p&gt;通常几分钟到几小时内会生效，最长可能需要 24 小时。只要 DigitalPlat 里已经保存了 Cloudflare 的两个 nameserver，就耐心等待即可。&lt;/p&gt;
+&lt;p&gt;也可以用命令检查 NS 是否已经切换：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nslookup -type&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;ns linsk27.dpdns.org
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;如果结果里出现 Cloudflare 的 nameserver，说明 NS 委派已经生效。&lt;/p&gt;
+&lt;h2 id=&#34;第五步在-cloudflare-添加-dns-解析&#34;&gt;第五步：在 Cloudflare 添加 DNS 解析
+&lt;/h2&gt;&lt;p&gt;Cloudflare 激活后，进入左侧 &lt;code&gt;DNS&lt;/code&gt; 页面，添加解析记录。&lt;/p&gt;
+&lt;p&gt;如果你有服务器 IP，可以添加 A 记录：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Type: A
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Name: @
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;IPv4 address: 你的服务器 IP
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Proxy status: Proxied 或 DNS only
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;如果你想让 &lt;code&gt;www&lt;/code&gt; 也能访问，可以再添加一条 CNAME：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Type: CNAME
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Name: www
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Target: linsk27.dpdns.org
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;如果你要绑定 GitHub Pages，可以使用 CNAME 指向：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Type: CNAME
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Name: @
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Target: linsk27.github.io
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;GitHub Pages 侧也需要在仓库设置里绑定自定义域名，否则只做 DNS 解析还不够。&lt;/p&gt;
+&lt;h2 id=&#34;第六步配置-ssltls&#34;&gt;第六步：配置 SSL/TLS
+&lt;/h2&gt;&lt;p&gt;Cloudflare 激活后，进入 &lt;code&gt;SSL/TLS&lt;/code&gt; 页面。&lt;/p&gt;
+&lt;p&gt;如果你只是用 GitHub Pages、Vercel、Netlify 这类静态托管，通常保持 Cloudflare 默认设置即可。&lt;/p&gt;
+&lt;p&gt;如果你自己有服务器，建议：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;有 HTTPS 证书：使用 &lt;code&gt;Full&lt;/code&gt; 或 &lt;code&gt;Full (strict)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;没有 HTTPS 证书：先配置证书，不建议长期使用 &lt;code&gt;Flexible&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;Flexible&lt;/code&gt; 看似方便，但它只加密用户到 Cloudflare 的连接，Cloudflare 到源站之间仍可能是 HTTP，不适合长期使用。&lt;/p&gt;
+&lt;h2 id=&#34;常见问题&#34;&gt;常见问题
+&lt;/h2&gt;&lt;h3 id=&#34;1-digitalplat-注册时报-403&#34;&gt;1. DigitalPlat 注册时报 403
+&lt;/h3&gt;&lt;p&gt;先检查 nameserver 是否只填了 Cloudflare 给你的两个地址。不要把 &lt;code&gt;ns3.digitalplat.net&lt;/code&gt; 或其他 DigitalPlat hosted DNS 填进去。&lt;/p&gt;
+&lt;p&gt;推荐配置：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;NS1: Cloudflare 给你的第一个 nameserver
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;NS2: Cloudflare 给你的第二个 nameserver
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;NS3-NS8: 留空
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;如果仍然 403，可以刷新页面、重新登录后再提交一次。&lt;/p&gt;
+&lt;h3 id=&#34;2-cloudflare-一直显示等待-nameserver&#34;&gt;2. Cloudflare 一直显示等待 nameserver
+&lt;/h3&gt;&lt;p&gt;确认 DigitalPlat 的域名管理页里已经保存了 Cloudflare 的 nameserver。&lt;/p&gt;
+&lt;p&gt;如果保存没问题，那就是 DNS 委派还在传播。可以过几分钟再点 &lt;code&gt;Check nameservers now&lt;/code&gt;，或者等待更久。&lt;/p&gt;
+&lt;h3 id=&#34;3-域名注册成功但打不开网站&#34;&gt;3. 域名注册成功但打不开网站
+&lt;/h3&gt;&lt;p&gt;注册成功只代表域名属于你的账号，还需要在 Cloudflare 里添加 DNS 记录。&lt;/p&gt;
+&lt;p&gt;至少需要一条 A 记录或 CNAME 记录，否则浏览器不知道这个域名要指向哪里。&lt;/p&gt;
+&lt;h3 id=&#34;4-是否需要开启-whois-privacy&#34;&gt;4. 是否需要开启 WHOIS Privacy
+&lt;/h3&gt;&lt;p&gt;建议开启。免费域名注册时通常会填写姓名、邮箱、地址、电话等 WHOIS 信息，开启隐私保护可以减少个人信息暴露。&lt;/p&gt;
+&lt;p&gt;在 DigitalPlat 的域名管理页里找到 &lt;code&gt;WHOIS Privacy&lt;/code&gt;，按页面提示启用即可。&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结
+&lt;/h2&gt;&lt;p&gt;整个流程可以理解成三步：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在 Cloudflare 添加完整域名，拿到两个 nameserver&lt;/li&gt;
+&lt;li&gt;在 DigitalPlat 注册免费域名，并把 Cloudflare nameserver 填进去&lt;/li&gt;
+&lt;li&gt;等 Cloudflare 激活后，添加 A 记录或 CNAME 记录&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;完成后，&lt;code&gt;linsk27.dpdns.org&lt;/code&gt; 就可以作为个人项目、测试服务或博客入口使用了。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>【Hugo】主题美化教程</title>
         <link>https://linsk27.github.io/p/hugo%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/</link>
         <pubDate>Sat, 19 Oct 2024 00:00:00 +0000</pubDate>

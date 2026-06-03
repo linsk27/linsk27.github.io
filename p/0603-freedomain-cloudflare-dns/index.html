@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="记录如何通过 DigitalPlat FreeDomain 领取免费域名，并把 linsk27.dpdns.org 接入 Cloudflare nameserver，完成 DNS 解析、SSL 和常见问题排查。">
+<title>DigitalPlat 免费域名配置教程：从领取到 Cloudflare 解析</title>
+
+<meta name="google-site-verification" content="ojZXN_87I2cwlf5nsEcatA8ibUhHz-Wol2E4dfd561g">
+<meta name="msvalidate.01" content="12336DB9361DCE2DB03C4A3340A146A2">
+
+<link rel='canonical' href='https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/'>
+
+<link rel="stylesheet" href="/scss/style.min.f932406a37ca0c631a380f2245d21f66d455112aa8bf9590e52e54c4a962056a.css"><meta property='og:title' content="DigitalPlat 免费域名配置教程：从领取到 Cloudflare 解析">
+<meta property='og:description' content="记录如何通过 DigitalPlat FreeDomain 领取免费域名，并把 linsk27.dpdns.org 接入 Cloudflare nameserver，完成 DNS 解析、SSL 和常见问题排查。">
+<meta property='og:url' content='https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/'>
+<meta property='og:site_name' content='linsk27 | AI 辅助开发与前端项目'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='免费域名' /><meta property='article:tag' content='Cloudflare' /><meta property='article:tag' content='DNS' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2026-06-03T12:00:00&#43;08:00'/><meta property='article:modified_time' content='2026-06-03T12:00:00&#43;08:00'/>
+<meta name="twitter:title" content="DigitalPlat 免费域名配置教程：从领取到 Cloudflare 解析">
+<meta name="twitter:description" content="记录如何通过 DigitalPlat FreeDomain 领取免费域名，并把 linsk27.dpdns.org 接入 Cloudflare nameserver，完成 DNS 解析、SSL 和常见问题排查。">
+    <link rel="shortcut icon" href="/favicon.ico" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://linsk27.github.io/#person",
+      "name": "linsk27",
+      "url": "https://linsk27.github.io/",
+      "sameAs": [
+        "https://github.com/linsk27",
+        "https://linsk27.github.io/about/",
+        "https://space.bilibili.com/674582664"
+      ],
+      "knowsAbout": [
+        "Vue",
+        "TypeScript",
+        "AI Coding",
+        "GitHub Actions",
+        "Local Development Tools",
+        "Flask",
+        "MySQL",
+        "Data Visualization",
+        "Nuxt",
+        "ECharts",
+        "Tauri",
+        "Agent Skills",
+        "AI Coding Agent Tools",
+        "Smart Community Dashboard",
+        "Security Monitoring",
+        "Energy Monitoring",
+        "CIM Platform UI"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://linsk27.github.io/#website",
+      "name": "linsk27 | AI 辅助开发与前端项目",
+      "url": "https://linsk27.github.io/",
+      "description": "linsk27 的个人项目主页，记录 Vue、TypeScript、AI 辅助开发、本地开发工具、GitHub Actions、Nuxt 数据大屏、Flask、MySQL 和全栈项目实践。",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://linsk27.github.io/search/?keyword={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "publisher": {
+        "@id": "https://linsk27.github.io/#person"
+      }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://linsk27.github.io/about/#profile",
+      "name": "关于 linsk27",
+      "url": "https://linsk27.github.io/about/",
+      "description": "linsk27 的 GitHub 个人介绍页，聚焦 AI 辅助开发、开发者工具、Vue、TypeScript、Nuxt、ECharts、Flask、MySQL 和全栈项目实践。",
+      "isPartOf": {
+        "@id": "https://linsk27.github.io/#website"
+      },
+      "mainEntity": {
+        "@id": "https://linsk27.github.io/#person"
+      }
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://linsk27.github.io/projects/#collection",
+      "name": "linsk27 Projects",
+      "url": "https://linsk27.github.io/projects/",
+      "description": "Dev Cockpit, ProofPR, skills-manage, feidu, AI Vue Flask Blog, AI-v0.dev, Vue-blog, echarts-learn, bilibili-nuxt3 and other Vue, TypeScript, AI Coding, Agent Skills, Tauri, Nuxt, ECharts, Flask, MySQL, GitHub Actions projects by linsk27.",
+      "isPartOf": {
+        "@id": "https://linsk27.github.io/#website"
+      },
+      "about": {
+        "@id": "https://linsk27.github.io/#person"
+      },
+      "hasPart": [
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "Dev Cockpit",
+          "codeRepository": "https://github.com/linsk27/local-dev-cockpit",
+          "programmingLanguage": ["TypeScript", "Vue"],
+          "description": "Local development dashboard for restoring project state, commands, logs, ports, Git status, runtime diagnostics, and AI coding context.",
+          "image": "https://linsk27.github.io/img/projects/dev-cockpit-local-development-dashboard.png",
+          "url": "https://linsk27.github.io/projects/dev-cockpit/"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "ProofPR",
+          "codeRepository": "https://github.com/linsk27/proof-pr",
+          "programmingLanguage": ["TypeScript", "JavaScript"],
+          "description": "GitHub Action and CLI for pull request evidence scanning, PR triage, dependency risk, workflow permission checks, secrets detection, MCP security, and maintainer review guidance.",
+          "image": "https://linsk27.github.io/img/projects/proofpr-github-action-pr-review-report.png",
+          "url": "https://linsk27.github.io/projects/proofpr/"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "skills-manage",
+          "codeRepository": "https://github.com/linsk27/skills-manage",
+          "programmingLanguage": ["TypeScript", "React", "Rust"],
+          "description": "Tauri, React and TypeScript desktop app for managing AI coding agent skills across Claude Code, Codex CLI, Cursor, Gemini CLI, and more than 20 platforms.",
+          "image": "https://linsk27.github.io/img/projects/skills-manage-central-library.png",
+          "url": "https://linsk27.github.io/projects/skills-manage/"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "feidu",
+          "codeRepository": "https://github.com/linsk27/feidu",
+          "programmingLanguage": ["Vue", "TypeScript"],
+          "description": "Nuxt 3, Vue, Tailwind CSS and ECharts smart community dashboard for community management, security monitoring, CIM platform, energy monitoring, and energy analysis screens.",
+          "image": "https://linsk27.github.io/img/projects/feidu-smart-community-dashboard.jpg",
+          "url": "https://linsk27.github.io/projects/feidu/"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "AI-Vue3-python-flask-Blog",
+          "codeRepository": "https://github.com/linsk27/AI-Vue3-python-flask-Blog",
+          "programmingLanguage": ["Vue", "Python", "TypeScript"],
+          "description": "Vue 3, Flask, MySQL and AI blog system for full-stack practice, course design, graduation project, and secondary development.",
+          "image": "https://linsk27.github.io/img/projects/ai-vue-flask-blog-home-page.png",
+          "url": "https://linsk27.github.io/projects/ai-vue-flask-blog/"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "AI-v0.dev-",
+          "codeRepository": "https://github.com/linsk27/AI-v0.dev-",
+          "programmingLanguage": ["TypeScript", "React"],
+          "description": "Next.js and TypeScript prototype for AI learning dashboards, v0.dev UI experiments, product interface design, progress tracking, and project cards.",
+          "image": "https://linsk27.github.io/img/projects/ai-v0-dev-learning-dashboard.png",
+          "url": "https://linsk27.github.io/projects/ai-v0-dev/"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "Vue-blog",
+          "codeRepository": "https://github.com/linsk27/Vue-blog",
+          "programmingLanguage": ["Vue", "TypeScript"],
+          "description": "Vue blog front-end project with article pages, AI center, and data analysis dashboard screens.",
+          "image": "https://linsk27.github.io/img/projects/vue-blog-demo.png",
+          "url": "https://linsk27.github.io/projects/vue-blog/"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "bilibili-nuxt3",
+          "codeRepository": "https://github.com/linsk27/bilibili-nuxt3",
+          "programmingLanguage": ["TypeScript", "Vue"],
+          "description": "Nuxt 3, Vue, TypeScript and Vant mobile project practice for SSR, SEO, channel navigation, video lists, detail pages, and mobile UI structure.",
+          "image": "https://linsk27.github.io/img/projects/bilibili-nuxt3-mobile-preview.jpg",
+          "url": "https://linsk27.github.io/projects/bilibili-nuxt3/"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "echarts-learn",
+          "codeRepository": "https://github.com/linsk27/echarts-learn",
+          "programmingLanguage": ["Vue", "TypeScript"],
+          "description": "Vue, Nuxt and ECharts data visualization dashboard practice for bar charts, radar charts, relation graphs, ring charts, word cloud, and dashboard UI.",
+          "image": "https://linsk27.github.io/img/projects/echarts-learn-dashboard.png",
+          "url": "https://linsk27.github.io/projects/echarts-learn/"
+        }
+      ]
+    }
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://linsk27.github.io/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "DigitalPlat 免费域名配置教程：从领取到 Cloudflare 解析",
+      "item": "https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/"
+    }
+  ]
+}
+</script>
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended">
+
+
+        <div id="article-toolbar" style="position: sticky;top: 5px;z-index: 1000;">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>返回</span>
+            </a>
+        </div>
+    
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#准备工作">准备工作</a></li>
+    <li><a href="#第一步在-digitalplat-里检查域名">第一步：在 DigitalPlat 里检查域名</a></li>
+    <li><a href="#第二步先去-cloudflare-添加站点">第二步：先去 Cloudflare 添加站点</a></li>
+    <li><a href="#第三步回-digitalplat-填写-nameserver">第三步：回 DigitalPlat 填写 nameserver</a></li>
+    <li><a href="#第四步等待-cloudflare-检测生效">第四步：等待 Cloudflare 检测生效</a></li>
+    <li><a href="#第五步在-cloudflare-添加-dns-解析">第五步：在 Cloudflare 添加 DNS 解析</a></li>
+    <li><a href="#第六步配置-ssltls">第六步：配置 SSL/TLS</a></li>
+    <li><a href="#常见问题">常见问题</a>
+      <ol>
+        <li><a href="#1-digitalplat-注册时报-403">1. DigitalPlat 注册时报 403</a></li>
+        <li><a href="#2-cloudflare-一直显示等待-nameserver">2. Cloudflare 一直显示等待 nameserver</a></li>
+        <li><a href="#3-域名注册成功但打不开网站">3. 域名注册成功但打不开网站</a></li>
+        <li><a href="#4-是否需要开启-whois-privacy">4. 是否需要开启 WHOIS Privacy</a></li>
+      </ol>
+    </li>
+    <li><a href="#总结">总结</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E5%B7%A5%E7%A8%8B/" >
+                工程
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/0603-freedomain-cloudflare-dns/">DigitalPlat 免费域名配置教程：从领取到 Cloudflare 解析</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            记录如何通过 DigitalPlat FreeDomain 领取免费域名，并把 linsk27.dpdns.org 接入 Cloudflare nameserver，完成 DNS 解析、SSL 和常见问题排查。
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2026-06-03</time>
+            </div>
+	        
+        <div id="viewCount">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-eye"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" /></svg>
+            <time class="article-time--reading">
+                
+                <span id="vercount_value_page_pv">loading... </span>次
+            </time>
+        </div>
+
+        
+
+        
+    </footer>
+    
+
+    
+
+    
+</div>
+
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>这篇文章记录一次从零领取免费域名并接入 Cloudflare 的过程。示例域名使用 <code>linsk27.dpdns.org</code>，平台是 DigitalPlat FreeDomain，DNS 托管使用 Cloudflare。</p>
+<p>免费域名适合学习、测试、个人项目展示和临时服务入口。真正重要的生产项目，还是建议使用自己购买并长期持有的独立域名，方便迁移和品牌沉淀。</p>
+<h2 id="准备工作">准备工作
+</h2><p>开始之前需要准备三样东西：</p>
+<ul>
+<li>一个 DigitalPlat Domains 账号</li>
+<li>一个 Cloudflare 账号</li>
+<li>一个想注册的域名前缀，例如 <code>linsk27</code></li>
+</ul>
+<p>本文示例最终得到的完整域名是：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">linsk27.dpdns.org
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果你想用自己的名字，可以把 <code>linsk27</code> 换成其他前缀。前缀尽量使用小写字母、数字和短横线，避免使用商标、敏感词或容易被误判滥用的词。</p>
+<h2 id="第一步在-digitalplat-里检查域名">第一步：在 DigitalPlat 里检查域名
+</h2><p>登录 DigitalPlat Domains 后，进入左侧的 <code>Register</code> 页面。</p>
+<p>在注册页面里填写：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Domain: linsk27
+</span></span><span class="line"><span class="cl">Suffix: .dpdns.org
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>然后勾选服务条款，点击检查可用性。</p>
+<p>如果页面提示可用，就可以进入下一步。<code>.dpdns.org</code> 通常适合免费测试使用；如果选择其他后缀，可能会遇到 slot、订阅或 key 的限制，以页面实际提示为准。</p>
+<h2 id="第二步先去-cloudflare-添加站点">第二步：先去 Cloudflare 添加站点
+</h2><p>DigitalPlat 在注册时会要求填写外部 nameserver，所以需要先在 Cloudflare 里添加这个域名。</p>
+<p>进入 Cloudflare 控制台，点击 <code>Add a site</code>，输入完整域名：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">linsk27.dpdns.org
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>套餐选择 Free plan 即可。添加完成后，Cloudflare 会分配两个 nameserver，格式一般类似：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">gerardo.ns.cloudflare.com
+</span></span><span class="line"><span class="cl">sue.ns.cloudflare.com
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>注意：这里的 nameserver 每个账号或域名可能不同，实际使用时要复制 Cloudflare 页面上给你的两个地址。</p>
+<h2 id="第三步回-digitalplat-填写-nameserver">第三步：回 DigitalPlat 填写 nameserver
+</h2><p>回到 DigitalPlat 的注册弹窗，把 Cloudflare 给出的两个 nameserver 填进去：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">NS1: gerardo.ns.cloudflare.com
+</span></span><span class="line"><span class="cl">NS2: sue.ns.cloudflare.com
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>其他 NS 输入框可以留空。不要填写 <code>ns1.digitalplat.net</code>、<code>ns2.digitalplat.net</code> 或类似 DigitalPlat 自己的 nameserver，因为当前注册流程要求使用外部 nameserver。</p>
+<p>Delegation mode 保持：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">External nameservers only
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>然后选择 <code>Use Free Slot</code>，点击 <code>Register</code>。</p>
+<p>注册成功后，DigitalPlat 的域名列表里应该能看到这个域名。进入管理页后，可以看到注册日期、到期时间和当前 nameserver。</p>
+<h2 id="第四步等待-cloudflare-检测生效">第四步：等待 Cloudflare 检测生效
+</h2><p>回到 Cloudflare 的域名 Overview 页面，会看到类似提示：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Waiting for your registrar to propagate your new nameservers
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这是正常状态。点击 <code>Check nameservers now</code> 可以手动触发检查。</p>
+<p>通常几分钟到几小时内会生效，最长可能需要 24 小时。只要 DigitalPlat 里已经保存了 Cloudflare 的两个 nameserver，就耐心等待即可。</p>
+<p>也可以用命令检查 NS 是否已经切换：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nslookup -type<span class="o">=</span>ns linsk27.dpdns.org
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果结果里出现 Cloudflare 的 nameserver，说明 NS 委派已经生效。</p>
+<h2 id="第五步在-cloudflare-添加-dns-解析">第五步：在 Cloudflare 添加 DNS 解析
+</h2><p>Cloudflare 激活后，进入左侧 <code>DNS</code> 页面，添加解析记录。</p>
+<p>如果你有服务器 IP，可以添加 A 记录：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Type: A
+</span></span><span class="line"><span class="cl">Name: @
+</span></span><span class="line"><span class="cl">IPv4 address: 你的服务器 IP
+</span></span><span class="line"><span class="cl">Proxy status: Proxied 或 DNS only
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果你想让 <code>www</code> 也能访问，可以再添加一条 CNAME：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Type: CNAME
+</span></span><span class="line"><span class="cl">Name: www
+</span></span><span class="line"><span class="cl">Target: linsk27.dpdns.org
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果你要绑定 GitHub Pages，可以使用 CNAME 指向：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Type: CNAME
+</span></span><span class="line"><span class="cl">Name: @
+</span></span><span class="line"><span class="cl">Target: linsk27.github.io
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>GitHub Pages 侧也需要在仓库设置里绑定自定义域名，否则只做 DNS 解析还不够。</p>
+<h2 id="第六步配置-ssltls">第六步：配置 SSL/TLS
+</h2><p>Cloudflare 激活后，进入 <code>SSL/TLS</code> 页面。</p>
+<p>如果你只是用 GitHub Pages、Vercel、Netlify 这类静态托管，通常保持 Cloudflare 默认设置即可。</p>
+<p>如果你自己有服务器，建议：</p>
+<ul>
+<li>有 HTTPS 证书：使用 <code>Full</code> 或 <code>Full (strict)</code></li>
+<li>没有 HTTPS 证书：先配置证书，不建议长期使用 <code>Flexible</code></li>
+</ul>
+<p><code>Flexible</code> 看似方便，但它只加密用户到 Cloudflare 的连接，Cloudflare 到源站之间仍可能是 HTTP，不适合长期使用。</p>
+<h2 id="常见问题">常见问题
+</h2><h3 id="1-digitalplat-注册时报-403">1. DigitalPlat 注册时报 403
+</h3><p>先检查 nameserver 是否只填了 Cloudflare 给你的两个地址。不要把 <code>ns3.digitalplat.net</code> 或其他 DigitalPlat hosted DNS 填进去。</p>
+<p>推荐配置：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">NS1: Cloudflare 给你的第一个 nameserver
+</span></span><span class="line"><span class="cl">NS2: Cloudflare 给你的第二个 nameserver
+</span></span><span class="line"><span class="cl">NS3-NS8: 留空
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果仍然 403，可以刷新页面、重新登录后再提交一次。</p>
+<h3 id="2-cloudflare-一直显示等待-nameserver">2. Cloudflare 一直显示等待 nameserver
+</h3><p>确认 DigitalPlat 的域名管理页里已经保存了 Cloudflare 的 nameserver。</p>
+<p>如果保存没问题，那就是 DNS 委派还在传播。可以过几分钟再点 <code>Check nameservers now</code>，或者等待更久。</p>
+<h3 id="3-域名注册成功但打不开网站">3. 域名注册成功但打不开网站
+</h3><p>注册成功只代表域名属于你的账号，还需要在 Cloudflare 里添加 DNS 记录。</p>
+<p>至少需要一条 A 记录或 CNAME 记录，否则浏览器不知道这个域名要指向哪里。</p>
+<h3 id="4-是否需要开启-whois-privacy">4. 是否需要开启 WHOIS Privacy
+</h3><p>建议开启。免费域名注册时通常会填写姓名、邮箱、地址、电话等 WHOIS 信息，开启隐私保护可以减少个人信息暴露。</p>
+<p>在 DigitalPlat 的域名管理页里找到 <code>WHOIS Privacy</code>，按页面提示启用即可。</p>
+<h2 id="总结">总结
+</h2><p>整个流程可以理解成三步：</p>
+<ol>
+<li>在 Cloudflare 添加完整域名，拿到两个 nameserver</li>
+<li>在 DigitalPlat 注册免费域名，并把 Cloudflare nameserver 填进去</li>
+<li>等 Cloudflare 激活后，添加 A 记录或 CNAME 记录</li>
+</ol>
+<p>完成后，<code>linsk27.dpdns.org</code> 就可以作为个人项目、测试服务或博客入口使用了。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D/">免费域名</a>
+        
+            <a href="/tags/cloudflare/">Cloudflare</a>
+        
+            <a href="/tags/dns/">DNS</a>
+        
+            <a href="/tags/hugo/">Hugo</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>404_@林达所作</span>
+
+    </section>
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/0603-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6docker/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">初步接触Docker</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/0423-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6nginx/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">初步接触Nginx</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/0321-webpack%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6/">
+        
+        
+            <div class="article-image">
+                <img src="/p/0321-webpack%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6/webpack.f485e224ca7ad1002ddcc3f447ca97fc_hu_cf70bee1c607e635.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Webpack初步接触"
+                        data-key="0321 Webpack初步接触" 
+                        data-hash="md5-9IXiJMp60QAt3MP0R8qX/A==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Webpack初步接触</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/0315-%E4%BB%80%E4%B9%88%E6%98%AFseo/">
+        
+        
+            <div class="article-image">
+                <img src="/p/0315-%E4%BB%80%E4%B9%88%E6%98%AFseo/SEO.4b516944fa2f62ea7d76532a57a364e8_hu_e0207483d0ea1194.jpeg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 什么是SEO？"
+                        data-key="0315 什么是SEO？" 
+                        data-hash="md5-S1FpRPovYup9dlMqV6Nk6A==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">什么是SEO？</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/seo%E4%BC%98%E5%8C%96%E6%89%8B%E6%AE%B5---canonical/">
+        
+        
+            <div class="article-image">
+                <img src="/p/seo%E4%BC%98%E5%8C%96%E6%89%8B%E6%AE%B5---canonical/SEO.4b516944fa2f62ea7d76532a57a364e8_hu_e0207483d0ea1194.jpeg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post SEO优化手段---Canonical"
+                        data-key="SEO优化手段---Canonical" 
+                        data-hash="md5-S1FpRPovYup9dlMqV6Nk6A==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">SEO优化手段---Canonical</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2026 linsk27
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<script src="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.css" crossorigin="anonymous" />
+<script>
+    NProgress.start();
+    document.addEventListener("readystatechange", () => {
+        if (document.readyState === "interactive") NProgress.inc(0.8);
+        if (document.readyState === "complete") NProgress.done();
+    });
+</script>
+
+<script defer src="https://cn.vercount.one/js"></script>
+<script>
+    function showHideView() {
+        
+        let viewCounts = document.querySelectorAll("#viewCount");
+        if (viewCounts) {
+            
+            let article =  document.querySelector(".article-page");
+            if (!article) {
+                viewCounts.forEach(ele => {
+                    ele.style.display = 'none';
+                });
+            }
+        }
+    }
+    
+    showHideView();
+</script>
+
+    </body>
+</html>
