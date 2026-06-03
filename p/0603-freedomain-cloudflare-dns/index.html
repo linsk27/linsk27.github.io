@@ -13,9 +13,10 @@
 <meta property='og:description' content="记录如何通过 DigitalPlat FreeDomain 领取免费域名，并把 linsk27.dpdns.org 接入 Cloudflare nameserver，完成 DNS 解析、SSL 和常见问题排查。">
 <meta property='og:url' content='https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/'>
 <meta property='og:site_name' content='linsk27 | AI 辅助开发与前端项目'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='免费域名' /><meta property='article:tag' content='Cloudflare' /><meta property='article:tag' content='DNS' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2026-06-03T12:00:00&#43;08:00'/><meta property='article:modified_time' content='2026-06-03T12:00:00&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='免费域名' /><meta property='article:tag' content='Cloudflare' /><meta property='article:tag' content='DNS' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2026-06-03T12:00:00&#43;08:00'/><meta property='article:modified_time' content='2026-06-03T12:00:00&#43;08:00'/><meta property='og:image' content='https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/digitalplat-nameserver.png' />
 <meta name="twitter:title" content="DigitalPlat 免费域名配置教程：从领取到 Cloudflare 解析">
-<meta name="twitter:description" content="记录如何通过 DigitalPlat FreeDomain 领取免费域名，并把 linsk27.dpdns.org 接入 Cloudflare nameserver，完成 DNS 解析、SSL 和常见问题排查。">
+<meta name="twitter:description" content="记录如何通过 DigitalPlat FreeDomain 领取免费域名，并把 linsk27.dpdns.org 接入 Cloudflare nameserver，完成 DNS 解析、SSL 和常见问题排查。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/digitalplat-nameserver.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
 <script type="application/ld+json">
 {
@@ -290,8 +291,21 @@
 
 
             <main class="main full-width">
-    <article class="main-article">
+    <article class="has-image main-article">
     <header class="article-header">
+        <div class="article-image">
+            <a href="/p/0603-freedomain-cloudflare-dns/">
+                <img src="/p/0603-freedomain-cloudflare-dns/digitalplat-nameserver_hu_1879e1f58fa032bb.png"
+                        srcset="/p/0603-freedomain-cloudflare-dns/digitalplat-nameserver_hu_1879e1f58fa032bb.png 800w, /p/0603-freedomain-cloudflare-dns/digitalplat-nameserver_hu_9e4eff6deb9238bf.png 1600w"
+                        width="800" 
+                        height="450" 
+                        loading="lazy"
+                        alt="Featured image of post DigitalPlat 免费域名配置教程：从领取到 Cloudflare 解析" />
+                
+            </a>
+        </div>
+
+    
 
     <div class="article-details">
     
@@ -442,6 +456,20 @@
 </div>
 </div><p>然后选择 <code>Use Free Slot</code>，点击 <code>Register</code>。</p>
 <p>注册成功后，DigitalPlat 的域名列表里应该能看到这个域名。进入管理页后，可以看到注册日期、到期时间和当前 nameserver。</p>
+<p><img src="/p/0603-freedomain-cloudflare-dns/digitalplat-nameserver.png"
+	width="1280"
+	height="720"
+	srcset="/p/0603-freedomain-cloudflare-dns/digitalplat-nameserver_hu_e1e2f64b0cdcfcb1.png 480w, /p/0603-freedomain-cloudflare-dns/digitalplat-nameserver_hu_d67ccf885f23e5dc.png 1024w"
+	loading="lazy"
+	
+		alt="DigitalPlat 域名管理页中的 nameserver 配置"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
 <h2 id="第四步等待-cloudflare-检测生效">第四步：等待 Cloudflare 检测生效
 </h2><p>回到 Cloudflare 的域名 Overview 页面，会看到类似提示：</p>
 <div class="highlight"><div class="chroma">
@@ -454,6 +482,20 @@
 </div>
 </div><p>这是正常状态。点击 <code>Check nameservers now</code> 可以手动触发检查。</p>
 <p>通常几分钟到几小时内会生效，最长可能需要 24 小时。只要 DigitalPlat 里已经保存了 Cloudflare 的两个 nameserver，就耐心等待即可。</p>
+<p><img src="/p/0603-freedomain-cloudflare-dns/cloudflare-nameserver-check.png"
+	width="1280"
+	height="720"
+	srcset="/p/0603-freedomain-cloudflare-dns/cloudflare-nameserver-check_hu_1100cd980baac666.png 480w, /p/0603-freedomain-cloudflare-dns/cloudflare-nameserver-check_hu_13ac068d6873d3d9.png 1024w"
+	loading="lazy"
+	
+		alt="Cloudflare nameserver 生效检查页面"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
 <p>也可以用命令检查 NS 是否已经切换：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">

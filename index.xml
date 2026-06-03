@@ -13,7 +13,7 @@
         <pubDate>Wed, 03 Jun 2026 12:00:00 +0800</pubDate>
         
         <guid>https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/</guid>
-        <description>&lt;p&gt;这篇文章记录一次从零领取免费域名并接入 Cloudflare 的过程。示例域名使用 &lt;code&gt;linsk27.dpdns.org&lt;/code&gt;，平台是 DigitalPlat FreeDomain，DNS 托管使用 Cloudflare。&lt;/p&gt;
+        <description>&lt;img src="https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/digitalplat-nameserver.png" alt="Featured image of post DigitalPlat 免费域名配置教程：从领取到 Cloudflare 解析" /&gt;&lt;p&gt;这篇文章记录一次从零领取免费域名并接入 Cloudflare 的过程。示例域名使用 &lt;code&gt;linsk27.dpdns.org&lt;/code&gt;，平台是 DigitalPlat FreeDomain，DNS 托管使用 Cloudflare。&lt;/p&gt;
 &lt;p&gt;免费域名适合学习、测试、个人项目展示和临时服务入口。真正重要的生产项目，还是建议使用自己购买并长期持有的独立域名，方便迁移和品牌沉淀。&lt;/p&gt;
 &lt;h2 id=&#34;准备工作&#34;&gt;准备工作
 &lt;/h2&gt;&lt;p&gt;开始之前需要准备三样东西：&lt;/p&gt;
@@ -94,6 +94,20 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;然后选择 &lt;code&gt;Use Free Slot&lt;/code&gt;，点击 &lt;code&gt;Register&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;注册成功后，DigitalPlat 的域名列表里应该能看到这个域名。进入管理页后，可以看到注册日期、到期时间和当前 nameserver。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/digitalplat-nameserver.png&#34;
+	width=&#34;1280&#34;
+	height=&#34;720&#34;
+	srcset=&#34;https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/digitalplat-nameserver_hu_e1e2f64b0cdcfcb1.png 480w, https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/digitalplat-nameserver_hu_d67ccf885f23e5dc.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;DigitalPlat 域名管理页中的 nameserver 配置&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;h2 id=&#34;第四步等待-cloudflare-检测生效&#34;&gt;第四步：等待 Cloudflare 检测生效
 &lt;/h2&gt;&lt;p&gt;回到 Cloudflare 的域名 Overview 页面，会看到类似提示：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -106,6 +120,20 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;这是正常状态。点击 &lt;code&gt;Check nameservers now&lt;/code&gt; 可以手动触发检查。&lt;/p&gt;
 &lt;p&gt;通常几分钟到几小时内会生效，最长可能需要 24 小时。只要 DigitalPlat 里已经保存了 Cloudflare 的两个 nameserver，就耐心等待即可。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/cloudflare-nameserver-check.png&#34;
+	width=&#34;1280&#34;
+	height=&#34;720&#34;
+	srcset=&#34;https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/cloudflare-nameserver-check_hu_1100cd980baac666.png 480w, https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/cloudflare-nameserver-check_hu_13ac068d6873d3d9.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Cloudflare nameserver 生效检查页面&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;p&gt;也可以用命令检查 NS 是否已经切换：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
