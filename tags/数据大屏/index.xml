@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>数据大屏 on linsk27 | AI 辅助开发与前端项目</title>
-        <link>https://linsk27.github.io/tags/%E6%95%B0%E6%8D%AE%E5%A4%A7%E5%B1%8F/</link>
+        <link>https://linsk27.dpdns.org/tags/%E6%95%B0%E6%8D%AE%E5%A4%A7%E5%B1%8F/</link>
         <description>Recent content in 数据大屏 on linsk27 | AI 辅助开发与前端项目</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>linsk27</copyright>
-        <lastBuildDate>Fri, 29 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/tags/%E6%95%B0%E6%8D%AE%E5%A4%A7%E5%B1%8F/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 29 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.dpdns.org/tags/%E6%95%B0%E6%8D%AE%E5%A4%A7%E5%B1%8F/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>echarts-learn 数据可视化练习</title>
-        <link>https://linsk27.github.io/projects/echarts-learn/</link>
+        <link>https://linsk27.dpdns.org/projects/echarts-learn/</link>
         <pubDate>Wed, 09 Apr 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/projects/echarts-learn/</guid>
-        <description>&lt;img src="https://linsk27.github.io/img/projects/echarts-learn-dashboard.png" alt="Featured image of post echarts-learn 数据可视化练习" /&gt;&lt;p&gt;echarts-learn 是一个 Vue、Nuxt 和 ECharts 数据可视化练习项目，用来展示多图表 dashboard 的页面组织方式。它覆盖柱状图、雷达图、关系图、环形图、词云和数据总览，适合用来参考 ECharts data visualization、Vue chart project 和 dashboard UI 的组合方式。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/echarts-learn-dashboard.png&#34;
+        <guid>https://linsk27.dpdns.org/projects/echarts-learn/</guid>
+        <description>&lt;img src="https://linsk27.dpdns.org/img/projects/echarts-learn-dashboard.png" alt="Featured image of post echarts-learn 数据可视化练习" /&gt;&lt;p&gt;echarts-learn 是一个 Vue、Nuxt 和 ECharts 数据可视化练习项目，用来展示多图表 dashboard 的页面组织方式。它覆盖柱状图、雷达图、关系图、环形图、词云和数据总览，适合用来参考 ECharts data visualization、Vue chart project 和 dashboard UI 的组合方式。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27.dpdns.org/img/projects/echarts-learn-dashboard.png&#34;
 	
 	
 	
@@ -48,7 +48,7 @@
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;GitHub 仓库：&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/echarts-learn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;linsk27/echarts-learn&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;如果这个 ECharts 数据可视化项目对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续补充图表说明、运行文档和可复用示例的主要信号。&lt;/p&gt;
 </description>

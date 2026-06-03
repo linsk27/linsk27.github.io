@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>TypeScript on linsk27 | AI 辅助开发与前端项目</title>
-        <link>https://linsk27.github.io/tags/typescript/</link>
-        <description>Recent content in TypeScript on linsk27 | AI 辅助开发与前端项目</description>
+        <title>Typescript on linsk27 | AI 辅助开发与前端项目</title>
+        <link>https://linsk27.dpdns.org/tags/typescript/</link>
+        <description>Recent content in Typescript on linsk27 | AI 辅助开发与前端项目</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>linsk27</copyright>
-        <lastBuildDate>Wed, 03 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/tags/typescript/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 03 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.dpdns.org/tags/typescript/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Dev Cockpit 资源雷达工作台</title>
-        <link>https://linsk27.github.io/projects/dev-cockpit/</link>
+        <link>https://linsk27.dpdns.org/projects/dev-cockpit/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/projects/dev-cockpit/</guid>
-        <description>&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png" alt="Featured image of post Dev Cockpit 资源雷达工作台" /&gt;&lt;p&gt;Dev Cockpit 现在更像一个本地资源雷达，而不是普通的项目启动器。它把我平时看到的 GitHub 仓库、Demo、工具、教程、视频号文本和 AI coding 资源收进一个工作台，再用分类、标签、摘要、价值评分和可视化视图帮助我判断哪些东西值得继续研究。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png&#34;
+        <guid>https://linsk27.dpdns.org/projects/dev-cockpit/</guid>
+        <description>&lt;img src="https://linsk27.dpdns.org/img/projects/dev-cockpit-resource-radar-cards.png" alt="Featured image of post Dev Cockpit 资源雷达工作台" /&gt;&lt;p&gt;Dev Cockpit 现在更像一个本地资源雷达，而不是普通的项目启动器。它把我平时看到的 GitHub 仓库、Demo、工具、教程、视频号文本和 AI coding 资源收进一个工作台，再用分类、标签、摘要、价值评分和可视化视图帮助我判断哪些东西值得继续研究。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27.dpdns.org/img/projects/dev-cockpit-resource-radar-cards.png&#34;
 	
 	
 	
@@ -31,7 +31,7 @@
 &lt;/h2&gt;&lt;p&gt;资源页现在有两个主要视图。&lt;/p&gt;
 &lt;p&gt;卡片库适合做日常整理。页面顶部可以粘贴 GitHub、Demo、工具、教程或视频号文本，也可以导入、导出和解析资源。中间区域提供搜索框、状态筛选和大类筛选，目前支持工具、Skills、Workflow 等分类。&lt;/p&gt;
 &lt;p&gt;星云图适合看资源之间的分布。它把资源按照大类和主题放进一个可视化空间里，适合快速判断当前收集内容偏向前端工具、AI 编程辅助、视觉设计、预测模拟还是 3D 生成。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/dev-cockpit-resource-nebula.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://linsk27.dpdns.org/img/projects/dev-cockpit-resource-nebula.png&#34;
 	
 	
 	
@@ -76,19 +76,19 @@
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;GitHub 仓库：&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/local-dev-cockpit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;linsk27/local-dev-cockpit&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;如果你正在找 developer resource dashboard、GitHub resource manager、AI coding resources、resource radar 或 Electron Vue desktop tools，Dev Cockpit 会比普通练手页面更接近真实的个人开发工作流。&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>skills-manage AI Skills 管理器</title>
-        <link>https://linsk27.github.io/projects/skills-manage/</link>
+        <link>https://linsk27.dpdns.org/projects/skills-manage/</link>
         <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/projects/skills-manage/</guid>
-        <description>&lt;img src="https://linsk27.github.io/img/projects/skills-manage-central-library.png" alt="Featured image of post skills-manage AI Skills 管理器" /&gt;&lt;p&gt;skills-manage 是一个 Tauri、React 和 TypeScript 桌面应用，用来把多个 AI coding agent 的 skills 管理集中到一个地方。它把 &lt;code&gt;~/.agents/skills/&lt;/code&gt; 作为中心技能库，再通过平台安装、卸载和符号链接，把同一套技能同步到 Claude Code、Codex CLI、Cursor、Gemini CLI、Trae、Windsurf、Aider 等工具。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/skills-manage-central-library.png&#34;
+        <guid>https://linsk27.dpdns.org/projects/skills-manage/</guid>
+        <description>&lt;img src="https://linsk27.dpdns.org/img/projects/skills-manage-central-library.png" alt="Featured image of post skills-manage AI Skills 管理器" /&gt;&lt;p&gt;skills-manage 是一个 Tauri、React 和 TypeScript 桌面应用，用来把多个 AI coding agent 的 skills 管理集中到一个地方。它把 &lt;code&gt;~/.agents/skills/&lt;/code&gt; 作为中心技能库，再通过平台安装、卸载和符号链接，把同一套技能同步到 Claude Code、Codex CLI、Cursor、Gemini CLI、Trae、Windsurf、Aider 等工具。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27.dpdns.org/img/projects/skills-manage-central-library.png&#34;
 	
 	
 	
@@ -110,7 +110,7 @@
 &lt;p&gt;如果你搜索的是 AI coding agent skills manager、Claude Code skills、Codex CLI skills、Cursor skills、Agent Skills desktop app 或 Tauri React desktop app，这个项目可以作为一个完整的本地优先应用参考。&lt;/p&gt;
 &lt;h2 id=&#34;功能截图&#34;&gt;功能截图
 &lt;/h2&gt;&lt;h3 id=&#34;技能市场&#34;&gt;技能市场
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/skills-manage-marketplace.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://linsk27.dpdns.org/img/projects/skills-manage-marketplace.png&#34;
 	
 	
 	
@@ -121,7 +121,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;github-仓库导入&#34;&gt;GitHub 仓库导入
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/skills-manage-github-import.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://linsk27.dpdns.org/img/projects/skills-manage-github-import.png&#34;
 	
 	
 	
@@ -149,19 +149,19 @@
     &gt;linsk27/skills-manage&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;下载入口：&lt;a class=&#34;link&#34; href=&#34;https://github.com/iamzhihuix/skills-manage/releases/latest&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;latest release&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;如果这个 AI coding agent skills 管理工具对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续完善平台适配、市场同步、导入体验和跨工具技能管理的主要信号。&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>AI-v0.dev AI UI 原型</title>
-        <link>https://linsk27.github.io/projects/ai-v0-dev/</link>
+        <link>https://linsk27.dpdns.org/projects/ai-v0-dev/</link>
         <pubDate>Tue, 31 Mar 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/projects/ai-v0-dev/</guid>
-        <description>&lt;img src="https://linsk27.github.io/img/projects/ai-v0-dev-learning-dashboard.png" alt="Featured image of post AI-v0.dev AI UI 原型" /&gt;&lt;p&gt;AI-v0.dev- 是一个用 Next.js、React、TypeScript、Tailwind CSS 和 shadcn/ui 搭出来的 AI 学习仪表盘原型。它把 3 个月 AI 工程师冲刺计划拆成时间线、项目卡片、知识体系、里程碑、任务进度和本地数据管理。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/ai-v0-dev-learning-dashboard.png&#34;
+        <guid>https://linsk27.dpdns.org/projects/ai-v0-dev/</guid>
+        <description>&lt;img src="https://linsk27.dpdns.org/img/projects/ai-v0-dev-learning-dashboard.png" alt="Featured image of post AI-v0.dev AI UI 原型" /&gt;&lt;p&gt;AI-v0.dev- 是一个用 Next.js、React、TypeScript、Tailwind CSS 和 shadcn/ui 搭出来的 AI 学习仪表盘原型。它把 3 个月 AI 工程师冲刺计划拆成时间线、项目卡片、知识体系、里程碑、任务进度和本地数据管理。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27.dpdns.org/img/projects/ai-v0-dev-learning-dashboard.png&#34;
 	
 	
 	
@@ -195,19 +195,19 @@
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;GitHub 仓库：&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/AI-v0.dev-&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;linsk27/AI-v0.dev-&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;如果这个 AI 产品界面原型对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续沉淀可复用界面结构和交互模式的主要依据。&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>bilibili-nuxt3 Nuxt3 移动端项目</title>
-        <link>https://linsk27.github.io/projects/bilibili-nuxt3/</link>
+        <link>https://linsk27.dpdns.org/projects/bilibili-nuxt3/</link>
         <pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/projects/bilibili-nuxt3/</guid>
-        <description>&lt;img src="https://linsk27.github.io/img/projects/bilibili-nuxt3-mobile-preview.jpg" alt="Featured image of post bilibili-nuxt3 Nuxt3 移动端项目" /&gt;&lt;p&gt;bilibili-nuxt3 是一个 Nuxt 3、Vue、TypeScript 和 Vant 移动端项目实战，围绕视频列表、频道导航、视频详情、分页加载、服务端渲染和 SEO 信息配置展开。它适合作为 Nuxt 3 project、Vue mobile app、Nuxt SSR SEO 和前端移动端页面结构的参考。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/bilibili-nuxt3-mobile-preview.jpg&#34;
+        <guid>https://linsk27.dpdns.org/projects/bilibili-nuxt3/</guid>
+        <description>&lt;img src="https://linsk27.dpdns.org/img/projects/bilibili-nuxt3-mobile-preview.jpg" alt="Featured image of post bilibili-nuxt3 Nuxt3 移动端项目" /&gt;&lt;p&gt;bilibili-nuxt3 是一个 Nuxt 3、Vue、TypeScript 和 Vant 移动端项目实战，围绕视频列表、频道导航、视频详情、分页加载、服务端渲染和 SEO 信息配置展开。它适合作为 Nuxt 3 project、Vue mobile app、Nuxt SSR SEO 和前端移动端页面结构的参考。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27.dpdns.org/img/projects/bilibili-nuxt3-mobile-preview.jpg&#34;
 	
 	
 	
@@ -242,17 +242,17 @@
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;GitHub 仓库：&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/bilibili-nuxt3&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;linsk27/bilibili-nuxt3&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;如果这个 Nuxt 3 移动端项目对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续完善预览、运行文档和项目说明的主要信号。&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>el-table中sort(拖拽排序)的常见方法</title>
-        <link>https://linsk27.github.io/p/el-table%E4%B8%ADsort%E6%8B%96%E6%8B%BD%E6%8E%92%E5%BA%8F%E7%9A%84%E5%B8%B8%E8%A7%81%E6%96%B9%E6%B3%95/</link>
+        <link>https://linsk27.dpdns.org/p/el-table%E4%B8%ADsort%E6%8B%96%E6%8B%BD%E6%8E%92%E5%BA%8F%E7%9A%84%E5%B8%B8%E8%A7%81%E6%96%B9%E6%B3%95/</link>
         <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/p/el-table%E4%B8%ADsort%E6%8B%96%E6%8B%BD%E6%8E%92%E5%BA%8F%E7%9A%84%E5%B8%B8%E8%A7%81%E6%96%B9%E6%B3%95/</guid>
+        <guid>https://linsk27.dpdns.org/p/el-table%E4%B8%ADsort%E6%8B%96%E6%8B%BD%E6%8E%92%E5%BA%8F%E7%9A%84%E5%B8%B8%E8%A7%81%E6%96%B9%E6%B3%95/</guid>
         <description>&lt;h2 id=&#34;el-table中sort的常见方法&#34;&gt;el-table中sort的常见方法
 &lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;

@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>内容应用 on linsk27 | AI 辅助开发与前端项目</title>
-        <link>https://linsk27.github.io/tags/%E5%86%85%E5%AE%B9%E5%BA%94%E7%94%A8/</link>
+        <link>https://linsk27.dpdns.org/tags/%E5%86%85%E5%AE%B9%E5%BA%94%E7%94%A8/</link>
         <description>Recent content in 内容应用 on linsk27 | AI 辅助开发与前端项目</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>linsk27</copyright>
-        <lastBuildDate>Fri, 29 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/tags/%E5%86%85%E5%AE%B9%E5%BA%94%E7%94%A8/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 29 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.dpdns.org/tags/%E5%86%85%E5%AE%B9%E5%BA%94%E7%94%A8/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Vue-blog 前端博客项目</title>
-        <link>https://linsk27.github.io/projects/vue-blog/</link>
+        <link>https://linsk27.dpdns.org/projects/vue-blog/</link>
         <pubDate>Wed, 23 Jul 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/projects/vue-blog/</guid>
-        <description>&lt;img src="https://linsk27.github.io/img/projects/vue-blog-demo.png" alt="Featured image of post Vue-blog 前端博客项目" /&gt;&lt;p&gt;Vue-blog 是一个 Vue 前端博客项目，用来展示文章入口、AI 中心、数据分析看板和内容型页面结构。它适合作为 Vue blog project、front-end learning notes、content presentation 和前端页面组织方式的参考。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/vue-blog-demo.png&#34;
+        <guid>https://linsk27.dpdns.org/projects/vue-blog/</guid>
+        <description>&lt;img src="https://linsk27.dpdns.org/img/projects/vue-blog-demo.png" alt="Featured image of post Vue-blog 前端博客项目" /&gt;&lt;p&gt;Vue-blog 是一个 Vue 前端博客项目，用来展示文章入口、AI 中心、数据分析看板和内容型页面结构。它适合作为 Vue blog project、front-end learning notes、content presentation 和前端页面组织方式的参考。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27.dpdns.org/img/projects/vue-blog-demo.png&#34;
 	
 	
 	
@@ -50,7 +50,7 @@
     &gt;linsk27/Vue-blog&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;线上演示：&lt;a class=&#34;link&#34; href=&#34;https://vue-blog-smoky.vercel.app/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;vue-blog-smoky.vercel.app&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;如果这个 Vue 博客项目对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续完善页面结构、文档和可复用组件示例的主要信号。&lt;/p&gt;
 </description>

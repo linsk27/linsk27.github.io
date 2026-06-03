@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Axios on linsk27 | AI 辅助开发与前端项目</title>
-        <link>https://linsk27.github.io/tags/axios/</link>
+        <link>https://linsk27.dpdns.org/tags/axios/</link>
         <description>Recent content in Axios on linsk27 | AI 辅助开发与前端项目</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>linsk27</copyright>
-        <lastBuildDate>Sat, 22 Mar 2025 12:01:56 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/axios/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 22 Mar 2025 12:01:56 +0800</lastBuildDate><atom:link href="https://linsk27.dpdns.org/tags/axios/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>XMLHttpRequest、Axios 与 Fetch 在 Vue3 中的深度解析</title>
-        <link>https://linsk27.github.io/p/0322-%E4%B8%89%E7%A7%8D%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8/</link>
+        <link>https://linsk27.dpdns.org/p/0322-%E4%B8%89%E7%A7%8D%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8/</link>
         <pubDate>Sat, 22 Mar 2025 12:01:56 +0800</pubDate>
         
-        <guid>https://linsk27.github.io/p/0322-%E4%B8%89%E7%A7%8D%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8/</guid>
+        <guid>https://linsk27.dpdns.org/p/0322-%E4%B8%89%E7%A7%8D%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8/</guid>
         <description>&lt;h1 id=&#34;xmlhttprequestaxios-与-fetch-在-vue3-中的深度解析&#34;&gt;XMLHttpRequest、Axios 与 Fetch 在 Vue3 中的深度解析
 &lt;/h1&gt;&lt;h2 id=&#34;一xmlhttprequest-xhr&#34;&gt;一、XMLHttpRequest (XHR)
 &lt;/h2&gt;&lt;h3 id=&#34;核心特性&#34;&gt;核心特性

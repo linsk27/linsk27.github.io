@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>工具 on linsk27 | AI 辅助开发与前端项目</title>
-        <link>https://linsk27.github.io/categories/%E5%B7%A5%E5%85%B7/</link>
+        <link>https://linsk27.dpdns.org/categories/%E5%B7%A5%E5%85%B7/</link>
         <description>Recent content in 工具 on linsk27 | AI 辅助开发与前端项目</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>linsk27</copyright>
-        <lastBuildDate>Wed, 03 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 03 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.dpdns.org/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Dev Cockpit 资源雷达工作台</title>
-        <link>https://linsk27.github.io/projects/dev-cockpit/</link>
+        <link>https://linsk27.dpdns.org/projects/dev-cockpit/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/projects/dev-cockpit/</guid>
-        <description>&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png" alt="Featured image of post Dev Cockpit 资源雷达工作台" /&gt;&lt;p&gt;Dev Cockpit 现在更像一个本地资源雷达，而不是普通的项目启动器。它把我平时看到的 GitHub 仓库、Demo、工具、教程、视频号文本和 AI coding 资源收进一个工作台，再用分类、标签、摘要、价值评分和可视化视图帮助我判断哪些东西值得继续研究。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png&#34;
+        <guid>https://linsk27.dpdns.org/projects/dev-cockpit/</guid>
+        <description>&lt;img src="https://linsk27.dpdns.org/img/projects/dev-cockpit-resource-radar-cards.png" alt="Featured image of post Dev Cockpit 资源雷达工作台" /&gt;&lt;p&gt;Dev Cockpit 现在更像一个本地资源雷达，而不是普通的项目启动器。它把我平时看到的 GitHub 仓库、Demo、工具、教程、视频号文本和 AI coding 资源收进一个工作台，再用分类、标签、摘要、价值评分和可视化视图帮助我判断哪些东西值得继续研究。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27.dpdns.org/img/projects/dev-cockpit-resource-radar-cards.png&#34;
 	
 	
 	
@@ -31,7 +31,7 @@
 &lt;/h2&gt;&lt;p&gt;资源页现在有两个主要视图。&lt;/p&gt;
 &lt;p&gt;卡片库适合做日常整理。页面顶部可以粘贴 GitHub、Demo、工具、教程或视频号文本，也可以导入、导出和解析资源。中间区域提供搜索框、状态筛选和大类筛选，目前支持工具、Skills、Workflow 等分类。&lt;/p&gt;
 &lt;p&gt;星云图适合看资源之间的分布。它把资源按照大类和主题放进一个可视化空间里，适合快速判断当前收集内容偏向前端工具、AI 编程辅助、视觉设计、预测模拟还是 3D 生成。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/dev-cockpit-resource-nebula.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://linsk27.dpdns.org/img/projects/dev-cockpit-resource-nebula.png&#34;
 	
 	
 	
@@ -76,19 +76,19 @@
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;GitHub 仓库：&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/local-dev-cockpit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;linsk27/local-dev-cockpit&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;如果你正在找 developer resource dashboard、GitHub resource manager、AI coding resources、resource radar 或 Electron Vue desktop tools，Dev Cockpit 会比普通练手页面更接近真实的个人开发工作流。&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>skills-manage AI Skills 管理器</title>
-        <link>https://linsk27.github.io/projects/skills-manage/</link>
+        <link>https://linsk27.dpdns.org/projects/skills-manage/</link>
         <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/projects/skills-manage/</guid>
-        <description>&lt;img src="https://linsk27.github.io/img/projects/skills-manage-central-library.png" alt="Featured image of post skills-manage AI Skills 管理器" /&gt;&lt;p&gt;skills-manage 是一个 Tauri、React 和 TypeScript 桌面应用，用来把多个 AI coding agent 的 skills 管理集中到一个地方。它把 &lt;code&gt;~/.agents/skills/&lt;/code&gt; 作为中心技能库，再通过平台安装、卸载和符号链接，把同一套技能同步到 Claude Code、Codex CLI、Cursor、Gemini CLI、Trae、Windsurf、Aider 等工具。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/skills-manage-central-library.png&#34;
+        <guid>https://linsk27.dpdns.org/projects/skills-manage/</guid>
+        <description>&lt;img src="https://linsk27.dpdns.org/img/projects/skills-manage-central-library.png" alt="Featured image of post skills-manage AI Skills 管理器" /&gt;&lt;p&gt;skills-manage 是一个 Tauri、React 和 TypeScript 桌面应用，用来把多个 AI coding agent 的 skills 管理集中到一个地方。它把 &lt;code&gt;~/.agents/skills/&lt;/code&gt; 作为中心技能库，再通过平台安装、卸载和符号链接，把同一套技能同步到 Claude Code、Codex CLI、Cursor、Gemini CLI、Trae、Windsurf、Aider 等工具。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27.dpdns.org/img/projects/skills-manage-central-library.png&#34;
 	
 	
 	
@@ -110,7 +110,7 @@
 &lt;p&gt;如果你搜索的是 AI coding agent skills manager、Claude Code skills、Codex CLI skills、Cursor skills、Agent Skills desktop app 或 Tauri React desktop app，这个项目可以作为一个完整的本地优先应用参考。&lt;/p&gt;
 &lt;h2 id=&#34;功能截图&#34;&gt;功能截图
 &lt;/h2&gt;&lt;h3 id=&#34;技能市场&#34;&gt;技能市场
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/skills-manage-marketplace.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://linsk27.dpdns.org/img/projects/skills-manage-marketplace.png&#34;
 	
 	
 	
@@ -121,7 +121,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;github-仓库导入&#34;&gt;GitHub 仓库导入
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/skills-manage-github-import.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://linsk27.dpdns.org/img/projects/skills-manage-github-import.png&#34;
 	
 	
 	
@@ -149,18 +149,18 @@
     &gt;linsk27/skills-manage&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;下载入口：&lt;a class=&#34;link&#34; href=&#34;https://github.com/iamzhihuix/skills-manage/releases/latest&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;latest release&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;如果这个 AI coding agent skills 管理工具对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续完善平台适配、市场同步、导入体验和跨工具技能管理的主要信号。&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>moonlight&#43;sunshine实现扩展屏和远程串流</title>
-        <link>https://linsk27.github.io/p/moonlight-sunshine%E5%AE%9E%E7%8E%B0%E6%89%A9%E5%B1%95%E5%B1%8F%E5%92%8C%E8%BF%9C%E7%A8%8B%E4%B8%B2%E6%B5%81/</link>
+        <link>https://linsk27.dpdns.org/p/moonlight-sunshine%E5%AE%9E%E7%8E%B0%E6%89%A9%E5%B1%95%E5%B1%8F%E5%92%8C%E8%BF%9C%E7%A8%8B%E4%B8%B2%E6%B5%81/</link>
         <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/p/moonlight-sunshine%E5%AE%9E%E7%8E%B0%E6%89%A9%E5%B1%95%E5%B1%8F%E5%92%8C%E8%BF%9C%E7%A8%8B%E4%B8%B2%E6%B5%81/</guid>
-        <description>&lt;img src="https://linsk27.github.io/p/moonlight-sunshine%E5%AE%9E%E7%8E%B0%E6%89%A9%E5%B1%95%E5%B1%8F%E5%92%8C%E8%BF%9C%E7%A8%8B%E4%B8%B2%E6%B5%81/moonlight.jpg" alt="Featured image of post moonlight&#43;sunshine实现扩展屏和远程串流" /&gt;&lt;h2 id=&#34;工具合集&#34;&gt;工具合集
+        <guid>https://linsk27.dpdns.org/p/moonlight-sunshine%E5%AE%9E%E7%8E%B0%E6%89%A9%E5%B1%95%E5%B1%8F%E5%92%8C%E8%BF%9C%E7%A8%8B%E4%B8%B2%E6%B5%81/</guid>
+        <description>&lt;img src="https://linsk27.dpdns.org/p/moonlight-sunshine%E5%AE%9E%E7%8E%B0%E6%89%A9%E5%B1%95%E5%B1%8F%E5%92%8C%E8%BF%9C%E7%A8%8B%E4%B8%B2%E6%B5%81/moonlight.jpg" alt="Featured image of post moonlight&#43;sunshine实现扩展屏和远程串流" /&gt;&lt;h2 id=&#34;工具合集&#34;&gt;工具合集
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;sunshine&lt;/strong&gt;是一个提供给moonlight进行串流的工具&lt;/p&gt;
@@ -364,11 +364,11 @@
         </item>
         <item>
         <title>【Nexus】桌面美化教程</title>
-        <link>https://linsk27.github.io/p/nexus%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/</link>
+        <link>https://linsk27.dpdns.org/p/nexus%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/</link>
         <pubDate>Tue, 15 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/p/nexus%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/</guid>
-        <description>&lt;img src="https://linsk27.github.io/p/nexus%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/nexus6.png" alt="Featured image of post 【Nexus】桌面美化教程" /&gt;&lt;blockquote&gt;
+        <guid>https://linsk27.dpdns.org/p/nexus%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/</guid>
+        <description>&lt;img src="https://linsk27.dpdns.org/p/nexus%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/nexus6.png" alt="Featured image of post 【Nexus】桌面美化教程" /&gt;&lt;blockquote&gt;
 &lt;h2 id=&#34;nexus-下载安装&#34;&gt;nexus 下载安装
 &lt;/h2&gt;&lt;p&gt;nuxes 下载链接&lt;/p&gt;
 &lt;/blockquote&gt;

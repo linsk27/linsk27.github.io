@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Docker on linsk27 | AI 辅助开发与前端项目</title>
-        <link>https://linsk27.github.io/tags/docker/</link>
+        <link>https://linsk27.dpdns.org/tags/docker/</link>
         <description>Recent content in Docker on linsk27 | AI 辅助开发与前端项目</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>linsk27</copyright>
-        <lastBuildDate>Tue, 03 Jun 2025 00:58:55 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 03 Jun 2025 00:58:55 +0800</lastBuildDate><atom:link href="https://linsk27.dpdns.org/tags/docker/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>初步接触Docker</title>
-        <link>https://linsk27.github.io/p/0603-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6docker/</link>
+        <link>https://linsk27.dpdns.org/p/0603-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6docker/</link>
         <pubDate>Tue, 03 Jun 2025 00:58:55 +0800</pubDate>
         
-        <guid>https://linsk27.github.io/p/0603-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6docker/</guid>
+        <guid>https://linsk27.dpdns.org/p/0603-%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6docker/</guid>
         <description>&lt;h2 id=&#34;docker-笔记常用命令整理&#34;&gt;Docker 笔记：常用命令整理
 &lt;/h2&gt;&lt;h3 id=&#34;镜像管理&#34;&gt;镜像管理
 &lt;/h3&gt;&lt;ul&gt;

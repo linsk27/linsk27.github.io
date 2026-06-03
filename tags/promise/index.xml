@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Promise on linsk27 | AI 辅助开发与前端项目</title>
-        <link>https://linsk27.github.io/tags/promise/</link>
+        <link>https://linsk27.dpdns.org/tags/promise/</link>
         <description>Recent content in Promise on linsk27 | AI 辅助开发与前端项目</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>linsk27</copyright>
-        <lastBuildDate>Tue, 08 Apr 2025 15:43:37 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/promise/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 08 Apr 2025 15:43:37 +0800</lastBuildDate><atom:link href="https://linsk27.dpdns.org/tags/promise/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>初学Promise对象</title>
-        <link>https://linsk27.github.io/p/0327-%E5%88%9D%E5%AD%A6promise%E5%AF%B9%E8%B1%A1/</link>
+        <link>https://linsk27.dpdns.org/p/0327-%E5%88%9D%E5%AD%A6promise%E5%AF%B9%E8%B1%A1/</link>
         <pubDate>Thu, 27 Mar 2025 22:33:37 +0800</pubDate>
         
-        <guid>https://linsk27.github.io/p/0327-%E5%88%9D%E5%AD%A6promise%E5%AF%B9%E8%B1%A1/</guid>
+        <guid>https://linsk27.dpdns.org/p/0327-%E5%88%9D%E5%AD%A6promise%E5%AF%B9%E8%B1%A1/</guid>
         <description>&lt;h1 id=&#34;初学promise对象异步基础&#34;&gt;初学Promise对象，异步基础
 &lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;推荐实践代码，自己动手调试，更容易理解原理&lt;/li&gt;

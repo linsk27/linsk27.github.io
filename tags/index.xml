@@ -2,385 +2,385 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Tags on linsk27 | AI 辅助开发与前端项目</title>
-        <link>https://linsk27.github.io/tags/</link>
+        <link>https://linsk27.dpdns.org/tags/</link>
         <description>Recent content in Tags on linsk27 | AI 辅助开发与前端项目</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>linsk27</copyright>
-        <lastBuildDate>Wed, 03 Jun 2026 12:00:00 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 03 Jun 2026 12:00:00 +0800</lastBuildDate><atom:link href="https://linsk27.dpdns.org/tags/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Cloudflare</title>
-        <link>https://linsk27.github.io/tags/cloudflare/</link>
+        <link>https://linsk27.dpdns.org/tags/cloudflare/</link>
         <pubDate>Wed, 03 Jun 2026 12:00:00 +0800</pubDate>
         
-        <guid>https://linsk27.github.io/tags/cloudflare/</guid>
+        <guid>https://linsk27.dpdns.org/tags/cloudflare/</guid>
         <description></description>
         </item>
         <item>
         <title>DNS</title>
-        <link>https://linsk27.github.io/tags/dns/</link>
+        <link>https://linsk27.dpdns.org/tags/dns/</link>
         <pubDate>Wed, 03 Jun 2026 12:00:00 +0800</pubDate>
         
-        <guid>https://linsk27.github.io/tags/dns/</guid>
+        <guid>https://linsk27.dpdns.org/tags/dns/</guid>
         <description></description>
         </item>
         <item>
         <title>Hugo</title>
-        <link>https://linsk27.github.io/tags/hugo/</link>
+        <link>https://linsk27.dpdns.org/tags/hugo/</link>
         <pubDate>Wed, 03 Jun 2026 12:00:00 +0800</pubDate>
         
-        <guid>https://linsk27.github.io/tags/hugo/</guid>
+        <guid>https://linsk27.dpdns.org/tags/hugo/</guid>
         <description></description>
         </item>
         <item>
         <title>免费域名</title>
-        <link>https://linsk27.github.io/tags/%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D/</link>
+        <link>https://linsk27.dpdns.org/tags/%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D/</link>
         <pubDate>Wed, 03 Jun 2026 12:00:00 +0800</pubDate>
         
-        <guid>https://linsk27.github.io/tags/%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D/</guid>
+        <guid>https://linsk27.dpdns.org/tags/%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D/</guid>
         <description></description>
         </item>
         <item>
         <title>Electron</title>
-        <link>https://linsk27.github.io/tags/electron/</link>
+        <link>https://linsk27.dpdns.org/tags/electron/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/tags/electron/</guid>
+        <guid>https://linsk27.dpdns.org/tags/electron/</guid>
         <description></description>
         </item>
         <item>
-        <title>TypeScript</title>
-        <link>https://linsk27.github.io/tags/typescript/</link>
+        <title>Typescript</title>
+        <link>https://linsk27.dpdns.org/tags/typescript/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/tags/typescript/</guid>
+        <guid>https://linsk27.dpdns.org/tags/typescript/</guid>
         <description></description>
         </item>
         <item>
         <title>Vue</title>
-        <link>https://linsk27.github.io/tags/vue/</link>
+        <link>https://linsk27.dpdns.org/tags/vue/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/tags/vue/</guid>
+        <guid>https://linsk27.dpdns.org/tags/vue/</guid>
         <description></description>
         </item>
         <item>
         <title>资源管理</title>
-        <link>https://linsk27.github.io/tags/%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86/</link>
+        <link>https://linsk27.dpdns.org/tags/%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/tags/%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86/</guid>
+        <guid>https://linsk27.dpdns.org/tags/%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86/</guid>
         <description></description>
         </item>
         <item>
         <title>CLI</title>
-        <link>https://linsk27.github.io/tags/cli/</link>
+        <link>https://linsk27.dpdns.org/tags/cli/</link>
         <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/tags/cli/</guid>
+        <guid>https://linsk27.dpdns.org/tags/cli/</guid>
         <description></description>
         </item>
         <item>
         <title>GitHub Actions</title>
-        <link>https://linsk27.github.io/tags/github-actions/</link>
+        <link>https://linsk27.dpdns.org/tags/github-actions/</link>
         <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/tags/github-actions/</guid>
+        <guid>https://linsk27.dpdns.org/tags/github-actions/</guid>
         <description></description>
         </item>
         <item>
         <title>PR Review</title>
-        <link>https://linsk27.github.io/tags/pr-review/</link>
+        <link>https://linsk27.dpdns.org/tags/pr-review/</link>
         <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/tags/pr-review/</guid>
+        <guid>https://linsk27.dpdns.org/tags/pr-review/</guid>
         <description></description>
         </item>
         <item>
         <title>安全检查</title>
-        <link>https://linsk27.github.io/tags/%E5%AE%89%E5%85%A8%E6%A3%80%E6%9F%A5/</link>
+        <link>https://linsk27.dpdns.org/tags/%E5%AE%89%E5%85%A8%E6%A3%80%E6%9F%A5/</link>
         <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/tags/%E5%AE%89%E5%85%A8%E6%A3%80%E6%9F%A5/</guid>
+        <guid>https://linsk27.dpdns.org/tags/%E5%AE%89%E5%85%A8%E6%A3%80%E6%9F%A5/</guid>
         <description></description>
         </item>
         <item>
         <title>AI Coding</title>
-        <link>https://linsk27.github.io/tags/ai-coding/</link>
+        <link>https://linsk27.dpdns.org/tags/ai-coding/</link>
         <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/tags/ai-coding/</guid>
+        <guid>https://linsk27.dpdns.org/tags/ai-coding/</guid>
         <description></description>
         </item>
         <item>
         <title>React</title>
-        <link>https://linsk27.github.io/tags/react/</link>
+        <link>https://linsk27.dpdns.org/tags/react/</link>
         <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/tags/react/</guid>
+        <guid>https://linsk27.dpdns.org/tags/react/</guid>
         <description></description>
         </item>
         <item>
         <title>Tauri</title>
-        <link>https://linsk27.github.io/tags/tauri/</link>
+        <link>https://linsk27.dpdns.org/tags/tauri/</link>
         <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/tags/tauri/</guid>
+        <guid>https://linsk27.dpdns.org/tags/tauri/</guid>
         <description></description>
         </item>
         <item>
         <title>AI UI</title>
-        <link>https://linsk27.github.io/tags/ai-ui/</link>
+        <link>https://linsk27.dpdns.org/tags/ai-ui/</link>
         <pubDate>Tue, 31 Mar 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/tags/ai-ui/</guid>
+        <guid>https://linsk27.dpdns.org/tags/ai-ui/</guid>
         <description></description>
         </item>
         <item>
         <title>Next.js</title>
-        <link>https://linsk27.github.io/tags/next.js/</link>
+        <link>https://linsk27.dpdns.org/tags/next.js/</link>
         <pubDate>Tue, 31 Mar 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/tags/next.js/</guid>
+        <guid>https://linsk27.dpdns.org/tags/next.js/</guid>
         <description></description>
         </item>
         <item>
         <title>Tailwind CSS</title>
-        <link>https://linsk27.github.io/tags/tailwind-css/</link>
+        <link>https://linsk27.dpdns.org/tags/tailwind-css/</link>
         <pubDate>Tue, 31 Mar 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/tags/tailwind-css/</guid>
+        <guid>https://linsk27.dpdns.org/tags/tailwind-css/</guid>
         <description></description>
         </item>
         <item>
         <title>AI</title>
-        <link>https://linsk27.github.io/tags/ai/</link>
+        <link>https://linsk27.dpdns.org/tags/ai/</link>
         <pubDate>Tue, 10 Mar 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/tags/ai/</guid>
+        <guid>https://linsk27.dpdns.org/tags/ai/</guid>
         <description></description>
         </item>
         <item>
         <title>Flask</title>
-        <link>https://linsk27.github.io/tags/flask/</link>
+        <link>https://linsk27.dpdns.org/tags/flask/</link>
         <pubDate>Tue, 10 Mar 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/tags/flask/</guid>
+        <guid>https://linsk27.dpdns.org/tags/flask/</guid>
         <description></description>
         </item>
         <item>
         <title>MySQL</title>
-        <link>https://linsk27.github.io/tags/mysql/</link>
+        <link>https://linsk27.dpdns.org/tags/mysql/</link>
         <pubDate>Tue, 10 Mar 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/tags/mysql/</guid>
+        <guid>https://linsk27.dpdns.org/tags/mysql/</guid>
         <description></description>
         </item>
         <item>
         <title>博客系统</title>
-        <link>https://linsk27.github.io/tags/%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F/</link>
+        <link>https://linsk27.dpdns.org/tags/%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F/</link>
         <pubDate>Wed, 23 Jul 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/tags/%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F/</guid>
+        <guid>https://linsk27.dpdns.org/tags/%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F/</guid>
         <description></description>
         </item>
         <item>
         <title>内容应用</title>
-        <link>https://linsk27.github.io/tags/%E5%86%85%E5%AE%B9%E5%BA%94%E7%94%A8/</link>
+        <link>https://linsk27.dpdns.org/tags/%E5%86%85%E5%AE%B9%E5%BA%94%E7%94%A8/</link>
         <pubDate>Wed, 23 Jul 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/tags/%E5%86%85%E5%AE%B9%E5%BA%94%E7%94%A8/</guid>
+        <guid>https://linsk27.dpdns.org/tags/%E5%86%85%E5%AE%B9%E5%BA%94%E7%94%A8/</guid>
         <description></description>
         </item>
         <item>
         <title>数据分析</title>
-        <link>https://linsk27.github.io/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</link>
+        <link>https://linsk27.dpdns.org/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</link>
         <pubDate>Wed, 23 Jul 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</guid>
+        <guid>https://linsk27.dpdns.org/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</guid>
         <description></description>
         </item>
         <item>
         <title>Mixin Scss</title>
-        <link>https://linsk27.github.io/tags/mixin-scss/</link>
+        <link>https://linsk27.dpdns.org/tags/mixin-scss/</link>
         <pubDate>Tue, 03 Jun 2025 01:05:52 +0800</pubDate>
         
-        <guid>https://linsk27.github.io/tags/mixin-scss/</guid>
+        <guid>https://linsk27.dpdns.org/tags/mixin-scss/</guid>
         <description></description>
         </item>
         <item>
         <title>Docker</title>
-        <link>https://linsk27.github.io/tags/docker/</link>
+        <link>https://linsk27.dpdns.org/tags/docker/</link>
         <pubDate>Tue, 03 Jun 2025 00:58:55 +0800</pubDate>
         
-        <guid>https://linsk27.github.io/tags/docker/</guid>
+        <guid>https://linsk27.dpdns.org/tags/docker/</guid>
         <description></description>
         </item>
         <item>
         <title>Nginx</title>
-        <link>https://linsk27.github.io/tags/nginx/</link>
+        <link>https://linsk27.dpdns.org/tags/nginx/</link>
         <pubDate>Wed, 23 Apr 2025 12:25:57 +0800</pubDate>
         
-        <guid>https://linsk27.github.io/tags/nginx/</guid>
+        <guid>https://linsk27.dpdns.org/tags/nginx/</guid>
         <description></description>
         </item>
         <item>
         <title>Echarts</title>
-        <link>https://linsk27.github.io/tags/echarts/</link>
+        <link>https://linsk27.dpdns.org/tags/echarts/</link>
         <pubDate>Wed, 09 Apr 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/tags/echarts/</guid>
+        <guid>https://linsk27.dpdns.org/tags/echarts/</guid>
         <description></description>
         </item>
         <item>
         <title>可视化</title>
-        <link>https://linsk27.github.io/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/</link>
+        <link>https://linsk27.dpdns.org/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/</link>
         <pubDate>Wed, 09 Apr 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/</guid>
+        <guid>https://linsk27.dpdns.org/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/</guid>
         <description></description>
         </item>
         <item>
         <title>数据大屏</title>
-        <link>https://linsk27.github.io/tags/%E6%95%B0%E6%8D%AE%E5%A4%A7%E5%B1%8F/</link>
+        <link>https://linsk27.dpdns.org/tags/%E6%95%B0%E6%8D%AE%E5%A4%A7%E5%B1%8F/</link>
         <pubDate>Wed, 09 Apr 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/tags/%E6%95%B0%E6%8D%AE%E5%A4%A7%E5%B1%8F/</guid>
+        <guid>https://linsk27.dpdns.org/tags/%E6%95%B0%E6%8D%AE%E5%A4%A7%E5%B1%8F/</guid>
         <description></description>
         </item>
         <item>
         <title>Nuxt3</title>
-        <link>https://linsk27.github.io/tags/nuxt3/</link>
+        <link>https://linsk27.dpdns.org/tags/nuxt3/</link>
         <pubDate>Sun, 06 Apr 2025 19:18:28 +0800</pubDate>
         
-        <guid>https://linsk27.github.io/tags/nuxt3/</guid>
+        <guid>https://linsk27.dpdns.org/tags/nuxt3/</guid>
         <description></description>
         </item>
         <item>
         <title>数据可视化</title>
-        <link>https://linsk27.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/</link>
+        <link>https://linsk27.dpdns.org/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/</link>
         <pubDate>Sun, 30 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/</guid>
+        <guid>https://linsk27.dpdns.org/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/</guid>
         <description></description>
         </item>
         <item>
         <title>Javascript</title>
-        <link>https://linsk27.github.io/tags/javascript/</link>
+        <link>https://linsk27.dpdns.org/tags/javascript/</link>
         <pubDate>Thu, 27 Mar 2025 22:33:37 +0800</pubDate>
         
-        <guid>https://linsk27.github.io/tags/javascript/</guid>
+        <guid>https://linsk27.dpdns.org/tags/javascript/</guid>
         <description></description>
         </item>
         <item>
         <title>Promise</title>
-        <link>https://linsk27.github.io/tags/promise/</link>
+        <link>https://linsk27.dpdns.org/tags/promise/</link>
         <pubDate>Thu, 27 Mar 2025 22:33:37 +0800</pubDate>
         
-        <guid>https://linsk27.github.io/tags/promise/</guid>
+        <guid>https://linsk27.dpdns.org/tags/promise/</guid>
         <description></description>
         </item>
         <item>
         <title>移动端</title>
-        <link>https://linsk27.github.io/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/</link>
+        <link>https://linsk27.dpdns.org/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/</link>
         <pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/</guid>
+        <guid>https://linsk27.dpdns.org/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/</guid>
         <description></description>
         </item>
         <item>
         <title>Axios</title>
-        <link>https://linsk27.github.io/tags/axios/</link>
+        <link>https://linsk27.dpdns.org/tags/axios/</link>
         <pubDate>Sat, 22 Mar 2025 12:01:56 +0800</pubDate>
         
-        <guid>https://linsk27.github.io/tags/axios/</guid>
+        <guid>https://linsk27.dpdns.org/tags/axios/</guid>
         <description></description>
         </item>
         <item>
         <title>Fetch</title>
-        <link>https://linsk27.github.io/tags/fetch/</link>
+        <link>https://linsk27.dpdns.org/tags/fetch/</link>
         <pubDate>Sat, 22 Mar 2025 12:01:56 +0800</pubDate>
         
-        <guid>https://linsk27.github.io/tags/fetch/</guid>
+        <guid>https://linsk27.dpdns.org/tags/fetch/</guid>
         <description></description>
         </item>
         <item>
         <title>XMLHttpRequest</title>
-        <link>https://linsk27.github.io/tags/xmlhttprequest/</link>
+        <link>https://linsk27.dpdns.org/tags/xmlhttprequest/</link>
         <pubDate>Sat, 22 Mar 2025 12:01:56 +0800</pubDate>
         
-        <guid>https://linsk27.github.io/tags/xmlhttprequest/</guid>
+        <guid>https://linsk27.dpdns.org/tags/xmlhttprequest/</guid>
         <description></description>
         </item>
         <item>
         <title>哈希</title>
-        <link>https://linsk27.github.io/tags/%E5%93%88%E5%B8%8C/</link>
+        <link>https://linsk27.dpdns.org/tags/%E5%93%88%E5%B8%8C/</link>
         <pubDate>Fri, 21 Mar 2025 23:56:52 +0800</pubDate>
         
-        <guid>https://linsk27.github.io/tags/%E5%93%88%E5%B8%8C/</guid>
+        <guid>https://linsk27.dpdns.org/tags/%E5%93%88%E5%B8%8C/</guid>
         <description></description>
         </item>
         <item>
         <title>Webpack</title>
-        <link>https://linsk27.github.io/tags/webpack/</link>
+        <link>https://linsk27.dpdns.org/tags/webpack/</link>
         <pubDate>Fri, 21 Mar 2025 11:49:00 +0800</pubDate>
         
-        <guid>https://linsk27.github.io/tags/webpack/</guid>
+        <guid>https://linsk27.dpdns.org/tags/webpack/</guid>
         <description></description>
         </item>
         <item>
         <title>SEO</title>
-        <link>https://linsk27.github.io/tags/seo/</link>
+        <link>https://linsk27.dpdns.org/tags/seo/</link>
         <pubDate>Sat, 15 Mar 2025 13:29:13 +0800</pubDate>
         
-        <guid>https://linsk27.github.io/tags/seo/</guid>
+        <guid>https://linsk27.dpdns.org/tags/seo/</guid>
         <description></description>
         </item>
         <item>
         <title>Element-Plus</title>
-        <link>https://linsk27.github.io/tags/element-plus/</link>
+        <link>https://linsk27.dpdns.org/tags/element-plus/</link>
         <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/tags/element-plus/</guid>
+        <guid>https://linsk27.dpdns.org/tags/element-plus/</guid>
         <description></description>
         </item>
         <item>
         <title>Css</title>
-        <link>https://linsk27.github.io/tags/css/</link>
+        <link>https://linsk27.dpdns.org/tags/css/</link>
         <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/tags/css/</guid>
+        <guid>https://linsk27.dpdns.org/tags/css/</guid>
         <description></description>
         </item>
         <item>
         <title>Git</title>
-        <link>https://linsk27.github.io/tags/git/</link>
+        <link>https://linsk27.dpdns.org/tags/git/</link>
         <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/tags/git/</guid>
+        <guid>https://linsk27.dpdns.org/tags/git/</guid>
         <description></description>
         </item>
         <item>
         <title>Moonlight</title>
-        <link>https://linsk27.github.io/tags/moonlight/</link>
+        <link>https://linsk27.dpdns.org/tags/moonlight/</link>
         <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/tags/moonlight/</guid>
+        <guid>https://linsk27.dpdns.org/tags/moonlight/</guid>
         <description></description>
         </item>
         <item>
         <title>Sunshine</title>
-        <link>https://linsk27.github.io/tags/sunshine/</link>
+        <link>https://linsk27.dpdns.org/tags/sunshine/</link>
         <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/tags/sunshine/</guid>
+        <guid>https://linsk27.dpdns.org/tags/sunshine/</guid>
         <description></description>
         </item>
         <item>
         <title>Nexus</title>
-        <link>https://linsk27.github.io/tags/nexus/</link>
+        <link>https://linsk27.dpdns.org/tags/nexus/</link>
         <pubDate>Tue, 15 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/tags/nexus/</guid>
+        <guid>https://linsk27.dpdns.org/tags/nexus/</guid>
         <description></description>
         </item>
         

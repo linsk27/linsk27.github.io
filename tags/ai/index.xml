@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>AI on linsk27 | AI 辅助开发与前端项目</title>
-        <link>https://linsk27.github.io/tags/ai/</link>
+        <link>https://linsk27.dpdns.org/tags/ai/</link>
         <description>Recent content in AI on linsk27 | AI 辅助开发与前端项目</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>linsk27</copyright>
-        <lastBuildDate>Thu, 28 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 28 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.dpdns.org/tags/ai/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>AI Vue Flask Blog 全栈系统</title>
-        <link>https://linsk27.github.io/projects/ai-vue-flask-blog/</link>
+        <link>https://linsk27.dpdns.org/projects/ai-vue-flask-blog/</link>
         <pubDate>Tue, 10 Mar 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/projects/ai-vue-flask-blog/</guid>
-        <description>&lt;img src="https://linsk27.github.io/img/projects/ai-vue-flask-blog-home-page.png" alt="Featured image of post AI Vue Flask Blog 全栈系统" /&gt;&lt;p&gt;AI-Vue3-python-flask-Blog 是一个 Vue 3、Flask、MySQL 和 AI 能力组合的全栈博客系统。它覆盖前端页面、后端接口、数据库持久化、内容管理和 AI 能力接入，适合作为课程设计、毕业设计、全栈项目练习和二次开发基础。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/ai-vue-flask-blog-home-page.png&#34;
+        <guid>https://linsk27.dpdns.org/projects/ai-vue-flask-blog/</guid>
+        <description>&lt;img src="https://linsk27.dpdns.org/img/projects/ai-vue-flask-blog-home-page.png" alt="Featured image of post AI Vue Flask Blog 全栈系统" /&gt;&lt;p&gt;AI-Vue3-python-flask-Blog 是一个 Vue 3、Flask、MySQL 和 AI 能力组合的全栈博客系统。它覆盖前端页面、后端接口、数据库持久化、内容管理和 AI 能力接入，适合作为课程设计、毕业设计、全栈项目练习和二次开发基础。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27.dpdns.org/img/projects/ai-vue-flask-blog-home-page.png&#34;
 	
 	
 	
@@ -50,7 +50,7 @@
     &gt;linsk27/AI-Vue3-python-flask-Blog&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;线上演示：&lt;a class=&#34;link&#34; href=&#34;https://ai-vue3-python-flask-blog.vercel.app/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;ai-vue3-python-flask-blog.vercel.app&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;如果这个全栈项目对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续完善文档、部署说明和二次开发示例的主要信号。&lt;/p&gt;
 </description>

@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Next.js on linsk27 | AI 辅助开发与前端项目</title>
-        <link>https://linsk27.github.io/tags/next.js/</link>
+        <link>https://linsk27.dpdns.org/tags/next.js/</link>
         <description>Recent content in Next.js on linsk27 | AI 辅助开发与前端项目</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>linsk27</copyright>
-        <lastBuildDate>Thu, 28 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/tags/next.js/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 28 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.dpdns.org/tags/next.js/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>AI-v0.dev AI UI 原型</title>
-        <link>https://linsk27.github.io/projects/ai-v0-dev/</link>
+        <link>https://linsk27.dpdns.org/projects/ai-v0-dev/</link>
         <pubDate>Tue, 31 Mar 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/projects/ai-v0-dev/</guid>
-        <description>&lt;img src="https://linsk27.github.io/img/projects/ai-v0-dev-learning-dashboard.png" alt="Featured image of post AI-v0.dev AI UI 原型" /&gt;&lt;p&gt;AI-v0.dev- 是一个用 Next.js、React、TypeScript、Tailwind CSS 和 shadcn/ui 搭出来的 AI 学习仪表盘原型。它把 3 个月 AI 工程师冲刺计划拆成时间线、项目卡片、知识体系、里程碑、任务进度和本地数据管理。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/ai-v0-dev-learning-dashboard.png&#34;
+        <guid>https://linsk27.dpdns.org/projects/ai-v0-dev/</guid>
+        <description>&lt;img src="https://linsk27.dpdns.org/img/projects/ai-v0-dev-learning-dashboard.png" alt="Featured image of post AI-v0.dev AI UI 原型" /&gt;&lt;p&gt;AI-v0.dev- 是一个用 Next.js、React、TypeScript、Tailwind CSS 和 shadcn/ui 搭出来的 AI 学习仪表盘原型。它把 3 个月 AI 工程师冲刺计划拆成时间线、项目卡片、知识体系、里程碑、任务进度和本地数据管理。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27.dpdns.org/img/projects/ai-v0-dev-learning-dashboard.png&#34;
 	
 	
 	
@@ -48,7 +48,7 @@
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;GitHub 仓库：&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/AI-v0.dev-&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;linsk27/AI-v0.dev-&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;如果这个 AI 产品界面原型对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续沉淀可复用界面结构和交互模式的主要依据。&lt;/p&gt;
 </description>

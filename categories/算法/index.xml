@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>算法 on linsk27 | AI 辅助开发与前端项目</title>
-        <link>https://linsk27.github.io/categories/%E7%AE%97%E6%B3%95/</link>
+        <link>https://linsk27.dpdns.org/categories/%E7%AE%97%E6%B3%95/</link>
         <description>Recent content in 算法 on linsk27 | AI 辅助开发与前端项目</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>linsk27</copyright>
-        <lastBuildDate>Fri, 21 Mar 2025 23:56:52 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/categories/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 21 Mar 2025 23:56:52 +0800</lastBuildDate><atom:link href="https://linsk27.dpdns.org/categories/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>链表循环--哈希方法</title>
-        <link>https://linsk27.github.io/p/0321-%E9%93%BE%E8%A1%A8%E5%BE%AA%E7%8E%AF-%E5%93%88%E5%B8%8C%E6%96%B9%E6%B3%95/</link>
+        <link>https://linsk27.dpdns.org/p/0321-%E9%93%BE%E8%A1%A8%E5%BE%AA%E7%8E%AF-%E5%93%88%E5%B8%8C%E6%96%B9%E6%B3%95/</link>
         <pubDate>Fri, 21 Mar 2025 23:56:52 +0800</pubDate>
         
-        <guid>https://linsk27.github.io/p/0321-%E9%93%BE%E8%A1%A8%E5%BE%AA%E7%8E%AF-%E5%93%88%E5%B8%8C%E6%96%B9%E6%B3%95/</guid>
+        <guid>https://linsk27.dpdns.org/p/0321-%E9%93%BE%E8%A1%A8%E5%BE%AA%E7%8E%AF-%E5%93%88%E5%B8%8C%E6%96%B9%E6%B3%95/</guid>
         <description>&lt;h1 id=&#34;链表环检测算法leetcode-141&#34;&gt;链表环检测算法（LeetCode 141）
 &lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2025/03/21/kg5WbYcUtsVECIL.png&#34;
 	
@@ -152,10 +152,10 @@
         </item>
         <item>
         <title>两数之和--哈希方法</title>
-        <link>https://linsk27.github.io/p/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C--%E5%93%88%E5%B8%8C%E6%96%B9%E6%B3%95/</link>
+        <link>https://linsk27.dpdns.org/p/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C--%E5%93%88%E5%B8%8C%E6%96%B9%E6%B3%95/</link>
         <pubDate>Sun, 16 Mar 2025 23:10:13 +0800</pubDate>
         
-        <guid>https://linsk27.github.io/p/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C--%E5%93%88%E5%B8%8C%E6%96%B9%E6%B3%95/</guid>
+        <guid>https://linsk27.dpdns.org/p/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C--%E5%93%88%E5%B8%8C%E6%96%B9%E6%B3%95/</guid>
         <description>&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2025/03/16/lp6rdvbM2GtfhJL.png&#34;
 	
 	

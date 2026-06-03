@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>CLI on linsk27 | AI 辅助开发与前端项目</title>
-        <link>https://linsk27.github.io/tags/cli/</link>
+        <link>https://linsk27.dpdns.org/tags/cli/</link>
         <description>Recent content in CLI on linsk27 | AI 辅助开发与前端项目</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>linsk27</copyright>
-        <lastBuildDate>Thu, 28 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/tags/cli/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 28 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.dpdns.org/tags/cli/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>ProofPR PR 证据检查器</title>
-        <link>https://linsk27.github.io/projects/proofpr/</link>
+        <link>https://linsk27.dpdns.org/projects/proofpr/</link>
         <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://linsk27.github.io/projects/proofpr/</guid>
-        <description>&lt;img src="https://linsk27.github.io/img/projects/proofpr-github-action-pr-review-report.png" alt="Featured image of post ProofPR PR 证据检查器" /&gt;&lt;p&gt;ProofPR 是一个面向 Pull Request 审查的 GitHub Action 和 CLI。它的目标不是替代维护者，而是把 PR 里容易被忽略的证据信号先整理出来，让 review 更快进入重点。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/proofpr-github-action-pr-review-report.png&#34;
+        <guid>https://linsk27.dpdns.org/projects/proofpr/</guid>
+        <description>&lt;img src="https://linsk27.dpdns.org/img/projects/proofpr-github-action-pr-review-report.png" alt="Featured image of post ProofPR PR 证据检查器" /&gt;&lt;p&gt;ProofPR 是一个面向 Pull Request 审查的 GitHub Action 和 CLI。它的目标不是替代维护者，而是把 PR 里容易被忽略的证据信号先整理出来，让 review 更快进入重点。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27.dpdns.org/img/projects/proofpr-github-action-pr-review-report.png&#34;
 	
 	
 	
@@ -49,7 +49,7 @@
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;GitHub 仓库：&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/proof-pr&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;linsk27/proof-pr&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;如果这个项目对你的 PR review 工作流有帮助，欢迎在 GitHub 仓库点 Star。Star 是我判断后续规则和报告质量优先级的主要依据。&lt;/p&gt;
 </description>
