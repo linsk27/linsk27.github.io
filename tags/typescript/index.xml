@@ -1,48 +1,76 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Typescript on linsk27 | AI 辅助开发与前端项目</title>
+        <title>TypeScript on linsk27 | AI 辅助开发与前端项目</title>
         <link>https://linsk27.github.io/tags/typescript/</link>
-        <description>Recent content in Typescript on linsk27 | AI 辅助开发与前端项目</description>
+        <description>Recent content in TypeScript on linsk27 | AI 辅助开发与前端项目</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>linsk27</copyright>
-        <lastBuildDate>Fri, 29 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/tags/typescript/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Dev Cockpit 本地开发工作台</title>
+        <lastBuildDate>Wed, 03 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/tags/typescript/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Dev Cockpit 资源雷达工作台</title>
         <link>https://linsk27.github.io/projects/dev-cockpit/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://linsk27.github.io/projects/dev-cockpit/</guid>
-        <description>&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-local-development-dashboard.png" alt="Featured image of post Dev Cockpit 本地开发工作台" /&gt;&lt;p&gt;Dev Cockpit 是我用来整理本地开发现场的工具。它关注的问题很直接：当一个人同时维护多个项目时，如何快速知道项目怎么启动、端口是否占用、命令是否可用、Git 状态是否干净，以及哪些上下文需要交给 AI coding agent。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/dev-cockpit-local-development-dashboard.png&#34;
+        <description>&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png" alt="Featured image of post Dev Cockpit 资源雷达工作台" /&gt;&lt;p&gt;Dev Cockpit 现在更像一个本地资源雷达，而不是普通的项目启动器。它把我平时看到的 GitHub 仓库、Demo、工具、教程、视频号文本和 AI coding 资源收进一个工作台，再用分类、标签、摘要、价值评分和可视化视图帮助我判断哪些东西值得继续研究。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png&#34;
 	
 	
 	
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;Dev Cockpit local development dashboard&#34;
+		alt=&#34;Dev Cockpit resource radar cards&#34;
 	
 	
 &gt;&lt;/p&gt;
+&lt;h2 id=&#34;为什么做这个&#34;&gt;为什么做这个
+&lt;/h2&gt;&lt;p&gt;开发过程中真正麻烦的不是找不到资料，而是资料太分散。一个工具可能来自 GitHub，一个设计技能来自别人分享的 Skill.md，一个工作流来自社区仓库，一个教程来自短文本记录。看过之后如果没有及时归档，很快就会忘掉它为什么有价值。&lt;/p&gt;
+&lt;p&gt;Dev Cockpit 的目标是把这些资源变成可以复盘的卡片，而不是只留一串链接。每条资源都会保留来源、摘要、类型、子分类、状态和评分，后续可以按关键词、标签、来源和大类快速筛选。&lt;/p&gt;
+&lt;h2 id=&#34;当前资源页&#34;&gt;当前资源页
+&lt;/h2&gt;&lt;p&gt;资源页现在有两个主要视图。&lt;/p&gt;
+&lt;p&gt;卡片库适合做日常整理。页面顶部可以粘贴 GitHub、Demo、工具、教程或视频号文本，也可以导入、导出和解析资源。中间区域提供搜索框、状态筛选和大类筛选，目前支持工具、Skills、Workflow 等分类。&lt;/p&gt;
+&lt;p&gt;星云图适合看资源之间的分布。它把资源按照大类和主题放进一个可视化空间里，适合快速判断当前收集内容偏向前端工具、AI 编程辅助、视觉设计、预测模拟还是 3D 生成。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/dev-cockpit-resource-nebula.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Dev Cockpit resource nebula&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;它解决什么问题&#34;&gt;它解决什么问题
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;把零散链接整理成有摘要、有标签、有来源的资源卡片。&lt;/li&gt;
+&lt;li&gt;区分工具、Skills、Workflow 等不同类型，避免所有资料混在一起。&lt;/li&gt;
+&lt;li&gt;给资源打价值评分，帮助优先看更值得研究的内容。&lt;/li&gt;
+&lt;li&gt;支持搜索、状态筛选和大类筛选，让资源库不会越积越乱。&lt;/li&gt;
+&lt;li&gt;通过星云图观察资源分布，快速发现自己最近关注的技术方向。&lt;/li&gt;
+&lt;li&gt;保持本地运行，适合个人开发者维护自己的资料库。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;现在收集的资源样例&#34;&gt;现在收集的资源样例
+&lt;/h2&gt;&lt;p&gt;这版截图里可以看到 taste-skill、everything-claude-code、FreeDomain、react-bits、MiroFish、andrej-karpathy-skill、articraft、huashu-design 等资源。它们覆盖前端设计技能、AI 编程工作流、免费域名、React 动效组件、群体智能预测、3D 资产生成和智能体设计生成等方向。&lt;/p&gt;
+&lt;p&gt;这些资源不是简单展示名称，而是会被整理成摘要、来源、分类、标签和评分。这样后面回看时，不需要重新打开每个仓库才能想起来它适合什么场景。&lt;/p&gt;
 &lt;h2 id=&#34;适合谁&#34;&gt;适合谁
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;经常在多个前端、全栈或 AI 项目之间切换的个人开发者。&lt;/li&gt;
-&lt;li&gt;需要快速恢复项目现场、少翻 README、少找命令的人。&lt;/li&gt;
-&lt;li&gt;想把项目状态、日志、端口和 Git 信息集中到一个界面里的人。&lt;/li&gt;
-&lt;li&gt;正在尝试 AI coding workflow，希望把项目上下文整理得更稳定的人。&lt;/li&gt;
+&lt;li&gt;经常收藏 GitHub 仓库、工具、教程和 AI coding 资源的人。&lt;/li&gt;
+&lt;li&gt;想把资源从聊天记录、浏览器收藏夹和临时文档里整理出来的人。&lt;/li&gt;
+&lt;li&gt;需要给资源做分类、评分、状态管理和后续复盘的人。&lt;/li&gt;
+&lt;li&gt;正在研究 AI coding workflow、Agent Skills、前端工具链和设计生成工具的人。&lt;/li&gt;
+&lt;li&gt;想参考 Electron、Vue、TypeScript 本地工作台界面的人。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;项目价值&#34;&gt;项目价值
-&lt;/h2&gt;&lt;p&gt;Dev Cockpit 不是一个简单的启动器。它更像一个开发现场看板：把项目入口、常用命令、运行日志、端口状态、Git 状态和 AI 上下文放到同一个位置，让开发者少做重复判断。&lt;/p&gt;
-&lt;p&gt;如果你搜索的是 local development dashboard、developer workflow tools、AI coding context manager、Electron Vue dashboard 或 project state manager，这个项目会比普通练手页面更接近真实需求。&lt;/p&gt;
 &lt;h2 id=&#34;技术方向&#34;&gt;技术方向
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;TypeScript&lt;/li&gt;
-&lt;li&gt;Vue&lt;/li&gt;
 &lt;li&gt;Electron&lt;/li&gt;
-&lt;li&gt;本地项目扫描&lt;/li&gt;
-&lt;li&gt;命令与日志管理&lt;/li&gt;
-&lt;li&gt;Git 状态读取&lt;/li&gt;
-&lt;li&gt;AI coding 上下文整理&lt;/li&gt;
+&lt;li&gt;Vue&lt;/li&gt;
+&lt;li&gt;TypeScript&lt;/li&gt;
+&lt;li&gt;本地资源管理&lt;/li&gt;
+&lt;li&gt;GitHub 与工具资源整理&lt;/li&gt;
+&lt;li&gt;卡片式信息结构&lt;/li&gt;
+&lt;li&gt;资源分类与评分&lt;/li&gt;
+&lt;li&gt;星云图可视化&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;项目入口&#34;&gt;项目入口
 &lt;/h2&gt;&lt;ul&gt;
@@ -50,7 +78,7 @@
     &gt;linsk27/local-dev-cockpit&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;如果这个工具方向对你有用，欢迎在 GitHub 仓库点 Star。Star 是我判断是否继续优先完善这个项目的主要信号。&lt;/p&gt;
+&lt;p&gt;如果你正在找 developer resource dashboard、GitHub resource manager、AI coding resources、resource radar 或 Electron Vue desktop tools，Dev Cockpit 会比普通练手页面更接近真实的个人开发工作流。&lt;/p&gt;
 </description>
         </item>
         <item>

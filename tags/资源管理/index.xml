@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Electron on linsk27 | AI 辅助开发与前端项目</title>
-        <link>https://linsk27.github.io/tags/electron/</link>
-        <description>Recent content in Electron on linsk27 | AI 辅助开发与前端项目</description>
+        <title>资源管理 on linsk27 | AI 辅助开发与前端项目</title>
+        <link>https://linsk27.github.io/tags/%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86/</link>
+        <description>Recent content in 资源管理 on linsk27 | AI 辅助开发与前端项目</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>linsk27</copyright>
-        <lastBuildDate>Wed, 03 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/tags/electron/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 03 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/tags/%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Dev Cockpit 资源雷达工作台</title>
         <link>https://linsk27.github.io/projects/dev-cockpit/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>

@@ -27,10 +27,10 @@
 	&lt;/thead&gt;
 	&lt;tbody&gt;
 			&lt;tr&gt;
-					&lt;td&gt;本地开发工具&lt;/td&gt;
+					&lt;td&gt;资源雷达工具&lt;/td&gt;
 					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/local-dev-cockpit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;local-dev-cockpit&lt;/a&gt;&lt;/td&gt;
-					&lt;td&gt;想看本地开发工作台、项目状态恢复、命令和日志管理的人&lt;/td&gt;
+					&lt;td&gt;想看 GitHub 资源收集、卡片库、价值评分和星云图整理的人&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;PR review 工具&lt;/td&gt;
@@ -126,18 +126,18 @@
         <description>&lt;img src="https://linsk27.github.io/img/projects/feidu-smart-community-dashboard.jpg" alt="Featured image of post linsk27 项目主页" /&gt;&lt;p&gt;这里集中放我当前更希望被看到的项目。它们都不是单纯的练习截图，而是围绕真实开发场景整理出来的作品：本地开发现场恢复、Pull Request 证据检查、AI coding agent skills 管理、智慧社区数据大屏、Vue 与 Flask 全栈系统、AI 产品界面原型，以及可以直接打开的前端成品。&lt;/p&gt;
 &lt;p&gt;如果你想直接从 GitHub 仓库角度筛选，可以看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/github/&#34; &gt;linsk27 GitHub 项目与 Star 入口&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;dev-cockpit&#34;&gt;Dev Cockpit
-&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/dev-cockpit/&#34; &gt;Dev Cockpit&lt;/a&gt; 是一个本地开发工作台，用来集中查看项目状态、启动命令、日志、端口、Git 状态和 AI 上下文。它适合经常在多个项目之间切换、需要快速恢复开发现场的个人开发者。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/dev-cockpit-local-development-dashboard.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/dev-cockpit/&#34; &gt;Dev Cockpit&lt;/a&gt; 是一个本地资源雷达工作台，用来收集 GitHub 仓库、Demo、工具、教程和 AI coding 资源，并通过卡片库、分类筛选、价值评分和星云图整理开发资料。它适合经常收藏技术资源、需要定期复盘工具链和 AI 编程资源的个人开发者。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png&#34;
 	
 	
 	
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;Dev Cockpit local development dashboard&#34;
+		alt=&#34;Dev Cockpit resource radar cards&#34;
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;如果你正在找 local development dashboard、developer workflow tools、AI coding context manager 或 Electron + Vue 的项目，可以先看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/dev-cockpit/&#34; &gt;Dev Cockpit 详情页&lt;/a&gt;，再进入 &lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/local-dev-cockpit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;如果你正在找 developer resource dashboard、GitHub resource manager、AI coding resources、resource radar 或 Electron + Vue 的项目，可以先看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/dev-cockpit/&#34; &gt;Dev Cockpit 详情页&lt;/a&gt;，再进入 &lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/local-dev-cockpit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;GitHub 仓库&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;proofpr&#34;&gt;ProofPR
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/proofpr/&#34; &gt;ProofPR&lt;/a&gt; 是一个 GitHub Action 和 CLI，用来整理 Pull Request 中的证据信号，包括 secrets、依赖风险、CI 权限、MCP 安全和 review 线索。目标是让开源维护者更快判断一个 PR 是否值得合并、需要补充什么证据。&lt;/p&gt;
@@ -267,14 +267,14 @@
     &gt;github.com/linsk27&lt;/a&gt;，项目入口是 &lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;，按仓库和 Star 场景整理的入口是 &lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/github/&#34; &gt;linsk27 GitHub 项目与 Star 入口&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;关注方向&#34;&gt;关注方向
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;AI 辅助开发与开发者工具：让本地开发、Pull Request review 和 agent skills 管理更清晰。&lt;/li&gt;
+&lt;li&gt;AI 辅助开发与开发者工具：让资源整理、Pull Request review 和 agent skills 管理更清晰。&lt;/li&gt;
 &lt;li&gt;Vue、TypeScript 与 Nuxt：持续整理可运行的前端应用、移动端页面和数据大屏。&lt;/li&gt;
 &lt;li&gt;Flask、MySQL 与全栈实践：把前端页面、后端接口和数据持久化连成完整项目。&lt;/li&gt;
 &lt;li&gt;ECharts 与数据可视化：沉淀 dashboard、智慧社区、能源监测和业务看板类界面。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;推荐项目&#34;&gt;推荐项目
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/dev-cockpit/&#34; &gt;Dev Cockpit&lt;/a&gt;：本地开发工作台，用于恢复项目状态、命令、日志、端口、Git 状态和 AI 上下文。&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/dev-cockpit/&#34; &gt;Dev Cockpit&lt;/a&gt;：本地资源雷达工作台，用于收集 GitHub 仓库、工具、教程和 AI coding 资源，并通过卡片库、价值评分和星云图整理资料。&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/proofpr/&#34; &gt;ProofPR&lt;/a&gt;：GitHub Action 和 CLI，用于 Pull Request 证据扫描、风险提示和维护者 review 辅助。&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/skills-manage/&#34; &gt;skills-manage&lt;/a&gt;：Tauri、React 和 TypeScript 桌面应用，用于集中管理 AI coding agent skills。&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27.github.io/projects/feidu/&#34; &gt;feidu&lt;/a&gt;：Nuxt 3、Vue、Tailwind CSS 和 ECharts 智慧社区数据大屏，覆盖安防监控、CIM 平台和能源监测。&lt;/li&gt;
