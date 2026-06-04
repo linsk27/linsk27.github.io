@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Posts on linsk27</title>
+        <title>Posts on 404_@林达</title>
         <link>https://linsk27.dpdns.org/post/</link>
-        <description>Recent content in Posts on linsk27</description>
+        <description>Recent content in Posts on 404_@林达</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>linsk27</copyright>
+        <copyright>404_@林达</copyright>
         <lastBuildDate>Wed, 03 Jun 2026 12:00:00 +0800</lastBuildDate><atom:link href="https://linsk27.dpdns.org/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>DigitalPlat 免费域名配置教程：从领取到 Cloudflare 解析</title>
         <link>https://linsk27.dpdns.org/p/0603-freedomain-cloudflare-dns/</link>

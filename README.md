@@ -1,6 +1,6 @@
 # linsk27.github.io
 
-这是 linsk27 的个人项目主页和作品集入口，中文优先展示我正在做的前端项目、资源雷达工具、数据可视化大屏和全栈应用。
+这是 404_@林达 的个人项目主页和作品集入口，中文优先展示我正在做的前端项目、资源雷达工具、数据可视化大屏和全栈应用。
 
 线上访问：[linsk27.github.io](https://linsk27.github.io/)
 
@@ -28,6 +28,6 @@ Vue 3、TypeScript、Nuxt 3、React、Tauri、Electron、Flask、MySQL、ECharts
 
 ## 联系
 
-项目问题欢迎在对应仓库提交 issue。合作或快速联系可以加微信：linsk27。GitHub 项目入口：[linsk27 GitHub 项目与 Star 入口](https://linsk27.github.io/github/)。
+项目问题欢迎在对应仓库提交 issue。合作或快速联系可以加微信：linsk27。GitHub 项目入口：[404_@林达 GitHub 项目与 Star 入口](https://linsk27.github.io/github/)。
 
 如果某个项目对你有帮助，欢迎给对应仓库点 Star，这会帮助我判断下一步优先完善哪个方向。
