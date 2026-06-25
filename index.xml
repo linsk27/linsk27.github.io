@@ -20,10 +20,11 @@
 	
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;Local AI Ops console preview&#34;
+		alt=&#34;Local AI Ops simulated console screenshot&#34;
 	
 	
 &gt;&lt;/p&gt;
+&lt;p&gt;上图是按项目实际界面结构绘制的模拟截图，所有资产名称、地域、告警、指标和诊断内容都是假数据，不包含真实账号、IP、域名、AccessKey、服务器名或监控结果。&lt;/p&gt;
 &lt;h2 id=&#34;为什么做这个&#34;&gt;为什么做这个
 &lt;/h2&gt;&lt;p&gt;个人或小团队管理云资源时，信息经常分散在阿里云控制台、宝塔面板、SSH 记录、续费入口、域名解析、监控告警和本地文档里。真正需要排查问题时，往往先要确认资源在哪、入口在哪、凭据在哪、最近检查结果是什么。&lt;/p&gt;
 &lt;p&gt;Local AI Ops 的目标是把这些信息收回到可信局域网内的一个本地工作台里。它不追求替代云厂商控制台，而是把常用资源、运维资料、健康检查和排查上下文放在同一个界面中，减少来回切换。&lt;/p&gt;
@@ -416,10 +417,11 @@
 	
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;Local AI Ops console preview&#34;
+		alt=&#34;Local AI Ops simulated console screenshot&#34;
 	
 	
 &gt;&lt;/p&gt;
+&lt;p&gt;这张图是模拟截图，只按真实界面结构绘制，不包含真实云账号、IP、域名、实例 ID 或监控结果。&lt;/p&gt;
 &lt;p&gt;如果你正在找 local LAN ops console、Alibaba Cloud ops dashboard、FastAPI React ops console、CloudMonitor dashboard 或本地优先的 AI diagnostics 工具，可以先看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/local-ai-ops/&#34; &gt;Local AI Ops 详情页&lt;/a&gt;，再进入 &lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/local-ai-ops&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;GitHub 仓库&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;dev-cockpit&#34;&gt;Dev Cockpit

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Typescript on 404_@林达</title>
+        <title>TypeScript on 404_@林达</title>
         <link>https://linsk27.dpdns.org/tags/typescript/</link>
-        <description>Recent content in Typescript on 404_@林达</description>
+        <description>Recent content in TypeScript on 404_@林达</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>404_@林达</copyright>
@@ -20,10 +20,11 @@
 	
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;Local AI Ops console preview&#34;
+		alt=&#34;Local AI Ops simulated console screenshot&#34;
 	
 	
 &gt;&lt;/p&gt;
+&lt;p&gt;上图是按项目实际界面结构绘制的模拟截图，所有资产名称、地域、告警、指标和诊断内容都是假数据，不包含真实账号、IP、域名、AccessKey、服务器名或监控结果。&lt;/p&gt;
 &lt;h2 id=&#34;为什么做这个&#34;&gt;为什么做这个
 &lt;/h2&gt;&lt;p&gt;个人或小团队管理云资源时，信息经常分散在阿里云控制台、宝塔面板、SSH 记录、续费入口、域名解析、监控告警和本地文档里。真正需要排查问题时，往往先要确认资源在哪、入口在哪、凭据在哪、最近检查结果是什么。&lt;/p&gt;
 &lt;p&gt;Local AI Ops 的目标是把这些信息收回到可信局域网内的一个本地工作台里。它不追求替代云厂商控制台，而是把常用资源、运维资料、健康检查和排查上下文放在同一个界面中，减少来回切换。&lt;/p&gt;
