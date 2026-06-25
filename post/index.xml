@@ -7,7 +7,57 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>404_@林达</copyright>
-        <lastBuildDate>Wed, 03 Jun 2026 12:00:00 +0800</lastBuildDate><atom:link href="https://linsk27.dpdns.org/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 25 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.dpdns.org/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Local AI Ops 本地 AI 运维工作台</title>
+        <link>https://linsk27.dpdns.org/projects/local-ai-ops/</link>
+        <pubDate>Tue, 23 Jun 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://linsk27.dpdns.org/projects/local-ai-ops/</guid>
+        <description>&lt;img src="https://linsk27.dpdns.org/img/projects/local-ai-ops-console.svg" alt="Featured image of post Local AI Ops 本地 AI 运维工作台" /&gt;&lt;p&gt;Local AI Ops 是一个面向局域网和本机部署的阿里云 AI 运维工作台。它通过阿里云 OpenAPI 同步 ECS、轻量应用服务器、OSS、域名和 DNS 等资源，在本地保存运维资料，执行 HTTP、TCP、SSH 和云助手检查，并基于告警上下文生成 AI 排查建议。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27.dpdns.org/img/projects/local-ai-ops-console.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Local AI Ops console preview&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;为什么做这个&#34;&gt;为什么做这个
+&lt;/h2&gt;&lt;p&gt;个人或小团队管理云资源时，信息经常分散在阿里云控制台、宝塔面板、SSH 记录、续费入口、域名解析、监控告警和本地文档里。真正需要排查问题时，往往先要确认资源在哪、入口在哪、凭据在哪、最近检查结果是什么。&lt;/p&gt;
+&lt;p&gt;Local AI Ops 的目标是把这些信息收回到可信局域网内的一个本地工作台里。它不追求替代云厂商控制台，而是把常用资源、运维资料、健康检查和排查上下文放在同一个界面中，减少来回切换。&lt;/p&gt;
+&lt;h2 id=&#34;它解决什么问题&#34;&gt;它解决什么问题
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;同步阿里云 ECS、轻量应用服务器、OSS、域名和 DNS 资源。&lt;/li&gt;
+&lt;li&gt;本地维护到期时间、自动续费、业务入口、控制台入口、SSH 凭据和宝塔面板资料。&lt;/li&gt;
+&lt;li&gt;支持 HTTP 探活、TCP 端口、SSH 登录、ECS 指标和 Cloud Assistant 只读命令检查。&lt;/li&gt;
+&lt;li&gt;根据连续失败次数生成告警，并支持确认、关闭和恢复状态。&lt;/li&gt;
+&lt;li&gt;基于资产、告警和最近检查结果生成 AI 排查步骤和建议命令。&lt;/li&gt;
+&lt;li&gt;AccessKey、SSH 密码、私钥、宝塔密码和 AI Key 使用 AES-GCM 加密保存。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;技术栈&#34;&gt;技术栈
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Backend: FastAPI, SQLAlchemy 2, Alembic, PostgreSQL, Redis, Celery&lt;/li&gt;
+&lt;li&gt;Frontend: React, Vite, TypeScript, ECharts, lucide-react&lt;/li&gt;
+&lt;li&gt;Cloud: Alibaba Cloud SDK / OpenAPI&lt;/li&gt;
+&lt;li&gt;AI: OpenAI-compatible Chat Completions API&lt;/li&gt;
+&lt;li&gt;Runtime: Docker Compose&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目边界&#34;&gt;项目边界
+&lt;/h2&gt;&lt;p&gt;当前版本定位为 MVP，更适合个人或小团队在可信局域网内统一查看云资源、续费、入口、SSH/宝塔资料和监控结果。它不是公网多租户系统，也不建议直接暴露到公网。&lt;/p&gt;
+&lt;p&gt;AI 诊断只生成摘要、可能原因、排查步骤和建议命令，不会自动执行修复。真正会访问云资源的动作仍然通过明确的资产同步、监控检查和只读命令来完成。&lt;/p&gt;
+&lt;h2 id=&#34;项目入口&#34;&gt;项目入口
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/local-ai-ops&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;linsk27/local-ai-ops&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/&#34; &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub 项目索引：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/github/&#34; &gt;404_@林达 GitHub 项目与 Star 入口&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果你正在找 local LAN ops console、Alibaba Cloud ops dashboard、FastAPI React ops console、CloudMonitor dashboard 或本地优先的 AI diagnostics 工具，这个项目可以作为一个可继续扩展的参考。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>DigitalPlat 免费域名配置教程：从领取到 Cloudflare 解析</title>
         <link>https://linsk27.dpdns.org/p/0603-freedomain-cloudflare-dns/</link>
         <pubDate>Wed, 03 Jun 2026 12:00:00 +0800</pubDate>

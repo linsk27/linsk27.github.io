@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>404_@林达</copyright>
-        <lastBuildDate>Fri, 29 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.dpdns.org/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 25 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.dpdns.org/page/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>404_@林达 GitHub 项目与 Star 入口</title>
         <link>https://linsk27.dpdns.org/github/</link>
         <pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate>
@@ -26,6 +26,12 @@
 			&lt;/tr&gt;
 	&lt;/thead&gt;
 	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;本地 AI 运维&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/local-ai-ops&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;local-ai-ops&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;想看阿里云资源同步、局域网运维、监控检查和 AI 排查建议的人&lt;/td&gt;
+			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;资源雷达工具&lt;/td&gt;
 					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/local-dev-cockpit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -106,6 +112,7 @@
 &lt;/table&gt;
 &lt;h2 id=&#34;如果你只想快速判断&#34;&gt;如果你只想快速判断
 &lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;想看本地运维和云资源管理：先看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/local-ai-ops/&#34; &gt;Local AI Ops&lt;/a&gt;。&lt;/li&gt;
 &lt;li&gt;想看最完整的开发者工具方向：先看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/dev-cockpit/&#34; &gt;Dev Cockpit&lt;/a&gt; 和 &lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/proofpr/&#34; &gt;ProofPR&lt;/a&gt;。&lt;/li&gt;
 &lt;li&gt;想看 AI 编程相关工具：先看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/skills-manage/&#34; &gt;skills-manage&lt;/a&gt;。&lt;/li&gt;
 &lt;li&gt;想看可视化成品截图：先看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/feidu/&#34; &gt;feidu&lt;/a&gt; 和 &lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/echarts-learn/&#34; &gt;echarts-learn&lt;/a&gt;。&lt;/li&gt;
@@ -123,8 +130,22 @@
         <pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://linsk27.dpdns.org/projects/</guid>
-        <description>&lt;img src="https://linsk27.dpdns.org/img/projects/feidu-smart-community-dashboard.jpg" alt="Featured image of post 404_@林达 项目主页" /&gt;&lt;p&gt;这里集中放我当前更希望被看到的项目。它们都不是单纯的练习截图，而是围绕真实开发场景整理出来的作品：本地开发现场恢复、Pull Request 证据检查、AI coding agent skills 管理、智慧社区数据大屏、Vue 与 Flask 全栈系统、AI 产品界面原型，以及可以直接打开的前端成品。&lt;/p&gt;
+        <description>&lt;img src="https://linsk27.dpdns.org/img/projects/feidu-smart-community-dashboard.jpg" alt="Featured image of post 404_@林达 项目主页" /&gt;&lt;p&gt;这里集中放我当前更希望被看到的项目。它们都不是单纯的练习截图，而是围绕真实开发场景整理出来的作品：本地云资源运维、开发现场恢复、Pull Request 证据检查、AI coding agent skills 管理、智慧社区数据大屏、Vue 与 Flask 全栈系统、AI 产品界面原型，以及可以直接打开的前端成品。&lt;/p&gt;
 &lt;p&gt;如果你想直接从 GitHub 仓库角度筛选，可以看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/github/&#34; &gt;404_@林达 GitHub 项目与 Star 入口&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;local-ai-ops&#34;&gt;Local AI Ops
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/local-ai-ops/&#34; &gt;Local AI Ops&lt;/a&gt; 是一个面向局域网和本机部署的阿里云 AI 运维工作台，用 FastAPI、React、PostgreSQL、Redis、Celery 和阿里云 OpenAPI 管理云资源、监控检查、告警和 AI 排查建议。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linsk27.dpdns.org/img/projects/local-ai-ops-console.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Local AI Ops console preview&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;如果你正在找 local LAN ops console、Alibaba Cloud ops dashboard、FastAPI React ops console、CloudMonitor dashboard 或本地优先的 AI diagnostics 工具，可以先看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/local-ai-ops/&#34; &gt;Local AI Ops 详情页&lt;/a&gt;，再进入 &lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/local-ai-ops&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub 仓库&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;dev-cockpit&#34;&gt;Dev Cockpit
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/dev-cockpit/&#34; &gt;Dev Cockpit&lt;/a&gt; 是一个本地资源雷达工作台，用来收集 GitHub 仓库、Demo、工具、教程和 AI coding 资源，并通过卡片库、分类筛选、价值评分和星云图整理开发资料。它适合经常收藏技术资源、需要定期复盘工具链和 AI 编程资源的个人开发者。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://linsk27.dpdns.org/img/projects/dev-cockpit-resource-radar-cards.png&#34;
@@ -268,12 +289,14 @@
 &lt;h2 id=&#34;关注方向&#34;&gt;关注方向
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;开发者工具与资源整理：让资源收集、Pull Request review 和 agent skills 管理更清晰。&lt;/li&gt;
+&lt;li&gt;本地运维与云资源管理：把云资源、监控检查、告警和排查上下文整理成可操作的工作台。&lt;/li&gt;
 &lt;li&gt;Vue、TypeScript 与 Nuxt：持续整理可运行的前端应用、移动端页面和数据大屏。&lt;/li&gt;
 &lt;li&gt;Flask、MySQL 与全栈实践：把前端页面、后端接口和数据持久化连成完整项目。&lt;/li&gt;
 &lt;li&gt;ECharts 与数据可视化：沉淀 dashboard、智慧社区、能源监测和业务看板类界面。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;推荐项目&#34;&gt;推荐项目
 &lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/local-ai-ops/&#34; &gt;Local AI Ops&lt;/a&gt;：局域网本地阿里云 AI 运维工作台，用于整理云资源、监控检查、告警和排查建议。&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/dev-cockpit/&#34; &gt;Dev Cockpit&lt;/a&gt;：本地资源雷达工作台，用于收集 GitHub 仓库、工具、教程和 AI coding 资源，并通过卡片库、价值评分和星云图整理资料。&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/proofpr/&#34; &gt;ProofPR&lt;/a&gt;：GitHub Action 和 CLI，用于 Pull Request 证据扫描、风险提示和维护者 review 辅助。&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/skills-manage/&#34; &gt;skills-manage&lt;/a&gt;：Tauri、React 和 TypeScript 桌面应用，用于集中管理 AI coding agent skills。&lt;/li&gt;
@@ -281,7 +304,7 @@
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/ai-vue-flask-blog/&#34; &gt;AI-Vue3-python-flask-Blog&lt;/a&gt;：Vue 3、Flask、MySQL 和 AI 能力组合的博客系统。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;适合搜索这些关键词找到我&#34;&gt;适合搜索这些关键词找到我
-&lt;/h2&gt;&lt;p&gt;linsk27 GitHub、linsk27 projects、Vue TypeScript developer、AI coding tools、developer workflow tools、GitHub Actions review、Nuxt ECharts dashboard、Vue Flask full stack project。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;linsk27 GitHub、linsk27 projects、Local AI Ops、Alibaba Cloud ops console、Vue TypeScript developer、AI coding tools、developer workflow tools、GitHub Actions review、Nuxt ECharts dashboard、Vue Flask full stack project。&lt;/p&gt;
 &lt;h2 id=&#34;联系方式&#34;&gt;联系方式
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;GitHub：&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;

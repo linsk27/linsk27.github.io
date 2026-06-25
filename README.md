@@ -1,6 +1,6 @@
 # linsk27.github.io
 
-这是 404_@林达 的个人项目主页和作品集入口，中文优先展示我正在做的前端项目、开发者工具、数据可视化大屏和全栈应用。
+这是 404_@林达 的个人项目主页和作品集入口，中文优先展示我正在做的前端项目、资源雷达工具、数据可视化大屏和全栈应用。
 
 线上访问：[linsk27.github.io](https://linsk27.github.io/)
 
@@ -16,15 +16,15 @@
 
 ## 项目方向
 
-- 资源雷达工作台：收集 GitHub 仓库、工具和教程，并通过卡片库、价值评分和星云图整理资料。
+- 资源雷达工作台：收集 GitHub 仓库、工具、教程和 AI coding 资源，并通过卡片库、价值评分和星云图整理资料。
 - PR 证据检查：面向维护者的 Pull Request 风险信号整理和 GitHub Action 自动化。
-- Skills 管理：跨 Claude Code、Codex CLI、Cursor、Gemini CLI 等平台管理本地 skills。
+- AI skills 管理：跨 Claude Code、Codex CLI、Cursor、Gemini CLI 等平台管理 agent skills。
 - 前端与全栈应用：Vue 3、Nuxt 3、TypeScript、Flask、MySQL、ECharts 和 Tailwind CSS。
 - 数据可视化：智慧社区大屏、能源监测、安防监控、数据看板和图表交互。
 
 ## 关键词
 
-Vue 3、TypeScript、Nuxt 3、React、Tauri、Electron、Flask、MySQL、ECharts、GitHub Actions、Developer Tools、Data Visualization、Full Stack。
+Vue 3、TypeScript、Nuxt 3、React、Tauri、Electron、Flask、MySQL、ECharts、GitHub Actions、AI Coding、Resource Radar、Developer Tools、Data Visualization、Full Stack。
 
 ## 联系
 

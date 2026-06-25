@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Local AI Ops 是 linsk27 的局域网本地阿里云 AI 运维工作台，用 FastAPI、React、PostgreSQL、Redis、Celery 和阿里云 OpenAPI 管理云资源、监控检查、告警和 AI 排查建议。">
+<meta name="keywords" content="Local AI Ops, local-ai-ops, Alibaba Cloud ops console, FastAPI, React, PostgreSQL, Redis, Celery, CloudMonitor, Cloud Assistant, local LAN ops, AI diagnostics"><title>Local AI Ops 本地 AI 运维工作台</title>
+
+<meta name="google-site-verification" content="ojZXN_87I2cwlf5nsEcatA8ibUhHz-Wol2E4dfd561g">
+<meta name="msvalidate.01" content="12336DB9361DCE2DB03C4A3340A146A2">
+
+<link rel='canonical' href='https://linsk27.dpdns.org/projects/local-ai-ops/'>
+
+<link rel="stylesheet" href="/scss/style.min.f932406a37ca0c631a380f2245d21f66d455112aa8bf9590e52e54c4a962056a.css"><meta property='og:title' content="Local AI Ops 本地 AI 运维工作台">
+<meta property='og:description' content="Local AI Ops 是 linsk27 的局域网本地阿里云 AI 运维工作台，用 FastAPI、React、PostgreSQL、Redis、Celery 和阿里云 OpenAPI 管理云资源、监控检查、告警和 AI 排查建议。">
+<meta property='og:url' content='https://linsk27.dpdns.org/projects/local-ai-ops/'>
+<meta property='og:site_name' content='404_@林达'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='FastAPI' /><meta property='article:tag' content='React' /><meta property='article:tag' content='TypeScript' /><meta property='article:tag' content='阿里云' /><meta property='article:tag' content='运维工具' /><meta property='article:published_time' content='2026-06-23T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-06-25T00:00:00&#43;00:00'/><meta property='og:image' content='https://linsk27.dpdns.org/img/projects/local-ai-ops-console.svg' />
+<meta name="twitter:title" content="Local AI Ops 本地 AI 运维工作台">
+<meta name="twitter:description" content="Local AI Ops 是 linsk27 的局域网本地阿里云 AI 运维工作台，用 FastAPI、React、PostgreSQL、Redis、Celery 和阿里云 OpenAPI 管理云资源、监控检查、告警和 AI 排查建议。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://linsk27.dpdns.org/img/projects/local-ai-ops-console.svg' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://linsk27.dpdns.org/#person",
+      "name": "404_@林达",
+      "url": "https://linsk27.dpdns.org/",
+      "sameAs": [
+        "https://github.com/linsk27",
+        "https://linsk27.dpdns.org/about/",
+        "https://space.bilibili.com/674582664"
+      ],
+      "knowsAbout": [
+        "Vue",
+        "TypeScript",
+        "AI Coding",
+        "GitHub Actions",
+        "Local Development Tools",
+        "Flask",
+        "MySQL",
+        "Data Visualization",
+        "Nuxt",
+        "ECharts",
+        "Tauri",
+        "Agent Skills",
+        "AI Coding Agent Tools",
+        "Smart Community Dashboard",
+        "Security Monitoring",
+        "Energy Monitoring",
+        "CIM Platform UI"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://linsk27.dpdns.org/#website",
+      "name": "404_@林达",
+      "url": "https://linsk27.dpdns.org/",
+      "description": "404_@林达 的个人主页，记录前端学习、项目实践、工具折腾和全栈练习。",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://linsk27.dpdns.org/search/?keyword={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "publisher": {
+        "@id": "https://linsk27.dpdns.org/#person"
+      }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://linsk27.dpdns.org/about/#profile",
+      "name": "关于 404_@林达",
+      "url": "https://linsk27.dpdns.org/about/",
+      "description": "404_@林达 的 GitHub 个人介绍页，记录前端学习、项目实践、开发者工具、数据可视化和全栈练习。",
+      "isPartOf": {
+        "@id": "https://linsk27.dpdns.org/#website"
+      },
+      "mainEntity": {
+        "@id": "https://linsk27.dpdns.org/#person"
+      }
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://linsk27.dpdns.org/projects/#collection",
+      "name": "404_@林达 Projects",
+      "url": "https://linsk27.dpdns.org/projects/",
+      "description": "Dev Cockpit, ProofPR, skills-manage, feidu, AI Vue Flask Blog, AI-v0.dev, Vue-blog, echarts-learn, bilibili-nuxt3 and other Vue, TypeScript, AI Coding, Agent Skills, Tauri, Nuxt, ECharts, Flask, MySQL, GitHub Actions projects by 404_@林达.",
+      "isPartOf": {
+        "@id": "https://linsk27.dpdns.org/#website"
+      },
+      "about": {
+        "@id": "https://linsk27.dpdns.org/#person"
+      },
+      "hasPart": [
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "Dev Cockpit",
+          "codeRepository": "https://github.com/linsk27/local-dev-cockpit",
+          "programmingLanguage": ["TypeScript", "Vue"],
+          "description": "Local resource radar dashboard for collecting GitHub repositories, demos, tools, tutorials, AI coding resources, value scores, category filters, and visual resource maps.",
+          "image": "https://linsk27.dpdns.org/img/projects/dev-cockpit-resource-radar-cards.png",
+          "url": "https://linsk27.dpdns.org/projects/dev-cockpit/"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "ProofPR",
+          "codeRepository": "https://github.com/linsk27/proof-pr",
+          "programmingLanguage": ["TypeScript", "JavaScript"],
+          "description": "GitHub Action and CLI for pull request evidence scanning, PR triage, dependency risk, workflow permission checks, secrets detection, MCP security, and maintainer review guidance.",
+          "image": "https://linsk27.dpdns.org/img/projects/proofpr-github-action-pr-review-report.png",
+          "url": "https://linsk27.dpdns.org/projects/proofpr/"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "skills-manage",
+          "codeRepository": "https://github.com/linsk27/skills-manage",
+          "programmingLanguage": ["TypeScript", "React", "Rust"],
+          "description": "Tauri, React and TypeScript desktop app for managing AI coding agent skills across Claude Code, Codex CLI, Cursor, Gemini CLI, and more than 20 platforms.",
+          "image": "https://linsk27.dpdns.org/img/projects/skills-manage-central-library.png",
+          "url": "https://linsk27.dpdns.org/projects/skills-manage/"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "feidu",
+          "codeRepository": "https://github.com/linsk27/feidu",
+          "programmingLanguage": ["Vue", "TypeScript"],
+          "description": "Nuxt 3, Vue, Tailwind CSS and ECharts smart community dashboard for community management, security monitoring, CIM platform, energy monitoring, and energy analysis screens.",
+          "image": "https://linsk27.dpdns.org/img/projects/feidu-smart-community-dashboard.jpg",
+          "url": "https://linsk27.dpdns.org/projects/feidu/"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "AI-Vue3-python-flask-Blog",
+          "codeRepository": "https://github.com/linsk27/AI-Vue3-python-flask-Blog",
+          "programmingLanguage": ["Vue", "Python", "TypeScript"],
+          "description": "Vue 3, Flask, MySQL and AI blog system for full-stack practice, course design, graduation project, and secondary development.",
+          "image": "https://linsk27.dpdns.org/img/projects/ai-vue-flask-blog-home-page.png",
+          "url": "https://linsk27.dpdns.org/projects/ai-vue-flask-blog/"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "AI-v0.dev-",
+          "codeRepository": "https://github.com/linsk27/AI-v0.dev-",
+          "programmingLanguage": ["TypeScript", "React"],
+          "description": "Next.js and TypeScript prototype for AI learning dashboards, v0.dev UI experiments, product interface design, progress tracking, and project cards.",
+          "image": "https://linsk27.dpdns.org/img/projects/ai-v0-dev-learning-dashboard.png",
+          "url": "https://linsk27.dpdns.org/projects/ai-v0-dev/"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "Vue-blog",
+          "codeRepository": "https://github.com/linsk27/Vue-blog",
+          "programmingLanguage": ["Vue", "TypeScript"],
+          "description": "Vue blog front-end project with article pages, AI center, and data analysis dashboard screens.",
+          "image": "https://linsk27.dpdns.org/img/projects/vue-blog-demo.png",
+          "url": "https://linsk27.dpdns.org/projects/vue-blog/"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "bilibili-nuxt3",
+          "codeRepository": "https://github.com/linsk27/bilibili-nuxt3",
+          "programmingLanguage": ["TypeScript", "Vue"],
+          "description": "Nuxt 3, Vue, TypeScript and Vant mobile project practice for SSR, SEO, channel navigation, video lists, detail pages, and mobile UI structure.",
+          "image": "https://linsk27.dpdns.org/img/projects/bilibili-nuxt3-mobile-preview.jpg",
+          "url": "https://linsk27.dpdns.org/projects/bilibili-nuxt3/"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "echarts-learn",
+          "codeRepository": "https://github.com/linsk27/echarts-learn",
+          "programmingLanguage": ["Vue", "TypeScript"],
+          "description": "Vue, Nuxt and ECharts data visualization dashboard practice for bar charts, radar charts, relation graphs, ring charts, word cloud, and dashboard UI.",
+          "image": "https://linsk27.dpdns.org/img/projects/echarts-learn-dashboard.png",
+          "url": "https://linsk27.dpdns.org/projects/echarts-learn/"
+        }
+      ]
+    }
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://linsk27.dpdns.org/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "项目",
+      "item": "https://linsk27.dpdns.org/projects/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Local AI Ops 本地 AI 运维工作台",
+      "item": "https://linsk27.dpdns.org/projects/local-ai-ops/"
+    }
+  ]
+}
+</script>
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended">
+
+
+        <div id="article-toolbar" style="position: sticky;top: 5px;z-index: 1000;">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>返回</span>
+            </a>
+        </div>
+    
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#为什么做这个">为什么做这个</a></li>
+    <li><a href="#它解决什么问题">它解决什么问题</a></li>
+    <li><a href="#技术栈">技术栈</a></li>
+    <li><a href="#项目边界">项目边界</a></li>
+    <li><a href="#项目入口">项目入口</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/projects/local-ai-ops/">
+                
+                    <img src="/img/projects/local-ai-ops-console.svg" loading="lazy" alt="Featured image of post Local AI Ops 本地 AI 运维工作台" />
+                
+            </a>
+        </div>
+
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E5%B7%A5%E5%85%B7/" >
+                工具
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/projects/local-ai-ops/">Local AI Ops 本地 AI 运维工作台</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Local AI Ops 是 linsk27 的局域网本地阿里云 AI 运维工作台，用 FastAPI、React、PostgreSQL、Redis、Celery 和阿里云 OpenAPI 管理云资源、监控检查、告警和 AI 排查建议。
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2026-06-23</time>
+            </div>
+	        
+        <div id="viewCount">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-eye"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" /></svg>
+            <time class="article-time--reading">
+                
+                <span id="vercount_value_page_pv">loading... </span>次
+            </time>
+        </div>
+
+        
+
+        
+    </footer>
+    
+
+    
+
+    
+</div>
+
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>Local AI Ops 是一个面向局域网和本机部署的阿里云 AI 运维工作台。它通过阿里云 OpenAPI 同步 ECS、轻量应用服务器、OSS、域名和 DNS 等资源，在本地保存运维资料，执行 HTTP、TCP、SSH 和云助手检查，并基于告警上下文生成 AI 排查建议。</p>
+<p><img src="/img/projects/local-ai-ops-console.svg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Local AI Ops console preview"
+	
+	
+></p>
+<h2 id="为什么做这个">为什么做这个
+</h2><p>个人或小团队管理云资源时，信息经常分散在阿里云控制台、宝塔面板、SSH 记录、续费入口、域名解析、监控告警和本地文档里。真正需要排查问题时，往往先要确认资源在哪、入口在哪、凭据在哪、最近检查结果是什么。</p>
+<p>Local AI Ops 的目标是把这些信息收回到可信局域网内的一个本地工作台里。它不追求替代云厂商控制台，而是把常用资源、运维资料、健康检查和排查上下文放在同一个界面中，减少来回切换。</p>
+<h2 id="它解决什么问题">它解决什么问题
+</h2><ul>
+<li>同步阿里云 ECS、轻量应用服务器、OSS、域名和 DNS 资源。</li>
+<li>本地维护到期时间、自动续费、业务入口、控制台入口、SSH 凭据和宝塔面板资料。</li>
+<li>支持 HTTP 探活、TCP 端口、SSH 登录、ECS 指标和 Cloud Assistant 只读命令检查。</li>
+<li>根据连续失败次数生成告警，并支持确认、关闭和恢复状态。</li>
+<li>基于资产、告警和最近检查结果生成 AI 排查步骤和建议命令。</li>
+<li>AccessKey、SSH 密码、私钥、宝塔密码和 AI Key 使用 AES-GCM 加密保存。</li>
+</ul>
+<h2 id="技术栈">技术栈
+</h2><ul>
+<li>Backend: FastAPI, SQLAlchemy 2, Alembic, PostgreSQL, Redis, Celery</li>
+<li>Frontend: React, Vite, TypeScript, ECharts, lucide-react</li>
+<li>Cloud: Alibaba Cloud SDK / OpenAPI</li>
+<li>AI: OpenAI-compatible Chat Completions API</li>
+<li>Runtime: Docker Compose</li>
+</ul>
+<h2 id="项目边界">项目边界
+</h2><p>当前版本定位为 MVP，更适合个人或小团队在可信局域网内统一查看云资源、续费、入口、SSH/宝塔资料和监控结果。它不是公网多租户系统，也不建议直接暴露到公网。</p>
+<p>AI 诊断只生成摘要、可能原因、排查步骤和建议命令，不会自动执行修复。真正会访问云资源的动作仍然通过明确的资产同步、监控检查和只读命令来完成。</p>
+<h2 id="项目入口">项目入口
+</h2><ul>
+<li>GitHub 仓库：<a class="link" href="https://github.com/linsk27/local-ai-ops"  target="_blank" rel="noopener"
+    >linsk27/local-ai-ops</a></li>
+<li>项目总览：<a class="link" href="/projects/" >404_@林达 Projects</a></li>
+<li>GitHub 项目索引：<a class="link" href="/github/" >404_@林达 GitHub 项目与 Star 入口</a></li>
+</ul>
+<p>如果你正在找 local LAN ops console、Alibaba Cloud ops dashboard、FastAPI React ops console、CloudMonitor dashboard 或本地优先的 AI diagnostics 工具，这个项目可以作为一个可继续扩展的参考。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/fastapi/">FastAPI</a>
+        
+            <a href="/tags/react/">React</a>
+        
+            <a href="/tags/typescript/">Typescript</a>
+        
+            <a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/">阿里云</a>
+        
+            <a href="/tags/%E8%BF%90%E7%BB%B4%E5%B7%A5%E5%85%B7/">运维工具</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>404_@林达所作</span>
+
+    </section>
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 Jun 25, 2026 00:00 UTC
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/projects/skills-manage/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/projects/skills-manage-central-library.png" loading="lazy" data-key="" data-hash="/img/projects/skills-manage-central-library.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">skills-manage AI Skills 管理器</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/projects/dev-cockpit/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/projects/dev-cockpit-resource-radar-cards.png" loading="lazy" data-key="" data-hash="/img/projects/dev-cockpit-resource-radar-cards.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Dev Cockpit 资源雷达工作台</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/moonlight-sunshine%E5%AE%9E%E7%8E%B0%E6%89%A9%E5%B1%95%E5%B1%8F%E5%92%8C%E8%BF%9C%E7%A8%8B%E4%B8%B2%E6%B5%81/">
+        
+        
+            <div class="article-image">
+                <img src="/p/moonlight-sunshine%E5%AE%9E%E7%8E%B0%E6%89%A9%E5%B1%95%E5%B1%8F%E5%92%8C%E8%BF%9C%E7%A8%8B%E4%B8%B2%E6%B5%81/moonlight.34e922efd7ae91e13dc756718c0724a2_hu_6649bc484295b965.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post moonlight&#43;sunshine实现扩展屏和远程串流"
+                        
+                        data-hash="md5-NOki79eukeE9x1ZxjAckog==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">moonlight&#43;sunshine实现扩展屏和远程串流</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/nexus%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/">
+        
+        
+            <div class="article-image">
+                <img src="/p/nexus%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/nexus6.a00a5050f590a85d41d80cabbed6663e_hu_4d2ece132d347165.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 【Nexus】桌面美化教程"
+                        
+                        data-hash="md5-oApQUPWQqF1B2AyrvtZmPg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【Nexus】桌面美化教程</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2026 404_@林达
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<script src="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.css" crossorigin="anonymous" />
+<script>
+    NProgress.start();
+    document.addEventListener("readystatechange", () => {
+        if (document.readyState === "interactive") NProgress.inc(0.8);
+        if (document.readyState === "complete") NProgress.done();
+    });
+</script>
+
+<script defer src="https://cn.vercount.one/js"></script>
+<script>
+    function showHideView() {
+        
+        let viewCounts = document.querySelectorAll("#viewCount");
+        if (viewCounts) {
+            
+            let article =  document.querySelector(".article-page");
+            if (!article) {
+                viewCounts.forEach(ele => {
+                    ele.style.display = 'none';
+                });
+            }
+        }
+    }
+    
+    showHideView();
+</script>
+
+    </body>
+</html>
