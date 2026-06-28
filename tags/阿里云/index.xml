@@ -53,9 +53,9 @@
 &lt;li&gt;GitHub 仓库：&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/local-ai-ops&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;linsk27/local-ai-ops&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/&#34; &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;GitHub 项目索引：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/github/&#34; &gt;404_@林达 GitHub 项目与 Star 入口&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub 项目索引：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/github/&#34; &gt;404_@林达 GitHub 项目索引&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;如果你正在找 local LAN ops console、Alibaba Cloud ops dashboard、FastAPI React ops console、CloudMonitor dashboard 或本地优先的 AI diagnostics 工具，这个项目可以作为一个可继续扩展的参考。&lt;/p&gt;
+&lt;p&gt;它适合作为 local LAN ops console、Alibaba Cloud ops dashboard、FastAPI React ops console、CloudMonitor dashboard 和本地优先诊断工具的参考实现。&lt;/p&gt;
 </description>
         </item>
         

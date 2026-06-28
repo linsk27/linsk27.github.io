@@ -53,9 +53,9 @@
 &lt;li&gt;GitHub 仓库：&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/local-ai-ops&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;linsk27/local-ai-ops&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/&#34; &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;GitHub 项目索引：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/github/&#34; &gt;404_@林达 GitHub 项目与 Star 入口&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub 项目索引：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/github/&#34; &gt;404_@林达 GitHub 项目索引&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;如果你正在找 local LAN ops console、Alibaba Cloud ops dashboard、FastAPI React ops console、CloudMonitor dashboard 或本地优先的 AI diagnostics 工具，这个项目可以作为一个可继续扩展的参考。&lt;/p&gt;
+&lt;p&gt;它适合作为 local LAN ops console、Alibaba Cloud ops dashboard、FastAPI React ops console、CloudMonitor dashboard 和本地优先诊断工具的参考实现。&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -285,12 +285,12 @@
 </description>
         </item>
         <item>
-        <title>404_@林达 GitHub 项目与 Star 入口</title>
+        <title>404_@林达 GitHub 项目索引</title>
         <link>https://linsk27.dpdns.org/github/</link>
         <pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://linsk27.dpdns.org/github/</guid>
-        <description>&lt;img src="https://linsk27.dpdns.org/img/projects/skills-manage-central-library.png" alt="Featured image of post 404_@林达 GitHub 项目与 Star 入口" /&gt;&lt;p&gt;这里是更直接的 GitHub 项目入口。如果你是从搜索结果、GitHub 主页、README 或项目截图点进来，可以按需求选择先看哪个仓库。&lt;/p&gt;
+        <description>&lt;img src="https://linsk27.dpdns.org/img/projects/skills-manage-central-library.png" alt="Featured image of post 404_@林达 GitHub 项目索引" /&gt;&lt;p&gt;这里是更直接的 GitHub 项目入口。如果你是从搜索结果、GitHub 主页、README 或项目截图点进来，可以按需求选择先看哪个仓库。&lt;/p&gt;
 &lt;p&gt;我的 GitHub 主页是 &lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;github.com/linsk27&lt;/a&gt;，完整项目页是 &lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/&#34; &gt;404_@林达 项目主页&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;推荐先看的仓库&#34;&gt;推荐先看的仓库
@@ -322,10 +322,10 @@
 					&lt;td&gt;关注 Pull Request 证据扫描、GitHub Actions 和维护者 review 工作流的人&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
-					&lt;td&gt;AI skills 管理&lt;/td&gt;
+					&lt;td&gt;Skills 管理&lt;/td&gt;
 					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/skills-manage&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;skills-manage&lt;/a&gt;&lt;/td&gt;
-					&lt;td&gt;使用 Claude Code、Codex CLI、Cursor、Gemini CLI 等 AI 编程工具的人&lt;/td&gt;
+					&lt;td&gt;使用 Claude Code、Codex CLI、Cursor、Gemini CLI 等编程工具的人&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td&gt;智慧社区大屏&lt;/td&gt;
@@ -396,8 +396,8 @@
 &lt;li&gt;想看全栈项目：先看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/ai-vue-flask-blog/&#34; &gt;AI Vue Flask Blog&lt;/a&gt;。&lt;/li&gt;
 &lt;li&gt;想看前端页面练习：先看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/vue-blog/&#34; &gt;Vue-blog&lt;/a&gt; 和 &lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/bilibili-nuxt3/&#34; &gt;bilibili-nuxt3&lt;/a&gt;。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;star-说明&#34;&gt;Star 说明
-&lt;/h2&gt;&lt;p&gt;如果某个仓库对你有参考价值，欢迎在 GitHub 上点 Star。Star 对我来说不是装饰，它会直接影响我下一步优先补哪些文档、截图、部署说明和功能。&lt;/p&gt;
+&lt;h2 id=&#34;维护说明&#34;&gt;维护说明
+&lt;/h2&gt;&lt;p&gt;如果某个仓库对你有参考价值，可以在 GitHub 上关注或 Star。这个信号会影响我后续优先补哪些文档、截图、部署说明和功能。&lt;/p&gt;
 &lt;p&gt;更完整的项目截图、关键词和说明可以看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/&#34; &gt;项目主页&lt;/a&gt;；个人介绍可以看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/about/&#34; &gt;关于 404_@林达&lt;/a&gt;。&lt;/p&gt;
 </description>
         </item>
@@ -407,8 +407,8 @@
         <pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://linsk27.dpdns.org/projects/</guid>
-        <description>&lt;img src="https://linsk27.dpdns.org/img/projects/feidu-smart-community-dashboard.jpg" alt="Featured image of post 404_@林达 项目主页" /&gt;&lt;p&gt;这里集中放我当前更希望被看到的项目。它们都不是单纯的练习截图，而是围绕真实开发场景整理出来的作品：本地云资源运维、开发现场恢复、Pull Request 证据检查、AI coding agent skills 管理、智慧社区数据大屏、Vue 与 Flask 全栈系统、AI 产品界面原型，以及可以直接打开的前端成品。&lt;/p&gt;
-&lt;p&gt;如果你想直接从 GitHub 仓库角度筛选，可以看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/github/&#34; &gt;404_@林达 GitHub 项目与 Star 入口&lt;/a&gt;。&lt;/p&gt;
+        <description>&lt;img src="https://linsk27.dpdns.org/img/projects/feidu-smart-community-dashboard.jpg" alt="Featured image of post 404_@林达 项目主页" /&gt;&lt;p&gt;这里集中放我当前更希望被看到的项目。它们都不是单纯的练习截图，而是围绕真实开发场景整理出来的作品：本地云资源运维、开发现场恢复、Pull Request 证据检查、skills 管理、智慧社区数据大屏、Vue 与 Flask 全栈系统、产品界面原型，以及可以直接打开的前端成品。&lt;/p&gt;
+&lt;p&gt;如果你想直接从 GitHub 仓库角度筛选，可以看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/github/&#34; &gt;404_@林达 GitHub 项目索引&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;local-ai-ops&#34;&gt;Local AI Ops
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/local-ai-ops/&#34; &gt;Local AI Ops&lt;/a&gt; 是一个面向局域网和本机部署的阿里云 AI 运维工作台，用 FastAPI、React、PostgreSQL、Redis、Celery 和阿里云 OpenAPI 管理云资源、监控检查、告警和 AI 排查建议。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://linsk27.dpdns.org/img/projects/local-ai-ops-console.svg&#34;
@@ -422,10 +422,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;这张图是模拟截图，只按真实界面结构绘制，不包含真实云账号、IP、域名、实例 ID 或监控结果。&lt;/p&gt;
-&lt;p&gt;如果你正在找 local LAN ops console、Alibaba Cloud ops dashboard、FastAPI React ops console、CloudMonitor dashboard 或本地优先的 AI diagnostics 工具，可以先看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/local-ai-ops/&#34; &gt;Local AI Ops 详情页&lt;/a&gt;，再进入 &lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/local-ai-ops&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;适合参考 local LAN ops console、Alibaba Cloud ops dashboard、FastAPI React ops console、CloudMonitor dashboard 和本地优先的诊断工具实现。可以先看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/local-ai-ops/&#34; &gt;Local AI Ops 详情页&lt;/a&gt;，再进入 &lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/local-ai-ops&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;GitHub 仓库&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;dev-cockpit&#34;&gt;Dev Cockpit
-&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/dev-cockpit/&#34; &gt;Dev Cockpit&lt;/a&gt; 是一个本地资源雷达工作台，用来收集 GitHub 仓库、Demo、工具、教程和 AI coding 资源，并通过卡片库、分类筛选、价值评分和星云图整理开发资料。它适合经常收藏技术资源、需要定期复盘工具链和 AI 编程资源的个人开发者。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/dev-cockpit/&#34; &gt;Dev Cockpit&lt;/a&gt; 是一个本地资源雷达工作台，用来收集 GitHub 仓库、Demo、工具和教程，并通过卡片库、分类筛选、价值评分和星云图整理开发资料。它适合经常收藏技术资源、需要定期复盘工具链的个人开发者。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://linsk27.dpdns.org/img/projects/dev-cockpit-resource-radar-cards.png&#34;
 	
 	
@@ -436,7 +436,7 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;如果你正在找 developer resource dashboard、GitHub resource manager、AI coding resources、resource radar 或 Electron + Vue 的项目，可以先看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/dev-cockpit/&#34; &gt;Dev Cockpit 详情页&lt;/a&gt;，再进入 &lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/local-dev-cockpit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;适合参考 developer resource dashboard、GitHub resource manager、resource radar 或 Electron + Vue 本地工具。可以先看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/dev-cockpit/&#34; &gt;Dev Cockpit 详情页&lt;/a&gt;，再进入 &lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/local-dev-cockpit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;GitHub 仓库&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;proofpr&#34;&gt;ProofPR
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/proofpr/&#34; &gt;ProofPR&lt;/a&gt; 是一个 GitHub Action 和 CLI，用来整理 Pull Request 中的证据信号，包括 secrets、依赖风险、CI 权限、MCP 安全和 review 线索。目标是让开源维护者更快判断一个 PR 是否值得合并、需要补充什么证据。&lt;/p&gt;
@@ -450,10 +450,10 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;如果你关注 pull request review automation、GitHub Actions security、PR triage、AI generated code review 或 maintainer tools，可以先看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/proofpr/&#34; &gt;ProofPR 详情页&lt;/a&gt;，再进入 &lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/proof-pr&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;适合关注 pull request review automation、GitHub Actions security、PR triage 和 maintainer tools 的场景。可以先看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/proofpr/&#34; &gt;ProofPR 详情页&lt;/a&gt;，再进入 &lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/proof-pr&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;GitHub 仓库&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;skills-manage&#34;&gt;skills-manage
-&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/skills-manage/&#34; &gt;skills-manage&lt;/a&gt; 是一个 Tauri、React 和 TypeScript 桌面应用，用来集中管理 AI coding agent skills，覆盖中央技能库、平台安装、项目扫描、技能市场、GitHub 导入和技能集合。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/skills-manage/&#34; &gt;skills-manage&lt;/a&gt; 是一个 Tauri、React 和 TypeScript 桌面应用，用来集中管理本地 skills，覆盖中央技能库、平台安装、项目扫描、技能市场、GitHub 导入和技能集合。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://linsk27.dpdns.org/img/projects/skills-manage-central-library.png&#34;
 	
 	
@@ -464,7 +464,7 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;如果你正在找 AI coding agent skills manager、Claude Code skills、Codex CLI skills、Cursor skills、Agent Skills desktop app 或 Tauri React desktop app，可以先看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/skills-manage/&#34; &gt;skills-manage 详情页&lt;/a&gt;，再进入 &lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/skills-manage&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;适合参考 Claude Code skills、Codex CLI skills、Cursor skills、Agent Skills desktop app 或 Tauri React desktop app 的管理界面。可以先看 &lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/skills-manage/&#34; &gt;skills-manage 详情页&lt;/a&gt;，再进入 &lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/skills-manage&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;GitHub 仓库&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;ai-vue3-python-flask-blog&#34;&gt;AI-Vue3-python-flask-Blog
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/ai-vue-flask-blog/&#34; &gt;AI-Vue3-python-flask-Blog&lt;/a&gt; 是一个 Vue 3、Flask、MySQL 和 AI 能力组合的博客系统，覆盖前端页面、后端接口、数据持久化和内容管理。它适合作为课程设计、毕业设计、全栈项目练习和二次开发基础。&lt;/p&gt;
@@ -563,7 +563,7 @@
         
         <guid>https://linsk27.dpdns.org/about/</guid>
         <description>&lt;p&gt;我是 404_@林达，主要把前端、全栈和开发工具相关想法做成可以运行、可以验证、可以继续迭代的项目。我的 GitHub 主页是 &lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;github.com/linsk27&lt;/a&gt;，项目入口是 &lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/&#34; &gt;404_@林达 Projects&lt;/a&gt;，按仓库和 Star 场景整理的入口是 &lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/github/&#34; &gt;404_@林达 GitHub 项目与 Star 入口&lt;/a&gt;。&lt;/p&gt;
+    &gt;github.com/linsk27&lt;/a&gt;，项目入口是 &lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/&#34; &gt;404_@林达 Projects&lt;/a&gt;，按仓库整理的入口是 &lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/github/&#34; &gt;404_@林达 GitHub 项目索引&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;关注方向&#34;&gt;关注方向
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;开发者工具与资源整理：让资源收集、Pull Request review 和 agent skills 管理更清晰。&lt;/li&gt;
@@ -575,13 +575,13 @@
 &lt;h2 id=&#34;推荐项目&#34;&gt;推荐项目
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/local-ai-ops/&#34; &gt;Local AI Ops&lt;/a&gt;：局域网本地阿里云 AI 运维工作台，用于整理云资源、监控检查、告警和排查建议。&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/dev-cockpit/&#34; &gt;Dev Cockpit&lt;/a&gt;：本地资源雷达工作台，用于收集 GitHub 仓库、工具、教程和 AI coding 资源，并通过卡片库、价值评分和星云图整理资料。&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/dev-cockpit/&#34; &gt;Dev Cockpit&lt;/a&gt;：本地资源雷达工作台，用于收集 GitHub 仓库、工具和教程，并通过卡片库、价值评分和星云图整理资料。&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/proofpr/&#34; &gt;ProofPR&lt;/a&gt;：GitHub Action 和 CLI，用于 Pull Request 证据扫描、风险提示和维护者 review 辅助。&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/skills-manage/&#34; &gt;skills-manage&lt;/a&gt;：Tauri、React 和 TypeScript 桌面应用，用于集中管理 AI coding agent skills。&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/skills-manage/&#34; &gt;skills-manage&lt;/a&gt;：Tauri、React 和 TypeScript 桌面应用，用于集中管理本地 skills 和多平台安装状态。&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/feidu/&#34; &gt;feidu&lt;/a&gt;：Nuxt 3、Vue、Tailwind CSS 和 ECharts 智慧社区数据大屏，覆盖安防监控、CIM 平台和能源监测。&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/ai-vue-flask-blog/&#34; &gt;AI-Vue3-python-flask-Blog&lt;/a&gt;：Vue 3、Flask、MySQL 和 AI 能力组合的博客系统。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;适合搜索这些关键词找到我&#34;&gt;适合搜索这些关键词找到我
+&lt;h2 id=&#34;技术关键词&#34;&gt;技术关键词
 &lt;/h2&gt;&lt;p&gt;linsk27 GitHub、linsk27 projects、Local AI Ops、Alibaba Cloud ops console、Vue TypeScript developer、AI coding tools、developer workflow tools、GitHub Actions review、Nuxt ECharts dashboard、Vue Flask full stack project。&lt;/p&gt;
 &lt;h2 id=&#34;联系方式&#34;&gt;联系方式
 &lt;/h2&gt;&lt;ul&gt;
@@ -590,7 +590,7 @@
 &lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/&#34; &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;微信：linsk27&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;如果某个项目对你有参考价值，欢迎进入对应 GitHub 仓库点 Star。Star 是我判断后续优先完善哪个项目的主要信号。&lt;/p&gt;
+&lt;p&gt;如果某个项目对你有参考价值，欢迎进入对应 GitHub 仓库查看 README、运行说明和项目截图。&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -599,7 +599,7 @@
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://linsk27.dpdns.org/projects/dev-cockpit/</guid>
-        <description>&lt;img src="https://linsk27.dpdns.org/img/projects/dev-cockpit-resource-radar-cards.png" alt="Featured image of post Dev Cockpit 资源雷达工作台" /&gt;&lt;p&gt;Dev Cockpit 现在更像一个本地资源雷达，而不是普通的项目启动器。它把我平时看到的 GitHub 仓库、Demo、工具、教程、视频号文本和 AI coding 资源收进一个工作台，再用分类、标签、摘要、价值评分和可视化视图帮助我判断哪些东西值得继续研究。&lt;/p&gt;
+        <description>&lt;img src="https://linsk27.dpdns.org/img/projects/dev-cockpit-resource-radar-cards.png" alt="Featured image of post Dev Cockpit 资源雷达工作台" /&gt;&lt;p&gt;Dev Cockpit 现在更像一个本地资源雷达，而不是普通的项目启动器。它把我平时看到的 GitHub 仓库、Demo、工具、教程和工作流资料收进一个工作台，再用分类、标签、摘要、价值评分和可视化视图帮助我判断哪些东西值得继续研究。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://linsk27.dpdns.org/img/projects/dev-cockpit-resource-radar-cards.png&#34;
 	
 	
@@ -641,10 +641,10 @@
 &lt;p&gt;这些资源不是简单展示名称，而是会被整理成摘要、来源、分类、标签和评分。这样后面回看时，不需要重新打开每个仓库才能想起来它适合什么场景。&lt;/p&gt;
 &lt;h2 id=&#34;适合谁&#34;&gt;适合谁
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;经常收藏 GitHub 仓库、工具、教程和 AI coding 资源的人。&lt;/li&gt;
+&lt;li&gt;经常收藏 GitHub 仓库、工具、教程和开发工作流资料的人。&lt;/li&gt;
 &lt;li&gt;想把资源从聊天记录、浏览器收藏夹和临时文档里整理出来的人。&lt;/li&gt;
 &lt;li&gt;需要给资源做分类、评分、状态管理和后续复盘的人。&lt;/li&gt;
-&lt;li&gt;正在研究 AI coding workflow、Agent Skills、前端工具链和设计生成工具的人。&lt;/li&gt;
+&lt;li&gt;正在研究 Agent Skills、前端工具链和设计生成工具的人。&lt;/li&gt;
 &lt;li&gt;想参考 Electron、Vue、TypeScript 本地工作台界面的人。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;技术方向&#34;&gt;技术方向
@@ -664,7 +664,7 @@
     &gt;linsk27/local-dev-cockpit&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;如果你正在找 developer resource dashboard、GitHub resource manager、AI coding resources、resource radar 或 Electron Vue desktop tools，Dev Cockpit 会比普通练手页面更接近真实的个人开发工作流。&lt;/p&gt;
+&lt;p&gt;Dev Cockpit 适合作为 developer resource dashboard、GitHub resource manager、resource radar 或 Electron Vue desktop tools 的参考实现。它比普通练手页面更接近真实的个人开发资料整理流程。&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -739,8 +739,8 @@
 &lt;li&gt;想参考 Tauri、React、TypeScript 桌面应用结构的人。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;项目价值&#34;&gt;项目价值
-&lt;/h2&gt;&lt;p&gt;skills-manage 的价值在于它解决了 AI coding agent skills 分散在不同目录、不同工具、不同市场里的管理问题。它提供中央技能库、平台视图、项目扫描、市场浏览、GitHub 仓库导入、Markdown 预览、原始源码查看、AI 解释生成和技能集合等能力，让技能资产更容易沉淀、迁移和复用。&lt;/p&gt;
-&lt;p&gt;如果你搜索的是 AI coding agent skills manager、Claude Code skills、Codex CLI skills、Cursor skills、Agent Skills desktop app 或 Tauri React desktop app，这个项目可以作为一个完整的本地优先应用参考。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;skills-manage 的价值在于它解决了本地 skills 分散在不同目录、不同工具、不同市场里的管理问题。它提供中央技能库、平台视图、项目扫描、市场浏览、GitHub 仓库导入、Markdown 预览、原始源码查看、解释生成和技能集合等能力，让技能资产更容易沉淀、迁移和复用。&lt;/p&gt;
+&lt;p&gt;这个项目适合作为 Claude Code skills、Codex CLI skills、Cursor skills、Agent Skills desktop app 或 Tauri React desktop app 的本地优先应用参考。&lt;/p&gt;
 &lt;h2 id=&#34;功能截图&#34;&gt;功能截图
 &lt;/h2&gt;&lt;h3 id=&#34;技能市场&#34;&gt;技能市场
 &lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://linsk27.dpdns.org/img/projects/skills-manage-marketplace.png&#34;
@@ -784,7 +784,7 @@
     &gt;latest release&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;如果这个 AI coding agent skills 管理工具对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续完善平台适配、市场同步、导入体验和跨工具技能管理的主要信号。&lt;/p&gt;
+&lt;p&gt;如果这个 skills 管理工具对你有参考价值，可以进入 GitHub 仓库查看 README、截图、下载入口和后续版本计划。&lt;/p&gt;
 </description>
         </item>
         <item>

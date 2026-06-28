@@ -53,9 +53,9 @@
 &lt;li&gt;GitHub 仓库：&lt;a class=&#34;link&#34; href=&#34;https://github.com/linsk27/local-ai-ops&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;linsk27/local-ai-ops&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/&#34; &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;GitHub 项目索引：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/github/&#34; &gt;404_@林达 GitHub 项目与 Star 入口&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub 项目索引：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/github/&#34; &gt;404_@林达 GitHub 项目索引&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;如果你正在找 local LAN ops console、Alibaba Cloud ops dashboard、FastAPI React ops console、CloudMonitor dashboard 或本地优先的 AI diagnostics 工具，这个项目可以作为一个可继续扩展的参考。&lt;/p&gt;
+&lt;p&gt;它适合作为 local LAN ops console、Alibaba Cloud ops dashboard、FastAPI React ops console、CloudMonitor dashboard 和本地优先诊断工具的参考实现。&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -64,7 +64,7 @@
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://linsk27.dpdns.org/projects/dev-cockpit/</guid>
-        <description>&lt;img src="https://linsk27.dpdns.org/img/projects/dev-cockpit-resource-radar-cards.png" alt="Featured image of post Dev Cockpit 资源雷达工作台" /&gt;&lt;p&gt;Dev Cockpit 现在更像一个本地资源雷达，而不是普通的项目启动器。它把我平时看到的 GitHub 仓库、Demo、工具、教程、视频号文本和 AI coding 资源收进一个工作台，再用分类、标签、摘要、价值评分和可视化视图帮助我判断哪些东西值得继续研究。&lt;/p&gt;
+        <description>&lt;img src="https://linsk27.dpdns.org/img/projects/dev-cockpit-resource-radar-cards.png" alt="Featured image of post Dev Cockpit 资源雷达工作台" /&gt;&lt;p&gt;Dev Cockpit 现在更像一个本地资源雷达，而不是普通的项目启动器。它把我平时看到的 GitHub 仓库、Demo、工具、教程和工作流资料收进一个工作台，再用分类、标签、摘要、价值评分和可视化视图帮助我判断哪些东西值得继续研究。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://linsk27.dpdns.org/img/projects/dev-cockpit-resource-radar-cards.png&#34;
 	
 	
@@ -106,10 +106,10 @@
 &lt;p&gt;这些资源不是简单展示名称，而是会被整理成摘要、来源、分类、标签和评分。这样后面回看时，不需要重新打开每个仓库才能想起来它适合什么场景。&lt;/p&gt;
 &lt;h2 id=&#34;适合谁&#34;&gt;适合谁
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;经常收藏 GitHub 仓库、工具、教程和 AI coding 资源的人。&lt;/li&gt;
+&lt;li&gt;经常收藏 GitHub 仓库、工具、教程和开发工作流资料的人。&lt;/li&gt;
 &lt;li&gt;想把资源从聊天记录、浏览器收藏夹和临时文档里整理出来的人。&lt;/li&gt;
 &lt;li&gt;需要给资源做分类、评分、状态管理和后续复盘的人。&lt;/li&gt;
-&lt;li&gt;正在研究 AI coding workflow、Agent Skills、前端工具链和设计生成工具的人。&lt;/li&gt;
+&lt;li&gt;正在研究 Agent Skills、前端工具链和设计生成工具的人。&lt;/li&gt;
 &lt;li&gt;想参考 Electron、Vue、TypeScript 本地工作台界面的人。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;技术方向&#34;&gt;技术方向
@@ -129,7 +129,7 @@
     &gt;linsk27/local-dev-cockpit&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;如果你正在找 developer resource dashboard、GitHub resource manager、AI coding resources、resource radar 或 Electron Vue desktop tools，Dev Cockpit 会比普通练手页面更接近真实的个人开发工作流。&lt;/p&gt;
+&lt;p&gt;Dev Cockpit 适合作为 developer resource dashboard、GitHub resource manager、resource radar 或 Electron Vue desktop tools 的参考实现。它比普通练手页面更接近真实的个人开发资料整理流程。&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -157,8 +157,8 @@
 &lt;li&gt;想参考 Tauri、React、TypeScript 桌面应用结构的人。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;项目价值&#34;&gt;项目价值
-&lt;/h2&gt;&lt;p&gt;skills-manage 的价值在于它解决了 AI coding agent skills 分散在不同目录、不同工具、不同市场里的管理问题。它提供中央技能库、平台视图、项目扫描、市场浏览、GitHub 仓库导入、Markdown 预览、原始源码查看、AI 解释生成和技能集合等能力，让技能资产更容易沉淀、迁移和复用。&lt;/p&gt;
-&lt;p&gt;如果你搜索的是 AI coding agent skills manager、Claude Code skills、Codex CLI skills、Cursor skills、Agent Skills desktop app 或 Tauri React desktop app，这个项目可以作为一个完整的本地优先应用参考。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;skills-manage 的价值在于它解决了本地 skills 分散在不同目录、不同工具、不同市场里的管理问题。它提供中央技能库、平台视图、项目扫描、市场浏览、GitHub 仓库导入、Markdown 预览、原始源码查看、解释生成和技能集合等能力，让技能资产更容易沉淀、迁移和复用。&lt;/p&gt;
+&lt;p&gt;这个项目适合作为 Claude Code skills、Codex CLI skills、Cursor skills、Agent Skills desktop app 或 Tauri React desktop app 的本地优先应用参考。&lt;/p&gt;
 &lt;h2 id=&#34;功能截图&#34;&gt;功能截图
 &lt;/h2&gt;&lt;h3 id=&#34;技能市场&#34;&gt;技能市场
 &lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://linsk27.dpdns.org/img/projects/skills-manage-marketplace.png&#34;
@@ -202,7 +202,7 @@
     &gt;latest release&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;如果这个 AI coding agent skills 管理工具对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续完善平台适配、市场同步、导入体验和跨工具技能管理的主要信号。&lt;/p&gt;
+&lt;p&gt;如果这个 skills 管理工具对你有参考价值，可以进入 GitHub 仓库查看 README、截图、下载入口和后续版本计划。&lt;/p&gt;
 </description>
         </item>
         <item>

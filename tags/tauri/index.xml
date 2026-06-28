@@ -32,8 +32,8 @@
 &lt;li&gt;想参考 Tauri、React、TypeScript 桌面应用结构的人。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;项目价值&#34;&gt;项目价值
-&lt;/h2&gt;&lt;p&gt;skills-manage 的价值在于它解决了 AI coding agent skills 分散在不同目录、不同工具、不同市场里的管理问题。它提供中央技能库、平台视图、项目扫描、市场浏览、GitHub 仓库导入、Markdown 预览、原始源码查看、AI 解释生成和技能集合等能力，让技能资产更容易沉淀、迁移和复用。&lt;/p&gt;
-&lt;p&gt;如果你搜索的是 AI coding agent skills manager、Claude Code skills、Codex CLI skills、Cursor skills、Agent Skills desktop app 或 Tauri React desktop app，这个项目可以作为一个完整的本地优先应用参考。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;skills-manage 的价值在于它解决了本地 skills 分散在不同目录、不同工具、不同市场里的管理问题。它提供中央技能库、平台视图、项目扫描、市场浏览、GitHub 仓库导入、Markdown 预览、原始源码查看、解释生成和技能集合等能力，让技能资产更容易沉淀、迁移和复用。&lt;/p&gt;
+&lt;p&gt;这个项目适合作为 Claude Code skills、Codex CLI skills、Cursor skills、Agent Skills desktop app 或 Tauri React desktop app 的本地优先应用参考。&lt;/p&gt;
 &lt;h2 id=&#34;功能截图&#34;&gt;功能截图
 &lt;/h2&gt;&lt;h3 id=&#34;技能市场&#34;&gt;技能市场
 &lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://linsk27.dpdns.org/img/projects/skills-manage-marketplace.png&#34;
@@ -77,7 +77,7 @@
     &gt;latest release&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;项目总览：&lt;a class=&#34;link&#34; href=&#34;https://linsk27.dpdns.org/projects/&#34; &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;如果这个 AI coding agent skills 管理工具对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续完善平台适配、市场同步、导入体验和跨工具技能管理的主要信号。&lt;/p&gt;
+&lt;p&gt;如果这个 skills 管理工具对你有参考价值，可以进入 GitHub 仓库查看 README、截图、下载入口和后续版本计划。&lt;/p&gt;
 </description>
         </item>
         
