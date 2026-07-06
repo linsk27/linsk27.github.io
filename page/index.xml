@@ -81,11 +81,11 @@
 &lt;p&gt;如果你想直接从 GitHub 仓库角度筛选，可以看 &lt;a class="link" href="https://linsk27.dpdns.org/github/" &gt;404_@林达 GitHub 项目索引&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id="local-ai-ops"&gt;Local AI Ops
 &lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://linsk27.dpdns.org/projects/local-ai-ops/" &gt;Local AI Ops&lt;/a&gt; 是一个面向局域网和本机部署的阿里云 AI 运维工作台，用 FastAPI、React、PostgreSQL、Redis、Celery 和阿里云 OpenAPI 管理云资源、监控检查、告警和 AI 排查建议。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.dpdns.org/img/projects/local-ai-ops-console.svg"
+&lt;p&gt;&lt;img src="https://linsk27.dpdns.org/img/projects/local-ai-ops-empty-dashboard.png"
 loading="lazy"
-alt="Local AI Ops simulated console screenshot"
+alt="Local AI Ops empty dashboard screenshot"
 &gt;&lt;/p&gt;
-&lt;p&gt;这张图是模拟截图，只按真实界面结构绘制，不包含真实云账号、IP、域名、实例 ID 或监控结果。&lt;/p&gt;
+&lt;p&gt;这张图来自本地空数据实例，不包含真实云账号、IP、域名、实例 ID 或监控结果。&lt;/p&gt;
 &lt;p&gt;适合参考 local LAN ops console、Alibaba Cloud ops dashboard、FastAPI React ops console、CloudMonitor dashboard 和本地优先的诊断工具实现。可以先看 &lt;a class="link" href="https://linsk27.dpdns.org/projects/local-ai-ops/" &gt;Local AI Ops 详情页&lt;/a&gt;，再进入 &lt;a class="link" href="https://github.com/linsk27/local-ai-ops" target="_blank" rel="noopener"
 &gt;GitHub 仓库&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id="dev-cockpit"&gt;Dev Cockpit
