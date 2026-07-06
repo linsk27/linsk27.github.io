@@ -1,18 +1,18 @@
 # 404_@林达
 
-> 404_@林达 的个人项目主页，记录前端学习、项目实践、资源雷达、开发者工具、数据可视化和全栈练习。
+> 404_@林达 的个人项目主页，记录前端项目、开发者工具、数据可视化和全栈实践。
 
 Main site: https://linsk27.github.io/
 GitHub profile: https://github.com/linsk27
 Project hub: https://linsk27.github.io/projects/
-GitHub projects and star guide: https://linsk27.github.io/github/
+GitHub projects index: https://linsk27.github.io/github/
 About page: https://linsk27.github.io/about/
 
 ## Core projects
 
-- Dev Cockpit: local resource radar dashboard for collecting GitHub repositories, demos, tools, tutorials, AI coding resources, category filters, value scores, resource cards, and nebula visualization. Project page: https://linsk27.github.io/projects/dev-cockpit/ Repository: https://github.com/linsk27/local-dev-cockpit
+- Local AI Ops: local LAN Alibaba Cloud ops console for cloud resource sync, monitoring checks, alert workflow, and troubleshooting suggestions. Project page: https://linsk27.github.io/projects/local-ai-ops/ Repository: https://github.com/linsk27/local-ai-ops
+- Dev Cockpit: local resource radar dashboard for collecting GitHub repositories, demos, tools, tutorials, category filters, value scores, resource cards, and nebula visualization. Project page: https://linsk27.github.io/projects/dev-cockpit/ Repository: https://github.com/linsk27/local-dev-cockpit
 - ProofPR: GitHub Action and CLI for pull request evidence scanning, PR triage, dependency risk, workflow permission checks, secrets detection, MCP security, and maintainer review guidance. Project page: https://linsk27.github.io/projects/proofpr/ Repository: https://github.com/linsk27/proof-pr
-- skills-manage: Tauri, React and TypeScript desktop app for managing AI coding agent skills across Claude Code, Codex CLI, Cursor, Gemini CLI, and more than 20 platforms. Project page: https://linsk27.github.io/projects/skills-manage/ Repository: https://github.com/linsk27/skills-manage Download: https://github.com/iamzhihuix/skills-manage/releases/latest
 - AI-Vue3-python-flask-Blog: Vue 3, Flask, MySQL and AI blog system for full-stack practice, course design, graduation project, and secondary development. Project page: https://linsk27.github.io/projects/ai-vue-flask-blog/ Repository: https://github.com/linsk27/AI-Vue3-python-flask-Blog Demo: https://ai-vue3-python-flask-blog.vercel.app/
 - AI-v0.dev-: Next.js and TypeScript prototype for AI learning dashboards, v0.dev UI experiments, product interface design, progress tracking, and project cards. Project page: https://linsk27.github.io/projects/ai-v0-dev/ Repository: https://github.com/linsk27/AI-v0.dev-
 - Vue-blog: Vue blog front-end project with article pages, AI center, and data analysis dashboard screens. Project page: https://linsk27.github.io/projects/vue-blog/ Repository: https://github.com/linsk27/Vue-blog Demo: https://vue-blog-smoky.vercel.app/
@@ -22,7 +22,7 @@ About page: https://linsk27.github.io/about/
 
 ## Topics
 
-Vue, TypeScript, JavaScript, React, Next.js, Nuxt, Node.js, Vite, Electron, Tauri, GitHub Actions, AI Coding, Agent Skills, AI coding agent skills manager, developer tools, resource radar, GitHub resource manager, pull request review automation, Flask, Python, MySQL, ECharts, full-stack projects, AI UI prototype, learning dashboard, Vue blog, smart community dashboard, security monitoring dashboard, energy monitoring dashboard, CIM platform UI.
+Vue, TypeScript, JavaScript, React, Next.js, Nuxt, Node.js, Vite, Electron, GitHub Actions, developer tools, resource radar, GitHub resource manager, pull request review automation, Flask, Python, MySQL, ECharts, full-stack projects, AI UI prototype, learning dashboard, Vue blog, smart community dashboard, security monitoring dashboard, energy monitoring dashboard, CIM platform UI.
 
 ## Contact
 
