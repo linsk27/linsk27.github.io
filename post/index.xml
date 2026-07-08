@@ -1,4 +1,41 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 404_@林达</title><link>https://linsk27.dpdns.org/post/</link><description>Recent content in Posts on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Mon, 06 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.dpdns.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Local AI Ops 本地 AI 运维工作台</title><link>https://linsk27.dpdns.org/projects/local-ai-ops/</link><pubDate>Tue, 23 Jun 2026 00:00:00 +0000</pubDate><guid>https://linsk27.dpdns.org/projects/local-ai-ops/</guid><description>&lt;img src="https://linsk27.dpdns.org/img/projects/local-ai-ops-empty-dashboard.png" alt="Featured image of post Local AI Ops 本地 AI 运维工作台" /&gt;&lt;p&gt;Local AI Ops 是一个面向局域网和本机部署的阿里云 AI 运维工作台。它通过阿里云 OpenAPI 同步 ECS、轻量应用服务器、OSS、域名和 DNS 等资源，在本地保存运维资料，执行 HTTP、TCP、SSH 和云助手检查，并基于告警上下文生成 AI 排查建议。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 404_@林达</title><link>https://linsk27.dpdns.org/post/</link><description>Recent content in Posts on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Wed, 08 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.dpdns.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Signal Atlas Three.js 作品集实验室</title><link>https://linsk27.dpdns.org/projects/signal-atlas/</link><pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate><guid>https://linsk27.dpdns.org/projects/signal-atlas/</guid><description>&lt;img src="https://linsk27.dpdns.org/img/projects/signal-atlas-monitor-view.png" alt="Featured image of post Signal Atlas Three.js 作品集实验室" /&gt;&lt;p&gt;Signal Atlas 是一个 Three.js 作品集实验室。它把个人主页做成一个可进入的 3D 开发者工作台：外层是 WebGL 房间、桌面和显示器，显示器里通过 CSS3D/iframe 投影一个真实可交互的 Vue 项目图谱。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.dpdns.org/img/projects/signal-atlas-monitor-view.png"
+loading="lazy"
+alt="Signal Atlas monitor view"
+&gt;&lt;/p&gt;
+&lt;p&gt;上图来自公开演示站的真实运行画面，只展示作品集引擎、项目入口和公开截图，不包含私人账号、凭据或真实业务数据。&lt;/p&gt;
+&lt;h2 id="为什么做这个"&gt;为什么做这个
+&lt;/h2&gt;&lt;p&gt;普通个人主页经常只展示一句简介、几个项目卡片和一组链接。Signal Atlas 的目标不是再做一个静态 profile，而是把项目变成可以被检查的 signal：有截图、有项目说明、有标签、有入口，也能继续扩展成不同主题的作品展示系统。&lt;/p&gt;
+&lt;p&gt;这个方向适合展示视觉项目、开发者工具、数据看板和开源工作流。它让访问者先看到作品的运行状态，再决定是否继续进入 GitHub 仓库、博客文章或线上演示。&lt;/p&gt;
+&lt;h2 id="它解决什么问题"&gt;它解决什么问题
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;用 Three.js 场景承载作品集，而不是只用普通卡片列表。&lt;/li&gt;
+&lt;li&gt;用 CSS3DRenderer 和 iframe 把真实网页界面放进 3D 显示器。&lt;/li&gt;
+&lt;li&gt;用 Vue 项目图谱管理项目、模块、标签、说明和链接。&lt;/li&gt;
+&lt;li&gt;用本地 manifest 维护内容，后续替换身份信息和项目截图更直接。&lt;/li&gt;
+&lt;li&gt;用静态站点方式部署，适合 GitHub、Vercel 和个人域名承载。&lt;/li&gt;
+&lt;li&gt;用自有截图和过程化场景素材，避免依赖不可控的第三方模型或图片。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="技术栈"&gt;技术栈
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Scene: Three.js, CSS3DRenderer, Canvas textures&lt;/li&gt;
+&lt;li&gt;Interface: Vue browser ESM runtime, manifest-driven UI&lt;/li&gt;
+&lt;li&gt;Build: Vite, JavaScript, CSS&lt;/li&gt;
+&lt;li&gt;Deployment: Static site, Vercel&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="项目边界"&gt;项目边界
+&lt;/h2&gt;&lt;p&gt;当前版本更像一个可二次开发的作品集引擎雏形，而不是完整 CMS。它适合 fork 后替换身份、项目 manifest、截图和主题，也适合继续扩展主题包、相机 preset、typed manifest schema 和更完整的项目详情页。&lt;/p&gt;
+&lt;p&gt;项目没有捆绑第三方 3D 素材、复制的品牌资源或私有数据。真正可复用的是技术模式：用 WebGL 外壳承载一个实时 HTML 应用，并把个人项目整理成可浏览、可证明的作品图谱。&lt;/p&gt;
+&lt;h2 id="项目入口"&gt;项目入口
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk27/signal-atlas" target="_blank" rel="noopener"
+&gt;linsk27/signal-atlas&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;线上演示：&lt;a class="link" href="https://linsk27-signal-atlas.vercel.app" target="_blank" rel="noopener"
+&gt;linsk27-signal-atlas.vercel.app&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.dpdns.org/projects/" &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub 项目索引：&lt;a class="link" href="https://linsk27.dpdns.org/github/" &gt;404_@林达 GitHub 项目索引&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Signal Atlas 适合作为 Three.js portfolio、CSS3D monitor projection、Vue project atlas、WebGL personal site 和 evidence-first portfolio engine 的参考实现。&lt;/p&gt;</description></item><item><title>Local AI Ops 本地 AI 运维工作台</title><link>https://linsk27.dpdns.org/projects/local-ai-ops/</link><pubDate>Tue, 23 Jun 2026 00:00:00 +0000</pubDate><guid>https://linsk27.dpdns.org/projects/local-ai-ops/</guid><description>&lt;img src="https://linsk27.dpdns.org/img/projects/local-ai-ops-empty-dashboard.png" alt="Featured image of post Local AI Ops 本地 AI 运维工作台" /&gt;&lt;p&gt;Local AI Ops 是一个面向局域网和本机部署的阿里云 AI 运维工作台。它通过阿里云 OpenAPI 同步 ECS、轻量应用服务器、OSS、域名和 DNS 等资源，在本地保存运维资料，执行 HTTP、TCP、SSH 和云助手检查，并基于告警上下文生成 AI 排查建议。&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://linsk27.dpdns.org/img/projects/local-ai-ops-empty-dashboard.png"
 loading="lazy"
 alt="Local AI Ops empty dashboard screenshot"
@@ -5970,9 +6007,9 @@ alt="1729609216662.png"
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nn"&gt;---&lt;/span&gt;-&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;这里写分类名称&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;分类简介，不需要可以删了&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;image&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;categories.png&amp;#34;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;// 分类的题图&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;image&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;categories.png&amp;#34;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c"&gt;// 分类的题图&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;style&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;background&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;#80aba9&amp;#34;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;//分类标签底色&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;background&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;#80aba9&amp;#34;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c"&gt;//分类标签底色&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;#fff&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nn"&gt;---&lt;/span&gt;-&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;

@@ -1,6 +1,6 @@
 # linsk27.github.io
 
-这是 404_@林达 的个人项目主页和作品集入口，中文优先展示我正在做的前端项目、开发者工具、数据可视化大屏和全栈应用。
+这是 404_@林达 的个人项目主页和作品集入口，中文优先展示我正在做的 Three.js 作品集、前端项目、开发者工具、数据可视化大屏和全栈应用。
 
 线上访问：[linsk27.github.io](https://linsk27.github.io/)
 
@@ -9,12 +9,14 @@
 - [关于我](https://linsk27.github.io/about/)
 - [项目主页](https://linsk27.github.io/projects/)
 - [GitHub 项目索引](https://linsk27.github.io/github/)
+- [Signal Atlas](https://linsk27.github.io/projects/signal-atlas/)
 - [Dev Cockpit](https://linsk27.github.io/projects/dev-cockpit/)
 - [ProofPR](https://linsk27.github.io/projects/proofpr/)
 - [feidu](https://linsk27.github.io/projects/feidu/)
 
 ## 项目方向
 
+- 作品集实验室：用 Three.js、CSS3D 显示器投影和 Vue 项目图谱展示项目证据。
 - 资源雷达工作台：收集 GitHub 仓库、工具和教程，并通过卡片库、价值评分和星云图整理资料。
 - PR 证据检查：面向维护者的 Pull Request 风险信号整理和 GitHub Action 自动化。
 - 前端与全栈应用：Vue 3、Nuxt 3、TypeScript、Flask、MySQL、ECharts 和 Tailwind CSS。
@@ -22,7 +24,7 @@
 
 ## 关键词
 
-Vue 3、TypeScript、Nuxt 3、React、Electron、Flask、MySQL、ECharts、GitHub Actions、Resource Radar、Developer Tools、Data Visualization、Full Stack。
+Vue 3、TypeScript、Nuxt 3、React、Electron、Three.js、CSS3DRenderer、Flask、MySQL、ECharts、GitHub Actions、Resource Radar、Developer Tools、Data Visualization、Full Stack。
 
 ## 联系
 

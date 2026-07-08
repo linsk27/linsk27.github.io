@@ -1,6 +1,6 @@
 # 404_@林达
 
-> 404_@林达 的个人项目主页，记录前端项目、开发者工具、数据可视化和全栈实践。
+> 404_@林达 的个人项目主页，记录 Three.js 作品集、前端项目、开发者工具、数据可视化和全栈实践。
 
 Main site: https://linsk27.github.io/
 GitHub profile: https://github.com/linsk27
@@ -11,6 +11,7 @@ About page: https://linsk27.github.io/about/
 ## Core projects
 
 - Local AI Ops: local LAN Alibaba Cloud ops console for cloud resource sync, monitoring checks, alert workflow, and troubleshooting suggestions. Project page: https://linsk27.github.io/projects/local-ai-ops/ Repository: https://github.com/linsk27/local-ai-ops
+- Signal Atlas: Three.js evidence-lab portfolio with a live CSS3D monitor projection, Vue project atlas, owned screenshots, and static-site deployment. Project page: https://linsk27.github.io/projects/signal-atlas/ Repository: https://github.com/linsk27/signal-atlas Demo: https://linsk27-signal-atlas.vercel.app
 - Dev Cockpit: local resource radar dashboard for collecting GitHub repositories, demos, tools, tutorials, category filters, value scores, resource cards, and nebula visualization. Project page: https://linsk27.github.io/projects/dev-cockpit/ Repository: https://github.com/linsk27/local-dev-cockpit
 - ProofPR: GitHub Action and CLI for pull request evidence scanning, PR triage, dependency risk, workflow permission checks, secrets detection, MCP security, and maintainer review guidance. Project page: https://linsk27.github.io/projects/proofpr/ Repository: https://github.com/linsk27/proof-pr
 - AI-Vue3-python-flask-Blog: Vue 3, Flask, MySQL and AI blog system for full-stack practice, course design, graduation project, and secondary development. Project page: https://linsk27.github.io/projects/ai-vue-flask-blog/ Repository: https://github.com/linsk27/AI-Vue3-python-flask-Blog Demo: https://ai-vue3-python-flask-blog.vercel.app/
@@ -22,7 +23,7 @@ About page: https://linsk27.github.io/about/
 
 ## Topics
 
-Vue, TypeScript, JavaScript, React, Next.js, Nuxt, Node.js, Vite, Electron, GitHub Actions, developer tools, resource radar, GitHub resource manager, pull request review automation, Flask, Python, MySQL, ECharts, full-stack projects, AI UI prototype, learning dashboard, Vue blog, smart community dashboard, security monitoring dashboard, energy monitoring dashboard, CIM platform UI.
+Vue, TypeScript, JavaScript, React, Next.js, Nuxt, Node.js, Vite, Electron, Three.js, CSS3DRenderer, WebGL portfolio, GitHub Actions, developer tools, resource radar, GitHub resource manager, pull request review automation, Flask, Python, MySQL, ECharts, full-stack projects, AI UI prototype, learning dashboard, Vue blog, smart community dashboard, security monitoring dashboard, energy monitoring dashboard, CIM platform UI.
 
 ## Contact
 
