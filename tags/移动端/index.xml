@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>移动端 on 404_@林达</title><link>https://linsk27.dpdns.org/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/</link><description>Recent content in 移动端 on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Fri, 29 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.dpdns.org/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/index.xml" rel="self" type="application/rss+xml"/><item><title>bilibili-nuxt3 Nuxt3 移动端项目</title><link>https://linsk27.dpdns.org/projects/bilibili-nuxt3/</link><pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate><guid>https://linsk27.dpdns.org/projects/bilibili-nuxt3/</guid><description>&lt;img src="https://linsk27.dpdns.org/img/projects/bilibili-nuxt3-mobile-preview.jpg" alt="Featured image of post bilibili-nuxt3 Nuxt3 移动端项目" /&gt;&lt;p&gt;bilibili-nuxt3 是一个 Nuxt 3、Vue、TypeScript 和 Vant 移动端项目实战，围绕视频列表、频道导航、视频详情、分页加载、服务端渲染和 SEO 信息配置展开。它适合作为 Nuxt 3 project、Vue mobile app、Nuxt SSR SEO 和前端移动端页面结构的参考。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.dpdns.org/img/projects/bilibili-nuxt3-mobile-preview.jpg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>移动端 on 404_@林达</title><link>https://linsk27.github.io/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/</link><description>Recent content in 移动端 on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Fri, 29 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/index.xml" rel="self" type="application/rss+xml"/><item><title>bilibili-nuxt3 Nuxt3 移动端项目</title><link>https://linsk27.github.io/projects/bilibili-nuxt3/</link><pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/bilibili-nuxt3/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/bilibili-nuxt3-mobile-preview.jpg" alt="Featured image of post bilibili-nuxt3 Nuxt3 移动端项目" /&gt;&lt;p&gt;bilibili-nuxt3 是一个 Nuxt 3、Vue、TypeScript 和 Vant 移动端项目实战，围绕视频列表、频道导航、视频详情、分页加载、服务端渲染和 SEO 信息配置展开。它适合作为 Nuxt 3 project、Vue mobile app、Nuxt SSR SEO 和前端移动端页面结构的参考。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/bilibili-nuxt3-mobile-preview.jpg"
 loading="lazy"
 alt="bilibili Nuxt3 mobile preview"
 &gt;&lt;/p&gt;
@@ -28,6 +28,6 @@ alt="bilibili Nuxt3 mobile preview"
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk27/bilibili-nuxt3" target="_blank" rel="noopener"
 &gt;linsk27/bilibili-nuxt3&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.dpdns.org/projects/" &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;如果这个 Nuxt 3 移动端项目对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续完善预览、运行文档和项目说明的主要信号。&lt;/p&gt;</description></item></channel></rss>

@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>资源管理 on 404_@林达</title><link>https://linsk27.dpdns.org/tags/%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86/</link><description>Recent content in 资源管理 on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Wed, 03 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.dpdns.org/tags/%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml"/><item><title>Dev Cockpit 资源雷达工作台</title><link>https://linsk27.dpdns.org/projects/dev-cockpit/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.dpdns.org/projects/dev-cockpit/</guid><description>&lt;img src="https://linsk27.dpdns.org/img/projects/dev-cockpit-resource-radar-cards.png" alt="Featured image of post Dev Cockpit 资源雷达工作台" /&gt;&lt;p&gt;Dev Cockpit 现在更像一个本地资源雷达，而不是普通的项目启动器。它把我平时看到的 GitHub 仓库、Demo、工具、教程和工作流资料收进一个工作台，再用分类、标签、摘要、价值评分和可视化视图帮助我判断哪些东西值得继续研究。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.dpdns.org/img/projects/dev-cockpit-resource-radar-cards.png"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>资源管理 on 404_@林达</title><link>https://linsk27.github.io/tags/%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86/</link><description>Recent content in 资源管理 on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Wed, 03 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/tags/%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml"/><item><title>Dev Cockpit 资源雷达工作台</title><link>https://linsk27.github.io/projects/dev-cockpit/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/dev-cockpit/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png" alt="Featured image of post Dev Cockpit 资源雷达工作台" /&gt;&lt;p&gt;Dev Cockpit 现在更像一个本地资源雷达，而不是普通的项目启动器。它把我平时看到的 GitHub 仓库、Demo、工具、教程和工作流资料收进一个工作台，再用分类、标签、摘要、价值评分和可视化视图帮助我判断哪些东西值得继续研究。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png"
 loading="lazy"
 alt="Dev Cockpit resource radar cards"
 &gt;&lt;/p&gt;
@@ -10,7 +10,7 @@ alt="Dev Cockpit resource radar cards"
 &lt;/h2&gt;&lt;p&gt;资源页现在有两个主要视图。&lt;/p&gt;
 &lt;p&gt;卡片库适合做日常整理。页面顶部可以粘贴 GitHub、Demo、工具、教程或视频号文本，也可以导入、导出和解析资源。中间区域提供搜索框、状态筛选和大类筛选，目前支持工具、Skills、Workflow 等分类。&lt;/p&gt;
 &lt;p&gt;星云图适合看资源之间的分布。它把资源按照大类和主题放进一个可视化空间里，适合快速判断当前收集内容偏向前端工具、AI 编程辅助、视觉设计、预测模拟还是 3D 生成。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.dpdns.org/img/projects/dev-cockpit-resource-nebula.png"
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-nebula.png"
 loading="lazy"
 alt="Dev Cockpit resource nebula"
 &gt;&lt;/p&gt;
@@ -49,6 +49,6 @@ alt="Dev Cockpit resource nebula"
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk27/local-dev-cockpit" target="_blank" rel="noopener"
 &gt;linsk27/local-dev-cockpit&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.dpdns.org/projects/" &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Dev Cockpit 适合作为 developer resource dashboard、GitHub resource manager、resource radar 或 Electron Vue desktop tools 的参考实现。它比普通练手页面更接近真实的个人开发资料整理流程。&lt;/p&gt;</description></item></channel></rss>

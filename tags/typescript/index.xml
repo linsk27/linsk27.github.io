@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TypeScript on 404_@林达</title><link>https://linsk27.dpdns.org/tags/typescript/</link><description>Recent content in TypeScript on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Mon, 06 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.dpdns.org/tags/typescript/index.xml" rel="self" type="application/rss+xml"/><item><title>Local AI Ops 本地 AI 运维工作台</title><link>https://linsk27.dpdns.org/projects/local-ai-ops/</link><pubDate>Tue, 23 Jun 2026 00:00:00 +0000</pubDate><guid>https://linsk27.dpdns.org/projects/local-ai-ops/</guid><description>&lt;img src="https://linsk27.dpdns.org/img/projects/local-ai-ops-empty-dashboard.png" alt="Featured image of post Local AI Ops 本地 AI 运维工作台" /&gt;&lt;p&gt;Local AI Ops 是一个面向局域网和本机部署的阿里云 AI 运维工作台。它通过阿里云 OpenAPI 同步 ECS、轻量应用服务器、OSS、域名和 DNS 等资源，在本地保存运维资料，执行 HTTP、TCP、SSH 和云助手检查，并基于告警上下文生成 AI 排查建议。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.dpdns.org/img/projects/local-ai-ops-empty-dashboard.png"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Typescript on 404_@林达</title><link>https://linsk27.github.io/tags/typescript/</link><description>Recent content in Typescript on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Mon, 06 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/tags/typescript/index.xml" rel="self" type="application/rss+xml"/><item><title>Local AI Ops 本地 AI 运维工作台</title><link>https://linsk27.github.io/projects/local-ai-ops/</link><pubDate>Tue, 23 Jun 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/local-ai-ops/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/local-ai-ops-empty-dashboard.png" alt="Featured image of post Local AI Ops 本地 AI 运维工作台" /&gt;&lt;p&gt;Local AI Ops 是一个面向局域网和本机部署的阿里云 AI 运维工作台。它通过阿里云 OpenAPI 同步 ECS、轻量应用服务器、OSS、域名和 DNS 等资源，在本地保存运维资料，执行 HTTP、TCP、SSH 和云助手检查，并基于告警上下文生成 AI 排查建议。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/local-ai-ops-empty-dashboard.png"
 loading="lazy"
 alt="Local AI Ops empty dashboard screenshot"
 &gt;&lt;/p&gt;
@@ -31,11 +31,11 @@ alt="Local AI Ops empty dashboard screenshot"
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk27/local-ai-ops" target="_blank" rel="noopener"
 &gt;linsk27/local-ai-ops&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.dpdns.org/projects/" &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;GitHub 项目索引：&lt;a class="link" href="https://linsk27.dpdns.org/github/" &gt;404_@林达 GitHub 项目索引&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub 项目索引：&lt;a class="link" href="https://linsk27.github.io/github/" &gt;404_@林达 GitHub 项目索引&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;它适合作为 local LAN ops console、Alibaba Cloud ops dashboard、FastAPI React ops console、CloudMonitor dashboard 和本地优先诊断工具的参考实现。&lt;/p&gt;</description></item><item><title>Dev Cockpit 资源雷达工作台</title><link>https://linsk27.dpdns.org/projects/dev-cockpit/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.dpdns.org/projects/dev-cockpit/</guid><description>&lt;img src="https://linsk27.dpdns.org/img/projects/dev-cockpit-resource-radar-cards.png" alt="Featured image of post Dev Cockpit 资源雷达工作台" /&gt;&lt;p&gt;Dev Cockpit 现在更像一个本地资源雷达，而不是普通的项目启动器。它把我平时看到的 GitHub 仓库、Demo、工具、教程和工作流资料收进一个工作台，再用分类、标签、摘要、价值评分和可视化视图帮助我判断哪些东西值得继续研究。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.dpdns.org/img/projects/dev-cockpit-resource-radar-cards.png"
+&lt;p&gt;它适合作为 local LAN ops console、Alibaba Cloud ops dashboard、FastAPI React ops console、CloudMonitor dashboard 和本地优先诊断工具的参考实现。&lt;/p&gt;</description></item><item><title>Dev Cockpit 资源雷达工作台</title><link>https://linsk27.github.io/projects/dev-cockpit/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/dev-cockpit/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png" alt="Featured image of post Dev Cockpit 资源雷达工作台" /&gt;&lt;p&gt;Dev Cockpit 现在更像一个本地资源雷达，而不是普通的项目启动器。它把我平时看到的 GitHub 仓库、Demo、工具、教程和工作流资料收进一个工作台，再用分类、标签、摘要、价值评分和可视化视图帮助我判断哪些东西值得继续研究。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png"
 loading="lazy"
 alt="Dev Cockpit resource radar cards"
 &gt;&lt;/p&gt;
@@ -46,7 +46,7 @@ alt="Dev Cockpit resource radar cards"
 &lt;/h2&gt;&lt;p&gt;资源页现在有两个主要视图。&lt;/p&gt;
 &lt;p&gt;卡片库适合做日常整理。页面顶部可以粘贴 GitHub、Demo、工具、教程或视频号文本，也可以导入、导出和解析资源。中间区域提供搜索框、状态筛选和大类筛选，目前支持工具、Skills、Workflow 等分类。&lt;/p&gt;
 &lt;p&gt;星云图适合看资源之间的分布。它把资源按照大类和主题放进一个可视化空间里，适合快速判断当前收集内容偏向前端工具、AI 编程辅助、视觉设计、预测模拟还是 3D 生成。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.dpdns.org/img/projects/dev-cockpit-resource-nebula.png"
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-nebula.png"
 loading="lazy"
 alt="Dev Cockpit resource nebula"
 &gt;&lt;/p&gt;
@@ -85,10 +85,10 @@ alt="Dev Cockpit resource nebula"
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk27/local-dev-cockpit" target="_blank" rel="noopener"
 &gt;linsk27/local-dev-cockpit&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.dpdns.org/projects/" &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Dev Cockpit 适合作为 developer resource dashboard、GitHub resource manager、resource radar 或 Electron Vue desktop tools 的参考实现。它比普通练手页面更接近真实的个人开发资料整理流程。&lt;/p&gt;</description></item><item><title>AI-v0.dev AI UI 原型</title><link>https://linsk27.dpdns.org/projects/ai-v0-dev/</link><pubDate>Tue, 31 Mar 2026 00:00:00 +0000</pubDate><guid>https://linsk27.dpdns.org/projects/ai-v0-dev/</guid><description>&lt;img src="https://linsk27.dpdns.org/img/projects/ai-v0-dev-learning-dashboard.png" alt="Featured image of post AI-v0.dev AI UI 原型" /&gt;&lt;p&gt;AI-v0.dev- 是一个用 Next.js、React、TypeScript、Tailwind CSS 和 shadcn/ui 搭出来的 AI 学习仪表盘原型。它把 3 个月 AI 工程师冲刺计划拆成时间线、项目卡片、知识体系、里程碑、任务进度和本地数据管理。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.dpdns.org/img/projects/ai-v0-dev-learning-dashboard.png"
+&lt;p&gt;Dev Cockpit 适合作为 developer resource dashboard、GitHub resource manager、resource radar 或 Electron Vue desktop tools 的参考实现。它比普通练手页面更接近真实的个人开发资料整理流程。&lt;/p&gt;</description></item><item><title>AI-v0.dev AI UI 原型</title><link>https://linsk27.github.io/projects/ai-v0-dev/</link><pubDate>Tue, 31 Mar 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/ai-v0-dev/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/ai-v0-dev-learning-dashboard.png" alt="Featured image of post AI-v0.dev AI UI 原型" /&gt;&lt;p&gt;AI-v0.dev- 是一个用 Next.js、React、TypeScript、Tailwind CSS 和 shadcn/ui 搭出来的 AI 学习仪表盘原型。它把 3 个月 AI 工程师冲刺计划拆成时间线、项目卡片、知识体系、里程碑、任务进度和本地数据管理。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/ai-v0-dev-learning-dashboard.png"
 loading="lazy"
 alt="AI v0 learning dashboard"
 &gt;&lt;/p&gt;
@@ -116,10 +116,10 @@ alt="AI v0 learning dashboard"
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk27/AI-v0.dev-" target="_blank" rel="noopener"
 &gt;linsk27/AI-v0.dev-&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.dpdns.org/projects/" &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;如果这个 AI 产品界面原型对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续沉淀可复用界面结构和交互模式的主要依据。&lt;/p&gt;</description></item><item><title>bilibili-nuxt3 Nuxt3 移动端项目</title><link>https://linsk27.dpdns.org/projects/bilibili-nuxt3/</link><pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate><guid>https://linsk27.dpdns.org/projects/bilibili-nuxt3/</guid><description>&lt;img src="https://linsk27.dpdns.org/img/projects/bilibili-nuxt3-mobile-preview.jpg" alt="Featured image of post bilibili-nuxt3 Nuxt3 移动端项目" /&gt;&lt;p&gt;bilibili-nuxt3 是一个 Nuxt 3、Vue、TypeScript 和 Vant 移动端项目实战，围绕视频列表、频道导航、视频详情、分页加载、服务端渲染和 SEO 信息配置展开。它适合作为 Nuxt 3 project、Vue mobile app、Nuxt SSR SEO 和前端移动端页面结构的参考。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.dpdns.org/img/projects/bilibili-nuxt3-mobile-preview.jpg"
+&lt;p&gt;如果这个 AI 产品界面原型对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续沉淀可复用界面结构和交互模式的主要依据。&lt;/p&gt;</description></item><item><title>bilibili-nuxt3 Nuxt3 移动端项目</title><link>https://linsk27.github.io/projects/bilibili-nuxt3/</link><pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/bilibili-nuxt3/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/bilibili-nuxt3-mobile-preview.jpg" alt="Featured image of post bilibili-nuxt3 Nuxt3 移动端项目" /&gt;&lt;p&gt;bilibili-nuxt3 是一个 Nuxt 3、Vue、TypeScript 和 Vant 移动端项目实战，围绕视频列表、频道导航、视频详情、分页加载、服务端渲染和 SEO 信息配置展开。它适合作为 Nuxt 3 project、Vue mobile app、Nuxt SSR SEO 和前端移动端页面结构的参考。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/bilibili-nuxt3-mobile-preview.jpg"
 loading="lazy"
 alt="bilibili Nuxt3 mobile preview"
 &gt;&lt;/p&gt;
@@ -148,9 +148,9 @@ alt="bilibili Nuxt3 mobile preview"
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk27/bilibili-nuxt3" target="_blank" rel="noopener"
 &gt;linsk27/bilibili-nuxt3&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.dpdns.org/projects/" &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;如果这个 Nuxt 3 移动端项目对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续完善预览、运行文档和项目说明的主要信号。&lt;/p&gt;</description></item><item><title>el-table中sort(拖拽排序)的常见方法</title><link>https://linsk27.dpdns.org/p/el-table%E4%B8%ADsort%E6%8B%96%E6%8B%BD%E6%8E%92%E5%BA%8F%E7%9A%84%E5%B8%B8%E8%A7%81%E6%96%B9%E6%B3%95/</link><pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate><guid>https://linsk27.dpdns.org/p/el-table%E4%B8%ADsort%E6%8B%96%E6%8B%BD%E6%8E%92%E5%BA%8F%E7%9A%84%E5%B8%B8%E8%A7%81%E6%96%B9%E6%B3%95/</guid><description>&lt;h2 id="el-table中sort的常见方法"&gt;el-table中sort的常见方法
+&lt;p&gt;如果这个 Nuxt 3 移动端项目对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续完善预览、运行文档和项目说明的主要信号。&lt;/p&gt;</description></item><item><title>el-table中sort(拖拽排序)的常见方法</title><link>https://linsk27.github.io/p/el-table%E4%B8%ADsort%E6%8B%96%E6%8B%BD%E6%8E%92%E5%BA%8F%E7%9A%84%E5%B8%B8%E8%A7%81%E6%96%B9%E6%B3%95/</link><pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/p/el-table%E4%B8%ADsort%E6%8B%96%E6%8B%BD%E6%8E%92%E5%BA%8F%E7%9A%84%E5%B8%B8%E8%A7%81%E6%96%B9%E6%B3%95/</guid><description>&lt;h2 id="el-table中sort的常见方法"&gt;el-table中sort的常见方法
 &lt;/h2&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1

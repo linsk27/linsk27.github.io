@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WebGL on 404_@林达</title><link>https://linsk27.dpdns.org/tags/webgl/</link><description>Recent content in WebGL on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Wed, 08 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.dpdns.org/tags/webgl/index.xml" rel="self" type="application/rss+xml"/><item><title>Signal Atlas Three.js 作品集实验室</title><link>https://linsk27.dpdns.org/projects/signal-atlas/</link><pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate><guid>https://linsk27.dpdns.org/projects/signal-atlas/</guid><description>&lt;img src="https://linsk27.dpdns.org/img/projects/signal-atlas-monitor-view.png" alt="Featured image of post Signal Atlas Three.js 作品集实验室" /&gt;&lt;p&gt;Signal Atlas 是一个 Three.js 作品集实验室。它把个人主页做成一个可进入的 3D 开发者工作台：外层是 WebGL 房间、桌面和显示器，显示器里通过 CSS3D/iframe 投影一个真实可交互的 Vue 项目图谱。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.dpdns.org/img/projects/signal-atlas-monitor-view.png"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WebGL on 404_@林达</title><link>https://linsk27.github.io/tags/webgl/</link><description>Recent content in WebGL on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Wed, 08 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/tags/webgl/index.xml" rel="self" type="application/rss+xml"/><item><title>Signal Atlas Three.js 作品集实验室</title><link>https://linsk27.github.io/projects/signal-atlas/</link><pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/signal-atlas/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-monitor-view.png" alt="Featured image of post Signal Atlas Three.js 作品集实验室" /&gt;&lt;p&gt;Signal Atlas 是一个 Three.js 作品集实验室。它把个人主页做成一个可进入的 3D 开发者工作台：外层是 WebGL 房间、桌面和显示器，显示器里通过 CSS3D/iframe 投影一个真实可交互的 Vue 项目图谱。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-monitor-view.png"
 loading="lazy"
 alt="Signal Atlas monitor view"
 &gt;&lt;/p&gt;
@@ -32,7 +32,7 @@ alt="Signal Atlas monitor view"
 &gt;linsk27/signal-atlas&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;线上演示：&lt;a class="link" href="https://linsk27-signal-atlas.vercel.app" target="_blank" rel="noopener"
 &gt;linsk27-signal-atlas.vercel.app&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.dpdns.org/projects/" &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;GitHub 项目索引：&lt;a class="link" href="https://linsk27.dpdns.org/github/" &gt;404_@林达 GitHub 项目索引&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub 项目索引：&lt;a class="link" href="https://linsk27.github.io/github/" &gt;404_@林达 GitHub 项目索引&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Signal Atlas 适合作为 Three.js portfolio、CSS3D monitor projection、Vue project atlas、WebGL personal site 和 evidence-first portfolio engine 的参考实现。&lt;/p&gt;</description></item></channel></rss>

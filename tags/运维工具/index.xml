@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>运维工具 on 404_@林达</title><link>https://linsk27.dpdns.org/tags/%E8%BF%90%E7%BB%B4%E5%B7%A5%E5%85%B7/</link><description>Recent content in 运维工具 on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Mon, 06 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.dpdns.org/tags/%E8%BF%90%E7%BB%B4%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml"/><item><title>Local AI Ops 本地 AI 运维工作台</title><link>https://linsk27.dpdns.org/projects/local-ai-ops/</link><pubDate>Tue, 23 Jun 2026 00:00:00 +0000</pubDate><guid>https://linsk27.dpdns.org/projects/local-ai-ops/</guid><description>&lt;img src="https://linsk27.dpdns.org/img/projects/local-ai-ops-empty-dashboard.png" alt="Featured image of post Local AI Ops 本地 AI 运维工作台" /&gt;&lt;p&gt;Local AI Ops 是一个面向局域网和本机部署的阿里云 AI 运维工作台。它通过阿里云 OpenAPI 同步 ECS、轻量应用服务器、OSS、域名和 DNS 等资源，在本地保存运维资料，执行 HTTP、TCP、SSH 和云助手检查，并基于告警上下文生成 AI 排查建议。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.dpdns.org/img/projects/local-ai-ops-empty-dashboard.png"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>运维工具 on 404_@林达</title><link>https://linsk27.github.io/tags/%E8%BF%90%E7%BB%B4%E5%B7%A5%E5%85%B7/</link><description>Recent content in 运维工具 on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Mon, 06 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/tags/%E8%BF%90%E7%BB%B4%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml"/><item><title>Local AI Ops 本地 AI 运维工作台</title><link>https://linsk27.github.io/projects/local-ai-ops/</link><pubDate>Tue, 23 Jun 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/local-ai-ops/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/local-ai-ops-empty-dashboard.png" alt="Featured image of post Local AI Ops 本地 AI 运维工作台" /&gt;&lt;p&gt;Local AI Ops 是一个面向局域网和本机部署的阿里云 AI 运维工作台。它通过阿里云 OpenAPI 同步 ECS、轻量应用服务器、OSS、域名和 DNS 等资源，在本地保存运维资料，执行 HTTP、TCP、SSH 和云助手检查，并基于告警上下文生成 AI 排查建议。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/local-ai-ops-empty-dashboard.png"
 loading="lazy"
 alt="Local AI Ops empty dashboard screenshot"
 &gt;&lt;/p&gt;
@@ -31,7 +31,7 @@ alt="Local AI Ops empty dashboard screenshot"
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk27/local-ai-ops" target="_blank" rel="noopener"
 &gt;linsk27/local-ai-ops&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.dpdns.org/projects/" &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;GitHub 项目索引：&lt;a class="link" href="https://linsk27.dpdns.org/github/" &gt;404_@林达 GitHub 项目索引&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub 项目索引：&lt;a class="link" href="https://linsk27.github.io/github/" &gt;404_@林达 GitHub 项目索引&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;它适合作为 local LAN ops console、Alibaba Cloud ops dashboard、FastAPI React ops console、CloudMonitor dashboard 和本地优先诊断工具的参考实现。&lt;/p&gt;</description></item></channel></rss>
