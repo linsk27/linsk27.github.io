@@ -28,8 +28,8 @@ alt="Signal Atlas monitor view"
 &lt;p&gt;项目没有捆绑第三方 3D 素材、复制的品牌资源或私有数据。真正可复用的是技术模式：用 WebGL 外壳承载一个实时 HTML 应用，并把个人项目整理成可浏览、可证明的作品图谱。&lt;/p&gt;
 &lt;h2 id="项目入口"&gt;项目入口
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk27/signal-atlas" target="_blank" rel="noopener"
-&gt;linsk27/signal-atlas&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk-labs/signal-atlas" target="_blank" rel="noopener"
+&gt;linsk-labs/signal-atlas&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;线上演示：&lt;a class="link" href="https://linsk27-signal-atlas.vercel.app" target="_blank" rel="noopener"
 &gt;linsk27-signal-atlas.vercel.app&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
@@ -84,8 +84,8 @@ alt="Dev Cockpit resource nebula"
 &lt;/ul&gt;
 &lt;h2 id="项目入口"&gt;项目入口
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk27/local-dev-cockpit" target="_blank" rel="noopener"
-&gt;linsk27/local-dev-cockpit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk-labs/local-dev-cockpit" target="_blank" rel="noopener"
+&gt;linsk-labs/local-dev-cockpit&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Dev Cockpit 适合作为 developer resource dashboard、GitHub resource manager、resource radar 或 Electron Vue desktop tools 的参考实现。它比普通练手页面更接近真实的个人开发资料整理流程。&lt;/p&gt;</description></item><item><title>AI Vue Flask Blog 全栈系统</title><link>https://linsk27.github.io/projects/ai-vue-flask-blog/</link><pubDate>Tue, 10 Mar 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/ai-vue-flask-blog/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/ai-vue-flask-blog-home-page.png" alt="Featured image of post AI Vue Flask Blog 全栈系统" /&gt;&lt;p&gt;AI-Vue3-python-flask-Blog 是一个 Vue 3、Flask、MySQL 和 AI 能力组合的全栈博客系统。它覆盖前端页面、后端接口、数据库持久化、内容管理和 AI 能力接入，适合作为课程设计、毕业设计、全栈项目练习和二次开发基础。&lt;/p&gt;

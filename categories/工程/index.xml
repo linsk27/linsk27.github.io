@@ -235,8 +235,8 @@ alt="ProofPR GitHub Action PR review report"
 &lt;/ul&gt;
 &lt;h2 id="项目入口"&gt;项目入口
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk27/proof-pr" target="_blank" rel="noopener"
-&gt;linsk27/proof-pr&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk-labs/proof-pr" target="_blank" rel="noopener"
+&gt;linsk-labs/proof-pr&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;如果这个项目对你的 PR review 工作流有帮助，欢迎在 GitHub 仓库点 Star。Star 是我判断后续规则和报告质量优先级的主要依据。&lt;/p&gt;</description></item><item><title>AI Vue Flask Blog 全栈系统</title><link>https://linsk27.github.io/projects/ai-vue-flask-blog/</link><pubDate>Tue, 10 Mar 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/ai-vue-flask-blog/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/ai-vue-flask-blog-home-page.png" alt="Featured image of post AI Vue Flask Blog 全栈系统" /&gt;&lt;p&gt;AI-Vue3-python-flask-Blog 是一个 Vue 3、Flask、MySQL 和 AI 能力组合的全栈博客系统。它覆盖前端页面、后端接口、数据库持久化、内容管理和 AI 能力接入，适合作为课程设计、毕业设计、全栈项目练习和二次开发基础。&lt;/p&gt;

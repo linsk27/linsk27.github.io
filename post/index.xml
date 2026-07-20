@@ -28,8 +28,8 @@ alt="Signal Atlas monitor view"
 &lt;p&gt;项目没有捆绑第三方 3D 素材、复制的品牌资源或私有数据。真正可复用的是技术模式：用 WebGL 外壳承载一个实时 HTML 应用，并把个人项目整理成可浏览、可证明的作品图谱。&lt;/p&gt;
 &lt;h2 id="项目入口"&gt;项目入口
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk27/signal-atlas" target="_blank" rel="noopener"
-&gt;linsk27/signal-atlas&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk-labs/signal-atlas" target="_blank" rel="noopener"
+&gt;linsk-labs/signal-atlas&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;线上演示：&lt;a class="link" href="https://linsk27-signal-atlas.vercel.app" target="_blank" rel="noopener"
 &gt;linsk27-signal-atlas.vercel.app&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
@@ -66,8 +66,8 @@ alt="Local AI Ops empty dashboard screenshot"
 &lt;p&gt;AI 诊断只生成摘要、可能原因、排查步骤和建议命令，不会自动执行修复。真正会访问云资源的动作仍然通过明确的资产同步、监控检查和只读命令来完成。&lt;/p&gt;
 &lt;h2 id="项目入口"&gt;项目入口
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk27/local-ai-ops" target="_blank" rel="noopener"
-&gt;linsk27/local-ai-ops&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk-labs/local-ai-ops" target="_blank" rel="noopener"
+&gt;linsk-labs/local-ai-ops&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;GitHub 项目索引：&lt;a class="link" href="https://linsk27.github.io/github/" &gt;404_@林达 GitHub 项目索引&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -329,8 +329,8 @@ alt="Dev Cockpit resource nebula"
 &lt;/ul&gt;
 &lt;h2 id="项目入口"&gt;项目入口
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk27/local-dev-cockpit" target="_blank" rel="noopener"
-&gt;linsk27/local-dev-cockpit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk-labs/local-dev-cockpit" target="_blank" rel="noopener"
+&gt;linsk-labs/local-dev-cockpit&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Dev Cockpit 适合作为 developer resource dashboard、GitHub resource manager、resource radar 或 Electron Vue desktop tools 的参考实现。它比普通练手页面更接近真实的个人开发资料整理流程。&lt;/p&gt;</description></item><item><title>ProofPR PR 证据检查器</title><link>https://linsk27.github.io/projects/proofpr/</link><pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/proofpr/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/proofpr-github-action-pr-review-report.png" alt="Featured image of post ProofPR PR 证据检查器" /&gt;&lt;p&gt;ProofPR 是一个面向 Pull Request 审查的 GitHub Action 和 CLI。它的目标不是替代维护者，而是把 PR 里容易被忽略的证据信号先整理出来，让 review 更快进入重点。&lt;/p&gt;
@@ -361,8 +361,8 @@ alt="ProofPR GitHub Action PR review report"
 &lt;/ul&gt;
 &lt;h2 id="项目入口"&gt;项目入口
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk27/proof-pr" target="_blank" rel="noopener"
-&gt;linsk27/proof-pr&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk-labs/proof-pr" target="_blank" rel="noopener"
+&gt;linsk-labs/proof-pr&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;如果这个项目对你的 PR review 工作流有帮助，欢迎在 GitHub 仓库点 Star。Star 是我判断后续规则和报告质量优先级的主要依据。&lt;/p&gt;</description></item><item><title>AI-v0.dev AI UI 原型</title><link>https://linsk27.github.io/projects/ai-v0-dev/</link><pubDate>Tue, 31 Mar 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/ai-v0-dev/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/ai-v0-dev-learning-dashboard.png" alt="Featured image of post AI-v0.dev AI UI 原型" /&gt;&lt;p&gt;AI-v0.dev- 是一个用 Next.js、React、TypeScript、Tailwind CSS 和 shadcn/ui 搭出来的 AI 学习仪表盘原型。它把 3 个月 AI 工程师冲刺计划拆成时间线、项目卡片、知识体系、里程碑、任务进度和本地数据管理。&lt;/p&gt;

@@ -47,8 +47,8 @@ alt="Dev Cockpit resource nebula"
 &lt;/ul&gt;
 &lt;h2 id="项目入口"&gt;项目入口
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk27/local-dev-cockpit" target="_blank" rel="noopener"
-&gt;linsk27/local-dev-cockpit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk-labs/local-dev-cockpit" target="_blank" rel="noopener"
+&gt;linsk-labs/local-dev-cockpit&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Dev Cockpit 适合作为 developer resource dashboard、GitHub resource manager、resource radar 或 Electron Vue desktop tools 的参考实现。它比普通练手页面更接近真实的个人开发资料整理流程。&lt;/p&gt;</description></item></channel></rss>

@@ -29,8 +29,8 @@ alt="Local AI Ops empty dashboard screenshot"
 &lt;p&gt;AI 诊断只生成摘要、可能原因、排查步骤和建议命令，不会自动执行修复。真正会访问云资源的动作仍然通过明确的资产同步、监控检查和只读命令来完成。&lt;/p&gt;
 &lt;h2 id="项目入口"&gt;项目入口
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk27/local-ai-ops" target="_blank" rel="noopener"
-&gt;linsk27/local-ai-ops&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk-labs/local-ai-ops" target="_blank" rel="noopener"
+&gt;linsk-labs/local-ai-ops&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;GitHub 项目索引：&lt;a class="link" href="https://linsk27.github.io/github/" &gt;404_@林达 GitHub 项目索引&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;

@@ -29,8 +29,8 @@ alt="Local AI Ops empty dashboard screenshot"
 &lt;p&gt;AI 诊断只生成摘要、可能原因、排查步骤和建议命令，不会自动执行修复。真正会访问云资源的动作仍然通过明确的资产同步、监控检查和只读命令来完成。&lt;/p&gt;
 &lt;h2 id="项目入口"&gt;项目入口
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk27/local-ai-ops" target="_blank" rel="noopener"
-&gt;linsk27/local-ai-ops&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk-labs/local-ai-ops" target="_blank" rel="noopener"
+&gt;linsk-labs/local-ai-ops&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;GitHub 项目索引：&lt;a class="link" href="https://linsk27.github.io/github/" &gt;404_@林达 GitHub 项目索引&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -83,8 +83,8 @@ alt="Dev Cockpit resource nebula"
 &lt;/ul&gt;
 &lt;h2 id="项目入口"&gt;项目入口
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk27/local-dev-cockpit" target="_blank" rel="noopener"
-&gt;linsk27/local-dev-cockpit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk-labs/local-dev-cockpit" target="_blank" rel="noopener"
+&gt;linsk-labs/local-dev-cockpit&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Dev Cockpit 适合作为 developer resource dashboard、GitHub resource manager、resource radar 或 Electron Vue desktop tools 的参考实现。它比普通练手页面更接近真实的个人开发资料整理流程。&lt;/p&gt;</description></item><item><title>moonlight+sunshine实现扩展屏和远程串流</title><link>https://linsk27.github.io/p/moonlight-sunshine%E5%AE%9E%E7%8E%B0%E6%89%A9%E5%B1%95%E5%B1%8F%E5%92%8C%E8%BF%9C%E7%A8%8B%E4%B8%B2%E6%B5%81/</link><pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/p/moonlight-sunshine%E5%AE%9E%E7%8E%B0%E6%89%A9%E5%B1%95%E5%B1%8F%E5%92%8C%E8%BF%9C%E7%A8%8B%E4%B8%B2%E6%B5%81/</guid><description>&lt;img src="https://linsk27.github.io/p/moonlight-sunshine%E5%AE%9E%E7%8E%B0%E6%89%A9%E5%B1%95%E5%B1%8F%E5%92%8C%E8%BF%9C%E7%A8%8B%E4%B8%B2%E6%B5%81/moonlight.jpg" alt="Featured image of post moonlight+sunshine实现扩展屏和远程串流" /&gt;&lt;h2 id="工具合集"&gt;工具合集
