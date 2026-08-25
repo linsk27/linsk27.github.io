@@ -16,9 +16,9 @@
 
 ## 项目方向
 
-- 作品集实验室：用 Three.js、CSS3D 显示器投影和 Vue 项目图谱展示项目证据。
-- 资源雷达工作台：收集 GitHub 仓库、工具和教程，并通过卡片库、价值评分和星云图整理资料。
-- PR 证据检查：面向维护者的 Pull Request 风险信号整理和 GitHub Action 自动化。
+- 作品集实验室：用 Three.js 与 CSS3D 显示器投影承载原创桌面和真实内容入口。
+- 本地开发工作台：识别项目技术栈、启动命令、端口、环境和 Git 状态，并附带资源雷达模块。
+- PR 证据检查：用可复现的确定性规则整理 Pull Request 风险信号和必要证据。
 - 前端与全栈应用：Vue 3、Nuxt 3、TypeScript、Flask、MySQL、ECharts 和 Tailwind CSS。
 - 数据可视化：智慧社区大屏、能源监测、安防监控、数据看板和图表交互。
 

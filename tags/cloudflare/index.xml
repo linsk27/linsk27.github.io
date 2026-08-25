@@ -1,5 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cloudflare on 404_@林达</title><link>https://linsk27.github.io/tags/cloudflare/</link><description>Recent content in Cloudflare on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Wed, 03 Jun 2026 12:00:00 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/cloudflare/index.xml" rel="self" type="application/rss+xml"/><item><title>DigitalPlat 免费域名配置教程：从领取到 Cloudflare 解析</title><link>https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/</link><pubDate>Wed, 03 Jun 2026 12:00:00 +0800</pubDate><guid>https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/</guid><description>&lt;img src="https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/digitalplat-nameserver.png" alt="Featured image of post DigitalPlat 免费域名配置教程：从领取到 Cloudflare 解析" /&gt;&lt;p&gt;这篇文章记录一次从零领取免费域名并接入 Cloudflare 的过程。示例域名使用 &lt;code&gt;linsk27.dpdns.org&lt;/code&gt;，平台是 DigitalPlat FreeDomain，DNS 托管使用 Cloudflare。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cloudflare on 404_@林达</title><link>https://linsk27.github.io/tags/cloudflare/</link><description>Recent content in Cloudflare on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Tue, 25 Aug 2026 12:00:00 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/cloudflare/index.xml" rel="self" type="application/rss+xml"/><item><title>DigitalPlat 免费域名实操：先弄懂 DNS 委派，再配 Cloudflare</title><link>https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/</link><pubDate>Wed, 03 Jun 2026 12:00:00 +0800</pubDate><guid>https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/</guid><description>&lt;img src="https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/digitalplat-nameserver.png" alt="Featured image of post DigitalPlat 免费域名实操：先弄懂 DNS 委派，再配 Cloudflare" /&gt;&lt;p&gt;这一篇不是“我开发了一个免费域名平台”，而是一次真实配置记录：我怎样通过 DigitalPlat 领取 &lt;code&gt;linsk27.dpdns.org&lt;/code&gt;，再把 DNS 控制权交给 Cloudflare。控制台按钮以后可能变化，但 DNS 委派的原理不会跟着换皮肤。&lt;/p&gt;
 &lt;p&gt;免费域名适合学习、测试、个人项目展示和临时服务入口。真正重要的生产项目，还是建议使用自己购买并长期持有的独立域名，方便迁移和品牌沉淀。&lt;/p&gt;
+&lt;h2 id="先理解三个角色"&gt;先理解三个角色
+&lt;/h2&gt;&lt;p&gt;刚接触域名时，最容易把“注册成功”“DNS 生效”和“网站能打开”当成同一件事。实际上这条链路里有三个角色：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;DigitalPlat&lt;/strong&gt; 控制父级 &lt;code&gt;dpdns.org&lt;/code&gt;，负责把 &lt;code&gt;linsk27.dpdns.org&lt;/code&gt; 这个子域委派出去。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cloudflare&lt;/strong&gt; 接受委派，成为这个子域的权威 DNS，回答 A、AAAA 或 CNAME 记录。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vercel、GitHub Pages 或自己的服务器&lt;/strong&gt; 才是真正返回网页的源站。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;浏览器访问时，递归 DNS 会先沿着父域找到 Cloudflare nameserver，再从 Cloudflare 拿到源站地址；如果开启了橙云代理，请求还会先经过 Cloudflare 的 CDN 与 HTTPS 层。可以把它理解成：DigitalPlat 决定“去问谁”，Cloudflare 回答“网站在哪”，源站负责“返回什么”。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;浏览器 → 递归 DNS → DigitalPlat 的父域委派
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; Cloudflare 权威 DNS
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; Vercel / GitHub Pages / 服务器
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;因此，注册成功但没有 DNS 记录，网站仍然打不开；DNS 已经正确，但托管平台没有绑定自定义域名，也一样会报错。&lt;/p&gt;
 &lt;h2 id="准备工作"&gt;准备工作
 &lt;/h2&gt;&lt;p&gt;开始之前需要准备三样东西：&lt;/p&gt;
 &lt;ul&gt;
@@ -164,7 +189,19 @@ data-flex-basis="426px"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Target: linsk27.github.io
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;GitHub Pages 侧也需要在仓库设置里绑定自定义域名，否则只做 DNS 解析还不够。&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;Cloudflare 允许在根域使用 CNAME，是因为它会做 CNAME flattening；这不是所有 DNS 服务都支持的通用写法。GitHub Pages 侧也需要在仓库设置里绑定自定义域名，否则只做 DNS 解析还不够。&lt;/p&gt;
+&lt;p&gt;记录保存后，可以分别检查 DNS 和 HTTP：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;nslookup linsk27.dpdns.org
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;curl -I https://linsk27.dpdns.org
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;前一个命令确认域名最终解析到了哪里，后一个命令确认 HTTPS 请求是否真的收到源站响应。把这两层分开看，排错会快很多。&lt;/p&gt;
 &lt;h2 id="第六步配置-ssltls"&gt;第六步：配置 SSL/TLS
 &lt;/h2&gt;&lt;p&gt;Cloudflare 激活后，进入 &lt;code&gt;SSL/TLS&lt;/code&gt; 页面。&lt;/p&gt;
 &lt;p&gt;如果你只是用 GitHub Pages、Vercel、Netlify 这类静态托管，通常保持 Cloudflare 默认设置即可。&lt;/p&gt;
@@ -200,11 +237,16 @@ data-flex-basis="426px"
 &lt;h3 id="4-是否需要开启-whois-privacy"&gt;4. 是否需要开启 WHOIS Privacy
 &lt;/h3&gt;&lt;p&gt;建议开启。免费域名注册时通常会填写姓名、邮箱、地址、电话等 WHOIS 信息，开启隐私保护可以减少个人信息暴露。&lt;/p&gt;
 &lt;p&gt;在 DigitalPlat 的域名管理页里找到 &lt;code&gt;WHOIS Privacy&lt;/code&gt;，按页面提示启用即可。&lt;/p&gt;
+&lt;h2 id="这次配置和开源项目是什么关系"&gt;这次配置和开源项目是什么关系
+&lt;/h2&gt;&lt;p&gt;DigitalPlat 公开了 &lt;a class="link" href="https://github.com/DigitalPlatDev/FreeDomain" target="_blank" rel="noopener"
+&gt;FreeDomain&lt;/a&gt; 文档仓库；官方公开实现可以在 &lt;a class="link" href="https://github.com/DigitalPlatDev/Domain-OSS" target="_blank" rel="noopener"
+&gt;Domain-OSS&lt;/a&gt; 看到，它是一个使用 Flask、SQLAlchemy 等组件的 AGPL-3.0 项目。这里说的是公开仓库，不代表线上服务一定运行着仓库的最新 commit。&lt;/p&gt;
+&lt;p&gt;我在整理这次排障过程时用 AI 辅助归纳过检查顺序，但文章里的控制台步骤、nameserver、DNS 结果和最终访问状态都以实际操作为准。AI 很适合解释报错可能在哪一层，不能替代 &lt;code&gt;nslookup&lt;/code&gt;、托管平台状态和浏览器请求这些真实证据。&lt;/p&gt;
 &lt;h2 id="总结"&gt;总结
-&lt;/h2&gt;&lt;p&gt;整个流程可以理解成三步：&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;整个流程可以压缩成三步：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;在 Cloudflare 添加完整域名，拿到两个 nameserver&lt;/li&gt;
 &lt;li&gt;在 DigitalPlat 注册免费域名，并把 Cloudflare nameserver 填进去&lt;/li&gt;
 &lt;li&gt;等 Cloudflare 激活后，添加 A 记录或 CNAME 记录&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;完成后，&lt;code&gt;linsk27.dpdns.org&lt;/code&gt; 就可以作为个人项目、测试服务或博客入口使用了。&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;完成后，&lt;code&gt;linsk27.dpdns.org&lt;/code&gt; 就可以作为个人项目、测试服务或博客入口使用。以后遇到打不开，也按“NS 委派 → DNS 记录 → 源站绑定 → TLS/HTTP”这个顺序逐层检查，不需要在几个控制台之间来回碰运气。&lt;/p&gt;</description></item></channel></rss>

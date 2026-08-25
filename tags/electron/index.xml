@@ -1,54 +1,66 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Electron on 404_@林达</title><link>https://linsk27.github.io/tags/electron/</link><description>Recent content in Electron on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Wed, 03 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/tags/electron/index.xml" rel="self" type="application/rss+xml"/><item><title>Dev Cockpit 资源雷达工作台</title><link>https://linsk27.github.io/projects/dev-cockpit/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/dev-cockpit/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png" alt="Featured image of post Dev Cockpit 资源雷达工作台" /&gt;&lt;p&gt;Dev Cockpit 现在更像一个本地资源雷达，而不是普通的项目启动器。它把我平时看到的 GitHub 仓库、Demo、工具、教程和工作流资料收进一个工作台，再用分类、标签、摘要、价值评分和可视化视图帮助我判断哪些东西值得继续研究。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Electron on 404_@林达</title><link>https://linsk27.github.io/tags/electron/</link><description>Recent content in Electron on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Tue, 25 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/tags/electron/index.xml" rel="self" type="application/rss+xml"/><item><title>Dev Cockpit：隔几天回来，也知道项目怎么跑</title><link>https://linsk27.github.io/projects/dev-cockpit/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/dev-cockpit/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png" alt="Featured image of post Dev Cockpit：隔几天回来，也知道项目怎么跑" /&gt;&lt;p&gt;最初我只想解决一个很笨、但每天都会遇到的问题：隔几天重新打开项目时，我已经忘了它用什么命令启动、端口在哪、Python 环境是哪一个、上次又为什么失败。Dev Cockpit 就是从这个问题长出来的。&lt;/p&gt;
+&lt;p&gt;它不是 IDE，也不打算替代 VS Code、Docker Desktop 或 Conda。它负责回答的是更靠前的几件事：这个目录是什么项目、应该怎么启动、现在到底有没有运行、端口属于谁、失败信息在哪里。&lt;/p&gt;
+&lt;h2 id="扫描一个项目时程序在看什么"&gt;扫描一个项目时，程序在看什么
+&lt;/h2&gt;&lt;p&gt;把一个目录交给 Dev Cockpit 后，核心扫描器会读取常见标记文件、包管理配置和 Git 状态，识别 Node、Python、Java、PHP、Ruby、.NET、Go、Rust 与 Docker 项目。接着再从 &lt;code&gt;package.json&lt;/code&gt; scripts、入口文件和配置中推断启动命令与候选端口，最后把不同技术栈整理成统一的项目状态。&lt;/p&gt;
+&lt;p&gt;这听起来像“判断文件存不存在”，但麻烦通常出在冲突上。例如同一个目录里既有 Python 虚拟环境，也有 VS Code 解释器设置和 Conda 声明。当前策略会按手工绑定、编辑器配置、项目虚拟环境、Conda 声明等优先级解析，并把为什么选中这个解释器一起展示，而不是静默猜一个路径。&lt;/p&gt;
+&lt;h2 id="看到-3000-端口不等于所有项目都在线"&gt;看到 3000 端口，不等于所有项目都在线
+&lt;/h2&gt;&lt;p&gt;早期最容易写错的逻辑，是只要发现某个端口在监听，就把对应项目标成“运行中”。如果电脑上同时开了几个前端项目，这种判断很快就会串台。&lt;/p&gt;
+&lt;p&gt;Dev Cockpit 会把状态拆开看：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;是否由工作台自己启动并持有进程；&lt;/li&gt;
+&lt;li&gt;外部监听端口能否归属到当前项目或明确命令；&lt;/li&gt;
+&lt;li&gt;HTTP 地址是否真的可达；&lt;/li&gt;
+&lt;li&gt;最近一次启动是否失败；&lt;/li&gt;
+&lt;li&gt;端口是否只是别的程序留下的占用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;也就是说，“进程存在”“端口被占用”和“这个项目能访问”不是一件事。状态判断尽量依赖本地可验证信号，而不是让模型猜。&lt;/p&gt;
+&lt;h2 id="为什么拆成几层"&gt;为什么拆成几层
+&lt;/h2&gt;&lt;p&gt;这个项目是我自主立项的工具，不是某个同名 Cockpit 项目的换皮。实现建立在 Vue、Electron、Node.js 等开源生态上，代码按职责拆开：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;packages/core 扫描、栈识别、命令推断、Git 与 AI 上下文
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;packages/server 本地 HTTP API、进程、端口和 JSON 数据
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;apps/web Vue 3 + Vite 的操作界面
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;packages/cli npx / 命令行入口
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;apps/desktop Electron 桌面外壳
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这样 CLI、浏览器界面和桌面版可以共用同一套判断逻辑。界面怎么改，不应该改变“项目是否在线”的答案；以后补一种技术栈，也不需要在三个入口各写一遍。&lt;/p&gt;
+&lt;h2 id="资源雷达是后来长出来的功能"&gt;资源雷达是后来长出来的功能
+&lt;/h2&gt;&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png"
 loading="lazy"
-alt="Dev Cockpit resource radar cards"
+alt="Dev Cockpit 资源雷达卡片页"
 &gt;&lt;/p&gt;
-&lt;h2 id="为什么做这个"&gt;为什么做这个
-&lt;/h2&gt;&lt;p&gt;开发过程中真正麻烦的不是找不到资料，而是资料太分散。一个工具可能来自 GitHub，一个设计技能来自别人分享的 Skill.md，一个工作流来自社区仓库，一个教程来自短文本记录。看过之后如果没有及时归档，很快就会忘掉它为什么有价值。&lt;/p&gt;
-&lt;p&gt;Dev Cockpit 的目标是把这些资源变成可以复盘的卡片，而不是只留一串链接。每条资源都会保留来源、摘要、类型、子分类、状态和评分，后续可以按关键词、标签、来源和大类快速筛选。&lt;/p&gt;
-&lt;h2 id="当前资源页"&gt;当前资源页
-&lt;/h2&gt;&lt;p&gt;资源页现在有两个主要视图。&lt;/p&gt;
-&lt;p&gt;卡片库适合做日常整理。页面顶部可以粘贴 GitHub、Demo、工具、教程或视频号文本，也可以导入、导出和解析资源。中间区域提供搜索框、状态筛选和大类筛选，目前支持工具、Skills、Workflow 等分类。&lt;/p&gt;
-&lt;p&gt;星云图适合看资源之间的分布。它把资源按照大类和主题放进一个可视化空间里，适合快速判断当前收集内容偏向前端工具、AI 编程辅助、视觉设计、预测模拟还是 3D 生成。&lt;/p&gt;
+&lt;p&gt;我平时还会收集 GitHub 仓库、Demo、工具、Skills 和教程，所以后来加了资源雷达：把链接或文本整理成带来源、摘要、分类、标签和评分的卡片，再用筛选与星云图复盘最近关注的方向。&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-nebula.png"
 loading="lazy"
-alt="Dev Cockpit resource nebula"
+alt="Dev Cockpit 资源星云图"
 &gt;&lt;/p&gt;
-&lt;h2 id="它解决什么问题"&gt;它解决什么问题
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;把零散链接整理成有摘要、有标签、有来源的资源卡片。&lt;/li&gt;
-&lt;li&gt;区分工具、Skills、Workflow 等不同类型，避免所有资料混在一起。&lt;/li&gt;
-&lt;li&gt;给资源打价值评分，帮助优先看更值得研究的内容。&lt;/li&gt;
-&lt;li&gt;支持搜索、状态筛选和大类筛选，让资源库不会越积越乱。&lt;/li&gt;
-&lt;li&gt;通过星云图观察资源分布，快速发现自己最近关注的技术方向。&lt;/li&gt;
-&lt;li&gt;保持本地运行，适合个人开发者维护自己的资料库。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="现在收集的资源样例"&gt;现在收集的资源样例
-&lt;/h2&gt;&lt;p&gt;这版截图里可以看到 taste-skill、everything-claude-code、FreeDomain、react-bits、MiroFish、andrej-karpathy-skill、articraft、huashu-design 等资源。它们覆盖前端设计技能、AI 编程工作流、免费域名、React 动效组件、群体智能预测、3D 资产生成和智能体设计生成等方向。&lt;/p&gt;
-&lt;p&gt;这些资源不是简单展示名称，而是会被整理成摘要、来源、分类、标签和评分。这样后面回看时，不需要重新打开每个仓库才能想起来它适合什么场景。&lt;/p&gt;
-&lt;h2 id="适合谁"&gt;适合谁
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;经常收藏 GitHub 仓库、工具、教程和开发工作流资料的人。&lt;/li&gt;
-&lt;li&gt;想把资源从聊天记录、浏览器收藏夹和临时文档里整理出来的人。&lt;/li&gt;
-&lt;li&gt;需要给资源做分类、评分、状态管理和后续复盘的人。&lt;/li&gt;
-&lt;li&gt;正在研究 Agent Skills、前端工具链和设计生成工具的人。&lt;/li&gt;
-&lt;li&gt;想参考 Electron、Vue、TypeScript 本地工作台界面的人。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="技术方向"&gt;技术方向
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Electron&lt;/li&gt;
-&lt;li&gt;Vue&lt;/li&gt;
-&lt;li&gt;TypeScript&lt;/li&gt;
-&lt;li&gt;本地资源管理&lt;/li&gt;
-&lt;li&gt;GitHub 与工具资源整理&lt;/li&gt;
-&lt;li&gt;卡片式信息结构&lt;/li&gt;
-&lt;li&gt;资源分类与评分&lt;/li&gt;
-&lt;li&gt;星云图可视化&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="项目入口"&gt;项目入口
-&lt;/h2&gt;&lt;ul&gt;
+&lt;p&gt;资源处理大致是“本地规则优先，可选 AI 补充”：先解析 GitHub 或网页元数据，再用规则生成基础分类；配置模型后，AI 可以帮忙整理标题、标签和摘要，最后仍要经过预览才写入本地 JSON。它不会因为看见一个仓库就自动安装 Skill，也不会上传整个源码目录。&lt;/p&gt;
+&lt;p&gt;这也是旧文章最容易让人误解的地方：资源雷达很直观，截图也好看，但它只是 Dev Cockpit 的一个模块，项目核心仍然是恢复本地开发现场。&lt;/p&gt;
+&lt;h2 id="ai-在哪里有用哪里没资格下结论"&gt;AI 在哪里有用，哪里没资格下结论
+&lt;/h2&gt;&lt;p&gt;工作台可以把项目路径、技术栈、启动命令、端口、Git 状态和最近错误整理成一段可复制的上下文，方便交给 AI 编程工具；只有用户明确点击时，才会写入 &lt;code&gt;PROJECT_CONTEXT.md&lt;/code&gt; 或 &lt;code&gt;AGENTS.md&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;我也会用 AI 辅助梳理跨技术栈识别规则、重构和补测试。但模型不是运行状态的事实来源：端口归属、HTTP 可达性和 Python 环境解析，仍由本地确定性代码判断。这条边界比给聊天框换一个更聪明的模型重要。&lt;/p&gt;
+&lt;h2 id="试用入口"&gt;试用入口
+&lt;/h2&gt;&lt;p&gt;安装 Node.js 后可以直接运行：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;npx local-dev-cockpit
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;默认会在本机打开 &lt;code&gt;http://localhost:8787&lt;/code&gt;。项目数据保存在本地应用数据目录，定位仍是个人开发工作台，而不是需要注册账号的云服务。&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk-labs/local-dev-cockpit" target="_blank" rel="noopener"
 &gt;linsk-labs/local-dev-cockpit&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Dev Cockpit 适合作为 developer resource dashboard、GitHub resource manager、resource radar 或 Electron Vue desktop tools 的参考实现。它比普通练手页面更接近真实的个人开发资料整理流程。&lt;/p&gt;</description></item></channel></rss>
+&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

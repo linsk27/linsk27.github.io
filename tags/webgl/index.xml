@@ -1,38 +1,61 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WebGL on 404_@林达</title><link>https://linsk27.github.io/tags/webgl/</link><description>Recent content in WebGL on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Wed, 08 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/tags/webgl/index.xml" rel="self" type="application/rss+xml"/><item><title>Signal Atlas Three.js 作品集实验室</title><link>https://linsk27.github.io/projects/signal-atlas/</link><pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/signal-atlas/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-monitor-view.png" alt="Featured image of post Signal Atlas Three.js 作品集实验室" /&gt;&lt;p&gt;Signal Atlas 是一个 Three.js 作品集实验室。它把个人主页做成一个可进入的 3D 开发者工作台：外层是 WebGL 房间、桌面和显示器，显示器里通过 CSS3D/iframe 投影一个真实可交互的 Vue 项目图谱。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-monitor-view.png"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WebGL on 404_@林达</title><link>https://linsk27.github.io/tags/webgl/</link><description>Recent content in WebGL on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Tue, 25 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/tags/webgl/index.xml" rel="self" type="application/rss+xml"/><item><title>Signal Atlas：把真实网页放进 Three.js 工作站</title><link>https://linsk27.github.io/projects/signal-atlas/</link><pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/signal-atlas/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-desk-v0.25.7.png" alt="Featured image of post Signal Atlas：把真实网页放进 Three.js 工作站" /&gt;&lt;p&gt;现在打开 Signal Atlas，看到的已经不是最早那版项目卡片页，而是一台可以进入的 3D 工作站。外层场景来自一个 MIT 开源作品集，我保留了许可证和署名；显示器里的复古桌面、窗口系统、博客与八股文入口，以及两层页面之间的交互，是我按自己的内容重新实现的。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-desk-v0.25.7.png"
 loading="lazy"
-alt="Signal Atlas monitor view"
+alt="Signal Atlas v0.25.7 参考版工作站全景"
 &gt;&lt;/p&gt;
-&lt;p&gt;上图来自公开演示站的真实运行画面，只展示作品集引擎、项目入口和公开截图，不包含私人账号、凭据或真实业务数据。&lt;/p&gt;
-&lt;h2 id="为什么做这个"&gt;为什么做这个
-&lt;/h2&gt;&lt;p&gt;普通个人主页经常只展示一句简介、几个项目卡片和一组链接。Signal Atlas 的目标不是再做一个静态 profile，而是把项目变成可以被检查的 signal：有截图、有项目说明、有标签、有入口，也能继续扩展成不同主题的作品展示系统。&lt;/p&gt;
-&lt;p&gt;这个方向适合展示视觉项目、开发者工具、数据看板和开源工作流。它让访问者先看到作品的运行状态，再决定是否继续进入 GitHub 仓库、博客文章或线上演示。&lt;/p&gt;
-&lt;h2 id="它解决什么问题"&gt;它解决什么问题
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;用 Three.js 场景承载作品集，而不是只用普通卡片列表。&lt;/li&gt;
-&lt;li&gt;用 CSS3DRenderer 和 iframe 把真实网页界面放进 3D 显示器。&lt;/li&gt;
-&lt;li&gt;用 Vue 项目图谱管理项目、模块、标签、说明和链接。&lt;/li&gt;
-&lt;li&gt;用本地 manifest 维护内容，后续替换身份信息和项目截图更直接。&lt;/li&gt;
-&lt;li&gt;用静态站点方式部署，适合 GitHub、Vercel 和个人域名承载。&lt;/li&gt;
-&lt;li&gt;用自有截图和过程化场景素材，避免依赖不可控的第三方模型或图片。&lt;/li&gt;
+&lt;p&gt;这张图是 v0.25.7 生产版本的真实画面，不再使用旧版 Atlas 面板截图。现在的桌面只保留 Hugo 博客、八股炼丹炉、GitHub 和 QQ 这些真实入口，之前用来占位置的 &lt;code&gt;My Showcase&lt;/code&gt; 和伪应用已经删除。&lt;/p&gt;
+&lt;h2 id="从看起来很酷到真的能用"&gt;从“看起来很酷”到“真的能用”
+&lt;/h2&gt;&lt;p&gt;最初做 3D 主页，想法很简单：普通项目卡片太像简历，我更想让访问者走到一台电脑前，再从电脑里打开我的内容。但真正开始接博客以后，问题就不再是“模型好不好看”，而是网站能不能顺利打开、显示器里的链接能不能点、滚轮会不会带着外层相机一起转。&lt;/p&gt;
+&lt;p&gt;Signal Atlas 现在其实同时运行两套渲染：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Three.js WebGL 场景
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; +
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;CSS3DRenderer 中的真实 HTML / iframe
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;共享同一台相机，看起来像一块完整显示器
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;WebGL 负责房间、电脑和光影；CSS3DRenderer 负责把可交互的 DOM 放到显示器的位置。网页没有被截成一张纹理，所以聚焦显示器后仍然可以点击、滚动和打开窗口。代价是每次相机移动、窗口缩放或发生遮挡，都要重新保证两层几何对得上。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-monitor-v0.25.7.png"
+loading="lazy"
+alt="聚焦后的 Signal Atlas 显示器"
+&gt;&lt;/p&gt;
+&lt;h2 id="八股文内嵌页为什么最难处理"&gt;八股文内嵌页为什么最难处理
+&lt;/h2&gt;&lt;p&gt;八股炼丹炉本身在另一个服务上。直接在浏览器打开时，它只需要面对一个正常视口；放进 Signal Atlas 后，却变成“3D 投影里的桌面窗口里再放一个网页”，尺寸、裁切和跨域链路都会更复杂。&lt;/p&gt;
+&lt;p&gt;这一版没有简单把 iframe 放大后藏住溢出，而是把内层应用投影到独立的覆盖层，根据桌面窗口的四个角计算显示区域，再裁切到真实显示器边界。窗口移动、缩放或页面恢复时会重新校正几何；加载失败时有超时、重试和明确的降级提示。Vercel 的同域 rewrite 则负责把请求转到八股文实际服务，减少浏览器嵌套加载时的限制。&lt;/p&gt;
+&lt;p&gt;这也解释了它为什么仍不可能做到百分之百稳定：如果八股文源站或 Cloudflare Tunnel 本身离线，外层工作站无法凭空把服务变可用。现在能做的是正确重试、恢复布局，并把“上游不可用”和“页面溢出”分开处理。&lt;/p&gt;
+&lt;h2 id="第一次进入为什么比普通博客重"&gt;第一次进入为什么比普通博客重
+&lt;/h2&gt;&lt;p&gt;3D 场景要加载模型、贴图、脚本和媒体，第一次访问天然比纯 HTML 博客更贵。v0.25.7 做了几件比较实际的事：启动阶段只等待 8 个关键资源；CRT 视频改为 &lt;code&gt;preload=&amp;quot;none&amp;quot;&lt;/code&gt;，音频只读元数据；HTML 每次重新校验，而带版本号的 JS、CSS 和静态素材走长期缓存。浏览器从 BFCache 返回时也尽量恢复现场，不再完整重启一次。&lt;/p&gt;
+&lt;p&gt;这不会让 3D 首页变得和文字页一样轻，但能避免“为了等一段暂时用不到的视频，整个入口一直卡在 BIOS”。&lt;/p&gt;
+&lt;h2 id="哪些是开源基础哪些是我做的"&gt;哪些是开源基础，哪些是我做的
+&lt;/h2&gt;&lt;p&gt;这部分我想写清楚，避免把“基于开源”说成“全部原创”。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当前生产外层基于 &lt;a class="link" href="https://github.com/henryjeff/portfolio-website" target="_blank" rel="noopener"
+&gt;Henry Heffernan 的 portfolio-website&lt;/a&gt;，使用其 MIT 许可的工作站模型、贴图、CRT 媒体和镜头表现，完整归因保存在仓库的 &lt;code&gt;reference/NOTICE.md&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;上游另一个内层桌面仓库没有明确许可证，所以我没有复制它。显示器中的 linsk27 桌面、窗口管理器、应用入口和内容是重新实现的。&lt;/li&gt;
+&lt;li&gt;仓库也保留了我自己用 Three.js primitives、Blender 脚本、manifest 和 Vue runtime 做的原创 Atlas 实验路线，但它不是当前生产首页的那套外观。&lt;/li&gt;
+&lt;li&gt;参考版目前使用的 Windows 7 &lt;code&gt;Harmony&lt;/code&gt; 壁纸不在项目 MIT 许可证范围内；如果要再分发或做二开，应先替换成有合适许可的自有素材。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="技术栈"&gt;技术栈
+&lt;p&gt;所以更准确的说法是：它不是从零原创整套 3D 场景，也不是只换了名字的 fork，而是在有明确许可证的外层上重做内容系统、桌面交互和生产稳定性。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-desktop-v0.25.7.png"
+loading="lazy"
+alt="Signal Atlas v0.25.7 原创桌面与真实入口"
+&gt;&lt;/p&gt;
+&lt;p&gt;开发过程中我会借助 AI 做代码检索、问题定位、重构建议和回归检查，但场景取舍、许可边界、功能验收和最终部署由我自己负责。尤其是这种同时涉及 WebGL、DOM 和外部服务的页面，AI 给出的“看起来合理”不等于浏览器里真的能用，最后还是要靠真实窗口、不同视口和失败场景逐项验证。&lt;/p&gt;
+&lt;h2 id="现在可以从哪里看"&gt;现在可以从哪里看
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Scene: Three.js, CSS3DRenderer, Canvas textures&lt;/li&gt;
-&lt;li&gt;Interface: Vue browser ESM runtime, manifest-driven UI&lt;/li&gt;
-&lt;li&gt;Build: Vite, JavaScript, CSS&lt;/li&gt;
-&lt;li&gt;Deployment: Static site, Vercel&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="项目边界"&gt;项目边界
-&lt;/h2&gt;&lt;p&gt;当前版本更像一个可二次开发的作品集引擎雏形，而不是完整 CMS。它适合 fork 后替换身份、项目 manifest、截图和主题，也适合继续扩展主题包、相机 preset、typed manifest schema 和更完整的项目详情页。&lt;/p&gt;
-&lt;p&gt;项目没有捆绑第三方 3D 素材、复制的品牌资源或私有数据。真正可复用的是技术模式：用 WebGL 外壳承载一个实时 HTML 应用，并把个人项目整理成可浏览、可证明的作品图谱。&lt;/p&gt;
-&lt;h2 id="项目入口"&gt;项目入口
-&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;生产站点：&lt;a class="link" href="https://linsk27.dpdns.org/" target="_blank" rel="noopener"
+&gt;linsk27.dpdns.org&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk-labs/signal-atlas" target="_blank" rel="noopener"
 &gt;linsk-labs/signal-atlas&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;线上演示：&lt;a class="link" href="https://linsk27-signal-atlas.vercel.app" target="_blank" rel="noopener"
-&gt;linsk27-signal-atlas.vercel.app&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;GitHub 项目索引：&lt;a class="link" href="https://linsk27.github.io/github/" &gt;404_@林达 GitHub 项目索引&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Signal Atlas 适合作为 Three.js portfolio、CSS3D monitor projection、Vue project atlas、WebGL personal site 和 evidence-first portfolio engine 的参考实现。&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;目前我更愿意把 Signal Atlas 称为一个持续迭代的作品集实验室，而不是适合所有人的主页模板。它有意保留 3D 的重量和仪式感，同时也必须接受一个现实：越接近真正可用的桌面，越需要在性能、嵌入稳定性和授权边界上做扎实的工程工作。&lt;/p&gt;</description></item></channel></rss>

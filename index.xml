@@ -1,78 +1,145 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>404_@林达</title><link>https://linsk27.github.io/</link><description>Recent content on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Wed, 08 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Signal Atlas Three.js 作品集实验室</title><link>https://linsk27.github.io/projects/signal-atlas/</link><pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/signal-atlas/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-monitor-view.png" alt="Featured image of post Signal Atlas Three.js 作品集实验室" /&gt;&lt;p&gt;Signal Atlas 是一个 Three.js 作品集实验室。它把个人主页做成一个可进入的 3D 开发者工作台：外层是 WebGL 房间、桌面和显示器，显示器里通过 CSS3D/iframe 投影一个真实可交互的 Vue 项目图谱。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-monitor-view.png"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>404_@林达</title><link>https://linsk27.github.io/</link><description>Recent content on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Tue, 25 Aug 2026 12:00:00 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Signal Atlas：把真实网页放进 Three.js 工作站</title><link>https://linsk27.github.io/projects/signal-atlas/</link><pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/signal-atlas/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-desk-v0.25.7.png" alt="Featured image of post Signal Atlas：把真实网页放进 Three.js 工作站" /&gt;&lt;p&gt;现在打开 Signal Atlas，看到的已经不是最早那版项目卡片页，而是一台可以进入的 3D 工作站。外层场景来自一个 MIT 开源作品集，我保留了许可证和署名；显示器里的复古桌面、窗口系统、博客与八股文入口，以及两层页面之间的交互，是我按自己的内容重新实现的。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-desk-v0.25.7.png"
 loading="lazy"
-alt="Signal Atlas monitor view"
+alt="Signal Atlas v0.25.7 参考版工作站全景"
 &gt;&lt;/p&gt;
-&lt;p&gt;上图来自公开演示站的真实运行画面，只展示作品集引擎、项目入口和公开截图，不包含私人账号、凭据或真实业务数据。&lt;/p&gt;
-&lt;h2 id="为什么做这个"&gt;为什么做这个
-&lt;/h2&gt;&lt;p&gt;普通个人主页经常只展示一句简介、几个项目卡片和一组链接。Signal Atlas 的目标不是再做一个静态 profile，而是把项目变成可以被检查的 signal：有截图、有项目说明、有标签、有入口，也能继续扩展成不同主题的作品展示系统。&lt;/p&gt;
-&lt;p&gt;这个方向适合展示视觉项目、开发者工具、数据看板和开源工作流。它让访问者先看到作品的运行状态，再决定是否继续进入 GitHub 仓库、博客文章或线上演示。&lt;/p&gt;
-&lt;h2 id="它解决什么问题"&gt;它解决什么问题
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;用 Three.js 场景承载作品集，而不是只用普通卡片列表。&lt;/li&gt;
-&lt;li&gt;用 CSS3DRenderer 和 iframe 把真实网页界面放进 3D 显示器。&lt;/li&gt;
-&lt;li&gt;用 Vue 项目图谱管理项目、模块、标签、说明和链接。&lt;/li&gt;
-&lt;li&gt;用本地 manifest 维护内容，后续替换身份信息和项目截图更直接。&lt;/li&gt;
-&lt;li&gt;用静态站点方式部署，适合 GitHub、Vercel 和个人域名承载。&lt;/li&gt;
-&lt;li&gt;用自有截图和过程化场景素材，避免依赖不可控的第三方模型或图片。&lt;/li&gt;
+&lt;p&gt;这张图是 v0.25.7 生产版本的真实画面，不再使用旧版 Atlas 面板截图。现在的桌面只保留 Hugo 博客、八股炼丹炉、GitHub 和 QQ 这些真实入口，之前用来占位置的 &lt;code&gt;My Showcase&lt;/code&gt; 和伪应用已经删除。&lt;/p&gt;
+&lt;h2 id="从看起来很酷到真的能用"&gt;从“看起来很酷”到“真的能用”
+&lt;/h2&gt;&lt;p&gt;最初做 3D 主页，想法很简单：普通项目卡片太像简历，我更想让访问者走到一台电脑前，再从电脑里打开我的内容。但真正开始接博客以后，问题就不再是“模型好不好看”，而是网站能不能顺利打开、显示器里的链接能不能点、滚轮会不会带着外层相机一起转。&lt;/p&gt;
+&lt;p&gt;Signal Atlas 现在其实同时运行两套渲染：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Three.js WebGL 场景
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; +
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;CSS3DRenderer 中的真实 HTML / iframe
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;共享同一台相机，看起来像一块完整显示器
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;WebGL 负责房间、电脑和光影；CSS3DRenderer 负责把可交互的 DOM 放到显示器的位置。网页没有被截成一张纹理，所以聚焦显示器后仍然可以点击、滚动和打开窗口。代价是每次相机移动、窗口缩放或发生遮挡，都要重新保证两层几何对得上。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-monitor-v0.25.7.png"
+loading="lazy"
+alt="聚焦后的 Signal Atlas 显示器"
+&gt;&lt;/p&gt;
+&lt;h2 id="八股文内嵌页为什么最难处理"&gt;八股文内嵌页为什么最难处理
+&lt;/h2&gt;&lt;p&gt;八股炼丹炉本身在另一个服务上。直接在浏览器打开时，它只需要面对一个正常视口；放进 Signal Atlas 后，却变成“3D 投影里的桌面窗口里再放一个网页”，尺寸、裁切和跨域链路都会更复杂。&lt;/p&gt;
+&lt;p&gt;这一版没有简单把 iframe 放大后藏住溢出，而是把内层应用投影到独立的覆盖层，根据桌面窗口的四个角计算显示区域，再裁切到真实显示器边界。窗口移动、缩放或页面恢复时会重新校正几何；加载失败时有超时、重试和明确的降级提示。Vercel 的同域 rewrite 则负责把请求转到八股文实际服务，减少浏览器嵌套加载时的限制。&lt;/p&gt;
+&lt;p&gt;这也解释了它为什么仍不可能做到百分之百稳定：如果八股文源站或 Cloudflare Tunnel 本身离线，外层工作站无法凭空把服务变可用。现在能做的是正确重试、恢复布局，并把“上游不可用”和“页面溢出”分开处理。&lt;/p&gt;
+&lt;h2 id="第一次进入为什么比普通博客重"&gt;第一次进入为什么比普通博客重
+&lt;/h2&gt;&lt;p&gt;3D 场景要加载模型、贴图、脚本和媒体，第一次访问天然比纯 HTML 博客更贵。v0.25.7 做了几件比较实际的事：启动阶段只等待 8 个关键资源；CRT 视频改为 &lt;code&gt;preload=&amp;quot;none&amp;quot;&lt;/code&gt;，音频只读元数据；HTML 每次重新校验，而带版本号的 JS、CSS 和静态素材走长期缓存。浏览器从 BFCache 返回时也尽量恢复现场，不再完整重启一次。&lt;/p&gt;
+&lt;p&gt;这不会让 3D 首页变得和文字页一样轻，但能避免“为了等一段暂时用不到的视频，整个入口一直卡在 BIOS”。&lt;/p&gt;
+&lt;h2 id="哪些是开源基础哪些是我做的"&gt;哪些是开源基础，哪些是我做的
+&lt;/h2&gt;&lt;p&gt;这部分我想写清楚，避免把“基于开源”说成“全部原创”。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当前生产外层基于 &lt;a class="link" href="https://github.com/henryjeff/portfolio-website" target="_blank" rel="noopener"
+&gt;Henry Heffernan 的 portfolio-website&lt;/a&gt;，使用其 MIT 许可的工作站模型、贴图、CRT 媒体和镜头表现，完整归因保存在仓库的 &lt;code&gt;reference/NOTICE.md&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;上游另一个内层桌面仓库没有明确许可证，所以我没有复制它。显示器中的 linsk27 桌面、窗口管理器、应用入口和内容是重新实现的。&lt;/li&gt;
+&lt;li&gt;仓库也保留了我自己用 Three.js primitives、Blender 脚本、manifest 和 Vue runtime 做的原创 Atlas 实验路线，但它不是当前生产首页的那套外观。&lt;/li&gt;
+&lt;li&gt;参考版目前使用的 Windows 7 &lt;code&gt;Harmony&lt;/code&gt; 壁纸不在项目 MIT 许可证范围内；如果要再分发或做二开，应先替换成有合适许可的自有素材。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="技术栈"&gt;技术栈
+&lt;p&gt;所以更准确的说法是：它不是从零原创整套 3D 场景，也不是只换了名字的 fork，而是在有明确许可证的外层上重做内容系统、桌面交互和生产稳定性。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-desktop-v0.25.7.png"
+loading="lazy"
+alt="Signal Atlas v0.25.7 原创桌面与真实入口"
+&gt;&lt;/p&gt;
+&lt;p&gt;开发过程中我会借助 AI 做代码检索、问题定位、重构建议和回归检查，但场景取舍、许可边界、功能验收和最终部署由我自己负责。尤其是这种同时涉及 WebGL、DOM 和外部服务的页面，AI 给出的“看起来合理”不等于浏览器里真的能用，最后还是要靠真实窗口、不同视口和失败场景逐项验证。&lt;/p&gt;
+&lt;h2 id="现在可以从哪里看"&gt;现在可以从哪里看
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Scene: Three.js, CSS3DRenderer, Canvas textures&lt;/li&gt;
-&lt;li&gt;Interface: Vue browser ESM runtime, manifest-driven UI&lt;/li&gt;
-&lt;li&gt;Build: Vite, JavaScript, CSS&lt;/li&gt;
-&lt;li&gt;Deployment: Static site, Vercel&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="项目边界"&gt;项目边界
-&lt;/h2&gt;&lt;p&gt;当前版本更像一个可二次开发的作品集引擎雏形，而不是完整 CMS。它适合 fork 后替换身份、项目 manifest、截图和主题，也适合继续扩展主题包、相机 preset、typed manifest schema 和更完整的项目详情页。&lt;/p&gt;
-&lt;p&gt;项目没有捆绑第三方 3D 素材、复制的品牌资源或私有数据。真正可复用的是技术模式：用 WebGL 外壳承载一个实时 HTML 应用，并把个人项目整理成可浏览、可证明的作品图谱。&lt;/p&gt;
-&lt;h2 id="项目入口"&gt;项目入口
-&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;生产站点：&lt;a class="link" href="https://linsk27.dpdns.org/" target="_blank" rel="noopener"
+&gt;linsk27.dpdns.org&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk-labs/signal-atlas" target="_blank" rel="noopener"
 &gt;linsk-labs/signal-atlas&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;线上演示：&lt;a class="link" href="https://linsk27-signal-atlas.vercel.app" target="_blank" rel="noopener"
-&gt;linsk27-signal-atlas.vercel.app&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;GitHub 项目索引：&lt;a class="link" href="https://linsk27.github.io/github/" &gt;404_@林达 GitHub 项目索引&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Signal Atlas 适合作为 Three.js portfolio、CSS3D monitor projection、Vue project atlas、WebGL personal site 和 evidence-first portfolio engine 的参考实现。&lt;/p&gt;</description></item><item><title>Local AI Ops 本地 AI 运维工作台</title><link>https://linsk27.github.io/projects/local-ai-ops/</link><pubDate>Tue, 23 Jun 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/local-ai-ops/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/local-ai-ops-empty-dashboard.png" alt="Featured image of post Local AI Ops 本地 AI 运维工作台" /&gt;&lt;p&gt;Local AI Ops 是一个面向局域网和本机部署的阿里云 AI 运维工作台。它通过阿里云 OpenAPI 同步 ECS、轻量应用服务器、OSS、域名和 DNS 等资源，在本地保存运维资料，执行 HTTP、TCP、SSH 和云助手检查，并基于告警上下文生成 AI 排查建议。&lt;/p&gt;
+&lt;p&gt;目前我更愿意把 Signal Atlas 称为一个持续迭代的作品集实验室，而不是适合所有人的主页模板。它有意保留 3D 的重量和仪式感，同时也必须接受一个现实：越接近真正可用的桌面，越需要在性能、嵌入稳定性和授权边界上做扎实的工程工作。&lt;/p&gt;</description></item><item><title>Local AI Ops：先把运维资料收回来，再谈 AI</title><link>https://linsk27.github.io/projects/local-ai-ops/</link><pubDate>Tue, 23 Jun 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/local-ai-ops/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/local-ai-ops-empty-dashboard.png" alt="Featured image of post Local AI Ops：先把运维资料收回来，再谈 AI" /&gt;&lt;p&gt;我做 Local AI Ops，不是为了让 AI 替我重启服务器，而是因为自己的域名、ECS、轻量服务器、OSS、续费信息和 SSH 记录散在太多地方。真正出问题时，常常先花十分钟找“这台机器到底在哪”，排故反而只用了五分钟。&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/local-ai-ops-empty-dashboard.png"
 loading="lazy"
-alt="Local AI Ops empty dashboard screenshot"
+alt="Local AI Ops 本地空数据实例"
 &gt;&lt;/p&gt;
-&lt;p&gt;上图来自本地空数据实例，只展示真实页面结构和空态，不包含真实账号、IP、域名、AccessKey、服务器名或监控结果。&lt;/p&gt;
-&lt;h2 id="为什么做这个"&gt;为什么做这个
-&lt;/h2&gt;&lt;p&gt;个人或小团队管理云资源时，信息经常分散在阿里云控制台、宝塔面板、SSH 记录、续费入口、域名解析、监控告警和本地文档里。真正需要排查问题时，往往先要确认资源在哪、入口在哪、凭据在哪、最近检查结果是什么。&lt;/p&gt;
-&lt;p&gt;Local AI Ops 的目标是把这些信息收回到可信局域网内的一个本地工作台里。它不追求替代云厂商控制台，而是把常用资源、运维资料、健康检查和排查上下文放在同一个界面中，减少来回切换。&lt;/p&gt;
-&lt;h2 id="它解决什么问题"&gt;它解决什么问题
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;同步阿里云 ECS、轻量应用服务器、OSS、域名和 DNS 资源。&lt;/li&gt;
-&lt;li&gt;本地维护到期时间、自动续费、业务入口、控制台入口、SSH 凭据和宝塔面板资料。&lt;/li&gt;
-&lt;li&gt;支持 HTTP 探活、TCP 端口、SSH 登录、ECS 指标和 Cloud Assistant 只读命令检查。&lt;/li&gt;
-&lt;li&gt;根据连续失败次数生成告警，并支持确认、关闭和恢复状态。&lt;/li&gt;
-&lt;li&gt;基于资产、告警和最近检查结果生成 AI 排查步骤和建议命令。&lt;/li&gt;
-&lt;li&gt;AccessKey、SSH 密码、私钥、宝塔密码和 AI Key 使用 AES-GCM 加密保存。&lt;/li&gt;
+&lt;p&gt;截图使用的是本地空数据实例，所以能看到真实页面结构，但没有云账号、IP、域名、AccessKey 或监控结果。&lt;/p&gt;
+&lt;h2 id="先把确定的数据链跑通"&gt;先把确定的数据链跑通
+&lt;/h2&gt;&lt;p&gt;这个项目是我围绕自己的运维需求立项和开发的，不是给某个现成面板换皮。FastAPI、React、Celery 这些开源框架负责基础能力，阿里云官方 SDK 负责读取云端资源；我主要做的是资产模型、检查流程、告警状态和本地安全边界。&lt;/p&gt;
+&lt;p&gt;整体数据流没有刻意做复杂：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;React / ECharts
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;FastAPI ─────────────→ PostgreSQL
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │ ↑
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ├─ 阿里云 OpenAPI │
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └─ Redis / Celery Worker ┘
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; HTTP、TCP、SSH、云监控检查
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;用户先明确触发资产同步，后端通过 RAM AccessKey 调用阿里云 OpenAPI，把 ECS、轻量应用服务器、OSS、域名和 DNS 转成统一的本地资产。PostgreSQL 保存资产、手工补充的运维资料、检查结果和告警；Redis 与 Celery 负责耗时的同步和探测任务，避免页面一直等接口返回。&lt;/p&gt;
+&lt;p&gt;一次健康检查大致会这样走：Celery Beat 判断哪些检查到期，Worker 执行 HTTP、TCP、SSH、CloudMonitor 或云助手只读命令，把结果写回数据库，再根据连续失败次数更新告警。这里的关键是先拿到可重复验证的事实，而不是先问模型“服务器为什么挂了”。&lt;/p&gt;
+&lt;h2 id="ai-只放在最后一层"&gt;AI 只放在最后一层
+&lt;/h2&gt;&lt;p&gt;告警发生后，系统会整理当前资产、告警内容和最近几次检查结果，先脱敏，再交给 OpenAI-compatible 接口生成摘要、可能原因和排查步骤。如果没有配置模型，或者接口调用失败，就回退到本地规则建议。&lt;/p&gt;
+&lt;p&gt;我刻意保留了几条边界：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;模型只能给建议，不能自动执行修复。&lt;/li&gt;
+&lt;li&gt;建议命令限制在只读白名单里，真正的变更仍由人确认。&lt;/li&gt;
+&lt;li&gt;发送给模型前要去掉 AccessKey、密码、私钥和其他敏感字段。&lt;/li&gt;
+&lt;li&gt;AI 不是监控数据的事实来源，HTTP 状态、端口和云指标才是。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="技术栈"&gt;技术栈
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Backend: FastAPI, SQLAlchemy 2, Alembic, PostgreSQL, Redis, Celery&lt;/li&gt;
-&lt;li&gt;Frontend: React, Vite, TypeScript, ECharts, lucide-react&lt;/li&gt;
-&lt;li&gt;Cloud: Alibaba Cloud SDK / OpenAPI&lt;/li&gt;
-&lt;li&gt;AI: OpenAI-compatible Chat Completions API&lt;/li&gt;
-&lt;li&gt;Runtime: Docker Compose&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="项目边界"&gt;项目边界
-&lt;/h2&gt;&lt;p&gt;当前版本定位为 MVP，更适合个人或小团队在可信局域网内统一查看云资源、续费、入口、SSH/宝塔资料和监控结果。它不是公网多租户系统，也不建议直接暴露到公网。&lt;/p&gt;
-&lt;p&gt;AI 诊断只生成摘要、可能原因、排查步骤和建议命令，不会自动执行修复。真正会访问云资源的动作仍然通过明确的资产同步、监控检查和只读命令来完成。&lt;/p&gt;
+&lt;p&gt;这样做没有“全自动 AI 运维”听起来厉害，却更适合个人环境。一条看似正确的重启命令，如果落到错误实例上，损失会比少点几下控制台大得多。&lt;/p&gt;
+&lt;h2 id="为什么坚持本地优先"&gt;为什么坚持本地优先
+&lt;/h2&gt;&lt;p&gt;默认部署用 Docker Compose 拉起 React、FastAPI、PostgreSQL、Redis 和 Celery。数据库与 Redis 不需要直接暴露到公网，管理入口也定位在可信局域网。AccessKey、SSH 密码、私钥、面板密码和模型 Key 会以 AES-GCM 加密保存，但这不等于“绝对安全”——主密钥仍然要由部署者自己妥善保管。&lt;/p&gt;
+&lt;p&gt;Local AI Ops 也不打算替代阿里云控制台。云厂商控制台负责完整配置能力，这个工作台更像我的运维索引：哪些资源属于哪个项目、什么时候到期、最近是否可达、出问题时先看什么，都能在一个地方接起来。&lt;/p&gt;
+&lt;h2 id="ai-也参与开发但不参与拍脑袋"&gt;AI 也参与开发，但不参与拍脑袋
+&lt;/h2&gt;&lt;p&gt;开发时我会用 AI 编程工具辅助拆需求、补样板代码、梳理接口和测试边界。不过资产结构、安全规则、告警流程和真实云账号验证必须由我自己确定。涉及凭据和自动化时，我更相信“代码里能看到的限制”，而不是一句提示词承诺。&lt;/p&gt;
+&lt;p&gt;目前它仍是个人和小团队可用的 MVP，不是公网多租户 SaaS。下一步比“再加一个聊天框”更重要的，是继续完善资产关系、续费提醒、检查可观测性和备份恢复。&lt;/p&gt;
 &lt;h2 id="项目入口"&gt;项目入口
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk-labs/local-ai-ops" target="_blank" rel="noopener"
 &gt;linsk-labs/local-ai-ops&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;GitHub 项目索引：&lt;a class="link" href="https://linsk27.github.io/github/" &gt;404_@林达 GitHub 项目索引&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;它适合作为 local LAN ops console、Alibaba Cloud ops dashboard、FastAPI React ops console、CloudMonitor dashboard 和本地优先诊断工具的参考实现。&lt;/p&gt;</description></item><item><title>DigitalPlat 免费域名配置教程：从领取到 Cloudflare 解析</title><link>https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/</link><pubDate>Wed, 03 Jun 2026 12:00:00 +0800</pubDate><guid>https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/</guid><description>&lt;img src="https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/digitalplat-nameserver.png" alt="Featured image of post DigitalPlat 免费域名配置教程：从领取到 Cloudflare 解析" /&gt;&lt;p&gt;这篇文章记录一次从零领取免费域名并接入 Cloudflare 的过程。示例域名使用 &lt;code&gt;linsk27.dpdns.org&lt;/code&gt;，平台是 DigitalPlat FreeDomain，DNS 托管使用 Cloudflare。&lt;/p&gt;
+&lt;/ul&gt;</description></item><item><title>DigitalPlat 免费域名实操：先弄懂 DNS 委派，再配 Cloudflare</title><link>https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/</link><pubDate>Wed, 03 Jun 2026 12:00:00 +0800</pubDate><guid>https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/</guid><description>&lt;img src="https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/digitalplat-nameserver.png" alt="Featured image of post DigitalPlat 免费域名实操：先弄懂 DNS 委派，再配 Cloudflare" /&gt;&lt;p&gt;这一篇不是“我开发了一个免费域名平台”，而是一次真实配置记录：我怎样通过 DigitalPlat 领取 &lt;code&gt;linsk27.dpdns.org&lt;/code&gt;，再把 DNS 控制权交给 Cloudflare。控制台按钮以后可能变化，但 DNS 委派的原理不会跟着换皮肤。&lt;/p&gt;
 &lt;p&gt;免费域名适合学习、测试、个人项目展示和临时服务入口。真正重要的生产项目，还是建议使用自己购买并长期持有的独立域名，方便迁移和品牌沉淀。&lt;/p&gt;
+&lt;h2 id="先理解三个角色"&gt;先理解三个角色
+&lt;/h2&gt;&lt;p&gt;刚接触域名时，最容易把“注册成功”“DNS 生效”和“网站能打开”当成同一件事。实际上这条链路里有三个角色：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;DigitalPlat&lt;/strong&gt; 控制父级 &lt;code&gt;dpdns.org&lt;/code&gt;，负责把 &lt;code&gt;linsk27.dpdns.org&lt;/code&gt; 这个子域委派出去。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cloudflare&lt;/strong&gt; 接受委派，成为这个子域的权威 DNS，回答 A、AAAA 或 CNAME 记录。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vercel、GitHub Pages 或自己的服务器&lt;/strong&gt; 才是真正返回网页的源站。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;浏览器访问时，递归 DNS 会先沿着父域找到 Cloudflare nameserver，再从 Cloudflare 拿到源站地址；如果开启了橙云代理，请求还会先经过 Cloudflare 的 CDN 与 HTTPS 层。可以把它理解成：DigitalPlat 决定“去问谁”，Cloudflare 回答“网站在哪”，源站负责“返回什么”。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;浏览器 → 递归 DNS → DigitalPlat 的父域委派
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; Cloudflare 权威 DNS
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; Vercel / GitHub Pages / 服务器
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;因此，注册成功但没有 DNS 记录，网站仍然打不开；DNS 已经正确，但托管平台没有绑定自定义域名，也一样会报错。&lt;/p&gt;
 &lt;h2 id="准备工作"&gt;准备工作
 &lt;/h2&gt;&lt;p&gt;开始之前需要准备三样东西：&lt;/p&gt;
 &lt;ul&gt;
@@ -237,7 +304,19 @@ data-flex-basis="426px"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Target: linsk27.github.io
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;GitHub Pages 侧也需要在仓库设置里绑定自定义域名，否则只做 DNS 解析还不够。&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;Cloudflare 允许在根域使用 CNAME，是因为它会做 CNAME flattening；这不是所有 DNS 服务都支持的通用写法。GitHub Pages 侧也需要在仓库设置里绑定自定义域名，否则只做 DNS 解析还不够。&lt;/p&gt;
+&lt;p&gt;记录保存后，可以分别检查 DNS 和 HTTP：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;nslookup linsk27.dpdns.org
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;curl -I https://linsk27.dpdns.org
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;前一个命令确认域名最终解析到了哪里，后一个命令确认 HTTPS 请求是否真的收到源站响应。把这两层分开看，排错会快很多。&lt;/p&gt;
 &lt;h2 id="第六步配置-ssltls"&gt;第六步：配置 SSL/TLS
 &lt;/h2&gt;&lt;p&gt;Cloudflare 激活后，进入 &lt;code&gt;SSL/TLS&lt;/code&gt; 页面。&lt;/p&gt;
 &lt;p&gt;如果你只是用 GitHub Pages、Vercel、Netlify 这类静态托管，通常保持 Cloudflare 默认设置即可。&lt;/p&gt;
@@ -273,188 +352,235 @@ data-flex-basis="426px"
 &lt;h3 id="4-是否需要开启-whois-privacy"&gt;4. 是否需要开启 WHOIS Privacy
 &lt;/h3&gt;&lt;p&gt;建议开启。免费域名注册时通常会填写姓名、邮箱、地址、电话等 WHOIS 信息，开启隐私保护可以减少个人信息暴露。&lt;/p&gt;
 &lt;p&gt;在 DigitalPlat 的域名管理页里找到 &lt;code&gt;WHOIS Privacy&lt;/code&gt;，按页面提示启用即可。&lt;/p&gt;
+&lt;h2 id="这次配置和开源项目是什么关系"&gt;这次配置和开源项目是什么关系
+&lt;/h2&gt;&lt;p&gt;DigitalPlat 公开了 &lt;a class="link" href="https://github.com/DigitalPlatDev/FreeDomain" target="_blank" rel="noopener"
+&gt;FreeDomain&lt;/a&gt; 文档仓库；官方公开实现可以在 &lt;a class="link" href="https://github.com/DigitalPlatDev/Domain-OSS" target="_blank" rel="noopener"
+&gt;Domain-OSS&lt;/a&gt; 看到，它是一个使用 Flask、SQLAlchemy 等组件的 AGPL-3.0 项目。这里说的是公开仓库，不代表线上服务一定运行着仓库的最新 commit。&lt;/p&gt;
+&lt;p&gt;我在整理这次排障过程时用 AI 辅助归纳过检查顺序，但文章里的控制台步骤、nameserver、DNS 结果和最终访问状态都以实际操作为准。AI 很适合解释报错可能在哪一层，不能替代 &lt;code&gt;nslookup&lt;/code&gt;、托管平台状态和浏览器请求这些真实证据。&lt;/p&gt;
 &lt;h2 id="总结"&gt;总结
-&lt;/h2&gt;&lt;p&gt;整个流程可以理解成三步：&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;整个流程可以压缩成三步：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;在 Cloudflare 添加完整域名，拿到两个 nameserver&lt;/li&gt;
 &lt;li&gt;在 DigitalPlat 注册免费域名，并把 Cloudflare nameserver 填进去&lt;/li&gt;
 &lt;li&gt;等 Cloudflare 激活后，添加 A 记录或 CNAME 记录&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;完成后，&lt;code&gt;linsk27.dpdns.org&lt;/code&gt; 就可以作为个人项目、测试服务或博客入口使用了。&lt;/p&gt;</description></item><item><title>404_@林达 GitHub 项目索引</title><link>https://linsk27.github.io/github/</link><pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/github/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-monitor-view.png" alt="Featured image of post 404_@林达 GitHub 项目索引" /&gt;&lt;p&gt;这里是更直接的 GitHub 项目入口。如果你是从搜索结果、GitHub 主页、README 或项目截图点进来，可以按需求选择先看哪个仓库。&lt;/p&gt;
-&lt;p&gt;我的 GitHub 主页是 &lt;a class="link" href="https://github.com/linsk27" target="_blank" rel="noopener"
-&gt;github.com/linsk27&lt;/a&gt;，完整项目页是 &lt;a class="link" href="https://linsk27.github.io/projects/" &gt;404_@林达 项目主页&lt;/a&gt;。&lt;/p&gt;
-&lt;h2 id="推荐先看的仓库"&gt;推荐先看的仓库
+&lt;p&gt;完成后，&lt;code&gt;linsk27.dpdns.org&lt;/code&gt; 就可以作为个人项目、测试服务或博客入口使用。以后遇到打不开，也按“NS 委派 → DNS 记录 → 源站绑定 → TLS/HTTP”这个顺序逐层检查，不需要在几个控制台之间来回碰运气。&lt;/p&gt;</description></item><item><title>404_@林达 GitHub 项目索引</title><link>https://linsk27.github.io/github/</link><pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/github/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-desk-v0.25.7.png" alt="Featured image of post 404_@林达 GitHub 项目索引" /&gt;&lt;p&gt;这里是更直接的仓库索引，顺序与我当前 GitHub 主页的精选项目保持一致。想看实现背景、开源来源和开发取舍，可以进入更完整的 &lt;a class="link" href="https://linsk27.github.io/projects/" &gt;项目主页&lt;/a&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;个人主页：&lt;a class="link" href="https://github.com/linsk27" target="_blank" rel="noopener"
+&gt;github.com/linsk27&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;主要项目组织：&lt;a class="link" href="https://github.com/linsk-labs" target="_blank" rel="noopener"
+&gt;github.com/linsk-labs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="当前重点"&gt;当前重点
+&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;仓库&lt;/th&gt;
+&lt;th&gt;它解决什么&lt;/th&gt;
+&lt;th&gt;主要技术&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/linsk-labs/local-dev-cockpit" target="_blank" rel="noopener"
+&gt;local-dev-cockpit&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;扫描本地项目，恢复启动命令、端口、环境、Git 状态和最近错误&lt;/td&gt;
+&lt;td&gt;TypeScript、Vue 3、Node.js、Electron&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/linsk-labs/local-ai-ops" target="_blank" rel="noopener"
+&gt;local-ai-ops&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;在可信局域网统一查看阿里云资产、检查、告警与可选 AI 排查建议&lt;/td&gt;
+&lt;td&gt;FastAPI、React、PostgreSQL、Redis、Celery&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/linsk-labs/proof-pr" target="_blank" rel="noopener"
+&gt;proof-pr&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;用确定性规则检查 PR 是否带齐测试、截图、复现和权限说明&lt;/td&gt;
+&lt;td&gt;TypeScript、GitHub Actions、CLI、SARIF&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/linsk-labs/signal-atlas" target="_blank" rel="noopener"
+&gt;signal-atlas&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;把真实网页与复古桌面放进可交互的 Three.js 工作站&lt;/td&gt;
+&lt;td&gt;Three.js、CSS3DRenderer、JavaScript、Vite&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;对应的中文复盘：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://linsk27.github.io/projects/dev-cockpit/" &gt;Dev Cockpit：隔几天回来，也知道项目怎么跑&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://linsk27.github.io/projects/local-ai-ops/" &gt;Local AI Ops：先把运维资料收回来，再谈 AI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://linsk27.github.io/projects/proofpr/" &gt;ProofPR：AI 让写 PR 变快，但 review 没变便宜&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://linsk27.github.io/projects/signal-atlas/" &gt;Signal Atlas：把真实网页放进 Three.js 工作站&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="其他公开仓库"&gt;其他公开仓库
 &lt;/h2&gt;&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;方向&lt;/th&gt;
 &lt;th&gt;仓库&lt;/th&gt;
-&lt;th&gt;适合谁&lt;/th&gt;
+&lt;th&gt;内容&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;3D 作品集实验室&lt;/td&gt;
-&lt;td&gt;&lt;a class="link" href="https://github.com/linsk-labs/signal-atlas" target="_blank" rel="noopener"
-&gt;signal-atlas&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;想看 Three.js、CSS3D 显示器投影、Vue 项目图谱和可二次开发作品集引擎的人&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;本地 AI 运维&lt;/td&gt;
-&lt;td&gt;&lt;a class="link" href="https://github.com/linsk-labs/local-ai-ops" target="_blank" rel="noopener"
-&gt;local-ai-ops&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;想看阿里云资源同步、局域网运维、监控检查和 AI 排查建议的人&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;资源雷达工具&lt;/td&gt;
-&lt;td&gt;&lt;a class="link" href="https://github.com/linsk-labs/local-dev-cockpit" target="_blank" rel="noopener"
-&gt;local-dev-cockpit&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;想看 GitHub 资源收集、卡片库、价值评分和星云图整理的人&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;PR review 工具&lt;/td&gt;
-&lt;td&gt;&lt;a class="link" href="https://github.com/linsk-labs/proof-pr" target="_blank" rel="noopener"
-&gt;proof-pr&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;关注 Pull Request 证据扫描、GitHub Actions 和维护者 review 工作流的人&lt;/td&gt;
+&lt;td&gt;Vue + Flask 全栈&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/linsk27/AI-Vue3-python-flask-Blog" target="_blank" rel="noopener"
+&gt;AI-Vue3-python-flask-Blog&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Vue 3、Flask、MySQL 与内容管理&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;智慧社区大屏&lt;/td&gt;
 &lt;td&gt;&lt;a class="link" href="https://github.com/linsk27/feidu" target="_blank" rel="noopener"
 &gt;feidu&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;想看 Nuxt 3、Vue、ECharts、Tailwind CSS 数据大屏的人&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;全栈博客系统&lt;/td&gt;
-&lt;td&gt;&lt;a class="link" href="https://github.com/linsk27/AI-Vue3-python-flask-Blog" target="_blank" rel="noopener"
-&gt;AI-Vue3-python-flask-Blog&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;需要 Vue 3、Flask、MySQL、AI 博客系统和课程设计参考的人&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;AI UI 原型&lt;/td&gt;
-&lt;td&gt;&lt;a class="link" href="https://github.com/linsk27/AI-v0.dev-" target="_blank" rel="noopener"
-&gt;AI-v0.dev-&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;想看 Next.js、TypeScript、Tailwind、shadcn/ui 产品原型的人&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Vue 前端项目&lt;/td&gt;
-&lt;td&gt;&lt;a class="link" href="https://github.com/linsk27/Vue-blog" target="_blank" rel="noopener"
-&gt;Vue-blog&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;想看 Vue 博客、内容展示、AI 中心和数据看板页面的人&lt;/td&gt;
+&lt;td&gt;Nuxt 3、Tailwind CSS 与 ECharts 可视化&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;数据可视化练习&lt;/td&gt;
 &lt;td&gt;&lt;a class="link" href="https://github.com/linsk27/echarts-learn" target="_blank" rel="noopener"
 &gt;echarts-learn&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;想看 ECharts dashboard、图表组合和 Nuxt 数据可视化的人&lt;/td&gt;
+&lt;td&gt;Vue、Nuxt 与多类 ECharts 图表&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Nuxt 移动端项目&lt;/td&gt;
+&lt;td&gt;Nuxt 移动端&lt;/td&gt;
 &lt;td&gt;&lt;a class="link" href="https://github.com/linsk27/bilibili-nuxt3" target="_blank" rel="noopener"
 &gt;bilibili-nuxt3&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;想看 Nuxt 3、SSR、SEO、Vant 移动端页面结构的人&lt;/td&gt;
+&lt;td&gt;Nuxt 3、SSR、TypeScript 与 Vant&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id="如果你只想快速判断"&gt;如果你只想快速判断
+&lt;h2 id="怎么选"&gt;怎么选
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;想看 3D 作品集和项目展示引擎：先看 &lt;a class="link" href="https://linsk27.github.io/projects/signal-atlas/" &gt;Signal Atlas&lt;/a&gt;。&lt;/li&gt;
-&lt;li&gt;想看本地运维和云资源管理：先看 &lt;a class="link" href="https://linsk27.github.io/projects/local-ai-ops/" &gt;Local AI Ops&lt;/a&gt;。&lt;/li&gt;
-&lt;li&gt;想看最完整的开发者工具方向：先看 &lt;a class="link" href="https://linsk27.github.io/projects/dev-cockpit/" &gt;Dev Cockpit&lt;/a&gt; 和 &lt;a class="link" href="https://linsk27.github.io/projects/proofpr/" &gt;ProofPR&lt;/a&gt;。&lt;/li&gt;
-&lt;li&gt;想看可视化成品截图：先看 &lt;a class="link" href="https://linsk27.github.io/projects/feidu/" &gt;feidu&lt;/a&gt; 和 &lt;a class="link" href="https://linsk27.github.io/projects/echarts-learn/" &gt;echarts-learn&lt;/a&gt;。&lt;/li&gt;
-&lt;li&gt;想看全栈项目：先看 &lt;a class="link" href="https://linsk27.github.io/projects/ai-vue-flask-blog/" &gt;AI Vue Flask Blog&lt;/a&gt;。&lt;/li&gt;
-&lt;li&gt;想看前端页面练习：先看 &lt;a class="link" href="https://linsk27.github.io/projects/vue-blog/" &gt;Vue-blog&lt;/a&gt; 和 &lt;a class="link" href="https://linsk27.github.io/projects/bilibili-nuxt3/" &gt;bilibili-nuxt3&lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt;想看本地开发工具：从 &lt;a class="link" href="https://linsk27.github.io/projects/dev-cockpit/" &gt;Dev Cockpit&lt;/a&gt; 开始。&lt;/li&gt;
+&lt;li&gt;想看后端、任务队列和云 API：看 &lt;a class="link" href="https://linsk27.github.io/projects/local-ai-ops/" &gt;Local AI Ops&lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt;想看开源维护工具与规则引擎：看 &lt;a class="link" href="https://linsk27.github.io/projects/proofpr/" &gt;ProofPR&lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt;想先看视觉效果和浏览器交互：直接进入 &lt;a class="link" href="https://linsk27.dpdns.org/" target="_blank" rel="noopener"
+&gt;Signal Atlas&lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt;想看早期全栈或可视化作品：再从上面的其他公开仓库挑选。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="维护说明"&gt;维护说明
-&lt;/h2&gt;&lt;p&gt;如果某个仓库对你有参考价值，可以在 GitHub 上关注或 Star。这个信号会影响我后续优先补哪些文档、截图、部署说明和功能。&lt;/p&gt;
-&lt;p&gt;更完整的项目截图、关键词和说明可以看 &lt;a class="link" href="https://linsk27.github.io/projects/" &gt;项目主页&lt;/a&gt;；个人介绍可以看 &lt;a class="link" href="https://linsk27.github.io/about/" &gt;关于 404_@林达&lt;/a&gt;。&lt;/p&gt;</description></item><item><title>404_@林达 项目主页</title><link>https://linsk27.github.io/projects/</link><pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-monitor-view.png" alt="Featured image of post 404_@林达 项目主页" /&gt;&lt;p&gt;这里集中放我当前更希望被看到的项目。它们都不是单纯的练习截图，而是围绕真实开发场景整理出来的作品：Three.js 作品集实验室、本地云资源运维、开发现场恢复、Pull Request 证据检查、智慧社区数据大屏、Vue 与 Flask 全栈系统、产品界面原型，以及可以直接打开的前端成品。&lt;/p&gt;
-&lt;p&gt;如果你想直接从 GitHub 仓库角度筛选，可以看 &lt;a class="link" href="https://linsk27.github.io/github/" &gt;404_@林达 GitHub 项目索引&lt;/a&gt;。&lt;/p&gt;
-&lt;h2 id="signal-atlas"&gt;Signal Atlas
-&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://linsk27.github.io/projects/signal-atlas/" &gt;Signal Atlas&lt;/a&gt; 是一个 Three.js 作品集实验室，用 WebGL 场景、CSS3D 显示器投影和 Vue 项目图谱展示项目证据、截图、标签和开源方向。它更像一个可二次开发的个人作品集引擎，而不是普通 landing page。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-monitor-view.png"
-loading="lazy"
-alt="Signal Atlas monitor view"
-&gt;&lt;/p&gt;
-&lt;p&gt;这张图来自公开演示站的真实运行画面，只展示作品集引擎、项目入口和公开截图，不包含私人账号、凭据或真实业务数据。&lt;/p&gt;
-&lt;p&gt;适合参考 Three.js portfolio、CSS3D monitor projection、Vue project atlas、WebGL personal site 和静态作品集引擎。可以先看 &lt;a class="link" href="https://linsk27.github.io/projects/signal-atlas/" &gt;Signal Atlas 详情页&lt;/a&gt;，进入 &lt;a class="link" href="https://github.com/linsk-labs/signal-atlas" target="_blank" rel="noopener"
-&gt;GitHub 仓库&lt;/a&gt;，或者打开 &lt;a class="link" href="https://linsk27-signal-atlas.vercel.app" target="_blank" rel="noopener"
-&gt;线上演示&lt;/a&gt;。&lt;/p&gt;
-&lt;h2 id="local-ai-ops"&gt;Local AI Ops
-&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://linsk27.github.io/projects/local-ai-ops/" &gt;Local AI Ops&lt;/a&gt; 是一个面向局域网和本机部署的阿里云 AI 运维工作台，用 FastAPI、React、PostgreSQL、Redis、Celery 和阿里云 OpenAPI 管理云资源、监控检查、告警和 AI 排查建议。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/local-ai-ops-empty-dashboard.png"
-loading="lazy"
-alt="Local AI Ops empty dashboard screenshot"
-&gt;&lt;/p&gt;
-&lt;p&gt;这张图来自本地空数据实例，不包含真实云账号、IP、域名、实例 ID 或监控结果。&lt;/p&gt;
-&lt;p&gt;适合参考 local LAN ops console、Alibaba Cloud ops dashboard、FastAPI React ops console、CloudMonitor dashboard 和本地优先的诊断工具实现。可以先看 &lt;a class="link" href="https://linsk27.github.io/projects/local-ai-ops/" &gt;Local AI Ops 详情页&lt;/a&gt;，再进入 &lt;a class="link" href="https://github.com/linsk-labs/local-ai-ops" target="_blank" rel="noopener"
-&gt;GitHub 仓库&lt;/a&gt;。&lt;/p&gt;
-&lt;h2 id="dev-cockpit"&gt;Dev Cockpit
-&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://linsk27.github.io/projects/dev-cockpit/" &gt;Dev Cockpit&lt;/a&gt; 是一个本地资源雷达工作台，用来收集 GitHub 仓库、Demo、工具和教程，并通过卡片库、分类筛选、价值评分和星云图整理开发资料。它适合经常收藏技术资源、需要定期复盘工具链的个人开发者。&lt;/p&gt;
+&lt;p&gt;项目页另外整理了我关注的第三方开源工具，例如 &lt;a class="link" href="https://linsk27.github.io/projects/#%e7%ac%ac%e4%b8%89%e6%96%b9%e5%bc%80%e6%ba%90%e5%b7%a5%e5%85%b7archify" &gt;Archify&lt;/a&gt;。这些工具会明确标注作者，不会和我自己的仓库混在一起。&lt;/p&gt;</description></item><item><title>404_@林达 项目主页</title><link>https://linsk27.github.io/projects/</link><pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-desk-v0.25.7.png" alt="Featured image of post 404_@林达 项目主页" /&gt;&lt;p&gt;这里不再把所有仓库放在同一层。前四个是我目前持续维护、也最能说明开发方向的项目；早期作品保留为简短索引；Archify 则单独放在“第三方开源工具”里，避免把别人的项目写成我的作品。&lt;/p&gt;
+&lt;p&gt;如果你只想快速跳到仓库，可以看 &lt;a class="link" href="https://linsk27.github.io/github/" &gt;GitHub 项目索引&lt;/a&gt;；想了解为什么这样设计、哪些部分使用开源基础、AI 参与到什么程度，可以继续往下看。&lt;/p&gt;
+&lt;h2 id="正在维护"&gt;正在维护
+&lt;/h2&gt;&lt;h3 id="dev-cockpit"&gt;Dev Cockpit
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://linsk27.github.io/projects/dev-cockpit/" &gt;Dev Cockpit&lt;/a&gt; 解决的是“隔几天回来就忘了项目怎么跑”。它会扫描技术栈、启动命令、端口、Python 环境和 Git 状态，再把 CLI、Web 与 Electron 桌面端接到同一套判断逻辑上。资源雷达只是后来增加的一个模块，不是整个项目的全部。&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png"
 loading="lazy"
-alt="Dev Cockpit resource radar cards"
+alt="Dev Cockpit 资源雷达卡片页"
 &gt;&lt;/p&gt;
-&lt;p&gt;适合参考 developer resource dashboard、GitHub resource manager、resource radar 或 Electron + Vue 本地工具。可以先看 &lt;a class="link" href="https://linsk27.github.io/projects/dev-cockpit/" &gt;Dev Cockpit 详情页&lt;/a&gt;，再进入 &lt;a class="link" href="https://github.com/linsk-labs/local-dev-cockpit" target="_blank" rel="noopener"
-&gt;GitHub 仓库&lt;/a&gt;。&lt;/p&gt;
-&lt;h2 id="proofpr"&gt;ProofPR
-&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://linsk27.github.io/projects/proofpr/" &gt;ProofPR&lt;/a&gt; 是一个 GitHub Action 和 CLI，用来整理 Pull Request 中的证据信号，包括 secrets、依赖风险、CI 权限、MCP 安全和 review 线索。目标是让开源维护者更快判断一个 PR 是否值得合并、需要补充什么证据。&lt;/p&gt;
+&lt;p&gt;技术上，它把纯 TypeScript 扫描逻辑放在 &lt;code&gt;core&lt;/code&gt;，本地进程与端口放在 &lt;code&gt;server&lt;/code&gt;，Vue 3 负责 Web 界面，Electron 只做桌面外壳。项目状态依赖本地可验证信号，不让 AI 猜“它是不是已经启动”。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://linsk27.github.io/projects/dev-cockpit/" &gt;阅读开发复盘&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://github.com/linsk-labs/local-dev-cockpit" target="_blank" rel="noopener"
+&gt;GitHub：linsk-labs/local-dev-cockpit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="local-ai-ops"&gt;Local AI Ops
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://linsk27.github.io/projects/local-ai-ops/" &gt;Local AI Ops&lt;/a&gt; 是一个本地优先的阿里云运维工作台。React 与 ECharts 展示资产和告警，FastAPI 提供接口，PostgreSQL 保存运维资料，Redis/Celery 执行同步与健康检查，阿里云官方 SDK 负责读取 ECS、轻量服务器、OSS、域名和 DNS。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/local-ai-ops-empty-dashboard.png"
+loading="lazy"
+alt="Local AI Ops 本地空数据实例"
+&gt;&lt;/p&gt;
+&lt;p&gt;AI 只处理脱敏后的告警上下文，输出摘要和排查建议，不自动执行修复。它更像一个可信局域网里的运维索引，而不是要暴露到公网的多租户控制台。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://linsk27.github.io/projects/local-ai-ops/" &gt;阅读架构与安全边界&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://github.com/linsk-labs/local-ai-ops" target="_blank" rel="noopener"
+&gt;GitHub：linsk-labs/local-ai-ops&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="proofpr"&gt;ProofPR
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://linsk27.github.io/projects/proofpr/" &gt;ProofPR&lt;/a&gt; 是 GitHub Action 与 CLI 形式的 PR 证据检查器。它解析 diff 和 &lt;code&gt;.proofpr.yml&lt;/code&gt;，用确定性规则检查测试、截图、复现步骤、依赖、workflow 权限、secret 与 MCP 配置，再输出风险等级、证据分和 review gate。&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/proofpr-github-action-pr-review-report.png"
 loading="lazy"
-alt="ProofPR GitHub Action PR review report"
+alt="ProofPR GitHub Action 审查报告"
 &gt;&lt;/p&gt;
-&lt;p&gt;适合关注 pull request review automation、GitHub Actions security、PR triage 和 maintainer tools 的场景。可以先看 &lt;a class="link" href="https://linsk27.github.io/projects/proofpr/" &gt;ProofPR 详情页&lt;/a&gt;，再进入 &lt;a class="link" href="https://github.com/linsk-labs/proof-pr" target="_blank" rel="noopener"
-&gt;GitHub 仓库&lt;/a&gt;。&lt;/p&gt;
-&lt;h2 id="ai-vue3-python-flask-blog"&gt;AI-Vue3-python-flask-Blog
-&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://linsk27.github.io/projects/ai-vue-flask-blog/" &gt;AI-Vue3-python-flask-Blog&lt;/a&gt; 是一个 Vue 3、Flask、MySQL 和 AI 能力组合的博客系统，覆盖前端页面、后端接口、数据持久化和内容管理。它适合作为课程设计、毕业设计、全栈项目练习和二次开发基础。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/ai-vue-flask-blog-home-page.png"
+&lt;p&gt;这个工具运行时不调用大模型，也不判断业务代码是否正确。设计重点是相同输入得到相同结果，让维护者能看到每条命中来自哪条规则。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://linsk27.github.io/projects/proofpr/" &gt;阅读规则引擎设计&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://github.com/linsk-labs/proof-pr" target="_blank" rel="noopener"
+&gt;GitHub：linsk-labs/proof-pr&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="signal-atlas"&gt;Signal Atlas
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://linsk27.github.io/projects/signal-atlas/" &gt;Signal Atlas&lt;/a&gt; 是当前运行在 &lt;code&gt;linsk27.dpdns.org&lt;/code&gt; 的 Three.js 工作站。生产外层基于 Henry Heffernan 的 MIT 开源作品集，并保留完整许可归因；显示器里的 linsk27 复古桌面、窗口系统、真实应用入口和内嵌适配由我重新实现。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-desk-v0.25.7.png"
 loading="lazy"
-alt="AI Vue Flask blog home page"
+alt="Signal Atlas v0.25.7 工作站全景"
 &gt;&lt;/p&gt;
-&lt;p&gt;如果你在搜索 Vue Flask full stack project、Vue3 Flask MySQL blog system、AI blog system、graduation project 或 course design，可以先看 &lt;a class="link" href="https://linsk27.github.io/projects/ai-vue-flask-blog/" &gt;AI Vue Flask Blog 详情页&lt;/a&gt;，再进入 &lt;a class="link" href="https://github.com/linsk27/AI-Vue3-python-flask-Blog" target="_blank" rel="noopener"
-&gt;GitHub 仓库&lt;/a&gt;。&lt;/p&gt;
-&lt;h2 id="ai-v0dev-"&gt;AI-v0.dev-
-&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://linsk27.github.io/projects/ai-v0-dev/" &gt;AI-v0.dev-&lt;/a&gt; 是一组 TypeScript 前端原型，用来探索 AI 产品界面、快速页面生成、组件组合和 v0.dev 风格的交互表达。它更适合看界面实验、AI UI prototype、Next.js、Tailwind 和前端产品想法。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/ai-v0-dev-learning-dashboard.png"
-loading="lazy"
-alt="AI v0 learning dashboard"
-&gt;&lt;/p&gt;
-&lt;p&gt;如果你想看 AI learning dashboard、Next.js dashboard、v0.dev workflow、shadcn/ui 或 Tailwind 产品原型，可以先看 &lt;a class="link" href="https://linsk27.github.io/projects/ai-v0-dev/" &gt;AI-v0.dev- 详情页&lt;/a&gt;，再进入 &lt;a class="link" href="https://github.com/linsk27/AI-v0.dev-" target="_blank" rel="noopener"
-&gt;GitHub 仓库&lt;/a&gt;。&lt;/p&gt;
-&lt;h2 id="线上成品"&gt;线上成品
-&lt;/h2&gt;&lt;h3 id="vue-blog"&gt;Vue-blog
-&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://linsk27.github.io/projects/vue-blog/" &gt;Vue-blog&lt;/a&gt; 是一个 Vue 博客前端项目，展示文章入口、AI 中心和数据分析看板等页面结构。线上演示：&lt;a class="link" href="https://vue-blog-smoky.vercel.app/" target="_blank" rel="noopener"
-&gt;vue-blog-smoky.vercel.app&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/vue-blog-demo.png"
-loading="lazy"
-alt="Vue blog demo"
-&gt;&lt;/p&gt;
-&lt;p&gt;如果你想看 Vue blog project、front-end learning notes、content presentation 或内容型应用结构，可以先看 &lt;a class="link" href="https://linsk27.github.io/projects/vue-blog/" &gt;Vue-blog 详情页&lt;/a&gt;，再进入 &lt;a class="link" href="https://github.com/linsk27/Vue-blog" target="_blank" rel="noopener"
-&gt;GitHub 仓库&lt;/a&gt;。&lt;/p&gt;
-&lt;h3 id="echarts-learn"&gt;echarts-learn
-&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://linsk27.github.io/projects/echarts-learn/" &gt;echarts-learn&lt;/a&gt; 是一个 Vue、Nuxt 和 ECharts 数据可视化练习项目，展示 dashboard 布局、柱状图、雷达图、关系图、环形图和词云等页面组合。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/echarts-learn-dashboard.png"
-loading="lazy"
-alt="ECharts dashboard screenshot"
-&gt;&lt;/p&gt;
-&lt;p&gt;如果你想看 Vue ECharts dashboard、ECharts data visualization、Nuxt dashboard 或图表组件组织方式，可以先看 &lt;a class="link" href="https://linsk27.github.io/projects/echarts-learn/" &gt;echarts-learn 详情页&lt;/a&gt;，再进入 &lt;a class="link" href="https://github.com/linsk27/echarts-learn" target="_blank" rel="noopener"
-&gt;GitHub 仓库&lt;/a&gt;。&lt;/p&gt;
-&lt;h3 id="bilibili-nuxt3"&gt;bilibili-nuxt3
-&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://linsk27.github.io/projects/bilibili-nuxt3/" &gt;bilibili-nuxt3&lt;/a&gt; 是一个 Nuxt 3、Vue、TypeScript 和 Vant 移动端项目实战，展示 SSR、SEO、频道导航、视频列表和详情页结构。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/bilibili-nuxt3-mobile-preview.jpg"
-loading="lazy"
-alt="bilibili Nuxt3 mobile preview"
-&gt;&lt;/p&gt;
-&lt;p&gt;如果你想看 Nuxt 3 project、Nuxt SSR SEO、Vue mobile app 或 Vant UI 移动端页面结构，可以先看 &lt;a class="link" href="https://linsk27.github.io/projects/bilibili-nuxt3/" &gt;bilibili-nuxt3 详情页&lt;/a&gt;，再进入 &lt;a class="link" href="https://github.com/linsk27/bilibili-nuxt3" target="_blank" rel="noopener"
-&gt;GitHub 仓库&lt;/a&gt;。&lt;/p&gt;
-&lt;h3 id="feidu"&gt;feidu
-&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://linsk27.github.io/projects/feidu/" &gt;feidu&lt;/a&gt; 是一个 Nuxt 3、Vue、Tailwind CSS 和 ECharts 智慧社区数据大屏项目，展示社区管理、安防监控、CIM 平台、能源检测和节能分析等可视化界面。线上演示：&lt;a class="link" href="https://feidu-murex.vercel.app" target="_blank" rel="noopener"
-&gt;feidu-murex.vercel.app&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/feidu-smart-community-dashboard.jpg"
-loading="lazy"
-alt="feidu smart community dashboard"
-&gt;&lt;/p&gt;
-&lt;p&gt;如果你想看 smart community dashboard、Vue ECharts dashboard、Nuxt 3 data visualization、security monitoring dashboard、energy monitoring dashboard 或 CIM platform UI，可以先看 &lt;a class="link" href="https://linsk27.github.io/projects/feidu/" &gt;feidu 详情页&lt;/a&gt;，再进入 &lt;a class="link" href="https://github.com/linsk27/feidu" target="_blank" rel="noopener"
-&gt;GitHub 仓库&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;如果项目对你有帮助，欢迎在对应 GitHub 仓库点 Star。Star 是我判断后续优先完善哪个项目的最清晰信号。&lt;/p&gt;</description></item><item><title>关于 404_@林达</title><link>https://linsk27.github.io/about/</link><pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/about/</guid><description>&lt;p&gt;我是 404_@林达，主要把前端、全栈和开发工具相关想法做成可以运行、可以验证、可以继续迭代的项目。我的 GitHub 主页是 &lt;a class="link" href="https://github.com/linsk27" target="_blank" rel="noopener"
+&lt;p&gt;WebGL 负责 3D 场景，CSS3DRenderer 把真实 HTML 与 iframe 对齐到显示器。这个方案比放一张屏幕贴图难得多，却可以真的打开博客、八股文和 GitHub。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://linsk27.github.io/projects/signal-atlas/" &gt;阅读 v0.25.7 开发复盘&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://linsk27.dpdns.org/" target="_blank" rel="noopener"
+&gt;在线进入 Signal Atlas&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://github.com/linsk-labs/signal-atlas" target="_blank" rel="noopener"
+&gt;GitHub：linsk-labs/signal-atlas&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="其他公开作品"&gt;其他公开作品
+&lt;/h2&gt;&lt;p&gt;这些项目记录了我在全栈、数据可视化和移动端页面上的早期实践。它们仍然公开，但不会和当前四个重点项目抢同一层级。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;项目&lt;/th&gt;
+&lt;th&gt;主要内容&lt;/th&gt;
+&lt;th&gt;入口&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;AI-Vue3-python-flask-Blog&lt;/td&gt;
+&lt;td&gt;Vue 3、Flask、MySQL 与内容管理的全栈博客系统&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://linsk27.github.io/projects/ai-vue-flask-blog/" &gt;文章&lt;/a&gt; · &lt;a class="link" href="https://github.com/linsk27/AI-Vue3-python-flask-Blog" target="_blank" rel="noopener"
+&gt;GitHub&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;feidu&lt;/td&gt;
+&lt;td&gt;Nuxt 3、Tailwind CSS 与 ECharts 的智慧社区数据大屏&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://linsk27.github.io/projects/feidu/" &gt;文章&lt;/a&gt; · &lt;a class="link" href="https://github.com/linsk27/feidu" target="_blank" rel="noopener"
+&gt;GitHub&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;echarts-learn&lt;/td&gt;
+&lt;td&gt;Vue、Nuxt 与 ECharts 图表组合练习&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://linsk27.github.io/projects/echarts-learn/" &gt;文章&lt;/a&gt; · &lt;a class="link" href="https://github.com/linsk27/echarts-learn" target="_blank" rel="noopener"
+&gt;GitHub&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;bilibili-nuxt3&lt;/td&gt;
+&lt;td&gt;Nuxt 3、TypeScript、Vant 的移动端与 SSR 实践&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://linsk27.github.io/projects/bilibili-nuxt3/" &gt;文章&lt;/a&gt; · &lt;a class="link" href="https://github.com/linsk27/bilibili-nuxt3" target="_blank" rel="noopener"
+&gt;GitHub&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="第三方开源工具archify"&gt;第三方开源工具：Archify
+&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://github.com/tt-a1i/archify" target="_blank" rel="noopener"
+&gt;Archify&lt;/a&gt; 不是我的项目，而是 &lt;code&gt;tt-a1i&lt;/code&gt; 维护的 MIT 开源工具。我把它放在这里，是因为它和这些工程项目的文档方式很契合。&lt;/p&gt;
+&lt;p&gt;它更准确的定位是“给 AI Agent 使用的技术制图 Skill”，而不是传统的在线画板：Agent 把自然语言或仓库证据整理成 typed JSON IR，Node.js CLI 先校验结构，再由 HTML/SVG renderer 生成架构图、工作流图、时序图、数据流图或生命周期图。结果可以是自包含 HTML，也能导出 PNG、SVG 等格式。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;自然语言 / 仓库证据
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; typed JSON IR
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓ 校验
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; HTML / SVG renderer
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 架构图、流程图、时序图
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;如果以后要给 Dev Cockpit、Local AI Ops 或 ProofPR 补更直观的架构说明，这类“图表即代码”的方式比手工拖框更容易跟仓库一起维护。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://tt-a1i.github.io/archify/" target="_blank" rel="noopener"
+&gt;Archify 官网&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://github.com/tt-a1i/archify" target="_blank" rel="noopener"
+&gt;GitHub：tt-a1i/archify&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果其中某个项目对你有帮助，欢迎到对应仓库查看 README、Issue 或点 Star。对我来说，真实使用反馈比在项目页堆更多关键词更有价值。&lt;/p&gt;</description></item><item><title>关于 404_@林达</title><link>https://linsk27.github.io/about/</link><pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/about/</guid><description>&lt;p&gt;我是 404_@林达，主要把前端、全栈和开发工具相关想法做成可以运行、可以验证、可以继续迭代的项目。我的 GitHub 主页是 &lt;a class="link" href="https://github.com/linsk27" target="_blank" rel="noopener"
 &gt;github.com/linsk27&lt;/a&gt;，项目入口是 &lt;a class="link" href="https://linsk27.github.io/projects/" &gt;404_@林达 Projects&lt;/a&gt;，按仓库整理的入口是 &lt;a class="link" href="https://linsk27.github.io/github/" &gt;404_@林达 GitHub 项目索引&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id="关注方向"&gt;关注方向
 &lt;/h2&gt;&lt;ul&gt;
@@ -467,10 +593,10 @@ alt="feidu smart community dashboard"
 &lt;/ul&gt;
 &lt;h2 id="推荐项目"&gt;推荐项目
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://linsk27.github.io/projects/signal-atlas/" &gt;Signal Atlas&lt;/a&gt;：Three.js 作品集实验室，用 WebGL 场景、CSS3D 显示器投影和 Vue 项目图谱展示项目证据。&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://linsk27.github.io/projects/signal-atlas/" &gt;Signal Atlas&lt;/a&gt;：Three.js 工作站，在有完整 MIT 归因的开源外层上运行原创复古桌面和真实内容入口。&lt;/li&gt;
 &lt;li&gt;&lt;a class="link" href="https://linsk27.github.io/projects/local-ai-ops/" &gt;Local AI Ops&lt;/a&gt;：局域网本地阿里云 AI 运维工作台，用于整理云资源、监控检查、告警和排查建议。&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://linsk27.github.io/projects/dev-cockpit/" &gt;Dev Cockpit&lt;/a&gt;：本地资源雷达工作台，用于收集 GitHub 仓库、工具和教程，并通过卡片库、价值评分和星云图整理资料。&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://linsk27.github.io/projects/proofpr/" &gt;ProofPR&lt;/a&gt;：GitHub Action 和 CLI，用于 Pull Request 证据扫描、风险提示和维护者 review 辅助。&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://linsk27.github.io/projects/dev-cockpit/" &gt;Dev Cockpit&lt;/a&gt;：本地开发工作台，用于恢复项目技术栈、启动命令、端口、环境和 Git 状态；资源雷达是其中一个模块。&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://linsk27.github.io/projects/proofpr/" &gt;ProofPR&lt;/a&gt;：不调用大模型的 GitHub Action 和 CLI，用确定性规则检查 Pull Request 证据和风险信号。&lt;/li&gt;
 &lt;li&gt;&lt;a class="link" href="https://linsk27.github.io/projects/feidu/" &gt;feidu&lt;/a&gt;：Nuxt 3、Vue、Tailwind CSS 和 ECharts 智慧社区数据大屏，覆盖安防监控、CIM 平台和能源监测。&lt;/li&gt;
 &lt;li&gt;&lt;a class="link" href="https://linsk27.github.io/projects/ai-vue-flask-blog/" &gt;AI-Vue3-python-flask-Blog&lt;/a&gt;：Vue 3、Flask、MySQL 和 AI 能力组合的博客系统。&lt;/li&gt;
 &lt;/ul&gt;
@@ -483,123 +609,145 @@ alt="feidu smart community dashboard"
 &lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;微信：linsk27&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;如果某个项目对你有参考价值，欢迎进入对应 GitHub 仓库查看 README、运行说明和项目截图。&lt;/p&gt;</description></item><item><title>Dev Cockpit 资源雷达工作台</title><link>https://linsk27.github.io/projects/dev-cockpit/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/dev-cockpit/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png" alt="Featured image of post Dev Cockpit 资源雷达工作台" /&gt;&lt;p&gt;Dev Cockpit 现在更像一个本地资源雷达，而不是普通的项目启动器。它把我平时看到的 GitHub 仓库、Demo、工具、教程和工作流资料收进一个工作台，再用分类、标签、摘要、价值评分和可视化视图帮助我判断哪些东西值得继续研究。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png"
+&lt;p&gt;如果某个项目对你有参考价值，欢迎进入对应 GitHub 仓库查看 README、运行说明和项目截图。&lt;/p&gt;</description></item><item><title>Dev Cockpit：隔几天回来，也知道项目怎么跑</title><link>https://linsk27.github.io/projects/dev-cockpit/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/dev-cockpit/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png" alt="Featured image of post Dev Cockpit：隔几天回来，也知道项目怎么跑" /&gt;&lt;p&gt;最初我只想解决一个很笨、但每天都会遇到的问题：隔几天重新打开项目时，我已经忘了它用什么命令启动、端口在哪、Python 环境是哪一个、上次又为什么失败。Dev Cockpit 就是从这个问题长出来的。&lt;/p&gt;
+&lt;p&gt;它不是 IDE，也不打算替代 VS Code、Docker Desktop 或 Conda。它负责回答的是更靠前的几件事：这个目录是什么项目、应该怎么启动、现在到底有没有运行、端口属于谁、失败信息在哪里。&lt;/p&gt;
+&lt;h2 id="扫描一个项目时程序在看什么"&gt;扫描一个项目时，程序在看什么
+&lt;/h2&gt;&lt;p&gt;把一个目录交给 Dev Cockpit 后，核心扫描器会读取常见标记文件、包管理配置和 Git 状态，识别 Node、Python、Java、PHP、Ruby、.NET、Go、Rust 与 Docker 项目。接着再从 &lt;code&gt;package.json&lt;/code&gt; scripts、入口文件和配置中推断启动命令与候选端口，最后把不同技术栈整理成统一的项目状态。&lt;/p&gt;
+&lt;p&gt;这听起来像“判断文件存不存在”，但麻烦通常出在冲突上。例如同一个目录里既有 Python 虚拟环境，也有 VS Code 解释器设置和 Conda 声明。当前策略会按手工绑定、编辑器配置、项目虚拟环境、Conda 声明等优先级解析，并把为什么选中这个解释器一起展示，而不是静默猜一个路径。&lt;/p&gt;
+&lt;h2 id="看到-3000-端口不等于所有项目都在线"&gt;看到 3000 端口，不等于所有项目都在线
+&lt;/h2&gt;&lt;p&gt;早期最容易写错的逻辑，是只要发现某个端口在监听，就把对应项目标成“运行中”。如果电脑上同时开了几个前端项目，这种判断很快就会串台。&lt;/p&gt;
+&lt;p&gt;Dev Cockpit 会把状态拆开看：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;是否由工作台自己启动并持有进程；&lt;/li&gt;
+&lt;li&gt;外部监听端口能否归属到当前项目或明确命令；&lt;/li&gt;
+&lt;li&gt;HTTP 地址是否真的可达；&lt;/li&gt;
+&lt;li&gt;最近一次启动是否失败；&lt;/li&gt;
+&lt;li&gt;端口是否只是别的程序留下的占用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;也就是说，“进程存在”“端口被占用”和“这个项目能访问”不是一件事。状态判断尽量依赖本地可验证信号，而不是让模型猜。&lt;/p&gt;
+&lt;h2 id="为什么拆成几层"&gt;为什么拆成几层
+&lt;/h2&gt;&lt;p&gt;这个项目是我自主立项的工具，不是某个同名 Cockpit 项目的换皮。实现建立在 Vue、Electron、Node.js 等开源生态上，代码按职责拆开：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;packages/core 扫描、栈识别、命令推断、Git 与 AI 上下文
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;packages/server 本地 HTTP API、进程、端口和 JSON 数据
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;apps/web Vue 3 + Vite 的操作界面
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;packages/cli npx / 命令行入口
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;apps/desktop Electron 桌面外壳
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这样 CLI、浏览器界面和桌面版可以共用同一套判断逻辑。界面怎么改，不应该改变“项目是否在线”的答案；以后补一种技术栈，也不需要在三个入口各写一遍。&lt;/p&gt;
+&lt;h2 id="资源雷达是后来长出来的功能"&gt;资源雷达是后来长出来的功能
+&lt;/h2&gt;&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png"
 loading="lazy"
-alt="Dev Cockpit resource radar cards"
+alt="Dev Cockpit 资源雷达卡片页"
 &gt;&lt;/p&gt;
-&lt;h2 id="为什么做这个"&gt;为什么做这个
-&lt;/h2&gt;&lt;p&gt;开发过程中真正麻烦的不是找不到资料，而是资料太分散。一个工具可能来自 GitHub，一个设计技能来自别人分享的 Skill.md，一个工作流来自社区仓库，一个教程来自短文本记录。看过之后如果没有及时归档，很快就会忘掉它为什么有价值。&lt;/p&gt;
-&lt;p&gt;Dev Cockpit 的目标是把这些资源变成可以复盘的卡片，而不是只留一串链接。每条资源都会保留来源、摘要、类型、子分类、状态和评分，后续可以按关键词、标签、来源和大类快速筛选。&lt;/p&gt;
-&lt;h2 id="当前资源页"&gt;当前资源页
-&lt;/h2&gt;&lt;p&gt;资源页现在有两个主要视图。&lt;/p&gt;
-&lt;p&gt;卡片库适合做日常整理。页面顶部可以粘贴 GitHub、Demo、工具、教程或视频号文本，也可以导入、导出和解析资源。中间区域提供搜索框、状态筛选和大类筛选，目前支持工具、Skills、Workflow 等分类。&lt;/p&gt;
-&lt;p&gt;星云图适合看资源之间的分布。它把资源按照大类和主题放进一个可视化空间里，适合快速判断当前收集内容偏向前端工具、AI 编程辅助、视觉设计、预测模拟还是 3D 生成。&lt;/p&gt;
+&lt;p&gt;我平时还会收集 GitHub 仓库、Demo、工具、Skills 和教程，所以后来加了资源雷达：把链接或文本整理成带来源、摘要、分类、标签和评分的卡片，再用筛选与星云图复盘最近关注的方向。&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-nebula.png"
 loading="lazy"
-alt="Dev Cockpit resource nebula"
+alt="Dev Cockpit 资源星云图"
 &gt;&lt;/p&gt;
-&lt;h2 id="它解决什么问题"&gt;它解决什么问题
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;把零散链接整理成有摘要、有标签、有来源的资源卡片。&lt;/li&gt;
-&lt;li&gt;区分工具、Skills、Workflow 等不同类型，避免所有资料混在一起。&lt;/li&gt;
-&lt;li&gt;给资源打价值评分，帮助优先看更值得研究的内容。&lt;/li&gt;
-&lt;li&gt;支持搜索、状态筛选和大类筛选，让资源库不会越积越乱。&lt;/li&gt;
-&lt;li&gt;通过星云图观察资源分布，快速发现自己最近关注的技术方向。&lt;/li&gt;
-&lt;li&gt;保持本地运行，适合个人开发者维护自己的资料库。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="现在收集的资源样例"&gt;现在收集的资源样例
-&lt;/h2&gt;&lt;p&gt;这版截图里可以看到 taste-skill、everything-claude-code、FreeDomain、react-bits、MiroFish、andrej-karpathy-skill、articraft、huashu-design 等资源。它们覆盖前端设计技能、AI 编程工作流、免费域名、React 动效组件、群体智能预测、3D 资产生成和智能体设计生成等方向。&lt;/p&gt;
-&lt;p&gt;这些资源不是简单展示名称，而是会被整理成摘要、来源、分类、标签和评分。这样后面回看时，不需要重新打开每个仓库才能想起来它适合什么场景。&lt;/p&gt;
-&lt;h2 id="适合谁"&gt;适合谁
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;经常收藏 GitHub 仓库、工具、教程和开发工作流资料的人。&lt;/li&gt;
-&lt;li&gt;想把资源从聊天记录、浏览器收藏夹和临时文档里整理出来的人。&lt;/li&gt;
-&lt;li&gt;需要给资源做分类、评分、状态管理和后续复盘的人。&lt;/li&gt;
-&lt;li&gt;正在研究 Agent Skills、前端工具链和设计生成工具的人。&lt;/li&gt;
-&lt;li&gt;想参考 Electron、Vue、TypeScript 本地工作台界面的人。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="技术方向"&gt;技术方向
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Electron&lt;/li&gt;
-&lt;li&gt;Vue&lt;/li&gt;
-&lt;li&gt;TypeScript&lt;/li&gt;
-&lt;li&gt;本地资源管理&lt;/li&gt;
-&lt;li&gt;GitHub 与工具资源整理&lt;/li&gt;
-&lt;li&gt;卡片式信息结构&lt;/li&gt;
-&lt;li&gt;资源分类与评分&lt;/li&gt;
-&lt;li&gt;星云图可视化&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="项目入口"&gt;项目入口
-&lt;/h2&gt;&lt;ul&gt;
+&lt;p&gt;资源处理大致是“本地规则优先，可选 AI 补充”：先解析 GitHub 或网页元数据，再用规则生成基础分类；配置模型后，AI 可以帮忙整理标题、标签和摘要，最后仍要经过预览才写入本地 JSON。它不会因为看见一个仓库就自动安装 Skill，也不会上传整个源码目录。&lt;/p&gt;
+&lt;p&gt;这也是旧文章最容易让人误解的地方：资源雷达很直观，截图也好看，但它只是 Dev Cockpit 的一个模块，项目核心仍然是恢复本地开发现场。&lt;/p&gt;
+&lt;h2 id="ai-在哪里有用哪里没资格下结论"&gt;AI 在哪里有用，哪里没资格下结论
+&lt;/h2&gt;&lt;p&gt;工作台可以把项目路径、技术栈、启动命令、端口、Git 状态和最近错误整理成一段可复制的上下文，方便交给 AI 编程工具；只有用户明确点击时，才会写入 &lt;code&gt;PROJECT_CONTEXT.md&lt;/code&gt; 或 &lt;code&gt;AGENTS.md&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;我也会用 AI 辅助梳理跨技术栈识别规则、重构和补测试。但模型不是运行状态的事实来源：端口归属、HTTP 可达性和 Python 环境解析，仍由本地确定性代码判断。这条边界比给聊天框换一个更聪明的模型重要。&lt;/p&gt;
+&lt;h2 id="试用入口"&gt;试用入口
+&lt;/h2&gt;&lt;p&gt;安装 Node.js 后可以直接运行：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;npx local-dev-cockpit
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;默认会在本机打开 &lt;code&gt;http://localhost:8787&lt;/code&gt;。项目数据保存在本地应用数据目录，定位仍是个人开发工作台，而不是需要注册账号的云服务。&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk-labs/local-dev-cockpit" target="_blank" rel="noopener"
 &gt;linsk-labs/local-dev-cockpit&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Dev Cockpit 适合作为 developer resource dashboard、GitHub resource manager、resource radar 或 Electron Vue desktop tools 的参考实现。它比普通练手页面更接近真实的个人开发资料整理流程。&lt;/p&gt;</description></item><item><title>ProofPR PR 证据检查器</title><link>https://linsk27.github.io/projects/proofpr/</link><pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/proofpr/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/proofpr-github-action-pr-review-report.png" alt="Featured image of post ProofPR PR 证据检查器" /&gt;&lt;p&gt;ProofPR 是一个面向 Pull Request 审查的 GitHub Action 和 CLI。它的目标不是替代维护者，而是把 PR 里容易被忽略的证据信号先整理出来，让 review 更快进入重点。&lt;/p&gt;
+&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>ProofPR：AI 让写 PR 变快，但 review 没变便宜</title><link>https://linsk27.github.io/projects/proofpr/</link><pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/proofpr/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/proofpr-github-action-pr-review-report.png" alt="Featured image of post ProofPR：AI 让写 PR 变快，但 review 没变便宜" /&gt;&lt;p&gt;AI 让写 Pull Request 变快了，但没有让 review 变便宜。很多 PR 最大的问题不是代码一定错，而是没有复现、没有测试、没有截图，也没解释为什么要改权限。ProofPR 先检查这些“应该随改动一起出现的证据”，再把 PR 交给人看。&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/proofpr-github-action-pr-review-report.png"
 loading="lazy"
-alt="ProofPR GitHub Action PR review report"
+alt="ProofPR 在 GitHub Action 中生成的审查报告"
 &gt;&lt;/p&gt;
-&lt;h2 id="适合谁"&gt;适合谁
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;需要快速判断 PR 风险的开源维护者。&lt;/li&gt;
-&lt;li&gt;想给仓库增加 PR evidence scanning 的团队或个人项目。&lt;/li&gt;
-&lt;li&gt;关注 secrets scanning、dependency review、CI permissions 和 MCP security 的开发者。&lt;/li&gt;
-&lt;li&gt;经常 review AI generated code，希望先看风险信号再看实现细节的人。&lt;/li&gt;
+&lt;p&gt;先说清楚：ProofPR 不是 AI code reviewer，运行时也不调用大模型。它不猜代码是不是 AI 写的，不理解你的业务逻辑，更不会替维护者判断实现是否正确。它做的是一套可解释、可重复的初筛。&lt;/p&gt;
+&lt;h2 id="一个-pr-是怎样被处理的"&gt;一个 PR 是怎样被处理的
+&lt;/h2&gt;&lt;p&gt;在本地 CLI 中，ProofPR 从 Git 读取 unified diff；在 GitHub Action 中，它会读取 PR diff、标题、正文和仓库里的 &lt;code&gt;.proofpr.yml&lt;/code&gt;。之后的数据链是这样的：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;span class="lnt"&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PR / git diff + .proofpr.yml
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 解析文件、路径和增删行
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 确定性规则引擎逐条检查
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 风险等级 + 证据分 + review gate
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; Markdown / JSON / SARIF / PR 注释
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;规则会关注改动规模、敏感路径、测试缺失、描述过薄、疑似 secret、依赖版本与 lockfile、GitHub Actions 权限、&lt;code&gt;pull_request_target&lt;/code&gt;、不可信 checkout 和 MCP 凭据等信号。最后给出四种 gate：&lt;code&gt;ready&lt;/code&gt;、&lt;code&gt;review-carefully&lt;/code&gt;、&lt;code&gt;needs-evidence&lt;/code&gt; 或 &lt;code&gt;block-merge&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;这不是在说 &lt;code&gt;block-merge&lt;/code&gt; 的 PR 一定有漏洞，而是在提醒维护者：现有证据不足，或者风险已经高到不该直接合并。&lt;/p&gt;
+&lt;h2 id="evidence-contract-比一套规则管所有仓库更实用"&gt;Evidence Contract 比“一套规则管所有仓库”更实用
+&lt;/h2&gt;&lt;p&gt;不同目录需要的证据不一样。改 UI 时，截图很有用；改 workflow 时，更应该说明权限为什么增加；改可复现 bug 时，验证步骤比一张绿勾更重要。&lt;/p&gt;
+&lt;p&gt;ProofPR 的 Evidence Contract 可以按路径声明要求，例如：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;evidenceContract&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="nt"&gt;paths&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;src/ui/**&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;require&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;screenshot&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;verification&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="nt"&gt;paths&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;.github/workflows/**&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;require&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;permission-rationale&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这样维护者检查的不是“正文够不够长”，而是这类改动有没有带上真正有用的材料。规则命中后也能看到具体原因，不需要猜评分从哪里来。&lt;/p&gt;
+&lt;h2 id="为什么故意不用-llm"&gt;为什么故意不用 LLM
+&lt;/h2&gt;&lt;p&gt;这里不用模型不是因为 AI 没价值，而是 PR gate 更看重稳定和可追溯：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不需要 API Key，也不上传仓库代码；&lt;/li&gt;
+&lt;li&gt;相同输入得到相同结果，方便复现 benchmark；&lt;/li&gt;
+&lt;li&gt;每一条命中都能回到规则、文件和行；&lt;/li&gt;
+&lt;li&gt;维护者可以在配置里明确调整阈值，而不是修改提示词碰运气。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="项目价值"&gt;项目价值
-&lt;/h2&gt;&lt;p&gt;ProofPR 会把 Pull Request 中的多类信号整理成报告，包括 secrets 线索、依赖变化、GitHub Actions 权限、MCP 安全风险和维护者需要优先看的 review 线索。这样做的核心价值是减少重复检查，让维护者更容易判断一个 PR 是否需要补证据、补测试或调整权限。&lt;/p&gt;
-&lt;p&gt;如果你搜索的是 PR review automation、GitHub Action for pull request review、pull request evidence scanning、AI generated code review 或 GitHub Actions security，这个项目就是对应入口。&lt;/p&gt;
-&lt;h2 id="技术方向"&gt;技术方向
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;GitHub Action&lt;/li&gt;
-&lt;li&gt;CLI&lt;/li&gt;
-&lt;li&gt;TypeScript / JavaScript&lt;/li&gt;
-&lt;li&gt;Pull Request diff 分析&lt;/li&gt;
-&lt;li&gt;Secrets 检测&lt;/li&gt;
-&lt;li&gt;依赖风险检查&lt;/li&gt;
-&lt;li&gt;CI 权限检查&lt;/li&gt;
-&lt;li&gt;MCP security 线索整理&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="项目入口"&gt;项目入口
-&lt;/h2&gt;&lt;ul&gt;
+&lt;p&gt;ProofPR 也不会查询完整漏洞数据库。依赖漏洞仍然更适合交给 OSV、Dependabot 等专用工具；它关注的是“这个依赖改动有没有说清楚、有没有锁定、生命周期和来源是否可疑”。&lt;/p&gt;
+&lt;h2 id="代码是怎么拆的"&gt;代码是怎么拆的
+&lt;/h2&gt;&lt;p&gt;项目使用 pnpm monorepo。&lt;code&gt;@proof-pr/core&lt;/code&gt; 负责 TypeScript 规则引擎、配置校验和报告模型；CLI 用 Commander 读取本地 Git；GitHub Action 使用 GitHub Actions Toolkit 获取 PR 上下文并发布结果。Zod、YAML 和 Picomatch 负责配置与路径匹配，Vitest 与 benchmark 用来锁定规则行为。&lt;/p&gt;
+&lt;p&gt;当前仓库的 benchmark 覆盖 22 个固定案例。这个数字本身不代表工具已经“识别所有风险”，它的价值是：新增或修改规则时，能立刻知道旧案例有没有被破坏。&lt;/p&gt;
+&lt;p&gt;ProofPR 也是我围绕“先补审查证据”这个问题自行设计的项目，不是某个 reviewer 仓库的换皮。开发和测试过程中，我会借助 AI 做规则梳理、重构和文档辅助；但发布后的扫描器不调用模型，阈值、评分和输出都留在可查看、可复现的代码里。&lt;/p&gt;
+&lt;h2 id="它适不适合你的仓库"&gt;它适不适合你的仓库
+&lt;/h2&gt;&lt;p&gt;如果仓库经常接收外部贡献，或者团队已经觉得 PR review 被重复检查拖慢，它会比较有用。若只是一个人写、一个人合并的小项目，维护这套 gate 可能反而比手动看两眼更重。工具存在的意义不是给每个 PR 多加一盏红灯，而是把有限的 review 时间留给真正需要人判断的部分。&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk-labs/proof-pr" target="_blank" rel="noopener"
 &gt;linsk-labs/proof-pr&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;如果这个项目对你的 PR review 工作流有帮助，欢迎在 GitHub 仓库点 Star。Star 是我判断后续规则和报告质量优先级的主要依据。&lt;/p&gt;</description></item><item><title>AI-v0.dev AI UI 原型</title><link>https://linsk27.github.io/projects/ai-v0-dev/</link><pubDate>Tue, 31 Mar 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/ai-v0-dev/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/ai-v0-dev-learning-dashboard.png" alt="Featured image of post AI-v0.dev AI UI 原型" /&gt;&lt;p&gt;AI-v0.dev- 是一个用 Next.js、React、TypeScript、Tailwind CSS 和 shadcn/ui 搭出来的 AI 学习仪表盘原型。它把 3 个月 AI 工程师冲刺计划拆成时间线、项目卡片、知识体系、里程碑、任务进度和本地数据管理。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/ai-v0-dev-learning-dashboard.png"
-loading="lazy"
-alt="AI v0 learning dashboard"
-&gt;&lt;/p&gt;
-&lt;h2 id="适合谁"&gt;适合谁
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;想看 v0.dev 生成页面如何继续整理成真实项目的人。&lt;/li&gt;
-&lt;li&gt;正在做 AI learning dashboard、Next.js dashboard 或学习计划工具的人。&lt;/li&gt;
-&lt;li&gt;想参考 shadcn/ui、Tailwind 和 Radix UI 组合方式的前端开发者。&lt;/li&gt;
-&lt;li&gt;需要 AI UI prototype、项目卡片、进度追踪和本地状态管理界面的人。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="项目价值"&gt;项目价值
-&lt;/h2&gt;&lt;p&gt;这个项目的重点是产品原型表达。它不是默认模板仓库，而是把学习计划、任务、项目、资源和里程碑组合成一个可交互的仪表盘。对于搜索 AI UI prototype、v0.dev workflow、Next.js dashboard、Tailwind interface design 或 AI learning dashboard 的人，这个页面能更快说明项目价值。&lt;/p&gt;
-&lt;h2 id="技术方向"&gt;技术方向
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Next.js&lt;/li&gt;
-&lt;li&gt;React&lt;/li&gt;
-&lt;li&gt;TypeScript&lt;/li&gt;
-&lt;li&gt;Tailwind CSS&lt;/li&gt;
-&lt;li&gt;shadcn/ui&lt;/li&gt;
-&lt;li&gt;Radix UI&lt;/li&gt;
-&lt;li&gt;localStorage 状态管理&lt;/li&gt;
-&lt;li&gt;v0.dev workflow&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="项目入口"&gt;项目入口
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk27/AI-v0.dev-" target="_blank" rel="noopener"
-&gt;linsk27/AI-v0.dev-&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;如果这个 AI 产品界面原型对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续沉淀可复用界面结构和交互模式的主要依据。&lt;/p&gt;</description></item><item><title>Vue3 图片上传与本地预览的常见写法</title><link>https://linsk27.github.io/p/vue3-%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E4%B8%8E%E6%9C%AC%E5%9C%B0%E9%A2%84%E8%A7%88%E7%9A%84%E5%B8%B8%E8%A7%81%E5%86%99%E6%B3%95/</link><pubDate>Wed, 18 Mar 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/p/vue3-%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E4%B8%8E%E6%9C%AC%E5%9C%B0%E9%A2%84%E8%A7%88%E7%9A%84%E5%B8%B8%E8%A7%81%E5%86%99%E6%B3%95/</guid><description>&lt;p&gt;图片上传通常不只是把文件传到接口：用户还需要在提交前看到预览图，前端需要拦住错误格式和过大的文件，替换图片或离开页面时也要释放浏览器临时创建的地址。&lt;/p&gt;
+&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Vue3 图片上传与本地预览的常见写法</title><link>https://linsk27.github.io/p/vue3-%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E4%B8%8E%E6%9C%AC%E5%9C%B0%E9%A2%84%E8%A7%88%E7%9A%84%E5%B8%B8%E8%A7%81%E5%86%99%E6%B3%95/</link><pubDate>Wed, 18 Mar 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/p/vue3-%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E4%B8%8E%E6%9C%AC%E5%9C%B0%E9%A2%84%E8%A7%88%E7%9A%84%E5%B8%B8%E8%A7%81%E5%86%99%E6%B3%95/</guid><description>&lt;p&gt;图片上传通常不只是把文件传到接口：用户还需要在提交前看到预览图，前端需要拦住错误格式和过大的文件，替换图片或离开页面时也要释放浏览器临时创建的地址。&lt;/p&gt;
 &lt;p&gt;下面用 &lt;code&gt;el-upload&lt;/code&gt; 做一个单图上传的基础版本。&lt;/p&gt;
 &lt;h2 id="先在选择文件时做校验"&gt;先在选择文件时做校验
 &lt;/h2&gt;&lt;p&gt;把校验抽成一个函数，既可以在选择文件时调用，也可以在真正请求前再执行一次。前端校验主要是避免用户走到无效的提交步骤。&lt;/p&gt;
@@ -1098,40 +1246,7 @@ alt="AI Vue Flask blog home page"
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="小结"&gt;小结
-&lt;/h2&gt;&lt;p&gt;表格页真正需要统一管理的是请求参数和页面状态：页码、每页数量、筛选条件、排序条件、总数与加载状态。把这些状态放在同一处后，分页和表格才不会各自运行、互相打架。&lt;/p&gt;</description></item><item><title>Vue-blog 前端博客项目</title><link>https://linsk27.github.io/projects/vue-blog/</link><pubDate>Wed, 23 Jul 2025 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/vue-blog/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/vue-blog-demo.png" alt="Featured image of post Vue-blog 前端博客项目" /&gt;&lt;p&gt;Vue-blog 是一个 Vue 前端博客项目，用来展示文章入口、AI 中心、数据分析看板和内容型页面结构。它适合作为 Vue blog project、front-end learning notes、content presentation 和前端页面组织方式的参考。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/vue-blog-demo.png"
-loading="lazy"
-alt="Vue blog demo"
-&gt;&lt;/p&gt;
-&lt;h2 id="适合谁"&gt;适合谁
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;想参考 Vue 博客首页、文章入口和导航结构的人。&lt;/li&gt;
-&lt;li&gt;正在做学习笔记、内容展示或个人博客前端的人。&lt;/li&gt;
-&lt;li&gt;需要 AI 中心、数据分析看板和内容型页面组合示例的人。&lt;/li&gt;
-&lt;li&gt;想看 Vue 项目如何整理页面层级和视觉入口的人。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="项目价值"&gt;项目价值
-&lt;/h2&gt;&lt;p&gt;Vue-blog 的价值在于它有可访问的线上成品，并且页面结构比普通静态练习更完整。它把博客首页、文章入口、AI 中心和数据分析看板放在同一个前端项目里，适合用来观察内容型应用如何组织导航、视觉层级和页面入口。&lt;/p&gt;
-&lt;p&gt;如果你搜索的是 Vue blog project、Vue front-end project、front-end learning notes、content presentation 或 AI center dashboard，这个项目可以作为一个直接可打开的示例。&lt;/p&gt;
-&lt;h2 id="技术方向"&gt;技术方向
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Vue&lt;/li&gt;
-&lt;li&gt;前端页面结构&lt;/li&gt;
-&lt;li&gt;博客首页&lt;/li&gt;
-&lt;li&gt;内容展示&lt;/li&gt;
-&lt;li&gt;AI 中心&lt;/li&gt;
-&lt;li&gt;数据分析看板&lt;/li&gt;
-&lt;li&gt;学习笔记展示&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="项目入口"&gt;项目入口
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk27/Vue-blog" target="_blank" rel="noopener"
-&gt;linsk27/Vue-blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;线上演示：&lt;a class="link" href="https://vue-blog-smoky.vercel.app/" target="_blank" rel="noopener"
-&gt;vue-blog-smoky.vercel.app&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;如果这个 Vue 博客项目对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续完善页面结构、文档和可复用组件示例的主要信号。&lt;/p&gt;</description></item><item><title>手撸好看柱状图的记录</title><link>https://linsk27.github.io/p/0603-%E6%89%8B%E6%92%B8%E5%A5%BD%E7%9C%8B%E6%9F%B1%E7%8A%B6%E5%9B%BE%E7%9A%84%E8%AE%B0%E5%BD%95/</link><pubDate>Tue, 03 Jun 2025 01:05:52 +0800</pubDate><guid>https://linsk27.github.io/p/0603-%E6%89%8B%E6%92%B8%E5%A5%BD%E7%9C%8B%E6%9F%B1%E7%8A%B6%E5%9B%BE%E7%9A%84%E8%AE%B0%E5%BD%95/</guid><description>&lt;p&gt;&lt;img src="https://s2.loli.net/2025/05/29/fjPIURxH1rTybDw.png"
+&lt;/h2&gt;&lt;p&gt;表格页真正需要统一管理的是请求参数和页面状态：页码、每页数量、筛选条件、排序条件、总数与加载状态。把这些状态放在同一处后，分页和表格才不会各自运行、互相打架。&lt;/p&gt;</description></item><item><title>手撸好看柱状图的记录</title><link>https://linsk27.github.io/p/0603-%E6%89%8B%E6%92%B8%E5%A5%BD%E7%9C%8B%E6%9F%B1%E7%8A%B6%E5%9B%BE%E7%9A%84%E8%AE%B0%E5%BD%95/</link><pubDate>Tue, 03 Jun 2025 01:05:52 +0800</pubDate><guid>https://linsk27.github.io/p/0603-%E6%89%8B%E6%92%B8%E5%A5%BD%E7%9C%8B%E6%9F%B1%E7%8A%B6%E5%9B%BE%E7%9A%84%E8%AE%B0%E5%BD%95/</guid><description>&lt;p&gt;&lt;img src="https://s2.loli.net/2025/05/29/fjPIURxH1rTybDw.png"
 loading="lazy"
 &gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
