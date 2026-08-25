@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on 404_@林达</title><link>https://linsk27.github.io/page/</link><description>Recent content in Pages on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Tue, 25 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/page/index.xml" rel="self" type="application/rss+xml"/><item><title>404_@林达 GitHub 项目索引</title><link>https://linsk27.github.io/github/</link><pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/github/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-desk-v0.25.7.png" alt="Featured image of post 404_@林达 GitHub 项目索引" /&gt;&lt;p&gt;这里是更直接的仓库索引，顺序与我当前 GitHub 主页的精选项目保持一致。想看实现背景、开源来源和开发取舍，可以进入更完整的 &lt;a class="link" href="https://linsk27.github.io/projects/" &gt;项目主页&lt;/a&gt;。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on 404_@林达</title><link>https://linsk27.github.io/page/</link><description>Recent content in Pages on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Wed, 26 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/page/index.xml" rel="self" type="application/rss+xml"/><item><title>404_@林达 GitHub 项目索引</title><link>https://linsk27.github.io/github/</link><pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/github/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-desk-v0.25.7.png" alt="Featured image of post 404_@林达 GitHub 项目索引" /&gt;&lt;p&gt;这里是更直接的仓库索引，顺序与我当前 GitHub 主页的精选项目保持一致。想看实现背景、开源来源和开发取舍，可以进入更完整的 &lt;a class="link" href="https://linsk27.github.io/projects/" &gt;项目主页&lt;/a&gt;。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;个人主页：&lt;a class="link" href="https://github.com/linsk27" target="_blank" rel="noopener"
 &gt;github.com/linsk27&lt;/a&gt;&lt;/li&gt;
@@ -92,8 +92,7 @@
 &lt;li&gt;想先看视觉效果和浏览器交互：直接进入 &lt;a class="link" href="https://linsk27.dpdns.org/" target="_blank" rel="noopener"
 &gt;Signal Atlas&lt;/a&gt;。&lt;/li&gt;
 &lt;li&gt;想看早期全栈或可视化作品：再从上面的其他公开仓库挑选。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;项目页另外整理了我关注的第三方开源工具，例如 &lt;a class="link" href="https://linsk27.github.io/projects/#%e7%ac%ac%e4%b8%89%e6%96%b9%e5%bc%80%e6%ba%90%e5%b7%a5%e5%85%b7archify" &gt;Archify&lt;/a&gt;。这些工具会明确标注作者，不会和我自己的仓库混在一起。&lt;/p&gt;</description></item><item><title>404_@林达 项目主页</title><link>https://linsk27.github.io/projects/</link><pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-desk-v0.25.7.png" alt="Featured image of post 404_@林达 项目主页" /&gt;&lt;p&gt;这里不再把所有仓库放在同一层。前四个是我目前持续维护、也最能说明开发方向的项目；早期作品保留为简短索引；Archify 则单独放在“第三方开源工具”里，避免把别人的项目写成我的作品。&lt;/p&gt;
+&lt;/ul&gt;</description></item><item><title>404_@林达 项目主页</title><link>https://linsk27.github.io/projects/</link><pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-desk-v0.25.7.png" alt="Featured image of post 404_@林达 项目主页" /&gt;&lt;p&gt;这里不再把所有仓库放在同一层。前四个是我目前持续维护、也最能说明开发方向的项目；早期作品保留为简短索引。&lt;/p&gt;
 &lt;p&gt;如果你只想快速跳到仓库，可以看 &lt;a class="link" href="https://linsk27.github.io/github/" &gt;GitHub 项目索引&lt;/a&gt;；想了解为什么这样设计、哪些部分使用开源基础、AI 参与到什么程度，可以继续往下看。&lt;/p&gt;
 &lt;h2 id="正在维护"&gt;正在维护
 &lt;/h2&gt;&lt;h3 id="dev-cockpit"&gt;Dev Cockpit
@@ -183,37 +182,6 @@ alt="Signal Atlas v0.25.7 工作站全景"
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id="第三方开源工具archify"&gt;第三方开源工具：Archify
-&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://github.com/tt-a1i/archify" target="_blank" rel="noopener"
-&gt;Archify&lt;/a&gt; 不是我的项目，而是 &lt;code&gt;tt-a1i&lt;/code&gt; 维护的 MIT 开源工具。我把它放在这里，是因为它和这些工程项目的文档方式很契合。&lt;/p&gt;
-&lt;p&gt;它更准确的定位是“给 AI Agent 使用的技术制图 Skill”，而不是传统的在线画板：Agent 把自然语言或仓库证据整理成 typed JSON IR，Node.js CLI 先校验结构，再由 HTML/SVG renderer 生成架构图、工作流图、时序图、数据流图或生命周期图。结果可以是自包含 HTML，也能导出 PNG、SVG 等格式。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;span class="lnt"&gt;6
-&lt;/span&gt;&lt;span class="lnt"&gt;7
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;自然语言 / 仓库证据
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; typed JSON IR
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓ 校验
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; HTML / SVG renderer
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 架构图、流程图、时序图
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;如果以后要给 Dev Cockpit、Local AI Ops 或 ProofPR 补更直观的架构说明，这类“图表即代码”的方式比手工拖框更容易跟仓库一起维护。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://tt-a1i.github.io/archify/" target="_blank" rel="noopener"
-&gt;Archify 官网&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://github.com/tt-a1i/archify" target="_blank" rel="noopener"
-&gt;GitHub：tt-a1i/archify&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 &lt;p&gt;如果其中某个项目对你有帮助，欢迎到对应仓库查看 README、Issue 或点 Star。对我来说，真实使用反馈比在项目页堆更多关键词更有价值。&lt;/p&gt;</description></item><item><title>关于 404_@林达</title><link>https://linsk27.github.io/about/</link><pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/about/</guid><description>&lt;p&gt;我是 404_@林达，主要把前端、全栈和开发工具相关想法做成可以运行、可以验证、可以继续迭代的项目。我的 GitHub 主页是 &lt;a class="link" href="https://github.com/linsk27" target="_blank" rel="noopener"
 &gt;github.com/linsk27&lt;/a&gt;，项目入口是 &lt;a class="link" href="https://linsk27.github.io/projects/" &gt;404_@林达 Projects&lt;/a&gt;，按仓库整理的入口是 &lt;a class="link" href="https://linsk27.github.io/github/" &gt;404_@林达 GitHub 项目索引&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id="关注方向"&gt;关注方向

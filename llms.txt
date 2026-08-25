@@ -22,10 +22,6 @@ About page: https://linsk27.github.io/about/
 - echarts-learn: Vue, Nuxt and ECharts dashboard practice. Project page: https://linsk27.github.io/projects/echarts-learn/ Repository: https://github.com/linsk27/echarts-learn
 - bilibili-nuxt3: Nuxt 3, Vue, TypeScript and Vant mobile project practice. Project page: https://linsk27.github.io/projects/bilibili-nuxt3/ Repository: https://github.com/linsk27/bilibili-nuxt3
 
-## Third-party open-source tools
-
-- Archify by tt-a1i: MIT-licensed Agent skill that turns natural language or repository evidence into validated technical diagrams through typed JSON IR and HTML/SVG rendering. This is an external project, not a linsk27 repository. Website: https://tt-a1i.github.io/archify/ Repository: https://github.com/tt-a1i/archify
-
 ## Topics
 
 Vue, TypeScript, JavaScript, React, Nuxt, Node.js, Vite, Electron, Three.js, CSS3DRenderer, WebGL, GitHub Actions, deterministic PR review, FastAPI, Python, PostgreSQL, Redis, Celery, Alibaba Cloud, Flask, MySQL, ECharts, local-first developer tools, DNS, Cloudflare.
