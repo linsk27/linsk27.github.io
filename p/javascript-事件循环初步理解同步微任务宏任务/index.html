@@ -123,7 +123,7 @@
 </span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=nx>runForever</span><span class=p>()</span>
-</span></span></code></pre></td></tr></table></div></div><p>这类代码会让浏览器一直处理微任务，页面可能失去响应。实际业务里，耗时计算应该拆分处理，或者交给 Web Worker，避免堵住主线程。</p><h2 id=小结>小结</h2><p>理解事件循环后，排查异步顺序可以按这个步骤走：先找同步代码，再找 <code>Promise</code> 和 <code>await</code> 产生的微任务，最后看 <code>setTimeout</code> 等后续任务。大部分“为什么这个日志先出来”“为什么 DOM 还没更新”的问题，都会变得清楚很多。</p></section><footer class=article-footer><section class=article-tags><a href=/tags/javascript/>Javascript</a>
+</span></span></code></pre></td></tr></table></div></div><p>这类代码会让浏览器一直处理微任务，页面可能失去响应。实际业务里，耗时计算应该拆分处理，或者交给 Web Worker，避免堵住主线程。</p><h2 id=小结>小结</h2><p>理解事件循环后，排查异步顺序可以按这个步骤走：先找同步代码，再找 <code>Promise</code> 和 <code>await</code> 产生的微任务，最后看 <code>setTimeout</code> 等后续任务。大部分“为什么这个日志先出来”“为什么 DOM 还没更新”的问题，都会变得清楚很多。</p></section><footer class=article-footer><section class=article-tags><a href=/tags/javascript/>JavaScript</a>
 <a href=/tags/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/>事件循环</a>
 <a href=/tags/promise/>Promise</a>
 <a href=/tags/%E5%BC%82%E6%AD%A5/>异步</a></section><section class=article-copyright><svg class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
