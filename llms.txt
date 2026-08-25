@@ -1,6 +1,6 @@
 # 404_@林达
 
-> 404_@林达 的个人项目与开发笔记，重点记录本地开发工具、AI 运维、PR 证据检查、Three.js 作品集、数据可视化和全栈实践。
+> 404_@林达 的个人项目与开发笔记，重点记录竞品研究智能体、本地开发工具、AI 运维、PR 证据检查、Three.js 作品集、数据可视化和全栈实践。
 
 Main site: https://linsk27.github.io/
 GitHub profile: https://github.com/linsk27
@@ -10,6 +10,7 @@ About page: https://linsk27.github.io/about/
 
 ## Maintained projects
 
+- Jingjian: private Taobao competitor-research workbench that combines public-source research, operator-authenticated browser capture, resumable checkpoints, deterministic quality gates, and PPTX/HTML/JSON delivery. Project page: https://linsk27.github.io/projects/jingjian/ Repository: private
 - Dev Cockpit: local development workbench for detecting stacks, commands, ports, Python environments, Git state, runtime status, and restoring project context. Project page: https://linsk27.github.io/projects/dev-cockpit/ Repository: https://github.com/linsk-labs/local-dev-cockpit
 - Local AI Ops: local-first Alibaba Cloud ops console for asset sync, monitoring checks, alert workflow, and optional redacted troubleshooting suggestions. Project page: https://linsk27.github.io/projects/local-ai-ops/ Repository: https://github.com/linsk-labs/local-ai-ops
 - ProofPR: deterministic GitHub Action and CLI for pull request evidence checks, dependency signals, workflow permissions, secrets, MCP configuration, and review gates. It does not call an LLM at runtime. Project page: https://linsk27.github.io/projects/proofpr/ Repository: https://github.com/linsk-labs/proof-pr
@@ -24,7 +25,7 @@ About page: https://linsk27.github.io/about/
 
 ## Topics
 
-Vue, TypeScript, JavaScript, React, Nuxt, Node.js, Vite, Electron, Three.js, CSS3DRenderer, WebGL, GitHub Actions, deterministic PR review, FastAPI, Python, PostgreSQL, Redis, Celery, Alibaba Cloud, Flask, MySQL, ECharts, local-first developer tools, DNS, Cloudflare.
+Python, FastAPI, Playwright CDP, PPTX generation, durable workflows, Vue, TypeScript, JavaScript, React, Nuxt, Node.js, Vite, Electron, Three.js, CSS3DRenderer, WebGL, GitHub Actions, deterministic PR review, PostgreSQL, Redis, Celery, Alibaba Cloud, Flask, MySQL, ECharts, local-first developer tools, DNS, Cloudflare.
 
 ## Contact
 
