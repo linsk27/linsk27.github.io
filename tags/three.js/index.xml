@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Three.js on 404_@林达</title><link>https://linsk27.github.io/tags/three.js/</link><description>Recent content in Three.js on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Wed, 26 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/tags/three.js/index.xml" rel="self" type="application/rss+xml"/><item><title>Signal Atlas：把真实网页放进 Three.js 工作站</title><link>https://linsk27.github.io/projects/signal-atlas/</link><pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/signal-atlas/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-desk-v0.25.7.png" alt="Featured image of post Signal Atlas：把真实网页放进 Three.js 工作站" /&gt;&lt;p&gt;现在打开 Signal Atlas，看到的已经不是最早那版项目卡片页，而是一台可以进入的 3D 工作站。外层场景来自一个 MIT 开源作品集，我保留了许可证和署名；显示器里的复古桌面、窗口系统、博客与八股文入口，以及两层页面之间的交互，是我按自己的内容重新实现的。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Three.js on 404_@林达</title><link>https://linsk27.github.io/tags/three.js/</link><description>Recent content in Three.js on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Thu, 27 Aug 2026 06:40:23 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/three.js/index.xml" rel="self" type="application/rss+xml"/><item><title>Signal Atlas：把真实网页放进 Three.js 工作站</title><link>https://linsk27.github.io/projects/signal-atlas/</link><pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/signal-atlas/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-desk-v0.25.7.png" alt="Featured image of post Signal Atlas：把真实网页放进 Three.js 工作站" /&gt;&lt;p&gt;现在打开 Signal Atlas，看到的已经不是最早那版项目卡片页，而是一台可以进入的 3D 工作站。外层场景来自一个 MIT 开源作品集，我保留了许可证和署名；显示器里的复古桌面、窗口系统、博客与八股文入口，以及两层页面之间的交互，是我按自己的内容重新实现的。&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-desk-v0.25.7.png"
 loading="lazy"
 alt="Signal Atlas v0.25.7 参考版工作站全景"
@@ -6,34 +6,26 @@ alt="Signal Atlas v0.25.7 参考版工作站全景"
 &lt;p&gt;这张图是 v0.25.7 生产版本的真实画面，不再使用旧版 Atlas 面板截图。现在的桌面只保留 Hugo 博客、八股炼丹炉、GitHub 和 QQ 这些真实入口，之前用来占位置的 &lt;code&gt;My Showcase&lt;/code&gt; 和伪应用已经删除。&lt;/p&gt;
 &lt;h2 id="从看起来很酷到真的能用"&gt;从“看起来很酷”到“真的能用”
 &lt;/h2&gt;&lt;p&gt;最初做 3D 主页，想法很简单：普通项目卡片太像简历，我更想让访问者走到一台电脑前，再从电脑里打开我的内容。但真正开始接博客以后，问题就不再是“模型好不好看”，而是网站能不能顺利打开、显示器里的链接能不能点、滚轮会不会带着外层相机一起转。&lt;/p&gt;
-&lt;p&gt;Signal Atlas 现在其实同时运行两套渲染：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Three.js WebGL 场景
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; +
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;CSS3DRenderer 中的真实 HTML / iframe
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;共享同一台相机，看起来像一块完整显示器
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;WebGL 负责房间、电脑和光影；CSS3DRenderer 负责把可交互的 DOM 放到显示器的位置。网页没有被截成一张纹理，所以聚焦显示器后仍然可以点击、滚动和打开窗口。代价是每次相机移动、窗口缩放或发生遮挡，都要重新保证两层几何对得上。&lt;/p&gt;
+&lt;p&gt;Signal Atlas 现在由两种渲染技术协作，并为内嵌页增加一层按显示器几何定位的覆盖层：&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-rendering-architecture.svg"
+alt="Signal Atlas 将 WebGL、CSS3D 和内嵌页覆盖层同步到同一显示器的渲染结构"
+width="510"
+height="1069"
+loading="lazy"
+decoding="async"&gt;
+&lt;/figure&gt;
+&lt;p&gt;WebGL 负责房间、电脑、光影与 CRT 效果；CSS3DRenderer 负责把可交互的桌面 DOM 放到显示器的位置。网页没有被截成一张纹理，所以聚焦显示器后仍然可以点击、滚动和打开窗口。代价是每次相机移动、窗口缩放或发生遮挡，都要重新保证几层几何对得上。&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-monitor-v0.25.7.png"
 loading="lazy"
 alt="聚焦后的 Signal Atlas 显示器"
 &gt;&lt;/p&gt;
 &lt;h2 id="八股文内嵌页为什么最难处理"&gt;八股文内嵌页为什么最难处理
-&lt;/h2&gt;&lt;p&gt;八股炼丹炉本身在另一个服务上。直接在浏览器打开时，它只需要面对一个正常视口；放进 Signal Atlas 后，却变成“3D 投影里的桌面窗口里再放一个网页”，尺寸、裁切和跨域链路都会更复杂。&lt;/p&gt;
-&lt;p&gt;这一版没有简单把 iframe 放大后藏住溢出，而是把内层应用投影到独立的覆盖层，根据桌面窗口的四个角计算显示区域，再裁切到真实显示器边界。窗口移动、缩放或页面恢复时会重新校正几何；加载失败时有超时、重试和明确的降级提示。Vercel 的同域 rewrite 则负责把请求转到八股文实际服务，减少浏览器嵌套加载时的限制。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;八股炼丹炉本身在另一个服务上。直接在浏览器打开时，它只需要面对一个正常视口；如果继续把它嵌套在 3D 桌面的 iframe 里，尺寸、裁切和跨域链路都会更复杂。&lt;/p&gt;
+&lt;p&gt;当前版没有在桌面里继续嵌套八股页。桌面只通过 &lt;code&gt;postMessage&lt;/code&gt; 把窗口位置发给父页面，父页面再结合 CSS3D 锚点计算屏幕四角，用固定定位的 DOM Portal 承载真实 iframe，并裁切到显示器边界。窗口移动、缩放或页面恢复时会重新校正几何；单次加载超过 18 秒会进入失败处理，随后最多重试 2 次。Vercel 的同源 rewrite 负责把请求转到八股文实际服务。&lt;/p&gt;
 &lt;p&gt;这也解释了它为什么仍不可能做到百分之百稳定：如果八股文源站或 Cloudflare Tunnel 本身离线，外层工作站无法凭空把服务变可用。现在能做的是正确重试、恢复布局，并把“上游不可用”和“页面溢出”分开处理。&lt;/p&gt;
 &lt;h2 id="第一次进入为什么比普通博客重"&gt;第一次进入为什么比普通博客重
-&lt;/h2&gt;&lt;p&gt;3D 场景要加载模型、贴图、脚本和媒体，第一次访问天然比纯 HTML 博客更贵。v0.25.7 做了几件比较实际的事：启动阶段只等待 8 个关键资源；CRT 视频改为 &lt;code&gt;preload=&amp;quot;none&amp;quot;&lt;/code&gt;，音频只读元数据；HTML 每次重新校验，而带版本号的 JS、CSS 和静态素材走长期缓存。浏览器从 BFCache 返回时也尽量恢复现场，不再完整重启一次。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;3D 场景要加载模型、贴图、脚本和媒体，第一次访问天然比纯 HTML 博客更贵。v0.25.7 做了几件比较实际的事：启动阶段只等待 8 个关键资源；CRT 视频改为 &lt;code&gt;preload=&amp;quot;none&amp;quot;&lt;/code&gt;，启动音和环境音只预读元数据，两段很短的鼠标音保留预加载；HTML 每次重新校验，而带版本号的 JS、CSS 和静态素材走长期缓存。浏览器从 BFCache 返回时也尽量恢复现场，不再完整重启一次。&lt;/p&gt;
 &lt;p&gt;这不会让 3D 首页变得和文字页一样轻，但能避免“为了等一段暂时用不到的视频，整个入口一直卡在 BIOS”。&lt;/p&gt;
 &lt;h2 id="哪些是开源基础哪些是我做的"&gt;哪些是开源基础，哪些是我做的
 &lt;/h2&gt;&lt;p&gt;这部分我想写清楚，避免把“基于开源”说成“全部原创”。&lt;/p&gt;

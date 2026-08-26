@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>工程 on 404_@林达</title><link>https://linsk27.github.io/categories/%E5%B7%A5%E7%A8%8B/</link><description>Recent content in 工程 on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Tue, 25 Aug 2026 12:00:00 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/categories/%E5%B7%A5%E7%A8%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>DigitalPlat 免费域名实操：先弄懂 DNS 委派，再配 Cloudflare</title><link>https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/</link><pubDate>Wed, 03 Jun 2026 12:00:00 +0800</pubDate><guid>https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/</guid><description>&lt;img src="https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/digitalplat-nameserver.png" alt="Featured image of post DigitalPlat 免费域名实操：先弄懂 DNS 委派，再配 Cloudflare" /&gt;&lt;p&gt;这一篇不是“我开发了一个免费域名平台”，而是一次真实配置记录：我怎样通过 DigitalPlat 领取 &lt;code&gt;linsk27.dpdns.org&lt;/code&gt;，再把 DNS 控制权交给 Cloudflare。控制台按钮以后可能变化，但 DNS 委派的原理不会跟着换皮肤。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>工程 on 404_@林达</title><link>https://linsk27.github.io/categories/%E5%B7%A5%E7%A8%8B/</link><description>Recent content in 工程 on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Thu, 27 Aug 2026 06:40:23 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/categories/%E5%B7%A5%E7%A8%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>DigitalPlat 免费域名实操：先弄懂 DNS 委派，再配 Cloudflare</title><link>https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/</link><pubDate>Wed, 03 Jun 2026 12:00:00 +0800</pubDate><guid>https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/</guid><description>&lt;img src="https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/digitalplat-nameserver.png" alt="Featured image of post DigitalPlat 免费域名实操：先弄懂 DNS 委派，再配 Cloudflare" /&gt;&lt;p&gt;这一篇不是“我开发了一个免费域名平台”，而是一次真实配置记录：我怎样通过 DigitalPlat 领取 &lt;code&gt;linsk27.dpdns.org&lt;/code&gt;，再把 DNS 控制权交给 Cloudflare。控制台按钮以后可能变化，但 DNS 委派的原理不会跟着换皮肤。&lt;/p&gt;
 &lt;p&gt;免费域名适合学习、测试、个人项目展示和临时服务入口。真正重要的生产项目，还是建议使用自己购买并长期持有的独立域名，方便迁移和品牌沉淀。&lt;/p&gt;
 &lt;h2 id="先理解三个角色"&gt;先理解三个角色
 &lt;/h2&gt;&lt;p&gt;刚接触域名时，最容易把“注册成功”“DNS 生效”和“网站能打开”当成同一件事。实际上这条链路里有三个角色：&lt;/p&gt;
@@ -7,24 +7,16 @@
 &lt;li&gt;&lt;strong&gt;Cloudflare&lt;/strong&gt; 接受委派，成为这个子域的权威 DNS，回答 A、AAAA 或 CNAME 记录。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Vercel、GitHub Pages 或自己的服务器&lt;/strong&gt; 才是真正返回网页的源站。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;浏览器访问时，递归 DNS 会先沿着父域找到 Cloudflare nameserver，再从 Cloudflare 拿到源站地址；如果开启了橙云代理，请求还会先经过 Cloudflare 的 CDN 与 HTTPS 层。可以把它理解成：DigitalPlat 决定“去问谁”，Cloudflare 回答“网站在哪”，源站负责“返回什么”。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;浏览器 → 递归 DNS → DigitalPlat 的父域委派
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; Cloudflare 权威 DNS
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; Vercel / GitHub Pages / 服务器
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;因此，注册成功但没有 DNS 记录，网站仍然打不开；DNS 已经正确，但托管平台没有绑定自定义域名，也一样会报错。&lt;/p&gt;
+&lt;p&gt;浏览器访问时，递归 DNS 会先沿着父区委派找到 Cloudflare nameserver，再从 Cloudflare 拿到 DNS 答案。DNS 查询结束后，浏览器才会另起 HTTPS 请求：开启橙云时先连接 Cloudflare Edge，再由代理转到源站；DNS only 时则直接连接源站。可以把它理解成：DigitalPlat 决定“去问谁”，Cloudflare 的权威 DNS 回答“先连哪里”，源站最终负责“返回什么”。&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src="https://linsk27.github.io/img/projects/digitalplat-dns-delegation.svg"
+alt="从 DigitalPlat 子域委派、Cloudflare 权威 DNS 到源站网页访问的完整链路"
+width="442"
+height="1258"
+loading="lazy"
+decoding="async"&gt;
+&lt;/figure&gt;
+&lt;p&gt;因此，注册成功但没有 DNS 记录，网站仍然打不开；DNS 已经正确，但托管平台没有绑定自定义域名，也一样会报错。&lt;/p&gt;
 &lt;h2 id="准备工作"&gt;准备工作
 &lt;/h2&gt;&lt;p&gt;开始之前需要准备三样东西：&lt;/p&gt;
 &lt;ul&gt;
@@ -257,31 +249,15 @@ alt="ProofPR 在 GitHub Action 中生成的审查报告"
 &lt;p&gt;先说清楚：ProofPR 不是 AI code reviewer，运行时也不调用大模型。它不猜代码是不是 AI 写的，不理解你的业务逻辑，更不会替维护者判断实现是否正确。它做的是一套可解释、可重复的初筛。&lt;/p&gt;
 &lt;h2 id="一个-pr-是怎样被处理的"&gt;一个 PR 是怎样被处理的
 &lt;/h2&gt;&lt;p&gt;在本地 CLI 中，ProofPR 从 Git 读取 unified diff；在 GitHub Action 中，它会读取 PR diff、标题、正文和仓库里的 &lt;code&gt;.proofpr.yml&lt;/code&gt;。之后的数据链是这样的：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;span class="lnt"&gt;6
-&lt;/span&gt;&lt;span class="lnt"&gt;7
-&lt;/span&gt;&lt;span class="lnt"&gt;8
-&lt;/span&gt;&lt;span class="lnt"&gt;9
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PR / git diff + .proofpr.yml
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 解析文件、路径和增删行
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 确定性规则引擎逐条检查
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 风险等级 + 证据分 + review gate
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; Markdown / JSON / SARIF / PR 注释
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;规则会关注改动规模、敏感路径、测试缺失、描述过薄、疑似 secret、依赖版本与 lockfile、GitHub Actions 权限、&lt;code&gt;pull_request_target&lt;/code&gt;、不可信 checkout 和 MCP 凭据等信号。最后给出四种 gate：&lt;code&gt;ready&lt;/code&gt;、&lt;code&gt;review-carefully&lt;/code&gt;、&lt;code&gt;needs-evidence&lt;/code&gt; 或 &lt;code&gt;block-merge&lt;/code&gt;。&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src="https://linsk27.github.io/img/projects/proofpr-evidence-pipeline.svg"
+alt="ProofPR 将本地或 GitHub 的 PR 输入经过确定性证据规则转换为可解释审查结果"
+width="564"
+height="769"
+loading="lazy"
+decoding="async"&gt;
+&lt;/figure&gt;
+&lt;p&gt;规则会关注改动规模、敏感路径、测试缺失、描述过薄、疑似 secret、依赖版本与 lockfile、GitHub Actions 权限、&lt;code&gt;pull_request_target&lt;/code&gt;、不可信 checkout 和 MCP 凭据等信号。最后给出四种 gate：&lt;code&gt;ready&lt;/code&gt;、&lt;code&gt;review-carefully&lt;/code&gt;、&lt;code&gt;needs-evidence&lt;/code&gt; 或 &lt;code&gt;block-merge&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;这不是在说 &lt;code&gt;block-merge&lt;/code&gt; 的 PR 一定有漏洞，而是在提醒维护者：现有证据不足，或者风险已经高到不该直接合并。&lt;/p&gt;
 &lt;h2 id="evidence-contract-比一套规则管所有仓库更实用"&gt;Evidence Contract 比“一套规则管所有仓库”更实用
 &lt;/h2&gt;&lt;p&gt;不同目录需要的证据不一样。改 UI 时，截图很有用；改 workflow 时，更应该说明权限为什么增加；改可复现 bug 时，验证步骤比一张绿勾更重要。&lt;/p&gt;
@@ -293,22 +269,24 @@ alt="ProofPR 在 GitHub Action 中生成的审查报告"
 &lt;/span&gt;&lt;span class="lnt"&gt;3
 &lt;/span&gt;&lt;span class="lnt"&gt;4
 &lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;evidenceContract&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="nt"&gt;paths&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;src/ui/**&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;require&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;screenshot&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;verification&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="nt"&gt;paths&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;.github/workflows/**&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;require&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;permission-rationale&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;evidence&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;contracts&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="nt"&gt;id&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;ui-screenshot&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;paths&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;src/ui/**&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;requires&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;screenshot&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;verification&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;severity&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;medium&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;这样维护者检查的不是“正文够不够长”，而是这类改动有没有带上真正有用的材料。规则命中后也能看到具体原因，不需要猜评分从哪里来。&lt;/p&gt;
 &lt;h2 id="为什么故意不用-llm"&gt;为什么故意不用 LLM
 &lt;/h2&gt;&lt;p&gt;这里不用模型不是因为 AI 没价值，而是 PR gate 更看重稳定和可追溯：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;不需要 API Key，也不上传仓库代码；&lt;/li&gt;
+&lt;li&gt;不需要 API Key，也不会把 diff 发送给第三方模型服务；&lt;/li&gt;
 &lt;li&gt;相同输入得到相同结果，方便复现 benchmark；&lt;/li&gt;
-&lt;li&gt;每一条命中都能回到规则、文件和行；&lt;/li&gt;
+&lt;li&gt;每条发现都能回到具体规则和证据；适用时还会标出文件与新增行；&lt;/li&gt;
 &lt;li&gt;维护者可以在配置里明确调整阈值，而不是修改提示词碰运气。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;ProofPR 也不会查询完整漏洞数据库。依赖漏洞仍然更适合交给 OSV、Dependabot 等专用工具；它关注的是“这个依赖改动有没有说清楚、有没有锁定、生命周期和来源是否可疑”。&lt;/p&gt;

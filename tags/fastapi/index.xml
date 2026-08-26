@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>FastAPI on 404_@林达</title><link>https://linsk27.github.io/tags/fastapi/</link><description>Recent content in FastAPI on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Thu, 27 Aug 2026 05:24:32 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/fastapi/index.xml" rel="self" type="application/rss+xml"/><item><title>竞见：把淘宝竞品调研做成一条可恢复的 PPT 生产线</title><link>https://linsk27.github.io/projects/jingjian/</link><pubDate>Wed, 26 Aug 2026 04:34:00 +0800</pubDate><guid>https://linsk27.github.io/projects/jingjian/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/jingjian-workspace-current.png" alt="Featured image of post 竞见：把淘宝竞品调研做成一条可恢复的 PPT 生产线" /&gt;&lt;p&gt;竞见是我们围绕淘宝竞品调研自己开发的一套内部工作台。输入研究主题、品类、市场、价格带和可选的对标品牌，它会依次完成资料检索、品牌研究、洞察整理、淘宝商品采集和 PPT 报告生成。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>FastAPI on 404_@林达</title><link>https://linsk27.github.io/tags/fastapi/</link><description>Recent content in FastAPI on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Thu, 27 Aug 2026 06:40:23 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/fastapi/index.xml" rel="self" type="application/rss+xml"/><item><title>竞见：把淘宝竞品调研做成一条可恢复的 PPT 生产线</title><link>https://linsk27.github.io/projects/jingjian/</link><pubDate>Wed, 26 Aug 2026 04:34:00 +0800</pubDate><guid>https://linsk27.github.io/projects/jingjian/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/jingjian-workspace-current.png" alt="Featured image of post 竞见：把淘宝竞品调研做成一条可恢复的 PPT 生产线" /&gt;&lt;p&gt;竞见是我们围绕淘宝竞品调研自己开发的一套内部工作台。输入研究主题、品类、市场、价格带和可选的对标品牌，它会依次完成资料检索、品牌研究、洞察整理、淘宝商品采集和 PPT 报告生成。&lt;/p&gt;
 &lt;p&gt;我们想解决的不是“让 AI 帮忙写几段文案”，而是把一份竞品报告里重复、耗时、容易中断，又必须留下证据的工作，变成一条可以真正跑完的流程。&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/jingjian-workspace-current.png"
 loading="lazy"
@@ -58,36 +58,22 @@ alt="Local AI Ops 本地空数据实例"
 &lt;h2 id="先把确定的数据链跑通"&gt;先把确定的数据链跑通
 &lt;/h2&gt;&lt;p&gt;这个项目是我围绕自己的运维需求立项和开发的，不是给某个现成面板换皮。FastAPI、React、Celery 这些开源框架负责基础能力，阿里云官方 SDK 负责读取云端资源；我主要做的是资产模型、检查流程、告警状态和本地安全边界。&lt;/p&gt;
 &lt;p&gt;整体数据流没有刻意做复杂：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;span class="lnt"&gt;6
-&lt;/span&gt;&lt;span class="lnt"&gt;7
-&lt;/span&gt;&lt;span class="lnt"&gt;8
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;React / ECharts
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;FastAPI ─────────────→ PostgreSQL
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │ ↑
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ├─ 阿里云 OpenAPI │
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └─ Redis / Celery Worker ┘
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; HTTP、TCP、SSH、云监控检查
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;用户先明确触发资产同步，后端通过 RAM AccessKey 调用阿里云 OpenAPI，把 ECS、轻量应用服务器、OSS、域名和 DNS 转成统一的本地资产。PostgreSQL 保存资产、手工补充的运维资料、检查结果和告警；Redis 与 Celery 负责耗时的同步和探测任务，避免页面一直等接口返回。&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src="https://linsk27.github.io/img/projects/local-ai-ops-data-flow.svg"
+alt="Local AI Ops 从资产同步和健康检查到告警与诊断建议的数据流"
+width="353"
+height="948"
+loading="lazy"
+decoding="async"&gt;
+&lt;/figure&gt;
+&lt;p&gt;用户明确触发资产同步后，FastAPI 会在当前请求中通过 RAM AccessKey 调用阿里云 OpenAPI，把 ECS、轻量应用服务器、OSS、域名和 DNS 转成统一的本地资产。PostgreSQL 保存资产、手工补充的运维资料、检查结果、告警和诊断；Redis、Celery Beat 与 Worker 只负责每分钟筛选并执行已经启用且到期的检查，不承担手动资产同步和诊断。&lt;/p&gt;
 &lt;p&gt;一次健康检查大致会这样走：Celery Beat 判断哪些检查到期，Worker 执行 HTTP、TCP、SSH、CloudMonitor 或云助手只读命令，把结果写回数据库，再根据连续失败次数更新告警。这里的关键是先拿到可重复验证的事实，而不是先问模型“服务器为什么挂了”。&lt;/p&gt;
 &lt;h2 id="ai-只放在最后一层"&gt;AI 只放在最后一层
-&lt;/h2&gt;&lt;p&gt;告警发生后，系统会整理当前资产、告警内容和最近几次检查结果，先脱敏，再交给 OpenAI-compatible 接口生成摘要、可能原因和排查步骤。如果没有配置模型，或者接口调用失败，就回退到本地规则建议。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;用户针对某条告警发起诊断时，系统会整理当前资产、告警内容和最近几次检查结果，先脱敏，再交给 OpenAI-compatible 接口生成摘要、可能原因和排查步骤。如果没有配置模型，或者接口调用失败，就回退到本地规则建议。&lt;/p&gt;
 &lt;p&gt;我刻意保留了几条边界：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;模型只能给建议，不能自动执行修复。&lt;/li&gt;
-&lt;li&gt;建议命令限制在只读白名单里，真正的变更仍由人确认。&lt;/li&gt;
+&lt;li&gt;模型建议只展示、不自动执行；真正进入 SSH 或云助手执行器的命令才受严格的只读白名单限制。&lt;/li&gt;
 &lt;li&gt;发送给模型前要去掉 AccessKey、密码、私钥和其他敏感字段。&lt;/li&gt;
 &lt;li&gt;AI 不是监控数据的事实来源，HTTP 状态、端口和云指标才是。&lt;/li&gt;
 &lt;/ul&gt;
@@ -97,7 +83,7 @@ alt="Local AI Ops 本地空数据实例"
 &lt;p&gt;Local AI Ops 也不打算替代阿里云控制台。云厂商控制台负责完整配置能力，这个工作台更像我的运维索引：哪些资源属于哪个项目、什么时候到期、最近是否可达、出问题时先看什么，都能在一个地方接起来。&lt;/p&gt;
 &lt;h2 id="ai-也参与开发但不参与拍脑袋"&gt;AI 也参与开发，但不参与拍脑袋
 &lt;/h2&gt;&lt;p&gt;开发时我会用 AI 编程工具辅助拆需求、补样板代码、梳理接口和测试边界。不过资产结构、安全规则、告警流程和真实云账号验证必须由我自己确定。涉及凭据和自动化时，我更相信“代码里能看到的限制”，而不是一句提示词承诺。&lt;/p&gt;
-&lt;p&gt;目前它仍是个人和小团队可用的 MVP，不是公网多租户 SaaS。下一步比“再加一个聊天框”更重要的，是继续完善资产关系、续费提醒、检查可观测性和备份恢复。&lt;/p&gt;
+&lt;p&gt;目前它仍是个人和小团队可用的 MVP，不是公网多租户 SaaS。v0.3.0 已经补上资产关系图、续费中心和纯本地数据库知识库；下一步更重要的是把手动同步、检查和诊断真正移入 Worker，并完善备份恢复、定时资产同步和操作审计。&lt;/p&gt;
 &lt;h2 id="项目入口"&gt;项目入口
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk-labs/local-ai-ops" target="_blank" rel="noopener"

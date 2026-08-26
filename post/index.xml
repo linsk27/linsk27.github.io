@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 404_@林达</title><link>https://linsk27.github.io/post/</link><description>Recent content in Posts on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Thu, 27 Aug 2026 05:24:32 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>竞见：把淘宝竞品调研做成一条可恢复的 PPT 生产线</title><link>https://linsk27.github.io/projects/jingjian/</link><pubDate>Wed, 26 Aug 2026 04:34:00 +0800</pubDate><guid>https://linsk27.github.io/projects/jingjian/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/jingjian-workspace-current.png" alt="Featured image of post 竞见：把淘宝竞品调研做成一条可恢复的 PPT 生产线" /&gt;&lt;p&gt;竞见是我们围绕淘宝竞品调研自己开发的一套内部工作台。输入研究主题、品类、市场、价格带和可选的对标品牌，它会依次完成资料检索、品牌研究、洞察整理、淘宝商品采集和 PPT 报告生成。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 404_@林达</title><link>https://linsk27.github.io/post/</link><description>Recent content in Posts on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Thu, 27 Aug 2026 06:40:23 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>竞见：把淘宝竞品调研做成一条可恢复的 PPT 生产线</title><link>https://linsk27.github.io/projects/jingjian/</link><pubDate>Wed, 26 Aug 2026 04:34:00 +0800</pubDate><guid>https://linsk27.github.io/projects/jingjian/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/jingjian-workspace-current.png" alt="Featured image of post 竞见：把淘宝竞品调研做成一条可恢复的 PPT 生产线" /&gt;&lt;p&gt;竞见是我们围绕淘宝竞品调研自己开发的一套内部工作台。输入研究主题、品类、市场、价格带和可选的对标品牌，它会依次完成资料检索、品牌研究、洞察整理、淘宝商品采集和 PPT 报告生成。&lt;/p&gt;
 &lt;p&gt;我们想解决的不是“让 AI 帮忙写几段文案”，而是把一份竞品报告里重复、耗时、容易中断，又必须留下证据的工作，变成一条可以真正跑完的流程。&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/jingjian-workspace-current.png"
 loading="lazy"
@@ -57,34 +57,26 @@ alt="Signal Atlas v0.25.7 参考版工作站全景"
 &lt;p&gt;这张图是 v0.25.7 生产版本的真实画面，不再使用旧版 Atlas 面板截图。现在的桌面只保留 Hugo 博客、八股炼丹炉、GitHub 和 QQ 这些真实入口，之前用来占位置的 &lt;code&gt;My Showcase&lt;/code&gt; 和伪应用已经删除。&lt;/p&gt;
 &lt;h2 id="从看起来很酷到真的能用"&gt;从“看起来很酷”到“真的能用”
 &lt;/h2&gt;&lt;p&gt;最初做 3D 主页，想法很简单：普通项目卡片太像简历，我更想让访问者走到一台电脑前，再从电脑里打开我的内容。但真正开始接博客以后，问题就不再是“模型好不好看”，而是网站能不能顺利打开、显示器里的链接能不能点、滚轮会不会带着外层相机一起转。&lt;/p&gt;
-&lt;p&gt;Signal Atlas 现在其实同时运行两套渲染：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Three.js WebGL 场景
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; +
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;CSS3DRenderer 中的真实 HTML / iframe
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;共享同一台相机，看起来像一块完整显示器
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;WebGL 负责房间、电脑和光影；CSS3DRenderer 负责把可交互的 DOM 放到显示器的位置。网页没有被截成一张纹理，所以聚焦显示器后仍然可以点击、滚动和打开窗口。代价是每次相机移动、窗口缩放或发生遮挡，都要重新保证两层几何对得上。&lt;/p&gt;
+&lt;p&gt;Signal Atlas 现在由两种渲染技术协作，并为内嵌页增加一层按显示器几何定位的覆盖层：&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-rendering-architecture.svg"
+alt="Signal Atlas 将 WebGL、CSS3D 和内嵌页覆盖层同步到同一显示器的渲染结构"
+width="510"
+height="1069"
+loading="lazy"
+decoding="async"&gt;
+&lt;/figure&gt;
+&lt;p&gt;WebGL 负责房间、电脑、光影与 CRT 效果；CSS3DRenderer 负责把可交互的桌面 DOM 放到显示器的位置。网页没有被截成一张纹理，所以聚焦显示器后仍然可以点击、滚动和打开窗口。代价是每次相机移动、窗口缩放或发生遮挡，都要重新保证几层几何对得上。&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-monitor-v0.25.7.png"
 loading="lazy"
 alt="聚焦后的 Signal Atlas 显示器"
 &gt;&lt;/p&gt;
 &lt;h2 id="八股文内嵌页为什么最难处理"&gt;八股文内嵌页为什么最难处理
-&lt;/h2&gt;&lt;p&gt;八股炼丹炉本身在另一个服务上。直接在浏览器打开时，它只需要面对一个正常视口；放进 Signal Atlas 后，却变成“3D 投影里的桌面窗口里再放一个网页”，尺寸、裁切和跨域链路都会更复杂。&lt;/p&gt;
-&lt;p&gt;这一版没有简单把 iframe 放大后藏住溢出，而是把内层应用投影到独立的覆盖层，根据桌面窗口的四个角计算显示区域，再裁切到真实显示器边界。窗口移动、缩放或页面恢复时会重新校正几何；加载失败时有超时、重试和明确的降级提示。Vercel 的同域 rewrite 则负责把请求转到八股文实际服务，减少浏览器嵌套加载时的限制。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;八股炼丹炉本身在另一个服务上。直接在浏览器打开时，它只需要面对一个正常视口；如果继续把它嵌套在 3D 桌面的 iframe 里，尺寸、裁切和跨域链路都会更复杂。&lt;/p&gt;
+&lt;p&gt;当前版没有在桌面里继续嵌套八股页。桌面只通过 &lt;code&gt;postMessage&lt;/code&gt; 把窗口位置发给父页面，父页面再结合 CSS3D 锚点计算屏幕四角，用固定定位的 DOM Portal 承载真实 iframe，并裁切到显示器边界。窗口移动、缩放或页面恢复时会重新校正几何；单次加载超过 18 秒会进入失败处理，随后最多重试 2 次。Vercel 的同源 rewrite 负责把请求转到八股文实际服务。&lt;/p&gt;
 &lt;p&gt;这也解释了它为什么仍不可能做到百分之百稳定：如果八股文源站或 Cloudflare Tunnel 本身离线，外层工作站无法凭空把服务变可用。现在能做的是正确重试、恢复布局，并把“上游不可用”和“页面溢出”分开处理。&lt;/p&gt;
 &lt;h2 id="第一次进入为什么比普通博客重"&gt;第一次进入为什么比普通博客重
-&lt;/h2&gt;&lt;p&gt;3D 场景要加载模型、贴图、脚本和媒体，第一次访问天然比纯 HTML 博客更贵。v0.25.7 做了几件比较实际的事：启动阶段只等待 8 个关键资源；CRT 视频改为 &lt;code&gt;preload=&amp;quot;none&amp;quot;&lt;/code&gt;，音频只读元数据；HTML 每次重新校验，而带版本号的 JS、CSS 和静态素材走长期缓存。浏览器从 BFCache 返回时也尽量恢复现场，不再完整重启一次。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;3D 场景要加载模型、贴图、脚本和媒体，第一次访问天然比纯 HTML 博客更贵。v0.25.7 做了几件比较实际的事：启动阶段只等待 8 个关键资源；CRT 视频改为 &lt;code&gt;preload=&amp;quot;none&amp;quot;&lt;/code&gt;，启动音和环境音只预读元数据，两段很短的鼠标音保留预加载；HTML 每次重新校验，而带版本号的 JS、CSS 和静态素材走长期缓存。浏览器从 BFCache 返回时也尽量恢复现场，不再完整重启一次。&lt;/p&gt;
 &lt;p&gt;这不会让 3D 首页变得和文字页一样轻，但能避免“为了等一段暂时用不到的视频，整个入口一直卡在 BIOS”。&lt;/p&gt;
 &lt;h2 id="哪些是开源基础哪些是我做的"&gt;哪些是开源基础，哪些是我做的
 &lt;/h2&gt;&lt;p&gt;这部分我想写清楚，避免把“基于开源”说成“全部原创”。&lt;/p&gt;
@@ -118,36 +110,22 @@ alt="Local AI Ops 本地空数据实例"
 &lt;h2 id="先把确定的数据链跑通"&gt;先把确定的数据链跑通
 &lt;/h2&gt;&lt;p&gt;这个项目是我围绕自己的运维需求立项和开发的，不是给某个现成面板换皮。FastAPI、React、Celery 这些开源框架负责基础能力，阿里云官方 SDK 负责读取云端资源；我主要做的是资产模型、检查流程、告警状态和本地安全边界。&lt;/p&gt;
 &lt;p&gt;整体数据流没有刻意做复杂：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;span class="lnt"&gt;6
-&lt;/span&gt;&lt;span class="lnt"&gt;7
-&lt;/span&gt;&lt;span class="lnt"&gt;8
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;React / ECharts
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;FastAPI ─────────────→ PostgreSQL
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │ ↑
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ├─ 阿里云 OpenAPI │
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └─ Redis / Celery Worker ┘
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; HTTP、TCP、SSH、云监控检查
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;用户先明确触发资产同步，后端通过 RAM AccessKey 调用阿里云 OpenAPI，把 ECS、轻量应用服务器、OSS、域名和 DNS 转成统一的本地资产。PostgreSQL 保存资产、手工补充的运维资料、检查结果和告警；Redis 与 Celery 负责耗时的同步和探测任务，避免页面一直等接口返回。&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src="https://linsk27.github.io/img/projects/local-ai-ops-data-flow.svg"
+alt="Local AI Ops 从资产同步和健康检查到告警与诊断建议的数据流"
+width="353"
+height="948"
+loading="lazy"
+decoding="async"&gt;
+&lt;/figure&gt;
+&lt;p&gt;用户明确触发资产同步后，FastAPI 会在当前请求中通过 RAM AccessKey 调用阿里云 OpenAPI，把 ECS、轻量应用服务器、OSS、域名和 DNS 转成统一的本地资产。PostgreSQL 保存资产、手工补充的运维资料、检查结果、告警和诊断；Redis、Celery Beat 与 Worker 只负责每分钟筛选并执行已经启用且到期的检查，不承担手动资产同步和诊断。&lt;/p&gt;
 &lt;p&gt;一次健康检查大致会这样走：Celery Beat 判断哪些检查到期，Worker 执行 HTTP、TCP、SSH、CloudMonitor 或云助手只读命令，把结果写回数据库，再根据连续失败次数更新告警。这里的关键是先拿到可重复验证的事实，而不是先问模型“服务器为什么挂了”。&lt;/p&gt;
 &lt;h2 id="ai-只放在最后一层"&gt;AI 只放在最后一层
-&lt;/h2&gt;&lt;p&gt;告警发生后，系统会整理当前资产、告警内容和最近几次检查结果，先脱敏，再交给 OpenAI-compatible 接口生成摘要、可能原因和排查步骤。如果没有配置模型，或者接口调用失败，就回退到本地规则建议。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;用户针对某条告警发起诊断时，系统会整理当前资产、告警内容和最近几次检查结果，先脱敏，再交给 OpenAI-compatible 接口生成摘要、可能原因和排查步骤。如果没有配置模型，或者接口调用失败，就回退到本地规则建议。&lt;/p&gt;
 &lt;p&gt;我刻意保留了几条边界：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;模型只能给建议，不能自动执行修复。&lt;/li&gt;
-&lt;li&gt;建议命令限制在只读白名单里，真正的变更仍由人确认。&lt;/li&gt;
+&lt;li&gt;模型建议只展示、不自动执行；真正进入 SSH 或云助手执行器的命令才受严格的只读白名单限制。&lt;/li&gt;
 &lt;li&gt;发送给模型前要去掉 AccessKey、密码、私钥和其他敏感字段。&lt;/li&gt;
 &lt;li&gt;AI 不是监控数据的事实来源，HTTP 状态、端口和云指标才是。&lt;/li&gt;
 &lt;/ul&gt;
@@ -157,7 +135,7 @@ alt="Local AI Ops 本地空数据实例"
 &lt;p&gt;Local AI Ops 也不打算替代阿里云控制台。云厂商控制台负责完整配置能力，这个工作台更像我的运维索引：哪些资源属于哪个项目、什么时候到期、最近是否可达、出问题时先看什么，都能在一个地方接起来。&lt;/p&gt;
 &lt;h2 id="ai-也参与开发但不参与拍脑袋"&gt;AI 也参与开发，但不参与拍脑袋
 &lt;/h2&gt;&lt;p&gt;开发时我会用 AI 编程工具辅助拆需求、补样板代码、梳理接口和测试边界。不过资产结构、安全规则、告警流程和真实云账号验证必须由我自己确定。涉及凭据和自动化时，我更相信“代码里能看到的限制”，而不是一句提示词承诺。&lt;/p&gt;
-&lt;p&gt;目前它仍是个人和小团队可用的 MVP，不是公网多租户 SaaS。下一步比“再加一个聊天框”更重要的，是继续完善资产关系、续费提醒、检查可观测性和备份恢复。&lt;/p&gt;
+&lt;p&gt;目前它仍是个人和小团队可用的 MVP，不是公网多租户 SaaS。v0.3.0 已经补上资产关系图、续费中心和纯本地数据库知识库；下一步更重要的是把手动同步、检查和诊断真正移入 Worker，并完善备份恢复、定时资产同步和操作审计。&lt;/p&gt;
 &lt;h2 id="项目入口"&gt;项目入口
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk-labs/local-ai-ops" target="_blank" rel="noopener"
@@ -173,24 +151,16 @@ alt="Local AI Ops 本地空数据实例"
 &lt;li&gt;&lt;strong&gt;Cloudflare&lt;/strong&gt; 接受委派，成为这个子域的权威 DNS，回答 A、AAAA 或 CNAME 记录。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Vercel、GitHub Pages 或自己的服务器&lt;/strong&gt; 才是真正返回网页的源站。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;浏览器访问时，递归 DNS 会先沿着父域找到 Cloudflare nameserver，再从 Cloudflare 拿到源站地址；如果开启了橙云代理，请求还会先经过 Cloudflare 的 CDN 与 HTTPS 层。可以把它理解成：DigitalPlat 决定“去问谁”，Cloudflare 回答“网站在哪”，源站负责“返回什么”。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;浏览器 → 递归 DNS → DigitalPlat 的父域委派
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; Cloudflare 权威 DNS
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; Vercel / GitHub Pages / 服务器
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;因此，注册成功但没有 DNS 记录，网站仍然打不开；DNS 已经正确，但托管平台没有绑定自定义域名，也一样会报错。&lt;/p&gt;
+&lt;p&gt;浏览器访问时，递归 DNS 会先沿着父区委派找到 Cloudflare nameserver，再从 Cloudflare 拿到 DNS 答案。DNS 查询结束后，浏览器才会另起 HTTPS 请求：开启橙云时先连接 Cloudflare Edge，再由代理转到源站；DNS only 时则直接连接源站。可以把它理解成：DigitalPlat 决定“去问谁”，Cloudflare 的权威 DNS 回答“先连哪里”，源站最终负责“返回什么”。&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src="https://linsk27.github.io/img/projects/digitalplat-dns-delegation.svg"
+alt="从 DigitalPlat 子域委派、Cloudflare 权威 DNS 到源站网页访问的完整链路"
+width="442"
+height="1258"
+loading="lazy"
+decoding="async"&gt;
+&lt;/figure&gt;
+&lt;p&gt;因此，注册成功但没有 DNS 记录，网站仍然打不开；DNS 已经正确，但托管平台没有绑定自定义域名，也一样会报错。&lt;/p&gt;
 &lt;h2 id="准备工作"&gt;准备工作
 &lt;/h2&gt;&lt;p&gt;开始之前需要准备三样东西：&lt;/p&gt;
 &lt;ul&gt;
@@ -418,7 +388,7 @@ data-flex-basis="426px"
 &lt;p&gt;完成后，&lt;code&gt;linsk27.dpdns.org&lt;/code&gt; 就可以作为个人项目、测试服务或博客入口使用。以后遇到打不开，也按“NS 委派 → DNS 记录 → 源站绑定 → TLS/HTTP”这个顺序逐层检查，不需要在几个控制台之间来回碰运气。&lt;/p&gt;</description></item><item><title>Dev Cockpit：隔几天回来，也知道项目怎么跑</title><link>https://linsk27.github.io/projects/dev-cockpit/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/dev-cockpit/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png" alt="Featured image of post Dev Cockpit：隔几天回来，也知道项目怎么跑" /&gt;&lt;p&gt;最初我只想解决一个很笨、但每天都会遇到的问题：隔几天重新打开项目时，我已经忘了它用什么命令启动、端口在哪、Python 环境是哪一个、上次又为什么失败。Dev Cockpit 就是从这个问题长出来的。&lt;/p&gt;
 &lt;p&gt;它不是 IDE，也不打算替代 VS Code、Docker Desktop 或 Conda。它负责回答的是更靠前的几件事：这个目录是什么项目、应该怎么启动、现在到底有没有运行、端口属于谁、失败信息在哪里。&lt;/p&gt;
 &lt;h2 id="扫描一个项目时程序在看什么"&gt;扫描一个项目时，程序在看什么
-&lt;/h2&gt;&lt;p&gt;把一个目录交给 Dev Cockpit 后，核心扫描器会读取常见标记文件、包管理配置和 Git 状态，识别 Node、Python、Java、PHP、Ruby、.NET、Go、Rust 与 Docker 项目。接着再从 &lt;code&gt;package.json&lt;/code&gt; scripts、入口文件和配置中推断启动命令与候选端口，最后把不同技术栈整理成统一的项目状态。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;把一个目录交给 Dev Cockpit 后，核心扫描器会读取常见标记文件、包管理配置和 Git 状态，识别 Node、Python、Java、PHP、Ruby、.NET、Go、Rust 与 Docker 项目。接着再从 package scripts、常见入口和技术栈约定中推断启动命令与候选端口，并结合进程归属和 HTTP 探测确认实际运行状态。&lt;/p&gt;
 &lt;p&gt;这听起来像“判断文件存不存在”，但麻烦通常出在冲突上。例如同一个目录里既有 Python 虚拟环境，也有 VS Code 解释器设置和 Conda 声明。当前策略会按手工绑定、编辑器配置、项目虚拟环境、Conda 声明等优先级解析，并把为什么选中这个解释器一起展示，而不是静默猜一个路径。&lt;/p&gt;
 &lt;h2 id="看到-3000-端口不等于所有项目都在线"&gt;看到 3000 端口，不等于所有项目都在线
 &lt;/h2&gt;&lt;p&gt;早期最容易写错的逻辑，是只要发现某个端口在监听，就把对应项目标成“运行中”。如果电脑上同时开了几个前端项目，这种判断很快就会串台。&lt;/p&gt;
@@ -431,25 +401,17 @@ data-flex-basis="426px"
 &lt;li&gt;端口是否只是别的程序留下的占用。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;也就是说，“进程存在”“端口被占用”和“这个项目能访问”不是一件事。状态判断尽量依赖本地可验证信号，而不是让模型猜。&lt;/p&gt;
-&lt;h2 id="为什么拆成几层"&gt;为什么拆成几层
-&lt;/h2&gt;&lt;p&gt;这个项目是我自主立项的工具，不是某个同名 Cockpit 项目的换皮。实现建立在 Vue、Electron、Node.js 等开源生态上，代码按职责拆开：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;packages/core 扫描、栈识别、命令推断、Git 与 AI 上下文
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;packages/server 本地 HTTP API、进程、端口和 JSON 数据
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;apps/web Vue 3 + Vite 的操作界面
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;packages/cli npx / 命令行入口
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;apps/desktop Electron 桌面外壳
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;这样 CLI、浏览器界面和桌面版可以共用同一套判断逻辑。界面怎么改，不应该改变“项目是否在线”的答案；以后补一种技术栈，也不需要在三个入口各写一遍。&lt;/p&gt;
+&lt;h2 id="同一份项目状态给多个入口复用"&gt;同一份项目状态，给多个入口复用
+&lt;/h2&gt;&lt;p&gt;为了让不同入口得出同一个答案，代码按职责拆成共享扫描、运行状态聚合和界面入口几层：&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-project-state.svg"
+alt="Dev Cockpit 将项目静态信号与机器运行信号合并成统一项目状态"
+width="564"
+height="726"
+loading="lazy"
+decoding="async"&gt;
+&lt;/figure&gt;
+&lt;p&gt;这样 CLI、浏览器界面和桌面版可以共用同一套判断逻辑。界面怎么改，不应该改变“项目是否在线”的答案；以后补一种技术栈，也不需要在三个入口各写一遍。&lt;/p&gt;
 &lt;h2 id="资源雷达是后来长出来的功能"&gt;资源雷达是后来长出来的功能
 &lt;/h2&gt;&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png"
 loading="lazy"
@@ -488,31 +450,15 @@ alt="ProofPR 在 GitHub Action 中生成的审查报告"
 &lt;p&gt;先说清楚：ProofPR 不是 AI code reviewer，运行时也不调用大模型。它不猜代码是不是 AI 写的，不理解你的业务逻辑，更不会替维护者判断实现是否正确。它做的是一套可解释、可重复的初筛。&lt;/p&gt;
 &lt;h2 id="一个-pr-是怎样被处理的"&gt;一个 PR 是怎样被处理的
 &lt;/h2&gt;&lt;p&gt;在本地 CLI 中，ProofPR 从 Git 读取 unified diff；在 GitHub Action 中，它会读取 PR diff、标题、正文和仓库里的 &lt;code&gt;.proofpr.yml&lt;/code&gt;。之后的数据链是这样的：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;span class="lnt"&gt;6
-&lt;/span&gt;&lt;span class="lnt"&gt;7
-&lt;/span&gt;&lt;span class="lnt"&gt;8
-&lt;/span&gt;&lt;span class="lnt"&gt;9
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PR / git diff + .proofpr.yml
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 解析文件、路径和增删行
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 确定性规则引擎逐条检查
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 风险等级 + 证据分 + review gate
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; Markdown / JSON / SARIF / PR 注释
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;规则会关注改动规模、敏感路径、测试缺失、描述过薄、疑似 secret、依赖版本与 lockfile、GitHub Actions 权限、&lt;code&gt;pull_request_target&lt;/code&gt;、不可信 checkout 和 MCP 凭据等信号。最后给出四种 gate：&lt;code&gt;ready&lt;/code&gt;、&lt;code&gt;review-carefully&lt;/code&gt;、&lt;code&gt;needs-evidence&lt;/code&gt; 或 &lt;code&gt;block-merge&lt;/code&gt;。&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src="https://linsk27.github.io/img/projects/proofpr-evidence-pipeline.svg"
+alt="ProofPR 将本地或 GitHub 的 PR 输入经过确定性证据规则转换为可解释审查结果"
+width="564"
+height="769"
+loading="lazy"
+decoding="async"&gt;
+&lt;/figure&gt;
+&lt;p&gt;规则会关注改动规模、敏感路径、测试缺失、描述过薄、疑似 secret、依赖版本与 lockfile、GitHub Actions 权限、&lt;code&gt;pull_request_target&lt;/code&gt;、不可信 checkout 和 MCP 凭据等信号。最后给出四种 gate：&lt;code&gt;ready&lt;/code&gt;、&lt;code&gt;review-carefully&lt;/code&gt;、&lt;code&gt;needs-evidence&lt;/code&gt; 或 &lt;code&gt;block-merge&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;这不是在说 &lt;code&gt;block-merge&lt;/code&gt; 的 PR 一定有漏洞，而是在提醒维护者：现有证据不足，或者风险已经高到不该直接合并。&lt;/p&gt;
 &lt;h2 id="evidence-contract-比一套规则管所有仓库更实用"&gt;Evidence Contract 比“一套规则管所有仓库”更实用
 &lt;/h2&gt;&lt;p&gt;不同目录需要的证据不一样。改 UI 时，截图很有用；改 workflow 时，更应该说明权限为什么增加；改可复现 bug 时，验证步骤比一张绿勾更重要。&lt;/p&gt;
@@ -524,22 +470,24 @@ alt="ProofPR 在 GitHub Action 中生成的审查报告"
 &lt;/span&gt;&lt;span class="lnt"&gt;3
 &lt;/span&gt;&lt;span class="lnt"&gt;4
 &lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;evidenceContract&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="nt"&gt;paths&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;src/ui/**&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;require&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;screenshot&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;verification&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="nt"&gt;paths&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;.github/workflows/**&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;require&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;permission-rationale&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;evidence&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;contracts&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="nt"&gt;id&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;ui-screenshot&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;paths&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;src/ui/**&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;requires&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;screenshot&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;verification&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;severity&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;medium&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;这样维护者检查的不是“正文够不够长”，而是这类改动有没有带上真正有用的材料。规则命中后也能看到具体原因，不需要猜评分从哪里来。&lt;/p&gt;
 &lt;h2 id="为什么故意不用-llm"&gt;为什么故意不用 LLM
 &lt;/h2&gt;&lt;p&gt;这里不用模型不是因为 AI 没价值，而是 PR gate 更看重稳定和可追溯：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;不需要 API Key，也不上传仓库代码；&lt;/li&gt;
+&lt;li&gt;不需要 API Key，也不会把 diff 发送给第三方模型服务；&lt;/li&gt;
 &lt;li&gt;相同输入得到相同结果，方便复现 benchmark；&lt;/li&gt;
-&lt;li&gt;每一条命中都能回到规则、文件和行；&lt;/li&gt;
+&lt;li&gt;每条发现都能回到具体规则和证据；适用时还会标出文件与新增行；&lt;/li&gt;
 &lt;li&gt;维护者可以在配置里明确调整阈值，而不是修改提示词碰运气。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;ProofPR 也不会查询完整漏洞数据库。依赖漏洞仍然更适合交给 OSV、Dependabot 等专用工具；它关注的是“这个依赖改动有没有说清楚、有没有锁定、生命周期和来源是否可疑”。&lt;/p&gt;

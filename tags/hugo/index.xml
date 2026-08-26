@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hugo on 404_@林达</title><link>https://linsk27.github.io/tags/hugo/</link><description>Recent content in Hugo on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Tue, 25 Aug 2026 12:00:00 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>DigitalPlat 免费域名实操：先弄懂 DNS 委派，再配 Cloudflare</title><link>https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/</link><pubDate>Wed, 03 Jun 2026 12:00:00 +0800</pubDate><guid>https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/</guid><description>&lt;img src="https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/digitalplat-nameserver.png" alt="Featured image of post DigitalPlat 免费域名实操：先弄懂 DNS 委派，再配 Cloudflare" /&gt;&lt;p&gt;这一篇不是“我开发了一个免费域名平台”，而是一次真实配置记录：我怎样通过 DigitalPlat 领取 &lt;code&gt;linsk27.dpdns.org&lt;/code&gt;，再把 DNS 控制权交给 Cloudflare。控制台按钮以后可能变化，但 DNS 委派的原理不会跟着换皮肤。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hugo on 404_@林达</title><link>https://linsk27.github.io/tags/hugo/</link><description>Recent content in Hugo on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Thu, 27 Aug 2026 06:40:23 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>DigitalPlat 免费域名实操：先弄懂 DNS 委派，再配 Cloudflare</title><link>https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/</link><pubDate>Wed, 03 Jun 2026 12:00:00 +0800</pubDate><guid>https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/</guid><description>&lt;img src="https://linsk27.github.io/p/0603-freedomain-cloudflare-dns/digitalplat-nameserver.png" alt="Featured image of post DigitalPlat 免费域名实操：先弄懂 DNS 委派，再配 Cloudflare" /&gt;&lt;p&gt;这一篇不是“我开发了一个免费域名平台”，而是一次真实配置记录：我怎样通过 DigitalPlat 领取 &lt;code&gt;linsk27.dpdns.org&lt;/code&gt;，再把 DNS 控制权交给 Cloudflare。控制台按钮以后可能变化，但 DNS 委派的原理不会跟着换皮肤。&lt;/p&gt;
 &lt;p&gt;免费域名适合学习、测试、个人项目展示和临时服务入口。真正重要的生产项目，还是建议使用自己购买并长期持有的独立域名，方便迁移和品牌沉淀。&lt;/p&gt;
 &lt;h2 id="先理解三个角色"&gt;先理解三个角色
 &lt;/h2&gt;&lt;p&gt;刚接触域名时，最容易把“注册成功”“DNS 生效”和“网站能打开”当成同一件事。实际上这条链路里有三个角色：&lt;/p&gt;
@@ -7,24 +7,16 @@
 &lt;li&gt;&lt;strong&gt;Cloudflare&lt;/strong&gt; 接受委派，成为这个子域的权威 DNS，回答 A、AAAA 或 CNAME 记录。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Vercel、GitHub Pages 或自己的服务器&lt;/strong&gt; 才是真正返回网页的源站。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;浏览器访问时，递归 DNS 会先沿着父域找到 Cloudflare nameserver，再从 Cloudflare 拿到源站地址；如果开启了橙云代理，请求还会先经过 Cloudflare 的 CDN 与 HTTPS 层。可以把它理解成：DigitalPlat 决定“去问谁”，Cloudflare 回答“网站在哪”，源站负责“返回什么”。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;浏览器 → 递归 DNS → DigitalPlat 的父域委派
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; Cloudflare 权威 DNS
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; Vercel / GitHub Pages / 服务器
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;因此，注册成功但没有 DNS 记录，网站仍然打不开；DNS 已经正确，但托管平台没有绑定自定义域名，也一样会报错。&lt;/p&gt;
+&lt;p&gt;浏览器访问时，递归 DNS 会先沿着父区委派找到 Cloudflare nameserver，再从 Cloudflare 拿到 DNS 答案。DNS 查询结束后，浏览器才会另起 HTTPS 请求：开启橙云时先连接 Cloudflare Edge，再由代理转到源站；DNS only 时则直接连接源站。可以把它理解成：DigitalPlat 决定“去问谁”，Cloudflare 的权威 DNS 回答“先连哪里”，源站最终负责“返回什么”。&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src="https://linsk27.github.io/img/projects/digitalplat-dns-delegation.svg"
+alt="从 DigitalPlat 子域委派、Cloudflare 权威 DNS 到源站网页访问的完整链路"
+width="442"
+height="1258"
+loading="lazy"
+decoding="async"&gt;
+&lt;/figure&gt;
+&lt;p&gt;因此，注册成功但没有 DNS 记录，网站仍然打不开；DNS 已经正确，但托管平台没有绑定自定义域名，也一样会报错。&lt;/p&gt;
 &lt;h2 id="准备工作"&gt;准备工作
 &lt;/h2&gt;&lt;p&gt;开始之前需要准备三样东西：&lt;/p&gt;
 &lt;ul&gt;
