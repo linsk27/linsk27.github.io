@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 404_@林达</title><link>https://linsk27.github.io/post/</link><description>Recent content in Posts on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Thu, 27 Aug 2026 05:09:00 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>竞见：把淘宝竞品调研做成一条可恢复的 PPT 生产线</title><link>https://linsk27.github.io/projects/jingjian/</link><pubDate>Wed, 26 Aug 2026 04:34:00 +0800</pubDate><guid>https://linsk27.github.io/projects/jingjian/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/jingjian-workspace-current.png" alt="Featured image of post 竞见：把淘宝竞品调研做成一条可恢复的 PPT 生产线" /&gt;&lt;p&gt;竞见是我们围绕淘宝竞品调研自己开发的一套内部工作台。输入研究主题、品类、市场、价格带和可选的对标品牌，它会继续完成资料检索、品牌研究、淘宝商品采集、洞察整理和 PPT 报告生成。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 404_@林达</title><link>https://linsk27.github.io/post/</link><description>Recent content in Posts on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Thu, 27 Aug 2026 05:24:32 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>竞见：把淘宝竞品调研做成一条可恢复的 PPT 生产线</title><link>https://linsk27.github.io/projects/jingjian/</link><pubDate>Wed, 26 Aug 2026 04:34:00 +0800</pubDate><guid>https://linsk27.github.io/projects/jingjian/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/jingjian-workspace-current.png" alt="Featured image of post 竞见：把淘宝竞品调研做成一条可恢复的 PPT 生产线" /&gt;&lt;p&gt;竞见是我们围绕淘宝竞品调研自己开发的一套内部工作台。输入研究主题、品类、市场、价格带和可选的对标品牌，它会依次完成资料检索、品牌研究、洞察整理、淘宝商品采集和 PPT 报告生成。&lt;/p&gt;
 &lt;p&gt;我们想解决的不是“让 AI 帮忙写几段文案”，而是把一份竞品报告里重复、耗时、容易中断，又必须留下证据的工作，变成一条可以真正跑完的流程。&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/jingjian-workspace-current.png"
 loading="lazy"
@@ -9,38 +9,19 @@ alt="竞见中已经完成的保温杯竞品调研"
 &lt;p&gt;手工完成这些工作，要在官网、公开报道和电商页面之间来回切换，再逐个整理商品图、价格、付款人数、规格和来源。真正消耗时间的不是某一次搜索，而是几十次重复操作叠在一起；中间只要登录失效、网页超时或电脑重启，前面的工作就很容易丢失。&lt;/p&gt;
 &lt;p&gt;竞见把这些步骤收进同一个任务里。用户不需要理解背后的模型、浏览器和脚本，只需要确定调研范围，选择快速、标准、深度或自定义模式，然后在工作台里查看进度、处理必要的人工验证，最后检查并下载报告。&lt;/p&gt;
 &lt;h2 id="一次调研是怎样完成的"&gt;一次调研是怎样完成的
-&lt;/h2&gt;&lt;p&gt;一份任务大致会经过下面几步：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;根据输入确认品类边界，避免后续研究跑到相邻品类。&lt;/li&gt;
-&lt;li&gt;查找并核验候选品牌，整理品牌定位、产品结构和公开资料来源。&lt;/li&gt;
-&lt;li&gt;在操作员已经登录的淘宝浏览器中查找对应商品，保存商品图和页面信息。&lt;/li&gt;
-&lt;li&gt;对不同品牌的价格带、产品卖点和视觉表达做横向归纳。&lt;/li&gt;
-&lt;li&gt;检查内容、图片和页面布局，生成可在线预览的报告与正式 PPT。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;span class="lnt"&gt;6
-&lt;/span&gt;&lt;span class="lnt"&gt;7
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;调研范围
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; → 品类与品牌确认
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; → 公开资料研究
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; → 淘宝商品采集
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; → 对比与洞察
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; → 质量检查
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; → PPT 交付
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;这条流程是固定的，但每一步都能留下状态。任务中心会显示正在处理的阶段、完成比例、图片采集情况和异常原因，而不是让用户一直盯着一个没有反馈的聊天框。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;一份任务会先确认品类边界，发现并筛选品牌，再根据公开资料完成品牌研究、横向洞察和内容校验。研究内容通过检查后，系统再采集淘宝商品，渲染并检查最终报告。&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src="https://linsk27.github.io/img/projects/jingjian-research-pipeline.svg"
+alt="竞见从确定调研范围到完成报告交付的主要流程"
+width="435"
+height="1007"
+loading="lazy"
+decoding="async"&gt;
+&lt;/figure&gt;
+&lt;p&gt;这条流程是固定的，但每一步都能留下状态。任务中心会显示正在处理的阶段、完成比例、图片采集情况和异常原因，而不是让用户一直盯着一个没有反馈的聊天框。&lt;/p&gt;
 &lt;h2 id="整体架构"&gt;整体架构
 &lt;/h2&gt;&lt;p&gt;前端使用原生 HTML、CSS 和 JavaScript，负责创建任务、展示进度、人工验证和报告预览。FastAPI 提供任务接口和实时状态，Python 流水线负责安排研究、采集、检查与报告生成。&lt;/p&gt;
-&lt;p&gt;需要理解语义的部分，例如品类判断、品牌画像和跨品牌洞察，会交给大模型处理；公开资料检索和淘宝页面采集则由独立工具完成。Playwright 通过 CDP 连接操作员已登录的共享 Chrome，Pydantic 和业务规则负责检查模型返回的结构是否可以继续使用。&lt;/p&gt;
+&lt;p&gt;需要理解语义的部分，例如品类判断、品牌画像和跨品牌洞察，会交给大模型处理；公开资料检索和淘宝页面采集则由独立工具完成。Playwright 通过 CDP 连接操作员已登录的共享 Chrome，结构化字段和业务规则负责检查模型返回的结果是否可以继续使用。&lt;/p&gt;
 &lt;p&gt;这样的分工很朴素：模型负责阅读和归纳，程序负责顺序、状态、证据与失败处理。因为调研步骤和报告结构本来就比较明确，固定流水线反而更容易排查问题，也更适合长时间运行。&lt;/p&gt;
 &lt;h2 id="模型给出判断结论必须有证据"&gt;模型给出判断，结论必须有证据
 &lt;/h2&gt;&lt;p&gt;竞品调研最怕两种结果：一是文字看起来完整，但找不到来源；二是候选品牌或商品和目标品类没有关系。&lt;/p&gt;
@@ -62,10 +43,10 @@ alt="竞见生成的淘宝商品矩阵页面"
 &gt;&lt;/p&gt;
 &lt;p&gt;在交付之前，系统还会检查内容是否缺失、品牌是否重复、来源是否完整，页面有没有溢出或重叠，以及图片能否正常打开、是否重复、是否过小、是否误截到登录页或二维码。&lt;/p&gt;
 &lt;p&gt;图片有问题时，只重新采集对应商品，不影响已经合格的部分。如果修复后仍然达不到要求，任务会明确失败，而不是交出一份表面完整、实际无法使用的报告。&lt;/p&gt;
-&lt;p&gt;自动检查通过之后，报告仍然要经过真实小任务和最终设计审稿。系统可以减少重复劳动，但不能替代人对数据可信度和设计质量的最后判断。&lt;/p&gt;
+&lt;p&gt;自动检查通过之后，报告仍然要经过实际任务和最终设计审稿。系统可以减少重复劳动，但不能替代人对数据可信度和设计质量的最后判断。&lt;/p&gt;
 &lt;h2 id="现在的边界"&gt;现在的边界
 &lt;/h2&gt;&lt;p&gt;竞见目前服务于内部品牌与包装设计调研，运行在单台 Windows 工作站上，使用一个淘宝工作账号和一条截图队列。它不是面向公众注册的 SaaS，也不追求同时处理大量用户。&lt;/p&gt;
-&lt;p&gt;这个项目最终让我更确定一件事：智能体真正有用的地方，不是让模型拥有更多自由，而是把它放进一条证据可追、失败可见、中断可恢复、结果可验收的工作流程里。&lt;/p&gt;
+&lt;p&gt;这个项目最终让我们更确定一件事：智能体真正有用的地方，不是让模型拥有更多自由，而是把它放进一条证据可追、失败可见、中断可恢复、结果可验收的工作流程里。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>Signal Atlas：把真实网页放进 Three.js 工作站</title><link>https://linsk27.github.io/projects/signal-atlas/</link><pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/signal-atlas/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-desk-v0.25.7.png" alt="Featured image of post Signal Atlas：把真实网页放进 Three.js 工作站" /&gt;&lt;p&gt;现在打开 Signal Atlas，看到的已经不是最早那版项目卡片页，而是一台可以进入的 3D 工作站。外层场景来自一个 MIT 开源作品集，我保留了许可证和署名；显示器里的复古桌面、窗口系统、博客与八股文入口，以及两层页面之间的交互，是我按自己的内容重新实现的。&lt;/p&gt;
