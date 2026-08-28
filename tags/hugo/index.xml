@@ -8,20 +8,6 @@
 &lt;li&gt;&lt;strong&gt;Vercel、GitHub Pages 或自己的服务器&lt;/strong&gt; 才是真正返回网页的源站。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;浏览器访问时，递归 DNS 会先沿着父区委派找到 Cloudflare nameserver，再从 Cloudflare 拿到 DNS 答案。DNS 查询结束后，浏览器才会另起 HTTPS 请求：开启橙云时先连接 Cloudflare Edge，再由代理转到源站；DNS only 时则直接连接源站。这个分支不是浏览器临时选择的，而是 Cloudflare 记录的代理模式决定权威 DNS 返回 Edge 地址，还是源站地址或 CNAME 目标。可以把它理解成：DigitalPlat 决定“去问谁”，Cloudflare 的权威 DNS 回答“先连哪里”，源站最终负责“返回什么”。&lt;/p&gt;
-&lt;figure class="system-diagram"&gt;
-&lt;a href="https://linsk27.github.io/img/projects/digitalplat-dns-delegation.svg"
-target="_blank"
-rel="noopener"
-aria-label="打开 DigitalPlat、Cloudflare 与源站的完整请求图"&gt;
-&lt;img src="https://linsk27.github.io/img/projects/digitalplat-dns-delegation.svg"
-alt="浏览器先经递归 DNS、DigitalPlat 父区委派与 Cloudflare 权威 DNS 完成地址查询，再按 Cloudflare 代理模式经 Edge 或直接向 Vercel 源站发起 HTTPS 请求"
-width="720"
-height="1270"
-loading="lazy"
-decoding="async"&gt;
-&lt;/a&gt;
-&lt;figcaption&gt;DNS 查询和 HTTPS 取网页是先后发生的两个阶段；点击图示可打开原图。&lt;/figcaption&gt;
-&lt;/figure&gt;
 &lt;p&gt;截至 2026 年 8 月 28 日，本站的实测链路是 Cloudflare 权威 DNS 使用 DNS-only 记录，浏览器随后直连 Vercel；&lt;code&gt;www&lt;/code&gt; 子域当时没有记录。这个结果只描述本站当前配置，不代表所有 DigitalPlat 域名都应该选择 DNS-only。&lt;/p&gt;
 &lt;p&gt;因此，注册成功但没有 DNS 记录，网站仍然打不开；DNS 已经正确，但托管平台没有绑定自定义域名，也一样会报错。&lt;/p&gt;
 &lt;h2 id="准备工作"&gt;准备工作

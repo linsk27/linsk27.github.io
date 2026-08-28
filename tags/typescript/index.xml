@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TypeScript on 404_@林达</title><link>https://linsk27.github.io/tags/typescript/</link><description>Recent content in TypeScript on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Fri, 28 Aug 2026 02:49:52 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/typescript/index.xml" rel="self" type="application/rss+xml"/><item><title>Local AI Ops：先把运维资料收回来，再谈 AI</title><link>https://linsk27.github.io/projects/local-ai-ops/</link><pubDate>Tue, 23 Jun 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/local-ai-ops/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/local-ai-ops-empty-dashboard.png" alt="Featured image of post Local AI Ops：先把运维资料收回来，再谈 AI" /&gt;&lt;p&gt;我做 Local AI Ops，不是为了让 AI 替我重启服务器，而是因为自己的域名、ECS、轻量服务器、OSS、续费信息和 SSH 记录散在太多地方。真正出问题时，常常先花十分钟找“这台机器到底在哪”，排故反而只用了五分钟。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Typescript on 404_@林达</title><link>https://linsk27.github.io/tags/typescript/</link><description>Recent content in Typescript on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Fri, 28 Aug 2026 02:49:52 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/typescript/index.xml" rel="self" type="application/rss+xml"/><item><title>Local AI Ops：先把运维资料收回来，再谈 AI</title><link>https://linsk27.github.io/projects/local-ai-ops/</link><pubDate>Tue, 23 Jun 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/local-ai-ops/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/local-ai-ops-empty-dashboard.png" alt="Featured image of post Local AI Ops：先把运维资料收回来，再谈 AI" /&gt;&lt;p&gt;我做 Local AI Ops，不是为了让 AI 替我重启服务器，而是因为自己的域名、ECS、轻量服务器、OSS、续费信息和 SSH 记录散在太多地方。真正出问题时，常常先花十分钟找“这台机器到底在哪”，排故反而只用了五分钟。&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/local-ai-ops-empty-dashboard.png"
 loading="lazy"
 alt="Local AI Ops 本地空数据实例"
@@ -6,21 +6,7 @@ alt="Local AI Ops 本地空数据实例"
 &lt;p&gt;截图使用的是本地空数据实例，所以能看到真实页面结构，但没有云账号、IP、域名、AccessKey 或监控结果。&lt;/p&gt;
 &lt;h2 id="先把确定的数据链跑通"&gt;先把确定的数据链跑通
 &lt;/h2&gt;&lt;p&gt;这个项目是我围绕自己的运维需求立项和开发的，不是给某个现成面板换皮。FastAPI、React、Celery 这些开源框架负责基础能力，阿里云官方 SDK 负责读取云端资源；我主要做的是资产模型、检查流程、告警状态和本地安全边界。&lt;/p&gt;
-&lt;p&gt;整体数据流没有刻意做复杂：&lt;/p&gt;
-&lt;figure class="system-diagram"&gt;
-&lt;a href="https://linsk27.github.io/img/projects/local-ai-ops-data-flow.svg"
-target="_blank"
-rel="noopener"
-aria-label="打开 Local AI Ops 完整数据流图"&gt;
-&lt;img src="https://linsk27.github.io/img/projects/local-ai-ops-data-flow.svg"
-alt="Local AI Ops 将人工请求与定时巡检汇入共享检查执行器，再把五类探针结果、告警和用户触发的诊断建议统一写入 PostgreSQL 的数据流"
-width="720"
-height="1380"
-loading="lazy"
-decoding="async"&gt;
-&lt;/a&gt;
-&lt;figcaption&gt;人工请求、定时巡检和诊断建议被拆成三条路径；点击图示可打开原图。&lt;/figcaption&gt;
-&lt;/figure&gt;
+&lt;p&gt;整体数据流没有刻意做复杂，人工请求、定时巡检和诊断各走自己的路径。&lt;/p&gt;
 &lt;p&gt;用户明确触发资产同步后，FastAPI 会在当前请求中通过 RAM AccessKey 调用阿里云 OpenAPI，把 ECS、轻量应用服务器、OSS、域名和 DNS 转成统一的本地资产。PostgreSQL 保存资产、手工补充的运维资料、检查结果、告警和诊断；Redis、Celery Beat 与 Worker 只负责每分钟筛选并执行已经启用且到期的检查，不承担手动资产同步和诊断。&lt;/p&gt;
 &lt;p&gt;一次健康检查大致会这样走：Celery Beat 判断哪些检查到期，Worker 执行 HTTP、TCP、SSH、CloudMonitor 或云助手只读命令，把结果写回数据库，再根据连续失败次数更新告警。这里的关键是先拿到可重复验证的事实，而不是先问模型“服务器为什么挂了”。&lt;/p&gt;
 &lt;h2 id="ai-只放在最后一层"&gt;AI 只放在最后一层
@@ -62,21 +48,7 @@ decoding="async"&gt;
 &lt;/ul&gt;
 &lt;p&gt;也就是说，“进程存在”“端口被占用”和“这个项目能访问”不是一件事。状态判断尽量依赖本地可验证信号，而不是让模型猜。&lt;/p&gt;
 &lt;h2 id="同一份项目事实按入口逐层补全"&gt;同一份项目事实，按入口逐层补全
-&lt;/h2&gt;&lt;p&gt;为了避免 CLI、浏览器和桌面版各自猜一遍项目，代码按职责拆成基础扫描模型、机器运行证据补全和界面映射三层：&lt;/p&gt;
-&lt;figure class="system-diagram"&gt;
-&lt;a href="https://linsk27.github.io/img/projects/dev-cockpit-project-state.svg"
-target="_blank"
-rel="noopener"
-aria-label="打开 Dev Cockpit 完整分层架构图"&gt;
-&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-project-state.svg"
-alt="Dev Cockpit 先由 packages/core 建立可复用 Project 基础模型，再由 server 合并本机运行证据，最后分别提供给 CLI、Vue Web 与 Electron"
-width="720"
-height="1190"
-loading="lazy"
-decoding="async"&gt;
-&lt;/a&gt;
-&lt;figcaption&gt;共享的是可验证的项目事实与扫描规则，不是每个入口都复用同一个 Web 状态枚举；点击图示可打开原图。&lt;/figcaption&gt;
-&lt;/figure&gt;
+&lt;/h2&gt;&lt;p&gt;为了避免 CLI、浏览器和桌面版各自猜一遍项目，代码按职责拆成基础扫描模型、机器运行证据补全和界面映射三层。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;packages/core&lt;/code&gt; 负责扫描规则和 Project 基础字段，CLI 的 &lt;code&gt;scan&lt;/code&gt;、&lt;code&gt;doctor&lt;/code&gt; 与文本上下文可以直接消费这一层。Local Server 再合并托管进程、PID 与端口归属、HTTP 探测和最近日志，生成带机器现场的 Project；Vue 从本地 API 读取它，并在视图层映射 &lt;code&gt;managed-running&lt;/code&gt;、&lt;code&gt;detected-online&lt;/code&gt;、&lt;code&gt;stale&lt;/code&gt;、&lt;code&gt;failed&lt;/code&gt; 和 &lt;code&gt;idle&lt;/code&gt; 等展示状态。Electron 启动的是同一个本地 Server，再加载同一套 Web 界面。&lt;/p&gt;
 &lt;p&gt;因此真正复用的是“如何扫描、字段代表什么、哪些事实已经验证”，而不是三个入口共享一台状态机。界面文案怎么改，不应该反过来改变端口归属或项目是否可达的事实；以后补一种技术栈，也不需要在三个入口各写一遍扫描规则。&lt;/p&gt;
 &lt;h2 id="资源雷达是后来长出来的功能"&gt;资源雷达是后来长出来的功能

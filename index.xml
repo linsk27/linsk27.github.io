@@ -11,21 +11,7 @@ alt="竞见中已经完成的保温杯竞品调研"
 &lt;h2 id="一次调研是怎样完成的"&gt;一次调研是怎样完成的
 &lt;/h2&gt;&lt;p&gt;一份任务会先确认品类边界，发现并筛选品牌，再根据公开资料完成品牌研究、横向洞察和内容校验。研究内容通过检查后，系统再采集淘宝商品，渲染并检查最终报告。&lt;/p&gt;
 &lt;p&gt;正式任务创建前还会先检查内容分析服务、本机浏览器、淘宝实时登录态和截图 Worker。品牌核验与品牌研究最多同时处理三个候选，每完成一个就保存一次；淘宝截图则因为共享同一个登录账号和队列，始终串行执行。&lt;/p&gt;
-&lt;figure class="system-diagram"&gt;
-&lt;a href="https://linsk27.github.io/img/projects/jingjian-research-pipeline.svg"
-target="_blank"
-rel="noopener"
-aria-label="打开竞见完整系统流程图"&gt;
-&lt;img src="https://linsk27.github.io/img/projects/jingjian-research-pipeline.svg"
-alt="竞见从环境预检、品牌研究、淘宝串行采集和人工验证，到质量检查、局部修复、唯一 PPT 交付及断点恢复的完整流程"
-width="720"
-height="1650"
-loading="lazy"
-decoding="async"&gt;
-&lt;/a&gt;
-&lt;figcaption&gt;自动主流程、人工接管、质量回流和状态恢复被拆成四条明确关系；点击图示可打开原图。&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;这条流程是固定的，但每一步都能留下状态。任务中心会通过实时事件显示正在处理的阶段、完成比例、图片采集情况和异常原因，而不是让用户一直盯着一个没有反馈的聊天框。图里的重试也不是整份任务重跑：研究内容回到对应阶段，图片问题只重新排队对应商品槽位。&lt;/p&gt;
+&lt;p&gt;这条流程是固定的，但每一步都能留下状态。任务中心会通过实时事件显示正在处理的阶段、完成比例、图片采集情况和异常原因，而不是让用户一直盯着一个没有反馈的聊天框。这里的重试也不是整份任务重跑：研究内容回到对应阶段，图片问题只重新排队对应商品槽位。&lt;/p&gt;
 &lt;h2 id="整体架构"&gt;整体架构
 &lt;/h2&gt;&lt;p&gt;前端使用原生 HTML、CSS 和 JavaScript，负责创建任务、展示进度、人工验证和报告预览。FastAPI 提供任务接口和实时状态，Python 流水线负责安排研究、采集、检查与报告生成。&lt;/p&gt;
 &lt;p&gt;需要理解语义的部分，例如品类判断、品牌画像和跨品牌洞察，会交给大模型处理；公开资料检索和淘宝页面采集则由独立工具完成。Playwright 通过 CDP 连接操作员已登录的共享 Chrome，结构化字段和业务规则负责检查模型返回的结果是否可以继续使用。&lt;/p&gt;
@@ -65,21 +51,7 @@ alt="Signal Atlas v0.25.7 参考版工作站全景"
 &lt;p&gt;这张图是 v0.25.7 生产版本的真实画面，不再使用旧版 Atlas 面板截图。现在的桌面只保留 Hugo 博客、八股炼丹炉、GitHub 和 QQ 这些真实入口，之前用来占位置的 &lt;code&gt;My Showcase&lt;/code&gt; 和伪应用已经删除。&lt;/p&gt;
 &lt;h2 id="从看起来很酷到真的能用"&gt;从“看起来很酷”到“真的能用”
 &lt;/h2&gt;&lt;p&gt;最初做 3D 主页，想法很简单：普通项目卡片太像简历，我更想让访问者走到一台电脑前，再从电脑里打开我的内容。但真正开始接博客以后，问题就不再是“模型好不好看”，而是网站能不能顺利打开、显示器里的链接能不能点、滚轮会不会带着外层相机一起转。&lt;/p&gt;
-&lt;p&gt;Signal Atlas 现在由两种渲染技术协作，并为内嵌页增加一层按显示器几何定位的覆盖层：&lt;/p&gt;
-&lt;figure class="system-diagram"&gt;
-&lt;a href="https://linsk27.github.io/img/projects/signal-atlas-rendering-architecture.svg"
-target="_blank"
-rel="noopener"
-aria-label="打开 Signal Atlas 完整分层架构图"&gt;
-&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-rendering-architecture.svg"
-alt="Signal Atlas 将相机驱动的 WebGL 与 CSS3D 双渲染、窗口 postMessage 投影、父页 DOM Portal 以及 Vercel 同源取页拆开的分层架构"
-width="720"
-height="1320"
-loading="lazy"
-decoding="async"&gt;
-&lt;/a&gt;
-&lt;figcaption&gt;渲染合成、窗口投影和网络取页是三条不同链路；点击图示可打开原图。&lt;/figcaption&gt;
-&lt;/figure&gt;
+&lt;p&gt;Signal Atlas 现在由两种渲染技术协作，并为内嵌页增加一层按显示器几何定位的覆盖层。&lt;/p&gt;
 &lt;p&gt;WebGL 负责房间、电脑、光影与 CRT 效果；CSS3DRenderer 负责把可交互的桌面 DOM 放到显示器的位置。父页 Portal 又是独立于 3D 渲染器的真实 DOM，Vercel rewrite 只负责取回上游页面，不直接参与画面合成。网页没有被截成一张纹理，所以聚焦显示器后仍然可以点击、滚动和打开窗口。代价是每次相机移动、窗口缩放或发生遮挡，都要重新保证几层几何对得上。&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-monitor-v0.25.7.png"
 loading="lazy"
@@ -123,21 +95,7 @@ alt="Local AI Ops 本地空数据实例"
 &lt;p&gt;截图使用的是本地空数据实例，所以能看到真实页面结构，但没有云账号、IP、域名、AccessKey 或监控结果。&lt;/p&gt;
 &lt;h2 id="先把确定的数据链跑通"&gt;先把确定的数据链跑通
 &lt;/h2&gt;&lt;p&gt;这个项目是我围绕自己的运维需求立项和开发的，不是给某个现成面板换皮。FastAPI、React、Celery 这些开源框架负责基础能力，阿里云官方 SDK 负责读取云端资源；我主要做的是资产模型、检查流程、告警状态和本地安全边界。&lt;/p&gt;
-&lt;p&gt;整体数据流没有刻意做复杂：&lt;/p&gt;
-&lt;figure class="system-diagram"&gt;
-&lt;a href="https://linsk27.github.io/img/projects/local-ai-ops-data-flow.svg"
-target="_blank"
-rel="noopener"
-aria-label="打开 Local AI Ops 完整数据流图"&gt;
-&lt;img src="https://linsk27.github.io/img/projects/local-ai-ops-data-flow.svg"
-alt="Local AI Ops 将人工请求与定时巡检汇入共享检查执行器，再把五类探针结果、告警和用户触发的诊断建议统一写入 PostgreSQL 的数据流"
-width="720"
-height="1380"
-loading="lazy"
-decoding="async"&gt;
-&lt;/a&gt;
-&lt;figcaption&gt;人工请求、定时巡检和诊断建议被拆成三条路径；点击图示可打开原图。&lt;/figcaption&gt;
-&lt;/figure&gt;
+&lt;p&gt;整体数据流没有刻意做复杂，人工请求、定时巡检和诊断各走自己的路径。&lt;/p&gt;
 &lt;p&gt;用户明确触发资产同步后，FastAPI 会在当前请求中通过 RAM AccessKey 调用阿里云 OpenAPI，把 ECS、轻量应用服务器、OSS、域名和 DNS 转成统一的本地资产。PostgreSQL 保存资产、手工补充的运维资料、检查结果、告警和诊断；Redis、Celery Beat 与 Worker 只负责每分钟筛选并执行已经启用且到期的检查，不承担手动资产同步和诊断。&lt;/p&gt;
 &lt;p&gt;一次健康检查大致会这样走：Celery Beat 判断哪些检查到期，Worker 执行 HTTP、TCP、SSH、CloudMonitor 或云助手只读命令，把结果写回数据库，再根据连续失败次数更新告警。这里的关键是先拿到可重复验证的事实，而不是先问模型“服务器为什么挂了”。&lt;/p&gt;
 &lt;h2 id="ai-只放在最后一层"&gt;AI 只放在最后一层
@@ -172,20 +130,6 @@ decoding="async"&gt;
 &lt;li&gt;&lt;strong&gt;Vercel、GitHub Pages 或自己的服务器&lt;/strong&gt; 才是真正返回网页的源站。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;浏览器访问时，递归 DNS 会先沿着父区委派找到 Cloudflare nameserver，再从 Cloudflare 拿到 DNS 答案。DNS 查询结束后，浏览器才会另起 HTTPS 请求：开启橙云时先连接 Cloudflare Edge，再由代理转到源站；DNS only 时则直接连接源站。这个分支不是浏览器临时选择的，而是 Cloudflare 记录的代理模式决定权威 DNS 返回 Edge 地址，还是源站地址或 CNAME 目标。可以把它理解成：DigitalPlat 决定“去问谁”，Cloudflare 的权威 DNS 回答“先连哪里”，源站最终负责“返回什么”。&lt;/p&gt;
-&lt;figure class="system-diagram"&gt;
-&lt;a href="https://linsk27.github.io/img/projects/digitalplat-dns-delegation.svg"
-target="_blank"
-rel="noopener"
-aria-label="打开 DigitalPlat、Cloudflare 与源站的完整请求图"&gt;
-&lt;img src="https://linsk27.github.io/img/projects/digitalplat-dns-delegation.svg"
-alt="浏览器先经递归 DNS、DigitalPlat 父区委派与 Cloudflare 权威 DNS 完成地址查询，再按 Cloudflare 代理模式经 Edge 或直接向 Vercel 源站发起 HTTPS 请求"
-width="720"
-height="1270"
-loading="lazy"
-decoding="async"&gt;
-&lt;/a&gt;
-&lt;figcaption&gt;DNS 查询和 HTTPS 取网页是先后发生的两个阶段；点击图示可打开原图。&lt;/figcaption&gt;
-&lt;/figure&gt;
 &lt;p&gt;截至 2026 年 8 月 28 日，本站的实测链路是 Cloudflare 权威 DNS 使用 DNS-only 记录，浏览器随后直连 Vercel；&lt;code&gt;www&lt;/code&gt; 子域当时没有记录。这个结果只描述本站当前配置，不代表所有 DigitalPlat 域名都应该选择 DNS-only。&lt;/p&gt;
 &lt;p&gt;因此，注册成功但没有 DNS 记录，网站仍然打不开；DNS 已经正确，但托管平台没有绑定自定义域名，也一样会报错。&lt;/p&gt;
 &lt;h2 id="准备工作"&gt;准备工作
@@ -652,21 +596,7 @@ alt="Signal Atlas v0.25.7 工作站全景"
 &lt;/ul&gt;
 &lt;p&gt;也就是说，“进程存在”“端口被占用”和“这个项目能访问”不是一件事。状态判断尽量依赖本地可验证信号，而不是让模型猜。&lt;/p&gt;
 &lt;h2 id="同一份项目事实按入口逐层补全"&gt;同一份项目事实，按入口逐层补全
-&lt;/h2&gt;&lt;p&gt;为了避免 CLI、浏览器和桌面版各自猜一遍项目，代码按职责拆成基础扫描模型、机器运行证据补全和界面映射三层：&lt;/p&gt;
-&lt;figure class="system-diagram"&gt;
-&lt;a href="https://linsk27.github.io/img/projects/dev-cockpit-project-state.svg"
-target="_blank"
-rel="noopener"
-aria-label="打开 Dev Cockpit 完整分层架构图"&gt;
-&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-project-state.svg"
-alt="Dev Cockpit 先由 packages/core 建立可复用 Project 基础模型，再由 server 合并本机运行证据，最后分别提供给 CLI、Vue Web 与 Electron"
-width="720"
-height="1190"
-loading="lazy"
-decoding="async"&gt;
-&lt;/a&gt;
-&lt;figcaption&gt;共享的是可验证的项目事实与扫描规则，不是每个入口都复用同一个 Web 状态枚举；点击图示可打开原图。&lt;/figcaption&gt;
-&lt;/figure&gt;
+&lt;/h2&gt;&lt;p&gt;为了避免 CLI、浏览器和桌面版各自猜一遍项目，代码按职责拆成基础扫描模型、机器运行证据补全和界面映射三层。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;packages/core&lt;/code&gt; 负责扫描规则和 Project 基础字段，CLI 的 &lt;code&gt;scan&lt;/code&gt;、&lt;code&gt;doctor&lt;/code&gt; 与文本上下文可以直接消费这一层。Local Server 再合并托管进程、PID 与端口归属、HTTP 探测和最近日志，生成带机器现场的 Project；Vue 从本地 API 读取它，并在视图层映射 &lt;code&gt;managed-running&lt;/code&gt;、&lt;code&gt;detected-online&lt;/code&gt;、&lt;code&gt;stale&lt;/code&gt;、&lt;code&gt;failed&lt;/code&gt; 和 &lt;code&gt;idle&lt;/code&gt; 等展示状态。Electron 启动的是同一个本地 Server，再加载同一套 Web 界面。&lt;/p&gt;
 &lt;p&gt;因此真正复用的是“如何扫描、字段代表什么、哪些事实已经验证”，而不是三个入口共享一台状态机。界面文案怎么改，不应该反过来改变端口归属或项目是否可达的事实；以后补一种技术栈，也不需要在三个入口各写一遍扫描规则。&lt;/p&gt;
 &lt;h2 id="资源雷达是后来长出来的功能"&gt;资源雷达是后来长出来的功能
@@ -706,21 +636,7 @@ alt="ProofPR 在 GitHub Action 中生成的审查报告"
 &gt;&lt;/p&gt;
 &lt;p&gt;先说清楚：ProofPR 不是 AI code reviewer，运行时也不调用大模型。它不猜代码是不是 AI 写的，不理解你的业务逻辑，更不会替维护者判断实现是否正确。它做的是一套可解释、可重复的初筛。&lt;/p&gt;
 &lt;h2 id="一个-pr-是怎样被处理的"&gt;一个 PR 是怎样被处理的
-&lt;/h2&gt;&lt;p&gt;在本地 CLI 中，ProofPR 从 Git 读取 unified diff；在 GitHub Action 中，它会读取 PR diff、标题、正文和仓库里的 &lt;code&gt;.proofpr.yml&lt;/code&gt;。之后的数据链是这样的：&lt;/p&gt;
-&lt;figure class="system-diagram"&gt;
-&lt;a href="https://linsk27.github.io/img/projects/proofpr-evidence-pipeline.svg"
-target="_blank"
-rel="noopener"
-aria-label="打开 ProofPR 完整证据门禁图"&gt;
-&lt;img src="https://linsk27.github.io/img/projects/proofpr-evidence-pipeline.svg"
-alt="ProofPR 将代码差异、PR 证据文本和仓库配置分别规范化，再汇入确定性规则引擎，计算风险分与证据分并生成四级门禁和多格式报告"
-width="720"
-height="1320"
-loading="lazy"
-decoding="async"&gt;
-&lt;/a&gt;
-&lt;figcaption&gt;代码差异、PR 证据和仓库策略是三条独立输入；点击图示可打开原图。&lt;/figcaption&gt;
-&lt;/figure&gt;
+&lt;/h2&gt;&lt;p&gt;在本地 CLI 中，ProofPR 从 Git 读取 unified diff；在 GitHub Action 中，它会读取 PR diff、标题、正文和仓库里的 &lt;code&gt;.proofpr.yml&lt;/code&gt;。之后的数据处理也是确定性的。&lt;/p&gt;
 &lt;p&gt;diff 会先被解析成带路径和新增行位置的 change set，PR 标题与正文则单独提取测试、复现、截图和风险说明；&lt;code&gt;.proofpr.yml&lt;/code&gt; 不进入 diff parser，而是在配置校验后控制规则、Evidence Contract、preset 与阈值。三类输入只在确定性规则引擎里汇合。&lt;/p&gt;
 &lt;p&gt;规则会关注改动规模、敏感路径、测试缺失、描述过薄、疑似 secret、依赖版本与 lockfile、GitHub Actions 权限、&lt;code&gt;pull_request_target&lt;/code&gt;、不可信 checkout 和 MCP 凭据等信号。最后分别计算风险分与证据分，并给出四种 gate：&lt;code&gt;ready&lt;/code&gt;、&lt;code&gt;review-carefully&lt;/code&gt;、&lt;code&gt;needs-evidence&lt;/code&gt; 或 &lt;code&gt;block-merge&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;这不是在说 &lt;code&gt;block-merge&lt;/code&gt; 的 PR 一定有漏洞，而是在提醒维护者：现有证据不足，或者风险已经高到不该直接合并。&lt;/p&gt;

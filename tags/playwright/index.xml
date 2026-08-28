@@ -11,21 +11,7 @@ alt="竞见中已经完成的保温杯竞品调研"
 &lt;h2 id="一次调研是怎样完成的"&gt;一次调研是怎样完成的
 &lt;/h2&gt;&lt;p&gt;一份任务会先确认品类边界，发现并筛选品牌，再根据公开资料完成品牌研究、横向洞察和内容校验。研究内容通过检查后，系统再采集淘宝商品，渲染并检查最终报告。&lt;/p&gt;
 &lt;p&gt;正式任务创建前还会先检查内容分析服务、本机浏览器、淘宝实时登录态和截图 Worker。品牌核验与品牌研究最多同时处理三个候选，每完成一个就保存一次；淘宝截图则因为共享同一个登录账号和队列，始终串行执行。&lt;/p&gt;
-&lt;figure class="system-diagram"&gt;
-&lt;a href="https://linsk27.github.io/img/projects/jingjian-research-pipeline.svg"
-target="_blank"
-rel="noopener"
-aria-label="打开竞见完整系统流程图"&gt;
-&lt;img src="https://linsk27.github.io/img/projects/jingjian-research-pipeline.svg"
-alt="竞见从环境预检、品牌研究、淘宝串行采集和人工验证，到质量检查、局部修复、唯一 PPT 交付及断点恢复的完整流程"
-width="720"
-height="1650"
-loading="lazy"
-decoding="async"&gt;
-&lt;/a&gt;
-&lt;figcaption&gt;自动主流程、人工接管、质量回流和状态恢复被拆成四条明确关系；点击图示可打开原图。&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;这条流程是固定的，但每一步都能留下状态。任务中心会通过实时事件显示正在处理的阶段、完成比例、图片采集情况和异常原因，而不是让用户一直盯着一个没有反馈的聊天框。图里的重试也不是整份任务重跑：研究内容回到对应阶段，图片问题只重新排队对应商品槽位。&lt;/p&gt;
+&lt;p&gt;这条流程是固定的，但每一步都能留下状态。任务中心会通过实时事件显示正在处理的阶段、完成比例、图片采集情况和异常原因，而不是让用户一直盯着一个没有反馈的聊天框。这里的重试也不是整份任务重跑：研究内容回到对应阶段，图片问题只重新排队对应商品槽位。&lt;/p&gt;
 &lt;h2 id="整体架构"&gt;整体架构
 &lt;/h2&gt;&lt;p&gt;前端使用原生 HTML、CSS 和 JavaScript，负责创建任务、展示进度、人工验证和报告预览。FastAPI 提供任务接口和实时状态，Python 流水线负责安排研究、采集、检查与报告生成。&lt;/p&gt;
 &lt;p&gt;需要理解语义的部分，例如品类判断、品牌画像和跨品牌洞察，会交给大模型处理；公开资料检索和淘宝页面采集则由独立工具完成。Playwright 通过 CDP 连接操作员已登录的共享 Chrome，结构化字段和业务规则负责检查模型返回的结果是否可以继续使用。&lt;/p&gt;

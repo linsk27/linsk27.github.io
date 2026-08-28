@@ -15,21 +15,7 @@
 &lt;/ul&gt;
 &lt;p&gt;也就是说，“进程存在”“端口被占用”和“这个项目能访问”不是一件事。状态判断尽量依赖本地可验证信号，而不是让模型猜。&lt;/p&gt;
 &lt;h2 id="同一份项目事实按入口逐层补全"&gt;同一份项目事实，按入口逐层补全
-&lt;/h2&gt;&lt;p&gt;为了避免 CLI、浏览器和桌面版各自猜一遍项目，代码按职责拆成基础扫描模型、机器运行证据补全和界面映射三层：&lt;/p&gt;
-&lt;figure class="system-diagram"&gt;
-&lt;a href="https://linsk27.github.io/img/projects/dev-cockpit-project-state.svg"
-target="_blank"
-rel="noopener"
-aria-label="打开 Dev Cockpit 完整分层架构图"&gt;
-&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-project-state.svg"
-alt="Dev Cockpit 先由 packages/core 建立可复用 Project 基础模型，再由 server 合并本机运行证据，最后分别提供给 CLI、Vue Web 与 Electron"
-width="720"
-height="1190"
-loading="lazy"
-decoding="async"&gt;
-&lt;/a&gt;
-&lt;figcaption&gt;共享的是可验证的项目事实与扫描规则，不是每个入口都复用同一个 Web 状态枚举；点击图示可打开原图。&lt;/figcaption&gt;
-&lt;/figure&gt;
+&lt;/h2&gt;&lt;p&gt;为了避免 CLI、浏览器和桌面版各自猜一遍项目，代码按职责拆成基础扫描模型、机器运行证据补全和界面映射三层。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;packages/core&lt;/code&gt; 负责扫描规则和 Project 基础字段，CLI 的 &lt;code&gt;scan&lt;/code&gt;、&lt;code&gt;doctor&lt;/code&gt; 与文本上下文可以直接消费这一层。Local Server 再合并托管进程、PID 与端口归属、HTTP 探测和最近日志，生成带机器现场的 Project；Vue 从本地 API 读取它，并在视图层映射 &lt;code&gt;managed-running&lt;/code&gt;、&lt;code&gt;detected-online&lt;/code&gt;、&lt;code&gt;stale&lt;/code&gt;、&lt;code&gt;failed&lt;/code&gt; 和 &lt;code&gt;idle&lt;/code&gt; 等展示状态。Electron 启动的是同一个本地 Server，再加载同一套 Web 界面。&lt;/p&gt;
 &lt;p&gt;因此真正复用的是“如何扫描、字段代表什么、哪些事实已经验证”，而不是三个入口共享一台状态机。界面文案怎么改，不应该反过来改变端口归属或项目是否可达的事实；以后补一种技术栈，也不需要在三个入口各写一遍扫描规则。&lt;/p&gt;
 &lt;h2 id="资源雷达是后来长出来的功能"&gt;资源雷达是后来长出来的功能
