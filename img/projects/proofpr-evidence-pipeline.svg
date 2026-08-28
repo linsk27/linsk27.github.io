@@ -1,1 +1,218 @@
-<svg id="my-svg" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="flowchart" style="max-width: 564px; background-color: transparent;" viewBox="0 0 564 769" role="graphics-document document" aria-roledescription="flowchart-v2"><style>#my-svg{font-size:17px;fill:#20352d;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#my-svg .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#my-svg .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#my-svg .error-icon{fill:hsl(322.5, 28.5714285714%, 99.5098039216%);}#my-svg .error-text{fill:rgb(0.8928571428, 1.607142857, 1.1607142856);stroke:rgb(0.8928571428, 1.607142857, 1.1607142856);}#my-svg .edge-thickness-normal{stroke-width:1px;}#my-svg .edge-thickness-thick{stroke-width:3.5px;}#my-svg .edge-pattern-solid{stroke-dasharray:0;}#my-svg .edge-thickness-invisible{stroke-width:0;fill:none;}#my-svg .edge-pattern-dashed{stroke-dasharray:3;}#my-svg .edge-pattern-dotted{stroke-dasharray:2;}#my-svg .marker{fill:#71887e;stroke:#71887e;}#my-svg .marker.cross{stroke:#71887e;}#my-svg svg{font-size:17px;}#my-svg p{margin:0;}#my-svg .label{color:#20352d;}#my-svg .cluster-label text{fill:rgb(0.8928571428, 1.607142857, 1.1607142856);}#my-svg .cluster-label span{color:rgb(0.8928571428, 1.607142857, 1.1607142856);}#my-svg .cluster-label span p{background-color:transparent;}#my-svg .label text,#my-svg span{fill:#20352d;color:#20352d;}#my-svg .node rect,#my-svg .node circle,#my-svg .node ellipse,#my-svg .node polygon,#my-svg .node path{fill:#edf5f0;stroke:#5f7f70;stroke-width:1px;}#my-svg .rough-node .label text,#my-svg .node .label text,#my-svg .image-shape .label,#my-svg .icon-shape .label{text-anchor:middle;}#my-svg .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#my-svg .rough-node .label,#my-svg .node .label,#my-svg .image-shape .label,#my-svg .icon-shape .label{text-align:center;}#my-svg .node.clickable{cursor:pointer;}#my-svg .root .anchor path{fill:#71887e!important;stroke-width:0;stroke:#71887e;}#my-svg .arrowheadPath{fill:#0b0b0b;}#my-svg .edgePaths .path{stroke:#71887e;stroke-width:1px;}#my-svg .flowchart-link{stroke:#71887e;fill:none;}#my-svg .edgeLabel{background-color:#faf9f6;text-align:center;}#my-svg .edgeLabel p{background-color:#faf9f6;}#my-svg .edgeLabel rect{opacity:0.5;background-color:#faf9f6;fill:#faf9f6;}#my-svg .labelBkg{background-color:rgba(250, 249, 246, 0.5);}#my-svg .cluster rect{fill:hsl(322.5, 28.5714285714%, 99.5098039216%);stroke:hsl(322.5, 0%, 89.5098039216%);stroke-width:1px;}#my-svg .cluster text{fill:rgb(0.8928571428, 1.607142857, 1.1607142856);}#my-svg .cluster span{color:rgb(0.8928571428, 1.607142857, 1.1607142856);}#my-svg .node .collapsed-indicator{fill:hsl(322.5, 0%, 89.5098039216%);stroke:none;opacity:0.6;}#my-svg .node .collapsed-separator{stroke:hsl(322.5, 0%, 89.5098039216%);stroke-width:0.75px;}#my-svg div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-size:12px;background:hsl(322.5, 28.5714285714%, 99.5098039216%);border:1px solid hsl(322.5, 0%, 89.5098039216%);border-radius:2px;pointer-events:none;z-index:100;}#my-svg .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#20352d;}#my-svg rect.text{fill:none;stroke-width:0;}#my-svg .icon-shape,#my-svg .image-shape{background-color:#faf9f6;text-align:center;}#my-svg .icon-shape p,#my-svg .image-shape p{background-color:#faf9f6;padding:2px;}#my-svg .icon-shape .label rect,#my-svg .image-shape .label rect{opacity:0.5;background-color:#faf9f6;fill:#faf9f6;}#my-svg .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#my-svg .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#my-svg .node .neo-node{stroke:#5f7f70;}#my-svg [data-look="neo"].node rect,#my-svg [data-look="neo"].cluster rect,#my-svg [data-look="neo"].node polygon{stroke:url(#my-svg-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#my-svg [data-look="neo"].swimlane.cluster rect{filter:none;}#my-svg [data-look="neo"].node path{stroke:url(#my-svg-gradient);stroke-width:1px;}#my-svg [data-look="neo"].node .outer-path{filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#my-svg [data-look="neo"].node .neo-line path{stroke:#5f7f70;filter:none;}#my-svg [data-look="neo"].node circle{stroke:url(#my-svg-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#my-svg [data-look="neo"].node circle .state-start{fill:#000000;}#my-svg [data-look="neo"].icon-shape .icon{fill:url(#my-svg-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#my-svg [data-look="neo"].icon-shape .icon-neo path{stroke:url(#my-svg-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#my-svg :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}#my-svg .input&gt;*{fill:rgb(246, 239, 231)!important;stroke:rgb(177, 135, 99)!important;color:rgb(83, 63, 48)!important;stroke-width:1.5px!important;}#my-svg .input span{fill:rgb(246, 239, 231)!important;stroke:rgb(177, 135, 99)!important;color:rgb(83, 63, 48)!important;stroke-width:1.5px!important;}#my-svg .input tspan{fill:rgb(83, 63, 48)!important;}#my-svg .adapter&gt;*{fill:rgb(237, 245, 240)!important;stroke:rgb(95, 127, 112)!important;color:rgb(32, 53, 45)!important;stroke-width:1.5px!important;}#my-svg .adapter span{fill:rgb(237, 245, 240)!important;stroke:rgb(95, 127, 112)!important;color:rgb(32, 53, 45)!important;stroke-width:1.5px!important;}#my-svg .adapter tspan{fill:rgb(32, 53, 45)!important;}#my-svg .core&gt;*{fill:rgb(223, 238, 231)!important;stroke:rgb(47, 107, 85)!important;color:rgb(25, 56, 45)!important;stroke-width:2px!important;}#my-svg .core span{fill:rgb(223, 238, 231)!important;stroke:rgb(47, 107, 85)!important;color:rgb(25, 56, 45)!important;stroke-width:2px!important;}#my-svg .core tspan{fill:rgb(25, 56, 45)!important;}#my-svg .result&gt;*{fill:rgb(244, 245, 247)!important;stroke:rgb(132, 144, 159)!important;color:rgb(52, 64, 84)!important;stroke-width:1.5px!important;}#my-svg .result span{fill:rgb(244, 245, 247)!important;stroke:rgb(132, 144, 159)!important;color:rgb(52, 64, 84)!important;stroke-width:1.5px!important;}#my-svg .result tspan{fill:rgb(52, 64, 84)!important;}#my-svg .output&gt;*{fill:rgb(114, 63, 72)!important;stroke:rgb(114, 63, 72)!important;color:rgb(255, 255, 255)!important;stroke-width:1.5px!important;}#my-svg .output span{fill:rgb(114, 63, 72)!important;stroke:rgb(114, 63, 72)!important;color:rgb(255, 255, 255)!important;stroke-width:1.5px!important;}#my-svg .output tspan{fill:rgb(255, 255, 255)!important;}</style><g><marker id="my-svg_flowchart-v2-pointEnd" class="marker flowchart-v2" viewBox="0 0 10 10" refX="5" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-pointStart" class="marker flowchart-v2" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 5 L 10 10 L 10 0 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-pointEnd-margin" class="marker flowchart-v2" viewBox="0 0 11.5 14" refX="11.5" refY="7" markerUnits="userSpaceOnUse" markerWidth="10.5" markerHeight="14" orient="auto"><path d="M 0 0 L 11.5 7 L 0 14 z" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-pointStart-margin" class="marker flowchart-v2" viewBox="0 0 11.5 14" refX="1" refY="7" markerUnits="userSpaceOnUse" markerWidth="11.5" markerHeight="14" orient="auto"><polygon points="0,7 11.5,14 11.5,0" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-circleEnd" class="marker flowchart-v2" viewBox="0 0 10 10" refX="11" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-circleStart" class="marker flowchart-v2" viewBox="0 0 10 10" refX="-1" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-circleEnd-margin" class="marker flowchart-v2" viewBox="0 0 10 10" refY="5" refX="12.25" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-circleStart-margin" class="marker flowchart-v2" viewBox="0 0 10 10" refX="-2" refY="5" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-crossEnd" class="marker cross flowchart-v2" viewBox="0 0 11 11" refX="12" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-crossStart" class="marker cross flowchart-v2" viewBox="0 0 11 11" refX="-1" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-crossEnd-margin" class="marker cross flowchart-v2" viewBox="0 0 15 15" refX="17.7" refY="7.5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M 1,1 L 14,14 M 1,14 L 14,1" class="arrowMarkerPath" style="stroke-width: 2.5;"/></marker><marker id="my-svg_flowchart-v2-crossStart-margin" class="marker cross flowchart-v2" viewBox="0 0 15 15" refX="-3.5" refY="7.5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M 1,1 L 14,14 M 1,14 L 14,1" class="arrowMarkerPath" style="stroke-width: 2.5; stroke-dasharray: 1, 0;"/></marker><g class="root"><g class="clusters"/><g class="edgePaths"><path d="M138,140L138,143C138,146,138,152,144.767,157.749C151.534,163.498,165.068,168.996,171.835,171.745L178.602,174.494" id="my-svg-L_A_C_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_A_C_0" data-points="W3sieCI6MTM4LCJ5IjoxNDB9LHsieCI6MTM4LCJ5IjoxNTh9LHsieCI6MTgyLjMwNzY5MjMwNzY5MjMyLCJ5IjoxNzZ9XQ==" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M426,127.25L426,132.375C426,137.5,426,147.75,419.233,155.624C412.466,163.498,398.932,168.996,392.165,171.745L385.398,174.494" id="my-svg-L_B_C_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_B_C_0" data-points="W3sieCI6NDI2LCJ5IjoxMjcuMjV9LHsieCI6NDI2LCJ5IjoxNTh9LHsieCI6MzgxLjY5MjMwNzY5MjMwNzcsInkiOjE3Nn1d" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M282,257L282,260C282,263,282,269,282,274.333C282,279.667,282,284.333,282,286.667L282,289" id="my-svg-L_C_D_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_C_D_0" data-points="W3sieCI6MjgyLCJ5IjoyNTd9LHsieCI6MjgyLCJ5IjoyNzV9LHsieCI6MjgyLCJ5IjoyOTN9XQ==" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M282,425L282,428C282,431,282,437,282,442.333C282,447.667,282,452.333,282,454.667L282,457" id="my-svg-L_D_E_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_D_E_0" data-points="W3sieCI6MjgyLCJ5Ijo0MjV9LHsieCI6MjgyLCJ5Ijo0NDN9LHsieCI6MjgyLCJ5Ijo0NjF9XQ==" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M282,567.5L282,570.5C282,573.5,282,579.5,282,584.833C282,590.167,282,594.833,282,597.167L282,599.5" id="my-svg-L_E_F_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_E_F_0" data-points="W3sieCI6MjgyLCJ5Ijo1NjcuNX0seyJ4IjoyODIsInkiOjU4NS41fSx7IngiOjI4MiwieSI6NjAzLjV9XQ==" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/></g><g class="edgeLabels"><g class="edgeLabel"><g class="label" data-id="L_A_C_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_B_C_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_C_D_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_D_E_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_E_F_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g></g><g class="nodes"><g class="node default input" id="my-svg-flowchart-A-0" data-look="classic" transform="translate(138, 74)"><rect class="basic label-container" style="fill:#f6efe7 !important;stroke:#b18763 !important;stroke-width:1.5px !important" x="-130" y="-66" width="260" height="132"/><g class="label" style="color:#533f30 !important" transform="translate(-100, -51)"><rect/><foreignObject width="200" height="102"><div style="color: rgb(83, 63, 48) !important; display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#533f30 !important" class="nodeLabel"><p>输入<br />CLI：本地 Git 差异<br />GitHub Action：PR diff · 标题 · 正文</p></span></div></foreignObject></g></g><g class="node default input" id="my-svg-flowchart-B-1" data-look="classic" transform="translate(426, 74)"><rect class="basic label-container" style="fill:#f6efe7 !important;stroke:#b18763 !important;stroke-width:1.5px !important" x="-130" y="-53.25" width="260" height="106.5"/><g class="label" style="color:#533f30 !important" transform="translate(-100, -38.25)"><rect/><foreignObject width="200" height="76.5"><div style="color: rgb(83, 63, 48) !important; display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#533f30 !important" class="nodeLabel"><p>.proofpr.yml<br />阈值 · 预设 · Evidence Contract</p></span></div></foreignObject></g></g><g class="node default adapter" id="my-svg-flowchart-C-2" data-look="classic" transform="translate(282, 216.5)"><rect class="basic label-container" style="fill:#edf5f0 !important;stroke:#5f7f70 !important;stroke-width:1.5px !important" x="-123.5" y="-40.5" width="247" height="81"/><g class="label" style="color:#20352d !important" transform="translate(-93.5, -25.5)"><rect/><foreignObject width="187" height="51"><div style="color: rgb(32, 53, 45) !important; display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#20352d !important" class="nodeLabel"><p>@proof-pr/core<br />解析文件、路径与增删行</p></span></div></foreignObject></g></g><g class="node default core" id="my-svg-flowchart-D-3" data-look="classic" transform="translate(282, 359)"><rect class="basic label-container" style="fill:#dfeee7 !important;stroke:#2f6b55 !important;stroke-width:2px !important" x="-130" y="-66" width="260" height="132"/><g class="label" style="color:#19382d !important" transform="translate(-100, -51)"><rect/><foreignObject width="200" height="102"><div style="color: rgb(25, 56, 45) !important; display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#19382d !important" class="nodeLabel"><p>确定性规则引擎<br />证据 · 敏感路径 · Secret · 依赖 · Workflow · MCP<br />运行时不调用大模型</p></span></div></foreignObject></g></g><g class="node default result" id="my-svg-flowchart-E-4" data-look="classic" transform="translate(282, 514.25)"><rect class="basic label-container" style="fill:#f4f5f7 !important;stroke:#84909f !important;stroke-width:1.5px !important" x="-130" y="-53.25" width="260" height="106.5"/><g class="label" style="color:#344054 !important" transform="translate(-100, -38.25)"><rect/><foreignObject width="200" height="76.5"><div style="color: rgb(52, 64, 84) !important; display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#344054 !important" class="nodeLabel"><p>可解释结论<br />风险等级 · 证据分 · Review Gate · 行动清单</p></span></div></foreignObject></g></g><g class="node default output" id="my-svg-flowchart-F-5" data-look="classic" transform="translate(282, 682.25)"><rect class="basic label-container" style="fill:#723f48 !important;stroke:#723f48 !important;stroke-width:1.5px !important" x="-130" y="-78.75" width="260" height="157.5"/><g class="label" style="color:#ffffff !important" transform="translate(-100, -63.75)"><rect/><foreignObject width="200" height="127.5"><div style="color: rgb(255, 255, 255) !important; display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#ffffff !important" class="nodeLabel"><p>输出<br />Markdown · JSON · HTML · SARIF<br />PR 评论 · Summary · Annotations</p></span></div></foreignObject></g></g></g></g></g><defs><filter id="my-svg-drop-shadow" height="130%" width="130%"><feDropShadow dx="4" dy="4" stdDeviation="0" flood-opacity="0.06" flood-color="#000000"/></filter></defs><defs><filter id="my-svg-drop-shadow-small" height="150%" width="150%"><feDropShadow dx="2" dy="2" stdDeviation="0" flood-opacity="0.06" flood-color="#000000"/></filter></defs><linearGradient id="my-svg-gradient" gradientUnits="objectBoundingBox" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#5f7f70" stop-opacity="1"/><stop offset="100%" stop-color="hsl(22.5, 0%, 84.5098039216%)" stop-opacity="1"/></linearGradient></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1320" width="720" height="1320" role="img" aria-labelledby="title desc">
+  <title id="title">ProofPR 的三支证据输入与确定性审查门禁</title>
+  <desc id="desc">本地或 GitHub 的 unified diff 经 parseUnifiedDiff 转为 DiffFile，PR 标题和正文形成 PullRequest 证据对象，.proofpr.yml 经 YAML 和 Zod 加载为 ProofPRConfig。三种输入分别进入确定性规则引擎，得到 findings、evidence score、review decision 与 review plan，再发布为 Markdown、JSON、HTML、SARIF 或 GitHub Action 输出。配置不进入 diff parser。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="context-stroke"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#202A44" flood-opacity="0.08"/>
+    </filter>
+    <style>
+      text { font-family: "Noto Sans SC", "Microsoft YaHei", "PingFang SC", system-ui, sans-serif; }
+      .eyebrow { font-size: 14px; font-weight: 800; letter-spacing: 2px; fill: #1B365D; }
+      .title { font-size: 30px; font-weight: 800; letter-spacing: -0.6px; fill: #202A44; }
+      .subtitle { font-size: 16px; font-weight: 500; fill: #5B6472; }
+      .meta, .foot { font-size: 13px; font-weight: 600; fill: #5B6472; }
+      .pill { font-size: 12px; font-weight: 800; }
+      .zone { fill: #FFFFFF; stroke: #CDD5DF; stroke-width: 1.5; filter: url(#shadow); }
+      .zone-index { font-size: 13px; font-weight: 900; fill: white; }
+      .zone-title { font-size: 20px; font-weight: 800; fill: #202A44; }
+      .card-title { font-size: 17px; font-weight: 800; }
+      .card-detail { font-size: 14px; font-weight: 550; fill: #202A44; }
+      .note { font-size: 11.5px; font-weight: 650; fill: #5B6472; }
+      .edge { font-size: 11px; font-weight: 750; fill: #5B6472; }
+      .strip { font-size: 10.5px; font-weight: 750; }
+
+    .engine-title { font-size: 14px; font-weight: 850; }
+    .lens-title { font-size: 14px; font-weight: 850; }
+    .lens-detail { font-size: 11.5px; font-weight: 650; fill: #202A44; }
+    .gate-mini { font-size: 10.5px; font-weight: 850; fill: white; }
+    .gate-label { font-size: 9.5px; font-weight: 850; }
+
+    </style>
+  </defs>
+  <rect width="720" height="1320" rx="26" fill="#F7F8FA"/><text x="40" y="48" class="eyebrow">EVIDENCE GATE · PROOFPR</text>
+  <text x="40" y="86" class="title" text-anchor="start">
+    <tspan x="40" dy="0">一个 PR 怎样变成可解释的审查门禁？</tspan>
+  </text>
+  <text x="40" y="126" class="subtitle" text-anchor="start">
+    <tspan x="40" dy="0">三类证据独立建模后汇合；规则、分数与 gate 都由确定性代码给出。</tspan>
+  </text>
+  <g>
+    <rect x="40" y="151" width="118" height="30" rx="15" fill="#E8F2ED"/>
+    <text x="99" y="171" class="pill" fill="#2F6B55" text-anchor="middle">差异事实</text>
+  </g>
+  <g>
+    <rect x="168" y="151" width="116" height="30" rx="15" fill="#EAF0F7"/>
+    <text x="226" y="171" class="pill" fill="#1B365D" text-anchor="middle">PR 证据</text>
+  </g>
+  <g>
+    <rect x="294" y="151" width="120" height="30" rx="15" fill="#F1EDF4"/>
+    <text x="354" y="171" class="pill" fill="#6D587A" text-anchor="middle">仓库策略</text>
+  </g>
+  <g>
+    <rect x="424" y="151" width="132" height="30" rx="15" fill="#F8E9EC"/>
+    <text x="490" y="171" class="pill" fill="#7B3F4A" text-anchor="middle">运行时无 LLM</text>
+  </g>
+  <g>
+    <rect x="28" y="195" width="664" height="445" rx="22" class="zone"/>
+    <rect x="28" y="195" width="8" height="445" rx="4" fill="#2F6B55"/>
+    <circle cx="62" cy="232" r="18" fill="#2F6B55"/>
+    <text x="62" y="239" class="zone-index" text-anchor="middle">01</text>
+    <text x="92" y="239" class="zone-title">三支输入通道</text>
+    <text x="670" y="237" class="meta" text-anchor="end">各自解析 · 不混用</text>
+  </g>
+  <g>
+    <rect x="52" y="260" width="190" height="96" rx="14" fill="#E8F2ED" stroke="#2F6B55" stroke-width="1.7" />
+    <text x="70" y="290" class="card-title" fill="#2F6B55">代码差异</text>
+
+  <text x="70" y="318" class="card-detail" text-anchor="start">
+    <tspan x="70" dy="0">CLI：本地 Git diff</tspan><tspan x="70" dy="23">Action：GitHub PR diff</tspan>
+  </text>
+
+  </g>
+  <g>
+    <rect x="265" y="260" width="190" height="96" rx="14" fill="#EAF0F7" stroke="#1B365D" stroke-width="1.7" />
+    <text x="283" y="290" class="card-title" fill="#1B365D">PR 证据文本</text>
+
+  <text x="283" y="318" class="card-detail" text-anchor="start">
+    <tspan x="283" dy="0">标题 · 正文</tspan><tspan x="283" dy="23">复现 / 验证 / 截图说明</tspan>
+  </text>
+
+  </g>
+  <g>
+    <rect x="478" y="260" width="190" height="96" rx="14" fill="#F1EDF4" stroke="#6D587A" stroke-width="1.7" />
+    <text x="496" y="290" class="card-title" fill="#6D587A">仓库配置</text>
+
+  <text x="496" y="318" class="card-detail" text-anchor="start">
+    <tspan x="496" dy="0">.proofpr.yml</tspan><tspan x="496" dy="23">preset · 阈值 · contracts</tspan>
+  </text>
+
+  </g>
+  <path d="M 147 356 V 398" fill="none" stroke="#2F6B55" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"  marker-end="url(#arrow)"/>
+  <path d="M 360 356 V 398" fill="none" stroke="#1B365D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"  marker-end="url(#arrow)"/>
+  <path d="M 573 356 V 398" fill="none" stroke="#6D587A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"  marker-end="url(#arrow)"/>
+  <g>
+    <rect x="52" y="410" width="190" height="112" rx="14" fill="#E8F2ED" stroke="#2F6B55" stroke-width="1.7" />
+    <text x="70" y="440" class="card-title" fill="#2F6B55">parseUnifiedDiff()</text>
+
+  <text x="70" y="468" class="card-detail" text-anchor="start">
+    <tspan x="70" dy="0">文件路径与增删行</tspan><tspan x="70" dy="23">新增行位置 · 变更规模</tspan>
+  </text>
+    <text x="70" y="508" class="note">输出 DiffFile[]</text>
+  </g>
+  <g>
+    <rect x="265" y="410" width="190" height="132" rx="14" fill="#EAF0F7" stroke="#1B365D" stroke-width="1.7" />
+    <text x="283" y="440" class="card-title" fill="#1B365D">PullRequest 证据对象</text>
+
+  <text x="283" y="468" class="card-detail" text-anchor="start">
+    <tspan x="283" dy="0">描述中的测试 / 复现</tspan><tspan x="283" dy="23">截图 / 验证 / 风险说明</tspan>
+  </text>
+    <text x="283" y="528" class="note">与 diff 事实并列进入规则</text>
+  </g>
+  <g>
+    <rect x="478" y="410" width="190" height="132" rx="14" fill="#F1EDF4" stroke="#6D587A" stroke-width="1.7" />
+    <text x="496" y="440" class="card-title" fill="#6D587A">配置加载与校验</text>
+
+  <text x="496" y="468" class="card-detail" text-anchor="start">
+    <tspan x="496" dy="0">YAML + Zod</tspan><tspan x="496" dy="23">路径匹配 · contracts</tspan><tspan x="496" dy="23">preset · 阈值</tspan>
+  </text>
+    <text x="496" y="528" class="note">输出 ProofPRConfig</text>
+  </g><rect x="52" y="552" width="616" height="66" rx="12" fill="#F8E9EC"/><text x="70" y="579" class="card-title" fill="#7B3F4A">配置不是 diff</text><text x="210" y="579" class="card-detail">配置只改变规则与阈值，不进入 unified diff parser。</text><text x="70" y="605" class="note">代码事实、PR 描述证据、仓库策略以三种不同类型交给 core。</text>
+  <g>
+    <rect x="28" y="665" width="664" height="340" rx="22" class="zone"/>
+    <rect x="28" y="665" width="8" height="340" rx="4" fill="#7B3F4A"/>
+    <circle cx="62" cy="702" r="18" fill="#7B3F4A"/>
+    <text x="62" y="709" class="zone-index" text-anchor="middle">02</text>
+    <text x="92" y="709" class="zone-title">@proof-pr/core · 确定性规则引擎</text>
+    <text x="670" y="707" class="meta" text-anchor="end">同输入 → 同结论</text>
+  </g>
+  <g>
+    <rect x="112" y="720" width="112" height="30" rx="15" fill="#E8F2ED"/>
+    <text x="168" y="740" class="pill" fill="#2F6B55" text-anchor="middle">DiffFile[]</text>
+  </g>
+  <g>
+    <rect x="278" y="720" width="164" height="30" rx="15" fill="#EAF0F7"/>
+    <text x="360" y="740" class="pill" fill="#1B365D" text-anchor="middle">PullRequest evidence</text>
+  </g>
+  <g>
+    <rect x="496" y="720" width="132" height="30" rx="15" fill="#F1EDF4"/>
+    <text x="562" y="740" class="pill" fill="#6D587A" text-anchor="middle">ProofPRConfig</text>
+  </g>
+  <path d="M 168 750 V 764" fill="none" stroke="#2F6B55" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"  marker-end="url(#arrow)"/>
+  <path d="M 360 750 V 764" fill="none" stroke="#1B365D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"  marker-end="url(#arrow)"/>
+  <path d="M 562 750 V 764" fill="none" stroke="#6D587A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"  marker-end="url(#arrow)"/><g>
+  <rect x="52" y="770" width="616" height="225" rx="18" fill="#FFFFFF" stroke="#7B3F4A" stroke-width="2"/>
+  <text x="72" y="800" class="engine-title" fill="#7B3F4A">scanPullRequest()：产出 findings，再计算分数与 review decision</text>
+
+  <g>
+    <rect x="72" y="818" width="270" height="68" rx="12" fill="#E8F2ED"/>
+    <text x="86" y="844" class="lens-title" fill="#2F6B55">证据完整度</text>
+    <text x="86" y="867" class="lens-detail">测试 · 复现 · 截图 · Evidence Contract</text>
+  </g>
+
+  <g>
+    <rect x="378" y="818" width="270" height="68" rx="12" fill="#EAF0F7"/>
+    <text x="392" y="844" class="lens-title" fill="#1B365D">审查范围</text>
+    <text x="392" y="867" class="lens-detail">改动规模 · 敏感路径 · 文件类型</text>
+  </g>
+
+  <g>
+    <rect x="72" y="896" width="270" height="68" rx="12" fill="#FFF3DF"/>
+    <text x="86" y="922" class="lens-title" fill="#9B682F">供应链</text>
+    <text x="86" y="945" class="lens-detail">依赖版本 · lockfile · lifecycle · 来源</text>
+  </g>
+
+  <g>
+    <rect x="378" y="896" width="270" height="68" rx="12" fill="#F8E9EC"/>
+    <text x="392" y="922" class="lens-title" fill="#7B3F4A">安全执行面</text>
+    <text x="392" y="945" class="lens-detail">secret · Workflow 权限 · MCP 配置</text>
+  </g>
+  <text x="72" y="976" class="note">finding 保留 ruleId、severity、message、建议，以及适用时的文件和新增行位置。</text>
+</g>
+  <g>
+    <rect x="28" y="1030" width="664" height="240" rx="22" class="zone"/>
+    <rect x="28" y="1030" width="8" height="240" rx="4" fill="#6D587A"/>
+    <circle cx="62" cy="1067" r="18" fill="#6D587A"/>
+    <text x="62" y="1074" class="zone-index" text-anchor="middle">03</text>
+    <text x="92" y="1074" class="zone-title">可执行结论与多格式发布</text>
+    <text x="670" y="1072" class="meta" text-anchor="end">给人审查，不替人审查</text>
+  </g>
+  <path d="M 322 1178 H 346" fill="none" stroke="#6D587A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"  marker-end="url(#arrow)"/><g>
+  <rect x="52" y="1090" width="270" height="158" rx="15" fill="#F1EDF4" stroke="#6D587A" stroke-width="1.8"/>
+  <text x="70" y="1120" class="card-title" fill="#6D587A">ReviewResult</text>
+  <text x="70" y="1145" class="card-detail">risk score · evidence score</text>
+  <text x="70" y="1168" class="card-detail">findings · reviewPlan · gate</text>
+
+  <g>
+    <rect x="70" y="1178" width="58" height="23" rx="11.5" fill="#E8F2ED"/>
+    <text x="99" y="1194" class="gate-label" fill="#2F6B55" text-anchor="middle">ready</text>
+  </g>
+
+  <g>
+    <rect x="136" y="1178" width="112" height="23" rx="11.5" fill="#EAF0F7"/>
+    <text x="192" y="1194" class="gate-label" fill="#1B365D" text-anchor="middle">review-carefully</text>
+  </g>
+
+  <g>
+    <rect x="70" y="1208" width="112" height="23" rx="11.5" fill="#FFF3DF"/>
+    <text x="126" y="1224" class="gate-label" fill="#9B682F" text-anchor="middle">needs-evidence</text>
+  </g>
+
+  <g>
+    <rect x="190" y="1208" width="104" height="23" rx="11.5" fill="#F8E9EC"/>
+    <text x="242" y="1224" class="gate-label" fill="#7B3F4A" text-anchor="middle">block-merge</text>
+  </g>
+</g>
+  <g>
+    <rect x="358" y="1090" width="310" height="158" rx="14" fill="#F1EDF4" stroke="#6D587A" stroke-width="1.7" />
+    <text x="376" y="1120" class="card-title" fill="#6D587A">Reporters 与 GitHub Action</text>
+
+  <text x="376" y="1148" class="card-detail" text-anchor="start">
+    <tspan x="376" dy="0">Markdown · JSON · HTML · SARIF</tspan><tspan x="376" dy="23">Job Summary · PR 评论 · Annotations</tspan>
+  </text>
+    <text x="376" y="1234" class="note">相同结果模型，不同发布载体</text>
+  </g><text x="40" y="1299" class="foot">ProofPR 判断的是“现有证据是否足以进入审查或合并”，并不宣称理解业务正确性。</text>
+</svg>

@@ -1,1 +1,209 @@
-<svg id="my-svg" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="flowchart" style="max-width: 510.125px; background-color: transparent;" viewBox="0 0 510.125 1069" role="graphics-document document" aria-roledescription="flowchart-v2"><style>#my-svg{font-size:17px;fill:#20352d;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#my-svg .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#my-svg .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#my-svg .error-icon{fill:hsl(322.5, 28.5714285714%, 99.5098039216%);}#my-svg .error-text{fill:rgb(0.8928571428, 1.607142857, 1.1607142856);stroke:rgb(0.8928571428, 1.607142857, 1.1607142856);}#my-svg .edge-thickness-normal{stroke-width:1px;}#my-svg .edge-thickness-thick{stroke-width:3.5px;}#my-svg .edge-pattern-solid{stroke-dasharray:0;}#my-svg .edge-thickness-invisible{stroke-width:0;fill:none;}#my-svg .edge-pattern-dashed{stroke-dasharray:3;}#my-svg .edge-pattern-dotted{stroke-dasharray:2;}#my-svg .marker{fill:#71887e;stroke:#71887e;}#my-svg .marker.cross{stroke:#71887e;}#my-svg svg{font-size:17px;}#my-svg p{margin:0;}#my-svg .label{color:#20352d;}#my-svg .cluster-label text{fill:rgb(0.8928571428, 1.607142857, 1.1607142856);}#my-svg .cluster-label span{color:rgb(0.8928571428, 1.607142857, 1.1607142856);}#my-svg .cluster-label span p{background-color:transparent;}#my-svg .label text,#my-svg span{fill:#20352d;color:#20352d;}#my-svg .node rect,#my-svg .node circle,#my-svg .node ellipse,#my-svg .node polygon,#my-svg .node path{fill:#edf5f0;stroke:#5f7f70;stroke-width:1px;}#my-svg .rough-node .label text,#my-svg .node .label text,#my-svg .image-shape .label,#my-svg .icon-shape .label{text-anchor:middle;}#my-svg .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#my-svg .rough-node .label,#my-svg .node .label,#my-svg .image-shape .label,#my-svg .icon-shape .label{text-align:center;}#my-svg .node.clickable{cursor:pointer;}#my-svg .root .anchor path{fill:#71887e!important;stroke-width:0;stroke:#71887e;}#my-svg .arrowheadPath{fill:#0b0b0b;}#my-svg .edgePaths .path{stroke:#71887e;stroke-width:1px;}#my-svg .flowchart-link{stroke:#71887e;fill:none;}#my-svg .edgeLabel{background-color:#faf9f6;text-align:center;}#my-svg .edgeLabel p{background-color:#faf9f6;}#my-svg .edgeLabel rect{opacity:0.5;background-color:#faf9f6;fill:#faf9f6;}#my-svg .labelBkg{background-color:rgba(250, 249, 246, 0.5);}#my-svg .cluster rect{fill:hsl(322.5, 28.5714285714%, 99.5098039216%);stroke:hsl(322.5, 0%, 89.5098039216%);stroke-width:1px;}#my-svg .cluster text{fill:rgb(0.8928571428, 1.607142857, 1.1607142856);}#my-svg .cluster span{color:rgb(0.8928571428, 1.607142857, 1.1607142856);}#my-svg .node .collapsed-indicator{fill:hsl(322.5, 0%, 89.5098039216%);stroke:none;opacity:0.6;}#my-svg .node .collapsed-separator{stroke:hsl(322.5, 0%, 89.5098039216%);stroke-width:0.75px;}#my-svg div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-size:12px;background:hsl(322.5, 28.5714285714%, 99.5098039216%);border:1px solid hsl(322.5, 0%, 89.5098039216%);border-radius:2px;pointer-events:none;z-index:100;}#my-svg .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#20352d;}#my-svg rect.text{fill:none;stroke-width:0;}#my-svg .icon-shape,#my-svg .image-shape{background-color:#faf9f6;text-align:center;}#my-svg .icon-shape p,#my-svg .image-shape p{background-color:#faf9f6;padding:2px;}#my-svg .icon-shape .label rect,#my-svg .image-shape .label rect{opacity:0.5;background-color:#faf9f6;fill:#faf9f6;}#my-svg .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#my-svg .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#my-svg .node .neo-node{stroke:#5f7f70;}#my-svg [data-look="neo"].node rect,#my-svg [data-look="neo"].cluster rect,#my-svg [data-look="neo"].node polygon{stroke:url(#my-svg-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#my-svg [data-look="neo"].swimlane.cluster rect{filter:none;}#my-svg [data-look="neo"].node path{stroke:url(#my-svg-gradient);stroke-width:1px;}#my-svg [data-look="neo"].node .outer-path{filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#my-svg [data-look="neo"].node .neo-line path{stroke:#5f7f70;filter:none;}#my-svg [data-look="neo"].node circle{stroke:url(#my-svg-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#my-svg [data-look="neo"].node circle .state-start{fill:#000000;}#my-svg [data-look="neo"].icon-shape .icon{fill:url(#my-svg-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#my-svg [data-look="neo"].icon-shape .icon-neo path{stroke:url(#my-svg-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#my-svg :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}#my-svg .input&gt;*{fill:rgb(246, 239, 231)!important;stroke:rgb(177, 135, 99)!important;color:rgb(83, 63, 48)!important;stroke-width:1.5px!important;}#my-svg .input span{fill:rgb(246, 239, 231)!important;stroke:rgb(177, 135, 99)!important;color:rgb(83, 63, 48)!important;stroke-width:1.5px!important;}#my-svg .input tspan{fill:rgb(83, 63, 48)!important;}#my-svg .core&gt;*{fill:rgb(223, 238, 231)!important;stroke:rgb(47, 107, 85)!important;color:rgb(25, 56, 45)!important;stroke-width:2px!important;}#my-svg .core span{fill:rgb(223, 238, 231)!important;stroke:rgb(47, 107, 85)!important;color:rgb(25, 56, 45)!important;stroke-width:2px!important;}#my-svg .core tspan{fill:rgb(25, 56, 45)!important;}#my-svg .layer&gt;*{fill:rgb(237, 245, 240)!important;stroke:rgb(95, 127, 112)!important;color:rgb(32, 53, 45)!important;stroke-width:1.5px!important;}#my-svg .layer span{fill:rgb(237, 245, 240)!important;stroke:rgb(95, 127, 112)!important;color:rgb(32, 53, 45)!important;stroke-width:1.5px!important;}#my-svg .layer tspan{fill:rgb(32, 53, 45)!important;}#my-svg .network&gt;*{fill:rgb(244, 245, 247)!important;stroke:rgb(132, 144, 159)!important;color:rgb(52, 64, 84)!important;stroke-width:1.5px!important;}#my-svg .network span{fill:rgb(244, 245, 247)!important;stroke:rgb(132, 144, 159)!important;color:rgb(52, 64, 84)!important;stroke-width:1.5px!important;}#my-svg .network tspan{fill:rgb(52, 64, 84)!important;}#my-svg .output&gt;*{fill:rgb(114, 63, 72)!important;stroke:rgb(114, 63, 72)!important;color:rgb(255, 255, 255)!important;stroke-width:1.5px!important;}#my-svg .output span{fill:rgb(114, 63, 72)!important;stroke:rgb(114, 63, 72)!important;color:rgb(255, 255, 255)!important;stroke-width:1.5px!important;}#my-svg .output tspan{fill:rgb(255, 255, 255)!important;}</style><g><marker id="my-svg_flowchart-v2-pointEnd" class="marker flowchart-v2" viewBox="0 0 10 10" refX="5" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-pointStart" class="marker flowchart-v2" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 5 L 10 10 L 10 0 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-pointEnd-margin" class="marker flowchart-v2" viewBox="0 0 11.5 14" refX="11.5" refY="7" markerUnits="userSpaceOnUse" markerWidth="10.5" markerHeight="14" orient="auto"><path d="M 0 0 L 11.5 7 L 0 14 z" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-pointStart-margin" class="marker flowchart-v2" viewBox="0 0 11.5 14" refX="1" refY="7" markerUnits="userSpaceOnUse" markerWidth="11.5" markerHeight="14" orient="auto"><polygon points="0,7 11.5,14 11.5,0" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-circleEnd" class="marker flowchart-v2" viewBox="0 0 10 10" refX="11" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-circleStart" class="marker flowchart-v2" viewBox="0 0 10 10" refX="-1" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-circleEnd-margin" class="marker flowchart-v2" viewBox="0 0 10 10" refY="5" refX="12.25" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-circleStart-margin" class="marker flowchart-v2" viewBox="0 0 10 10" refX="-2" refY="5" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-crossEnd" class="marker cross flowchart-v2" viewBox="0 0 11 11" refX="12" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-crossStart" class="marker cross flowchart-v2" viewBox="0 0 11 11" refX="-1" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-crossEnd-margin" class="marker cross flowchart-v2" viewBox="0 0 15 15" refX="17.7" refY="7.5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M 1,1 L 14,14 M 1,14 L 14,1" class="arrowMarkerPath" style="stroke-width: 2.5;"/></marker><marker id="my-svg_flowchart-v2-crossStart-margin" class="marker cross flowchart-v2" viewBox="0 0 15 15" refX="-3.5" refY="7.5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M 1,1 L 14,14 M 1,14 L 14,1" class="arrowMarkerPath" style="stroke-width: 2.5; stroke-dasharray: 1, 0;"/></marker><g class="root"><g class="clusters"/><g class="edgePaths"><path d="M218.125,89L218.125,92C218.125,95,218.125,101,218.125,106.333C218.125,111.667,218.125,116.333,218.125,118.667L218.125,121" id="my-svg-L_A_B_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_A_B_0" data-points="W3sieCI6MjE4LjEyNSwieSI6ODl9LHsieCI6MjE4LjEyNSwieSI6MTA3fSx7IngiOjIxOC4xMjUsInkiOjEyNX1d" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M218.125,257L218.125,260C218.125,263,218.125,269,218.125,274.333C218.125,279.667,218.125,284.333,218.125,286.667L218.125,289" id="my-svg-L_B_C_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_B_C_0" data-points="W3sieCI6MjE4LjEyNSwieSI6MjU3fSx7IngiOjIxOC4xMjUsInkiOjI3NX0seyJ4IjoyMTguMTI1LCJ5IjoyOTN9XQ==" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M139.652,348.5L131.168,351.5C122.684,354.5,105.717,360.5,97.234,377.5C88.75,394.5,88.75,422.5,88.75,450.5C88.75,478.5,88.75,506.5,88.75,534.5C88.75,562.5,88.75,590.5,88.75,618.5C88.75,646.5,88.75,674.5,88.75,700.375C88.75,726.25,88.75,750,88.75,773.75C88.75,797.5,88.75,821.25,88.75,835.458C88.75,849.667,88.75,854.333,88.75,856.667L88.75,859" id="my-svg-L_C_D_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_C_D_0" data-points="W3sieCI6MTM5LjY1MTYzOTM0NDI2MjMsInkiOjM0OC41fSx7IngiOjg4Ljc1LCJ5IjozNjYuNX0seyJ4Ijo4OC43NSwieSI6NDUwLjV9LHsieCI6ODguNzUsInkiOjUzNC41fSx7IngiOjg4Ljc1LCJ5Ijo2MTguNX0seyJ4Ijo4OC43NSwieSI6NzAyLjV9LHsieCI6ODguNzUsInkiOjc3My43NX0seyJ4Ijo4OC43NSwieSI6ODQ1fSx7IngiOjg4Ljc1LCJ5Ijo4NjN9XQ==" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M264.83,348.5L269.879,351.5C274.928,354.5,285.027,360.5,290.076,365.833C295.125,371.167,295.125,375.833,295.125,378.167L295.125,380.5" id="my-svg-L_C_E_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_C_E_0" data-points="W3sieCI6MjY0LjgyOTkxODAzMjc4NjksInkiOjM0OC41fSx7IngiOjI5NS4xMjUsInkiOjM2Ni41fSx7IngiOjI5NS4xMjUsInkiOjM4NC41fV0=" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M355.625,516.5L358.375,519.5C361.125,522.5,366.625,528.5,369.375,533.833C372.125,539.167,372.125,543.833,372.125,546.167L372.125,548.5" id="my-svg-L_E_F_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_E_F_0" data-points="W3sieCI6MzU1LjYyNSwieSI6NTE2LjV9LHsieCI6MzcyLjEyNSwieSI6NTM0LjV9LHsieCI6MzcyLjEyNSwieSI6NTUyLjV9XQ==" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M372.125,684.5L372.125,687.5C372.125,690.5,372.125,696.5,372.125,701.833C372.125,707.167,372.125,711.833,372.125,714.167L372.125,716.5" id="my-svg-L_F_G_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_F_G_0" data-points="W3sieCI6MzcyLjEyNSwieSI6Njg0LjV9LHsieCI6MzcyLjEyNSwieSI6NzAyLjV9LHsieCI6MzcyLjEyNSwieSI6NzIwLjV9XQ==" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M372.125,827L372.125,830C372.125,833,372.125,839,372.125,844.333C372.125,849.667,372.125,854.333,372.125,856.667L372.125,859" id="my-svg-L_G_R_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_G_R_0" data-points="W3sieCI6MzcyLjEyNSwieSI6ODI3fSx7IngiOjM3Mi4xMjUsInkiOjg0NX0seyJ4IjozNzIuMTI1LCJ5Ijo4NjN9XQ==" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M88.75,969.5L88.75,972.5C88.75,975.5,88.75,981.5,96.605,987.278C104.46,993.055,120.17,998.611,128.025,1001.389L135.88,1004.166" id="my-svg-L_D_H_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_D_H_0" data-points="W3sieCI6ODguNzUsInkiOjk2OS41fSx7IngiOjg4Ljc1LCJ5Ijo5ODcuNX0seyJ4IjoxMzkuNjUxNjM5MzQ0MjYyMywieSI6MTAwNS41fV0=" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M234.625,516.5L231.875,519.5C229.125,522.5,223.625,528.5,220.875,545.5C218.125,562.5,218.125,590.5,218.125,618.5C218.125,646.5,218.125,674.5,218.125,700.375C218.125,726.25,218.125,750,218.125,773.75C218.125,797.5,218.125,821.25,218.125,845C218.125,868.75,218.125,892.5,218.125,916.25C218.125,940,218.125,963.75,218.125,977.958C218.125,992.167,218.125,996.833,218.125,999.167L218.125,1001.5" id="my-svg-L_E_H_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_E_H_0" data-points="W3sieCI6MjM0LjYyNSwieSI6NTE2LjV9LHsieCI6MjE4LjEyNSwieSI6NTM0LjV9LHsieCI6MjE4LjEyNSwieSI6NjE4LjV9LHsieCI6MjE4LjEyNSwieSI6NzAyLjV9LHsieCI6MjE4LjEyNSwieSI6NzczLjc1fSx7IngiOjIxOC4xMjUsInkiOjg0NX0seyJ4IjoyMTguMTI1LCJ5Ijo5MTYuMjV9LHsieCI6MjE4LjEyNSwieSI6OTg3LjV9LHsieCI6MjE4LjEyNSwieSI6MTAwNS41fV0=" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M372.125,969.5L372.125,972.5C372.125,975.5,372.125,981.5,362.666,987.31C353.206,993.12,334.288,998.741,324.829,1001.551L315.369,1004.361" id="my-svg-L_R_H_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_R_H_0" data-points="W3sieCI6MzcyLjEyNSwieSI6OTY5LjV9LHsieCI6MzcyLjEyNSwieSI6OTg3LjV9LHsieCI6MzExLjUzNDgzNjA2NTU3Mzc2LCJ5IjoxMDA1LjV9XQ==" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/></g><g class="edgeLabels"><g class="edgeLabel"><g class="label" data-id="L_A_B_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_B_C_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_C_D_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_C_E_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_E_F_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_F_G_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_G_R_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_D_H_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_E_H_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_R_H_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g></g><g class="nodes"><g class="node default input" id="my-svg-flowchart-A-0" data-look="classic" transform="translate(218.125, 48.5)"><rect class="basic label-container" style="fill:#f6efe7 !important;stroke:#b18763 !important;stroke-width:1.5px !important" x="-114.4921875" y="-40.5" width="228.984375" height="81"/><g class="label" style="color:#533f30 !important" transform="translate(-84.4921875, -25.5)"><rect/><foreignObject width="168.984375" height="51"><div style="color: rgb(83, 63, 48) !important; display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#533f30 !important" class="nodeLabel"><p>访客输入<br />鼠标 · 滚轮 · 窗口焦点</p></span></div></foreignObject></g></g><g class="node default core" id="my-svg-flowchart-B-1" data-look="classic" transform="translate(218.125, 191)"><rect class="basic label-container" style="fill:#dfeee7 !important;stroke:#2f6b55 !important;stroke-width:2px !important" x="-130" y="-66" width="260" height="132"/><g class="label" style="color:#19382d !important" transform="translate(-100, -51)"><rect/><foreignObject width="200" height="102"><div style="color: rgb(25, 56, 45) !important; display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#19382d !important" class="nodeLabel"><p>InteractionRouter + 相机状态<br />进入显示器 · 退出 · 切换输入归属</p></span></div></foreignObject></g></g><g class="node default core" id="my-svg-flowchart-C-2" data-look="classic" transform="translate(218.125, 320.75)"><rect class="basic label-container" style="fill:#dfeee7 !important;stroke:#2f6b55 !important;stroke-width:2px !important" x="-81" y="-27.75" width="162" height="55.5"/><g class="label" style="color:#19382d !important" transform="translate(-51, -12.75)"><rect/><foreignObject width="102" height="25.5"><div style="color: rgb(25, 56, 45) !important; display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#19382d !important" class="nodeLabel"><p>共享透视相机</p></span></div></foreignObject></g></g><g class="node default layer" id="my-svg-flowchart-D-3" data-look="classic" transform="translate(88.75, 916.25)"><rect class="basic label-container" style="fill:#edf5f0 !important;stroke:#5f7f70 !important;stroke-width:1.5px !important" x="-80.75" y="-53.25" width="161.5" height="106.5"/><g class="label" style="color:#20352d !important" transform="translate(-50.75, -38.25)"><rect/><foreignObject width="101.5" height="76.5"><div style="color: rgb(32, 53, 45) !important; display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#20352d !important" class="nodeLabel"><p>WebGL<br />房间 · 工作站<br />CRT 与遮挡</p></span></div></foreignObject></g></g><g class="node default layer" id="my-svg-flowchart-E-4" data-look="classic" transform="translate(295.125, 450.5)"><rect class="basic label-container" style="fill:#edf5f0 !important;stroke:#5f7f70 !important;stroke-width:1.5px !important" x="-130" y="-66" width="260" height="132"/><g class="label" style="color:#20352d !important" transform="translate(-100, -51)"><rect/><foreignObject width="200" height="102"><div style="color: rgb(32, 53, 45) !important; display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#20352d !important" class="nodeLabel"><p>CSS3DRenderer<br />显示器锚点<br />原创桌面 + WindowManager</p></span></div></foreignObject></g></g><g class="node default core" id="my-svg-flowchart-F-5" data-look="classic" transform="translate(372.125, 618.5)"><rect class="basic label-container" style="fill:#dfeee7 !important;stroke:#2f6b55 !important;stroke-width:2px !important" x="-130" y="-66" width="260" height="132"/><g class="label" style="color:#19382d !important" transform="translate(-100, -51)"><rect/><foreignObject width="200" height="102"><div style="color: rgb(25, 56, 45) !important; display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#19382d !important" class="nodeLabel"><p>投影协调器<br />接收桌面 postMessage 的窗口位置<br />结合锚点计算屏幕四角</p></span></div></foreignObject></g></g><g class="node default layer" id="my-svg-flowchart-G-6" data-look="classic" transform="translate(372.125, 773.75)"><rect class="basic label-container" style="fill:#edf5f0 !important;stroke:#5f7f70 !important;stroke-width:1.5px !important" x="-121.2734375" y="-53.25" width="242.546875" height="106.5"/><g class="label" style="color:#20352d !important" transform="translate(-91.2734375, -38.25)"><rect/><foreignObject width="182.546875" height="76.5"><div style="color: rgb(32, 53, 45) !important; display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#20352d !important" class="nodeLabel"><p>父页面 DOM Portal<br />真实八股文 iframe<br />polygon 裁切 · 超时重试</p></span></div></foreignObject></g></g><g class="node default network" id="my-svg-flowchart-R-7" data-look="classic" transform="translate(372.125, 916.25)"><rect class="basic label-container" style="fill:#f4f5f7 !important;stroke:#84909f !important;stroke-width:1.5px !important" x="-130" y="-53.25" width="260" height="106.5"/><g class="label" style="color:#344054 !important" transform="translate(-100, -38.25)"><rect/><foreignObject width="200" height="76.5"><div style="color: rgb(52, 64, 84) !important; display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#344054 !important" class="nodeLabel"><p>Vercel 同源 rewrite<br />/interview-app → 八股文源站</p></span></div></foreignObject></g></g><g class="node default output" id="my-svg-flowchart-H-8" data-look="classic" transform="translate(218.125, 1033.25)"><rect class="basic label-container" style="fill:#723f48 !important;stroke:#723f48 !important;stroke-width:1.5px !important" x="-129.796875" y="-27.75" width="259.59375" height="55.5"/><g class="label" style="color:#ffffff !important" transform="translate(-99.796875, -12.75)"><rect/><foreignObject width="199.59375" height="25.5"><div style="color: rgb(255, 255, 255) !important; display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#ffffff !important" class="nodeLabel"><p>屏幕中的可交互 3D 工作站</p></span></div></foreignObject></g></g></g></g></g><defs><filter id="my-svg-drop-shadow" height="130%" width="130%"><feDropShadow dx="4" dy="4" stdDeviation="0" flood-opacity="0.06" flood-color="#000000"/></filter></defs><defs><filter id="my-svg-drop-shadow-small" height="150%" width="150%"><feDropShadow dx="2" dy="2" stdDeviation="0" flood-opacity="0.06" flood-color="#000000"/></filter></defs><linearGradient id="my-svg-gradient" gradientUnits="objectBoundingBox" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#5f7f70" stop-opacity="1"/><stop offset="100%" stop-color="hsl(22.5, 0%, 84.5098039216%)" stop-opacity="1"/></linearGradient></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1320" width="720" height="1320" role="img" aria-labelledby="title desc">
+  <title id="title">Signal Atlas 真实网页嵌入架构图</title>
+  <desc id="desc">图中分为渲染流、投影流和网络取页三部分。InteractionRouter 与相机状态机驱动共享 Camera，WebGLRenderer 与 CSS3DRenderer 使用同一视角。桌面 iframe 中的 WindowManager 通过 postMessage 发送窗口矩形，父页面投影协调器定位固定 DOM Portal 并用多边形裁剪显示真实 Interview iframe。该 iframe 通过 Vercel 同源重写请求上游页面，并在超时或失败时受控重试。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="context-stroke"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#202A44" flood-opacity="0.08"/>
+    </filter>
+    <style>
+      text { font-family: "Noto Sans SC", "Microsoft YaHei", "PingFang SC", system-ui, sans-serif; }
+      .eyebrow { font-size: 14px; font-weight: 800; letter-spacing: 2px; fill: #1B365D; }
+      .title { font-size: 30px; font-weight: 800; letter-spacing: -0.6px; fill: #202A44; }
+      .subtitle { font-size: 16px; font-weight: 520; fill: #5B6472; }
+      .meta, .foot { font-size: 13px; font-weight: 650; fill: #5B6472; }
+      .pill { font-size: 13px; font-weight: 800; }
+      .section { fill: #FFFFFF; stroke: #CDD5DF; stroke-width: 1.5; filter: url(#shadow); }
+      .section-index { font-size: 13px; font-weight: 900; fill: white; }
+      .section-title { font-size: 20px; font-weight: 820; fill: #202A44; }
+      .section-kicker { font-size: 12px; font-weight: 750; fill: #5B6472; }
+      .card-title { font-size: 17px; font-weight: 820; }
+      .card-detail { font-size: 14px; font-weight: 560; fill: #202A44; }
+      .note { font-size: 11.5px; font-weight: 680; fill: #5B6472; }
+      .badge { font-size: 11.5px; font-weight: 820; fill: white; }
+      .edge { font-size: 11.5px; font-weight: 760; fill: #5B6472; }
+      .strip { font-size: 12px; font-weight: 760; }
+      .divider-label { font-size: 11.5px; font-weight: 720; fill: #8A93A1; }
+    </style>
+  </defs>
+  <rect width="720" height="1320" rx="26" fill="#F7F8FA"/><text x="40" y="48" class="eyebrow">SYSTEM MAP · SIGNAL ATLAS</text>
+  <text x="40" y="86" class="title" text-anchor="start">
+    <tspan x="40" dy="0">一个 3D 桌面，怎样稳定容纳真实网页</tspan>
+  </text>
+  <text x="40" y="126" class="subtitle" text-anchor="start">
+    <tspan x="40" dy="0">渲染层画场景，投影层同步窗口，网络层把真实页面取回来。</tspan>
+  </text>
+  <g>
+    <rect x="40" y="151" width="112" height="32" rx="16" fill="#EAF0F7"/>
+    <text x="96" y="173" class="pill" fill="#1B365D" text-anchor="middle">渲染流</text>
+  </g>
+  <g>
+    <rect x="162" y="151" width="112" height="32" rx="16" fill="#E8F2ED"/>
+    <text x="218" y="173" class="pill" fill="#2F6B55" text-anchor="middle">投影流</text>
+  </g>
+  <g>
+    <rect x="284" y="151" width="124" height="32" rx="16" fill="#FFF3DF"/>
+    <text x="346" y="173" class="pill" fill="#9B682F" text-anchor="middle">网络取页</text>
+  </g><text x="678" y="172" class="meta" text-anchor="end">WebGL + CSS3D + DOM Portal</text>
+  <g>
+    <rect x="28" y="195" width="664" height="380" rx="22" class="section"/>
+    <rect x="28" y="195" width="8" height="380" rx="4" fill="#1B365D"/>
+    <circle cx="62" cy="233" r="18" fill="#1B365D"/>
+    <text x="62" y="240" class="section-index" text-anchor="middle">01</text>
+    <text x="92" y="240" class="section-title">同一相机驱动两种渲染层</text>
+    <text x="668" y="238" class="section-kicker" text-anchor="end">输入与画面</text>
+  </g>
+  <g>
+    <rect x="52" y="255" width="174" height="100" rx="15" fill="#EAF0F7" stroke="#1B365D" stroke-width="1.7"/>
+
+    <text x="70" y="288" class="card-title" fill="#1B365D">交互输入</text>
+
+  <text x="70" y="319" class="card-detail" text-anchor="start">
+    <tspan x="70" dy="0">指针 · 滚轮 · 键盘</tspan><tspan x="70" dy="25">统一交给路由层</tspan>
+  </text>
+
+  </g>
+  <g>
+    <rect x="274" y="255" width="174" height="100" rx="15" fill="#E8F2ED" stroke="#2F6B55" stroke-width="1.7"/>
+
+    <text x="292" y="288" class="card-title" fill="#2F6B55">InteractionRouter</text>
+
+  <text x="292" y="319" class="card-detail" text-anchor="start">
+    <tspan x="292" dy="0">识别当前交互目标</tspan><tspan x="292" dy="25">协调场景与桌面事件</tspan>
+  </text>
+
+  </g>
+  <g>
+    <rect x="496" y="255" width="172" height="100" rx="15" fill="#F1EDF4" stroke="#6D587A" stroke-width="1.7"/>
+
+    <text x="514" y="288" class="card-title" fill="#6D587A">相机状态机</text>
+
+  <text x="514" y="319" class="card-detail" text-anchor="start">
+    <tspan x="514" dy="0">维护相机状态</tspan><tspan x="514" dy="25">驱动视角切换</tspan>
+  </text>
+
+  </g><path d="M 226 305 H 262" fill="none" stroke="#1B365D" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" opacity="1"  marker-end="url(#arrow)"/><path d="M 448 305 H 484" fill="none" stroke="#2F6B55" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" opacity="1"  marker-end="url(#arrow)"/><text x="250" y="294" class="edge" text-anchor="middle">路由</text><text x="472" y="294" class="edge" text-anchor="middle">状态</text><g>
+  <rect x="242" y="382" width="236" height="56" rx="18" fill="#1B365D"/>
+  <text x="360" y="407" class="badge" text-anchor="middle">共享 Camera</text>
+  <text x="360" y="427" class="edge" text-anchor="middle" style="fill:#FFFFFF;opacity:.82">相同位置 · 朝向 · 投影参数</text>
+</g><path d="M 582 355 V 370 H 478 V 382" fill="none" stroke="#6D587A" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" opacity="1"  marker-end="url(#arrow)"/>
+  <g>
+    <rect x="90" y="472" width="238" height="76" rx="15" fill="#EAF0F7" stroke="#1B365D" stroke-width="1.7"/>
+
+    <text x="108" y="505" class="card-title" fill="#1B365D">WebGLRenderer</text>
+
+  <text x="108" y="536" class="card-detail" text-anchor="start">
+    <tspan x="108" dy="0">Three.js 场景与 3D 外壳</tspan>
+  </text>
+
+  </g>
+  <g>
+    <rect x="392" y="472" width="238" height="76" rx="15" fill="#E8F2ED" stroke="#2F6B55" stroke-width="1.7"/>
+
+    <text x="410" y="505" class="card-title" fill="#2F6B55">CSS3DRenderer</text>
+
+  <text x="410" y="536" class="card-detail" text-anchor="start">
+    <tspan x="410" dy="0">DOM 桌面与可交互界面</tspan>
+  </text>
+
+  </g><path d="M 314 438 V 454 H 209 V 460" fill="none" stroke="#1B365D" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" opacity="1"  marker-end="url(#arrow)"/><path d="M 406 438 V 454 H 511 V 460" fill="none" stroke="#2F6B55" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" opacity="1"  marker-end="url(#arrow)"/><text x="360" y="563" class="strip" fill="#1B365D" text-anchor="middle">两层共享相机后叠合：3D 场景保持空间感，DOM 保持真实交互能力</text>
+  <g>
+    <rect x="28" y="595" width="664" height="420" rx="22" class="section"/>
+    <rect x="28" y="595" width="8" height="420" rx="4" fill="#2F6B55"/>
+    <circle cx="62" cy="633" r="18" fill="#2F6B55"/>
+    <text x="62" y="640" class="section-index" text-anchor="middle">02</text>
+    <text x="92" y="640" class="section-title">窗口几何从桌面 iframe 回到父页面</text>
+    <text x="668" y="638" class="section-kicker" text-anchor="end">跨 iframe 投影</text>
+  </g><g>
+  <rect x="52" y="657" width="616" height="122" rx="16" fill="#E8F2ED" stroke="#2F6B55" stroke-width="1.6"/>
+  <text x="72" y="684" class="strip" fill="#2F6B55">桌面 iframe</text>
+  <rect x="72" y="700" width="218" height="60" rx="12" fill="#FFFFFF" stroke="#2F6B55" stroke-width="1.4"/>
+  <text x="88" y="725" class="card-title" fill="#2F6B55">WindowManager</text>
+  <text x="88" y="748" class="card-detail">窗口移动 / 缩放 / 层级</text>
+  <rect x="350" y="700" width="286" height="60" rx="12" fill="#FFFFFF" stroke="#6D587A" stroke-width="1.4"/>
+  <text x="366" y="725" class="card-title" fill="#6D587A">postMessage</text>
+  <text x="366" y="748" class="card-detail">发送浏览器窗口 rect</text>
+</g><path d="M 290 730 H 338" fill="none" stroke="#6D587A" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" opacity="1"  marker-end="url(#arrow)"/><text x="314" y="718" class="edge" text-anchor="middle">几何变化</text>
+  <g>
+    <path d="M 64 804 L 656 804" fill="none" stroke="#CDD5DF" stroke-width="1.5" stroke-dasharray="6 7"/>
+    <rect x="292" y="791" width="136" height="26" rx="13" fill="#FFFFFF"/><text x="360" y="809" class="divider-label" text-anchor="middle">iframe 边界</text>
+  </g>
+  <g>
+    <rect x="52" y="834" width="180" height="102" rx="15" fill="#F1EDF4" stroke="#6D587A" stroke-width="1.7"/>
+
+    <text x="70" y="867" class="card-title" fill="#6D587A">投影协调器</text>
+
+  <text x="70" y="898" class="card-detail" text-anchor="start">
+    <tspan x="70" dy="0">接收 window rect</tspan><tspan x="70" dy="25">换算位置与可见区域</tspan>
+  </text>
+
+  </g>
+  <g>
+    <rect x="270" y="834" width="180" height="102" rx="15" fill="#EAF0F7" stroke="#1B365D" stroke-width="1.7"/>
+
+    <text x="288" y="867" class="card-title" fill="#1B365D">固定 DOM Portal</text>
+
+  <text x="288" y="898" class="card-detail" text-anchor="start">
+    <tspan x="288" dy="0">挂在父页面</tspan><tspan x="288" dy="25">脱离 3D 纹理渲染</tspan>
+  </text>
+
+  </g>
+  <g>
+    <rect x="488" y="834" width="180" height="102" rx="15" fill="#E8F2ED" stroke="#2F6B55" stroke-width="1.7"/>
+
+    <text x="506" y="867" class="card-title" fill="#2F6B55">Interview iframe</text>
+
+  <text x="506" y="898" class="card-detail" text-anchor="start">
+    <tspan x="506" dy="0">真实网页实例</tspan><tspan x="506" dy="25">按窗口区域显示</tspan>
+  </text>
+
+  </g><path d="M 493 779 V 812 H 142 V 822" fill="none" stroke="#6D587A" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" opacity="1"  marker-end="url(#arrow)"/><path d="M 232 885 H 258" fill="none" stroke="#6D587A" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" opacity="1"  marker-end="url(#arrow)"/><path d="M 450 885 H 476" fill="none" stroke="#2F6B55" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" opacity="1"  marker-end="url(#arrow)"/><text x="251" y="874" class="edge" text-anchor="middle">定位</text><text x="469" y="874" class="edge" text-anchor="middle">承载</text><g>
+  <rect x="52" y="955" width="616" height="43" rx="11" fill="#F1EDF4"/>
+  <path d="M 76 968 L 118 968 L 126 985 L 90 990 L 70 979 Z" fill="none" stroke="#6D587A" stroke-width="1.7"/>
+  <text x="144" y="982" class="strip" fill="#6D587A">polygon clipping：窗口移动时，只露出浏览器窗口对应的多边形区域</text>
+</g>
+  <g>
+    <rect x="28" y="1035" width="664" height="245" rx="22" class="section"/>
+    <rect x="28" y="1035" width="8" height="245" rx="4" fill="#9B682F"/>
+    <circle cx="62" cy="1073" r="18" fill="#9B682F"/>
+    <text x="62" y="1080" class="section-index" text-anchor="middle">03</text>
+    <text x="92" y="1080" class="section-title">真实页面通过同源入口取回</text>
+    <text x="668" y="1078" class="section-kicker" text-anchor="end">加载与恢复</text>
+  </g>
+  <g>
+    <rect x="52" y="1094" width="174" height="102" rx="15" fill="#E8F2ED" stroke="#2F6B55" stroke-width="1.7"/>
+
+    <text x="70" y="1127" class="card-title" fill="#2F6B55">Interview iframe</text>
+
+  <text x="70" y="1158" class="card-detail" text-anchor="start">
+    <tspan x="70" dy="0">从父页面发起请求</tspan><tspan x="70" dy="25">使用站内同源地址</tspan>
+  </text>
+
+  </g>
+  <g>
+    <rect x="273" y="1094" width="174" height="102" rx="15" fill="#FFF3DF" stroke="#9B682F" stroke-width="1.7"/>
+
+    <text x="291" y="1127" class="card-title" fill="#9B682F">Vercel Rewrite</text>
+
+  <text x="291" y="1158" class="card-detail" text-anchor="start">
+    <tspan x="291" dy="0">接住站内路径</tspan><tspan x="291" dy="25">转发至上游页面</tspan>
+  </text>
+
+  </g>
+  <g>
+    <rect x="494" y="1094" width="174" height="102" rx="15" fill="#EAF0F7" stroke="#1B365D" stroke-width="1.7"/>
+
+    <text x="512" y="1127" class="card-title" fill="#1B365D">上游内容</text>
+
+  <text x="512" y="1158" class="card-detail" text-anchor="start">
+    <tspan x="512" dy="0">返回 HTML / 资源</tspan><tspan x="512" dy="25">交给真实 iframe 展示</tspan>
+  </text>
+
+  </g><path d="M 226 1145 H 261" fill="none" stroke="#9B682F" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" opacity="1"  marker-end="url(#arrow)"/><path d="M 447 1145 H 482" fill="none" stroke="#9B682F" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" opacity="1"  marker-end="url(#arrow)"/><text x="244" y="1133" class="edge" text-anchor="middle">同源</text><text x="465" y="1133" class="edge" text-anchor="middle">转发</text><g>
+  <rect x="52" y="1214" width="616" height="46" rx="11" fill="#F8E9EC"/>
+  <text x="70" y="1243" class="strip" fill="#7B3F4A">加载保护　超时 / 失败 → 受控重试；成功 → Portal 继续按投影窗口显示</text>
+</g><text x="40" y="1303" class="foot">实线：主数据流　·　虚线边界：iframe 上下文切换　·　网页没有被“画进”WebGL 纹理</text>
+</svg>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WebGL on 404_@林达</title><link>https://linsk27.github.io/tags/webgl/</link><description>Recent content in WebGL on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Thu, 27 Aug 2026 06:40:23 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/webgl/index.xml" rel="self" type="application/rss+xml"/><item><title>Signal Atlas：把真实网页放进 Three.js 工作站</title><link>https://linsk27.github.io/projects/signal-atlas/</link><pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/signal-atlas/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-desk-v0.25.7.png" alt="Featured image of post Signal Atlas：把真实网页放进 Three.js 工作站" /&gt;&lt;p&gt;现在打开 Signal Atlas，看到的已经不是最早那版项目卡片页，而是一台可以进入的 3D 工作站。外层场景来自一个 MIT 开源作品集，我保留了许可证和署名；显示器里的复古桌面、窗口系统、博客与八股文入口，以及两层页面之间的交互，是我按自己的内容重新实现的。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WebGL on 404_@林达</title><link>https://linsk27.github.io/tags/webgl/</link><description>Recent content in WebGL on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Fri, 28 Aug 2026 02:49:52 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/webgl/index.xml" rel="self" type="application/rss+xml"/><item><title>Signal Atlas：把真实网页放进 Three.js 工作站</title><link>https://linsk27.github.io/projects/signal-atlas/</link><pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/signal-atlas/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-desk-v0.25.7.png" alt="Featured image of post Signal Atlas：把真实网页放进 Three.js 工作站" /&gt;&lt;p&gt;现在打开 Signal Atlas，看到的已经不是最早那版项目卡片页，而是一台可以进入的 3D 工作站。外层场景来自一个 MIT 开源作品集，我保留了许可证和署名；显示器里的复古桌面、窗口系统、博客与八股文入口，以及两层页面之间的交互，是我按自己的内容重新实现的。&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-desk-v0.25.7.png"
 loading="lazy"
 alt="Signal Atlas v0.25.7 参考版工作站全景"
@@ -7,15 +7,21 @@ alt="Signal Atlas v0.25.7 参考版工作站全景"
 &lt;h2 id="从看起来很酷到真的能用"&gt;从“看起来很酷”到“真的能用”
 &lt;/h2&gt;&lt;p&gt;最初做 3D 主页，想法很简单：普通项目卡片太像简历，我更想让访问者走到一台电脑前，再从电脑里打开我的内容。但真正开始接博客以后，问题就不再是“模型好不好看”，而是网站能不能顺利打开、显示器里的链接能不能点、滚轮会不会带着外层相机一起转。&lt;/p&gt;
 &lt;p&gt;Signal Atlas 现在由两种渲染技术协作，并为内嵌页增加一层按显示器几何定位的覆盖层：&lt;/p&gt;
-&lt;figure&gt;
+&lt;figure class="system-diagram"&gt;
+&lt;a href="https://linsk27.github.io/img/projects/signal-atlas-rendering-architecture.svg"
+target="_blank"
+rel="noopener"
+aria-label="打开 Signal Atlas 完整分层架构图"&gt;
 &lt;img src="https://linsk27.github.io/img/projects/signal-atlas-rendering-architecture.svg"
-alt="Signal Atlas 将 WebGL、CSS3D 和内嵌页覆盖层同步到同一显示器的渲染结构"
-width="510"
-height="1069"
+alt="Signal Atlas 将相机驱动的 WebGL 与 CSS3D 双渲染、窗口 postMessage 投影、父页 DOM Portal 以及 Vercel 同源取页拆开的分层架构"
+width="720"
+height="1320"
 loading="lazy"
 decoding="async"&gt;
+&lt;/a&gt;
+&lt;figcaption&gt;渲染合成、窗口投影和网络取页是三条不同链路；点击图示可打开原图。&lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;p&gt;WebGL 负责房间、电脑、光影与 CRT 效果；CSS3DRenderer 负责把可交互的桌面 DOM 放到显示器的位置。网页没有被截成一张纹理，所以聚焦显示器后仍然可以点击、滚动和打开窗口。代价是每次相机移动、窗口缩放或发生遮挡，都要重新保证几层几何对得上。&lt;/p&gt;
+&lt;p&gt;WebGL 负责房间、电脑、光影与 CRT 效果；CSS3DRenderer 负责把可交互的桌面 DOM 放到显示器的位置。父页 Portal 又是独立于 3D 渲染器的真实 DOM，Vercel rewrite 只负责取回上游页面，不直接参与画面合成。网页没有被截成一张纹理，所以聚焦显示器后仍然可以点击、滚动和打开窗口。代价是每次相机移动、窗口缩放或发生遮挡，都要重新保证几层几何对得上。&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-monitor-v0.25.7.png"
 loading="lazy"
 alt="聚焦后的 Signal Atlas 显示器"

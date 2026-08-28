@@ -1,1 +1,201 @@
-<svg id="my-svg" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="flowchart" style="max-width: 353px; background-color: transparent;" viewBox="0 0 353 947.5" role="graphics-document document" aria-roledescription="flowchart-v2"><style>#my-svg{font-size:17px;fill:#20352d;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#my-svg .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#my-svg .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#my-svg .error-icon{fill:hsl(322.5, 28.5714285714%, 99.5098039216%);}#my-svg .error-text{fill:rgb(0.8928571428, 1.607142857, 1.1607142856);stroke:rgb(0.8928571428, 1.607142857, 1.1607142856);}#my-svg .edge-thickness-normal{stroke-width:1px;}#my-svg .edge-thickness-thick{stroke-width:3.5px;}#my-svg .edge-pattern-solid{stroke-dasharray:0;}#my-svg .edge-thickness-invisible{stroke-width:0;fill:none;}#my-svg .edge-pattern-dashed{stroke-dasharray:3;}#my-svg .edge-pattern-dotted{stroke-dasharray:2;}#my-svg .marker{fill:#71887e;stroke:#71887e;}#my-svg .marker.cross{stroke:#71887e;}#my-svg svg{font-size:17px;}#my-svg p{margin:0;}#my-svg .label{color:#20352d;}#my-svg .cluster-label text{fill:rgb(0.8928571428, 1.607142857, 1.1607142856);}#my-svg .cluster-label span{color:rgb(0.8928571428, 1.607142857, 1.1607142856);}#my-svg .cluster-label span p{background-color:transparent;}#my-svg .label text,#my-svg span{fill:#20352d;color:#20352d;}#my-svg .node rect,#my-svg .node circle,#my-svg .node ellipse,#my-svg .node polygon,#my-svg .node path{fill:#edf5f0;stroke:#5f7f70;stroke-width:1px;}#my-svg .rough-node .label text,#my-svg .node .label text,#my-svg .image-shape .label,#my-svg .icon-shape .label{text-anchor:middle;}#my-svg .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#my-svg .rough-node .label,#my-svg .node .label,#my-svg .image-shape .label,#my-svg .icon-shape .label{text-align:center;}#my-svg .node.clickable{cursor:pointer;}#my-svg .root .anchor path{fill:#71887e!important;stroke-width:0;stroke:#71887e;}#my-svg .arrowheadPath{fill:#0b0b0b;}#my-svg .edgePaths .path{stroke:#71887e;stroke-width:1px;}#my-svg .flowchart-link{stroke:#71887e;fill:none;}#my-svg .edgeLabel{background-color:#faf9f6;text-align:center;}#my-svg .edgeLabel p{background-color:#faf9f6;}#my-svg .edgeLabel rect{opacity:0.5;background-color:#faf9f6;fill:#faf9f6;}#my-svg .labelBkg{background-color:rgba(250, 249, 246, 0.5);}#my-svg .cluster rect{fill:hsl(322.5, 28.5714285714%, 99.5098039216%);stroke:hsl(322.5, 0%, 89.5098039216%);stroke-width:1px;}#my-svg .cluster text{fill:rgb(0.8928571428, 1.607142857, 1.1607142856);}#my-svg .cluster span{color:rgb(0.8928571428, 1.607142857, 1.1607142856);}#my-svg .node .collapsed-indicator{fill:hsl(322.5, 0%, 89.5098039216%);stroke:none;opacity:0.6;}#my-svg .node .collapsed-separator{stroke:hsl(322.5, 0%, 89.5098039216%);stroke-width:0.75px;}#my-svg div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-size:12px;background:hsl(322.5, 28.5714285714%, 99.5098039216%);border:1px solid hsl(322.5, 0%, 89.5098039216%);border-radius:2px;pointer-events:none;z-index:100;}#my-svg .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#20352d;}#my-svg rect.text{fill:none;stroke-width:0;}#my-svg .icon-shape,#my-svg .image-shape{background-color:#faf9f6;text-align:center;}#my-svg .icon-shape p,#my-svg .image-shape p{background-color:#faf9f6;padding:2px;}#my-svg .icon-shape .label rect,#my-svg .image-shape .label rect{opacity:0.5;background-color:#faf9f6;fill:#faf9f6;}#my-svg .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#my-svg .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#my-svg .node .neo-node{stroke:#5f7f70;}#my-svg [data-look="neo"].node rect,#my-svg [data-look="neo"].cluster rect,#my-svg [data-look="neo"].node polygon{stroke:url(#my-svg-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#my-svg [data-look="neo"].swimlane.cluster rect{filter:none;}#my-svg [data-look="neo"].node path{stroke:url(#my-svg-gradient);stroke-width:1px;}#my-svg [data-look="neo"].node .outer-path{filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#my-svg [data-look="neo"].node .neo-line path{stroke:#5f7f70;filter:none;}#my-svg [data-look="neo"].node circle{stroke:url(#my-svg-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#my-svg [data-look="neo"].node circle .state-start{fill:#000000;}#my-svg [data-look="neo"].icon-shape .icon{fill:url(#my-svg-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#my-svg [data-look="neo"].icon-shape .icon-neo path{stroke:url(#my-svg-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#my-svg :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}#my-svg .input&gt;*{fill:rgb(246, 239, 231)!important;stroke:rgb(177, 135, 99)!important;color:rgb(83, 63, 48)!important;stroke-width:1.5px!important;}#my-svg .input span{fill:rgb(246, 239, 231)!important;stroke:rgb(177, 135, 99)!important;color:rgb(83, 63, 48)!important;stroke-width:1.5px!important;}#my-svg .input tspan{fill:rgb(83, 63, 48)!important;}#my-svg .core&gt;*{fill:rgb(223, 238, 231)!important;stroke:rgb(47, 107, 85)!important;color:rgb(25, 56, 45)!important;stroke-width:2px!important;}#my-svg .core span{fill:rgb(223, 238, 231)!important;stroke:rgb(47, 107, 85)!important;color:rgb(25, 56, 45)!important;stroke-width:2px!important;}#my-svg .core tspan{fill:rgb(25, 56, 45)!important;}#my-svg .source&gt;*{fill:rgb(237, 245, 240)!important;stroke:rgb(95, 127, 112)!important;color:rgb(32, 53, 45)!important;stroke-width:1.5px!important;}#my-svg .source span{fill:rgb(237, 245, 240)!important;stroke:rgb(95, 127, 112)!important;color:rgb(32, 53, 45)!important;stroke-width:1.5px!important;}#my-svg .source tspan{fill:rgb(32, 53, 45)!important;}#my-svg .store&gt;*{fill:rgb(244, 245, 247)!important;stroke:rgb(132, 144, 159)!important;color:rgb(52, 64, 84)!important;stroke-width:1.5px!important;}#my-svg .store span{fill:rgb(244, 245, 247)!important;stroke:rgb(132, 144, 159)!important;color:rgb(52, 64, 84)!important;stroke-width:1.5px!important;}#my-svg .store tspan{fill:rgb(52, 64, 84)!important;}#my-svg .output&gt;*{fill:rgb(114, 63, 72)!important;stroke:rgb(114, 63, 72)!important;color:rgb(255, 255, 255)!important;stroke-width:1.5px!important;}#my-svg .output span{fill:rgb(114, 63, 72)!important;stroke:rgb(114, 63, 72)!important;color:rgb(255, 255, 255)!important;stroke-width:1.5px!important;}#my-svg .output tspan{fill:rgb(255, 255, 255)!important;}</style><g><marker id="my-svg_flowchart-v2-pointEnd" class="marker flowchart-v2" viewBox="0 0 10 10" refX="5" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-pointStart" class="marker flowchart-v2" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 5 L 10 10 L 10 0 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-pointEnd-margin" class="marker flowchart-v2" viewBox="0 0 11.5 14" refX="11.5" refY="7" markerUnits="userSpaceOnUse" markerWidth="10.5" markerHeight="14" orient="auto"><path d="M 0 0 L 11.5 7 L 0 14 z" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-pointStart-margin" class="marker flowchart-v2" viewBox="0 0 11.5 14" refX="1" refY="7" markerUnits="userSpaceOnUse" markerWidth="11.5" markerHeight="14" orient="auto"><polygon points="0,7 11.5,14 11.5,0" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-circleEnd" class="marker flowchart-v2" viewBox="0 0 10 10" refX="11" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-circleStart" class="marker flowchart-v2" viewBox="0 0 10 10" refX="-1" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-circleEnd-margin" class="marker flowchart-v2" viewBox="0 0 10 10" refY="5" refX="12.25" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-circleStart-margin" class="marker flowchart-v2" viewBox="0 0 10 10" refX="-2" refY="5" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-crossEnd" class="marker cross flowchart-v2" viewBox="0 0 11 11" refX="12" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-crossStart" class="marker cross flowchart-v2" viewBox="0 0 11 11" refX="-1" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-crossEnd-margin" class="marker cross flowchart-v2" viewBox="0 0 15 15" refX="17.7" refY="7.5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M 1,1 L 14,14 M 1,14 L 14,1" class="arrowMarkerPath" style="stroke-width: 2.5;"/></marker><marker id="my-svg_flowchart-v2-crossStart-margin" class="marker cross flowchart-v2" viewBox="0 0 15 15" refX="-3.5" refY="7.5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M 1,1 L 14,14 M 1,14 L 14,1" class="arrowMarkerPath" style="stroke-width: 2.5; stroke-dasharray: 1, 0;"/></marker><g class="root"><g class="clusters"/><g class="edgePaths"><path d="M138,118.5L138,120.833C138,123.167,138,127.833,138,132.5C138,137.167,138,141.833,138,144.167L138,146.5" id="my-svg-L_A_B_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_A_B_0" data-points="W3sieCI6MTM4LCJ5IjoxMTQuNX0seyJ4IjoxMzgsInkiOjEzMi41fSx7IngiOjEzOCwieSI6MTUwLjV9XQ==" data-look="classic" marker-start="url(#my-svg_flowchart-v2-pointStart)" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M74.797,285.449L72.498,287.957C70.198,290.466,65.599,295.483,63.3,320.491C61,345.5,61,390.5,61,435.5C61,480.5,61,525.5,63.753,550.547C66.506,575.594,72.011,580.689,74.764,583.236L77.517,585.783" id="my-svg-L_B_G_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_B_G_0" data-points="W3sieCI6NzcuNSwieSI6MjgyLjV9LHsieCI6NjEsInkiOjMwMC41fSx7IngiOjYxLCJ5Ijo0MzUuNX0seyJ4Ijo2MSwieSI6NTcwLjV9LHsieCI6ODAuNDUyNjMxNTc4OTQ3MzgsInkiOjU4OC41fV0=" data-look="classic" marker-start="url(#my-svg_flowchart-v2-pointStart)" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M198.5,282.5L201.25,285.5C204,288.5,209.5,294.5,212.25,299.833C215,305.167,215,309.833,215,312.167L215,314.5" id="my-svg-L_B_C_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_B_C_0" data-points="W3sieCI6MTk4LjUsInkiOjI4Mi41fSx7IngiOjIxNSwieSI6MzAwLjV9LHsieCI6MjE1LCJ5IjozMTguNX1d" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M215,552.5L215,555.5C215,558.5,215,564.5,212.247,570.047C209.494,575.594,203.989,580.689,201.236,583.236L198.483,585.783" id="my-svg-L_C_G_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_C_G_0" data-points="W3sieCI6MjE1LCJ5Ijo1NTIuNX0seyJ4IjoyMTUsInkiOjU3MC41fSx7IngiOjE5NS41NDczNjg0MjEwNTI2MiwieSI6NTg4LjV9XQ==" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M138,699L138,701.333C138,703.667,138,708.333,138,713C138,717.667,138,722.333,138,724.667L138,727" id="my-svg-L_G_D_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_G_D_0" data-points="W3sieCI6MTM4LCJ5Ijo2OTV9LHsieCI6MTM4LCJ5Ijo3MTN9LHsieCI6MTM4LCJ5Ijo3MzF9XQ==" data-look="classic" marker-start="url(#my-svg_flowchart-v2-pointStart)" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/></g><g class="edgeLabels"><g class="edgeLabel"><g class="label" data-id="L_A_B_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_B_G_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_B_C_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_C_G_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_G_D_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g></g><g class="nodes"><g class="node default output" id="my-svg-flowchart-A-0" data-look="classic" transform="translate(138, 61.25)"><rect class="basic label-container" style="fill:#723f48 !important;stroke:#723f48 !important;stroke-width:1.5px !important" x="-117.7890625" y="-53.25" width="235.578125" height="106.5"/><g class="label" style="color:#ffffff !important" transform="translate(-87.7890625, -38.25)"><rect/><foreignObject width="175.578125" height="76.5"><div style="color: rgb(255, 255, 255) !important; display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#ffffff !important" class="nodeLabel"><p>React / ECharts 工作台<br />总览 · 资产 · 知识库<br />关系图 · 续费中心</p></span></div></foreignObject></g></g><g class="node default core" id="my-svg-flowchart-B-1" data-look="classic" transform="translate(138, 216.5)"><rect class="basic label-container" style="fill:#dfeee7 !important;stroke:#2f6b55 !important;stroke-width:2px !important" x="-130" y="-66" width="260" height="132"/><g class="label" style="color:#19382d !important" transform="translate(-100, -51)"><rect/><foreignObject width="200" height="102"><div style="color: rgb(25, 56, 45) !important; display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#19382d !important" class="nodeLabel"><p>FastAPI API<br />查询 · 手动同步 · 手动检查 · 诊断<br />手动任务在请求内执行</p></span></div></foreignObject></g></g><g class="node default source" id="my-svg-flowchart-C-2" data-look="classic" transform="translate(215, 435.5)"><rect class="basic label-container" style="fill:#edf5f0 !important;stroke:#5f7f70 !important;stroke-width:1.5px !important" x="-130" y="-117" width="260" height="234"/><g class="label" style="color:#20352d !important" transform="translate(-100, -102)"><rect/><foreignObject width="200" height="204"><div style="color: rgb(32, 53, 45) !important; display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#20352d !important" class="nodeLabel"><p>手动路径（FastAPI 请求内）<br />资产：阿里云 API → 统一后写库<br />检查：统一执行器 → 结果 / 告警<br />诊断：读库 → 脱敏 → 模型 / 规则 → 保存</p></span></div></foreignObject></g></g><g class="node default store" id="my-svg-flowchart-G-3" data-look="classic" transform="translate(138, 641.75)"><rect class="basic label-container" style="fill:#f4f5f7 !important;stroke:#84909f !important;stroke-width:1.5px !important" x="-114.4921875" y="-53.25" width="228.984375" height="106.5"/><g class="label" style="color:#344054 !important" transform="translate(-84.4921875, -38.25)"><rect/><foreignObject width="168.984375" height="76.5"><div style="color: rgb(52, 64, 84) !important; display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#344054 !important" class="nodeLabel"><p>PostgreSQL<br />资产 · AES-GCM 密文<br />检查结果 · 告警 · 诊断</p></span></div></foreignObject></g></g><g class="node default source" id="my-svg-flowchart-D-4" data-look="classic" transform="translate(138, 835.25)"><rect class="basic label-container" style="fill:#edf5f0 !important;stroke:#5f7f70 !important;stroke-width:1.5px !important" x="-130" y="-104.25" width="260" height="208.5"/><g class="label" style="color:#20352d !important" transform="translate(-100, -89.25)"><rect/><foreignObject width="200" height="178.5"><div style="color: rgb(32, 53, 45) !important; display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#20352d !important" class="nodeLabel"><p>定时检查路径<br />Celery Beat / Redis / Worker<br />每分钟筛选已启用且到期的检查<br />统一执行器 → CheckResult / Alert</p></span></div></foreignObject></g></g></g></g></g><defs><filter id="my-svg-drop-shadow" height="130%" width="130%"><feDropShadow dx="4" dy="4" stdDeviation="0" flood-opacity="0.06" flood-color="#000000"/></filter></defs><defs><filter id="my-svg-drop-shadow-small" height="150%" width="150%"><feDropShadow dx="2" dy="2" stdDeviation="0" flood-opacity="0.06" flood-color="#000000"/></filter></defs><linearGradient id="my-svg-gradient" gradientUnits="objectBoundingBox" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#5f7f70" stop-opacity="1"/><stop offset="100%" stop-color="hsl(22.5, 0%, 84.5098039216%)" stop-opacity="1"/></linearGradient></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1380" width="720" height="1380" role="img" aria-labelledby="title desc">
+  <title id="title">Local AI Ops 健康检查与诊断架构图</title>
+  <desc id="desc">图中先区分人工同步请求与每分钟扫描启用且到期计划的定时巡检，两者共同进入 Shared Check Runner。Runner 通过 HTTP、TCP、SSH、CloudMonitor 和 Cloud Assistant 适配器执行检查，并把结果写入 PostgreSQL，React 与 ECharts 从数据库读取状态和趋势。诊断仅由用户触发，读取资产、当前告警和最近五次结果并净化输入，随后使用已配置模型或本地规则生成建议，保存并展示建议，但不自动执行修复。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="context-stroke"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#202A44" flood-opacity="0.08"/>
+    </filter>
+    <style>
+      text { font-family: "Noto Sans SC", "Microsoft YaHei", "PingFang SC", system-ui, sans-serif; }
+      .eyebrow { font-size: 14px; font-weight: 800; letter-spacing: 2px; fill: #1B365D; }
+      .title { font-size: 30px; font-weight: 800; letter-spacing: -0.6px; fill: #202A44; }
+      .subtitle { font-size: 16px; font-weight: 520; fill: #5B6472; }
+      .meta, .foot { font-size: 13px; font-weight: 650; fill: #5B6472; }
+      .pill { font-size: 13px; font-weight: 800; }
+      .section { fill: #FFFFFF; stroke: #CDD5DF; stroke-width: 1.5; filter: url(#shadow); }
+      .section-index { font-size: 13px; font-weight: 900; fill: white; }
+      .section-title { font-size: 20px; font-weight: 820; fill: #202A44; }
+      .section-kicker { font-size: 12px; font-weight: 750; fill: #5B6472; }
+      .card-title { font-size: 17px; font-weight: 820; }
+      .card-detail { font-size: 14px; font-weight: 560; fill: #202A44; }
+      .note { font-size: 11.5px; font-weight: 680; fill: #5B6472; }
+      .badge { font-size: 11.5px; font-weight: 820; fill: white; }
+      .edge { font-size: 11.5px; font-weight: 760; fill: #5B6472; }
+      .strip { font-size: 12px; font-weight: 760; }
+      .divider-label { font-size: 11.5px; font-weight: 720; fill: #8A93A1; }
+    </style>
+  </defs>
+  <rect width="720" height="1380" rx="26" fill="#F7F8FA"/><text x="40" y="48" class="eyebrow">SYSTEM MAP · LOCAL AI OPS</text>
+  <text x="40" y="86" class="title" text-anchor="start">
+    <tspan x="40" dy="0">一次健康检查，怎样变成可解释的运维建议</tspan>
+  </text>
+  <text x="40" y="126" class="subtitle" text-anchor="start">
+    <tspan x="40" dy="0">人工与定时任务共用执行器；诊断可以用模型，但不会自动修复。</tspan>
+  </text>
+  <g>
+    <rect x="40" y="151" width="120" height="32" rx="16" fill="#EAF0F7"/>
+    <text x="100" y="173" class="pill" fill="#1B365D" text-anchor="middle">人工同步请求</text>
+  </g>
+  <g>
+    <rect x="170" y="151" width="120" height="32" rx="16" fill="#E8F2ED"/>
+    <text x="230" y="173" class="pill" fill="#2F6B55" text-anchor="middle">定时到期巡检</text>
+  </g>
+  <g>
+    <rect x="300" y="151" width="116" height="32" rx="16" fill="#F1EDF4"/>
+    <text x="358" y="173" class="pill" fill="#6D587A" text-anchor="middle">统一落库</text>
+  </g>
+  <g>
+    <rect x="426" y="151" width="128" height="32" rx="16" fill="#F8E9EC"/>
+    <text x="490" y="173" class="pill" fill="#7B3F4A" text-anchor="middle">诊断只给建议</text>
+  </g>
+  <g>
+    <rect x="28" y="195" width="664" height="430" rx="22" class="section"/>
+    <rect x="28" y="195" width="8" height="430" rx="4" fill="#1B365D"/>
+    <circle cx="62" cy="233" r="18" fill="#1B365D"/>
+    <text x="62" y="240" class="section-index" text-anchor="middle">01</text>
+    <text x="92" y="240" class="section-title">两种触发，共用一套检查执行器</text>
+    <text x="668" y="238" class="section-kicker" text-anchor="end">控制面</text>
+  </g>
+  <g>
+    <rect x="52" y="254" width="292" height="205" rx="17" fill="#EAF0F7" stroke="#1B365D" stroke-width="1.6"/>
+    <rect x="68" y="268" width="116" height="28" rx="14" fill="#1B365D"/>
+    <text x="126" y="288" class="badge" text-anchor="middle">人工入口 · 同步</text>
+  </g>
+  <g>
+    <rect x="72" y="304" width="112" height="93" rx="15" fill="#EAF0F7" stroke="#1B365D" stroke-width="1.7"/>
+
+    <text x="90" y="337" class="card-title" fill="#1B365D">React</text>
+
+  <text x="90" y="368" class="card-detail" text-anchor="start">
+    <tspan x="90" dy="0">ECharts 界面</tspan><tspan x="90" dy="25">用户发起操作</tspan>
+  </text>
+
+  </g>
+  <g>
+    <rect x="212" y="304" width="112" height="93" rx="15" fill="#EAF0F7" stroke="#1B365D" stroke-width="1.7"/>
+
+    <text x="230" y="337" class="card-title" fill="#1B365D">FastAPI</text>
+
+  <text x="230" y="368" class="card-detail" text-anchor="start">
+    <tspan x="230" dy="0">同一请求内</tspan><tspan x="230" dy="25">同步执行</tspan>
+  </text>
+
+  </g><path d="M 184 350 H 200" fill="none" stroke="#1B365D" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" opacity="1"  marker-end="url(#arrow)"/><text x="198" y="338" class="edge" text-anchor="middle">HTTP</text><text x="72" y="425" class="strip" fill="#1B365D">同步接口：资产同步 · 单次检查 · 诊断</text><text x="72" y="447" class="note">只有单次检查进入下方 Check Runner。</text>
+  <g>
+    <rect x="376" y="254" width="292" height="205" rx="17" fill="#E8F2ED" stroke="#2F6B55" stroke-width="1.6"/>
+    <rect x="392" y="268" width="116" height="28" rx="14" fill="#2F6B55"/>
+    <text x="450" y="288" class="badge" text-anchor="middle">定时入口 · 到期</text>
+  </g>
+  <g>
+    <rect x="396" y="304" width="112" height="93" rx="15" fill="#E8F2ED" stroke="#2F6B55" stroke-width="1.7"/>
+
+    <text x="414" y="337" class="card-title" fill="#2F6B55">调度扫描</text>
+
+  <text x="414" y="368" class="card-detail" text-anchor="start">
+    <tspan x="414" dy="0">每分钟一次</tspan><tspan x="414" dy="25">enabled + due</tspan>
+  </text>
+
+  </g>
+  <g>
+    <rect x="536" y="304" width="112" height="93" rx="15" fill="#E8F2ED" stroke="#2F6B55" stroke-width="1.7"/>
+
+    <text x="554" y="337" class="card-title" fill="#2F6B55">Celery</text>
+
+  <text x="554" y="368" class="card-detail" text-anchor="start">
+    <tspan x="554" dy="0">Redis 协调</tspan><tspan x="554" dy="25">Worker 执行</tspan>
+  </text>
+
+  </g><path d="M 508 350 H 524" fill="none" stroke="#2F6B55" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" opacity="1"  marker-end="url(#arrow)"/><text x="522" y="338" class="edge" text-anchor="middle">派发</text><text x="396" y="425" class="strip" fill="#2F6B55">只负责已启用且到期的健康检查</text><text x="396" y="447" class="note">Celery / Redis 不承接人工同步动作。</text><g>
+  <rect x="190" y="500" width="340" height="88" rx="18" fill="#F1EDF4" stroke="#6D587A" stroke-width="1.8"/>
+  <text x="360" y="533" class="card-title" fill="#6D587A" text-anchor="middle">Shared Check Runner</text>
+  <text x="360" y="560" class="card-detail" text-anchor="middle">选择探针 · 执行检查 · 规范化结果</text>
+  <text x="360" y="580" class="note" text-anchor="middle">触发方式不同，检查逻辑共用</text>
+</g><path d="M 268 459 V 480 H 300 V 488" fill="none" stroke="#1B365D" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" opacity="1"  marker-end="url(#arrow)"/><path d="M 516 459 V 480 H 420 V 488" fill="none" stroke="#2F6B55" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" opacity="1"  marker-end="url(#arrow)"/><text x="278" y="478" class="edge" text-anchor="end">单次检查</text><text x="360" y="612" class="strip" fill="#6D587A" text-anchor="middle">两条入口在这里汇合</text>
+  <g>
+    <rect x="28" y="645" width="664" height="360" rx="22" class="section"/>
+    <rect x="28" y="645" width="8" height="360" rx="4" fill="#2F6B55"/>
+    <circle cx="62" cy="683" r="18" fill="#2F6B55"/>
+    <text x="62" y="690" class="section-index" text-anchor="middle">02</text>
+    <text x="92" y="690" class="section-title">检查适配器统一执行，结果统一落库</text>
+    <text x="668" y="688" class="section-kicker" text-anchor="end">执行面与数据面</text>
+  </g><g>
+  <rect x="52" y="705" width="300" height="236" rx="17" fill="#E8F2ED" stroke="#2F6B55" stroke-width="1.7"/>
+  <text x="72" y="739" class="card-title" fill="#2F6B55">Check Runner · 五类探针</text>
+  <text x="72" y="765" class="card-detail">按资产类型选择对应适配器</text>
+  <rect x="72" y="790" width="116" height="42" rx="11" fill="#FFFFFF" stroke="#2F6B55"/><text x="130" y="817" class="strip" fill="#2F6B55" text-anchor="middle">HTTP</text>
+  <rect x="206" y="790" width="116" height="42" rx="11" fill="#FFFFFF" stroke="#2F6B55"/><text x="264" y="817" class="strip" fill="#2F6B55" text-anchor="middle">TCP</text>
+  <rect x="72" y="848" width="116" height="42" rx="11" fill="#FFFFFF" stroke="#2F6B55"/><text x="130" y="875" class="strip" fill="#2F6B55" text-anchor="middle">SSH</text>
+  <rect x="206" y="848" width="116" height="42" rx="11" fill="#FFFFFF" stroke="#2F6B55"/><text x="264" y="875" class="strip" fill="#2F6B55" text-anchor="middle">CloudMonitor</text>
+  <rect x="72" y="906" width="250" height="20" rx="10" fill="#FFFFFF" stroke="#2F6B55"/><text x="197" y="921" class="note" fill="#2F6B55" text-anchor="middle">Cloud Assistant</text>
+</g>
+  <g>
+    <rect x="390" y="705" width="278" height="140" rx="15" fill="#F1EDF4" stroke="#6D587A" stroke-width="1.7"/>
+
+    <text x="408" y="738" class="card-title" fill="#6D587A">PostgreSQL · 共享数据层</text>
+
+  <text x="408" y="769" class="card-detail" text-anchor="start">
+    <tspan x="408" dy="0">资产与计划</tspan><tspan x="408" dy="25">检查结果与告警</tspan><tspan x="408" dy="25">诊断建议</tspan>
+  </text>
+
+  </g><path d="M 352 808 H 378" fill="none" stroke="#6D587A" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" opacity="1"  marker-end="url(#arrow)"/><text x="365" y="796" class="edge" text-anchor="middle">写入</text>
+  <g>
+    <rect x="390" y="871" width="278" height="86" rx="15" fill="#EAF0F7" stroke="#1B365D" stroke-width="1.7"/>
+
+    <text x="408" y="904" class="card-title" fill="#1B365D">React + ECharts</text>
+
+  <text x="408" y="935" class="card-detail" text-anchor="start">
+    <tspan x="408" dy="0">读取健康状态 · 趋势 · 告警</tspan>
+  </text>
+
+  </g><path d="M 529 845 V 859" fill="none" stroke="#1B365D" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" opacity="1"  marker-end="url(#arrow)"/><text x="552" y="861" class="edge">查询</text><g>
+  <rect x="52" y="961" width="616" height="28" rx="9" fill="#EAF0F7"/>
+  <text x="360" y="980" class="strip" fill="#1B365D" text-anchor="middle">页面看到的状态来自 PostgreSQL，而不是某个 Worker 的临时内存</text>
+</g>
+  <g>
+    <rect x="28" y="1025" width="664" height="325" rx="22" class="section"/>
+    <rect x="28" y="1025" width="8" height="325" rx="4" fill="#7B3F4A"/>
+    <circle cx="62" cy="1063" r="18" fill="#7B3F4A"/>
+    <text x="62" y="1070" class="section-index" text-anchor="middle">03</text>
+    <text x="92" y="1070" class="section-title">诊断是用户触发的解释支路，不是自动修复</text>
+    <text x="668" y="1068" class="section-kicker" text-anchor="end">可选模型</text>
+  </g>
+  <g>
+    <rect x="52" y="1080" width="132" height="32" rx="16" fill="#F8E9EC"/>
+    <text x="118" y="1102" class="pill" fill="#7B3F4A" text-anchor="middle">用户点击“诊断”</text>
+  </g>
+  <g>
+    <rect x="52" y="1126" width="236" height="112" rx="15" fill="#EAF0F7" stroke="#1B365D" stroke-width="1.7"/>
+
+    <text x="70" y="1159" class="card-title" fill="#1B365D">读取诊断上下文</text>
+
+  <text x="70" y="1190" class="card-detail" text-anchor="start">
+    <tspan x="70" dy="0">资产 + 当前告警</tspan><tspan x="70" dy="25">最近 5 次检查结果</tspan>
+  </text>
+
+  </g>
+  <g>
+    <rect x="320" y="1126" width="152" height="112" rx="15" fill="#F1EDF4" stroke="#6D587A" stroke-width="1.7"/>
+
+    <text x="338" y="1159" class="card-title" fill="#6D587A">净化输入</text>
+
+  <text x="338" y="1190" class="card-detail" text-anchor="start">
+    <tspan x="338" dy="0">整理字段</tspan><tspan x="338" dy="25">过滤不安全内容</tspan>
+  </text>
+
+  </g><path d="M 288 1182 H 308" fill="none" stroke="#6D587A" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" opacity="1"  marker-end="url(#arrow)"/><g>
+  <rect x="504" y="1114" width="164" height="58" rx="13" fill="#E8F2ED" stroke="#2F6B55" stroke-width="1.6"/>
+  <text x="586" y="1138" class="card-title" fill="#2F6B55" text-anchor="middle">已配置模型</text>
+  <text x="586" y="1158" class="note" text-anchor="middle">调用模型生成建议</text>
+  <rect x="504" y="1186" width="164" height="58" rx="13" fill="#FFF3DF" stroke="#9B682F" stroke-width="1.6"/>
+  <text x="586" y="1210" class="card-title" fill="#9B682F" text-anchor="middle">未配置模型</text>
+  <text x="586" y="1230" class="note" text-anchor="middle">使用本地规则建议</text>
+</g><circle cx="488" cy="1182" r="5" fill="#6D587A"/><path d="M 488 1182 V 1143 H 492" fill="none" stroke="#2F6B55" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" opacity="1"  marker-end="url(#arrow)"/><path d="M 488 1182 V 1215 H 492" fill="none" stroke="#9B682F" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" opacity="1"  marker-end="url(#arrow)"/><text x="586" y="1099" class="edge" text-anchor="middle" fill="#6D587A">二选一：按模型配置走其中一条</text><g>
+  <rect x="52" y="1263" width="616" height="65" rx="13" fill="#F8E9EC" stroke="#7B3F4A" stroke-width="1.6"/>
+  <text x="72" y="1291" class="card-title" fill="#7B3F4A">建议写回 PostgreSQL → React / ECharts 展示</text>
+  <text x="72" y="1316" class="card-detail">到此为止：系统保存解释与建议，不调用任何修复动作。</text>
+</g><path d="M 668 1143 H 682 V 1249 H 624 V 1252" fill="none" stroke="#7B3F4A" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" opacity="1"  marker-end="url(#arrow)"/><path d="M 586 1244 V 1252" fill="none" stroke="#7B3F4A" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" opacity="1"  marker-end="url(#arrow)"/><text x="40" y="1368" class="foot">实线：执行 / 数据流　·　双入口只在 Check Runner 汇合　·　诊断需要用户明确触发</text>
+</svg>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vue on 404_@林达</title><link>https://linsk27.github.io/tags/vue/</link><description>Recent content in Vue on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Thu, 27 Aug 2026 06:40:23 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/vue/index.xml" rel="self" type="application/rss+xml"/><item><title>Dev Cockpit：隔几天回来，也知道项目怎么跑</title><link>https://linsk27.github.io/projects/dev-cockpit/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/dev-cockpit/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png" alt="Featured image of post Dev Cockpit：隔几天回来，也知道项目怎么跑" /&gt;&lt;p&gt;最初我只想解决一个很笨、但每天都会遇到的问题：隔几天重新打开项目时，我已经忘了它用什么命令启动、端口在哪、Python 环境是哪一个、上次又为什么失败。Dev Cockpit 就是从这个问题长出来的。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vue on 404_@林达</title><link>https://linsk27.github.io/tags/vue/</link><description>Recent content in Vue on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Fri, 28 Aug 2026 02:49:52 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/vue/index.xml" rel="self" type="application/rss+xml"/><item><title>Dev Cockpit：隔几天回来，也知道项目怎么跑</title><link>https://linsk27.github.io/projects/dev-cockpit/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/dev-cockpit/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png" alt="Featured image of post Dev Cockpit：隔几天回来，也知道项目怎么跑" /&gt;&lt;p&gt;最初我只想解决一个很笨、但每天都会遇到的问题：隔几天重新打开项目时，我已经忘了它用什么命令启动、端口在哪、Python 环境是哪一个、上次又为什么失败。Dev Cockpit 就是从这个问题长出来的。&lt;/p&gt;
 &lt;p&gt;它不是 IDE，也不打算替代 VS Code、Docker Desktop 或 Conda。它负责回答的是更靠前的几件事：这个目录是什么项目、应该怎么启动、现在到底有没有运行、端口属于谁、失败信息在哪里。&lt;/p&gt;
 &lt;h2 id="扫描一个项目时程序在看什么"&gt;扫描一个项目时，程序在看什么
 &lt;/h2&gt;&lt;p&gt;把一个目录交给 Dev Cockpit 后，核心扫描器会读取常见标记文件、包管理配置和 Git 状态，识别 Node、Python、Java、PHP、Ruby、.NET、Go、Rust 与 Docker 项目。接着再从 package scripts、常见入口和技术栈约定中推断启动命令与候选端口，并结合进程归属和 HTTP 探测确认实际运行状态。&lt;/p&gt;
@@ -14,17 +14,24 @@
 &lt;li&gt;端口是否只是别的程序留下的占用。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;也就是说，“进程存在”“端口被占用”和“这个项目能访问”不是一件事。状态判断尽量依赖本地可验证信号，而不是让模型猜。&lt;/p&gt;
-&lt;h2 id="同一份项目状态给多个入口复用"&gt;同一份项目状态，给多个入口复用
-&lt;/h2&gt;&lt;p&gt;为了让不同入口得出同一个答案，代码按职责拆成共享扫描、运行状态聚合和界面入口几层：&lt;/p&gt;
-&lt;figure&gt;
+&lt;h2 id="同一份项目事实按入口逐层补全"&gt;同一份项目事实，按入口逐层补全
+&lt;/h2&gt;&lt;p&gt;为了避免 CLI、浏览器和桌面版各自猜一遍项目，代码按职责拆成基础扫描模型、机器运行证据补全和界面映射三层：&lt;/p&gt;
+&lt;figure class="system-diagram"&gt;
+&lt;a href="https://linsk27.github.io/img/projects/dev-cockpit-project-state.svg"
+target="_blank"
+rel="noopener"
+aria-label="打开 Dev Cockpit 完整分层架构图"&gt;
 &lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-project-state.svg"
-alt="Dev Cockpit 将项目静态信号与机器运行信号合并成统一项目状态"
-width="564"
-height="726"
+alt="Dev Cockpit 先由 packages/core 建立可复用 Project 基础模型，再由 server 合并本机运行证据，最后分别提供给 CLI、Vue Web 与 Electron"
+width="720"
+height="1190"
 loading="lazy"
 decoding="async"&gt;
+&lt;/a&gt;
+&lt;figcaption&gt;共享的是可验证的项目事实与扫描规则，不是每个入口都复用同一个 Web 状态枚举；点击图示可打开原图。&lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;p&gt;这样 CLI、浏览器界面和桌面版可以共用同一套判断逻辑。界面怎么改，不应该改变“项目是否在线”的答案；以后补一种技术栈，也不需要在三个入口各写一遍。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;packages/core&lt;/code&gt; 负责扫描规则和 Project 基础字段，CLI 的 &lt;code&gt;scan&lt;/code&gt;、&lt;code&gt;doctor&lt;/code&gt; 与文本上下文可以直接消费这一层。Local Server 再合并托管进程、PID 与端口归属、HTTP 探测和最近日志，生成带机器现场的 Project；Vue 从本地 API 读取它，并在视图层映射 &lt;code&gt;managed-running&lt;/code&gt;、&lt;code&gt;detected-online&lt;/code&gt;、&lt;code&gt;stale&lt;/code&gt;、&lt;code&gt;failed&lt;/code&gt; 和 &lt;code&gt;idle&lt;/code&gt; 等展示状态。Electron 启动的是同一个本地 Server，再加载同一套 Web 界面。&lt;/p&gt;
+&lt;p&gt;因此真正复用的是“如何扫描、字段代表什么、哪些事实已经验证”，而不是三个入口共享一台状态机。界面文案怎么改，不应该反过来改变端口归属或项目是否可达的事实；以后补一种技术栈，也不需要在三个入口各写一遍扫描规则。&lt;/p&gt;
 &lt;h2 id="资源雷达是后来长出来的功能"&gt;资源雷达是后来长出来的功能
 &lt;/h2&gt;&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png"
 loading="lazy"
