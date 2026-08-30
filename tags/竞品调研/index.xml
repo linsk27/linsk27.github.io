@@ -1,46 +1,87 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>竞品调研 on 404_@林达</title><link>https://linsk27.github.io/tags/%E7%AB%9E%E5%93%81%E8%B0%83%E7%A0%94/</link><description>Recent content in 竞品调研 on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Fri, 28 Aug 2026 02:49:52 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/%E7%AB%9E%E5%93%81%E8%B0%83%E7%A0%94/index.xml" rel="self" type="application/rss+xml"/><item><title>竞见：把淘宝竞品调研做成一条可恢复的 PPT 生产线</title><link>https://linsk27.github.io/projects/jingjian/</link><pubDate>Wed, 26 Aug 2026 04:34:00 +0800</pubDate><guid>https://linsk27.github.io/projects/jingjian/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/jingjian-workspace-current.png" alt="Featured image of post 竞见：把淘宝竞品调研做成一条可恢复的 PPT 生产线" /&gt;&lt;p&gt;竞见是我们围绕淘宝竞品调研自己开发的一套内部工作台。输入研究主题、品类、市场、价格带和可选的对标品牌，它会依次完成资料检索、品牌研究、洞察整理、淘宝商品采集和 PPT 报告生成。&lt;/p&gt;
-&lt;p&gt;我们想解决的不是“让 AI 帮忙写几段文案”，而是把一份竞品报告里重复、耗时、容易中断，又必须留下证据的工作，变成一条可以真正跑完的流程。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/jingjian-workspace-current.png"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>竞品调研 on 404_@林达</title><link>https://linsk27.github.io/tags/%E7%AB%9E%E5%93%81%E8%B0%83%E7%A0%94/</link><description>Recent content in 竞品调研 on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Mon, 31 Aug 2026 01:38:57 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/%E7%AB%9E%E5%93%81%E8%B0%83%E7%A0%94/index.xml" rel="self" type="application/rss+xml"/><item><title>竞见：把淘宝竞品调研做成一套可恢复、可验收的研究工作台</title><link>https://linsk27.github.io/projects/jingjian/</link><pubDate>Wed, 26 Aug 2026 04:34:00 +0800</pubDate><guid>https://linsk27.github.io/projects/jingjian/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/jingjian-react-workspace-a02d301.png" alt="Featured image of post 竞见：把淘宝竞品调研做成一套可恢复、可验收的研究工作台" /&gt;&lt;p&gt;很多“AI 生成 PPT”产品的演示路径都很短：输入一句话，等模型输出一份文件。真正把它用于竞品研究时，麻烦却往往发生在这条直线之外——品牌是否属于目标品类、价格和商品图从哪里来、淘宝登录失效怎么办、任务跑到一半能否继续，以及最后那份 PPT 到底能不能交付。&lt;/p&gt;
+&lt;p&gt;竞见要解决的并不是“让模型多写几页”，而是把这些不稳定环节组织成一条能追踪、能暂停、能恢复、也能拒绝半成品的研究流水线。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文界面截图来自最新编译版本，使用脱敏演示数据；真实淘宝、模型和搜索链路仍需在运行环境中单独验收。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="从一句需求变成一份可执行的研究简报"&gt;从一句需求，变成一份可执行的研究简报
+&lt;/h2&gt;&lt;p&gt;新建调研时，用户给出的不只是一个主题，还可以补充品类、市场、受众、研究目标、指定品牌、价格带和种子链接。快速、标准、深度三种模式，本质上是不同的品牌数与商品数预算；需要更细时，也可以直接自定义。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/jingjian-new-research-a02d301.png"
 loading="lazy"
-alt="竞见中已经完成的保温杯竞品调研"
+alt="新建调研简报与任务规模预览，页面内容为演示数据"
 &gt;&lt;/p&gt;
-&lt;h2 id="为什么要做这个项目"&gt;为什么要做这个项目
-&lt;/h2&gt;&lt;p&gt;品牌或包装设计开始前，通常要先回答一组很具体的问题：市场里有哪些主要品牌，它们分别在卖什么，价格集中在哪些区间，商品页面在强调什么，视觉风格又有哪些共同点。&lt;/p&gt;
-&lt;p&gt;手工完成这些工作，要在官网、公开报道和电商页面之间来回切换，再逐个整理商品图、价格、付款人数、规格和来源。真正消耗时间的不是某一次搜索，而是几十次重复操作叠在一起；中间只要登录失效、网页超时或电脑重启，前面的工作就很容易丢失。&lt;/p&gt;
-&lt;p&gt;竞见把这些步骤收进同一个任务里。用户不需要理解背后的模型、浏览器和脚本，只需要确定调研范围，选择快速、标准、深度或自定义模式，然后在工作台里查看进度、处理必要的人工验证，最后检查并下载报告。&lt;/p&gt;
-&lt;h2 id="一次调研是怎样完成的"&gt;一次调研是怎样完成的
-&lt;/h2&gt;&lt;p&gt;一份任务会先确认品类边界，发现并筛选品牌，再根据公开资料完成品牌研究、横向洞察和内容校验。研究内容通过检查后，系统再采集淘宝商品，渲染并检查最终报告。&lt;/p&gt;
-&lt;p&gt;正式任务创建前还会先检查内容分析服务、本机浏览器、淘宝实时登录态和截图 Worker。品牌核验与品牌研究最多同时处理三个候选，每完成一个就保存一次；淘宝截图则因为共享同一个登录账号和队列，始终串行执行。&lt;/p&gt;
-&lt;p&gt;这条流程是固定的，但每一步都能留下状态。任务中心会通过实时事件显示正在处理的阶段、完成比例、图片采集情况和异常原因，而不是让用户一直盯着一个没有反馈的聊天框。这里的重试也不是整份任务重跑：研究内容回到对应阶段，图片问题只重新排队对应商品槽位。&lt;/p&gt;
-&lt;h2 id="整体架构"&gt;整体架构
-&lt;/h2&gt;&lt;p&gt;前端使用原生 HTML、CSS 和 JavaScript，负责创建任务、展示进度、人工验证和报告预览。FastAPI 提供任务接口和实时状态，Python 流水线负责安排研究、采集、检查与报告生成。&lt;/p&gt;
-&lt;p&gt;需要理解语义的部分，例如品类判断、品牌画像和跨品牌洞察，会交给大模型处理；公开资料检索和淘宝页面采集则由独立工具完成。Playwright 通过 CDP 连接操作员已登录的共享 Chrome，结构化字段和业务规则负责检查模型返回的结果是否可以继续使用。&lt;/p&gt;
-&lt;p&gt;这样的分工很朴素：模型负责阅读和归纳，程序负责顺序、状态、证据与失败处理。因为调研步骤和报告结构本来就比较明确，固定流水线反而更容易排查问题，也更适合长时间运行。&lt;/p&gt;
-&lt;h2 id="模型给出判断结论必须有证据"&gt;模型给出判断，结论必须有证据
-&lt;/h2&gt;&lt;p&gt;竞品调研最怕两种结果：一是文字看起来完整，但找不到来源；二是候选品牌或商品和目标品类没有关系。&lt;/p&gt;
-&lt;p&gt;所以品牌不会因为模型提到就直接进入报告。系统会继续查找公开资料，确认它确实属于目标市场，并为关键结论保留来源。模型返回的内容还要经过字段和业务规则检查，缺少必要信息时会重试或停止，不会用一段听起来合理的话把空缺盖过去。&lt;/p&gt;
-&lt;p&gt;淘宝商品也会结合品牌、品类、产品类型、价格范围和排除词做筛选。配件、包装耗材、批发噪声和冲突品类会被过滤；找不到合格商品时，系统会明确告诉用户这一项失败，而不是随便找一张图片凑数。&lt;/p&gt;
-&lt;h2 id="淘宝采集必须允许人工接管"&gt;淘宝采集必须允许人工接管
-&lt;/h2&gt;&lt;p&gt;淘宝页面依赖真实登录状态，也可能遇到扫码、滑块或其他安全验证，因此这部分不能假装成一个永远稳定的普通接口。&lt;/p&gt;
-&lt;p&gt;竞见使用一个由操作员登录的共享 Chrome。采集正常时，后台自动打开商品页面并返回结果；遇到验证时，任务暂停并提醒用户处理。验证完成后，系统继续剩余商品，不需要重新做前面的品牌研究。&lt;/p&gt;
-&lt;p&gt;这里的人机协作很重要：系统负责重复操作，人负责账号登录和平台要求的安全验证。它不会尝试绕过淘宝的验证码或风控。&lt;/p&gt;
-&lt;h2 id="长任务最重要的是可以继续"&gt;长任务最重要的是可以继续
-&lt;/h2&gt;&lt;p&gt;一份深度调研可能包含多个品牌和几十个商品，全部完成往往需要较长时间。如果第七个品牌失败后只能从头开始，前面的自动化就没有太大意义。&lt;/p&gt;
-&lt;p&gt;竞见会在品牌研究和商品采集过程中持续保存进度。任务恢复时，已经完成的品牌、洞察和仍然有效的商品图会直接复用，只重新处理缺失、失败或已经失效的部分。旧任务迟到的结果也不会覆盖新一轮数据。&lt;/p&gt;
-&lt;p&gt;对使用者来说，这意味着浏览器关掉、服务重启或人工验证超时之后，任务仍然可以从上次停下的位置继续，而不是重新等待整份报告。&lt;/p&gt;
-&lt;h2 id="生成报告不等于可以交付"&gt;生成报告不等于可以交付
-&lt;/h2&gt;&lt;p&gt;完成后的工作台会提供在线预览和一个正式 PPT 下载。PPT 以已经检查过的报告页面为准，因此下载结果和网页预览保持一致。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/jingjian-report-product-matrix.png"
+&lt;p&gt;&lt;em&gt;新建调研：先把一句需求整理成有范围、有预算的研究简报。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;提交之前，前端会先检查内容模型、浏览器、淘宝登录态和采集 worker 是否就绪。请求本身带有幂等键，即使用户重复点击或网络重试，也不会悄悄创建两份相同任务。通过检查后，它才会成为一个持久化任务，而不是浏览器关掉就丢失的一次聊天。&lt;/p&gt;
+&lt;p&gt;一条完整任务大致会经过：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;研究简报 → 品类边界 → 品牌发现与核验 → 单品牌研究 → 跨品牌洞察 → 淘宝商品采集 → 内容与视觉检查 → HTML 预览与 PPTX 交付&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这里最关键的设计，是没有让一个大提示词包办全部工作。品类理解、品牌发现、品牌档案和跨品牌洞察分别处理；公开资料先被压缩成结构化证据，再交给模型整理。品牌研究可以小规模并发，而依赖共享淘宝浏览器的采集保持串行，避免多个任务争抢同一个登录态和页面。&lt;/p&gt;
+&lt;h2 id="让失败成为流程的一部分"&gt;让失败成为流程的一部分
+&lt;/h2&gt;&lt;p&gt;长任务最怕“跑了二十分钟，最后只得到一个失败提示”。竞见把任务拆成明确阶段，并在品牌完成、采集完成等节点保存检查点。服务重启后，原本正在执行或等待人工输入的任务会进入“已中断、可继续”状态；用户主动继续时，系统会核对请求指纹，复用已经完成的结果，只补尚未完成的部分。&lt;/p&gt;
+&lt;p&gt;任务状态也不只分成功和失败。排队、运行、等待人工输入、中断、取消中、已取消、完成和失败都有独立语义。进度里保存真实的 current/total、成功数、复用数和阶段耗时，不用一个不断增长的假百分比制造“马上就好”的错觉。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/jingjian-operations-a02d301.png"
 loading="lazy"
-alt="竞见生成的淘宝商品矩阵页面"
+alt="运行中心展示容量、依赖和真实阶段统计，页面内容为演示数据"
 &gt;&lt;/p&gt;
-&lt;p&gt;在交付之前，系统还会检查内容是否缺失、品牌是否重复、来源是否完整，页面有没有溢出或重叠，以及图片能否正常打开、是否重复、是否过小、是否误截到登录页或二维码。&lt;/p&gt;
-&lt;p&gt;图片有问题时，只重新采集对应商品，不影响已经合格的部分。如果修复后仍然达不到要求，任务会明确失败，而不是交出一份表面完整、实际无法使用的报告。&lt;/p&gt;
-&lt;p&gt;当前整体渲染与检查最多执行三轮，图片定点补采最多执行两轮。轮次耗尽后系统会保留失败原因，不会降低质量阈值来换一个“完成”状态。&lt;/p&gt;
-&lt;p&gt;自动检查通过之后，报告仍然要经过实际任务和最终设计审稿。系统可以减少重复劳动，但不能替代人对数据可信度和设计质量的最后判断。&lt;/p&gt;
-&lt;h2 id="现在的边界"&gt;现在的边界
-&lt;/h2&gt;&lt;p&gt;竞见目前服务于内部品牌与包装设计调研，运行在单台 Windows 工作站上，使用一个淘宝工作账号和一条截图队列。它不是面向公众注册的 SaaS，也不追求同时处理大量用户。&lt;/p&gt;
-&lt;p&gt;这个项目最终让我们更确定一件事：智能体真正有用的地方，不是让模型拥有更多自由，而是把它放进一条证据可追、失败可见、中断可恢复、结果可验收的工作流程里。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item></channel></rss>
+&lt;p&gt;&lt;em&gt;运行中心：演示数据用于展示容量、依赖状态和阶段统计的实际界面。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;运行中心把这些信息集中起来：当前容量、任务成功率、中位与 P95 用时、模型和浏览器依赖、采集 worker 心跳、阶段统计、失败位置与备份状态都能直接看到。它更像一个本地研究工作台的控制面板，而不是生成按钮旁边的一条进度条。&lt;/p&gt;
+&lt;h2 id="淘宝采集不是再找一张差不多的网图"&gt;淘宝采集不是“再找一张差不多的网图”
+&lt;/h2&gt;&lt;p&gt;商品图、价格、销量线索和规格必须来自同一个商品证据上下文，才能在报告里互相对应。竞见会根据品牌和产品槽位生成稳定的采集任务，通过共享 Chrome 的 CDP 会话搜索淘宝、筛选候选、滚动页面并截取实际商品卡；每个结果记录来源、槽位、时间和状态，失败项可以单独重试，已经合格的结果会被复用。&lt;/p&gt;
+&lt;p&gt;淘宝登录或验证码无法被当成普通异常自动重试。遇到这类情况，任务会进入“等待人工输入”，前端展示远端浏览器画面，让用户自己完成登录或验证，再从原阶段继续。这个机制的目标不是绕过平台风控，而是承认真人验证本来就是采集流程的一部分。&lt;/p&gt;
+&lt;p&gt;如果开启淘宝采集却一张可用图片都没有，流水线会停止，不会换成无关的网络占位图继续生成一份看似完整的报告。&lt;/p&gt;
+&lt;h2 id="报告能打开不等于报告能交付"&gt;报告能打开，不等于报告能交付
+&lt;/h2&gt;&lt;p&gt;研究数据完成后，系统先用同一份结构化数据生成分页 HTML，再以 1280×720 的固定画布逐页渲染成 PPTX。这样浏览器预览和正式演示稿使用同一套排版来源，不需要维护两套很容易走样的模板。页面中可见的来源链接，会在 PPTX 中按原位置重建为可点击区域。&lt;/p&gt;
+&lt;p&gt;最终交付是一份 PPTX，同时保留同内容的 HTML 预览。需要说明的是，PPT 页面以高保真图像承载视觉内容，链接可以点击，但正文不是一组组原生 PowerPoint 文本框，因此它更适合直接汇报和分发，而不是逐字拆开重排。&lt;/p&gt;
+&lt;p&gt;生成之后还有最多三轮有上限的质量闭环：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;检查品牌数量、字段完整度、公开来源、品类污染和品牌间重复文案。&lt;/li&gt;
+&lt;li&gt;检查图片能否解码、尺寸是否合理，是否出现二维码、登录页或重复图片。&lt;/li&gt;
+&lt;li&gt;用浏览器检查每一页的越界、重叠和商品卡溢出。&lt;/li&gt;
+&lt;li&gt;对能够定位到具体槽位的图片问题定点补采，再重新渲染和复核。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如果阻断问题在修复轮次内仍然存在，任务会以 &lt;code&gt;quality_gate_failed&lt;/code&gt; 结束，而不是把半成品标成“已完成”。这套失败关闭的策略，比“无论如何先给用户一个文件”更接近真实交付。&lt;/p&gt;
+&lt;h2 id="研究完成后结果还能继续被问"&gt;研究完成后，结果还能继续被问
+&lt;/h2&gt;&lt;p&gt;新版增加了知识问答工作区。已经完成的报告会被拆成报告概况、品牌、商品、市场洞察和建议等小块，写入本地 SQLite。检索时同时使用 FTS5 关键词排名和向量相似度，再通过 RRF 融合两路结果；没有外部 embedding Key 时，仍能使用本地稳定向量，配置 Ark embedding 后再切换到外部语义向量。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/jingjian-knowledge-a02d301.png"
+loading="lazy"
+alt="基于历史报告的带来源问答，页面内容为演示数据"
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;研究问答：回答与服务端校验过的来源一起呈现。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;可选的模型精排只作用在生成式问答的候选证据上，而且默认关闭。候选内容会被当成不可信数据，模型只能返回服务端发放的候选 ID；超时、格式错误、ID 缺失或重复时，系统直接退回原来的融合排序，不让一次精排失败拖垮问答。&lt;/p&gt;
+&lt;p&gt;回答中的 &lt;code&gt;[S1]&lt;/code&gt;、&lt;code&gt;[S2]&lt;/code&gt; 不是模型随手写的装饰。服务端会校验引用是否确实来自本次返回的证据，并把来源快照与会话一起持久化。流式回答中断后，已经生成的部分也会保存；同一个 request id 重试时可以恢复，而不是重复创建一轮回答。&lt;/p&gt;
+&lt;p&gt;像“目前有多少份报告”“列出全部调研”这类全库问题，则直接查询 SQLite 的完整目录，不把 Top-K 检索结果误当成全量数据，也不必为了一个计数调用模型。&lt;/p&gt;
+&lt;h2 id="技术架构围绕长任务而不是围绕聊天框"&gt;技术架构：围绕长任务，而不是围绕聊天框
+&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;层次&lt;/th&gt;
+&lt;th&gt;主要职责与技术&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Web 工作台&lt;/td&gt;
+&lt;td&gt;React 19、TypeScript、Vite、React Router、TanStack Query；负责深链接、任务状态、流式问答、移动端导航和配置界面。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;API 与编排&lt;/td&gt;
+&lt;td&gt;FastAPI、Pydantic、asyncio；把报告命令、查询交付、RPA 会话、知识库、设置和运维拆成独立路由与服务。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;研究与采集&lt;/td&gt;
+&lt;td&gt;OpenAI-compatible 模型接口、公开搜索链、Playwright、共享 Chrome CDP；品牌研究有限并发，淘宝采集单队列运行。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;持久化&lt;/td&gt;
+&lt;td&gt;原子 JSON 任务账本、任务检查点、RPA 文件协议，以及用于知识索引和会话的 SQLite/WAL。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;交付与验收&lt;/td&gt;
+&lt;td&gt;HTML 分页渲染、PPTX OOXML 打包、布局检查、视觉检查、定点补采和结构化失败码。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;后端入口现在主要负责依赖组装，业务分别放在 router、service、pipeline 和知识/RPA 子域里。项目还用架构测试限制组合根和核心 facade 重新膨胀，并检查模块依赖方向。换句话说，这次拆分不是一次性的“整理代码”，而是把不允许退回的大文件和反向依赖写进测试。&lt;/p&gt;
+&lt;p&gt;前端生产构建由 FastAPI 统一托管，浏览器工作流覆盖深链接、对话框焦点、报告入口、设置保存、带来源的流式回答、幂等新建任务，以及 390px 移动端没有横向溢出。后端测试则覆盖状态恢复、检查点、单队列、定点补采、报告打包、知识检索、会话与精排降级。真实淘宝账号、外部模型和搜索服务仍然需要单独做小任务验收，自动化测试不会假装替代这些外部环境。&lt;/p&gt;
+&lt;h2 id="目前的边界"&gt;目前的边界
+&lt;/h2&gt;&lt;p&gt;竞见当前定位仍是本地工作站工具，不是一个已经做完多租户和分布式队列的 SaaS。任务账本面向单节点、单进程；ShadowBot 兼容模式下，淘宝采集容量固定为一个任务。完整采集需要 Windows 可交互桌面、Chrome 或 Edge、有效淘宝登录态和人工处理验证，网页结构或平台风控变化也可能影响成功率。&lt;/p&gt;
+&lt;p&gt;正式报告必须有可用的内容模型；专业搜索 API、外部 embedding、可选精排和模型视觉审查可以按需要配置。知识库在没有 embedding Key 时仍可本地检索，但生成自然语言答案依然需要内容模型。&lt;/p&gt;
+&lt;p&gt;这些限制并不漂亮，却决定了系统是否可信。竞见这次迭代真正完成的，不是把“生成 PPT”包装得更神奇，而是把研究、采集、人工接管、质量门禁、恢复和知识复用连成一条可以观察、可以解释、也允许失败的工程流程。&lt;/p&gt;</description></item></channel></rss>
