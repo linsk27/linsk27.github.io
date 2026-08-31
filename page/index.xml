@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on 404_@林达</title><link>https://linsk27.github.io/page/</link><description>Recent content in Pages on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Wed, 26 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/page/index.xml" rel="self" type="application/rss+xml"/><item><title>404_@林达 GitHub 项目索引</title><link>https://linsk27.github.io/github/</link><pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/github/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-desk-v0.25.7.png" alt="Featured image of post 404_@林达 GitHub 项目索引" /&gt;&lt;p&gt;这里是更直接的仓库索引，顺序与我当前 GitHub 主页的精选项目保持一致。想看实现背景、开源来源和开发取舍，可以进入更完整的 &lt;a class="link" href="https://linsk27.github.io/projects/" &gt;项目主页&lt;/a&gt;。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on 404_@林达</title><link>https://linsk27.github.io/page/</link><description>Recent content in Pages on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Tue, 01 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/page/index.xml" rel="self" type="application/rss+xml"/><item><title>404_@林达 GitHub 项目索引</title><link>https://linsk27.github.io/github/</link><pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/github/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-desk-v0.25.7.png" alt="Featured image of post 404_@林达 GitHub 项目索引" /&gt;&lt;p&gt;这里是更直接的仓库索引，顺序与我当前 GitHub 主页的精选项目保持一致。想看实现背景、开源来源和开发取舍，可以进入更完整的 &lt;a class="link" href="https://linsk27.github.io/projects/" &gt;项目主页&lt;/a&gt;。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;个人主页：&lt;a class="link" href="https://github.com/linsk27" target="_blank" rel="noopener"
 &gt;github.com/linsk27&lt;/a&gt;&lt;/li&gt;
@@ -96,14 +96,16 @@
 &lt;p&gt;如果你只想快速跳到仓库，可以看 &lt;a class="link" href="https://linsk27.github.io/github/" &gt;GitHub 项目索引&lt;/a&gt;；想了解为什么这样设计、哪些部分使用开源基础、AI 参与到什么程度，可以继续往下看。&lt;/p&gt;
 &lt;h2 id="正在维护"&gt;正在维护
 &lt;/h2&gt;&lt;h3 id="竞见"&gt;竞见
-&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://linsk27.github.io/projects/jingjian/" &gt;竞见&lt;/a&gt; 是我们自己开发的淘宝竞品研究与 PPT 生成工作台。它把公开资料检索、品牌研究、淘宝商品截图、洞察整理和报告生成串成一条可恢复的任务链，面向真实的品牌与包装设计调研，而不是做一个套模板的通用 PPT 工具。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/jingjian-workspace-current.png"
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://linsk27.github.io/projects/jingjian/" &gt;竞见&lt;/a&gt; 是我们自己开发的淘宝竞品研究与 PPT 生成工作台。输入品类和样本范围后，它会整理公开品牌资料，采集淘宝商品证据，生成一份包含产品架构、价格带、包装视觉、跨品牌比较和设计建议的 PPTX；完成的报告还能进入研究问答，继续按来源查询。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/jingjian-research-center-latest.png"
 loading="lazy"
-alt="竞见竞品研究工作台"
+alt="竞见调研中心与报告交付页面"
 &gt;&lt;/p&gt;
-&lt;p&gt;技术上，FastAPI 负责任务状态、SSE 进度和人工验证通道，Python 流水线编排研究与质量门禁，Playwright CDP 连接操作员已登录的共享 Chrome。研究和截图都保存细粒度检查点，最终同时交付高保真的网页同款 PPTX、可编辑经典版、HTML 与结构化 JSON。源码仓库目前保持私有。&lt;/p&gt;
+&lt;p&gt;技术上，React 负责调研、运行和问答界面，FastAPI 编排长任务与人工验证，Playwright/CDP 连接已登录的共享 Chrome。任务与最终报告写入研究主库，RAG 使用可重建的 SQLite 混合索引；正式交付物是一份 PPTX，并提供同内容的 HTML 预览。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class="link" href="https://linsk27.github.io/projects/jingjian/" &gt;阅读竞见的架构与开发复盘&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://github.com/linsk27/jingjian-taobao-agent" target="_blank" rel="noopener"
+&gt;查看 GitHub 仓库&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="dev-cockpit"&gt;Dev Cockpit
 &lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://linsk27.github.io/projects/dev-cockpit/" &gt;Dev Cockpit&lt;/a&gt; 解决的是“隔几天回来就忘了项目怎么跑”。它会扫描技术栈、启动命令、端口、Python 环境和 Git 状态，再把 CLI、Web 与 Electron 桌面端接到同一套判断逻辑上。资源雷达只是后来增加的一个模块，不是整个项目的全部。&lt;/p&gt;
