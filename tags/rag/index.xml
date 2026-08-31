@@ -1,87 +1,211 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>RAG on 404_@林达</title><link>https://linsk27.github.io/tags/rag/</link><description>Recent content in RAG on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Mon, 31 Aug 2026 01:38:57 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/rag/index.xml" rel="self" type="application/rss+xml"/><item><title>竞见：把淘宝竞品调研做成一套可恢复、可验收的研究工作台</title><link>https://linsk27.github.io/projects/jingjian/</link><pubDate>Wed, 26 Aug 2026 04:34:00 +0800</pubDate><guid>https://linsk27.github.io/projects/jingjian/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/jingjian-react-workspace-a02d301.png" alt="Featured image of post 竞见：把淘宝竞品调研做成一套可恢复、可验收的研究工作台" /&gt;&lt;p&gt;很多“AI 生成 PPT”产品的演示路径都很短：输入一句话，等模型输出一份文件。真正把它用于竞品研究时，麻烦却往往发生在这条直线之外——品牌是否属于目标品类、价格和商品图从哪里来、淘宝登录失效怎么办、任务跑到一半能否继续，以及最后那份 PPT 到底能不能交付。&lt;/p&gt;
-&lt;p&gt;竞见要解决的并不是“让模型多写几页”，而是把这些不稳定环节组织成一条能追踪、能暂停、能恢复、也能拒绝半成品的研究流水线。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>RAG on 404_@林达</title><link>https://linsk27.github.io/tags/rag/</link><description>Recent content in RAG on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Mon, 31 Aug 2026 12:05:00 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/rag/index.xml" rel="self" type="application/rss+xml"/><item><title>竞见开发复盘：淘宝竞品报告从采集到继续追问</title><link>https://linsk27.github.io/projects/jingjian/</link><pubDate>Wed, 26 Aug 2026 04:34:00 +0800</pubDate><guid>https://linsk27.github.io/projects/jingjian/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/jingjian-workspace-memory-v2.png" alt="Featured image of post 竞见开发复盘：淘宝竞品报告从采集到继续追问" /&gt;&lt;p&gt;做淘宝竞品报告，资料本身并不难搜。麻烦的是把品牌、商品图、价格和来源一一对应：登录失效或遇到验证码时，任务要能停住；重新启动后，还得接着上一次的进度。报告做完后，我也希望后面的提问还能用到这次研究。&lt;/p&gt;
+&lt;p&gt;为此，我把竞见拆成两段：先完成一份有证据的报告，再把报告收进本地知识库，供后续检索和追问。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;本文界面截图来自最新编译版本，使用脱敏演示数据；真实淘宝、模型和搜索链路仍需在运行环境中单独验收。&lt;/p&gt;
+&lt;p&gt;工作台界面使用脱敏演示数据；成果截图来自一次公开品牌研究示例，不含账号或客户信息。淘宝、模型和搜索服务需要在实际运行环境中连接。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id="从一句需求变成一份可执行的研究简报"&gt;从一句需求，变成一份可执行的研究简报
-&lt;/h2&gt;&lt;p&gt;新建调研时，用户给出的不只是一个主题，还可以补充品类、市场、受众、研究目标、指定品牌、价格带和种子链接。快速、标准、深度三种模式，本质上是不同的品牌数与商品数预算；需要更细时，也可以直接自定义。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/jingjian-new-research-a02d301.png"
+&lt;h2 id="先看最后生成的报告"&gt;先看最后生成的报告
+&lt;/h2&gt;&lt;p&gt;任务完成后，用户可以下载一份能直接用 PowerPoint 打开的 PPTX。下面截取了同一份 31 页示例报告中的三个位置：开头交代研究对象和对标结论，中段保留商品样本与图片来源，后半段再把采集结果整理成包装观察和设计启发。&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://linsk27.github.io/img/projects/jingjian-report-cover-conclusion.png" &gt;&lt;img src="https://linsk27.github.io/img/projects/jingjian-report-cover-conclusion.png"
 loading="lazy"
-alt="新建调研简报与任务规模预览，页面内容为演示数据"
-&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;新建调研：先把一句需求整理成有范围、有预算的研究简报。&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;提交之前，前端会先检查内容模型、浏览器、淘宝登录态和采集 worker 是否就绪。请求本身带有幂等键，即使用户重复点击或网络重试，也不会悄悄创建两份相同任务。通过检查后，它才会成为一个持久化任务，而不是浏览器关掉就丢失的一次聊天。&lt;/p&gt;
-&lt;p&gt;一条完整任务大致会经过：&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;研究简报 → 品类边界 → 品牌发现与核验 → 单品牌研究 → 跨品牌洞察 → 淘宝商品采集 → 内容与视觉检查 → HTML 预览与 PPTX 交付&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;这里最关键的设计，是没有让一个大提示词包办全部工作。品类理解、品牌发现、品牌档案和跨品牌洞察分别处理；公开资料先被压缩成结构化证据，再交给模型整理。品牌研究可以小规模并发，而依赖共享淘宝浏览器的采集保持串行，避免多个任务争抢同一个登录态和页面。&lt;/p&gt;
-&lt;h2 id="让失败成为流程的一部分"&gt;让失败成为流程的一部分
-&lt;/h2&gt;&lt;p&gt;长任务最怕“跑了二十分钟，最后只得到一个失败提示”。竞见把任务拆成明确阶段，并在品牌完成、采集完成等节点保存检查点。服务重启后，原本正在执行或等待人工输入的任务会进入“已中断、可继续”状态；用户主动继续时，系统会核对请求指纹，复用已经完成的结果，只补尚未完成的部分。&lt;/p&gt;
-&lt;p&gt;任务状态也不只分成功和失败。排队、运行、等待人工输入、中断、取消中、已取消、完成和失败都有独立语义。进度里保存真实的 current/total、成功数、复用数和阶段耗时，不用一个不断增长的假百分比制造“马上就好”的错觉。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/jingjian-operations-a02d301.png"
+alt="竞见报告封面，以及下一页的行业、竞争和品牌发展结论"
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;第 1～2 页：封面说明研究对象与采集范围，下一页先给出行业、竞争和品牌发展三个层面的对标结论。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://linsk27.github.io/img/projects/jingjian-report-product-visuals.png" &gt;&lt;img src="https://linsk27.github.io/img/projects/jingjian-report-product-visuals.png"
 loading="lazy"
-alt="运行中心展示容量、依赖和真实阶段统计，页面内容为演示数据"
+alt="罗技电商视觉样本页，展示商品图、包装主图和图片来源入口"
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;第 5～6 页：罗技的电商视觉样本、原图入口、产品架构和价格层级。点击图片可查看大图。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://linsk27.github.io/img/projects/jingjian-report-brand-analysis.png" &gt;&lt;img src="https://linsk27.github.io/img/projects/jingjian-report-brand-analysis.png"
+loading="lazy"
+alt="雷柏淘宝截图分析页，以及下一页的达尔优品牌概况"
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;第 18～19 页：雷柏的淘宝截图分析，以及达尔优的品牌概况。这里能看到包装视觉、货架观察和设计启发是怎样落进报告的。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;这份报告还包括品牌概览、核心视觉、商品矩阵、跨品牌比较和来源索引。PPTX 用于汇报，HTML 用于浏览器预览，结构化 JSON 保存最终报告数据，供知识库同步和历史报告问答使用；任务恢复依赖单独的检查点文件。&lt;/p&gt;
+&lt;h2 id="一次调研会经过什么"&gt;一次调研会经过什么
+&lt;/h2&gt;&lt;p&gt;一次调研从“研究简报”开始。用户可以填写调研主题、品类、目标市场、价格范围和重点关注，再选择快速、标准、深度或自定义样本规模。快速、标准和深度模式分别预设品牌数与每个品牌的商品数，手动调整后会转为自定义模式。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/jingjian-brief-memory-v2.png"
+loading="lazy"
+alt="竞见的新建调研简报，使用脱敏演示数据"
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;运行中心：演示数据用于展示容量、依赖状态和阶段统计的实际界面。&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;运行中心把这些信息集中起来：当前容量、任务成功率、中位与 P95 用时、模型和浏览器依赖、采集 worker 心跳、阶段统计、失败位置与备份状态都能直接看到。它更像一个本地研究工作台的控制面板，而不是生成按钮旁边的一条进度条。&lt;/p&gt;
-&lt;h2 id="淘宝采集不是再找一张差不多的网图"&gt;淘宝采集不是“再找一张差不多的网图”
-&lt;/h2&gt;&lt;p&gt;商品图、价格、销量线索和规格必须来自同一个商品证据上下文，才能在报告里互相对应。竞见会根据品牌和产品槽位生成稳定的采集任务，通过共享 Chrome 的 CDP 会话搜索淘宝、筛选候选、滚动页面并截取实际商品卡；每个结果记录来源、槽位、时间和状态，失败项可以单独重试，已经合格的结果会被复用。&lt;/p&gt;
-&lt;p&gt;淘宝登录或验证码无法被当成普通异常自动重试。遇到这类情况，任务会进入“等待人工输入”，前端展示远端浏览器画面，让用户自己完成登录或验证，再从原阶段继续。这个机制的目标不是绕过平台风控，而是承认真人验证本来就是采集流程的一部分。&lt;/p&gt;
-&lt;p&gt;如果开启淘宝采集却一张可用图片都没有，流水线会停止，不会换成无关的网络占位图继续生成一份看似完整的报告。&lt;/p&gt;
-&lt;h2 id="报告能打开不等于报告能交付"&gt;报告能打开，不等于报告能交付
-&lt;/h2&gt;&lt;p&gt;研究数据完成后，系统先用同一份结构化数据生成分页 HTML，再以 1280×720 的固定画布逐页渲染成 PPTX。这样浏览器预览和正式演示稿使用同一套排版来源，不需要维护两套很容易走样的模板。页面中可见的来源链接，会在 PPTX 中按原位置重建为可点击区域。&lt;/p&gt;
-&lt;p&gt;最终交付是一份 PPTX，同时保留同内容的 HTML 预览。需要说明的是，PPT 页面以高保真图像承载视觉内容，链接可以点击，但正文不是一组组原生 PowerPoint 文本框，因此它更适合直接汇报和分发，而不是逐字拆开重排。&lt;/p&gt;
-&lt;p&gt;生成之后还有最多三轮有上限的质量闭环：&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;快速、标准和深度模式主要改变品牌数和商品样本量。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;提交前，页面先检查内容分析服务、淘宝登录态和采集程序；请求到达后端后，再检查本地浏览器和登录资料。每次创建请求都有唯一标识，重复点击或网络重试会复用原任务。&lt;/p&gt;
+&lt;p&gt;提交后，系统大致按下面的顺序运行：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;检查品牌数量、字段完整度、公开来源、品类污染和品牌间重复文案。&lt;/li&gt;
-&lt;li&gt;检查图片能否解码、尺寸是否合理，是否出现二维码、登录页或重复图片。&lt;/li&gt;
-&lt;li&gt;用浏览器检查每一页的越界、重叠和商品卡溢出。&lt;/li&gt;
-&lt;li&gt;对能够定位到具体槽位的图片问题定点补采，再重新渲染和复核。&lt;/li&gt;
+&lt;li&gt;理解品类，整理研究边界和搜索关键词。&lt;/li&gt;
+&lt;li&gt;搜索并核验品牌，排除与目标品类无关的候选。&lt;/li&gt;
+&lt;li&gt;分品牌收集公开资料，整理定位、产品线、价格带和包装特点。&lt;/li&gt;
+&lt;li&gt;通过淘宝采集商品图、价格、规格和销量线索。&lt;/li&gt;
+&lt;li&gt;汇总跨品牌差异，形成市场判断和设计建议。&lt;/li&gt;
+&lt;li&gt;生成报告并检查内容、图片和版面。&lt;/li&gt;
+&lt;li&gt;交付一份 PPTX，同时保留 HTML 预览和结构化 JSON。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;如果阻断问题在修复轮次内仍然存在，任务会以 &lt;code&gt;quality_gate_failed&lt;/code&gt; 结束，而不是把半成品标成“已完成”。这套失败关闭的策略，比“无论如何先给用户一个文件”更接近真实交付。&lt;/p&gt;
-&lt;h2 id="研究完成后结果还能继续被问"&gt;研究完成后，结果还能继续被问
-&lt;/h2&gt;&lt;p&gt;新版增加了知识问答工作区。已经完成的报告会被拆成报告概况、品牌、商品、市场洞察和建议等小块，写入本地 SQLite。检索时同时使用 FTS5 关键词排名和向量相似度，再通过 RRF 融合两路结果；没有外部 embedding Key 时，仍能使用本地稳定向量，配置 Ark embedding 后再切换到外部语义向量。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/jingjian-knowledge-a02d301.png"
+&lt;p&gt;我把流程拆成这些步骤，是为了让每一步都能单独保存和检查。某个环节失败时，只重跑这一段，不必把前面的搜索和整理再做一遍。&lt;/p&gt;
+&lt;h2 id="淘宝采集自动搜索人工处理验证"&gt;淘宝采集：自动搜索，人工处理验证
+&lt;/h2&gt;&lt;p&gt;公开网页用来了解品牌，商品图、价格和规格则尽量取自同一张真实商品卡。开启淘宝采集后，竞见会为报告中的每个商品位置创建采集任务。当前使用 ShadowBot 时，后台采集程序会控制一个已经登录的 Chrome，完成搜索、筛选和截图。&lt;/p&gt;
+&lt;p&gt;标题、价格、规格、销量线索、图片和商品链接会被记录在同一条证据里，避免从不同页面拼出一个并不存在的商品。已经采集成功的内容可以复用，只有失败或缺失的位置需要重新处理。&lt;/p&gt;
+&lt;p&gt;淘宝登录过期或出现验证码时，系统不会尝试绕过验证。任务会暂停，用户在远程浏览器画面中完成登录或验证；后台检测到淘宝会话恢复后，再从原来的阶段继续。&lt;/p&gt;
+&lt;p&gt;如果开启淘宝采集后仍找不到一张可用商品图，任务会直接失败，普通网络图片不会被拿来填空。&lt;/p&gt;
+&lt;h2 id="任务中断后怎么接着跑"&gt;任务中断后，怎么接着跑
+&lt;/h2&gt;&lt;p&gt;一次调研会连续调用搜索、模型、浏览器和渲染程序，不能依赖一条网页请求跑到底。竞见会把任务状态写进本地进度文件；刷新或关闭工作台页面不会丢掉任务记录，回来后仍能查看进度或继续处理。&lt;/p&gt;
+&lt;p&gt;系统会在几个关键位置存档，例如品类理解完成、品牌核验完成、单个品牌研究完成和淘宝采集完成。恢复时先确认存档属于同一份请求：匹配就跳过已经完成的部分，存档损坏或不匹配则从安全位置重新执行。&lt;/p&gt;
+&lt;p&gt;界面会把运行、等待人工操作、中断、取消和失败分开显示。看到这些状态时，我能判断任务卡在哪一步、还能不能继续，以及下一步需要程序还是人来处理。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/jingjian-operations-memory-v2.png"
 loading="lazy"
-alt="基于历史报告的带来源问答，页面内容为演示数据"
+alt="竞见运行中心，使用脱敏演示数据"
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;研究问答：回答与服务端校验过的来源一起呈现。&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;可选的模型精排只作用在生成式问答的候选证据上，而且默认关闭。候选内容会被当成不可信数据，模型只能返回服务端发放的候选 ID；超时、格式错误、ID 缺失或重复时，系统直接退回原来的融合排序，不让一次精排失败拖垮问答。&lt;/p&gt;
-&lt;p&gt;回答中的 &lt;code&gt;[S1]&lt;/code&gt;、&lt;code&gt;[S2]&lt;/code&gt; 不是模型随手写的装饰。服务端会校验引用是否确实来自本次返回的证据，并把来源快照与会话一起持久化。流式回答中断后，已经生成的部分也会保存；同一个 request id 重试时可以恢复，而不是重复创建一轮回答。&lt;/p&gt;
-&lt;p&gt;像“目前有多少份报告”“列出全部调研”这类全库问题，则直接查询 SQLite 的完整目录，不把 Top-K 检索结果误当成全量数据，也不必为了一个计数调用模型。&lt;/p&gt;
-&lt;h2 id="技术架构围绕长任务而不是围绕聊天框"&gt;技术架构：围绕长任务，而不是围绕聊天框
+&lt;p&gt;&lt;em&gt;我主要用运行中心确认任务卡在哪一步，以及模型、浏览器和采集程序是否就绪。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;重新派发淘宝采集前，系统会先等上一轮采集释放任务锁，再使用新的采集编号。这样上一轮迟到的结果不会写进当前报告。&lt;/p&gt;
+&lt;h2 id="报告怎么生成又怎么过质检"&gt;报告怎么生成，又怎么过质检
+&lt;/h2&gt;&lt;p&gt;研究结果最终会整理成同一份结构化数据。系统先用它生成分页 HTML，再按固定的幻灯片尺寸逐页渲染成 PPTX。这样网页预览和演示稿来自同一套排版，不容易出现“网页是一版，PPT 又是另一版”的问题。&lt;/p&gt;
+&lt;p&gt;每个任务只输出一份正式 PPTX，同时保留同内容的 HTML 预览和内部使用的 &lt;code&gt;report-data.json&lt;/code&gt;；当前不生成 PDF。PPT 中的来源链接可以点击，但每页主体是一张整页渲染图，不能像普通文本框那样逐段编辑。我优先保证了版式稳定和便于分发，代价是后期修改不够灵活。&lt;/p&gt;
+&lt;p&gt;交付前最多检查、修复三轮：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;内容检查&lt;/strong&gt;：品牌数量、字段和来源是否齐全，文案有没有重复或跑错品类。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;图片检查&lt;/strong&gt;：文件能否打开，是否混入二维码、登录页、重复图或无关图片。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;版面检查&lt;/strong&gt;：逐页查找越界、重叠和商品卡溢出。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果问题能定位到某一张商品图，系统只补采这一格，再重新渲染。三轮之后仍有影响交付的问题，任务就以失败结束，界面不会把半成品显示为“已完成”。&lt;/p&gt;
+&lt;p&gt;做到这里，一次调研已经可以交付。接下来解决的是另一件事：这份报告以后怎么继续用。&lt;/p&gt;
+&lt;h2 id="已完成的报告怎么变成知识库"&gt;已完成的报告，怎么变成知识库
+&lt;/h2&gt;&lt;p&gt;完成的报告不会立刻出现在知识库里。打开知识页时，系统会同步新报告，把调研概况、品牌、商品、市场判断和设计建议拆成较小的知识块。提问时只取相关内容，不必把整份报告都塞给模型。&lt;/p&gt;
+&lt;h3 id="一条品牌知识块的可读版"&gt;一条品牌知识块的可读版
+&lt;/h3&gt;&lt;p&gt;下面节选自一份实际生成的卫龙报告。数据库里的 &lt;code&gt;content&lt;/code&gt; 是连续文本；为便于阅读，我补了换行并删掉部分较长字段，所以这里不是逐字转储。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;span class="lnt"&gt;22
+&lt;/span&gt;&lt;span class="lnt"&gt;23
+&lt;/span&gt;&lt;span class="lnt"&gt;24
+&lt;/span&gt;&lt;span class="lnt"&gt;25
+&lt;/span&gt;&lt;span class="lnt"&gt;26
+&lt;/span&gt;&lt;span class="lnt"&gt;27
+&lt;/span&gt;&lt;span class="lnt"&gt;28
+&lt;/span&gt;&lt;span class="lnt"&gt;29
+&lt;/span&gt;&lt;span class="lnt"&gt;30
+&lt;/span&gt;&lt;span class="lnt"&gt;31
+&lt;/span&gt;&lt;span class="lnt"&gt;32
+&lt;/span&gt;&lt;span class="lnt"&gt;33
+&lt;/span&gt;&lt;span class="lnt"&gt;34
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;section:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 品牌 · 卫龙
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;content（节选）:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 品牌：卫龙
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 品类：辣条；小面筋；
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 大面筋；大刀辣条
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 定位：以香辣配置、面筋口感
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 和便携零食为核心的
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 主流辣条品牌
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 用户：偏好香辣、筋道口感
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 及怀旧零食的消费者
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 主色：红；金
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 产品架构：小面筋系列；
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 大面筋系列；
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 大刀辣条系列；
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 香辣味产品
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 包装策略：稳定品牌区与背书……
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 角色或插画资产……
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 系列色和型号色……
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 货架观察：大小面筋名称清楚；
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 香辣味型号突出；
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 覆盖单袋与多袋组合
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 设计洞察：突出面筋和辣味；
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 放大系列名称；
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 建立规格层级
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 机会：强化规格分层与型号识别
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 价格带：低位 ¥3.5；
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 中位 ¥4.1；
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 高位 ¥12.09
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;metadata:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; {&amp;#34;brand&amp;#34;: &amp;#34;卫龙&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;#34;kind&amp;#34;: &amp;#34;brand&amp;#34;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;我给每个知识块保留三类信息：&lt;code&gt;section&lt;/code&gt; 用于显示章节名，&lt;code&gt;content&lt;/code&gt; 参与检索，&lt;code&gt;metadata&lt;/code&gt; 记录品牌和资料类型。空字段直接略过；品牌、商品、洞察和建议分别建块。品牌块还会保留来源列表中第一条格式正确的网址，方便之后回到原页面核对。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/jingjian-knowledge-memory-v2.png"
+loading="lazy"
+alt="竞见研究问答与来源面板，使用脱敏演示数据"
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;回答旁边保留报告入口和原始来源，方便继续核对。&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id="提问时系统怎样找到证据"&gt;提问时，系统怎样找到证据
+&lt;/h3&gt;&lt;p&gt;这里说的 RAG，就是先从报告找证据，再让模型回答。一次提问会经过下面几步：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;同步并切块。&lt;/strong&gt; 报告内容或向量配置变化时，系统会重建这份报告的索引；没有变化就继续复用。报告被删除后，相应索引也会清理。外部向量服务若在同步时失败，旧索引保持不动。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;查找候选证据。&lt;/strong&gt; 每个知识块同时进入关键词索引和相似度向量。以“卫龙包装怎么区分系列”为例，关键词检索会直接命中“卫龙、包装、系列”；外部语义向量还能找出措辞不同但意思接近的内容，本地向量则更偏向文字特征。外部向量服务临时故障，或查询向量的格式与现有索引不兼容时，系统就只做关键词检索。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;合并和再次排序。&lt;/strong&gt; 系统先合并两路结果。还可以让模型再排一次顺序，但这个选项默认关闭；即使精排失败，也会沿用原来的混合检索结果。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;组装回答上下文。&lt;/strong&gt; 排在前面的知识块会标为 &lt;code&gt;[S1]&lt;/code&gt;、&lt;code&gt;[S2]&lt;/code&gt;，再和会话上下文、本次问题一起交给回答模型。没有找到报告证据时，系统直接说明证据不足，不只凭聊天记忆作答。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;核对引用。&lt;/strong&gt; 流式文字会先显示，回答结束后服务端再检查每个 &lt;code&gt;[S#]&lt;/code&gt; 是否来自本次候选列表。引用不存在的编号会让这次回答失败。这个检查只能阻止伪造来源编号，不能自动证明每句话都正确；提问者仍可从来源面板打开报告和原始链接。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;像“现在一共有多少份报告”这样的全库问题会直接查询数据库。普通检索只返回最相关的几块内容，不能用来统计报告总数。&lt;/p&gt;
+&lt;h2 id="长对话怎样保留早期约束"&gt;长对话怎样保留早期约束
+&lt;/h2&gt;&lt;p&gt;只带最近几轮，早期约束容易丢；带上全部历史，提示词又会迅速变长。我最后把上下文分成四层：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;滚动摘要&lt;/strong&gt;：把较早讨论里的目标、约束、决定和未解决问题压成一份长期笔记。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;相关旧对话&lt;/strong&gt;：按词面重合和本地特征向量，找回最多两组与当前问题相关的历史问答。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;衔接对话&lt;/strong&gt;：保留尚未进入摘要的最近内容，避免两次摘要更新之间出现空档。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;最近对话&lt;/strong&gt;：直接带上最近四组完成问答，尽量保留原话。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;原始聊天记录不会因为生成摘要而被删除。摘要单独保存，并记录“已经整理到哪一条消息”，避免较旧的摘要覆盖较新的记忆。摘要失败或超时时，系统仍会用已有上下文回答当前问题。&lt;/p&gt;
+&lt;p&gt;我只把会话记忆当作沟通线索：它告诉模型前面讨论到了哪里，却不能充当报告来源。摘要里即使出现了某个结论，本轮没有找到报告证据，系统也不会把它当成事实。&lt;/p&gt;
+&lt;p&gt;这里有个会直接影响提问方式的限制：历史内容只参与回答，不会自动补全本次搜索词。因此用户问“那它的包装呢？”时，如果“它”指的是上一轮的品牌，检索阶段仍可能不知道具体指谁。更稳妥的问法还是把品牌名写出来。&lt;/p&gt;
+&lt;p&gt;生成摘要会多调用一次模型，最慢可能让回答多等约 15 秒；被整理的旧聊天还会发送给模型供应商。现在系统只检查摘要是否为空、是否过长，不会核对其中的事实。我因此只把它当作上下文提示，不当作来源。&lt;/p&gt;
+&lt;h2 id="实现上怎么分工"&gt;实现上怎么分工
 &lt;/h2&gt;&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;层次&lt;/th&gt;
-&lt;th&gt;主要职责与技术&lt;/th&gt;
+&lt;th&gt;技术&lt;/th&gt;
+&lt;th&gt;在项目里解决什么问题&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;Web 工作台&lt;/td&gt;
-&lt;td&gt;React 19、TypeScript、Vite、React Router、TanStack Query；负责深链接、任务状态、流式问答、移动端导航和配置界面。&lt;/td&gt;
+&lt;td&gt;React + TypeScript&lt;/td&gt;
+&lt;td&gt;管理工作台各页面的状态和流式回答。&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;API 与编排&lt;/td&gt;
-&lt;td&gt;FastAPI、Pydantic、asyncio；把报告命令、查询交付、RPA 会话、知识库、设置和运维拆成独立路由与服务。&lt;/td&gt;
+&lt;td&gt;FastAPI + asyncio&lt;/td&gt;
+&lt;td&gt;运行长任务、模型调用、报告接口和人工验证。&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;研究与采集&lt;/td&gt;
-&lt;td&gt;OpenAI-compatible 模型接口、公开搜索链、Playwright、共享 Chrome CDP；品牌研究有限并发，淘宝采集单队列运行。&lt;/td&gt;
+&lt;td&gt;Playwright + Chrome&lt;/td&gt;
+&lt;td&gt;操作淘宝页面、提供人工验证画面，并把 HTML 渲染成幻灯片。&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;持久化&lt;/td&gt;
-&lt;td&gt;原子 JSON 任务账本、任务检查点、RPA 文件协议，以及用于知识索引和会话的 SQLite/WAL。&lt;/td&gt;
+&lt;td&gt;JSON + SQLite&lt;/td&gt;
+&lt;td&gt;JSON 保存单机任务进度，SQLite 保存知识索引和会话。&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;交付与验收&lt;/td&gt;
-&lt;td&gt;HTML 分页渲染、PPTX OOXML 打包、布局检查、视觉检查、定点补采和结构化失败码。&lt;/td&gt;
+&lt;td&gt;HTML + PPTX&lt;/td&gt;
+&lt;td&gt;让网页预览和正式演示稿共用一套视觉来源。&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;后端入口现在主要负责依赖组装，业务分别放在 router、service、pipeline 和知识/RPA 子域里。项目还用架构测试限制组合根和核心 facade 重新膨胀，并检查模块依赖方向。换句话说，这次拆分不是一次性的“整理代码”，而是把不允许退回的大文件和反向依赖写进测试。&lt;/p&gt;
-&lt;p&gt;前端生产构建由 FastAPI 统一托管，浏览器工作流覆盖深链接、对话框焦点、报告入口、设置保存、带来源的流式回答、幂等新建任务，以及 390px 移动端没有横向溢出。后端测试则覆盖状态恢复、检查点、单队列、定点补采、报告打包、知识检索、会话与精排降级。真实淘宝账号、外部模型和搜索服务仍然需要单独做小任务验收，自动化测试不会假装替代这些外部环境。&lt;/p&gt;
-&lt;h2 id="目前的边界"&gt;目前的边界
-&lt;/h2&gt;&lt;p&gt;竞见当前定位仍是本地工作站工具，不是一个已经做完多租户和分布式队列的 SaaS。任务账本面向单节点、单进程；ShadowBot 兼容模式下，淘宝采集容量固定为一个任务。完整采集需要 Windows 可交互桌面、Chrome 或 Edge、有效淘宝登录态和人工处理验证，网页结构或平台风控变化也可能影响成功率。&lt;/p&gt;
-&lt;p&gt;正式报告必须有可用的内容模型；专业搜索 API、外部 embedding、可选精排和模型视觉审查可以按需要配置。知识库在没有 embedding Key 时仍可本地检索，但生成自然语言答案依然需要内容模型。&lt;/p&gt;
-&lt;p&gt;这些限制并不漂亮，却决定了系统是否可信。竞见这次迭代真正完成的，不是把“生成 PPT”包装得更神奇，而是把研究、采集、人工接管、质量门禁、恢复和知识复用连成一条可以观察、可以解释、也允许失败的工程流程。&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;任务状态需要频繁落盘，出错时也要方便人工查看，所以我选择 JSON；知识块和会话需要检索、关联和删除，放在 SQLite 更合适。&lt;/p&gt;
+&lt;h2 id="目前的使用边界"&gt;目前的使用边界
+&lt;/h2&gt;&lt;p&gt;目前竞见按本地工作站设计，适合个人或小团队使用。多租户和分布式队列都还没做。淘宝采集依赖 Windows 可交互桌面、Chrome、有效登录态和人工验证，网页结构或平台风控变化仍会影响成功率。&lt;/p&gt;
+&lt;p&gt;长对话召回目前会在单个会话内逐条扫描。会话积累得很长后，这部分还需要专门的检索索引。&lt;/p&gt;
+&lt;p&gt;我现有的自动化测试覆盖了任务恢复、文件结构、提示词分层、摘要失败降级和页面布局。真实模型、真实搜索、真实淘宝账号和最终报告仍需要人工跑一遍小任务验收。&lt;/p&gt;
+&lt;p&gt;做完这版以后，我关注的重点已经变成任务中断后能不能接着跑、图片和价格是否来自同一件商品、结论能不能回到出处。后面继续加功能，也会先守住这些基础。&lt;/p&gt;</description></item></channel></rss>
