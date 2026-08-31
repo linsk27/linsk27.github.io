@@ -1,4 +1,135 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>工具 on 404_@林达</title><link>https://linsk27.github.io/categories/%E5%B7%A5%E5%85%B7/</link><description>Recent content in 工具 on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Mon, 31 Aug 2026 12:05:00 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml"/><item><title>竞见开发复盘：淘宝竞品报告从采集到继续追问</title><link>https://linsk27.github.io/projects/jingjian/</link><pubDate>Wed, 26 Aug 2026 04:34:00 +0800</pubDate><guid>https://linsk27.github.io/projects/jingjian/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/jingjian-workspace-memory-v2.png" alt="Featured image of post 竞见开发复盘：淘宝竞品报告从采集到继续追问" /&gt;&lt;p&gt;做淘宝竞品报告，资料本身并不难搜。麻烦的是把品牌、商品图、价格和来源一一对应：登录失效或遇到验证码时，任务要能停住；重新启动后，还得接着上一次的进度。报告做完后，我也希望后面的提问还能用到这次研究。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>工具 on 404_@林达</title><link>https://linsk27.github.io/categories/%E5%B7%A5%E5%85%B7/</link><description>Recent content in 工具 on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Mon, 31 Aug 2026 17:14:52 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml"/><item><title>面试边注：别急着背答案，先把这道题讲明白</title><link>https://linsk27.github.io/projects/interview-margin/</link><pubDate>Mon, 31 Aug 2026 17:14:52 +0800</pubDate><guid>https://linsk27.github.io/projects/interview-margin/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/interview-margin-home.png" alt="Featured image of post 面试边注：别急着背答案，先把这道题讲明白" /&gt;&lt;p&gt;准备技术面试时，最容易做的事是继续收藏资料，最难的事却是把一道题讲清楚。答案看过不少，轮到自己开口，常常只剩几个关键词；隔几天再看，又像第一次见。&lt;/p&gt;
+&lt;p&gt;我做“面试边注”，就是想把刷题从“看过答案”往前推一步：先自己组织，再看结论和原理，接着做练习、记批注、安排复习；如果某个地方还是绕，可以围绕当前题继续问 AI。&lt;/p&gt;
+&lt;p&gt;目前平台整理了 14 个公开题库、50 个章节和 762 道题，覆盖前端、Java 后端、AI 应用与求职专项。游客不用注册就能读题、搜索、使用练习模式和 AI 助手；个人学习记录需要登录后保存。&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://interview.linsk27.dpdns.org/app" target="_blank" rel="noopener"
+&gt;直接进入面试边注&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/interview-margin-home.png"
+loading="lazy"
+alt="面试边注首页，展示公开题库数量、真实题目入口和三条学习路线"
+&gt;&lt;/p&gt;
+&lt;h2 id="先选方向不必从第一题硬背"&gt;先选方向，不必从第一题硬背
+&lt;/h2&gt;&lt;p&gt;题库按学习方向组织，而不是把几百道题塞进一个长目录：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;方向&lt;/th&gt;
+&lt;th style="text-align: right"&gt;当前题量&lt;/th&gt;
+&lt;th&gt;主要内容&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;前端开发&lt;/td&gt;
+&lt;td style="text-align: right"&gt;300&lt;/td&gt;
+&lt;td&gt;JavaScript、Vue、React、浏览器、工程化与 TypeScript&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;后端开发&lt;/td&gt;
+&lt;td style="text-align: right"&gt;234&lt;/td&gt;
+&lt;td&gt;Java 基础、Spring、数据库、缓存、网络与部署&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AI 应用开发&lt;/td&gt;
+&lt;td style="text-align: right"&gt;75&lt;/td&gt;
+&lt;td&gt;RAG、Agent、MCP、Tool Calling、流式交互与安全&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;求职专项&lt;/td&gt;
+&lt;td style="text-align: right"&gt;153&lt;/td&gt;
+&lt;td&gt;简历项目追问、真实面经与公司专项准备&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;题库中心可以按方向筛选，也可以按名称或技术关键词搜索题库；进入具体题库后，再搜索题目或按章节跳转。登录账号还能接着上次进度继续学习。首页也会直接放出真实题目，第一次访问不需要先理解整套产品。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/interview-margin-question-banks.png"
+loading="lazy"
+alt="面试边注题库中心，展示不同方向的题库、题量和继续学习入口"
+&gt;&lt;/p&gt;
+&lt;h2 id="一道题不只放一整页答案"&gt;一道题，不只放一整页答案
+&lt;/h2&gt;&lt;p&gt;我希望题解先解决“面试时怎么开口”，再展开完整原理。因此每道题会尽量按同一条阅读顺序拆开：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;速答&lt;/strong&gt;：先给可以直接复述的结论。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;术语&lt;/strong&gt;：把容易卡住的关键词换成白话。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;原理&lt;/strong&gt;：说明它为什么这样工作，而不是只给定义。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实战&lt;/strong&gt;：用代码或具体场景把概念落下来。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;追问与避坑&lt;/strong&gt;：继续准备面试官可能往下问的内容。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;来源&lt;/strong&gt;：保留可以回去核对的资料入口。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;遇到流程型问题时，题解会配站内图解。例如 HashMap 的 &lt;code&gt;put&lt;/code&gt; 不只写“数组、链表、红黑树”，而是把定位桶、处理冲突、插入节点和扩容的先后关系画出来。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/interview-margin-reader.png"
+loading="lazy"
+alt="面试边注的 Java HashMap 题解，把关键词、原理和 put 流程图放在同一阅读页"
+&gt;&lt;/p&gt;
+&lt;p&gt;社区面经主要用来确认“真实面试里问过什么”。正式答案会重新整理，并尽量用官方文档和较稳定的技术资料交叉核对；无法公开查看正文的登录墙页面，不会被当成公开证据。&lt;/p&gt;
+&lt;h2 id="从看懂变成能说出来"&gt;从“看懂”变成“能说出来”
+&lt;/h2&gt;&lt;p&gt;只读答案很容易产生一种错觉：每句话都认识，于是以为自己已经会了。练习模式会先把答案收起来，让我自己组织一遍，再揭晓题解并做一次自评。&lt;/p&gt;
+&lt;p&gt;自评不是为了打分，而是决定下一步：选择“不会、模糊、掌握”后，系统分别安排在 1、3、7 天后复习，再配合“未开始、学习中、需复习、已掌握”四种状态，形成一条比较简单的复习线。&lt;/p&gt;
+&lt;p&gt;登录后，收藏、总结、高亮、批注、掌握状态和复习安排会保存到个人账号。这样批注不只是写在某一页旁边，而是能和题目、进度一起带到下一次学习。&lt;/p&gt;
+&lt;h2 id="ai-助手只围绕当前题帮忙"&gt;AI 助手只围绕当前题帮忙
+&lt;/h2&gt;&lt;p&gt;AI 助手不是另开一个没有上下文的聊天窗口。打开某道题后，页面会把当前题目的必要内容和这次对话一起交给服务端；可以让它换一种说法、补一个项目场景，或者继续追问面试表达。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/interview-margin-ai-conversation.png"
+loading="lazy"
+alt="面试边注在 RAG 题目右侧打开 AI 学习助手，并围绕当前题连续追问"
+&gt;&lt;/p&gt;
+&lt;p&gt;这条链路可以简化成：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;当前题目 + 本次对话 → 同源 AI 代理 → OpenAI-compatible 模型 → SSE 流式返回 → 页面逐段显示&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;浏览器不会直接拿模型密钥。服务端负责附带题目上下文、限制并发与超时，并把上游的流式或一次性响应统一交给前端。AI 对话目前不会保存到账号，切换题目后也会清空；它更像阅读时的临时辅导，不是另一套长期知识库。&lt;/p&gt;
+&lt;p&gt;这里容易混淆：RAG、Agent 是题库会讲的技术主题，不是这套 AI 助手的实现。当前助手没有接向量库或全题库检索，只携带当前题和本次对话。回答仍可能出错，重要内容要回到题解与来源核对。&lt;/p&gt;
+&lt;h2 id="游客能直接用账号只负责个人记录"&gt;游客能直接用，账号只负责个人记录
+&lt;/h2&gt;&lt;p&gt;我把公开阅读和个人数据分开处理：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;游客&lt;/strong&gt;可以浏览全部公开题库、搜索、切题、练习、切换阅读版式，并体验 AI 助手，但不会写入个人学习记录。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;学习账号&lt;/strong&gt;在游客功能之上保存进度、收藏、批注和复习计划，并支持跨设备继续。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;内容编辑&lt;/strong&gt;可以维护题库、归档恢复内容并预览 Markdown 导入；&lt;strong&gt;管理员&lt;/strong&gt;还可以管理账号与邀请、处理反馈申请，并创建和下载 SQLite 备份。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;服务端的 SQLite 是登录用户学习状态的最终记录。网络不稳时，浏览器会用 IndexedDB 按账号暂存尚未确认的修改，连接恢复后再同步，避免丢进度或把记录写错账号。&lt;/p&gt;
+&lt;h2 id="题库内容怎样进入页面"&gt;题库内容怎样进入页面
+&lt;/h2&gt;&lt;p&gt;题库不是直接写死在 React 组件里。项目把 Markdown 和 JavaScript 内容源经过生成与检查，再导出为公开索引、按题库拆分的内容快照和 SQLite 种子。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;内容源 → 生成与质量检查 → 题库索引 + 分片快照 → SQLite&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;页面第一次进入只读取题库索引，真正打开某个题库时才加载对应分片。实时接口暂时不可用时，游客阅读还能退回到静态快照；这类回退只保证公开内容可读，账号、批注和复习记录仍然不可用。&lt;/p&gt;
+&lt;p&gt;内容检查会关注题目结构、来源链接、首屏是否讲清“结论、为什么、怎么用”，以及代码和站内图解是否与题目匹配。当前基线中，735 道题带有可核验来源，507 道带代码示例，48 道带站内图解。&lt;/p&gt;
+&lt;h2 id="实现上怎样分工"&gt;实现上怎样分工
+&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;部分&lt;/th&gt;
+&lt;th&gt;负责什么&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;React + TypeScript&lt;/td&gt;
+&lt;td&gt;首页、题库中心、阅读器、练习模式、批注和 AI 交互&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Express&lt;/td&gt;
+&lt;td&gt;同源 API、公开题库、账号、学习状态、内容管理和 AI 代理&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SQLite&lt;/td&gt;
+&lt;td&gt;题库、账号、会话、个人学习记录与审计日志&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;内容管线&lt;/td&gt;
+&lt;td&gt;生成题库、检查结构与来源，并导出按需加载的公开快照&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ECS + systemd&lt;/td&gt;
+&lt;td&gt;运行单个 Node 服务和持久化数据库&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Cloudflare Tunnel&lt;/td&gt;
+&lt;td&gt;把只监听本机回环地址的服务接入 HTTPS 公网入口&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;正式站运行在阿里云 ECS 上，Express 同时提供 API 和构建后的前端资源。数据库放在独立持久目录，发布前先做检查与备份，再切换版本并验证健康状态。Vercel 保留公开题库的静态版本，但它不是一套独立的账号与数据后端。&lt;/p&gt;
+&lt;h2 id="现在的边界"&gt;现在的边界
+&lt;/h2&gt;&lt;p&gt;公共注册目前关闭，普通学习账号需要邀请或由管理员创建；如果只是读题和练习，游客模式已经够用。&lt;/p&gt;
+&lt;p&gt;题量和质量指标是当前版本的快照，后续内容更新后会变化。社区来源只能说明某类问题在面试中出现过，不能替代技术事实本身；AI 助手也只负责辅助理解，不替代来源核验。&lt;/p&gt;
+&lt;p&gt;现在我更愿意把面试边注看成一张可以持续修改的学习桌面：题库负责给出范围，题解负责讲清楚，练习和复习负责把内容留下来，AI 只在卡住的时候换一种讲法。&lt;/p&gt;
+&lt;p&gt;平台入口：&lt;a class="link" href="https://interview.linsk27.dpdns.org/app" target="_blank" rel="noopener"
+&gt;interview.linsk27.dpdns.org/app&lt;/a&gt;&lt;/p&gt;</description></item><item><title>竞见开发复盘：淘宝竞品报告从采集到继续追问</title><link>https://linsk27.github.io/projects/jingjian/</link><pubDate>Wed, 26 Aug 2026 04:34:00 +0800</pubDate><guid>https://linsk27.github.io/projects/jingjian/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/jingjian-workspace-memory-v2.png" alt="Featured image of post 竞见开发复盘：淘宝竞品报告从采集到继续追问" /&gt;&lt;p&gt;做淘宝竞品报告，资料本身并不难搜。麻烦的是把品牌、商品图、价格和来源一一对应：登录失效或遇到验证码时，任务要能停住；重新启动后，还得接着上一次的进度。报告做完后，我也希望后面的提问还能用到这次研究。&lt;/p&gt;
 &lt;p&gt;为此，我把竞见拆成两段：先完成一份有证据的报告，再把报告收进本地知识库，供后续检索和追问。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;工作台界面使用脱敏演示数据；成果截图来自一次公开品牌研究示例，不含账号或客户信息。淘宝、模型和搜索服务需要在实际运行环境中连接。&lt;/p&gt;
