@@ -1,311 +1,311 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Typescript on 404_@林达</title><link>https://linsk27.github.io/tags/typescript/</link><description>Recent content in Typescript on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Mon, 31 Aug 2026 22:27:58 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/typescript/index.xml" rel="self" type="application/rss+xml"/><item><title>面试边注：别急着背答案，先把这道题讲明白</title><link>https://linsk27.github.io/projects/interview-margin/</link><pubDate>Mon, 31 Aug 2026 17:14:52 +0800</pubDate><guid>https://linsk27.github.io/projects/interview-margin/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/interview-margin-home.png" alt="Featured image of post 面试边注：别急着背答案，先把这道题讲明白" /&gt;&lt;p&gt;准备技术面试时，最容易做的事是继续收藏资料，最难的事却是把一道题讲清楚。答案看过不少，轮到自己开口，常常只剩几个关键词；隔几天再看，又像第一次见。&lt;/p&gt;
-&lt;p&gt;我做“面试边注”，就是想把刷题从“看过答案”往前推一步：先自己组织，再看结论和原理；写下回答后，可以让 AI 面试官指出哪里说对了、下一步最该补什么；如果某个地方还是绕，也可以围绕当前题继续问 AI。&lt;/p&gt;
-&lt;p&gt;目前平台整理了 14 个公开题库、50 个章节和 762 道题，覆盖前端、Java 后端、AI 应用与求职专项。游客不用注册就能读题、搜索、使用练习模式、AI 面试官评分和 AI 助手；个人学习记录需要登录后保存。&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="https://interview.linsk27.dpdns.org/app" target="_blank" rel="noopener"
-&gt;直接进入面试边注&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/interview-margin-home.png"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TypeScript on 404_@林达</title><link>https://linsk27.github.io/tags/typescript/</link><description>Recent content in TypeScript on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Mon, 31 Aug 2026 22:27:58 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/typescript/index.xml" rel="self" type="application/rss+xml"/><item><title>面试边注：别急着背答案，先把这道题讲明白</title><link>https://linsk27.github.io/projects/interview-margin/</link><pubDate>Mon, 31 Aug 2026 17:14:52 +0800</pubDate><guid>https://linsk27.github.io/projects/interview-margin/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/interview-margin-home.png" alt="Featured image of post 面试边注：别急着背答案，先把这道题讲明白" />&lt;p>准备技术面试时，最容易做的事是继续收藏资料，最难的事却是把一道题讲清楚。答案看过不少，轮到自己开口，常常只剩几个关键词；隔几天再看，又像第一次见。&lt;/p>
+&lt;p>我做“面试边注”，就是想把刷题从“看过答案”往前推一步：先自己组织，再看结论和原理；写下回答后，可以让 AI 面试官指出哪里说对了、下一步最该补什么；如果某个地方还是绕，也可以围绕当前题继续问 AI。&lt;/p>
+&lt;p>目前平台整理了 14 个公开题库、50 个章节和 762 道题，覆盖前端、Java 后端、AI 应用与求职专项。游客不用注册就能读题、搜索、使用练习模式、AI 面试官评分和 AI 助手；个人学习记录需要登录后保存。&lt;/p>
+&lt;p>&lt;a class="link" href="https://interview.linsk27.dpdns.org/app" target="_blank" rel="noopener"
+>直接进入面试边注&lt;/a>&lt;/p>
+&lt;p>&lt;img src="https://linsk27.github.io/img/projects/interview-margin-home.png"
 loading="lazy"
 alt="面试边注首页，展示公开题库数量、真实题目入口和三条学习路线"
-&gt;&lt;/p&gt;
-&lt;h2 id="先选方向不必从第一题硬背"&gt;先选方向，不必从第一题硬背
-&lt;/h2&gt;&lt;p&gt;题库按学习方向组织，而不是把几百道题塞进一个长目录：&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;方向&lt;/th&gt;
-&lt;th style="text-align: right"&gt;当前题量&lt;/th&gt;
-&lt;th&gt;主要内容&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;前端开发&lt;/td&gt;
-&lt;td style="text-align: right"&gt;300&lt;/td&gt;
-&lt;td&gt;JavaScript、Vue、React、浏览器、工程化与 TypeScript&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;后端开发&lt;/td&gt;
-&lt;td style="text-align: right"&gt;234&lt;/td&gt;
-&lt;td&gt;Java 基础、Spring、数据库、缓存、网络与部署&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;AI 应用开发&lt;/td&gt;
-&lt;td style="text-align: right"&gt;75&lt;/td&gt;
-&lt;td&gt;RAG、Agent、MCP、Tool Calling、流式交互与安全&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;求职专项&lt;/td&gt;
-&lt;td style="text-align: right"&gt;153&lt;/td&gt;
-&lt;td&gt;简历项目追问、真实面经与公司专项准备&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;题库中心可以按方向筛选，也可以按名称或技术关键词搜索题库；进入具体题库后，再搜索题目或按章节跳转。登录账号还能接着上次进度继续学习。首页也会直接放出真实题目，第一次访问不需要先理解整套产品。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/interview-margin-question-banks.png"
+>&lt;/p>
+&lt;h2 id="先选方向不必从第一题硬背">先选方向，不必从第一题硬背
+&lt;/h2>&lt;p>题库按学习方向组织，而不是把几百道题塞进一个长目录：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>方向&lt;/th>
+&lt;th style="text-align: right">当前题量&lt;/th>
+&lt;th>主要内容&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>前端开发&lt;/td>
+&lt;td style="text-align: right">300&lt;/td>
+&lt;td>JavaScript、Vue、React、浏览器、工程化与 TypeScript&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>后端开发&lt;/td>
+&lt;td style="text-align: right">234&lt;/td>
+&lt;td>Java 基础、Spring、数据库、缓存、网络与部署&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>AI 应用开发&lt;/td>
+&lt;td style="text-align: right">75&lt;/td>
+&lt;td>RAG、Agent、MCP、Tool Calling、流式交互与安全&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>求职专项&lt;/td>
+&lt;td style="text-align: right">153&lt;/td>
+&lt;td>简历项目追问、真实面经与公司专项准备&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>题库中心可以按方向筛选，也可以按名称或技术关键词搜索题库；进入具体题库后，再搜索题目或按章节跳转。登录账号还能接着上次进度继续学习。首页也会直接放出真实题目，第一次访问不需要先理解整套产品。&lt;/p>
+&lt;p>&lt;img src="https://linsk27.github.io/img/projects/interview-margin-question-banks.png"
 loading="lazy"
 alt="面试边注题库中心，展示不同方向的题库、题量和继续学习入口"
-&gt;&lt;/p&gt;
-&lt;h2 id="一道题不只放一整页答案"&gt;一道题，不只放一整页答案
-&lt;/h2&gt;&lt;p&gt;我希望题解先解决“面试时怎么开口”，再展开完整原理。因此每道题会尽量按同一条阅读顺序拆开：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;速答&lt;/strong&gt;：先给可以直接复述的结论。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;术语&lt;/strong&gt;：把容易卡住的关键词换成白话。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;原理&lt;/strong&gt;：说明它为什么这样工作，而不是只给定义。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;实战&lt;/strong&gt;：用代码或具体场景把概念落下来。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;追问与避坑&lt;/strong&gt;：继续准备面试官可能往下问的内容。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;来源&lt;/strong&gt;：保留可以回去核对的资料入口。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;遇到流程型问题时，题解会配站内图解。例如 HashMap 的 &lt;code&gt;put&lt;/code&gt; 不只写“数组、链表、红黑树”，而是把定位桶、处理冲突、插入节点和扩容的先后关系画出来。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/interview-margin-reader.png"
+>&lt;/p>
+&lt;h2 id="一道题不只放一整页答案">一道题，不只放一整页答案
+&lt;/h2>&lt;p>我希望题解先解决“面试时怎么开口”，再展开完整原理。因此每道题会尽量按同一条阅读顺序拆开：&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>速答&lt;/strong>：先给可以直接复述的结论。&lt;/li>
+&lt;li>&lt;strong>术语&lt;/strong>：把容易卡住的关键词换成白话。&lt;/li>
+&lt;li>&lt;strong>原理&lt;/strong>：说明它为什么这样工作，而不是只给定义。&lt;/li>
+&lt;li>&lt;strong>实战&lt;/strong>：用代码或具体场景把概念落下来。&lt;/li>
+&lt;li>&lt;strong>追问与避坑&lt;/strong>：继续准备面试官可能往下问的内容。&lt;/li>
+&lt;li>&lt;strong>来源&lt;/strong>：保留可以回去核对的资料入口。&lt;/li>
+&lt;/ol>
+&lt;p>遇到流程型问题时，题解会配站内图解。例如 HashMap 的 &lt;code>put&lt;/code> 不只写“数组、链表、红黑树”，而是把定位桶、处理冲突、插入节点和扩容的先后关系画出来。&lt;/p>
+&lt;p>&lt;img src="https://linsk27.github.io/img/projects/interview-margin-reader.png"
 loading="lazy"
 alt="面试边注的 Java HashMap 题解，把关键词、原理和 put 流程图放在同一阅读页"
-&gt;&lt;/p&gt;
-&lt;p&gt;社区面经主要用来确认“真实面试里问过什么”。正式答案会重新整理，并尽量用官方文档和较稳定的技术资料交叉核对；无法公开查看正文的登录墙页面，不会被当成公开证据。&lt;/p&gt;
-&lt;h2 id="从看懂变成能说出来"&gt;从“看懂”变成“能说出来”
-&lt;/h2&gt;&lt;p&gt;只读答案很容易产生一种错觉：每句话都认识，于是以为自己已经会了。练习模式会先把答案收起来，让我自己组织一遍，再提交回答、对照题解并做一次自评。&lt;/p&gt;
-&lt;h3 id="写完以后让-ai-面试官评一次"&gt;写完以后，让 AI 面试官评一次
-&lt;/h3&gt;&lt;p&gt;新版本在这一步加了 AI 评分。写下答案并提交后，可以点“开始 AI 评分”，看看自己的回答在技术正确性、原理与因果、关键点覆盖、场景边界与取舍、表达结构这五项上分别说到了什么。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/interview-margin-ai-score.png"
+>&lt;/p>
+&lt;p>社区面经主要用来确认“真实面试里问过什么”。正式答案会重新整理，并尽量用官方文档和较稳定的技术资料交叉核对；无法公开查看正文的登录墙页面，不会被当成公开证据。&lt;/p>
+&lt;h2 id="从看懂变成能说出来">从“看懂”变成“能说出来”
+&lt;/h2>&lt;p>只读答案很容易产生一种错觉：每句话都认识，于是以为自己已经会了。练习模式会先把答案收起来，让我自己组织一遍，再提交回答、对照题解并做一次自评。&lt;/p>
+&lt;h3 id="写完以后让-ai-面试官评一次">写完以后，让 AI 面试官评一次
+&lt;/h3>&lt;p>新版本在这一步加了 AI 评分。写下答案并提交后，可以点“开始 AI 评分”，看看自己的回答在技术正确性、原理与因果、关键点覆盖、场景边界与取舍、表达结构这五项上分别说到了什么。&lt;/p>
+&lt;p>&lt;img src="https://linsk27.github.io/img/projects/interview-margin-ai-score.png"
 loading="lazy"
 alt="面试边注的 AI 面试官评分页：回答 RAG 分块问题后，页面给出五项分数、做对的部分和下一步建议"
-&gt;&lt;/p&gt;
-&lt;p&gt;截图里只写了“重叠分块”。这个方向没有错，但还没解释它解决什么问题、会增加什么代价，以及什么时候该选多大的重叠，所以系统给出的重点不是一句“答错了”，而是告诉我下一次回答最先应该补哪一层。&lt;/p&gt;
-&lt;p&gt;分数也不是让模型随手报一个数字。模型先判断五项表现分别处在哪个等级，服务端再按 &lt;code&gt;30 / 25 / 20 / 15 / 10&lt;/code&gt; 的固定权重换算总分；如果回答里出现跑题、核心概念说反、虚构机制等严重问题，还会触发扣分或总分上限。评分按回答表达的意思判断，不要求照抄标准答案，也不会单纯因为字少就机械扣分。&lt;/p&gt;
-&lt;p&gt;这项评分只用于当次练习，回答、分数和评语都不会保存到账号，也不代表真实面试结果。即使评分暂时失败，标准答案仍然可以正常查看。&lt;/p&gt;
-&lt;p&gt;AI 评分看的是这一次回答；后面的“不会、模糊、掌握”自评只决定下一次什么时候复习。三种选择分别对应 1、3、7 天后，再配合“未开始、学习中、需复习、已掌握”四种状态，形成一条比较简单的复习线。&lt;/p&gt;
-&lt;p&gt;登录后，收藏、总结、高亮、批注、掌握状态和复习安排会保存到个人账号。这样批注不只是写在某一页旁边，而是能和题目、进度一起带到下一次学习。&lt;/p&gt;
-&lt;h2 id="ai-助手只围绕当前题帮忙"&gt;AI 助手只围绕当前题帮忙
-&lt;/h2&gt;&lt;p&gt;AI 助手不是另开一个没有上下文的聊天窗口。打开某道题后，页面会把当前题目的必要内容和这次对话一起交给服务端；可以让它换一种说法、补一个项目场景，或者继续追问面试表达。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/interview-margin-ai-conversation.png"
+>&lt;/p>
+&lt;p>截图里只写了“重叠分块”。这个方向没有错，但还没解释它解决什么问题、会增加什么代价，以及什么时候该选多大的重叠，所以系统给出的重点不是一句“答错了”，而是告诉我下一次回答最先应该补哪一层。&lt;/p>
+&lt;p>分数也不是让模型随手报一个数字。模型先判断五项表现分别处在哪个等级，服务端再按 &lt;code>30 / 25 / 20 / 15 / 10&lt;/code> 的固定权重换算总分；如果回答里出现跑题、核心概念说反、虚构机制等严重问题，还会触发扣分或总分上限。评分按回答表达的意思判断，不要求照抄标准答案，也不会单纯因为字少就机械扣分。&lt;/p>
+&lt;p>这项评分只用于当次练习，回答、分数和评语都不会保存到账号，也不代表真实面试结果。即使评分暂时失败，标准答案仍然可以正常查看。&lt;/p>
+&lt;p>AI 评分看的是这一次回答；后面的“不会、模糊、掌握”自评只决定下一次什么时候复习。三种选择分别对应 1、3、7 天后，再配合“未开始、学习中、需复习、已掌握”四种状态，形成一条比较简单的复习线。&lt;/p>
+&lt;p>登录后，收藏、总结、高亮、批注、掌握状态和复习安排会保存到个人账号。这样批注不只是写在某一页旁边，而是能和题目、进度一起带到下一次学习。&lt;/p>
+&lt;h2 id="ai-助手只围绕当前题帮忙">AI 助手只围绕当前题帮忙
+&lt;/h2>&lt;p>AI 助手不是另开一个没有上下文的聊天窗口。打开某道题后，页面会把当前题目的必要内容和这次对话一起交给服务端；可以让它换一种说法、补一个项目场景，或者继续追问面试表达。&lt;/p>
+&lt;p>&lt;img src="https://linsk27.github.io/img/projects/interview-margin-ai-conversation.png"
 loading="lazy"
 alt="面试边注在 RAG 题目右侧打开 AI 学习助手，并围绕当前题连续追问"
-&gt;&lt;/p&gt;
-&lt;p&gt;这条链路可以简化成：&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;当前题目 + 本次对话 → 同源 AI 代理 → OpenAI-compatible 模型 → SSE 流式返回 → 页面逐段显示&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;浏览器不会直接拿模型密钥。服务端负责附带题目上下文、限制并发与超时，并把上游的流式或一次性响应统一交给前端。AI 对话目前不会保存到账号，切换题目后也会清空；它更像阅读时的临时辅导，不是另一套长期知识库。&lt;/p&gt;
-&lt;p&gt;这里容易混淆：RAG、Agent 是题库会讲的技术主题，不是这套 AI 助手的实现。当前助手没有接向量库或全题库检索，只携带当前题和本次对话。回答仍可能出错，重要内容要回到题解与来源核对。&lt;/p&gt;
-&lt;h2 id="游客能直接用账号只负责个人记录"&gt;游客能直接用，账号只负责个人记录
-&lt;/h2&gt;&lt;p&gt;我把公开阅读和个人数据分开处理：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;游客&lt;/strong&gt;可以浏览全部公开题库、搜索、切题、练习、切换阅读版式，并体验 AI 面试官评分和 AI 助手，但不会写入个人学习记录。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;学习账号&lt;/strong&gt;在游客功能之上保存进度、收藏、批注和复习计划，并支持跨设备继续。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;内容编辑&lt;/strong&gt;可以维护题库、归档恢复内容并预览 Markdown 导入；&lt;strong&gt;管理员&lt;/strong&gt;还可以管理账号与邀请、处理反馈申请，并创建和下载 SQLite 备份。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;服务端的 SQLite 是登录用户学习状态的最终记录。网络不稳时，浏览器会用 IndexedDB 按账号暂存尚未确认的修改，连接恢复后再同步，避免丢进度或把记录写错账号。&lt;/p&gt;
-&lt;h2 id="题库内容怎样进入页面"&gt;题库内容怎样进入页面
-&lt;/h2&gt;&lt;p&gt;题库不是直接写死在 React 组件里。项目把 Markdown 和 JavaScript 内容源经过生成与检查，再导出为公开索引、按题库拆分的内容快照和 SQLite 种子。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;内容源 → 生成与质量检查 → 题库索引 + 分片快照 → SQLite&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;页面第一次进入只读取题库索引，真正打开某个题库时才加载对应分片。实时接口暂时不可用时，游客阅读还能退回到静态快照；这类回退只保证公开内容可读，账号、批注和复习记录仍然不可用。&lt;/p&gt;
-&lt;p&gt;内容检查会关注题目结构、来源链接、首屏是否讲清“结论、为什么、怎么用”，以及代码和站内图解是否与题目匹配。当前基线中，735 道题带有可核验来源，507 道带代码示例，48 道带站内图解。&lt;/p&gt;
-&lt;h2 id="实现上怎样分工"&gt;实现上怎样分工
-&lt;/h2&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;部分&lt;/th&gt;
-&lt;th&gt;负责什么&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;React + TypeScript&lt;/td&gt;
-&lt;td&gt;首页、题库中心、阅读器、练习模式、AI 评分面板、批注和 AI 对话&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Express&lt;/td&gt;
-&lt;td&gt;同源 API、公开题库、账号、学习状态、内容管理，以及 AI 对话与评分入口&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;SQLite&lt;/td&gt;
-&lt;td&gt;题库、账号、会话、个人学习记录与审计日志&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;内容管线&lt;/td&gt;
-&lt;td&gt;生成题库、检查结构与来源，并导出按需加载的公开快照&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;ECS + systemd&lt;/td&gt;
-&lt;td&gt;运行单个 Node 服务和持久化数据库&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Cloudflare Tunnel&lt;/td&gt;
-&lt;td&gt;把只监听本机回环地址的服务接入 HTTPS 公网入口&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;正式站运行在阿里云 ECS 上，Express 同时提供 API 和构建后的前端资源。数据库放在独立持久目录，发布前先做检查与备份，再切换版本并验证健康状态。Vercel 保留公开题库的静态版本，但它不是一套独立的账号与数据后端。&lt;/p&gt;
-&lt;h2 id="现在的边界"&gt;现在的边界
-&lt;/h2&gt;&lt;p&gt;公共注册目前关闭，普通学习账号需要邀请或由管理员创建；如果只是读题和练习，游客模式已经够用。&lt;/p&gt;
-&lt;p&gt;题量和质量指标是当前版本的快照，后续内容更新后会变化。社区来源只能说明某类问题在面试中出现过，不能替代技术事实本身；AI 对话与评分也只负责辅助理解和复盘，不替代来源核验。&lt;/p&gt;
-&lt;p&gt;现在我更愿意把面试边注看成一张可以持续修改的学习桌面：题库负责给出范围，题解负责讲清楚，练习和复习负责把内容留下来，AI 用来换一种讲法，也用来检查自己到底有没有说清楚。&lt;/p&gt;
-&lt;p&gt;平台入口：&lt;a class="link" href="https://interview.linsk27.dpdns.org/app" target="_blank" rel="noopener"
-&gt;interview.linsk27.dpdns.org/app&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Local AI Ops：先把运维资料收回来，再谈 AI</title><link>https://linsk27.github.io/projects/local-ai-ops/</link><pubDate>Tue, 23 Jun 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/local-ai-ops/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/local-ai-ops-empty-dashboard.png" alt="Featured image of post Local AI Ops：先把运维资料收回来，再谈 AI" /&gt;&lt;p&gt;我做 Local AI Ops，不是为了让 AI 替我重启服务器，而是因为自己的域名、ECS、轻量服务器、OSS、续费信息和 SSH 记录散在太多地方。真正出问题时，常常先花十分钟找“这台机器到底在哪”，排故反而只用了五分钟。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/local-ai-ops-empty-dashboard.png"
+>&lt;/p>
+&lt;p>这条链路可以简化成：&lt;/p>
+&lt;p>&lt;code>当前题目 + 本次对话 → 同源 AI 代理 → OpenAI-compatible 模型 → SSE 流式返回 → 页面逐段显示&lt;/code>&lt;/p>
+&lt;p>浏览器不会直接拿模型密钥。服务端负责附带题目上下文、限制并发与超时，并把上游的流式或一次性响应统一交给前端。AI 对话目前不会保存到账号，切换题目后也会清空；它更像阅读时的临时辅导，不是另一套长期知识库。&lt;/p>
+&lt;p>这里容易混淆：RAG、Agent 是题库会讲的技术主题，不是这套 AI 助手的实现。当前助手没有接向量库或全题库检索，只携带当前题和本次对话。回答仍可能出错，重要内容要回到题解与来源核对。&lt;/p>
+&lt;h2 id="游客能直接用账号只负责个人记录">游客能直接用，账号只负责个人记录
+&lt;/h2>&lt;p>我把公开阅读和个人数据分开处理：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>游客&lt;/strong>可以浏览全部公开题库、搜索、切题、练习、切换阅读版式，并体验 AI 面试官评分和 AI 助手，但不会写入个人学习记录。&lt;/li>
+&lt;li>&lt;strong>学习账号&lt;/strong>在游客功能之上保存进度、收藏、批注和复习计划，并支持跨设备继续。&lt;/li>
+&lt;li>&lt;strong>内容编辑&lt;/strong>可以维护题库、归档恢复内容并预览 Markdown 导入；&lt;strong>管理员&lt;/strong>还可以管理账号与邀请、处理反馈申请，并创建和下载 SQLite 备份。&lt;/li>
+&lt;/ul>
+&lt;p>服务端的 SQLite 是登录用户学习状态的最终记录。网络不稳时，浏览器会用 IndexedDB 按账号暂存尚未确认的修改，连接恢复后再同步，避免丢进度或把记录写错账号。&lt;/p>
+&lt;h2 id="题库内容怎样进入页面">题库内容怎样进入页面
+&lt;/h2>&lt;p>题库不是直接写死在 React 组件里。项目把 Markdown 和 JavaScript 内容源经过生成与检查，再导出为公开索引、按题库拆分的内容快照和 SQLite 种子。&lt;/p>
+&lt;p>&lt;code>内容源 → 生成与质量检查 → 题库索引 + 分片快照 → SQLite&lt;/code>&lt;/p>
+&lt;p>页面第一次进入只读取题库索引，真正打开某个题库时才加载对应分片。实时接口暂时不可用时，游客阅读还能退回到静态快照；这类回退只保证公开内容可读，账号、批注和复习记录仍然不可用。&lt;/p>
+&lt;p>内容检查会关注题目结构、来源链接、首屏是否讲清“结论、为什么、怎么用”，以及代码和站内图解是否与题目匹配。当前基线中，735 道题带有可核验来源，507 道带代码示例，48 道带站内图解。&lt;/p>
+&lt;h2 id="实现上怎样分工">实现上怎样分工
+&lt;/h2>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>部分&lt;/th>
+&lt;th>负责什么&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>React + TypeScript&lt;/td>
+&lt;td>首页、题库中心、阅读器、练习模式、AI 评分面板、批注和 AI 对话&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Express&lt;/td>
+&lt;td>同源 API、公开题库、账号、学习状态、内容管理，以及 AI 对话与评分入口&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>SQLite&lt;/td>
+&lt;td>题库、账号、会话、个人学习记录与审计日志&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>内容管线&lt;/td>
+&lt;td>生成题库、检查结构与来源，并导出按需加载的公开快照&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ECS + systemd&lt;/td>
+&lt;td>运行单个 Node 服务和持久化数据库&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Cloudflare Tunnel&lt;/td>
+&lt;td>把只监听本机回环地址的服务接入 HTTPS 公网入口&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>正式站运行在阿里云 ECS 上，Express 同时提供 API 和构建后的前端资源。数据库放在独立持久目录，发布前先做检查与备份，再切换版本并验证健康状态。Vercel 保留公开题库的静态版本，但它不是一套独立的账号与数据后端。&lt;/p>
+&lt;h2 id="现在的边界">现在的边界
+&lt;/h2>&lt;p>公共注册目前关闭，普通学习账号需要邀请或由管理员创建；如果只是读题和练习，游客模式已经够用。&lt;/p>
+&lt;p>题量和质量指标是当前版本的快照，后续内容更新后会变化。社区来源只能说明某类问题在面试中出现过，不能替代技术事实本身；AI 对话与评分也只负责辅助理解和复盘，不替代来源核验。&lt;/p>
+&lt;p>现在我更愿意把面试边注看成一张可以持续修改的学习桌面：题库负责给出范围，题解负责讲清楚，练习和复习负责把内容留下来，AI 用来换一种讲法，也用来检查自己到底有没有说清楚。&lt;/p>
+&lt;p>平台入口：&lt;a class="link" href="https://interview.linsk27.dpdns.org/app" target="_blank" rel="noopener"
+>interview.linsk27.dpdns.org/app&lt;/a>&lt;/p></description></item><item><title>Local AI Ops：先把运维资料收回来，再谈 AI</title><link>https://linsk27.github.io/projects/local-ai-ops/</link><pubDate>Tue, 23 Jun 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/local-ai-ops/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/local-ai-ops-empty-dashboard.png" alt="Featured image of post Local AI Ops：先把运维资料收回来，再谈 AI" />&lt;p>我做 Local AI Ops，不是为了让 AI 替我重启服务器，而是因为自己的域名、ECS、轻量服务器、OSS、续费信息和 SSH 记录散在太多地方。真正出问题时，常常先花十分钟找“这台机器到底在哪”，排故反而只用了五分钟。&lt;/p>
+&lt;p>&lt;img src="https://linsk27.github.io/img/projects/local-ai-ops-empty-dashboard.png"
 loading="lazy"
 alt="Local AI Ops 本地空数据实例"
-&gt;&lt;/p&gt;
-&lt;p&gt;截图使用的是本地空数据实例，所以能看到真实页面结构，但没有云账号、IP、域名、AccessKey 或监控结果。&lt;/p&gt;
-&lt;h2 id="先把确定的数据链跑通"&gt;先把确定的数据链跑通
-&lt;/h2&gt;&lt;p&gt;这个项目是我围绕自己的运维需求立项和开发的，不是给某个现成面板换皮。FastAPI、React、Celery 这些开源框架负责基础能力，阿里云官方 SDK 负责读取云端资源；我主要做的是资产模型、检查流程、告警状态和本地安全边界。&lt;/p&gt;
-&lt;p&gt;整体数据流没有刻意做复杂，人工请求、定时巡检和诊断各走自己的路径。&lt;/p&gt;
-&lt;p&gt;用户明确触发资产同步后，FastAPI 会在当前请求中通过 RAM AccessKey 调用阿里云 OpenAPI，把 ECS、轻量应用服务器、OSS、域名和 DNS 转成统一的本地资产。PostgreSQL 保存资产、手工补充的运维资料、检查结果、告警和诊断；Redis、Celery Beat 与 Worker 只负责每分钟筛选并执行已经启用且到期的检查，不承担手动资产同步和诊断。&lt;/p&gt;
-&lt;p&gt;一次健康检查大致会这样走：Celery Beat 判断哪些检查到期，Worker 执行 HTTP、TCP、SSH、CloudMonitor 或云助手只读命令，把结果写回数据库，再根据连续失败次数更新告警。这里的关键是先拿到可重复验证的事实，而不是先问模型“服务器为什么挂了”。&lt;/p&gt;
-&lt;h2 id="ai-只放在最后一层"&gt;AI 只放在最后一层
-&lt;/h2&gt;&lt;p&gt;用户针对某条告警发起诊断时，系统会整理当前资产、告警内容和最近几次检查结果，先脱敏，再交给 OpenAI-compatible 接口生成摘要、可能原因和排查步骤。如果没有配置模型，或者接口调用失败，就回退到本地规则建议。&lt;/p&gt;
-&lt;p&gt;我刻意保留了几条边界：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;模型只能给建议，不能自动执行修复。&lt;/li&gt;
-&lt;li&gt;模型建议只展示、不自动执行；真正进入 SSH 或云助手执行器的命令才受严格的只读白名单限制。&lt;/li&gt;
-&lt;li&gt;发送给模型前要去掉 AccessKey、密码、私钥和其他敏感字段。&lt;/li&gt;
-&lt;li&gt;AI 不是监控数据的事实来源，HTTP 状态、端口和云指标才是。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;这样做没有“全自动 AI 运维”听起来厉害，却更适合个人环境。一条看似正确的重启命令，如果落到错误实例上，损失会比少点几下控制台大得多。&lt;/p&gt;
-&lt;h2 id="为什么坚持本地优先"&gt;为什么坚持本地优先
-&lt;/h2&gt;&lt;p&gt;默认部署用 Docker Compose 拉起 React、FastAPI、PostgreSQL、Redis 和 Celery。数据库与 Redis 不需要直接暴露到公网，管理入口也定位在可信局域网。AccessKey、SSH 密码、私钥、面板密码和模型 Key 会以 AES-GCM 加密保存，但这不等于“绝对安全”——主密钥仍然要由部署者自己妥善保管。&lt;/p&gt;
-&lt;p&gt;Local AI Ops 也不打算替代阿里云控制台。云厂商控制台负责完整配置能力，这个工作台更像我的运维索引：哪些资源属于哪个项目、什么时候到期、最近是否可达、出问题时先看什么，都能在一个地方接起来。&lt;/p&gt;
-&lt;h2 id="ai-也参与开发但不参与拍脑袋"&gt;AI 也参与开发，但不参与拍脑袋
-&lt;/h2&gt;&lt;p&gt;开发时我会用 AI 编程工具辅助拆需求、补样板代码、梳理接口和测试边界。不过资产结构、安全规则、告警流程和真实云账号验证必须由我自己确定。涉及凭据和自动化时，我更相信“代码里能看到的限制”，而不是一句提示词承诺。&lt;/p&gt;
-&lt;p&gt;目前它仍是个人和小团队可用的 MVP，不是公网多租户 SaaS。v0.3.0 已经补上资产关系图、续费中心和纯本地数据库知识库；下一步更重要的是把手动同步、检查和诊断真正移入 Worker，并完善备份恢复、定时资产同步和操作审计。&lt;/p&gt;
-&lt;h2 id="项目入口"&gt;项目入口
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk-labs/local-ai-ops" target="_blank" rel="noopener"
-&gt;linsk-labs/local-ai-ops&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;GitHub 项目索引：&lt;a class="link" href="https://linsk27.github.io/github/" &gt;404_@林达 GitHub 项目索引&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Dev Cockpit：隔几天回来，也知道项目怎么跑</title><link>https://linsk27.github.io/projects/dev-cockpit/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/dev-cockpit/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png" alt="Featured image of post Dev Cockpit：隔几天回来，也知道项目怎么跑" /&gt;&lt;p&gt;最初我只想解决一个很笨、但每天都会遇到的问题：隔几天重新打开项目时，我已经忘了它用什么命令启动、端口在哪、Python 环境是哪一个、上次又为什么失败。Dev Cockpit 就是从这个问题长出来的。&lt;/p&gt;
-&lt;p&gt;它不是 IDE，也不打算替代 VS Code、Docker Desktop 或 Conda。它负责回答的是更靠前的几件事：这个目录是什么项目、应该怎么启动、现在到底有没有运行、端口属于谁、失败信息在哪里。&lt;/p&gt;
-&lt;h2 id="扫描一个项目时程序在看什么"&gt;扫描一个项目时，程序在看什么
-&lt;/h2&gt;&lt;p&gt;把一个目录交给 Dev Cockpit 后，核心扫描器会读取常见标记文件、包管理配置和 Git 状态，识别 Node、Python、Java、PHP、Ruby、.NET、Go、Rust 与 Docker 项目。接着再从 package scripts、常见入口和技术栈约定中推断启动命令与候选端口，并结合进程归属和 HTTP 探测确认实际运行状态。&lt;/p&gt;
-&lt;p&gt;这听起来像“判断文件存不存在”，但麻烦通常出在冲突上。例如同一个目录里既有 Python 虚拟环境，也有 VS Code 解释器设置和 Conda 声明。当前策略会按手工绑定、编辑器配置、项目虚拟环境、Conda 声明等优先级解析，并把为什么选中这个解释器一起展示，而不是静默猜一个路径。&lt;/p&gt;
-&lt;h2 id="看到-3000-端口不等于所有项目都在线"&gt;看到 3000 端口，不等于所有项目都在线
-&lt;/h2&gt;&lt;p&gt;早期最容易写错的逻辑，是只要发现某个端口在监听，就把对应项目标成“运行中”。如果电脑上同时开了几个前端项目，这种判断很快就会串台。&lt;/p&gt;
-&lt;p&gt;Dev Cockpit 会把状态拆开看：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;是否由工作台自己启动并持有进程；&lt;/li&gt;
-&lt;li&gt;外部监听端口能否归属到当前项目或明确命令；&lt;/li&gt;
-&lt;li&gt;HTTP 地址是否真的可达；&lt;/li&gt;
-&lt;li&gt;最近一次启动是否失败；&lt;/li&gt;
-&lt;li&gt;端口是否只是别的程序留下的占用。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;也就是说，“进程存在”“端口被占用”和“这个项目能访问”不是一件事。状态判断尽量依赖本地可验证信号，而不是让模型猜。&lt;/p&gt;
-&lt;h2 id="同一份项目事实按入口逐层补全"&gt;同一份项目事实，按入口逐层补全
-&lt;/h2&gt;&lt;p&gt;为了避免 CLI、浏览器和桌面版各自猜一遍项目，代码按职责拆成基础扫描模型、机器运行证据补全和界面映射三层。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;packages/core&lt;/code&gt; 负责扫描规则和 Project 基础字段，CLI 的 &lt;code&gt;scan&lt;/code&gt;、&lt;code&gt;doctor&lt;/code&gt; 与文本上下文可以直接消费这一层。Local Server 再合并托管进程、PID 与端口归属、HTTP 探测和最近日志，生成带机器现场的 Project；Vue 从本地 API 读取它，并在视图层映射 &lt;code&gt;managed-running&lt;/code&gt;、&lt;code&gt;detected-online&lt;/code&gt;、&lt;code&gt;stale&lt;/code&gt;、&lt;code&gt;failed&lt;/code&gt; 和 &lt;code&gt;idle&lt;/code&gt; 等展示状态。Electron 启动的是同一个本地 Server，再加载同一套 Web 界面。&lt;/p&gt;
-&lt;p&gt;因此真正复用的是“如何扫描、字段代表什么、哪些事实已经验证”，而不是三个入口共享一台状态机。界面文案怎么改，不应该反过来改变端口归属或项目是否可达的事实；以后补一种技术栈，也不需要在三个入口各写一遍扫描规则。&lt;/p&gt;
-&lt;h2 id="资源雷达是后来长出来的功能"&gt;资源雷达是后来长出来的功能
-&lt;/h2&gt;&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png"
+>&lt;/p>
+&lt;p>截图使用的是本地空数据实例，所以能看到真实页面结构，但没有云账号、IP、域名、AccessKey 或监控结果。&lt;/p>
+&lt;h2 id="先把确定的数据链跑通">先把确定的数据链跑通
+&lt;/h2>&lt;p>这个项目是我围绕自己的运维需求立项和开发的，不是给某个现成面板换皮。FastAPI、React、Celery 这些开源框架负责基础能力，阿里云官方 SDK 负责读取云端资源；我主要做的是资产模型、检查流程、告警状态和本地安全边界。&lt;/p>
+&lt;p>整体数据流没有刻意做复杂，人工请求、定时巡检和诊断各走自己的路径。&lt;/p>
+&lt;p>用户明确触发资产同步后，FastAPI 会在当前请求中通过 RAM AccessKey 调用阿里云 OpenAPI，把 ECS、轻量应用服务器、OSS、域名和 DNS 转成统一的本地资产。PostgreSQL 保存资产、手工补充的运维资料、检查结果、告警和诊断；Redis、Celery Beat 与 Worker 只负责每分钟筛选并执行已经启用且到期的检查，不承担手动资产同步和诊断。&lt;/p>
+&lt;p>一次健康检查大致会这样走：Celery Beat 判断哪些检查到期，Worker 执行 HTTP、TCP、SSH、CloudMonitor 或云助手只读命令，把结果写回数据库，再根据连续失败次数更新告警。这里的关键是先拿到可重复验证的事实，而不是先问模型“服务器为什么挂了”。&lt;/p>
+&lt;h2 id="ai-只放在最后一层">AI 只放在最后一层
+&lt;/h2>&lt;p>用户针对某条告警发起诊断时，系统会整理当前资产、告警内容和最近几次检查结果，先脱敏，再交给 OpenAI-compatible 接口生成摘要、可能原因和排查步骤。如果没有配置模型，或者接口调用失败，就回退到本地规则建议。&lt;/p>
+&lt;p>我刻意保留了几条边界：&lt;/p>
+&lt;ul>
+&lt;li>模型只能给建议，不能自动执行修复。&lt;/li>
+&lt;li>模型建议只展示、不自动执行；真正进入 SSH 或云助手执行器的命令才受严格的只读白名单限制。&lt;/li>
+&lt;li>发送给模型前要去掉 AccessKey、密码、私钥和其他敏感字段。&lt;/li>
+&lt;li>AI 不是监控数据的事实来源，HTTP 状态、端口和云指标才是。&lt;/li>
+&lt;/ul>
+&lt;p>这样做没有“全自动 AI 运维”听起来厉害，却更适合个人环境。一条看似正确的重启命令，如果落到错误实例上，损失会比少点几下控制台大得多。&lt;/p>
+&lt;h2 id="为什么坚持本地优先">为什么坚持本地优先
+&lt;/h2>&lt;p>默认部署用 Docker Compose 拉起 React、FastAPI、PostgreSQL、Redis 和 Celery。数据库与 Redis 不需要直接暴露到公网，管理入口也定位在可信局域网。AccessKey、SSH 密码、私钥、面板密码和模型 Key 会以 AES-GCM 加密保存，但这不等于“绝对安全”——主密钥仍然要由部署者自己妥善保管。&lt;/p>
+&lt;p>Local AI Ops 也不打算替代阿里云控制台。云厂商控制台负责完整配置能力，这个工作台更像我的运维索引：哪些资源属于哪个项目、什么时候到期、最近是否可达、出问题时先看什么，都能在一个地方接起来。&lt;/p>
+&lt;h2 id="ai-也参与开发但不参与拍脑袋">AI 也参与开发，但不参与拍脑袋
+&lt;/h2>&lt;p>开发时我会用 AI 编程工具辅助拆需求、补样板代码、梳理接口和测试边界。不过资产结构、安全规则、告警流程和真实云账号验证必须由我自己确定。涉及凭据和自动化时，我更相信“代码里能看到的限制”，而不是一句提示词承诺。&lt;/p>
+&lt;p>目前它仍是个人和小团队可用的 MVP，不是公网多租户 SaaS。v0.3.0 已经补上资产关系图、续费中心和纯本地数据库知识库；下一步更重要的是把手动同步、检查和诊断真正移入 Worker，并完善备份恢复、定时资产同步和操作审计。&lt;/p>
+&lt;h2 id="项目入口">项目入口
+&lt;/h2>&lt;ul>
+&lt;li>GitHub 仓库：&lt;a class="link" href="https://github.com/linsk-labs/local-ai-ops" target="_blank" rel="noopener"
+>linsk-labs/local-ai-ops&lt;/a>&lt;/li>
+&lt;li>项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" >404_@林达 Projects&lt;/a>&lt;/li>
+&lt;li>GitHub 项目索引：&lt;a class="link" href="https://linsk27.github.io/github/" >404_@林达 GitHub 项目索引&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Dev Cockpit：隔几天回来，也知道项目怎么跑</title><link>https://linsk27.github.io/projects/dev-cockpit/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/dev-cockpit/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png" alt="Featured image of post Dev Cockpit：隔几天回来，也知道项目怎么跑" />&lt;p>最初我只想解决一个很笨、但每天都会遇到的问题：隔几天重新打开项目时，我已经忘了它用什么命令启动、端口在哪、Python 环境是哪一个、上次又为什么失败。Dev Cockpit 就是从这个问题长出来的。&lt;/p>
+&lt;p>它不是 IDE，也不打算替代 VS Code、Docker Desktop 或 Conda。它负责回答的是更靠前的几件事：这个目录是什么项目、应该怎么启动、现在到底有没有运行、端口属于谁、失败信息在哪里。&lt;/p>
+&lt;h2 id="扫描一个项目时程序在看什么">扫描一个项目时，程序在看什么
+&lt;/h2>&lt;p>把一个目录交给 Dev Cockpit 后，核心扫描器会读取常见标记文件、包管理配置和 Git 状态，识别 Node、Python、Java、PHP、Ruby、.NET、Go、Rust 与 Docker 项目。接着再从 package scripts、常见入口和技术栈约定中推断启动命令与候选端口，并结合进程归属和 HTTP 探测确认实际运行状态。&lt;/p>
+&lt;p>这听起来像“判断文件存不存在”，但麻烦通常出在冲突上。例如同一个目录里既有 Python 虚拟环境，也有 VS Code 解释器设置和 Conda 声明。当前策略会按手工绑定、编辑器配置、项目虚拟环境、Conda 声明等优先级解析，并把为什么选中这个解释器一起展示，而不是静默猜一个路径。&lt;/p>
+&lt;h2 id="看到-3000-端口不等于所有项目都在线">看到 3000 端口，不等于所有项目都在线
+&lt;/h2>&lt;p>早期最容易写错的逻辑，是只要发现某个端口在监听，就把对应项目标成“运行中”。如果电脑上同时开了几个前端项目，这种判断很快就会串台。&lt;/p>
+&lt;p>Dev Cockpit 会把状态拆开看：&lt;/p>
+&lt;ul>
+&lt;li>是否由工作台自己启动并持有进程；&lt;/li>
+&lt;li>外部监听端口能否归属到当前项目或明确命令；&lt;/li>
+&lt;li>HTTP 地址是否真的可达；&lt;/li>
+&lt;li>最近一次启动是否失败；&lt;/li>
+&lt;li>端口是否只是别的程序留下的占用。&lt;/li>
+&lt;/ul>
+&lt;p>也就是说，“进程存在”“端口被占用”和“这个项目能访问”不是一件事。状态判断尽量依赖本地可验证信号，而不是让模型猜。&lt;/p>
+&lt;h2 id="同一份项目事实按入口逐层补全">同一份项目事实，按入口逐层补全
+&lt;/h2>&lt;p>为了避免 CLI、浏览器和桌面版各自猜一遍项目，代码按职责拆成基础扫描模型、机器运行证据补全和界面映射三层。&lt;/p>
+&lt;p>&lt;code>packages/core&lt;/code> 负责扫描规则和 Project 基础字段，CLI 的 &lt;code>scan&lt;/code>、&lt;code>doctor&lt;/code> 与文本上下文可以直接消费这一层。Local Server 再合并托管进程、PID 与端口归属、HTTP 探测和最近日志，生成带机器现场的 Project；Vue 从本地 API 读取它，并在视图层映射 &lt;code>managed-running&lt;/code>、&lt;code>detected-online&lt;/code>、&lt;code>stale&lt;/code>、&lt;code>failed&lt;/code> 和 &lt;code>idle&lt;/code> 等展示状态。Electron 启动的是同一个本地 Server，再加载同一套 Web 界面。&lt;/p>
+&lt;p>因此真正复用的是“如何扫描、字段代表什么、哪些事实已经验证”，而不是三个入口共享一台状态机。界面文案怎么改，不应该反过来改变端口归属或项目是否可达的事实；以后补一种技术栈，也不需要在三个入口各写一遍扫描规则。&lt;/p>
+&lt;h2 id="资源雷达是后来长出来的功能">资源雷达是后来长出来的功能
+&lt;/h2>&lt;p>&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png"
 loading="lazy"
 alt="Dev Cockpit 资源雷达卡片页"
-&gt;&lt;/p&gt;
-&lt;p&gt;我平时还会收集 GitHub 仓库、Demo、工具、Skills 和教程，所以后来加了资源雷达：把链接或文本整理成带来源、摘要、分类、标签和评分的卡片，再用筛选与星云图复盘最近关注的方向。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-nebula.png"
+>&lt;/p>
+&lt;p>我平时还会收集 GitHub 仓库、Demo、工具、Skills 和教程，所以后来加了资源雷达：把链接或文本整理成带来源、摘要、分类、标签和评分的卡片，再用筛选与星云图复盘最近关注的方向。&lt;/p>
+&lt;p>&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-nebula.png"
 loading="lazy"
 alt="Dev Cockpit 资源星云图"
-&gt;&lt;/p&gt;
-&lt;p&gt;资源处理大致是“本地规则优先，可选 AI 补充”：先解析 GitHub 或网页元数据，再用规则生成基础分类；配置模型后，AI 可以帮忙整理标题、标签和摘要，最后仍要经过预览才写入本地 JSON。它不会因为看见一个仓库就自动安装 Skill，也不会上传整个源码目录。&lt;/p&gt;
-&lt;p&gt;这也是旧文章最容易让人误解的地方：资源雷达很直观，截图也好看，但它只是 Dev Cockpit 的一个模块，项目核心仍然是恢复本地开发现场。&lt;/p&gt;
-&lt;h2 id="ai-在哪里有用哪里没资格下结论"&gt;AI 在哪里有用，哪里没资格下结论
-&lt;/h2&gt;&lt;p&gt;工作台可以把项目路径、技术栈、启动命令、端口、Git 状态和最近错误整理成一段可复制的上下文，方便交给 AI 编程工具；只有用户明确点击时，才会写入 &lt;code&gt;PROJECT_CONTEXT.md&lt;/code&gt; 或 &lt;code&gt;AGENTS.md&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;我也会用 AI 辅助梳理跨技术栈识别规则、重构和补测试。但模型不是运行状态的事实来源：端口归属、HTTP 可达性和 Python 环境解析，仍由本地确定性代码判断。这条边界比给聊天框换一个更聪明的模型重要。&lt;/p&gt;
-&lt;h2 id="试用入口"&gt;试用入口
-&lt;/h2&gt;&lt;p&gt;安装 Node.js 后可以直接运行：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;npx local-dev-cockpit
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;默认会在本机打开 &lt;code&gt;http://localhost:8787&lt;/code&gt;。项目数据保存在本地应用数据目录，定位仍是个人开发工作台，而不是需要注册账号的云服务。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk-labs/local-dev-cockpit" target="_blank" rel="noopener"
-&gt;linsk-labs/local-dev-cockpit&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>bilibili-nuxt3 Nuxt3 移动端项目</title><link>https://linsk27.github.io/projects/bilibili-nuxt3/</link><pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/bilibili-nuxt3/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/bilibili-nuxt3-mobile-preview.jpg" alt="Featured image of post bilibili-nuxt3 Nuxt3 移动端项目" /&gt;&lt;p&gt;bilibili-nuxt3 是一个 Nuxt 3、Vue、TypeScript 和 Vant 移动端项目实战，围绕视频列表、频道导航、视频详情、分页加载、服务端渲染和 SEO 信息配置展开。它适合作为 Nuxt 3 project、Vue mobile app、Nuxt SSR SEO 和前端移动端页面结构的参考。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/bilibili-nuxt3-mobile-preview.jpg"
+>&lt;/p>
+&lt;p>资源处理大致是“本地规则优先，可选 AI 补充”：先解析 GitHub 或网页元数据，再用规则生成基础分类；配置模型后，AI 可以帮忙整理标题、标签和摘要，最后仍要经过预览才写入本地 JSON。它不会因为看见一个仓库就自动安装 Skill，也不会上传整个源码目录。&lt;/p>
+&lt;p>这也是旧文章最容易让人误解的地方：资源雷达很直观，截图也好看，但它只是 Dev Cockpit 的一个模块，项目核心仍然是恢复本地开发现场。&lt;/p>
+&lt;h2 id="ai-在哪里有用哪里没资格下结论">AI 在哪里有用，哪里没资格下结论
+&lt;/h2>&lt;p>工作台可以把项目路径、技术栈、启动命令、端口、Git 状态和最近错误整理成一段可复制的上下文，方便交给 AI 编程工具；只有用户明确点击时，才会写入 &lt;code>PROJECT_CONTEXT.md&lt;/code> 或 &lt;code>AGENTS.md&lt;/code>。&lt;/p>
+&lt;p>我也会用 AI 辅助梳理跨技术栈识别规则、重构和补测试。但模型不是运行状态的事实来源：端口归属、HTTP 可达性和 Python 环境解析，仍由本地确定性代码判断。这条边界比给聊天框换一个更聪明的模型重要。&lt;/p>
+&lt;h2 id="试用入口">试用入口
+&lt;/h2>&lt;p>安装 Node.js 后可以直接运行：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">npx local-dev-cockpit
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>默认会在本机打开 &lt;code>http://localhost:8787&lt;/code>。项目数据保存在本地应用数据目录，定位仍是个人开发工作台，而不是需要注册账号的云服务。&lt;/p>
+&lt;ul>
+&lt;li>GitHub 仓库：&lt;a class="link" href="https://github.com/linsk-labs/local-dev-cockpit" target="_blank" rel="noopener"
+>linsk-labs/local-dev-cockpit&lt;/a>&lt;/li>
+&lt;li>项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" >404_@林达 Projects&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>bilibili-nuxt3 Nuxt3 移动端项目</title><link>https://linsk27.github.io/projects/bilibili-nuxt3/</link><pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/bilibili-nuxt3/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/bilibili-nuxt3-mobile-preview.jpg" alt="Featured image of post bilibili-nuxt3 Nuxt3 移动端项目" />&lt;p>bilibili-nuxt3 是一个 Nuxt 3、Vue、TypeScript 和 Vant 移动端项目实战，围绕视频列表、频道导航、视频详情、分页加载、服务端渲染和 SEO 信息配置展开。它适合作为 Nuxt 3 project、Vue mobile app、Nuxt SSR SEO 和前端移动端页面结构的参考。&lt;/p>
+&lt;p>&lt;img src="https://linsk27.github.io/img/projects/bilibili-nuxt3-mobile-preview.jpg"
 loading="lazy"
 alt="bilibili Nuxt3 mobile preview"
-&gt;&lt;/p&gt;
-&lt;h2 id="适合谁"&gt;适合谁
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;想参考 Nuxt 3、Vue 和 TypeScript 移动端项目结构的人。&lt;/li&gt;
-&lt;li&gt;正在学习 SSR、SEO meta、文件路由和首屏数据获取的人。&lt;/li&gt;
-&lt;li&gt;需要 Vant UI、频道导航、视频列表和详情页示例的人。&lt;/li&gt;
-&lt;li&gt;想做移动端前端项目实战、课程项目或简历作品的人。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="项目价值"&gt;项目价值
-&lt;/h2&gt;&lt;p&gt;这个项目的价值在于它把 Nuxt 的服务端渲染、SEO 信息配置、文件路由、移动端适配和数据交互放在一个完整示例里。相比普通组件练习，它更接近真实移动端内容应用，适合用来观察首页信息流、频道 tab、视频卡片和详情页之间的组织方式。&lt;/p&gt;
-&lt;p&gt;项目预览图来自仓库 README。历史线上预览链接当前连接不稳定，因此这个项目页优先保留稳定的截图、技术说明和 GitHub 仓库入口，后续演示站恢复后再补充新的在线入口。&lt;/p&gt;
-&lt;h2 id="技术方向"&gt;技术方向
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Nuxt 3&lt;/li&gt;
-&lt;li&gt;Vue&lt;/li&gt;
-&lt;li&gt;TypeScript&lt;/li&gt;
-&lt;li&gt;Vant UI&lt;/li&gt;
-&lt;li&gt;SSR&lt;/li&gt;
-&lt;li&gt;SEO meta&lt;/li&gt;
-&lt;li&gt;移动端 vw 适配&lt;/li&gt;
-&lt;li&gt;视频列表与详情页&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="项目入口"&gt;项目入口
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk27/bilibili-nuxt3" target="_blank" rel="noopener"
-&gt;linsk27/bilibili-nuxt3&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;如果这个 Nuxt 3 移动端项目对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续完善预览、运行文档和项目说明的主要信号。&lt;/p&gt;</description></item><item><title>el-table中sort(拖拽排序)的常见方法</title><link>https://linsk27.github.io/p/el-table%E4%B8%ADsort%E6%8B%96%E6%8B%BD%E6%8E%92%E5%BA%8F%E7%9A%84%E5%B8%B8%E8%A7%81%E6%96%B9%E6%B3%95/</link><pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/p/el-table%E4%B8%ADsort%E6%8B%96%E6%8B%BD%E6%8E%92%E5%BA%8F%E7%9A%84%E5%B8%B8%E8%A7%81%E6%96%B9%E6%B3%95/</guid><description>&lt;h2 id="el-table中sort的常见方法"&gt;el-table中sort的常见方法
-&lt;/h2&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt;10
-&lt;/span&gt;&lt;span class="lnt"&gt;11
-&lt;/span&gt;&lt;span class="lnt"&gt;12
-&lt;/span&gt;&lt;span class="lnt"&gt;13
-&lt;/span&gt;&lt;span class="lnt"&gt;14
-&lt;/span&gt;&lt;span class="lnt"&gt;15
-&lt;/span&gt;&lt;span class="lnt"&gt;16
-&lt;/span&gt;&lt;span class="lnt"&gt;17
-&lt;/span&gt;&lt;span class="lnt"&gt;18
-&lt;/span&gt;&lt;span class="lnt"&gt;19
-&lt;/span&gt;&lt;span class="lnt"&gt;20
-&lt;/span&gt;&lt;span class="lnt"&gt;21
-&lt;/span&gt;&lt;span class="lnt"&gt;22
-&lt;/span&gt;&lt;span class="lnt"&gt;23
-&lt;/span&gt;&lt;span class="lnt"&gt;24
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-javascript" data-lang="javascript"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;sort&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kr"&gt;async&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;newIndex&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;number&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;oldIndex&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;number&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;newIndex&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="nx"&gt;oldIndex&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;newData&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[...&lt;/span&gt;&lt;span class="nx"&gt;tableData&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;value&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;rows&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;movedItem&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;newData&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;splice&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;oldIndex&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nx"&gt;newData&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;splice&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;newIndex&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;movedItem&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nx"&gt;newData&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;forEach&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;item&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;index&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;item&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;index&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;index&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;});&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// Vue3 响应式更新方式
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nx"&gt;tableData&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;value&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;...&lt;/span&gt;&lt;span class="nx"&gt;tableData&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;value&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;rows&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[...&lt;/span&gt;&lt;span class="nx"&gt;newData&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="c1"&gt;// 强制替换整个数组触发更新
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;};&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nx"&gt;sortData&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;value&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;tag_groups&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;newData&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;item&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;({&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;tag_group_id&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;item&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;tag_group_id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;index&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;item&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;index&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}));&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nx"&gt;isData&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;value&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// 每次拖拽后更新 key
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;</description></item></channel></rss>
+>&lt;/p>
+&lt;h2 id="适合谁">适合谁
+&lt;/h2>&lt;ul>
+&lt;li>想参考 Nuxt 3、Vue 和 TypeScript 移动端项目结构的人。&lt;/li>
+&lt;li>正在学习 SSR、SEO meta、文件路由和首屏数据获取的人。&lt;/li>
+&lt;li>需要 Vant UI、频道导航、视频列表和详情页示例的人。&lt;/li>
+&lt;li>想做移动端前端项目实战、课程项目或简历作品的人。&lt;/li>
+&lt;/ul>
+&lt;h2 id="项目价值">项目价值
+&lt;/h2>&lt;p>这个项目的价值在于它把 Nuxt 的服务端渲染、SEO 信息配置、文件路由、移动端适配和数据交互放在一个完整示例里。相比普通组件练习，它更接近真实移动端内容应用，适合用来观察首页信息流、频道 tab、视频卡片和详情页之间的组织方式。&lt;/p>
+&lt;p>项目预览图来自仓库 README。历史线上预览链接当前连接不稳定，因此这个项目页优先保留稳定的截图、技术说明和 GitHub 仓库入口，后续演示站恢复后再补充新的在线入口。&lt;/p>
+&lt;h2 id="技术方向">技术方向
+&lt;/h2>&lt;ul>
+&lt;li>Nuxt 3&lt;/li>
+&lt;li>Vue&lt;/li>
+&lt;li>TypeScript&lt;/li>
+&lt;li>Vant UI&lt;/li>
+&lt;li>SSR&lt;/li>
+&lt;li>SEO meta&lt;/li>
+&lt;li>移动端 vw 适配&lt;/li>
+&lt;li>视频列表与详情页&lt;/li>
+&lt;/ul>
+&lt;h2 id="项目入口">项目入口
+&lt;/h2>&lt;ul>
+&lt;li>GitHub 仓库：&lt;a class="link" href="https://github.com/linsk27/bilibili-nuxt3" target="_blank" rel="noopener"
+>linsk27/bilibili-nuxt3&lt;/a>&lt;/li>
+&lt;li>项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" >linsk27 Projects&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>如果这个 Nuxt 3 移动端项目对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续完善预览、运行文档和项目说明的主要信号。&lt;/p></description></item><item><title>el-table中sort(拖拽排序)的常见方法</title><link>https://linsk27.github.io/p/el-table%E4%B8%ADsort%E6%8B%96%E6%8B%BD%E6%8E%92%E5%BA%8F%E7%9A%84%E5%B8%B8%E8%A7%81%E6%96%B9%E6%B3%95/</link><pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/p/el-table%E4%B8%ADsort%E6%8B%96%E6%8B%BD%E6%8E%92%E5%BA%8F%E7%9A%84%E5%B8%B8%E8%A7%81%E6%96%B9%E6%B3%95/</guid><description>&lt;h2 id="el-table中sort的常见方法">el-table中sort的常见方法
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">sort&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kr">async&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">newIndex&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">number&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">oldIndex&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">number&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">newIndex&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="nx">oldIndex&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">newData&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[...&lt;/span>&lt;span class="nx">tableData&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">rows&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="nx">movedItem&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">newData&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">splice&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">oldIndex&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">newData&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">splice&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">newIndex&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">movedItem&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">newData&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">index&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">item&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">index&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">index&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// Vue3 响应式更新方式
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">tableData&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">value&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">...&lt;/span>&lt;span class="nx">tableData&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">rows&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[...&lt;/span>&lt;span class="nx">newData&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="c1">// 强制替换整个数组触发更新
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">sortData&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">tag_groups&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">newData&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">map&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">item&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">({&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">tag_group_id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">item&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">tag_group_id&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">index&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">item&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">index&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}));&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">isData&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nx">value&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// 每次拖拽后更新 key
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item></channel></rss>

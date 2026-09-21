@@ -1,205 +1,204 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>模型路由 on 404_@林达</title><link>https://linsk27.github.io/tags/%E6%A8%A1%E5%9E%8B%E8%B7%AF%E7%94%B1/</link><description>Recent content in 模型路由 on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Mon, 21 Sep 2026 21:10:00 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/%E6%A8%A1%E5%9E%8B%E8%B7%AF%E7%94%B1/index.xml" rel="self" type="application/rss+xml"/><item><title>Laya：把“该怎么处理”先判断清楚</title><link>https://linsk27.github.io/projects/laya/</link><pubDate>Mon, 21 Sep 2026 18:30:00 +0800</pubDate><guid>https://linsk27.github.io/projects/laya/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/laya-devto-cover.png" alt="Featured image of post Laya：把“该怎么处理”先判断清楚" /&gt;&lt;p&gt;我最近在看 &lt;a class="link" href="https://github.com/NandhaKishorM/laya" target="_blank" rel="noopener"
-&gt;NandhaKishorM/laya&lt;/a&gt;。它经常和 Jev 放在一起讨论，原因很简单：两者都不是用来聊天的，而是让模型回答一些程序能直接使用的问题。&lt;/p&gt;
-&lt;p&gt;比如收到一封邮件，程序真正关心的可能只有三件事：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;应该交给账单组还是技术组？&lt;/li&gt;
-&lt;li&gt;用户有没有明确要求退款？&lt;/li&gt;
-&lt;li&gt;这件事要不要马上处理？&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;如果让普通大模型回答，通常要让它写一段话，再从话里解析 JSON。Laya 的做法是把问题和答案范围先写清楚，模型直接返回选项、分数和概率。后面的分流、审核、调用哪个模型，仍由你的代码负责。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;本文根据 Laya 仓库 42626c3 提交整理，包版本为 0.3.4。没有在本机下载权重，也没有把仓库里的 Jev 跑分当成同条件实测。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/laya-devto-cover.png"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>模型路由 on 404_@林达</title><link>https://linsk27.github.io/tags/%E6%A8%A1%E5%9E%8B%E8%B7%AF%E7%94%B1/</link><description>Recent content in 模型路由 on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Mon, 21 Sep 2026 21:10:00 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/%E6%A8%A1%E5%9E%8B%E8%B7%AF%E7%94%B1/index.xml" rel="self" type="application/rss+xml"/><item><title>Laya：把“该怎么处理”先判断清楚</title><link>https://linsk27.github.io/projects/laya/</link><pubDate>Mon, 21 Sep 2026 18:30:00 +0800</pubDate><guid>https://linsk27.github.io/projects/laya/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/laya-devto-cover.png" alt="Featured image of post Laya：把“该怎么处理”先判断清楚" />&lt;p>我最近在看 &lt;a class="link" href="https://github.com/NandhaKishorM/laya" target="_blank" rel="noopener"
+>NandhaKishorM/laya&lt;/a>。它经常和 Jev 放在一起讨论，原因很简单：两者都不是用来聊天的，而是让模型回答一些程序能直接使用的问题。&lt;/p>
+&lt;p>比如收到一封邮件，程序真正关心的可能只有三件事：&lt;/p>
+&lt;ul>
+&lt;li>应该交给账单组还是技术组？&lt;/li>
+&lt;li>用户有没有明确要求退款？&lt;/li>
+&lt;li>这件事要不要马上处理？&lt;/li>
+&lt;/ul>
+&lt;p>如果让普通大模型回答，通常要让它写一段话，再从话里解析 JSON。Laya 的做法是把问题和答案范围先写清楚，模型直接返回选项、分数和概率。后面的分流、审核、调用哪个模型，仍由你的代码负责。&lt;/p>
+&lt;blockquote>
+&lt;p>本文根据 Laya 仓库 42626c3 提交整理，包版本为 0.3.4。没有在本机下载权重，也没有把仓库里的 Jev 跑分当成同条件实测。&lt;/p>&lt;/blockquote>
+&lt;p>&lt;img src="https://linsk27.github.io/img/projects/laya-devto-cover.png"
 loading="lazy"
 alt="Laya 项目封面"
-&gt;&lt;/p&gt;
-&lt;h2 id="先跑一个小例子"&gt;先跑一个小例子
-&lt;/h2&gt;&lt;p&gt;Laya 的调用始终围绕两个东西：要判断的 state，以及问题 questions。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt;10
-&lt;/span&gt;&lt;span class="lnt"&gt;11
-&lt;/span&gt;&lt;span class="lnt"&gt;12
-&lt;/span&gt;&lt;span class="lnt"&gt;13
-&lt;/span&gt;&lt;span class="lnt"&gt;14
-&lt;/span&gt;&lt;span class="lnt"&gt;15
-&lt;/span&gt;&lt;span class="lnt"&gt;16
-&lt;/span&gt;&lt;span class="lnt"&gt;17
-&lt;/span&gt;&lt;span class="lnt"&gt;18
-&lt;/span&gt;&lt;span class="lnt"&gt;19
-&lt;/span&gt;&lt;span class="lnt"&gt;20
-&lt;/span&gt;&lt;span class="lnt"&gt;21
-&lt;/span&gt;&lt;span class="lnt"&gt;22
-&lt;/span&gt;&lt;span class="lnt"&gt;23
-&lt;/span&gt;&lt;span class="lnt"&gt;24
-&lt;/span&gt;&lt;span class="lnt"&gt;25
-&lt;/span&gt;&lt;span class="lnt"&gt;26
-&lt;/span&gt;&lt;span class="lnt"&gt;27
-&lt;/span&gt;&lt;span class="lnt"&gt;28
-&lt;/span&gt;&lt;span class="lnt"&gt;29
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;laya&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;agent&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;laya&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;load&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;convaiinnovations/laya&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;subfolder&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;multilingual&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;agent&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;predict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;message&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;同一笔订单扣了两次钱，请今天帮我退款。&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;team&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;choice&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;instructions&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;Which team should handle this message?&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;criteria&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;billing&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;charges, invoices, refunds&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;technical&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;bugs and outages&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;sales&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;pricing and purchases&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;other&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;none of the above&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;},&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;},&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;refund_requested&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;noul&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;instructions&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;Does the message explicitly request a refund?&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;},&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;},&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;answers&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;team&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;choice&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;answers&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;refund_requested&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;noul&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;choice 是从几个选项里选一个，noul 是判断一个命题为真的概率，另外还有按等级评分的 score。一批问题可以一起提交，但它们互相看不到答案；如果第二个问题依赖第一个结果，就由业务代码再发起下一步。&lt;/p&gt;
-&lt;p&gt;这里有个容易误会的地方：score 的结果是等级索引的加权平均，不是测量出来的真实数值。比如三个等级的概率是 [0.1, 0.3, 0.6]，分数是 1.5，它只能说明结果更靠近高等级，不能直接解释成“75% 紧急”或“还剩几小时”。&lt;/p&gt;
-&lt;h2 id="它在模型里做了什么"&gt;它在模型里做了什么
-&lt;/h2&gt;&lt;p&gt;Laya 的核心代码在 laya/agent.py 和 laya/common.py。&lt;/p&gt;
-&lt;p&gt;调用时，程序会把问题说明、候选答案和 state 拼成一条输入。每个候选答案前面留一个标记，双向 Transformer 读完整条序列后，scorer 只在这些标记位置上打分。最后再把分数转成概率。&lt;/p&gt;
-&lt;p&gt;大致可以画成：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;span class="lnt"&gt;6
-&lt;/span&gt;&lt;span class="lnt"&gt;7
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;问题说明 + 候选项 + state
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; Encoder
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 给每个候选项打分
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 概率和结果
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;它不生成自然语言，所以没有“生成一段 JSON，再尝试解析”的步骤。这样确实让接口更稳定，但不代表判断就一定正确。它仍然可能把一封退款邮件分到技术组，只是返回的格式不会突然变成一段解释文字。&lt;/p&gt;
-&lt;h3 id="一次调用不等于只算一次正文"&gt;一次调用不等于只算一次正文
-&lt;/h3&gt;&lt;p&gt;代码会为每个问题各自拼一条序列，然后把这些序列组成 batch，一次送进模型。&lt;/p&gt;
-&lt;p&gt;所以，同一封邮件问十个问题，并不是“正文只编码一次，十个问题免费复用”；实际是十条输入一起算，只是批处理比十次完全独立调用更高效。仓库在 T4 上测到多语言模型单问题约 32.8ms，十个问题约 72.3ms。这个数字是作者的测试环境，不能直接当成你电脑上的保证。&lt;/p&gt;
-&lt;h2 id="router-到底路由什么"&gt;Router 到底路由什么
-&lt;/h2&gt;&lt;p&gt;Laya 里有两个容易混淆的名字：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Router：在 Laya 自己的几个 checkpoint 之间选择；&lt;/li&gt;
-&lt;li&gt;router_questions()：一组“请求属于什么领域、难度如何”的问题模板。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Router 不会替你选择 GPT、Claude 或 Codex。它现在主要在三个 checkpoint 之间选：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;laya：英语，ModernBERT-large；&lt;/li&gt;
-&lt;li&gt;laya-multilingual：多语言，mmBERT-base；&lt;/li&gt;
-&lt;li&gt;laya-typed-decisions：针对四类业务流程微调的版本。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;它的语言判断不是再调用一个模型。laya/lang.py 会统计 Unicode 字符，先判断文字系统；如果是拉丁文字，再用停用词和变音符号猜测部分语言。检测到中文、日文、阿拉伯文等，就会倾向多语言 checkpoint。&lt;/p&gt;
-&lt;p&gt;这一步很有必要。仓库的测试里，英文模型遇到非英语文字时可能“很自信地答错”，所以不能等模型输出一个低置信度再补救，应该先决定用哪个模型。&lt;/p&gt;
-&lt;p&gt;默认的 Router() 还会懒加载模型，并用 LRU 控制内存。如果中英文请求交替到来，模型可能反复卸载和加载；服务端通常应该预加载需要的 checkpoint。typed-decisions 也不是默认自动选择的，除非你显式指定，或者开启代码里那几个固定问题 ID 的识别。&lt;/p&gt;
-&lt;h2 id="confidence-不是正确率"&gt;confidence 不是“正确率”
-&lt;/h2&gt;&lt;p&gt;Laya 的 choice 和 score 会返回 probabilities 和 confidence。代码里的 confidence 是根据概率分布的熵算出来的：概率越集中，数值越高；几个选项差不多，数值越低。&lt;/p&gt;
-&lt;p&gt;它不是最高选项的概率，也不是“这次答对的概率”。二选一给出 [0.9, 0.1] 时，按 Laya 的公式，confidence 约为 0.53，不会直接返回 0.9。noul 又是另一种形式，直接返回“为真”的概率。&lt;/p&gt;
-&lt;p&gt;因此，不能把所有问题都套一个 0.85 阈值。退款、删数据、改权限这类操作，应该用自己的验证集确定门槛，低置信度进入人工或大模型复核。仓库也明确提到基础模型存在过度自信，需要重新做 temperature calibration。&lt;/p&gt;
-&lt;p&gt;另外，代码里有个 act_head，会返回 act_probability。当前实现只是把这个值放在结果里，并没有替你执行动作，也不能因为字段名字像“是否行动”就把它当成生产开关。&lt;/p&gt;
-&lt;h2 id="laya-和-jev区别不只是一个开源一个闭源"&gt;Laya 和 Jev，区别不只是“一个开源一个闭源”
-&lt;/h2&gt;&lt;p&gt;两者的接口思路很像：给 state 和 questions，支持 choice、score、noul，一次请求回答多个问题。这也是它们经常被放在一起比较的原因。&lt;/p&gt;
-&lt;p&gt;但使用时差别很明显：&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;项目&lt;/th&gt;
-&lt;th&gt;Laya&lt;/th&gt;
-&lt;th&gt;Jev&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;运行方式&lt;/td&gt;
-&lt;td&gt;下载 Hugging Face 权重，本地 Python/PyTorch 推理&lt;/td&gt;
-&lt;td&gt;调用 TypeSafe 托管 API&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;能否看实现&lt;/td&gt;
-&lt;td&gt;编码器、打分头、训练 notebook 都在仓库里&lt;/td&gt;
-&lt;td&gt;官方没有公开可逐层核对的模型实现&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;适配业务&lt;/td&gt;
-&lt;td&gt;改问题，也可以自己微调 checkpoint&lt;/td&gt;
-&lt;td&gt;主要通过 state、instructions、criteria 适配，官方不提供客户级 LoRA&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;上下文&lt;/td&gt;
-&lt;td&gt;常见配置为 512 或 1024 token，问题和正文共用预算&lt;/td&gt;
-&lt;td&gt;官方文档给出 64k 请求上限，state 还有单独限制&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Choice 选项&lt;/td&gt;
-&lt;td&gt;默认选项预算较紧，仓库建议控制在约 20 个以内&lt;/td&gt;
-&lt;td&gt;API 最多 255 个选项&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;运维&lt;/td&gt;
-&lt;td&gt;自己负责权重、显存、并发、冷启动&lt;/td&gt;
-&lt;td&gt;不维护模型，但要处理 API key、网络、限流和版本&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;成本&lt;/td&gt;
-&lt;td&gt;自托管没有调用费，但要承担机器成本&lt;/td&gt;
-&lt;td&gt;按输入 token 计费，输出 token 不单独计费&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;Jev 的具体上限和接口可以看 &lt;a class="link" href="https://docs.typesafe.ai/models" target="_blank" rel="noopener"
-&gt;官方 Models 文档&lt;/a&gt; 与 &lt;a class="link" href="https://docs.typesafe.ai/api" target="_blank" rel="noopener"
-&gt;API 文档&lt;/a&gt;。Laya 的限制主要来自 build_sequence()：它会先给问题和候选项分配一段固定预算，剩下的才给正文。选项太多时，每个标签被压缩得很短，分类自然容易掉点。&lt;/p&gt;
-&lt;p&gt;Jev 的上下文更长，但也不是万能的。官方已经列出它在算术、日期比较、多步间接推理、无关长文本和对抗性内容上的问题。两者都有一个共同原则：能用代码准确算的事情，就不要交给模型。&lt;/p&gt;
-&lt;h2 id="跑分应该怎样看"&gt;跑分应该怎样看
-&lt;/h2&gt;&lt;p&gt;Laya 仓库里有和 Jev 的对比表，但研究说明也写了限制：Jev 的数字来自第三方公开结果，Laya 没有在同一环境调用 Jev，因此不是严格的 A/B 测试。&lt;/p&gt;
-&lt;p&gt;还有两个容易被忽略的细节：&lt;/p&gt;
-&lt;p&gt;第一，typed-decisions 的 0.766 来自专门微调过的 laya-typed-decisions，不是默认基础模型的零样本成绩。仓库里基础模型在这组任务上只有约 0.34，低于多数类基线。&lt;/p&gt;
-&lt;p&gt;第二，准确率和概率质量不是一回事。Laya 微调版在某组测试中的最终选项准确率高于 Jev 引用值，但软分布匹配反而更低。要拿概率做自动放行，就不能只看“选中了谁”，还要看概率是否经过校准。&lt;/p&gt;
-&lt;p&gt;所以，文章里可以说“Laya 在部分公开任务上有竞争力”，不能简单写成“全面超过 Jev”。&lt;/p&gt;
-&lt;h2 id="它适合放在什么位置"&gt;它适合放在什么位置
-&lt;/h2&gt;&lt;p&gt;我觉得最实际的接法有三种：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;入口分流&lt;/strong&gt;：先把请求分成账单、技术、销售，再交给对应流程。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;RAG 过滤&lt;/strong&gt;：检索拿到候选段落后，先判断哪些段落真的相关，再送给生成模型。向量库、引用和最终回答仍由你的系统负责。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Agent 闸门&lt;/strong&gt;：判断是否需要工具、是否有风险、是否必须人工确认。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;如果想用它来节省 token，关键不是“让 Laya 替代大模型”，而是让一些请求根本不用走最贵的路径。前提是 Laya 本地运行足够便宜，而且路由结果能改变后续流程。每次请求都先远程调用一次 Laya，再调用大模型，收益可能就不明显了。&lt;/p&gt;
-&lt;p&gt;和 Codex 配合也一样：Codex 可以帮你写接入代码，但 Laya 不会自动接管 Codex 的内部模型选择。你需要自己提供 Python 服务、HTTP 接口或 MCP 工具，把 Laya 的结果交给调度层。&lt;/p&gt;
-&lt;h2 id="最后怎么评价它"&gt;最后怎么评价它
-&lt;/h2&gt;&lt;p&gt;Laya 更像一个可以自己部署、自己微调的判断模型底座，不是完整的 Agent 平台，也不是 GPT 的替代品。它最适合固定问题、有限选项、请求量较大，而且你愿意准备数据和验证集的场景。&lt;/p&gt;
-&lt;p&gt;Jev 更像开箱即用的托管服务：不用管权重和显存，输入空间也更宽，但结果依赖远程 API，模型版本和成本由服务方控制。&lt;/p&gt;
-&lt;p&gt;如果只是想试一下 System One 这种“只返回判断、不生成文字”的思路，Laya 很适合读源码。真正接入生产环境前，我会先拿自己的请求测试三件事：截断会不会影响结果、低置信度能不能真的筛出风险、模型冷启动和常驻内存是否能接受。&lt;/p&gt;
-&lt;p&gt;先把一个具体判断测清楚，再决定要不要把它放进整套 Agent。&lt;/p&gt;</description></item></channel></rss>
+>&lt;/p>
+&lt;h2 id="先跑一个小例子">先跑一个小例子
+&lt;/h2>&lt;p>Laya 的调用始终围绕两个东西：要判断的 state，以及问题 questions。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">laya&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">agent&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">laya&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">load&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;convaiinnovations/laya&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">subfolder&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;multilingual&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">agent&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">predict&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>&lt;span class="s2">&amp;#34;message&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;同一笔订单扣了两次钱，请今天帮我退款。&amp;#34;&lt;/span>&lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;team&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;type&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;choice&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;instructions&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Which team should handle this message?&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;criteria&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;billing&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;charges, invoices, refunds&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;technical&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;bugs and outages&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;sales&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;pricing and purchases&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;other&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;none of the above&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;refund_requested&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;type&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;noul&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;instructions&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Does the message explicitly request a refund?&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">result&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;answers&amp;#34;&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="s2">&amp;#34;team&amp;#34;&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="s2">&amp;#34;choice&amp;#34;&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">result&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;answers&amp;#34;&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="s2">&amp;#34;refund_requested&amp;#34;&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="s2">&amp;#34;noul&amp;#34;&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>choice 是从几个选项里选一个，noul 是判断一个命题为真的概率，另外还有按等级评分的 score。一批问题可以一起提交，但它们互相看不到答案；如果第二个问题依赖第一个结果，就由业务代码再发起下一步。&lt;/p>
+&lt;p>这里有个容易误会的地方：score 的结果是等级索引的加权平均，不是测量出来的真实数值。比如三个等级的概率是 [0.1, 0.3, 0.6]，分数是 1.5，它只能说明结果更靠近高等级，不能直接解释成“75% 紧急”或“还剩几小时”。&lt;/p>
+&lt;h2 id="它在模型里做了什么">它在模型里做了什么
+&lt;/h2>&lt;p>Laya 的核心代码在 laya/agent.py 和 laya/common.py。&lt;/p>
+&lt;p>调用时，程序会把问题说明、候选答案和 state 拼成一条输入。每个候选答案前面留一个标记，双向 Transformer 读完整条序列后，scorer 只在这些标记位置上打分。最后再把分数转成概率。&lt;/p>
+&lt;p>大致可以画成：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">问题说明 + 候选项 + state
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ↓
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Encoder
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ↓
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 给每个候选项打分
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ↓
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 概率和结果
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>它不生成自然语言，所以没有“生成一段 JSON，再尝试解析”的步骤。这样确实让接口更稳定，但不代表判断就一定正确。它仍然可能把一封退款邮件分到技术组，只是返回的格式不会突然变成一段解释文字。&lt;/p>
+&lt;h3 id="一次调用不等于只算一次正文">一次调用不等于只算一次正文
+&lt;/h3>&lt;p>代码会为每个问题各自拼一条序列，然后把这些序列组成 batch，一次送进模型。&lt;/p>
+&lt;p>所以，同一封邮件问十个问题，并不是“正文只编码一次，十个问题免费复用”；实际是十条输入一起算，只是批处理比十次完全独立调用更高效。仓库在 T4 上测到多语言模型单问题约 32.8ms，十个问题约 72.3ms。这个数字是作者的测试环境，不能直接当成你电脑上的保证。&lt;/p>
+&lt;h2 id="router-到底路由什么">Router 到底路由什么
+&lt;/h2>&lt;p>Laya 里有两个容易混淆的名字：&lt;/p>
+&lt;ul>
+&lt;li>Router：在 Laya 自己的几个 checkpoint 之间选择；&lt;/li>
+&lt;li>router_questions()：一组“请求属于什么领域、难度如何”的问题模板。&lt;/li>
+&lt;/ul>
+&lt;p>Router 不会替你选择 GPT、Claude 或 Codex。它现在主要在三个 checkpoint 之间选：&lt;/p>
+&lt;ul>
+&lt;li>laya：英语，ModernBERT-large；&lt;/li>
+&lt;li>laya-multilingual：多语言，mmBERT-base；&lt;/li>
+&lt;li>laya-typed-decisions：针对四类业务流程微调的版本。&lt;/li>
+&lt;/ul>
+&lt;p>它的语言判断不是再调用一个模型。laya/lang.py 会统计 Unicode 字符，先判断文字系统；如果是拉丁文字，再用停用词和变音符号猜测部分语言。检测到中文、日文、阿拉伯文等，就会倾向多语言 checkpoint。&lt;/p>
+&lt;p>这一步很有必要。仓库的测试里，英文模型遇到非英语文字时可能“很自信地答错”，所以不能等模型输出一个低置信度再补救，应该先决定用哪个模型。&lt;/p>
+&lt;p>默认的 Router() 还会懒加载模型，并用 LRU 控制内存。如果中英文请求交替到来，模型可能反复卸载和加载；服务端通常应该预加载需要的 checkpoint。typed-decisions 也不是默认自动选择的，除非你显式指定，或者开启代码里那几个固定问题 ID 的识别。&lt;/p>
+&lt;h2 id="confidence-不是正确率">confidence 不是“正确率”
+&lt;/h2>&lt;p>Laya 的 choice 和 score 会返回 probabilities 和 confidence。代码里的 confidence 是根据概率分布的熵算出来的：概率越集中，数值越高；几个选项差不多，数值越低。&lt;/p>
+&lt;p>它不是最高选项的概率，也不是“这次答对的概率”。二选一给出 [0.9, 0.1] 时，按 Laya 的公式，confidence 约为 0.53，不会直接返回 0.9。noul 又是另一种形式，直接返回“为真”的概率。&lt;/p>
+&lt;p>因此，不能把所有问题都套一个 0.85 阈值。退款、删数据、改权限这类操作，应该用自己的验证集确定门槛，低置信度进入人工或大模型复核。仓库也明确提到基础模型存在过度自信，需要重新做 temperature calibration。&lt;/p>
+&lt;p>另外，代码里有个 act_head，会返回 act_probability。当前实现只是把这个值放在结果里，并没有替你执行动作，也不能因为字段名字像“是否行动”就把它当成生产开关。&lt;/p>
+&lt;h2 id="laya-和-jev区别不只是一个开源一个闭源">Laya 和 Jev，区别不只是“一个开源一个闭源”
+&lt;/h2>&lt;p>两者的接口思路很像：给 state 和 questions，支持 choice、score、noul，一次请求回答多个问题。这也是它们经常被放在一起比较的原因。&lt;/p>
+&lt;p>但使用时差别很明显：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>项目&lt;/th>
+&lt;th>Laya&lt;/th>
+&lt;th>Jev&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>运行方式&lt;/td>
+&lt;td>下载 Hugging Face 权重，本地 Python/PyTorch 推理&lt;/td>
+&lt;td>调用 TypeSafe 托管 API&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>能否看实现&lt;/td>
+&lt;td>编码器、打分头、训练 notebook 都在仓库里&lt;/td>
+&lt;td>官方没有公开可逐层核对的模型实现&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>适配业务&lt;/td>
+&lt;td>改问题，也可以自己微调 checkpoint&lt;/td>
+&lt;td>主要通过 state、instructions、criteria 适配，官方不提供客户级 LoRA&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>上下文&lt;/td>
+&lt;td>常见配置为 512 或 1024 token，问题和正文共用预算&lt;/td>
+&lt;td>官方文档给出 64k 请求上限，state 还有单独限制&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Choice 选项&lt;/td>
+&lt;td>默认选项预算较紧，仓库建议控制在约 20 个以内&lt;/td>
+&lt;td>API 最多 255 个选项&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>运维&lt;/td>
+&lt;td>自己负责权重、显存、并发、冷启动&lt;/td>
+&lt;td>不维护模型，但要处理 API key、网络、限流和版本&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>成本&lt;/td>
+&lt;td>自托管没有调用费，但要承担机器成本&lt;/td>
+&lt;td>按输入 token 计费，输出 token 不单独计费&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Jev 的具体上限和接口可以看 &lt;a class="link" href="https://docs.typesafe.ai/models" target="_blank" rel="noopener"
+>官方 Models 文档&lt;/a> 与 &lt;a class="link" href="https://docs.typesafe.ai/api" target="_blank" rel="noopener"
+>API 文档&lt;/a>。Laya 的限制主要来自 build_sequence()：它会先给问题和候选项分配一段固定预算，剩下的才给正文。选项太多时，每个标签被压缩得很短，分类自然容易掉点。&lt;/p>
+&lt;p>Jev 的上下文更长，但也不是万能的。官方已经列出它在算术、日期比较、多步间接推理、无关长文本和对抗性内容上的问题。两者都有一个共同原则：能用代码准确算的事情，就不要交给模型。&lt;/p>
+&lt;h2 id="跑分应该怎样看">跑分应该怎样看
+&lt;/h2>&lt;p>Laya 仓库里有和 Jev 的对比表，但研究说明也写了限制：Jev 的数字来自第三方公开结果，Laya 没有在同一环境调用 Jev，因此不是严格的 A/B 测试。&lt;/p>
+&lt;p>还有两个容易被忽略的细节：&lt;/p>
+&lt;p>第一，typed-decisions 的 0.766 来自专门微调过的 laya-typed-decisions，不是默认基础模型的零样本成绩。仓库里基础模型在这组任务上只有约 0.34，低于多数类基线。&lt;/p>
+&lt;p>第二，准确率和概率质量不是一回事。Laya 微调版在某组测试中的最终选项准确率高于 Jev 引用值，但软分布匹配反而更低。要拿概率做自动放行，就不能只看“选中了谁”，还要看概率是否经过校准。&lt;/p>
+&lt;p>所以，文章里可以说“Laya 在部分公开任务上有竞争力”，不能简单写成“全面超过 Jev”。&lt;/p>
+&lt;h2 id="它适合放在什么位置">它适合放在什么位置
+&lt;/h2>&lt;p>我觉得最实际的接法有三种：&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>入口分流&lt;/strong>：先把请求分成账单、技术、销售，再交给对应流程。&lt;/li>
+&lt;li>&lt;strong>RAG 过滤&lt;/strong>：检索拿到候选段落后，先判断哪些段落真的相关，再送给生成模型。向量库、引用和最终回答仍由你的系统负责。&lt;/li>
+&lt;li>&lt;strong>Agent 闸门&lt;/strong>：判断是否需要工具、是否有风险、是否必须人工确认。&lt;/li>
+&lt;/ol>
+&lt;p>如果想用它来节省 token，关键不是“让 Laya 替代大模型”，而是让一些请求根本不用走最贵的路径。前提是 Laya 本地运行足够便宜，而且路由结果能改变后续流程。每次请求都先远程调用一次 Laya，再调用大模型，收益可能就不明显了。&lt;/p>
+&lt;p>和 Codex 配合也一样：Codex 可以帮你写接入代码，但 Laya 不会自动接管 Codex 的内部模型选择。你需要自己提供 Python 服务、HTTP 接口或 MCP 工具，把 Laya 的结果交给调度层。&lt;/p>
+&lt;h2 id="最后怎么评价它">最后怎么评价它
+&lt;/h2>&lt;p>Laya 更像一个可以自己部署、自己微调的判断模型底座，不是完整的 Agent 平台，也不是 GPT 的替代品。它最适合固定问题、有限选项、请求量较大，而且你愿意准备数据和验证集的场景。&lt;/p>
+&lt;p>Jev 更像开箱即用的托管服务：不用管权重和显存，输入空间也更宽，但结果依赖远程 API，模型版本和成本由服务方控制。&lt;/p>
+&lt;p>如果只是想试一下 System One 这种“只返回判断、不生成文字”的思路，Laya 很适合读源码。真正接入生产环境前，我会先拿自己的请求测试三件事：截断会不会影响结果、低置信度能不能真的筛出风险、模型冷启动和常驻内存是否能接受。&lt;/p>
+&lt;p>先把一个具体判断测清楚，再决定要不要把它放进整套 Agent。&lt;/p></description></item></channel></rss>
