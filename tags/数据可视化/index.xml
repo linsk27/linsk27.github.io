@@ -1,37 +1,37 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>数据可视化 on 404_@林达</title><link>https://linsk27.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/</link><description>Recent content in 数据可视化 on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Thu, 28 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/index.xml" rel="self" type="application/rss+xml"/><item><title>feidu 智慧社区数据大屏</title><link>https://linsk27.github.io/projects/feidu/</link><pubDate>Sun, 30 Mar 2025 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/feidu/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/feidu-smart-community-dashboard.jpg" alt="Featured image of post feidu 智慧社区数据大屏" /&gt;&lt;p&gt;feidu 是一个 Nuxt 3、Vue、Tailwind CSS 和 ECharts 组成的智慧社区数据大屏项目。它把社区管理、安防监控、CIM 平台、能源检测和节能分析集中在一个可视化界面里，适合展示智慧社区、园区管理、安防运维和能源数据看板类项目的前端实现方式。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/feidu-smart-community-dashboard.jpg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>数据可视化 on 404_@林达</title><link>https://linsk27.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/</link><description>Recent content in 数据可视化 on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Thu, 28 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/index.xml" rel="self" type="application/rss+xml"/><item><title>feidu 智慧社区数据大屏</title><link>https://linsk27.github.io/projects/feidu/</link><pubDate>Sun, 30 Mar 2025 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/feidu/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/feidu-smart-community-dashboard.jpg" alt="Featured image of post feidu 智慧社区数据大屏" />&lt;p>feidu 是一个 Nuxt 3、Vue、Tailwind CSS 和 ECharts 组成的智慧社区数据大屏项目。它把社区管理、安防监控、CIM 平台、能源检测和节能分析集中在一个可视化界面里，适合展示智慧社区、园区管理、安防运维和能源数据看板类项目的前端实现方式。&lt;/p>
+&lt;p>&lt;img src="https://linsk27.github.io/img/projects/feidu-smart-community-dashboard.jpg"
 loading="lazy"
 alt="feidu smart community dashboard"
-&gt;&lt;/p&gt;
-&lt;h2 id="适合谁"&gt;适合谁
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;想参考智慧社区、智慧园区或数据大屏界面实现的人。&lt;/li&gt;
-&lt;li&gt;想学习 Nuxt 3、Vue、Tailwind CSS 和 ECharts 组合方式的人。&lt;/li&gt;
-&lt;li&gt;需要安防监控、CIM 平台、能源检测、节能分析等可视化页面结构的人。&lt;/li&gt;
-&lt;li&gt;想看真实线上演示，而不是只看静态截图的前端学习者。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="项目价值"&gt;项目价值
-&lt;/h2&gt;&lt;p&gt;feidu 的价值在于它不是单个图表练习，而是把多种业务模块组织成一个完整大屏：左侧展示安防概况、摄像头监控和报警信息，中间展示城市 / 社区 CIM 场景，右侧展示舒适度、能耗、系统能效和机组运行状态。底部还提供社区管理、安保监控、CIM 平台、能源检测和节能分析等模块切换入口。&lt;/p&gt;
-&lt;p&gt;如果你搜索的是 smart community dashboard、Vue ECharts dashboard、Nuxt 3 data visualization、security monitoring dashboard、energy monitoring dashboard 或 CIM platform UI，这个项目可以作为一个可运行的前端大屏参考。&lt;/p&gt;
-&lt;h2 id="技术方向"&gt;技术方向
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Nuxt 3&lt;/li&gt;
-&lt;li&gt;Vue&lt;/li&gt;
-&lt;li&gt;Tailwind CSS&lt;/li&gt;
-&lt;li&gt;ECharts&lt;/li&gt;
-&lt;li&gt;Element Plus&lt;/li&gt;
-&lt;li&gt;数据可视化大屏&lt;/li&gt;
-&lt;li&gt;智慧社区界面&lt;/li&gt;
-&lt;li&gt;安防监控看板&lt;/li&gt;
-&lt;li&gt;能源监测与节能分析&lt;/li&gt;
-&lt;li&gt;CIM 平台前端展示&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="项目入口"&gt;项目入口
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk27/feidu" target="_blank" rel="noopener"
-&gt;linsk27/feidu&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;线上演示：&lt;a class="link" href="https://feidu-murex.vercel.app" target="_blank" rel="noopener"
-&gt;feidu-murex.vercel.app&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;如果这个智慧社区数据大屏对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续完善项目文档、模块说明和线上演示体验的主要信号。&lt;/p&gt;</description></item></channel></rss>
+>&lt;/p>
+&lt;h2 id="适合谁">适合谁
+&lt;/h2>&lt;ul>
+&lt;li>想参考智慧社区、智慧园区或数据大屏界面实现的人。&lt;/li>
+&lt;li>想学习 Nuxt 3、Vue、Tailwind CSS 和 ECharts 组合方式的人。&lt;/li>
+&lt;li>需要安防监控、CIM 平台、能源检测、节能分析等可视化页面结构的人。&lt;/li>
+&lt;li>想看真实线上演示，而不是只看静态截图的前端学习者。&lt;/li>
+&lt;/ul>
+&lt;h2 id="项目价值">项目价值
+&lt;/h2>&lt;p>feidu 的价值在于它不是单个图表练习，而是把多种业务模块组织成一个完整大屏：左侧展示安防概况、摄像头监控和报警信息，中间展示城市 / 社区 CIM 场景，右侧展示舒适度、能耗、系统能效和机组运行状态。底部还提供社区管理、安保监控、CIM 平台、能源检测和节能分析等模块切换入口。&lt;/p>
+&lt;p>如果你搜索的是 smart community dashboard、Vue ECharts dashboard、Nuxt 3 data visualization、security monitoring dashboard、energy monitoring dashboard 或 CIM platform UI，这个项目可以作为一个可运行的前端大屏参考。&lt;/p>
+&lt;h2 id="技术方向">技术方向
+&lt;/h2>&lt;ul>
+&lt;li>Nuxt 3&lt;/li>
+&lt;li>Vue&lt;/li>
+&lt;li>Tailwind CSS&lt;/li>
+&lt;li>ECharts&lt;/li>
+&lt;li>Element Plus&lt;/li>
+&lt;li>数据可视化大屏&lt;/li>
+&lt;li>智慧社区界面&lt;/li>
+&lt;li>安防监控看板&lt;/li>
+&lt;li>能源监测与节能分析&lt;/li>
+&lt;li>CIM 平台前端展示&lt;/li>
+&lt;/ul>
+&lt;h2 id="项目入口">项目入口
+&lt;/h2>&lt;ul>
+&lt;li>GitHub 仓库：&lt;a class="link" href="https://github.com/linsk27/feidu" target="_blank" rel="noopener"
+>linsk27/feidu&lt;/a>&lt;/li>
+&lt;li>线上演示：&lt;a class="link" href="https://feidu-murex.vercel.app" target="_blank" rel="noopener"
+>feidu-murex.vercel.app&lt;/a>&lt;/li>
+&lt;li>项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" >linsk27 Projects&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>如果这个智慧社区数据大屏对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续完善项目文档、模块说明和线上演示体验的主要信号。&lt;/p></description></item></channel></rss>
