@@ -1,53 +1,53 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>安全检查 on 404_@林达</title><link>https://linsk27.github.io/tags/%E5%AE%89%E5%85%A8%E6%A3%80%E6%9F%A5/</link><description>Recent content in 安全检查 on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Fri, 28 Aug 2026 02:49:52 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/%E5%AE%89%E5%85%A8%E6%A3%80%E6%9F%A5/index.xml" rel="self" type="application/rss+xml"/><item><title>ProofPR：AI 让写 PR 变快，但 review 没变便宜</title><link>https://linsk27.github.io/projects/proofpr/</link><pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/proofpr/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/proofpr-github-action-pr-review-report.png" alt="Featured image of post ProofPR：AI 让写 PR 变快，但 review 没变便宜" /&gt;&lt;p&gt;AI 让写 Pull Request 变快了，但没有让 review 变便宜。很多 PR 最大的问题不是代码一定错，而是没有复现、没有测试、没有截图，也没解释为什么要改权限。ProofPR 先检查这些“应该随改动一起出现的证据”，再把 PR 交给人看。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/proofpr-github-action-pr-review-report.png"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>安全检查 on 404_@林达</title><link>https://linsk27.github.io/tags/%E5%AE%89%E5%85%A8%E6%A3%80%E6%9F%A5/</link><description>Recent content in 安全检查 on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Fri, 28 Aug 2026 02:49:52 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/%E5%AE%89%E5%85%A8%E6%A3%80%E6%9F%A5/index.xml" rel="self" type="application/rss+xml"/><item><title>ProofPR：AI 让写 PR 变快，但 review 没变便宜</title><link>https://linsk27.github.io/projects/proofpr/</link><pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/proofpr/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/proofpr-github-action-pr-review-report.png" alt="Featured image of post ProofPR：AI 让写 PR 变快，但 review 没变便宜" />&lt;p>AI 让写 Pull Request 变快了，但没有让 review 变便宜。很多 PR 最大的问题不是代码一定错，而是没有复现、没有测试、没有截图，也没解释为什么要改权限。ProofPR 先检查这些“应该随改动一起出现的证据”，再把 PR 交给人看。&lt;/p>
+&lt;p>&lt;img src="https://linsk27.github.io/img/projects/proofpr-github-action-pr-review-report.png"
 loading="lazy"
 alt="ProofPR 在 GitHub Action 中生成的审查报告"
-&gt;&lt;/p&gt;
-&lt;p&gt;先说清楚：ProofPR 不是 AI code reviewer，运行时也不调用大模型。它不猜代码是不是 AI 写的，不理解你的业务逻辑，更不会替维护者判断实现是否正确。它做的是一套可解释、可重复的初筛。&lt;/p&gt;
-&lt;h2 id="一个-pr-是怎样被处理的"&gt;一个 PR 是怎样被处理的
-&lt;/h2&gt;&lt;p&gt;在本地 CLI 中，ProofPR 从 Git 读取 unified diff；在 GitHub Action 中，它会读取 PR diff、标题、正文和仓库里的 &lt;code&gt;.proofpr.yml&lt;/code&gt;。之后的数据处理也是确定性的。&lt;/p&gt;
-&lt;p&gt;diff 会先被解析成带路径和新增行位置的 change set，PR 标题与正文则单独提取测试、复现、截图和风险说明；&lt;code&gt;.proofpr.yml&lt;/code&gt; 不进入 diff parser，而是在配置校验后控制规则、Evidence Contract、preset 与阈值。三类输入只在确定性规则引擎里汇合。&lt;/p&gt;
-&lt;p&gt;规则会关注改动规模、敏感路径、测试缺失、描述过薄、疑似 secret、依赖版本与 lockfile、GitHub Actions 权限、&lt;code&gt;pull_request_target&lt;/code&gt;、不可信 checkout 和 MCP 凭据等信号。最后分别计算风险分与证据分，并给出四种 gate：&lt;code&gt;ready&lt;/code&gt;、&lt;code&gt;review-carefully&lt;/code&gt;、&lt;code&gt;needs-evidence&lt;/code&gt; 或 &lt;code&gt;block-merge&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;这不是在说 &lt;code&gt;block-merge&lt;/code&gt; 的 PR 一定有漏洞，而是在提醒维护者：现有证据不足，或者风险已经高到不该直接合并。&lt;/p&gt;
-&lt;h2 id="evidence-contract-比一套规则管所有仓库更实用"&gt;Evidence Contract 比“一套规则管所有仓库”更实用
-&lt;/h2&gt;&lt;p&gt;不同目录需要的证据不一样。改 UI 时，截图很有用；改 workflow 时，更应该说明权限为什么增加；改可复现 bug 时，验证步骤比一张绿勾更重要。&lt;/p&gt;
-&lt;p&gt;ProofPR 的 Evidence Contract 可以按路径声明要求，例如：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;span class="lnt"&gt;6
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;evidence&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;contracts&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="nt"&gt;id&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;ui-screenshot&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;paths&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;src/ui/**&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;requires&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;screenshot&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;verification&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;severity&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;medium&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;这样维护者检查的不是“正文够不够长”，而是这类改动有没有带上真正有用的材料。规则命中后也能看到具体原因，不需要猜评分从哪里来。&lt;/p&gt;
-&lt;h2 id="为什么故意不用-llm"&gt;为什么故意不用 LLM
-&lt;/h2&gt;&lt;p&gt;这里不用模型不是因为 AI 没价值，而是 PR gate 更看重稳定和可追溯：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;不需要 API Key，也不会把 diff 发送给第三方模型服务；&lt;/li&gt;
-&lt;li&gt;相同输入得到相同结果，方便复现 benchmark；&lt;/li&gt;
-&lt;li&gt;每条发现都能回到具体规则和证据；适用时还会标出文件与新增行；&lt;/li&gt;
-&lt;li&gt;维护者可以在配置里明确调整阈值，而不是修改提示词碰运气。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;ProofPR 也不会查询完整漏洞数据库。依赖漏洞仍然更适合交给 OSV、Dependabot 等专用工具；它关注的是“这个依赖改动有没有说清楚、有没有锁定、生命周期和来源是否可疑”。&lt;/p&gt;
-&lt;h2 id="代码是怎么拆的"&gt;代码是怎么拆的
-&lt;/h2&gt;&lt;p&gt;项目使用 pnpm monorepo。&lt;code&gt;@proof-pr/core&lt;/code&gt; 负责 TypeScript 规则引擎、配置校验和报告模型；CLI 用 Commander 读取本地 Git；GitHub Action 使用 GitHub Actions Toolkit 获取 PR 上下文并发布结果。Zod、YAML 和 Picomatch 负责配置与路径匹配，Vitest 与 benchmark 用来锁定规则行为。&lt;/p&gt;
-&lt;p&gt;当前仓库的 benchmark 覆盖 22 个固定案例。这个数字本身不代表工具已经“识别所有风险”，它的价值是：新增或修改规则时，能立刻知道旧案例有没有被破坏。&lt;/p&gt;
-&lt;p&gt;ProofPR 也是我围绕“先补审查证据”这个问题自行设计的项目，不是某个 reviewer 仓库的换皮。开发和测试过程中，我会借助 AI 做规则梳理、重构和文档辅助；但发布后的扫描器不调用模型，阈值、评分和输出都留在可查看、可复现的代码里。&lt;/p&gt;
-&lt;h2 id="它适不适合你的仓库"&gt;它适不适合你的仓库
-&lt;/h2&gt;&lt;p&gt;如果仓库经常接收外部贡献，或者团队已经觉得 PR review 被重复检查拖慢，它会比较有用。若只是一个人写、一个人合并的小项目，维护这套 gate 可能反而比手动看两眼更重。工具存在的意义不是给每个 PR 多加一盏红灯，而是把有限的 review 时间留给真正需要人判断的部分。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk-labs/proof-pr" target="_blank" rel="noopener"
-&gt;linsk-labs/proof-pr&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item></channel></rss>
+>&lt;/p>
+&lt;p>先说清楚：ProofPR 不是 AI code reviewer，运行时也不调用大模型。它不猜代码是不是 AI 写的，不理解你的业务逻辑，更不会替维护者判断实现是否正确。它做的是一套可解释、可重复的初筛。&lt;/p>
+&lt;h2 id="一个-pr-是怎样被处理的">一个 PR 是怎样被处理的
+&lt;/h2>&lt;p>在本地 CLI 中，ProofPR 从 Git 读取 unified diff；在 GitHub Action 中，它会读取 PR diff、标题、正文和仓库里的 &lt;code>.proofpr.yml&lt;/code>。之后的数据处理也是确定性的。&lt;/p>
+&lt;p>diff 会先被解析成带路径和新增行位置的 change set，PR 标题与正文则单独提取测试、复现、截图和风险说明；&lt;code>.proofpr.yml&lt;/code> 不进入 diff parser，而是在配置校验后控制规则、Evidence Contract、preset 与阈值。三类输入只在确定性规则引擎里汇合。&lt;/p>
+&lt;p>规则会关注改动规模、敏感路径、测试缺失、描述过薄、疑似 secret、依赖版本与 lockfile、GitHub Actions 权限、&lt;code>pull_request_target&lt;/code>、不可信 checkout 和 MCP 凭据等信号。最后分别计算风险分与证据分，并给出四种 gate：&lt;code>ready&lt;/code>、&lt;code>review-carefully&lt;/code>、&lt;code>needs-evidence&lt;/code> 或 &lt;code>block-merge&lt;/code>。&lt;/p>
+&lt;p>这不是在说 &lt;code>block-merge&lt;/code> 的 PR 一定有漏洞，而是在提醒维护者：现有证据不足，或者风险已经高到不该直接合并。&lt;/p>
+&lt;h2 id="evidence-contract-比一套规则管所有仓库更实用">Evidence Contract 比“一套规则管所有仓库”更实用
+&lt;/h2>&lt;p>不同目录需要的证据不一样。改 UI 时，截图很有用；改 workflow 时，更应该说明权限为什么增加；改可复现 bug 时，验证步骤比一张绿勾更重要。&lt;/p>
+&lt;p>ProofPR 的 Evidence Contract 可以按路径声明要求，例如：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">evidence&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">contracts&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">id&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">ui-screenshot&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">paths&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;src/ui/**&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">requires&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;screenshot&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;verification&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">severity&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">medium&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这样维护者检查的不是“正文够不够长”，而是这类改动有没有带上真正有用的材料。规则命中后也能看到具体原因，不需要猜评分从哪里来。&lt;/p>
+&lt;h2 id="为什么故意不用-llm">为什么故意不用 LLM
+&lt;/h2>&lt;p>这里不用模型不是因为 AI 没价值，而是 PR gate 更看重稳定和可追溯：&lt;/p>
+&lt;ul>
+&lt;li>不需要 API Key，也不会把 diff 发送给第三方模型服务；&lt;/li>
+&lt;li>相同输入得到相同结果，方便复现 benchmark；&lt;/li>
+&lt;li>每条发现都能回到具体规则和证据；适用时还会标出文件与新增行；&lt;/li>
+&lt;li>维护者可以在配置里明确调整阈值，而不是修改提示词碰运气。&lt;/li>
+&lt;/ul>
+&lt;p>ProofPR 也不会查询完整漏洞数据库。依赖漏洞仍然更适合交给 OSV、Dependabot 等专用工具；它关注的是“这个依赖改动有没有说清楚、有没有锁定、生命周期和来源是否可疑”。&lt;/p>
+&lt;h2 id="代码是怎么拆的">代码是怎么拆的
+&lt;/h2>&lt;p>项目使用 pnpm monorepo。&lt;code>@proof-pr/core&lt;/code> 负责 TypeScript 规则引擎、配置校验和报告模型；CLI 用 Commander 读取本地 Git；GitHub Action 使用 GitHub Actions Toolkit 获取 PR 上下文并发布结果。Zod、YAML 和 Picomatch 负责配置与路径匹配，Vitest 与 benchmark 用来锁定规则行为。&lt;/p>
+&lt;p>当前仓库的 benchmark 覆盖 22 个固定案例。这个数字本身不代表工具已经“识别所有风险”，它的价值是：新增或修改规则时，能立刻知道旧案例有没有被破坏。&lt;/p>
+&lt;p>ProofPR 也是我围绕“先补审查证据”这个问题自行设计的项目，不是某个 reviewer 仓库的换皮。开发和测试过程中，我会借助 AI 做规则梳理、重构和文档辅助；但发布后的扫描器不调用模型，阈值、评分和输出都留在可查看、可复现的代码里。&lt;/p>
+&lt;h2 id="它适不适合你的仓库">它适不适合你的仓库
+&lt;/h2>&lt;p>如果仓库经常接收外部贡献，或者团队已经觉得 PR review 被重复检查拖慢，它会比较有用。若只是一个人写、一个人合并的小项目，维护这套 gate 可能反而比手动看两眼更重。工具存在的意义不是给每个 PR 多加一盏红灯，而是把有限的 review 时间留给真正需要人判断的部分。&lt;/p>
+&lt;ul>
+&lt;li>GitHub 仓库：&lt;a class="link" href="https://github.com/linsk-labs/proof-pr" target="_blank" rel="noopener"
+>linsk-labs/proof-pr&lt;/a>&lt;/li>
+&lt;li>项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" >404_@林达 Projects&lt;/a>&lt;/li>
+&lt;/ul></description></item></channel></rss>

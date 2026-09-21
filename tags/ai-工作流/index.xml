@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI 工作流 on 404_@林达</title><link>https://linsk27.github.io/tags/ai-%E5%B7%A5%E4%BD%9C%E6%B5%81/</link><description>Recent content in AI 工作流 on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Wed, 26 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/tags/ai-%E5%B7%A5%E4%BD%9C%E6%B5%81/index.xml" rel="self" type="application/rss+xml"/><item><title>竞见：把零散外宣材料变成可追溯的竞品情报</title><link>https://linsk27.github.io/projects/jingjian-competitor-intelligence/</link><pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/jingjian-competitor-intelligence/</guid><description>&lt;p&gt;做竞品研究时，真正麻烦的通常不是“网上没有信息”，而是信息散在公众号、活动页、小红书、官网新闻和同事手里的截图里。链接会失效，同一场活动会被不同平台重复转载，表格里的机构名称也经常不统一。等到要写月报时，大家又要重新确认：这句话来自哪一条素材，是事实、推断，还是模型自己补出来的？&lt;/p&gt;
+&lt;p&gt;竞见就是围绕这条链路做的一套留学行业竞品外宣情报工作台。它把单条投递、批量导入、公开网页监测、人工审核、结构化分析和报告选材放进同一个系统里，并尽量让每个结论都能回到原始链接、正文、截图和稳定的证据编号。&lt;/p&gt;
+&lt;h2 id="先把智能体的定位说准确"&gt;先把“智能体”的定位说准确
+&lt;/h2&gt;&lt;p&gt;竞见不是一个会自己拆任务、反复规划、长期记忆和自由调用工具的多智能体框架。当前代码里没有 Planner、ReAct 循环、向量知识库或多角色协作。AI 只出现在两条受控流程中：一条负责搜索最近的公开外宣动态，另一条负责把单条素材整理成固定结构的分析结果。&lt;/p&gt;
+&lt;p&gt;它的主链路更接近下面这样：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;人工投递 / CSV、XLSX / 手动公开监测
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 机构映射、字段清洗、确定性查重
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 待审核线索 → 正式素材库
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 原始证据 + 附件 + EVD 证据编号
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 内部 AI / 规则降级 / 外部 AI 结果回填
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 分析版本、人工复核、报告选材
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这里最重要的不是让模型“更自主”，而是限制模型只能在有来源、有状态、有人工确认的位置工作。系统本身负责数据一致性、权限边界、版本和失败处理，模型只负责它擅长的提取与归纳。&lt;/p&gt;
+&lt;h2 id="一条外宣素材怎样进入证据库"&gt;一条外宣素材怎样进入证据库
+&lt;/h2&gt;&lt;p&gt;首页投递不是点一下就直接写数据库。用户先填写机构，并提供链接、正文或附件，然后调用预览接口。系统会尝试把机构名称映射到标准机构或别名，再推断平台、生成建议标签并检查重复。&lt;/p&gt;
+&lt;p&gt;查重没有依赖模型，而是用了几组可以复现的规则：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;URL 会移除锚点和 &lt;code&gt;utm_*&lt;/code&gt;、&lt;code&gt;spm&lt;/code&gt;、&lt;code&gt;from&lt;/code&gt; 等追踪参数，再统一主机名、路径和查询参数顺序；&lt;/li&gt;
+&lt;li&gt;标题与正文标准化后计算 SHA-256，用来识别内容相同但链接不同的记录；&lt;/li&gt;
+&lt;li&gt;在同一机构下继续比较标题，补上人工复制内容时容易出现的重复；&lt;/li&gt;
+&lt;li&gt;发现重复后默认阻止入库，只有用户明确确认，才能把它保留成独立素材。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;正式入库时，每条素材都会得到一个 &lt;code&gt;EVD-...&lt;/code&gt; 证据编号。采集、审核、分析、人工复核和报告使用情况也不再挤在一个模糊的 &lt;code&gt;status&lt;/code&gt; 字段里，而是拆成五组状态。这样“已入库但未分析”“模型失败但规则结果可用”“已分析但还没人工确认”就不会被混成一件事。&lt;/p&gt;
+&lt;p&gt;截图、PDF、文本和 DOCX 等附件保存在 Supabase 私有 Storage 中。上传接口限制 MIME 类型和 20MB 大小，用随机对象名落盘；数据库写入失败时会把刚上传的对象清掉。查看详情时生成短期签名链接，而不是把 Bucket 公开成静态目录。&lt;/p&gt;
+&lt;h2 id="公开监测为什么先进入审核箱"&gt;公开监测为什么先进入审核箱
+&lt;/h2&gt;&lt;p&gt;监测任务在免费部署下采用手动触发。用户选择机构、地区和关键词后，服务端调用 OpenAI Responses API 的 &lt;code&gt;web_search&lt;/code&gt;，要求返回最近 30 天可核实的标题、URL、来源、平台、摘要和时间。&lt;/p&gt;
+&lt;p&gt;搜索结果不会直接变成正式素材。系统会先记录一次 &lt;code&gt;monitoring_runs&lt;/code&gt;，按标准化 URL 去重，再把最多 30 条结果写入 &lt;code&gt;raw_leads&lt;/code&gt;。之后用户在审核箱里逐条打开原始链接，修正机构、平台、标题和标签，并选择忽略、合并到已有素材、合并到宣传事件，或者确认入库。&lt;/p&gt;
+&lt;p&gt;这一步看起来比“自动抓取后直接分析”多了一道手续，但它解决了两个实际问题：公开搜索可能把转载当成新事件，也可能只拿到摘要而没有完整正文。把模型结果先当线索，而不是当事实，是这套系统最关键的边界之一。&lt;/p&gt;
+&lt;p&gt;如果没有配置 OpenAI、额度不足、地区不可用或响应格式解析失败，运行记录会保存明确错误码。页面会提示继续使用手工投递和批量导入，不会为了让看板好看而伪造一批“自动发现”。&lt;/p&gt;
+&lt;h2 id="ai-分析不是一次-json-写回就结束"&gt;AI 分析不是一次 JSON 写回就结束
+&lt;/h2&gt;&lt;p&gt;素材分析同样是一条单次、受约束的调用。Prompt 要求模型把结果拆成事实、内容标签、营销策略、目标客群、转化路径、策略信号、行动建议和证据编号，并明确样本不足时留空。&lt;/p&gt;
+&lt;p&gt;服务端不会直接相信模型返回的 JSON。解析后还会做一层收口：内容标签和营销策略只能落在预设白名单里，数组字段统一转换，置信度限制在 0 到 1，当前素材的证据编号也会强制写入结果。随后系统分别保存 &lt;code&gt;analysis_results&lt;/code&gt;、&lt;code&gt;analysis_versions&lt;/code&gt; 和 &lt;code&gt;analysis_evidence&lt;/code&gt;，记录模型名、Prompt 版本、结构化数据、错误和人工复核状态。&lt;/p&gt;
+&lt;p&gt;内部模型失败时，系统会运行一套简单的确定性规则。例如出现“白皮书、报告、活动、录取、限额、预约”等词时，生成低置信度的基础标签和待核建议。规则结果不会冒充模型成功：失败版本和规则版本会同时保留，素材状态也会标记为额度不足、模型不可用或分析失败。&lt;/p&gt;
+&lt;p&gt;这套实现没有 RAG，也没有把关系型数据库包装成“长期记忆”。它保存的是更朴素、也更容易审计的东西：原始材料、分析历史、证据关联和人工确认记录。&lt;/p&gt;
+&lt;h2 id="内部模型不可用也不把流程卡死"&gt;内部模型不可用，也不把流程卡死
+&lt;/h2&gt;&lt;p&gt;竞见里最有意思的部分，是外部 AI 的导出与回填。&lt;/p&gt;
+&lt;p&gt;用户可以按素材、机构、时间、导入批次或报告项目选择范围，生成一个 ZIP 交接包。里面不仅有一段提示词，还包含素材的 XLSX、Markdown 和 JSON 版本、机构背景、已有分析、回填模板、证据索引，以及已经入库的附件。单次同步请求最多处理 1,000 条素材，并把附件控制在大约 80MB；更大的任务需要按机构或时间拆分。&lt;/p&gt;
+&lt;p&gt;这个包可以交给 ChatGPT、Claude、Gemini、DeepSeek 或其他模型。外部模型完成后，用户把 XLSX 或 JSON 结果重新导入。系统按 &lt;code&gt;material_id&lt;/code&gt; 或 &lt;code&gt;evidence_id&lt;/code&gt; 匹配原素材，并把结果保存成 &lt;code&gt;external:&amp;lt;模型名&amp;gt;&lt;/code&gt; 的新版本。遇到冲突时默认两个版本并存，不覆盖原始素材，也不覆盖之前的内部分析。&lt;/p&gt;
+&lt;p&gt;这比在页面里塞一个聊天框更接近真实工作：模型可以替换，证据格式和回填契约保持稳定；在线 API 暂时不可用时，业务资料仍然能整理、审核和交接。&lt;/p&gt;
+&lt;h2 id="竞品档案和报告如何避免看起来很懂"&gt;竞品档案和报告如何避免“看起来很懂”
+&lt;/h2&gt;&lt;p&gt;竞品档案不是让模型凭空写一段机构画像，而是从已经入库的素材和宣传事件中聚合主题、平台、产品、客群和营销策略。趋势也使用可解释的简单口径：比较近 30 天与此前 60 天的月均数量；有效样本少于 4 条时，直接显示“数据不足”。&lt;/p&gt;
+&lt;p&gt;报告中心保存时间范围、机构范围、所选素材和“是否只使用已复核内容”。当前结构化草稿主要负责数据质量检查和章节骨架，章节仍会标记为 &lt;code&gt;needs_analysis&lt;/code&gt;，并没有假装已经生成一份成熟的长报告。项目级导出支持 Markdown、JSON 和 Excel；早期 DOCX、PPTX 生成路由继续保留，但与新的证据型报告项目分开。&lt;/p&gt;
+&lt;h2 id="为什么使用-nextjssupabase-和-vercel"&gt;为什么使用 Next.js、Supabase 和 Vercel
+&lt;/h2&gt;&lt;p&gt;前端和服务端放在同一个 Next.js 16 App Router 仓库中。React 页面负责九个工作区的交互，Route Handler 承担机构主数据、素材、审核、分析、导入导出和报告 API。这个拆法没有引入复杂的前端状态框架，页面直接读取各自的 API，规模不大时足够直白；代价是请求状态和错误处理分散在不同页面里。&lt;/p&gt;
+&lt;p&gt;业务数据使用 Supabase PostgreSQL，附件和导出包放在私有 Storage。页面与 API 一起部署在 Vercel，服务密钥只由服务端模块读取。仓库里仍保留早期 Cloudflare D1、R2、Vinext 和 Drizzle 原型，但它们已经从当前 TypeScript 生产构建中排除，不再是线上数据源。&lt;/p&gt;
+&lt;p&gt;项目也不是从空白开始手写所有界面，更不是把某个现成的竞品情报产品换了名字。第一版基于 &lt;a class="link" href="https://github.com/openai/sites/tree/main/packages/create-sites/templates/vinext" target="_blank" rel="noopener"
+&gt;OpenAI Sites 的 Vinext / Next.js 通用全栈脚手架&lt;/a&gt;，并借助 AI / Codex 很快搭出了可操作的前端原型，当时还有本地 &lt;code&gt;seed&lt;/code&gt; 数据和给 KPI 人为 &lt;code&gt;+20&lt;/code&gt;、&lt;code&gt;+15&lt;/code&gt; 的演示逻辑。后续工程化改造才把它迁到 Supabase，补上真实聚合、状态拆分、审核箱、证据编号、分析版本、批量导入和外部 AI 交接。AI 缩短了原型阶段，但把原型变成可运行系统，仍然依赖数据模型、失败路径、迁移和验证这些普通工程工作。&lt;/p&gt;
+&lt;h2 id="当前边界比功能清单更重要"&gt;当前边界比功能清单更重要
+&lt;/h2&gt;&lt;p&gt;目前版本适合单组织、可信成员使用的内部工作台，还不能当作安全完备的公开 SaaS。虽然 Supabase service role 没有进入浏览器、Storage 使用私有 Bucket，新表也启用了 RLS，但源码层还没有真正接入登录、组织隔离和路由权限校验。仓库里存在一份 ChatGPT 登录辅助代码，但当前页面和 API 并没有使用它。正式开放前，这部分必须先补齐。&lt;/p&gt;
+&lt;p&gt;另外还有几项明确限制：监测需要手动运行；模型调用没有完整的超时与重试策略；大 ZIP 和批量分析仍是同步任务；查重还没有向量语义相似度；社交平台登录态内容、OCR 和完整 E2E 测试也未完成。现有 5 个测试主要锁定架构约束和文件契约，不等于真实 Supabase API 已被自动化覆盖。&lt;/p&gt;
+&lt;p&gt;对我来说，竞见最值得保留的思路不是“给竞品研究加一个智能体”的说法，而是把 AI 放在证据、审核、版本和人工确认之间。模型可以失败，也可以更换；原始材料、判断依据和业务流程不能跟着一起消失。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;公开源码仓库：&lt;a class="link" href="https://github.com/ljrliangjingru15-creator/jingjian-competitor-intelligence" target="_blank" rel="noopener"
+&gt;jingjian-competitor-intelligence&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;线上部署：已经完成生产链路验证；认证与组织隔离补齐前，本文暂不放公开体验入口&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;上游 OpenAI Sites 使用 &lt;a class="link" href="https://github.com/openai/sites/blob/main/LICENSE" target="_blank" rel="noopener"
+&gt;MIT 许可证&lt;/a&gt;，但竞见仓库本身目前尚未提供 LICENSE，因此这里称它为“公开源码项目”，不把上游许可直接等同于这个仓库已经完成了开源许可声明。&lt;/p&gt;</description></item></channel></rss>

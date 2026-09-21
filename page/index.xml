@@ -1,260 +1,260 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on 404_@林达</title><link>https://linsk27.github.io/page/</link><description>Recent content in Pages on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Tue, 01 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/page/index.xml" rel="self" type="application/rss+xml"/><item><title>404_@林达 GitHub 项目索引</title><link>https://linsk27.github.io/github/</link><pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/github/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-desk-v0.25.7.png" alt="Featured image of post 404_@林达 GitHub 项目索引" /&gt;&lt;p&gt;这里是更直接的仓库索引，顺序与我当前 GitHub 主页的精选项目保持一致。想看实现背景、开源来源和开发取舍，可以进入更完整的 &lt;a class="link" href="https://linsk27.github.io/projects/" &gt;项目主页&lt;/a&gt;。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;个人主页：&lt;a class="link" href="https://github.com/linsk27" target="_blank" rel="noopener"
-&gt;github.com/linsk27&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;主要项目组织：&lt;a class="link" href="https://github.com/linsk-labs" target="_blank" rel="noopener"
-&gt;github.com/linsk-labs&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="当前重点"&gt;当前重点
-&lt;/h2&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;仓库&lt;/th&gt;
-&lt;th&gt;它解决什么&lt;/th&gt;
-&lt;th&gt;主要技术&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a class="link" href="https://github.com/linsk-labs/local-dev-cockpit" target="_blank" rel="noopener"
-&gt;local-dev-cockpit&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;扫描本地项目，恢复启动命令、端口、环境、Git 状态和最近错误&lt;/td&gt;
-&lt;td&gt;TypeScript、Vue 3、Node.js、Electron&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a class="link" href="https://github.com/linsk-labs/local-ai-ops" target="_blank" rel="noopener"
-&gt;local-ai-ops&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;在可信局域网统一查看阿里云资产、检查、告警与可选 AI 排查建议&lt;/td&gt;
-&lt;td&gt;FastAPI、React、PostgreSQL、Redis、Celery&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a class="link" href="https://github.com/linsk-labs/proof-pr" target="_blank" rel="noopener"
-&gt;proof-pr&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;用确定性规则检查 PR 是否带齐测试、截图、复现和权限说明&lt;/td&gt;
-&lt;td&gt;TypeScript、GitHub Actions、CLI、SARIF&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a class="link" href="https://github.com/linsk-labs/signal-atlas" target="_blank" rel="noopener"
-&gt;signal-atlas&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;把真实网页与复古桌面放进可交互的 Three.js 工作站&lt;/td&gt;
-&lt;td&gt;Three.js、CSS3DRenderer、JavaScript、Vite&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;对应的中文复盘：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://linsk27.github.io/projects/dev-cockpit/" &gt;Dev Cockpit：隔几天回来，也知道项目怎么跑&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://linsk27.github.io/projects/local-ai-ops/" &gt;Local AI Ops：先把运维资料收回来，再谈 AI&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://linsk27.github.io/projects/proofpr/" &gt;ProofPR：AI 让写 PR 变快，但 review 没变便宜&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://linsk27.github.io/projects/signal-atlas/" &gt;Signal Atlas：把真实网页放进 Three.js 工作站&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="其他公开仓库"&gt;其他公开仓库
-&lt;/h2&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;方向&lt;/th&gt;
-&lt;th&gt;仓库&lt;/th&gt;
-&lt;th&gt;内容&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Vue + Flask 全栈&lt;/td&gt;
-&lt;td&gt;&lt;a class="link" href="https://github.com/linsk27/AI-Vue3-python-flask-Blog" target="_blank" rel="noopener"
-&gt;AI-Vue3-python-flask-Blog&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Vue 3、Flask、MySQL 与内容管理&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;智慧社区大屏&lt;/td&gt;
-&lt;td&gt;&lt;a class="link" href="https://github.com/linsk27/feidu" target="_blank" rel="noopener"
-&gt;feidu&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Nuxt 3、Tailwind CSS 与 ECharts 可视化&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;数据可视化练习&lt;/td&gt;
-&lt;td&gt;&lt;a class="link" href="https://github.com/linsk27/echarts-learn" target="_blank" rel="noopener"
-&gt;echarts-learn&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Vue、Nuxt 与多类 ECharts 图表&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Nuxt 移动端&lt;/td&gt;
-&lt;td&gt;&lt;a class="link" href="https://github.com/linsk27/bilibili-nuxt3" target="_blank" rel="noopener"
-&gt;bilibili-nuxt3&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Nuxt 3、SSR、TypeScript 与 Vant&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id="怎么选"&gt;怎么选
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;想看本地开发工具：从 &lt;a class="link" href="https://linsk27.github.io/projects/dev-cockpit/" &gt;Dev Cockpit&lt;/a&gt; 开始。&lt;/li&gt;
-&lt;li&gt;想看后端、任务队列和云 API：看 &lt;a class="link" href="https://linsk27.github.io/projects/local-ai-ops/" &gt;Local AI Ops&lt;/a&gt;。&lt;/li&gt;
-&lt;li&gt;想看开源维护工具与规则引擎：看 &lt;a class="link" href="https://linsk27.github.io/projects/proofpr/" &gt;ProofPR&lt;/a&gt;。&lt;/li&gt;
-&lt;li&gt;想先看视觉效果和浏览器交互：直接进入 &lt;a class="link" href="https://linsk27.dpdns.org/" target="_blank" rel="noopener"
-&gt;Signal Atlas&lt;/a&gt;。&lt;/li&gt;
-&lt;li&gt;想看早期全栈或可视化作品：再从上面的其他公开仓库挑选。&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>404_@林达 项目主页</title><link>https://linsk27.github.io/projects/</link><pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-desk-v0.25.7.png" alt="Featured image of post 404_@林达 项目主页" /&gt;&lt;p&gt;这里不再把所有仓库放在同一层。前五个是我目前持续维护、也最能说明开发方向的项目；早期作品保留为简短索引。&lt;/p&gt;
-&lt;p&gt;如果你只想快速跳到仓库，可以看 &lt;a class="link" href="https://linsk27.github.io/github/" &gt;GitHub 项目索引&lt;/a&gt;；想了解为什么这样设计、哪些部分使用开源基础、AI 参与到什么程度，可以继续往下看。&lt;/p&gt;
-&lt;h2 id="正在维护"&gt;正在维护
-&lt;/h2&gt;&lt;h3 id="竞见"&gt;竞见
-&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://linsk27.github.io/projects/jingjian/" &gt;竞见&lt;/a&gt; 是我们自己开发的淘宝竞品研究与 PPT 生成工作台。输入品类和样本范围后，它会整理公开品牌资料，采集淘宝商品证据，生成一份包含产品架构、价格带、包装视觉、跨品牌比较和设计建议的 PPTX；完成的报告还能进入研究问答，继续按来源查询。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/jingjian-research-center-latest.png"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on 404_@林达</title><link>https://linsk27.github.io/page/</link><description>Recent content in Pages on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Tue, 01 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/page/index.xml" rel="self" type="application/rss+xml"/><item><title>404_@林达 GitHub 项目索引</title><link>https://linsk27.github.io/github/</link><pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/github/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-desk-v0.25.7.png" alt="Featured image of post 404_@林达 GitHub 项目索引" />&lt;p>这里是更直接的仓库索引，顺序与我当前 GitHub 主页的精选项目保持一致。想看实现背景、开源来源和开发取舍，可以进入更完整的 &lt;a class="link" href="https://linsk27.github.io/projects/" >项目主页&lt;/a>。&lt;/p>
+&lt;ul>
+&lt;li>个人主页：&lt;a class="link" href="https://github.com/linsk27" target="_blank" rel="noopener"
+>github.com/linsk27&lt;/a>&lt;/li>
+&lt;li>主要项目组织：&lt;a class="link" href="https://github.com/linsk-labs" target="_blank" rel="noopener"
+>github.com/linsk-labs&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="当前重点">当前重点
+&lt;/h2>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>仓库&lt;/th>
+&lt;th>它解决什么&lt;/th>
+&lt;th>主要技术&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://github.com/linsk-labs/local-dev-cockpit" target="_blank" rel="noopener"
+>local-dev-cockpit&lt;/a>&lt;/td>
+&lt;td>扫描本地项目，恢复启动命令、端口、环境、Git 状态和最近错误&lt;/td>
+&lt;td>TypeScript、Vue 3、Node.js、Electron&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://github.com/linsk-labs/local-ai-ops" target="_blank" rel="noopener"
+>local-ai-ops&lt;/a>&lt;/td>
+&lt;td>在可信局域网统一查看阿里云资产、检查、告警与可选 AI 排查建议&lt;/td>
+&lt;td>FastAPI、React、PostgreSQL、Redis、Celery&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://github.com/linsk-labs/proof-pr" target="_blank" rel="noopener"
+>proof-pr&lt;/a>&lt;/td>
+&lt;td>用确定性规则检查 PR 是否带齐测试、截图、复现和权限说明&lt;/td>
+&lt;td>TypeScript、GitHub Actions、CLI、SARIF&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://github.com/linsk-labs/signal-atlas" target="_blank" rel="noopener"
+>signal-atlas&lt;/a>&lt;/td>
+&lt;td>把真实网页与复古桌面放进可交互的 Three.js 工作站&lt;/td>
+&lt;td>Three.js、CSS3DRenderer、JavaScript、Vite&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>对应的中文复盘：&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://linsk27.github.io/projects/dev-cockpit/" >Dev Cockpit：隔几天回来，也知道项目怎么跑&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://linsk27.github.io/projects/local-ai-ops/" >Local AI Ops：先把运维资料收回来，再谈 AI&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://linsk27.github.io/projects/proofpr/" >ProofPR：AI 让写 PR 变快，但 review 没变便宜&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://linsk27.github.io/projects/signal-atlas/" >Signal Atlas：把真实网页放进 Three.js 工作站&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="其他公开仓库">其他公开仓库
+&lt;/h2>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>方向&lt;/th>
+&lt;th>仓库&lt;/th>
+&lt;th>内容&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Vue + Flask 全栈&lt;/td>
+&lt;td>&lt;a class="link" href="https://github.com/linsk27/AI-Vue3-python-flask-Blog" target="_blank" rel="noopener"
+>AI-Vue3-python-flask-Blog&lt;/a>&lt;/td>
+&lt;td>Vue 3、Flask、MySQL 与内容管理&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>智慧社区大屏&lt;/td>
+&lt;td>&lt;a class="link" href="https://github.com/linsk27/feidu" target="_blank" rel="noopener"
+>feidu&lt;/a>&lt;/td>
+&lt;td>Nuxt 3、Tailwind CSS 与 ECharts 可视化&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>数据可视化练习&lt;/td>
+&lt;td>&lt;a class="link" href="https://github.com/linsk27/echarts-learn" target="_blank" rel="noopener"
+>echarts-learn&lt;/a>&lt;/td>
+&lt;td>Vue、Nuxt 与多类 ECharts 图表&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Nuxt 移动端&lt;/td>
+&lt;td>&lt;a class="link" href="https://github.com/linsk27/bilibili-nuxt3" target="_blank" rel="noopener"
+>bilibili-nuxt3&lt;/a>&lt;/td>
+&lt;td>Nuxt 3、SSR、TypeScript 与 Vant&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="怎么选">怎么选
+&lt;/h2>&lt;ul>
+&lt;li>想看本地开发工具：从 &lt;a class="link" href="https://linsk27.github.io/projects/dev-cockpit/" >Dev Cockpit&lt;/a> 开始。&lt;/li>
+&lt;li>想看后端、任务队列和云 API：看 &lt;a class="link" href="https://linsk27.github.io/projects/local-ai-ops/" >Local AI Ops&lt;/a>。&lt;/li>
+&lt;li>想看开源维护工具与规则引擎：看 &lt;a class="link" href="https://linsk27.github.io/projects/proofpr/" >ProofPR&lt;/a>。&lt;/li>
+&lt;li>想先看视觉效果和浏览器交互：直接进入 &lt;a class="link" href="https://linsk27.dpdns.org/" target="_blank" rel="noopener"
+>Signal Atlas&lt;/a>。&lt;/li>
+&lt;li>想看早期全栈或可视化作品：再从上面的其他公开仓库挑选。&lt;/li>
+&lt;/ul></description></item><item><title>404_@林达 项目主页</title><link>https://linsk27.github.io/projects/</link><pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-desk-v0.25.7.png" alt="Featured image of post 404_@林达 项目主页" />&lt;p>这里不再把所有仓库放在同一层。前五个是我目前持续维护、也最能说明开发方向的项目；早期作品保留为简短索引。&lt;/p>
+&lt;p>如果你只想快速跳到仓库，可以看 &lt;a class="link" href="https://linsk27.github.io/github/" >GitHub 项目索引&lt;/a>；想了解为什么这样设计、哪些部分使用开源基础、AI 参与到什么程度，可以继续往下看。&lt;/p>
+&lt;h2 id="正在维护">正在维护
+&lt;/h2>&lt;h3 id="竞见">竞见
+&lt;/h3>&lt;p>&lt;a class="link" href="https://linsk27.github.io/projects/jingjian/" >竞见&lt;/a> 是我们自己开发的淘宝竞品研究与 PPT 生成工作台。输入品类和样本范围后，它会整理公开品牌资料，采集淘宝商品证据，生成一份包含产品架构、价格带、包装视觉、跨品牌比较和设计建议的 PPTX；完成的报告还能进入研究问答，继续按来源查询。&lt;/p>
+&lt;p>&lt;img src="https://linsk27.github.io/img/projects/jingjian-research-center-latest.png"
 loading="lazy"
 alt="竞见调研中心与报告交付页面"
-&gt;&lt;/p&gt;
-&lt;p&gt;技术上，React 负责调研、运行和问答界面，FastAPI 编排长任务与人工验证，Playwright/CDP 连接已登录的共享 Chrome。任务与最终报告写入研究主库，RAG 使用可重建的 SQLite 混合索引；正式交付物是一份 PPTX，并提供同内容的 HTML 预览。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://linsk27.github.io/projects/jingjian/" &gt;阅读竞见的架构与开发复盘&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://github.com/linsk27/jingjian-taobao-agent" target="_blank" rel="noopener"
-&gt;查看 GitHub 仓库&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="dev-cockpit"&gt;Dev Cockpit
-&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://linsk27.github.io/projects/dev-cockpit/" &gt;Dev Cockpit&lt;/a&gt; 解决的是“隔几天回来就忘了项目怎么跑”。它会扫描技术栈、启动命令、端口、Python 环境和 Git 状态，再把 CLI、Web 与 Electron 桌面端接到同一套判断逻辑上。资源雷达只是后来增加的一个模块，不是整个项目的全部。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png"
+>&lt;/p>
+&lt;p>技术上，React 负责调研、运行和问答界面，FastAPI 编排长任务与人工验证，Playwright/CDP 连接已登录的共享 Chrome。任务与最终报告写入研究主库，RAG 使用可重建的 SQLite 混合索引；正式交付物是一份 PPTX，并提供同内容的 HTML 预览。&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://linsk27.github.io/projects/jingjian/" >阅读竞见的架构与开发复盘&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/linsk27/jingjian-taobao-agent" target="_blank" rel="noopener"
+>查看 GitHub 仓库&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="dev-cockpit">Dev Cockpit
+&lt;/h3>&lt;p>&lt;a class="link" href="https://linsk27.github.io/projects/dev-cockpit/" >Dev Cockpit&lt;/a> 解决的是“隔几天回来就忘了项目怎么跑”。它会扫描技术栈、启动命令、端口、Python 环境和 Git 状态，再把 CLI、Web 与 Electron 桌面端接到同一套判断逻辑上。资源雷达只是后来增加的一个模块，不是整个项目的全部。&lt;/p>
+&lt;p>&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png"
 loading="lazy"
 alt="Dev Cockpit 资源雷达卡片页"
-&gt;&lt;/p&gt;
-&lt;p&gt;技术上，它把纯 TypeScript 扫描逻辑放在 &lt;code&gt;core&lt;/code&gt;，本地进程与端口放在 &lt;code&gt;server&lt;/code&gt;，Vue 3 负责 Web 界面，Electron 只做桌面外壳。项目状态依赖本地可验证信号，不让 AI 猜“它是不是已经启动”。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://linsk27.github.io/projects/dev-cockpit/" &gt;阅读开发复盘&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://github.com/linsk-labs/local-dev-cockpit" target="_blank" rel="noopener"
-&gt;GitHub：linsk-labs/local-dev-cockpit&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="local-ai-ops"&gt;Local AI Ops
-&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://linsk27.github.io/projects/local-ai-ops/" &gt;Local AI Ops&lt;/a&gt; 是一个本地优先的阿里云运维工作台。React 与 ECharts 展示资产和告警，FastAPI 提供接口，PostgreSQL 保存运维资料，Redis/Celery 执行同步与健康检查，阿里云官方 SDK 负责读取 ECS、轻量服务器、OSS、域名和 DNS。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/local-ai-ops-empty-dashboard.png"
+>&lt;/p>
+&lt;p>技术上，它把纯 TypeScript 扫描逻辑放在 &lt;code>core&lt;/code>，本地进程与端口放在 &lt;code>server&lt;/code>，Vue 3 负责 Web 界面，Electron 只做桌面外壳。项目状态依赖本地可验证信号，不让 AI 猜“它是不是已经启动”。&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://linsk27.github.io/projects/dev-cockpit/" >阅读开发复盘&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/linsk-labs/local-dev-cockpit" target="_blank" rel="noopener"
+>GitHub：linsk-labs/local-dev-cockpit&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="local-ai-ops">Local AI Ops
+&lt;/h3>&lt;p>&lt;a class="link" href="https://linsk27.github.io/projects/local-ai-ops/" >Local AI Ops&lt;/a> 是一个本地优先的阿里云运维工作台。React 与 ECharts 展示资产和告警，FastAPI 提供接口，PostgreSQL 保存运维资料，Redis/Celery 执行同步与健康检查，阿里云官方 SDK 负责读取 ECS、轻量服务器、OSS、域名和 DNS。&lt;/p>
+&lt;p>&lt;img src="https://linsk27.github.io/img/projects/local-ai-ops-empty-dashboard.png"
 loading="lazy"
 alt="Local AI Ops 本地空数据实例"
-&gt;&lt;/p&gt;
-&lt;p&gt;AI 只处理脱敏后的告警上下文，输出摘要和排查建议，不自动执行修复。它更像一个可信局域网里的运维索引，而不是要暴露到公网的多租户控制台。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://linsk27.github.io/projects/local-ai-ops/" &gt;阅读架构与安全边界&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://github.com/linsk-labs/local-ai-ops" target="_blank" rel="noopener"
-&gt;GitHub：linsk-labs/local-ai-ops&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="proofpr"&gt;ProofPR
-&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://linsk27.github.io/projects/proofpr/" &gt;ProofPR&lt;/a&gt; 是 GitHub Action 与 CLI 形式的 PR 证据检查器。它解析 diff 和 &lt;code&gt;.proofpr.yml&lt;/code&gt;，用确定性规则检查测试、截图、复现步骤、依赖、workflow 权限、secret 与 MCP 配置，再输出风险等级、证据分和 review gate。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/proofpr-github-action-pr-review-report.png"
+>&lt;/p>
+&lt;p>AI 只处理脱敏后的告警上下文，输出摘要和排查建议，不自动执行修复。它更像一个可信局域网里的运维索引，而不是要暴露到公网的多租户控制台。&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://linsk27.github.io/projects/local-ai-ops/" >阅读架构与安全边界&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/linsk-labs/local-ai-ops" target="_blank" rel="noopener"
+>GitHub：linsk-labs/local-ai-ops&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="proofpr">ProofPR
+&lt;/h3>&lt;p>&lt;a class="link" href="https://linsk27.github.io/projects/proofpr/" >ProofPR&lt;/a> 是 GitHub Action 与 CLI 形式的 PR 证据检查器。它解析 diff 和 &lt;code>.proofpr.yml&lt;/code>，用确定性规则检查测试、截图、复现步骤、依赖、workflow 权限、secret 与 MCP 配置，再输出风险等级、证据分和 review gate。&lt;/p>
+&lt;p>&lt;img src="https://linsk27.github.io/img/projects/proofpr-github-action-pr-review-report.png"
 loading="lazy"
 alt="ProofPR GitHub Action 审查报告"
-&gt;&lt;/p&gt;
-&lt;p&gt;这个工具运行时不调用大模型，也不判断业务代码是否正确。设计重点是相同输入得到相同结果，让维护者能看到每条命中来自哪条规则。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://linsk27.github.io/projects/proofpr/" &gt;阅读规则引擎设计&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://github.com/linsk-labs/proof-pr" target="_blank" rel="noopener"
-&gt;GitHub：linsk-labs/proof-pr&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="signal-atlas"&gt;Signal Atlas
-&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://linsk27.github.io/projects/signal-atlas/" &gt;Signal Atlas&lt;/a&gt; 是当前运行在 &lt;code&gt;linsk27.dpdns.org&lt;/code&gt; 的 Three.js 工作站。生产外层基于 Henry Heffernan 的 MIT 开源作品集，并保留完整许可归因；显示器里的 linsk27 复古桌面、窗口系统、真实应用入口和内嵌适配由我重新实现。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-desk-v0.25.7.png"
+>&lt;/p>
+&lt;p>这个工具运行时不调用大模型，也不判断业务代码是否正确。设计重点是相同输入得到相同结果，让维护者能看到每条命中来自哪条规则。&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://linsk27.github.io/projects/proofpr/" >阅读规则引擎设计&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/linsk-labs/proof-pr" target="_blank" rel="noopener"
+>GitHub：linsk-labs/proof-pr&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="signal-atlas">Signal Atlas
+&lt;/h3>&lt;p>&lt;a class="link" href="https://linsk27.github.io/projects/signal-atlas/" >Signal Atlas&lt;/a> 是当前运行在 &lt;code>linsk27.dpdns.org&lt;/code> 的 Three.js 工作站。生产外层基于 Henry Heffernan 的 MIT 开源作品集，并保留完整许可归因；显示器里的 linsk27 复古桌面、窗口系统、真实应用入口和内嵌适配由我重新实现。&lt;/p>
+&lt;p>&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-desk-v0.25.7.png"
 loading="lazy"
 alt="Signal Atlas v0.25.7 工作站全景"
-&gt;&lt;/p&gt;
-&lt;p&gt;WebGL 负责 3D 场景，CSS3DRenderer 把真实 HTML 与 iframe 对齐到显示器。这个方案比放一张屏幕贴图难得多，却可以真的打开博客、八股文和 GitHub。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://linsk27.github.io/projects/signal-atlas/" &gt;阅读 v0.25.7 开发复盘&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://linsk27.dpdns.org/" target="_blank" rel="noopener"
-&gt;在线进入 Signal Atlas&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://github.com/linsk-labs/signal-atlas" target="_blank" rel="noopener"
-&gt;GitHub：linsk-labs/signal-atlas&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="其他公开作品"&gt;其他公开作品
-&lt;/h2&gt;&lt;p&gt;这些项目记录了我在全栈、数据可视化和移动端页面上的早期实践。它们仍然公开，但不会和当前五个重点项目抢同一层级。&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;项目&lt;/th&gt;
-&lt;th&gt;主要内容&lt;/th&gt;
-&lt;th&gt;入口&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;AI-Vue3-python-flask-Blog&lt;/td&gt;
-&lt;td&gt;Vue 3、Flask、MySQL 与内容管理的全栈博客系统&lt;/td&gt;
-&lt;td&gt;&lt;a class="link" href="https://linsk27.github.io/projects/ai-vue-flask-blog/" &gt;文章&lt;/a&gt; · &lt;a class="link" href="https://github.com/linsk27/AI-Vue3-python-flask-Blog" target="_blank" rel="noopener"
-&gt;GitHub&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;feidu&lt;/td&gt;
-&lt;td&gt;Nuxt 3、Tailwind CSS 与 ECharts 的智慧社区数据大屏&lt;/td&gt;
-&lt;td&gt;&lt;a class="link" href="https://linsk27.github.io/projects/feidu/" &gt;文章&lt;/a&gt; · &lt;a class="link" href="https://github.com/linsk27/feidu" target="_blank" rel="noopener"
-&gt;GitHub&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;echarts-learn&lt;/td&gt;
-&lt;td&gt;Vue、Nuxt 与 ECharts 图表组合练习&lt;/td&gt;
-&lt;td&gt;&lt;a class="link" href="https://linsk27.github.io/projects/echarts-learn/" &gt;文章&lt;/a&gt; · &lt;a class="link" href="https://github.com/linsk27/echarts-learn" target="_blank" rel="noopener"
-&gt;GitHub&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;bilibili-nuxt3&lt;/td&gt;
-&lt;td&gt;Nuxt 3、TypeScript、Vant 的移动端与 SSR 实践&lt;/td&gt;
-&lt;td&gt;&lt;a class="link" href="https://linsk27.github.io/projects/bilibili-nuxt3/" &gt;文章&lt;/a&gt; · &lt;a class="link" href="https://github.com/linsk27/bilibili-nuxt3" target="_blank" rel="noopener"
-&gt;GitHub&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;如果其中某个项目对你有帮助，欢迎到对应仓库查看 README、Issue 或点 Star。对我来说，真实使用反馈比在项目页堆更多关键词更有价值。&lt;/p&gt;</description></item><item><title>关于 404_@林达</title><link>https://linsk27.github.io/about/</link><pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/about/</guid><description>&lt;p&gt;我是 404_@林达，主要把前端、全栈和开发工具相关想法做成可以运行、可以验证、可以继续迭代的项目。我的 GitHub 主页是 &lt;a class="link" href="https://github.com/linsk27" target="_blank" rel="noopener"
-&gt;github.com/linsk27&lt;/a&gt;，项目入口是 &lt;a class="link" href="https://linsk27.github.io/projects/" &gt;404_@林达 Projects&lt;/a&gt;，按仓库整理的入口是 &lt;a class="link" href="https://linsk27.github.io/github/" &gt;404_@林达 GitHub 项目索引&lt;/a&gt;。&lt;/p&gt;
-&lt;h2 id="关注方向"&gt;关注方向
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;开发者工具与资源整理：让资源收集、Pull Request review 和本地开发工作流更清晰。&lt;/li&gt;
-&lt;li&gt;作品集与项目展示：用 Three.js、CSS3D 和项目图谱把作品变成可浏览的系统。&lt;/li&gt;
-&lt;li&gt;本地运维与云资源管理：把云资源、监控检查、告警和排查上下文整理成可操作的工作台。&lt;/li&gt;
-&lt;li&gt;Vue、TypeScript 与 Nuxt：持续整理可运行的前端应用、移动端页面和数据大屏。&lt;/li&gt;
-&lt;li&gt;Flask、MySQL 与全栈实践：把前端页面、后端接口和数据持久化连成完整项目。&lt;/li&gt;
-&lt;li&gt;ECharts 与数据可视化：沉淀 dashboard、智慧社区、能源监测和业务看板类界面。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="推荐项目"&gt;推荐项目
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://linsk27.github.io/projects/signal-atlas/" &gt;Signal Atlas&lt;/a&gt;：Three.js 工作站，在有完整 MIT 归因的开源外层上运行原创复古桌面和真实内容入口。&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://linsk27.github.io/projects/local-ai-ops/" &gt;Local AI Ops&lt;/a&gt;：局域网本地阿里云 AI 运维工作台，用于整理云资源、监控检查、告警和排查建议。&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://linsk27.github.io/projects/dev-cockpit/" &gt;Dev Cockpit&lt;/a&gt;：本地开发工作台，用于恢复项目技术栈、启动命令、端口、环境和 Git 状态；资源雷达是其中一个模块。&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://linsk27.github.io/projects/proofpr/" &gt;ProofPR&lt;/a&gt;：不调用大模型的 GitHub Action 和 CLI，用确定性规则检查 Pull Request 证据和风险信号。&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://linsk27.github.io/projects/feidu/" &gt;feidu&lt;/a&gt;：Nuxt 3、Vue、Tailwind CSS 和 ECharts 智慧社区数据大屏，覆盖安防监控、CIM 平台和能源监测。&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://linsk27.github.io/projects/ai-vue-flask-blog/" &gt;AI-Vue3-python-flask-Blog&lt;/a&gt;：Vue 3、Flask、MySQL 和 AI 能力组合的博客系统。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="技术关键词"&gt;技术关键词
-&lt;/h2&gt;&lt;p&gt;linsk27 GitHub、linsk27 projects、Signal Atlas、Three.js portfolio、CSS3DRenderer、Local AI Ops、Alibaba Cloud ops console、Vue TypeScript developer、developer workflow tools、GitHub Actions review、Nuxt ECharts dashboard、Vue Flask full stack project。&lt;/p&gt;
-&lt;h2 id="联系方式"&gt;联系方式
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;GitHub：&lt;a class="link" href="https://github.com/linsk27" target="_blank" rel="noopener"
-&gt;github.com/linsk27&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;微信：linsk27&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;如果某个项目对你有参考价值，欢迎进入对应 GitHub 仓库查看 README、运行说明和项目截图。&lt;/p&gt;</description></item><item><title>归档</title><link>https://linsk27.github.io/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/archives/</guid><description/></item><item><title>搜索</title><link>https://linsk27.github.io/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/search/</guid><description/></item><item><title>友链</title><link>https://linsk27.github.io/%E5%8F%8B%E9%93%BE/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/%E5%8F%8B%E9%93%BE/</guid><description>&lt;p&gt;To use this feature, add &lt;code&gt;links&lt;/code&gt; section to frontmatter.&lt;/p&gt;
-&lt;p&gt;This page&amp;rsquo;s frontmatter:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt;10
-&lt;/span&gt;&lt;span class="lnt"&gt;11
-&lt;/span&gt;&lt;span class="lnt"&gt;12
-&lt;/span&gt;&lt;span class="lnt"&gt;13
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;links&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;GitHub&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;GitHub is the world&amp;#39;s largest software development platform.&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;website&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;https://github.com&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;image&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;TypeScript&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;website&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;https://www.typescriptlang.org&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;image&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;ts-logo-128.jpg&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;Echo&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;若我与你重逢，事隔经年。我将何以贺你？以眼泪，以沉默。 —— 春逝|&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;website&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;https://echoblog.com.cn/&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;image&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;https://img.echoblog.com.cn/Fo1tExXWSenqqWpvO_1HQ-Sy0Kum&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;code&gt;image&lt;/code&gt; field accepts both local and external images.&lt;/p&gt;</description></item></channel></rss>
+>&lt;/p>
+&lt;p>WebGL 负责 3D 场景，CSS3DRenderer 把真实 HTML 与 iframe 对齐到显示器。这个方案比放一张屏幕贴图难得多，却可以真的打开博客、八股文和 GitHub。&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://linsk27.github.io/projects/signal-atlas/" >阅读 v0.25.7 开发复盘&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://linsk27.dpdns.org/" target="_blank" rel="noopener"
+>在线进入 Signal Atlas&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/linsk-labs/signal-atlas" target="_blank" rel="noopener"
+>GitHub：linsk-labs/signal-atlas&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="其他公开作品">其他公开作品
+&lt;/h2>&lt;p>这些项目记录了我在全栈、数据可视化和移动端页面上的早期实践。它们仍然公开，但不会和当前五个重点项目抢同一层级。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>项目&lt;/th>
+&lt;th>主要内容&lt;/th>
+&lt;th>入口&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>AI-Vue3-python-flask-Blog&lt;/td>
+&lt;td>Vue 3、Flask、MySQL 与内容管理的全栈博客系统&lt;/td>
+&lt;td>&lt;a class="link" href="https://linsk27.github.io/projects/ai-vue-flask-blog/" >文章&lt;/a> · &lt;a class="link" href="https://github.com/linsk27/AI-Vue3-python-flask-Blog" target="_blank" rel="noopener"
+>GitHub&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>feidu&lt;/td>
+&lt;td>Nuxt 3、Tailwind CSS 与 ECharts 的智慧社区数据大屏&lt;/td>
+&lt;td>&lt;a class="link" href="https://linsk27.github.io/projects/feidu/" >文章&lt;/a> · &lt;a class="link" href="https://github.com/linsk27/feidu" target="_blank" rel="noopener"
+>GitHub&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>echarts-learn&lt;/td>
+&lt;td>Vue、Nuxt 与 ECharts 图表组合练习&lt;/td>
+&lt;td>&lt;a class="link" href="https://linsk27.github.io/projects/echarts-learn/" >文章&lt;/a> · &lt;a class="link" href="https://github.com/linsk27/echarts-learn" target="_blank" rel="noopener"
+>GitHub&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>bilibili-nuxt3&lt;/td>
+&lt;td>Nuxt 3、TypeScript、Vant 的移动端与 SSR 实践&lt;/td>
+&lt;td>&lt;a class="link" href="https://linsk27.github.io/projects/bilibili-nuxt3/" >文章&lt;/a> · &lt;a class="link" href="https://github.com/linsk27/bilibili-nuxt3" target="_blank" rel="noopener"
+>GitHub&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>如果其中某个项目对你有帮助，欢迎到对应仓库查看 README、Issue 或点 Star。对我来说，真实使用反馈比在项目页堆更多关键词更有价值。&lt;/p></description></item><item><title>关于 404_@林达</title><link>https://linsk27.github.io/about/</link><pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/about/</guid><description>&lt;p>我是 404_@林达，主要把前端、全栈和开发工具相关想法做成可以运行、可以验证、可以继续迭代的项目。我的 GitHub 主页是 &lt;a class="link" href="https://github.com/linsk27" target="_blank" rel="noopener"
+>github.com/linsk27&lt;/a>，项目入口是 &lt;a class="link" href="https://linsk27.github.io/projects/" >404_@林达 Projects&lt;/a>，按仓库整理的入口是 &lt;a class="link" href="https://linsk27.github.io/github/" >404_@林达 GitHub 项目索引&lt;/a>。&lt;/p>
+&lt;h2 id="关注方向">关注方向
+&lt;/h2>&lt;ul>
+&lt;li>开发者工具与资源整理：让资源收集、Pull Request review 和本地开发工作流更清晰。&lt;/li>
+&lt;li>作品集与项目展示：用 Three.js、CSS3D 和项目图谱把作品变成可浏览的系统。&lt;/li>
+&lt;li>本地运维与云资源管理：把云资源、监控检查、告警和排查上下文整理成可操作的工作台。&lt;/li>
+&lt;li>Vue、TypeScript 与 Nuxt：持续整理可运行的前端应用、移动端页面和数据大屏。&lt;/li>
+&lt;li>Flask、MySQL 与全栈实践：把前端页面、后端接口和数据持久化连成完整项目。&lt;/li>
+&lt;li>ECharts 与数据可视化：沉淀 dashboard、智慧社区、能源监测和业务看板类界面。&lt;/li>
+&lt;/ul>
+&lt;h2 id="推荐项目">推荐项目
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://linsk27.github.io/projects/signal-atlas/" >Signal Atlas&lt;/a>：Three.js 工作站，在有完整 MIT 归因的开源外层上运行原创复古桌面和真实内容入口。&lt;/li>
+&lt;li>&lt;a class="link" href="https://linsk27.github.io/projects/local-ai-ops/" >Local AI Ops&lt;/a>：局域网本地阿里云 AI 运维工作台，用于整理云资源、监控检查、告警和排查建议。&lt;/li>
+&lt;li>&lt;a class="link" href="https://linsk27.github.io/projects/dev-cockpit/" >Dev Cockpit&lt;/a>：本地开发工作台，用于恢复项目技术栈、启动命令、端口、环境和 Git 状态；资源雷达是其中一个模块。&lt;/li>
+&lt;li>&lt;a class="link" href="https://linsk27.github.io/projects/proofpr/" >ProofPR&lt;/a>：不调用大模型的 GitHub Action 和 CLI，用确定性规则检查 Pull Request 证据和风险信号。&lt;/li>
+&lt;li>&lt;a class="link" href="https://linsk27.github.io/projects/feidu/" >feidu&lt;/a>：Nuxt 3、Vue、Tailwind CSS 和 ECharts 智慧社区数据大屏，覆盖安防监控、CIM 平台和能源监测。&lt;/li>
+&lt;li>&lt;a class="link" href="https://linsk27.github.io/projects/ai-vue-flask-blog/" >AI-Vue3-python-flask-Blog&lt;/a>：Vue 3、Flask、MySQL 和 AI 能力组合的博客系统。&lt;/li>
+&lt;/ul>
+&lt;h2 id="技术关键词">技术关键词
+&lt;/h2>&lt;p>linsk27 GitHub、linsk27 projects、Signal Atlas、Three.js portfolio、CSS3DRenderer、Local AI Ops、Alibaba Cloud ops console、Vue TypeScript developer、developer workflow tools、GitHub Actions review、Nuxt ECharts dashboard、Vue Flask full stack project。&lt;/p>
+&lt;h2 id="联系方式">联系方式
+&lt;/h2>&lt;ul>
+&lt;li>GitHub：&lt;a class="link" href="https://github.com/linsk27" target="_blank" rel="noopener"
+>github.com/linsk27&lt;/a>&lt;/li>
+&lt;li>项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" >404_@林达 Projects&lt;/a>&lt;/li>
+&lt;li>微信：linsk27&lt;/li>
+&lt;/ul>
+&lt;p>如果某个项目对你有参考价值，欢迎进入对应 GitHub 仓库查看 README、运行说明和项目截图。&lt;/p></description></item><item><title>归档</title><link>https://linsk27.github.io/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/archives/</guid><description/></item><item><title>搜索</title><link>https://linsk27.github.io/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/search/</guid><description/></item><item><title>友链</title><link>https://linsk27.github.io/%E5%8F%8B%E9%93%BE/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/%E5%8F%8B%E9%93%BE/</guid><description>&lt;p>To use this feature, add &lt;code>links&lt;/code> section to frontmatter.&lt;/p>
+&lt;p>This page&amp;rsquo;s frontmatter:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">links&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">GitHub&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">GitHub is the world&amp;#39;s largest software development platform.&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">website&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://github.com&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">image&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">TypeScript&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">website&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://www.typescriptlang.org&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">image&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">ts-logo-128.jpg&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Echo&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">若我与你重逢，事隔经年。我将何以贺你？以眼泪，以沉默。 —— 春逝|&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">website&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://echoblog.com.cn/&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">image&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://img.echoblog.com.cn/Fo1tExXWSenqqWpvO_1HQ-Sy0Kum&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>image&lt;/code> field accepts both local and external images.&lt;/p></description></item></channel></rss>
