@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>项目 on 404_@林达</title><link>https://linsk27.github.io/categories/%E9%A1%B9%E7%9B%AE/</link><description>Recent content in 项目 on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Tue, 01 Sep 2026 15:30:00 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/categories/%E9%A1%B9%E7%9B%AE/index.xml" rel="self" type="application/rss+xml"/><item><title>面试边注：别急着背答案，先把这道题讲明白</title><link>https://linsk27.github.io/projects/interview-margin/</link><pubDate>Mon, 31 Aug 2026 17:14:52 +0800</pubDate><guid>https://linsk27.github.io/projects/interview-margin/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/interview-margin-home.png" alt="Featured image of post 面试边注：别急着背答案，先把这道题讲明白" /&gt;&lt;p&gt;准备技术面试时，最容易做的事是继续收藏资料，最难的事却是把一道题讲清楚。答案看过不少，轮到自己开口，常常只剩几个关键词；隔几天再看，又像第一次见。&lt;/p&gt;
+&lt;p&gt;我做“面试边注”，就是想把刷题从“看过答案”往前推一步：先自己组织，再看结论和原理；写下回答后，可以让 AI 面试官指出哪里说对了、下一步最该补什么；如果某个地方还是绕，也可以围绕当前题继续问 AI。&lt;/p&gt;
+&lt;p&gt;目前平台整理了 14 个公开题库、50 个章节和 762 道题，覆盖前端、Java 后端、AI 应用与求职专项。游客不用注册就能读题、搜索、使用练习模式、AI 面试官评分和 AI 助手；个人学习记录需要登录后保存。&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://interview.linsk27.dpdns.org/app" target="_blank" rel="noopener"
+&gt;直接进入面试边注&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/interview-margin-home.png"
+loading="lazy"
+alt="面试边注首页，展示公开题库数量、真实题目入口和三条学习路线"
+&gt;&lt;/p&gt;
+&lt;h2 id="先选方向不必从第一题硬背"&gt;先选方向，不必从第一题硬背
+&lt;/h2&gt;&lt;p&gt;题库按学习方向组织，而不是把几百道题塞进一个长目录：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;方向&lt;/th&gt;
+&lt;th style="text-align: right"&gt;当前题量&lt;/th&gt;
+&lt;th&gt;主要内容&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;前端开发&lt;/td&gt;
+&lt;td style="text-align: right"&gt;300&lt;/td&gt;
+&lt;td&gt;JavaScript、Vue、React、浏览器、工程化与 TypeScript&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;后端开发&lt;/td&gt;
+&lt;td style="text-align: right"&gt;234&lt;/td&gt;
+&lt;td&gt;Java 基础、Spring、数据库、缓存、网络与部署&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AI 应用开发&lt;/td&gt;
+&lt;td style="text-align: right"&gt;75&lt;/td&gt;
+&lt;td&gt;RAG、Agent、MCP、Tool Calling、流式交互与安全&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;求职专项&lt;/td&gt;
+&lt;td style="text-align: right"&gt;153&lt;/td&gt;
+&lt;td&gt;简历项目追问、真实面经与公司专项准备&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;题库中心可以按方向筛选，也可以按名称或技术关键词搜索题库；进入具体题库后，再搜索题目或按章节跳转。登录账号还能接着上次进度继续学习。首页也会直接放出真实题目，第一次访问不需要先理解整套产品。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/interview-margin-question-banks.png"
+loading="lazy"
+alt="面试边注题库中心，展示不同方向的题库、题量和继续学习入口"
+&gt;&lt;/p&gt;
+&lt;h2 id="一道题不只放一整页答案"&gt;一道题，不只放一整页答案
+&lt;/h2&gt;&lt;p&gt;我希望题解先解决“面试时怎么开口”，再展开完整原理。因此每道题会尽量按同一条阅读顺序拆开：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;速答&lt;/strong&gt;：先给可以直接复述的结论。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;术语&lt;/strong&gt;：把容易卡住的关键词换成白话。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;原理&lt;/strong&gt;：说明它为什么这样工作，而不是只给定义。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实战&lt;/strong&gt;：用代码或具体场景把概念落下来。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;追问与避坑&lt;/strong&gt;：继续准备面试官可能往下问的内容。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;来源&lt;/strong&gt;：保留可以回去核对的资料入口。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;遇到流程型问题时，题解会配站内图解。例如 HashMap 的 &lt;code&gt;put&lt;/code&gt; 不只写“数组、链表、红黑树”，而是把定位桶、处理冲突、插入节点和扩容的先后关系画出来。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/interview-margin-reader.png"
+loading="lazy"
+alt="面试边注的 Java HashMap 题解，把关键词、原理和 put 流程图放在同一阅读页"
+&gt;&lt;/p&gt;
+&lt;p&gt;社区面经主要用来确认“真实面试里问过什么”。正式答案会重新整理，并尽量用官方文档和较稳定的技术资料交叉核对；无法公开查看正文的登录墙页面，不会被当成公开证据。&lt;/p&gt;
+&lt;h2 id="从看懂变成能说出来"&gt;从“看懂”变成“能说出来”
+&lt;/h2&gt;&lt;p&gt;只读答案很容易产生一种错觉：每句话都认识，于是以为自己已经会了。练习模式会先把答案收起来，让我自己组织一遍，再提交回答、对照题解并做一次自评。&lt;/p&gt;
+&lt;h3 id="写完以后让-ai-面试官评一次"&gt;写完以后，让 AI 面试官评一次
+&lt;/h3&gt;&lt;p&gt;新版本在这一步加了 AI 评分。写下答案并提交后，可以点“开始 AI 评分”，看看自己的回答在技术正确性、原理与因果、关键点覆盖、场景边界与取舍、表达结构这五项上分别说到了什么。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/interview-margin-ai-score.png"
+loading="lazy"
+alt="面试边注的 AI 面试官评分页：回答 RAG 分块问题后，页面给出五项分数、做对的部分和下一步建议"
+&gt;&lt;/p&gt;
+&lt;p&gt;截图里只写了“重叠分块”。这个方向没有错，但还没解释它解决什么问题、会增加什么代价，以及什么时候该选多大的重叠，所以系统给出的重点不是一句“答错了”，而是告诉我下一次回答最先应该补哪一层。&lt;/p&gt;
+&lt;p&gt;分数也不是让模型随手报一个数字。模型先判断五项表现分别处在哪个等级，服务端再按 &lt;code&gt;30 / 25 / 20 / 15 / 10&lt;/code&gt; 的固定权重换算总分；如果回答里出现跑题、核心概念说反、虚构机制等严重问题，还会触发扣分或总分上限。评分按回答表达的意思判断，不要求照抄标准答案，也不会单纯因为字少就机械扣分。&lt;/p&gt;
+&lt;p&gt;这项评分只用于当次练习，回答、分数和评语都不会保存到账号，也不代表真实面试结果。即使评分暂时失败，标准答案仍然可以正常查看。&lt;/p&gt;
+&lt;p&gt;AI 评分看的是这一次回答；后面的“不会、模糊、掌握”自评只决定下一次什么时候复习。三种选择分别对应 1、3、7 天后，再配合“未开始、学习中、需复习、已掌握”四种状态，形成一条比较简单的复习线。&lt;/p&gt;
+&lt;p&gt;登录后，收藏、总结、高亮、批注、掌握状态和复习安排会保存到个人账号。这样批注不只是写在某一页旁边，而是能和题目、进度一起带到下一次学习。&lt;/p&gt;
+&lt;h2 id="ai-助手只围绕当前题帮忙"&gt;AI 助手只围绕当前题帮忙
+&lt;/h2&gt;&lt;p&gt;AI 助手不是另开一个没有上下文的聊天窗口。打开某道题后，页面会把当前题目的必要内容和这次对话一起交给服务端；可以让它换一种说法、补一个项目场景，或者继续追问面试表达。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/interview-margin-ai-conversation.png"
+loading="lazy"
+alt="面试边注在 RAG 题目右侧打开 AI 学习助手，并围绕当前题连续追问"
+&gt;&lt;/p&gt;
+&lt;p&gt;这条链路可以简化成：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;当前题目 + 本次对话 → 同源 AI 代理 → OpenAI-compatible 模型 → SSE 流式返回 → 页面逐段显示&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;浏览器不会直接拿模型密钥。服务端负责附带题目上下文、限制并发与超时，并把上游的流式或一次性响应统一交给前端。AI 对话目前不会保存到账号，切换题目后也会清空；它更像阅读时的临时辅导，不是另一套长期知识库。&lt;/p&gt;
+&lt;p&gt;这里容易混淆：RAG、Agent 是题库会讲的技术主题，不是这套 AI 助手的实现。当前助手没有接向量库或全题库检索，只携带当前题和本次对话。回答仍可能出错，重要内容要回到题解与来源核对。&lt;/p&gt;
+&lt;h2 id="游客能直接用账号只负责个人记录"&gt;游客能直接用，账号只负责个人记录
+&lt;/h2&gt;&lt;p&gt;我把公开阅读和个人数据分开处理：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;游客&lt;/strong&gt;可以浏览全部公开题库、搜索、切题、练习、切换阅读版式，并体验 AI 面试官评分和 AI 助手，但不会写入个人学习记录。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;学习账号&lt;/strong&gt;在游客功能之上保存进度、收藏、批注和复习计划，并支持跨设备继续。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;内容编辑&lt;/strong&gt;可以维护题库、归档恢复内容并预览 Markdown 导入；&lt;strong&gt;管理员&lt;/strong&gt;还可以管理账号与邀请、处理反馈申请，并创建和下载 SQLite 备份。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;服务端的 SQLite 是登录用户学习状态的最终记录。网络不稳时，浏览器会用 IndexedDB 按账号暂存尚未确认的修改，连接恢复后再同步，避免丢进度或把记录写错账号。&lt;/p&gt;
+&lt;h2 id="题库内容怎样进入页面"&gt;题库内容怎样进入页面
+&lt;/h2&gt;&lt;p&gt;题库不是直接写死在 React 组件里。项目把 Markdown 和 JavaScript 内容源经过生成与检查，再导出为公开索引、按题库拆分的内容快照和 SQLite 种子。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;内容源 → 生成与质量检查 → 题库索引 + 分片快照 → SQLite&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;页面第一次进入只读取题库索引，真正打开某个题库时才加载对应分片。实时接口暂时不可用时，游客阅读还能退回到静态快照；这类回退只保证公开内容可读，账号、批注和复习记录仍然不可用。&lt;/p&gt;
+&lt;p&gt;内容检查会关注题目结构、来源链接、首屏是否讲清“结论、为什么、怎么用”，以及代码和站内图解是否与题目匹配。当前基线中，735 道题带有可核验来源，507 道带代码示例，48 道带站内图解。&lt;/p&gt;
+&lt;h2 id="实现上怎样分工"&gt;实现上怎样分工
+&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;部分&lt;/th&gt;
+&lt;th&gt;负责什么&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;React + TypeScript&lt;/td&gt;
+&lt;td&gt;首页、题库中心、阅读器、练习模式、AI 评分面板、批注和 AI 对话&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Express&lt;/td&gt;
+&lt;td&gt;同源 API、公开题库、账号、学习状态、内容管理，以及 AI 对话与评分入口&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SQLite&lt;/td&gt;
+&lt;td&gt;题库、账号、会话、个人学习记录与审计日志&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;内容管线&lt;/td&gt;
+&lt;td&gt;生成题库、检查结构与来源，并导出按需加载的公开快照&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ECS + systemd&lt;/td&gt;
+&lt;td&gt;运行单个 Node 服务和持久化数据库&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Cloudflare Tunnel&lt;/td&gt;
+&lt;td&gt;把只监听本机回环地址的服务接入 HTTPS 公网入口&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;正式站运行在阿里云 ECS 上，Express 同时提供 API 和构建后的前端资源。数据库放在独立持久目录，发布前先做检查与备份，再切换版本并验证健康状态。Vercel 保留公开题库的静态版本，但它不是一套独立的账号与数据后端。&lt;/p&gt;
+&lt;h2 id="现在的边界"&gt;现在的边界
+&lt;/h2&gt;&lt;p&gt;公共注册目前关闭，普通学习账号需要邀请或由管理员创建；如果只是读题和练习，游客模式已经够用。&lt;/p&gt;
+&lt;p&gt;题量和质量指标是当前版本的快照，后续内容更新后会变化。社区来源只能说明某类问题在面试中出现过，不能替代技术事实本身；AI 对话与评分也只负责辅助理解和复盘，不替代来源核验。&lt;/p&gt;
+&lt;p&gt;现在我更愿意把面试边注看成一张可以持续修改的学习桌面：题库负责给出范围，题解负责讲清楚，练习和复习负责把内容留下来，AI 用来换一种讲法，也用来检查自己到底有没有说清楚。&lt;/p&gt;
+&lt;p&gt;平台入口：&lt;a class="link" href="https://interview.linsk27.dpdns.org/app" target="_blank" rel="noopener"
+&gt;interview.linsk27.dpdns.org/app&lt;/a&gt;&lt;/p&gt;</description></item><item><title>竞见：从淘宝采集到可追溯的竞品报告</title><link>https://linsk27.github.io/projects/jingjian/</link><pubDate>Wed, 26 Aug 2026 04:34:00 +0800</pubDate><guid>https://linsk27.github.io/projects/jingjian/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/jingjian-research-center-latest.png" alt="Featured image of post 竞见：从淘宝采集到可追溯的竞品报告" /&gt;&lt;p&gt;竞见是一个面向品牌和包装设计团队的淘宝竞品调研工具。输入品类、价格范围和样本量后，它会整理品牌资料，采集淘宝商品的图片、价格和规格线索，生成一份包含品牌定位、产品结构、包装视觉、价格带、竞品比较和设计建议的 PPTX。报告完成后，还能继续追问，并从回答中的引用回到原报告或原始网页核对。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文对应 2026 年 9 月 1 日最新开发版本。界面截图使用脱敏演示数据；淘宝、搜索和模型服务需要在实际运行环境中连接。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="从一份研究简报开始"&gt;从一份研究简报开始
+&lt;/h2&gt;&lt;p&gt;用户先填写主题、品类、目标市场、价格范围和关注点，再选择快速、标准、深度或自定义样本量。提交前，页面会先检查后端服务和淘宝登录状态。同一次创建请求重试时会沿用同一个请求键，避免网络抖动造成重复任务。&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://linsk27.github.io/img/projects/jingjian-new-research-latest.png" &gt;&lt;img src="https://linsk27.github.io/img/projects/jingjian-new-research-latest.png"
+loading="lazy"
+alt="竞见新建调研页面，包含主题、品类、价格范围和样本规模"
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;研究简报只收集会影响调研结果的条件，样本量可以按任务时间调整。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;一次完整调研大致经过这条链路：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;研究简报 → 品类理解 → 品牌核验 → 分品牌研究 → 淘宝商品采集 → 洞察与质检 → HTML 预览 + 一份 PPTX → 研究问答&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;品牌资料主要来自公开网页；商品图、价格、规格和销量线索尽量从同一张淘宝商品卡获取，避免把几个页面的信息拼成一个并不存在的商品。采集结果还会经过品类匹配、图片可用性、重复内容和版面检查。开启淘宝采集后，如果一张可用商品图都没有，任务会失败，不会拿普通网络图片填空。&lt;/p&gt;
+&lt;p&gt;淘宝登录过期或出现验证码时，任务会进入等待状态，由用户在共享 Chrome 中完成登录或验证。系统不会绕过平台验证，也不会把等待人工操作误报成程序失败。&lt;/p&gt;
+&lt;h2 id="最后得到的是什么"&gt;最后得到的是什么
+&lt;/h2&gt;&lt;p&gt;竞见只交付一份正式 PPTX，同时提供同内容的 HTML 预览。报告不是简单罗列搜索结果，而是按研究顺序组织：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;开头说明研究对象、样本范围和对标结论；&lt;/li&gt;
+&lt;li&gt;按品牌整理定位、用户、产品线、价格层级与视觉语言；&lt;/li&gt;
+&lt;li&gt;保留商品样本、页面截图和来源入口；&lt;/li&gt;
+&lt;li&gt;最后汇总跨品牌差异、市场判断与设计建议。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a class="link" href="https://linsk27.github.io/img/projects/jingjian-report-cover-conclusion.png" &gt;&lt;img src="https://linsk27.github.io/img/projects/jingjian-report-cover-conclusion.png"
+loading="lazy"
+alt="竞见生成的报告封面与对标结论页"
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;报告开头先交代研究对象，再给出行业、竞争和品牌发展层面的结论。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://linsk27.github.io/img/projects/jingjian-report-product-visuals.png" &gt;&lt;img src="https://linsk27.github.io/img/projects/jingjian-report-product-visuals.png"
+loading="lazy"
+alt="竞见报告中的淘宝视觉样本、产品架构与价格层级"
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;中间页保留商品样本及图片来源，再把样本整理为产品架构和价格层级。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;HTML 预览和 PPTX 使用同一份报告内容，网页上看到的页序和下载文件保持一致。PPTX 的页面以整页画面为主，适合直接展示和分发，并不是由大量可逐项编辑的文本框拼成的模板；当前也不生成 PDF。&lt;/p&gt;
+&lt;p&gt;生成后，系统最多进行三轮检查和修复，处理空图、内容溢出与版面异常。能定位到具体商品图的问题会单独补采；检查未通过，就不会把报告标记为完成。&lt;/p&gt;
+&lt;h2 id="长任务为什么能停下来再继续"&gt;长任务为什么能停下来再继续
+&lt;/h2&gt;&lt;p&gt;调研会连续调用搜索、模型、浏览器和渲染程序，不能依赖一次网页请求从头跑到尾。竞见把任务状态和最终报告保存在研究主库中，并在品类理解、品牌核验、单品牌研究、洞察整理和淘宝采集等阶段留下检查点。&lt;/p&gt;
+&lt;p&gt;浏览器页面关闭后，后台任务仍可继续。程序重启时，运行中的任务会转为“已中断、可恢复”。用户点击恢复后，检查点可用时会从兼容阶段继续；检查点不可用时仍沿用原请求，但流程会从头执行。&lt;/p&gt;
+&lt;p&gt;只有最终报告成功写入数据库，任务才会标记为完成，因此不会出现“状态已经完成，报告却没有保存”的情况。&lt;/p&gt;
+&lt;h2 id="rag-不是把整份-ppt-塞给模型"&gt;RAG 不是把整份 PPT 塞给模型
+&lt;/h2&gt;&lt;p&gt;报告问答分成两步：先把完成的报告整理成可检索证据，再让模型只根据找到的证据回答。它只查询已经完成的报告，不会在问答时重新联网采集淘宝。&lt;/p&gt;
+&lt;h3 id="报告怎样变成可检索的资料"&gt;报告怎样变成可检索的资料
+&lt;/h3&gt;&lt;p&gt;完成的任务和报告先保存在 &lt;strong&gt;research.sqlite3&lt;/strong&gt;。同步知识库时，系统从这里读取报告，再按报告结构建立检索索引。报告原文由主库统一保存，检索索引即使损坏，也可以重新生成。&lt;/p&gt;
+&lt;p&gt;竞见不会按固定字数随意截断，而是沿用报告本身的业务结构：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一块调研概况；&lt;/li&gt;
+&lt;li&gt;每个品牌一块品牌概览；&lt;/li&gt;
+&lt;li&gt;每个商品一块商品信息；&lt;/li&gt;
+&lt;li&gt;每条市场洞察和设计建议各自成块。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例如，一块品牌资料大致是这样：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;section: 品牌 · 卫龙
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;content:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;品牌: 卫龙
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;品类: 辣条、小面筋、大面筋
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;定位: 以香辣配置、面筋口感和便携零食为核心
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;用户: 偏好香辣、筋道口感及怀旧零食的消费者
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;主色: 红、金
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;产品架构: 小面筋系列、大面筋系列、大刀辣条系列
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;包装策略: 稳定品牌区、插画资产、系列色区分……
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;货架观察: 大面筋、小面筋名称辨识度高
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;设计洞察: 突出面筋形态与辣味联想
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;机会: 强化规格分层与型号识别
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;价格带: ¥3.5～¥12.09
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;metadata:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;{&amp;#34;brand&amp;#34;: &amp;#34;卫龙&amp;#34;, &amp;#34;kind&amp;#34;: &amp;#34;brand&amp;#34;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;标题、品类、章节、metadata 和正文会组成同一份检索文本，关键词索引和向量索引都使用它。系统通过内容指纹判断报告是否真的变化，只重建变化项；外部向量全部生成并校验后，才在一次短事务里替换旧索引。中途失败时，旧索引仍能使用。&lt;/p&gt;
+&lt;h3 id="先找对报告再从报告里找证据"&gt;先找对报告，再从报告里找证据
+&lt;/h3&gt;&lt;p&gt;一次内容提问的链路可以缩成：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;问题 → 确定报告范围 → 关键词检索 + 向量检索 → 合并排序 → 取出证据 → 带引用回答&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;关键词检索适合查品牌名、型号和具体术语；向量检索用来寻找说法不同、意思相近的内容。两路结果通过 RRF 合并，必要时还可以让模型再排一次。精排默认关闭；没有开启或执行失败时，仍会使用原来的检索结果。&lt;/p&gt;
+&lt;p&gt;这里没有 Milvus、FAISS 或其他独立向量库。向量直接存在 SQLite 的知识块记录中，查询时由 Python 计算余弦相似度。未配置外部 Embedding 时，系统使用本地 384 维 feature-hash；它做的是文字特征匹配，不是神经语义模型。配置 Ark Embedding 后，系统才会加入语义向量。外部向量不可用或签名不一致时，查询会降级为 FTS5。&lt;/p&gt;
+&lt;p&gt;不同问题也不会强行走同一条路：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;问题&lt;/th&gt;
+&lt;th&gt;处理方式&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;“现在有多少份报告？”&lt;/td&gt;
+&lt;td&gt;直接查询研究主库，不靠检索结果猜数量。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;“最新报告的包装策略是什么？”&lt;/td&gt;
+&lt;td&gt;先由主库确定最新任务，再只检索这份报告。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;“比较最近两份报告”&lt;/td&gt;
+&lt;td&gt;先在已同步的报告目录中限定范围，再尽量让每份报告都有证据进入候选。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;没有找到可靠证据&lt;/td&gt;
+&lt;td&gt;直接说明证据不足，不让模型凭聊天记忆补答案。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;多报告比较依赖已经同步的知识目录；如果索引落后，应该先同步，而不是把旧报告当成最新结果。&lt;/p&gt;
+&lt;h3 id="回答必须带回本次证据"&gt;回答必须带回本次证据
+&lt;/h3&gt;&lt;p&gt;候选知识块会标成 [S1]、[S2]，来源先发给前端，回答再以流式文字显示。生成结束后，服务端检查回答是否至少引用了一条来源，以及引用编号是否真的存在于本轮候选中。检查失败，这轮回答不会被当成完成结果。&lt;/p&gt;
+&lt;p&gt;这能阻止模型编造一个不存在的 [S99]，但不能代替人工判断。界面仍会保留报告入口、章节和原始网页链接，方便读者自己核对。&lt;/p&gt;
+&lt;p&gt;最新版还可以直接复制用户问题和已经结束的回答；仍在流式生成的半截回答不会显示复制按钮。&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://linsk27.github.io/img/projects/jingjian-knowledge-qa-latest.png" &gt;&lt;img src="https://linsk27.github.io/img/projects/jingjian-knowledge-qa-latest.png"
+loading="lazy"
+alt="竞见报告知识库问答页面，回答包含引用编号与来源卡片"
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;问答页同时显示已同步报告数、证据块数量、检索方式、回答引用和来源卡片。&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id="连续追问怎样不跑题"&gt;连续追问怎样不跑题
+&lt;/h3&gt;&lt;p&gt;会话、消息、部分流式回答、引用快照和滚动摘要都写入独立的会话库。系统组合最近对话、尚未归纳的衔接内容、与当前问题相关的较早问答和滚动摘要，而不是无限追加整段历史。&lt;/p&gt;
+&lt;p&gt;“那它的价格呢？”这类追问会继承上一轮问题和来源报告的范围；出现“换一个品牌”之类的明确转向时，则不再沿用旧范围。会话记忆只帮助理解指代，不能代替报告证据。&lt;/p&gt;
+&lt;h2 id="三层数据各管一件事"&gt;三层数据各管一件事
+&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;数据层&lt;/th&gt;
+&lt;th&gt;保存什么&lt;/th&gt;
+&lt;th&gt;为什么分开&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;研究主库&lt;/td&gt;
+&lt;td&gt;任务、请求、最终报告与校验值&lt;/td&gt;
+&lt;td&gt;是事实来源；任务完成与报告写入保持一致。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;知识索引库&lt;/td&gt;
+&lt;td&gt;业务知识块、FTS5 文本和向量&lt;/td&gt;
+&lt;td&gt;可以从主库重建，索引失败不会破坏报告。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;会话库&lt;/td&gt;
+&lt;td&gt;会话、消息状态、引用和摘要&lt;/td&gt;
+&lt;td&gt;保留断线前的部分结果，并支持安全重试。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;前端用 React、TypeScript 和 TanStack Query 管理工作台状态；FastAPI 负责任务、流式事件和知识接口；共享 Chrome 配合 Python RPA worker 与 Playwright/CDP 完成淘宝页面采集和人工验证；HTML 分页内容再渲染为 PPTX。当前设计面向一台 Windows 工作站上的个人或小团队，不是多租户、分布式爬虫平台。&lt;/p&gt;
+&lt;h2 id="现在的边界"&gt;现在的边界
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;淘宝采集依赖有效登录态、可交互桌面和人工处理平台验证，页面结构或风控变化会影响成功率。&lt;/li&gt;
+&lt;li&gt;商品截图和价格是研究样本，不代表整个市场；报告结论仍要结合采集范围阅读。&lt;/li&gt;
+&lt;li&gt;使用外部向量模型时，待索引的知识块和查询文本会发送给对应服务；回答模型会收到召回证据和有限的会话上下文，因此并非所有处理都在本机完成。&lt;/li&gt;
+&lt;li&gt;引用校验确认的是“引用编号来自本轮证据”，不是逐句事实审计。&lt;/li&gt;
+&lt;li&gt;正式交付物是一份 PPTX；HTML 用于预览，知识索引用于继续查询。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;项目代码见 &lt;a class="link" href="https://github.com/linsk27/jingjian-taobao-agent" target="_blank" rel="noopener"
+&gt;linsk27/jingjian-taobao-agent&lt;/a&gt;。本文按最新开发分支 &lt;strong&gt;feat/sqlite-primary-storage @ fd30cd9&lt;/strong&gt; 的实现整理。&lt;/p&gt;</description></item><item><title>Signal Atlas：把真实网页放进 Three.js 工作站</title><link>https://linsk27.github.io/projects/signal-atlas/</link><pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/signal-atlas/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-desk-v0.25.7.png" alt="Featured image of post Signal Atlas：把真实网页放进 Three.js 工作站" /&gt;&lt;p&gt;现在打开 Signal Atlas，看到的已经不是最早那版项目卡片页，而是一台可以进入的 3D 工作站。外层场景来自一个 MIT 开源作品集，我保留了许可证和署名；显示器里的复古桌面、窗口系统、博客与八股文入口，以及两层页面之间的交互，是我按自己的内容重新实现的。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-desk-v0.25.7.png"
+loading="lazy"
+alt="Signal Atlas v0.25.7 参考版工作站全景"
+&gt;&lt;/p&gt;
+&lt;p&gt;这张图是 v0.25.7 生产版本的真实画面，不再使用旧版 Atlas 面板截图。现在的桌面只保留 Hugo 博客、八股炼丹炉、GitHub 和 QQ 这些真实入口，之前用来占位置的 &lt;code&gt;My Showcase&lt;/code&gt; 和伪应用已经删除。&lt;/p&gt;
+&lt;h2 id="从看起来很酷到真的能用"&gt;从“看起来很酷”到“真的能用”
+&lt;/h2&gt;&lt;p&gt;最初做 3D 主页，想法很简单：普通项目卡片太像简历，我更想让访问者走到一台电脑前，再从电脑里打开我的内容。但真正开始接博客以后，问题就不再是“模型好不好看”，而是网站能不能顺利打开、显示器里的链接能不能点、滚轮会不会带着外层相机一起转。&lt;/p&gt;
+&lt;p&gt;Signal Atlas 现在由两种渲染技术协作，并为内嵌页增加一层按显示器几何定位的覆盖层。&lt;/p&gt;
+&lt;p&gt;WebGL 负责房间、电脑、光影与 CRT 效果；CSS3DRenderer 负责把可交互的桌面 DOM 放到显示器的位置。父页 Portal 又是独立于 3D 渲染器的真实 DOM，Vercel rewrite 只负责取回上游页面，不直接参与画面合成。网页没有被截成一张纹理，所以聚焦显示器后仍然可以点击、滚动和打开窗口。代价是每次相机移动、窗口缩放或发生遮挡，都要重新保证几层几何对得上。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-reference-edition-monitor-v0.25.7.png"
+loading="lazy"
+alt="聚焦后的 Signal Atlas 显示器"
+&gt;&lt;/p&gt;
+&lt;h2 id="八股文内嵌页为什么最难处理"&gt;八股文内嵌页为什么最难处理
+&lt;/h2&gt;&lt;p&gt;八股炼丹炉本身在另一个服务上。直接在浏览器打开时，它只需要面对一个正常视口；如果继续把它嵌套在 3D 桌面的 iframe 里，尺寸、裁切和跨域链路都会更复杂。&lt;/p&gt;
+&lt;p&gt;当前版没有在桌面里继续嵌套八股页。桌面只通过 &lt;code&gt;postMessage&lt;/code&gt; 把窗口位置发给父页面，父页面再结合 CSS3D 锚点计算屏幕四角，用固定定位的 DOM Portal 承载真实 iframe，并裁切到显示器边界。窗口移动、缩放或页面恢复时会重新校正几何；单次加载超过 18 秒会进入失败处理，随后最多重试 2 次。Vercel 的同源 rewrite 负责把请求转到八股文实际服务。&lt;/p&gt;
+&lt;p&gt;这也解释了它为什么仍不可能做到百分之百稳定：如果八股文源站或 Cloudflare Tunnel 本身离线，外层工作站无法凭空把服务变可用。现在能做的是正确重试、恢复布局，并把“上游不可用”和“页面溢出”分开处理。&lt;/p&gt;
+&lt;h2 id="第一次进入为什么比普通博客重"&gt;第一次进入为什么比普通博客重
+&lt;/h2&gt;&lt;p&gt;3D 场景要加载模型、贴图、脚本和媒体，第一次访问天然比纯 HTML 博客更贵。v0.25.7 做了几件比较实际的事：启动阶段只等待 8 个关键资源；CRT 视频改为 &lt;code&gt;preload=&amp;quot;none&amp;quot;&lt;/code&gt;，启动音和环境音只预读元数据，两段很短的鼠标音保留预加载；HTML 每次重新校验，而带版本号的 JS、CSS 和静态素材走长期缓存。浏览器从 BFCache 返回时也尽量恢复现场，不再完整重启一次。&lt;/p&gt;
+&lt;p&gt;这不会让 3D 首页变得和文字页一样轻，但能避免“为了等一段暂时用不到的视频，整个入口一直卡在 BIOS”。&lt;/p&gt;
+&lt;h2 id="哪些是开源基础哪些是我做的"&gt;哪些是开源基础，哪些是我做的
+&lt;/h2&gt;&lt;p&gt;这部分我想写清楚，避免把“基于开源”说成“全部原创”。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当前生产外层基于 &lt;a class="link" href="https://github.com/henryjeff/portfolio-website" target="_blank" rel="noopener"
+&gt;Henry Heffernan 的 portfolio-website&lt;/a&gt;，使用其 MIT 许可的工作站模型、贴图、CRT 媒体和镜头表现，完整归因保存在仓库的 &lt;code&gt;reference/NOTICE.md&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;上游另一个内层桌面仓库没有明确许可证，所以我没有复制它。显示器中的 linsk27 桌面、窗口管理器、应用入口和内容是重新实现的。&lt;/li&gt;
+&lt;li&gt;仓库也保留了我自己用 Three.js primitives、Blender 脚本、manifest 和 Vue runtime 做的原创 Atlas 实验路线，但它不是当前生产首页的那套外观。&lt;/li&gt;
+&lt;li&gt;参考版目前使用的 Windows 7 &lt;code&gt;Harmony&lt;/code&gt; 壁纸不在项目 MIT 许可证范围内；如果要再分发或做二开，应先替换成有合适许可的自有素材。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以更准确的说法是：它不是从零原创整套 3D 场景，也不是只换了名字的 fork，而是在有明确许可证的外层上重做内容系统、桌面交互和生产稳定性。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/signal-atlas-desktop-v0.25.7.png"
+loading="lazy"
+alt="Signal Atlas v0.25.7 原创桌面与真实入口"
+&gt;&lt;/p&gt;
+&lt;p&gt;开发过程中我会借助 AI 做代码检索、问题定位、重构建议和回归检查，但场景取舍、许可边界、功能验收和最终部署由我自己负责。尤其是这种同时涉及 WebGL、DOM 和外部服务的页面，AI 给出的“看起来合理”不等于浏览器里真的能用，最后还是要靠真实窗口、不同视口和失败场景逐项验证。&lt;/p&gt;
+&lt;h2 id="现在可以从哪里看"&gt;现在可以从哪里看
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;生产站点：&lt;a class="link" href="https://linsk27.dpdns.org/" target="_blank" rel="noopener"
+&gt;linsk27.dpdns.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk-labs/signal-atlas" target="_blank" rel="noopener"
+&gt;linsk-labs/signal-atlas&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;目前我更愿意把 Signal Atlas 称为一个持续迭代的作品集实验室，而不是适合所有人的主页模板。它有意保留 3D 的重量和仪式感，同时也必须接受一个现实：越接近真正可用的桌面，越需要在性能、嵌入稳定性和授权边界上做扎实的工程工作。&lt;/p&gt;</description></item><item><title>Local AI Ops：先把运维资料收回来，再谈 AI</title><link>https://linsk27.github.io/projects/local-ai-ops/</link><pubDate>Tue, 23 Jun 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/local-ai-ops/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/local-ai-ops-empty-dashboard.png" alt="Featured image of post Local AI Ops：先把运维资料收回来，再谈 AI" /&gt;&lt;p&gt;我做 Local AI Ops，不是为了让 AI 替我重启服务器，而是因为自己的域名、ECS、轻量服务器、OSS、续费信息和 SSH 记录散在太多地方。真正出问题时，常常先花十分钟找“这台机器到底在哪”，排故反而只用了五分钟。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/local-ai-ops-empty-dashboard.png"
+loading="lazy"
+alt="Local AI Ops 本地空数据实例"
+&gt;&lt;/p&gt;
+&lt;p&gt;截图使用的是本地空数据实例，所以能看到真实页面结构，但没有云账号、IP、域名、AccessKey 或监控结果。&lt;/p&gt;
+&lt;h2 id="先把确定的数据链跑通"&gt;先把确定的数据链跑通
+&lt;/h2&gt;&lt;p&gt;这个项目是我围绕自己的运维需求立项和开发的，不是给某个现成面板换皮。FastAPI、React、Celery 这些开源框架负责基础能力，阿里云官方 SDK 负责读取云端资源；我主要做的是资产模型、检查流程、告警状态和本地安全边界。&lt;/p&gt;
+&lt;p&gt;整体数据流没有刻意做复杂，人工请求、定时巡检和诊断各走自己的路径。&lt;/p&gt;
+&lt;p&gt;用户明确触发资产同步后，FastAPI 会在当前请求中通过 RAM AccessKey 调用阿里云 OpenAPI，把 ECS、轻量应用服务器、OSS、域名和 DNS 转成统一的本地资产。PostgreSQL 保存资产、手工补充的运维资料、检查结果、告警和诊断；Redis、Celery Beat 与 Worker 只负责每分钟筛选并执行已经启用且到期的检查，不承担手动资产同步和诊断。&lt;/p&gt;
+&lt;p&gt;一次健康检查大致会这样走：Celery Beat 判断哪些检查到期，Worker 执行 HTTP、TCP、SSH、CloudMonitor 或云助手只读命令，把结果写回数据库，再根据连续失败次数更新告警。这里的关键是先拿到可重复验证的事实，而不是先问模型“服务器为什么挂了”。&lt;/p&gt;
+&lt;h2 id="ai-只放在最后一层"&gt;AI 只放在最后一层
+&lt;/h2&gt;&lt;p&gt;用户针对某条告警发起诊断时，系统会整理当前资产、告警内容和最近几次检查结果，先脱敏，再交给 OpenAI-compatible 接口生成摘要、可能原因和排查步骤。如果没有配置模型，或者接口调用失败，就回退到本地规则建议。&lt;/p&gt;
+&lt;p&gt;我刻意保留了几条边界：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;模型只能给建议，不能自动执行修复。&lt;/li&gt;
+&lt;li&gt;模型建议只展示、不自动执行；真正进入 SSH 或云助手执行器的命令才受严格的只读白名单限制。&lt;/li&gt;
+&lt;li&gt;发送给模型前要去掉 AccessKey、密码、私钥和其他敏感字段。&lt;/li&gt;
+&lt;li&gt;AI 不是监控数据的事实来源，HTTP 状态、端口和云指标才是。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这样做没有“全自动 AI 运维”听起来厉害，却更适合个人环境。一条看似正确的重启命令，如果落到错误实例上，损失会比少点几下控制台大得多。&lt;/p&gt;
+&lt;h2 id="为什么坚持本地优先"&gt;为什么坚持本地优先
+&lt;/h2&gt;&lt;p&gt;默认部署用 Docker Compose 拉起 React、FastAPI、PostgreSQL、Redis 和 Celery。数据库与 Redis 不需要直接暴露到公网，管理入口也定位在可信局域网。AccessKey、SSH 密码、私钥、面板密码和模型 Key 会以 AES-GCM 加密保存，但这不等于“绝对安全”——主密钥仍然要由部署者自己妥善保管。&lt;/p&gt;
+&lt;p&gt;Local AI Ops 也不打算替代阿里云控制台。云厂商控制台负责完整配置能力，这个工作台更像我的运维索引：哪些资源属于哪个项目、什么时候到期、最近是否可达、出问题时先看什么，都能在一个地方接起来。&lt;/p&gt;
+&lt;h2 id="ai-也参与开发但不参与拍脑袋"&gt;AI 也参与开发，但不参与拍脑袋
+&lt;/h2&gt;&lt;p&gt;开发时我会用 AI 编程工具辅助拆需求、补样板代码、梳理接口和测试边界。不过资产结构、安全规则、告警流程和真实云账号验证必须由我自己确定。涉及凭据和自动化时，我更相信“代码里能看到的限制”，而不是一句提示词承诺。&lt;/p&gt;
+&lt;p&gt;目前它仍是个人和小团队可用的 MVP，不是公网多租户 SaaS。v0.3.0 已经补上资产关系图、续费中心和纯本地数据库知识库；下一步更重要的是把手动同步、检查和诊断真正移入 Worker，并完善备份恢复、定时资产同步和操作审计。&lt;/p&gt;
+&lt;h2 id="项目入口"&gt;项目入口
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk-labs/local-ai-ops" target="_blank" rel="noopener"
+&gt;linsk-labs/local-ai-ops&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub 项目索引：&lt;a class="link" href="https://linsk27.github.io/github/" &gt;404_@林达 GitHub 项目索引&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Dev Cockpit：隔几天回来，也知道项目怎么跑</title><link>https://linsk27.github.io/projects/dev-cockpit/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/dev-cockpit/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png" alt="Featured image of post Dev Cockpit：隔几天回来，也知道项目怎么跑" /&gt;&lt;p&gt;最初我只想解决一个很笨、但每天都会遇到的问题：隔几天重新打开项目时，我已经忘了它用什么命令启动、端口在哪、Python 环境是哪一个、上次又为什么失败。Dev Cockpit 就是从这个问题长出来的。&lt;/p&gt;
+&lt;p&gt;它不是 IDE，也不打算替代 VS Code、Docker Desktop 或 Conda。它负责回答的是更靠前的几件事：这个目录是什么项目、应该怎么启动、现在到底有没有运行、端口属于谁、失败信息在哪里。&lt;/p&gt;
+&lt;h2 id="扫描一个项目时程序在看什么"&gt;扫描一个项目时，程序在看什么
+&lt;/h2&gt;&lt;p&gt;把一个目录交给 Dev Cockpit 后，核心扫描器会读取常见标记文件、包管理配置和 Git 状态，识别 Node、Python、Java、PHP、Ruby、.NET、Go、Rust 与 Docker 项目。接着再从 package scripts、常见入口和技术栈约定中推断启动命令与候选端口，并结合进程归属和 HTTP 探测确认实际运行状态。&lt;/p&gt;
+&lt;p&gt;这听起来像“判断文件存不存在”，但麻烦通常出在冲突上。例如同一个目录里既有 Python 虚拟环境，也有 VS Code 解释器设置和 Conda 声明。当前策略会按手工绑定、编辑器配置、项目虚拟环境、Conda 声明等优先级解析，并把为什么选中这个解释器一起展示，而不是静默猜一个路径。&lt;/p&gt;
+&lt;h2 id="看到-3000-端口不等于所有项目都在线"&gt;看到 3000 端口，不等于所有项目都在线
+&lt;/h2&gt;&lt;p&gt;早期最容易写错的逻辑，是只要发现某个端口在监听，就把对应项目标成“运行中”。如果电脑上同时开了几个前端项目，这种判断很快就会串台。&lt;/p&gt;
+&lt;p&gt;Dev Cockpit 会把状态拆开看：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;是否由工作台自己启动并持有进程；&lt;/li&gt;
+&lt;li&gt;外部监听端口能否归属到当前项目或明确命令；&lt;/li&gt;
+&lt;li&gt;HTTP 地址是否真的可达；&lt;/li&gt;
+&lt;li&gt;最近一次启动是否失败；&lt;/li&gt;
+&lt;li&gt;端口是否只是别的程序留下的占用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;也就是说，“进程存在”“端口被占用”和“这个项目能访问”不是一件事。状态判断尽量依赖本地可验证信号，而不是让模型猜。&lt;/p&gt;
+&lt;h2 id="同一份项目事实按入口逐层补全"&gt;同一份项目事实，按入口逐层补全
+&lt;/h2&gt;&lt;p&gt;为了避免 CLI、浏览器和桌面版各自猜一遍项目，代码按职责拆成基础扫描模型、机器运行证据补全和界面映射三层。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;packages/core&lt;/code&gt; 负责扫描规则和 Project 基础字段，CLI 的 &lt;code&gt;scan&lt;/code&gt;、&lt;code&gt;doctor&lt;/code&gt; 与文本上下文可以直接消费这一层。Local Server 再合并托管进程、PID 与端口归属、HTTP 探测和最近日志，生成带机器现场的 Project；Vue 从本地 API 读取它，并在视图层映射 &lt;code&gt;managed-running&lt;/code&gt;、&lt;code&gt;detected-online&lt;/code&gt;、&lt;code&gt;stale&lt;/code&gt;、&lt;code&gt;failed&lt;/code&gt; 和 &lt;code&gt;idle&lt;/code&gt; 等展示状态。Electron 启动的是同一个本地 Server，再加载同一套 Web 界面。&lt;/p&gt;
+&lt;p&gt;因此真正复用的是“如何扫描、字段代表什么、哪些事实已经验证”，而不是三个入口共享一台状态机。界面文案怎么改，不应该反过来改变端口归属或项目是否可达的事实；以后补一种技术栈，也不需要在三个入口各写一遍扫描规则。&lt;/p&gt;
+&lt;h2 id="资源雷达是后来长出来的功能"&gt;资源雷达是后来长出来的功能
+&lt;/h2&gt;&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png"
+loading="lazy"
+alt="Dev Cockpit 资源雷达卡片页"
+&gt;&lt;/p&gt;
+&lt;p&gt;我平时还会收集 GitHub 仓库、Demo、工具、Skills 和教程，所以后来加了资源雷达：把链接或文本整理成带来源、摘要、分类、标签和评分的卡片，再用筛选与星云图复盘最近关注的方向。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/dev-cockpit-resource-nebula.png"
+loading="lazy"
+alt="Dev Cockpit 资源星云图"
+&gt;&lt;/p&gt;
+&lt;p&gt;资源处理大致是“本地规则优先，可选 AI 补充”：先解析 GitHub 或网页元数据，再用规则生成基础分类；配置模型后，AI 可以帮忙整理标题、标签和摘要，最后仍要经过预览才写入本地 JSON。它不会因为看见一个仓库就自动安装 Skill，也不会上传整个源码目录。&lt;/p&gt;
+&lt;p&gt;这也是旧文章最容易让人误解的地方：资源雷达很直观，截图也好看，但它只是 Dev Cockpit 的一个模块，项目核心仍然是恢复本地开发现场。&lt;/p&gt;
+&lt;h2 id="ai-在哪里有用哪里没资格下结论"&gt;AI 在哪里有用，哪里没资格下结论
+&lt;/h2&gt;&lt;p&gt;工作台可以把项目路径、技术栈、启动命令、端口、Git 状态和最近错误整理成一段可复制的上下文，方便交给 AI 编程工具；只有用户明确点击时，才会写入 &lt;code&gt;PROJECT_CONTEXT.md&lt;/code&gt; 或 &lt;code&gt;AGENTS.md&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;我也会用 AI 辅助梳理跨技术栈识别规则、重构和补测试。但模型不是运行状态的事实来源：端口归属、HTTP 可达性和 Python 环境解析，仍由本地确定性代码判断。这条边界比给聊天框换一个更聪明的模型重要。&lt;/p&gt;
+&lt;h2 id="试用入口"&gt;试用入口
+&lt;/h2&gt;&lt;p&gt;安装 Node.js 后可以直接运行：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;npx local-dev-cockpit
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;默认会在本机打开 &lt;code&gt;http://localhost:8787&lt;/code&gt;。项目数据保存在本地应用数据目录，定位仍是个人开发工作台，而不是需要注册账号的云服务。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk-labs/local-dev-cockpit" target="_blank" rel="noopener"
+&gt;linsk-labs/local-dev-cockpit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>ProofPR：AI 让写 PR 变快，但 review 没变便宜</title><link>https://linsk27.github.io/projects/proofpr/</link><pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/proofpr/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/proofpr-github-action-pr-review-report.png" alt="Featured image of post ProofPR：AI 让写 PR 变快，但 review 没变便宜" /&gt;&lt;p&gt;AI 让写 Pull Request 变快了，但没有让 review 变便宜。很多 PR 最大的问题不是代码一定错，而是没有复现、没有测试、没有截图，也没解释为什么要改权限。ProofPR 先检查这些“应该随改动一起出现的证据”，再把 PR 交给人看。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/proofpr-github-action-pr-review-report.png"
+loading="lazy"
+alt="ProofPR 在 GitHub Action 中生成的审查报告"
+&gt;&lt;/p&gt;
+&lt;p&gt;先说清楚：ProofPR 不是 AI code reviewer，运行时也不调用大模型。它不猜代码是不是 AI 写的，不理解你的业务逻辑，更不会替维护者判断实现是否正确。它做的是一套可解释、可重复的初筛。&lt;/p&gt;
+&lt;h2 id="一个-pr-是怎样被处理的"&gt;一个 PR 是怎样被处理的
+&lt;/h2&gt;&lt;p&gt;在本地 CLI 中，ProofPR 从 Git 读取 unified diff；在 GitHub Action 中，它会读取 PR diff、标题、正文和仓库里的 &lt;code&gt;.proofpr.yml&lt;/code&gt;。之后的数据处理也是确定性的。&lt;/p&gt;
+&lt;p&gt;diff 会先被解析成带路径和新增行位置的 change set，PR 标题与正文则单独提取测试、复现、截图和风险说明；&lt;code&gt;.proofpr.yml&lt;/code&gt; 不进入 diff parser，而是在配置校验后控制规则、Evidence Contract、preset 与阈值。三类输入只在确定性规则引擎里汇合。&lt;/p&gt;
+&lt;p&gt;规则会关注改动规模、敏感路径、测试缺失、描述过薄、疑似 secret、依赖版本与 lockfile、GitHub Actions 权限、&lt;code&gt;pull_request_target&lt;/code&gt;、不可信 checkout 和 MCP 凭据等信号。最后分别计算风险分与证据分，并给出四种 gate：&lt;code&gt;ready&lt;/code&gt;、&lt;code&gt;review-carefully&lt;/code&gt;、&lt;code&gt;needs-evidence&lt;/code&gt; 或 &lt;code&gt;block-merge&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;这不是在说 &lt;code&gt;block-merge&lt;/code&gt; 的 PR 一定有漏洞，而是在提醒维护者：现有证据不足，或者风险已经高到不该直接合并。&lt;/p&gt;
+&lt;h2 id="evidence-contract-比一套规则管所有仓库更实用"&gt;Evidence Contract 比“一套规则管所有仓库”更实用
+&lt;/h2&gt;&lt;p&gt;不同目录需要的证据不一样。改 UI 时，截图很有用；改 workflow 时，更应该说明权限为什么增加；改可复现 bug 时，验证步骤比一张绿勾更重要。&lt;/p&gt;
+&lt;p&gt;ProofPR 的 Evidence Contract 可以按路径声明要求，例如：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;evidence&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;contracts&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="nt"&gt;id&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;ui-screenshot&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;paths&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;src/ui/**&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;requires&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;screenshot&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;verification&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;severity&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;medium&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这样维护者检查的不是“正文够不够长”，而是这类改动有没有带上真正有用的材料。规则命中后也能看到具体原因，不需要猜评分从哪里来。&lt;/p&gt;
+&lt;h2 id="为什么故意不用-llm"&gt;为什么故意不用 LLM
+&lt;/h2&gt;&lt;p&gt;这里不用模型不是因为 AI 没价值，而是 PR gate 更看重稳定和可追溯：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不需要 API Key，也不会把 diff 发送给第三方模型服务；&lt;/li&gt;
+&lt;li&gt;相同输入得到相同结果，方便复现 benchmark；&lt;/li&gt;
+&lt;li&gt;每条发现都能回到具体规则和证据；适用时还会标出文件与新增行；&lt;/li&gt;
+&lt;li&gt;维护者可以在配置里明确调整阈值，而不是修改提示词碰运气。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ProofPR 也不会查询完整漏洞数据库。依赖漏洞仍然更适合交给 OSV、Dependabot 等专用工具；它关注的是“这个依赖改动有没有说清楚、有没有锁定、生命周期和来源是否可疑”。&lt;/p&gt;
+&lt;h2 id="代码是怎么拆的"&gt;代码是怎么拆的
+&lt;/h2&gt;&lt;p&gt;项目使用 pnpm monorepo。&lt;code&gt;@proof-pr/core&lt;/code&gt; 负责 TypeScript 规则引擎、配置校验和报告模型；CLI 用 Commander 读取本地 Git；GitHub Action 使用 GitHub Actions Toolkit 获取 PR 上下文并发布结果。Zod、YAML 和 Picomatch 负责配置与路径匹配，Vitest 与 benchmark 用来锁定规则行为。&lt;/p&gt;
+&lt;p&gt;当前仓库的 benchmark 覆盖 22 个固定案例。这个数字本身不代表工具已经“识别所有风险”，它的价值是：新增或修改规则时，能立刻知道旧案例有没有被破坏。&lt;/p&gt;
+&lt;p&gt;ProofPR 也是我围绕“先补审查证据”这个问题自行设计的项目，不是某个 reviewer 仓库的换皮。开发和测试过程中，我会借助 AI 做规则梳理、重构和文档辅助；但发布后的扫描器不调用模型，阈值、评分和输出都留在可查看、可复现的代码里。&lt;/p&gt;
+&lt;h2 id="它适不适合你的仓库"&gt;它适不适合你的仓库
+&lt;/h2&gt;&lt;p&gt;如果仓库经常接收外部贡献，或者团队已经觉得 PR review 被重复检查拖慢，它会比较有用。若只是一个人写、一个人合并的小项目，维护这套 gate 可能反而比手动看两眼更重。工具存在的意义不是给每个 PR 多加一盏红灯，而是把有限的 review 时间留给真正需要人判断的部分。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk-labs/proof-pr" target="_blank" rel="noopener"
+&gt;linsk-labs/proof-pr&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;404_@林达 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>AI Vue Flask Blog 全栈系统</title><link>https://linsk27.github.io/projects/ai-vue-flask-blog/</link><pubDate>Tue, 10 Mar 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/ai-vue-flask-blog/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/ai-vue-flask-blog-home-page.png" alt="Featured image of post AI Vue Flask Blog 全栈系统" /&gt;&lt;p&gt;AI-Vue3-python-flask-Blog 是一个 Vue 3、Flask、MySQL 和 AI 能力组合的全栈博客系统。它覆盖前端页面、后端接口、数据库持久化、内容管理和 AI 能力接入，适合作为课程设计、毕业设计、全栈项目练习和二次开发基础。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/ai-vue-flask-blog-home-page.png"
+loading="lazy"
+alt="AI Vue Flask blog home page"
+&gt;&lt;/p&gt;
+&lt;h2 id="适合谁"&gt;适合谁
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;需要 Vue 3 + Flask + MySQL 全栈项目参考的学生或初级开发者。&lt;/li&gt;
+&lt;li&gt;正在准备课程设计、毕业设计或项目答辩的人。&lt;/li&gt;
+&lt;li&gt;想学习前后端分离、接口设计、内容管理和数据库持久化的人。&lt;/li&gt;
+&lt;li&gt;想在传统博客系统里加入 AI 能力的人。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="项目价值"&gt;项目价值
+&lt;/h2&gt;&lt;p&gt;这个项目的核心价值是完整。它不是只有一个前端页面，也不是只有接口示例，而是把页面、接口、数据和内容管理串成一个可继续扩展的系统。对于搜索 Vue Flask full stack project、Vue3 Flask MySQL blog system、AI blog system、graduation project 或 course design 的人，它能提供更直接的参考。&lt;/p&gt;
+&lt;h2 id="技术方向"&gt;技术方向
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Vue 3&lt;/li&gt;
+&lt;li&gt;Flask&lt;/li&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;li&gt;MySQL&lt;/li&gt;
+&lt;li&gt;Element Plus&lt;/li&gt;
+&lt;li&gt;前后端分离&lt;/li&gt;
+&lt;li&gt;内容管理&lt;/li&gt;
+&lt;li&gt;AI blog system&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="项目入口"&gt;项目入口
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk27/AI-Vue3-python-flask-Blog" target="_blank" rel="noopener"
+&gt;linsk27/AI-Vue3-python-flask-Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;线上演示：&lt;a class="link" href="https://ai-vue3-python-flask-blog.vercel.app/" target="_blank" rel="noopener"
+&gt;ai-vue3-python-flask-blog.vercel.app&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果这个全栈项目对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续完善文档、部署说明和二次开发示例的主要信号。&lt;/p&gt;</description></item><item><title>echarts-learn 数据可视化练习</title><link>https://linsk27.github.io/projects/echarts-learn/</link><pubDate>Wed, 09 Apr 2025 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/echarts-learn/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/echarts-learn-dashboard.png" alt="Featured image of post echarts-learn 数据可视化练习" /&gt;&lt;p&gt;echarts-learn 是一个 Vue、Nuxt 和 ECharts 数据可视化练习项目，用来展示多图表 dashboard 的页面组织方式。它覆盖柱状图、雷达图、关系图、环形图、词云和数据总览，适合用来参考 ECharts data visualization、Vue chart project 和 dashboard UI 的组合方式。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/echarts-learn-dashboard.png"
+loading="lazy"
+alt="ECharts dashboard screenshot"
+&gt;&lt;/p&gt;
+&lt;h2 id="适合谁"&gt;适合谁
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;想参考 Vue 和 ECharts 如何组合成数据大屏的人。&lt;/li&gt;
+&lt;li&gt;正在做 dashboard UI、数据看板、监控页面或图表交互练习的人。&lt;/li&gt;
+&lt;li&gt;需要柱状图、雷达图、关系图、环形图和词云组合示例的人。&lt;/li&gt;
+&lt;li&gt;想看 Nuxt 项目如何组织组件和页面入口的人。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="项目价值"&gt;项目价值
+&lt;/h2&gt;&lt;p&gt;这个项目的重点不是单个图表，而是把多个可视化组件放在同一个页面里，形成一个完整的数据看板。对搜索 Vue ECharts dashboard、ECharts data visualization、Nuxt dashboard 或 chart interaction demo 的人来说，这个页面可以直接说明项目的展示效果和代码入口。&lt;/p&gt;
+&lt;p&gt;截图来自本地运行项目并使用同结构演示数据生成。这样可以避免远程示例数据接口不可访问时只截到加载态，同时保留项目真实的页面布局和组件结构。&lt;/p&gt;
+&lt;h2 id="技术方向"&gt;技术方向
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Vue&lt;/li&gt;
+&lt;li&gt;Nuxt&lt;/li&gt;
+&lt;li&gt;ECharts&lt;/li&gt;
+&lt;li&gt;数据可视化&lt;/li&gt;
+&lt;li&gt;dashboard UI&lt;/li&gt;
+&lt;li&gt;图表组件拆分&lt;/li&gt;
+&lt;li&gt;数据看板页面组织&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="项目入口"&gt;项目入口
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk27/echarts-learn" target="_blank" rel="noopener"
+&gt;linsk27/echarts-learn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果这个 ECharts 数据可视化项目对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续补充图表说明、运行文档和可复用示例的主要信号。&lt;/p&gt;</description></item><item><title>feidu 智慧社区数据大屏</title><link>https://linsk27.github.io/projects/feidu/</link><pubDate>Sun, 30 Mar 2025 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/feidu/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/feidu-smart-community-dashboard.jpg" alt="Featured image of post feidu 智慧社区数据大屏" /&gt;&lt;p&gt;feidu 是一个 Nuxt 3、Vue、Tailwind CSS 和 ECharts 组成的智慧社区数据大屏项目。它把社区管理、安防监控、CIM 平台、能源检测和节能分析集中在一个可视化界面里，适合展示智慧社区、园区管理、安防运维和能源数据看板类项目的前端实现方式。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/feidu-smart-community-dashboard.jpg"
+loading="lazy"
+alt="feidu smart community dashboard"
+&gt;&lt;/p&gt;
+&lt;h2 id="适合谁"&gt;适合谁
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;想参考智慧社区、智慧园区或数据大屏界面实现的人。&lt;/li&gt;
+&lt;li&gt;想学习 Nuxt 3、Vue、Tailwind CSS 和 ECharts 组合方式的人。&lt;/li&gt;
+&lt;li&gt;需要安防监控、CIM 平台、能源检测、节能分析等可视化页面结构的人。&lt;/li&gt;
+&lt;li&gt;想看真实线上演示，而不是只看静态截图的前端学习者。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="项目价值"&gt;项目价值
+&lt;/h2&gt;&lt;p&gt;feidu 的价值在于它不是单个图表练习，而是把多种业务模块组织成一个完整大屏：左侧展示安防概况、摄像头监控和报警信息，中间展示城市 / 社区 CIM 场景，右侧展示舒适度、能耗、系统能效和机组运行状态。底部还提供社区管理、安保监控、CIM 平台、能源检测和节能分析等模块切换入口。&lt;/p&gt;
+&lt;p&gt;如果你搜索的是 smart community dashboard、Vue ECharts dashboard、Nuxt 3 data visualization、security monitoring dashboard、energy monitoring dashboard 或 CIM platform UI，这个项目可以作为一个可运行的前端大屏参考。&lt;/p&gt;
+&lt;h2 id="技术方向"&gt;技术方向
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Nuxt 3&lt;/li&gt;
+&lt;li&gt;Vue&lt;/li&gt;
+&lt;li&gt;Tailwind CSS&lt;/li&gt;
+&lt;li&gt;ECharts&lt;/li&gt;
+&lt;li&gt;Element Plus&lt;/li&gt;
+&lt;li&gt;数据可视化大屏&lt;/li&gt;
+&lt;li&gt;智慧社区界面&lt;/li&gt;
+&lt;li&gt;安防监控看板&lt;/li&gt;
+&lt;li&gt;能源监测与节能分析&lt;/li&gt;
+&lt;li&gt;CIM 平台前端展示&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="项目入口"&gt;项目入口
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk27/feidu" target="_blank" rel="noopener"
+&gt;linsk27/feidu&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;线上演示：&lt;a class="link" href="https://feidu-murex.vercel.app" target="_blank" rel="noopener"
+&gt;feidu-murex.vercel.app&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果这个智慧社区数据大屏对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续完善项目文档、模块说明和线上演示体验的主要信号。&lt;/p&gt;</description></item><item><title>bilibili-nuxt3 Nuxt3 移动端项目</title><link>https://linsk27.github.io/projects/bilibili-nuxt3/</link><pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/projects/bilibili-nuxt3/</guid><description>&lt;img src="https://linsk27.github.io/img/projects/bilibili-nuxt3-mobile-preview.jpg" alt="Featured image of post bilibili-nuxt3 Nuxt3 移动端项目" /&gt;&lt;p&gt;bilibili-nuxt3 是一个 Nuxt 3、Vue、TypeScript 和 Vant 移动端项目实战，围绕视频列表、频道导航、视频详情、分页加载、服务端渲染和 SEO 信息配置展开。它适合作为 Nuxt 3 project、Vue mobile app、Nuxt SSR SEO 和前端移动端页面结构的参考。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/img/projects/bilibili-nuxt3-mobile-preview.jpg"
+loading="lazy"
+alt="bilibili Nuxt3 mobile preview"
+&gt;&lt;/p&gt;
+&lt;h2 id="适合谁"&gt;适合谁
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;想参考 Nuxt 3、Vue 和 TypeScript 移动端项目结构的人。&lt;/li&gt;
+&lt;li&gt;正在学习 SSR、SEO meta、文件路由和首屏数据获取的人。&lt;/li&gt;
+&lt;li&gt;需要 Vant UI、频道导航、视频列表和详情页示例的人。&lt;/li&gt;
+&lt;li&gt;想做移动端前端项目实战、课程项目或简历作品的人。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="项目价值"&gt;项目价值
+&lt;/h2&gt;&lt;p&gt;这个项目的价值在于它把 Nuxt 的服务端渲染、SEO 信息配置、文件路由、移动端适配和数据交互放在一个完整示例里。相比普通组件练习，它更接近真实移动端内容应用，适合用来观察首页信息流、频道 tab、视频卡片和详情页之间的组织方式。&lt;/p&gt;
+&lt;p&gt;项目预览图来自仓库 README。历史线上预览链接当前连接不稳定，因此这个项目页优先保留稳定的截图、技术说明和 GitHub 仓库入口，后续演示站恢复后再补充新的在线入口。&lt;/p&gt;
+&lt;h2 id="技术方向"&gt;技术方向
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Nuxt 3&lt;/li&gt;
+&lt;li&gt;Vue&lt;/li&gt;
+&lt;li&gt;TypeScript&lt;/li&gt;
+&lt;li&gt;Vant UI&lt;/li&gt;
+&lt;li&gt;SSR&lt;/li&gt;
+&lt;li&gt;SEO meta&lt;/li&gt;
+&lt;li&gt;移动端 vw 适配&lt;/li&gt;
+&lt;li&gt;视频列表与详情页&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="项目入口"&gt;项目入口
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;GitHub 仓库：&lt;a class="link" href="https://github.com/linsk27/bilibili-nuxt3" target="_blank" rel="noopener"
+&gt;linsk27/bilibili-nuxt3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目总览：&lt;a class="link" href="https://linsk27.github.io/projects/" &gt;linsk27 Projects&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果这个 Nuxt 3 移动端项目对你有参考价值，欢迎在 GitHub 仓库点 Star。Star 是我继续完善预览、运行文档和项目说明的主要信号。&lt;/p&gt;</description></item></channel></rss>
