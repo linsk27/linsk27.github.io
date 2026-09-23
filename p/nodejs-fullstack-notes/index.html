@@ -1,0 +1,382 @@
+<!doctype html><html lang=zh-cn dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="记录我学习 Node.js 基础模块时的笔记，先从 Buffer 和 fs 开始，边学边补充，不把它当成已经完成的教程。"><meta name=keywords content="Node.js 学习,Buffer,fs 模块,文件读写,Node.js 流"><title>Node.js 全栈学习笔记（持续更新）</title><meta name=google-site-verification content="ojZXN_87I2cwlf5nsEcatA8ibUhHz-Wol2E4dfd561g"><meta name=msvalidate.01 content="12336DB9361DCE2DB03C4A3340A146A2"><link rel=canonical href=https://linsk27.github.io/p/nodejs-fullstack-notes/><link rel=stylesheet href=/scss/style.min.233bdd4beee3454c1f24892de8ef2453291bab17459f917c1ef018ea56ce48db.css><meta property='og:title' content="Node.js 全栈学习笔记（持续更新）"><meta property='og:description' content="记录我学习 Node.js 基础模块时的笔记，先从 Buffer 和 fs 开始，边学边补充，不把它当成已经完成的教程。"><meta property='og:url' content='https://linsk27.github.io/p/nodejs-fullstack-notes/'><meta property='og:site_name' content='404_@林达'><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='Node.js'><meta property='article:tag' content='JavaScript'><meta property='article:tag' content='Buffer'><meta property='article:tag' content='fs'><meta property='article:tag' content='文件系统'><meta property='article:tag' content='学习笔记'><meta property='article:published_time' content='2026-09-23T00:00:00+00:00'><meta property='article:modified_time' content='2026-09-23T00:00:00+00:00'><meta name=twitter:title content="Node.js 全栈学习笔记（持续更新）"><meta name=twitter:description content="记录我学习 Node.js 基础模块时的笔记，先从 Buffer 和 fs 开始，边学边补充，不把它当成已经完成的教程。"><link rel="shortcut icon" href=/favicon.ico><script type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://linsk27.github.io/#person","name":"404_@林达","url":"https://linsk27.github.io/","sameAs":["https://github.com/linsk27","https://linsk27.github.io/about/","https://space.bilibili.com/674582664"],"knowsAbout":["Vue","TypeScript","Three.js","CSS3DRenderer","WebGL Portfolio","GitHub Actions","Local Development Tools","Alibaba Cloud Ops","Flask","MySQL","Data Visualization","Nuxt","ECharts","Smart Community Dashboard","Security Monitoring","Energy Monitoring","CIM Platform UI"]},{"@type":"WebSite","@id":"https://linsk27.github.io/#website","name":"404_@林达","url":"https://linsk27.github.io/","description":"404_@林达 的个人主页，记录前端项目、开发者工具、数据可视化和全栈实践。","potentialAction":{"@type":"SearchAction","target":"https://linsk27.github.io/search/?keyword={search_term_string}","query-input":"required name=search_term_string"},"publisher":{"@id":"https://linsk27.github.io/#person"}},{"@type":"ProfilePage","@id":"https://linsk27.github.io/about/#profile","name":"关于 404_@林达","url":"https://linsk27.github.io/about/","description":"404_@林达 的 GitHub 个人介绍页，记录前端学习、项目实践、开发者工具、数据可视化和全栈练习。","isPartOf":{"@id":"https://linsk27.github.io/#website"},"mainEntity":{"@id":"https://linsk27.github.io/#person"}},{"@type":"CollectionPage","@id":"https://linsk27.github.io/projects/#collection","name":"404_@林达 Projects","url":"https://linsk27.github.io/projects/","description":"Dev Cockpit, Local AI Ops, ProofPR, Signal Atlas, feidu, AI Vue Flask Blog, echarts-learn, bilibili-nuxt3 and other developer-tool, Three.js, Vue, Nuxt, ECharts and full-stack projects by 404_@林达.","isPartOf":{"@id":"https://linsk27.github.io/#website"},"about":{"@id":"https://linsk27.github.io/#person"},"hasPart":[{"@type":"SoftwareSourceCode","name":"Signal Atlas","codeRepository":"https://github.com/linsk-labs/signal-atlas","programmingLanguage":["JavaScript","HTML","CSS"],"description":"Immersive Three.js workstation with a live CSS3D monitor, original linsk27 desktop, real content routes, and documented attribution for the MIT upstream outer scene.","image":"https://linsk27.github.io/img/projects/signal-atlas-reference-edition-desk-v0.25.7.png","url":"https://linsk27.github.io/projects/signal-atlas/"},{"@type":"SoftwareSourceCode","name":"Local AI Ops","codeRepository":"https://github.com/linsk-labs/local-ai-ops","programmingLanguage":["Python","TypeScript"],"description":"Local LAN Alibaba Cloud ops console for cloud resource sync, monitoring checks, alert workflow, and troubleshooting suggestions.","image":"https://linsk27.github.io/img/projects/local-ai-ops-empty-dashboard.png","url":"https://linsk27.github.io/projects/local-ai-ops/"},{"@type":"SoftwareSourceCode","name":"Dev Cockpit","codeRepository":"https://github.com/linsk-labs/local-dev-cockpit","programmingLanguage":["TypeScript","Vue"],"description":"Local development workbench for stack detection, commands, ports, Python environments, Git state, runtime status, project context, and resource organization.","image":"https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png","url":"https://linsk27.github.io/projects/dev-cockpit/"},{"@type":"SoftwareSourceCode","name":"ProofPR","codeRepository":"https://github.com/linsk-labs/proof-pr","programmingLanguage":["TypeScript","JavaScript"],"description":"Deterministic GitHub Action and CLI for pull request evidence checks, review gates, dependency signals, workflow permissions, secrets, and MCP configuration.","image":"https://linsk27.github.io/img/projects/proofpr-github-action-pr-review-report.png","url":"https://linsk27.github.io/projects/proofpr/"},{"@type":"SoftwareSourceCode","name":"feidu","codeRepository":"https://github.com/linsk27/feidu","programmingLanguage":["Vue","TypeScript"],"description":"Nuxt 3, Vue, Tailwind CSS and ECharts smart community dashboard for community management, security monitoring, CIM platform, energy monitoring, and energy analysis screens.","image":"https://linsk27.github.io/img/projects/feidu-smart-community-dashboard.jpg","url":"https://linsk27.github.io/projects/feidu/"},{"@type":"SoftwareSourceCode","name":"AI-Vue3-python-flask-Blog","codeRepository":"https://github.com/linsk27/AI-Vue3-python-flask-Blog","programmingLanguage":["Vue","Python","TypeScript"],"description":"Vue 3, Flask, MySQL and AI blog system for full-stack practice, course design, graduation project, and secondary development.","image":"https://linsk27.github.io/img/projects/ai-vue-flask-blog-home-page.png","url":"https://linsk27.github.io/projects/ai-vue-flask-blog/"},{"@type":"SoftwareSourceCode","name":"bilibili-nuxt3","codeRepository":"https://github.com/linsk27/bilibili-nuxt3","programmingLanguage":["TypeScript","Vue"],"description":"Nuxt 3, Vue, TypeScript and Vant mobile project practice for SSR, SEO, channel navigation, video lists, detail pages, and mobile UI structure.","image":"https://linsk27.github.io/img/projects/bilibili-nuxt3-mobile-preview.jpg","url":"https://linsk27.github.io/projects/bilibili-nuxt3/"},{"@type":"SoftwareSourceCode","name":"echarts-learn","codeRepository":"https://github.com/linsk27/echarts-learn","programmingLanguage":["Vue","TypeScript"],"description":"Vue, Nuxt and ECharts data visualization dashboard practice for bar charts, radar charts, relation graphs, ring charts, word cloud, and dashboard UI.","image":"https://linsk27.github.io/img/projects/echarts-learn-dashboard.png","url":"https://linsk27.github.io/projects/echarts-learn/"}]}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://linsk27.github.io/"},{"@type":"ListItem","position":2,"name":"Node.js 全栈学习笔记（持续更新）","item":"https://linsk27.github.io/p/nodejs-fullstack-notes/"}]}</script></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><div id=article-toolbar style=position:sticky;top:5px;z-index:1000><a href=/ class=back-home><svg class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>返回</span></a></div><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><ol><li><a href=#buffer缓冲器>Buffer（缓冲器）</a><ol><li><a href=#概念>概念</a></li><li><a href=#特点>特点</a></li><li><a href=#创建方式>创建方式</a></li><li><a href=#buffer-的元素转换>Buffer 的元素转换</a></li><li><a href=#注意>注意</a></li></ol></li><li><a href=#fs-模块>fs 模块</a><ol><li><a href=#概念与使用>概念与使用</a></li><li><a href=#文件写入>文件写入</a></li><li><a href=#文件读取>文件读取</a></li><li><a href=#文件复制案例>文件复制案例</a></li><li><a href=#文件的重命名和移动>文件的重命名和移动</a></li><li><a href=#文件删除>文件删除</a></li><li><a href=#文件夹操作>文件夹操作</a></li><li><a href=#目前的学习提醒>目前的学习提醒</a></li></ol></li></ol></li></ol></nav></div></section></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/%E5%89%8D%E7%AB%AF/>前端</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/p/nodejs-fullstack-notes/>Node.js 全栈学习笔记（持续更新）</a></h2><h3 class=article-subtitle>记录我学习 Node.js 基础模块时的笔记，先从 Buffer 和 fs 开始，边学边补充，不把它当成已经完成的教程。</h3></div><footer class=article-time><div><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>2026-09-23</time></div><div id=viewCount><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-eye"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12a2 2 0 104 0 2 2 0 00-4 0"/><path d="M21 12c-2.4 4-5.4 6-9 6s-6.6-2-9-6c2.4-4 5.4-6 9-6s6.6 2 9 6"/></svg>
+<time class=article-time--reading><span id=vercount_value_page_pv>loading... </span>次</time></div></footer></div></header><section class=article-content><p>这是一篇还在更新中的 Node.js 学习笔记。现在先记录我已经遇到的基础模块和代码例子，后面会继续补充网络、服务端和全栈开发相关内容。笔记里的理解会随着实践调整，适合和代码一起对照着看。</p><h3 id=buffer缓冲器>Buffer（缓冲器）</h3><h4 id=概念>概念</h4><ul><li>一个类似于 Array 的对象，即表示一段固定长度的内存空间，用于处理二进制数据</li></ul><h4 id=特点>特点</h4><ul><li>Buffer 大小固定且无法调整</li><li>性能较好，直接对计算机内存进行操作</li><li>每个元素的大小为 1 字节（byte），即 8 个 bit</li></ul><h4 id=创建方式>创建方式</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// 1. alloc
+</span></span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nx>buf</span> <span class=o>=</span> <span class=nx>Buffer</span><span class=p>.</span><span class=nx>alloc</span><span class=p>(</span><span class=mi>10</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 2. allocUnsafe，不会对原内存清空，可能包含旧数据
+</span></span></span><span class=line><span class=cl><span class=c1>// 不需要归零操作，因此速度快于 alloc
+</span></span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nx>buf_2</span> <span class=o>=</span> <span class=nx>Buffer</span><span class=p>.</span><span class=nx>allocUnsafe</span><span class=p>(</span><span class=mi>10</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 3. from
+</span></span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nx>buf_3</span> <span class=o>=</span> <span class=nx>Buffer</span><span class=p>.</span><span class=nx>from</span><span class=p>(</span><span class=s1>&#39;hello&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nx>buf_4</span> <span class=o>=</span> <span class=nx>Buffer</span><span class=p>.</span><span class=nx>from</span><span class=p>([</span><span class=mi>166</span><span class=p>,</span> <span class=mi>233</span><span class=p>,</span> <span class=mi>145</span><span class=p>,</span> <span class=mi>764</span><span class=p>,</span> <span class=mi>103</span><span class=p>,</span> <span class=mi>221</span><span class=p>])</span>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>buf_4</span><span class=p>)</span> <span class=c1>// &lt;Buffer a6 e9 91 fc 67 dd&gt;
+</span></span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// Buffer.from(&#39;hello&#39;) 创建时，会使用 UTF-8 编码算法，把字符串转为一串字节。
+</span></span></span><span class=line><span class=cl><span class=c1>// console.log 打印 Buffer 时，只是把 Buffer 内部每个字节的值，用 16 进制格式展示出来。
+</span></span></span><span class=line><span class=cl><span class=c1>// Buffer 底层存储的是字节，本质上是二进制数据。
+</span></span></span></code></pre></td></tr></table></div></div><h4 id=buffer-的元素转换>Buffer 的元素转换</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// Buffer 与字符串的转换
+</span></span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nx>buf_4</span> <span class=o>=</span> <span class=nx>Buffer</span><span class=p>.</span><span class=nx>from</span><span class=p>([</span><span class=mi>105</span><span class=p>,</span> <span class=mi>108</span><span class=p>,</span> <span class=mi>111</span><span class=p>,</span> <span class=mi>118</span><span class=p>,</span> <span class=mi>101</span><span class=p>,</span> <span class=mi>121</span><span class=p>,</span> <span class=mi>111</span><span class=p>,</span> <span class=mi>117</span><span class=p>])</span>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>buf_4</span><span class=p>.</span><span class=nx>toString</span><span class=p>())</span> <span class=c1>// iloveyou，通过 UTF-8，也就是 toString(&#39;utf-8&#39;)
+</span></span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 字节转二进制
+</span></span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nx>buf</span> <span class=o>=</span> <span class=nx>Buffer</span><span class=p>.</span><span class=nx>from</span><span class=p>(</span><span class=s1>&#39;hello&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>buf</span><span class=p>[</span><span class=mi>0</span><span class=p>].</span><span class=nx>toString</span><span class=p>(</span><span class=mi>2</span><span class=p>))</span> <span class=c1>// 01101000
+</span></span></span></code></pre></td></tr></table></div></div><h4 id=注意>注意</h4><ul><li>溢出</li></ul><p>因为 8 位二进制最多表示 255。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>let</span> <span class=nx>buf</span> <span class=o>=</span> <span class=nx>Buffer</span><span class=p>.</span><span class=nx>from</span><span class=p>(</span><span class=s1>&#39;hello&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nx>buf</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span> <span class=o>=</span> <span class=mi>361</span> <span class=c1>// 舍弃高位数字 0001 0110 1001，最后只保留低 8 位
+</span></span></span></code></pre></td></tr></table></div></div><ul><li>中文</li></ul><p>一个中文字符在 UTF-8 中通常占 3 个字节。</p><h3 id=fs-模块>fs 模块</h3><h4 id=概念与使用>概念与使用</h4><p><code>fs</code> 模块可以实现与硬盘的交互，例如：</p><ul><li>文件的创建、删除、重命名、移动</li><li>文件内容的写入和读取</li><li>文件夹的相关操作</li></ul><h4 id=文件写入>文件写入</h4><blockquote><p>换行可以使用 <code>\r\n</code>。</p></blockquote><ol><li><code>writeFile</code>：异步写入。文件操作交给系统处理，主线程可以继续执行。</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// 1. 导入 fs 模块
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>fs</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;fs&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 2. 写入文件
+</span></span></span><span class=line><span class=cl><span class=nx>fs</span><span class=p>.</span><span class=nx>writeFile</span><span class=p>(</span><span class=s1>&#39;./座右铭.txt&#39;</span><span class=p>,</span> <span class=s1>&#39;三人行，则必有我师焉&#39;</span><span class=p>,</span> <span class=nx>err</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// err：写入失败时是错误对象，写入成功时为 null
+</span></span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=nx>err</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;写入失败&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;写入成功&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=2><li><code>writeFileSync</code>：同步写入。主线程会等待文件写入完成后再继续。</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=nx>fs</span><span class=p>.</span><span class=nx>writeFileSync</span><span class=p>(</span><span class=s1>&#39;./data.txt&#39;</span><span class=p>,</span> <span class=s1>&#39;text&#39;</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=3><li>第三个参数 <code>{ flag: 'a' }</code></li></ol><ul><li>可以实现追加写入。</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// 1. 导入 fs 模块
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>fs</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;fs&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 2. 以追加模式写入文件
+</span></span></span><span class=line><span class=cl><span class=nx>fs</span><span class=p>.</span><span class=nx>writeFile</span><span class=p>(</span><span class=s1>&#39;./座右铭.txt&#39;</span><span class=p>,</span> <span class=s1>&#39;三人行，则必有我师焉&#39;</span><span class=p>,</span> <span class=p>{</span> <span class=nx>flag</span><span class=o>:</span> <span class=s1>&#39;a&#39;</span> <span class=p>},</span> <span class=nx>err</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=nx>err</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;写入失败&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;写入成功&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=4><li><code>appendFile</code>：异步追加。</li><li><code>appendFileSync</code>：同步追加。</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=nx>fs</span><span class=p>.</span><span class=nx>appendFileSync</span><span class=p>(</span><span class=s1>&#39;./座右铭.txt&#39;</span><span class=p>,</span> <span class=s1>&#39;\r\n温故而知新，可以为师矣&#39;</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=6><li>流式写入</li></ol><blockquote><p>程序打开一个文件需要消耗资源。流式写入可以减少反复打开和关闭文件的次数，适合大文件或频繁写入的场景；<code>writeFile</code> 更适合写入频率较低、内容较小的场景。</p></blockquote><p>比如上传大文件时，可以把文件分成多个分片并发上传，也可以让单个 HTTP 请求持续推送数据，再由后端用流写入磁盘。前者支持失败分片重传，但要处理并发；后者实现更直接，但网络中断后通常需要重新上传本次请求。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>const</span> <span class=nx>fs</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;fs&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 创建写入流对象
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>ws</span> <span class=o>=</span> <span class=nx>fs</span><span class=p>.</span><span class=nx>createWriteStream</span><span class=p>(</span><span class=s1>&#39;./观书有感.txt&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>ws</span><span class=p>.</span><span class=nx>write</span><span class=p>(</span><span class=s1>&#39;半亩方塘一鉴开 1\r\n&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nx>ws</span><span class=p>.</span><span class=nx>write</span><span class=p>(</span><span class=s1>&#39;半亩方塘一鉴开 2\r\n&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nx>ws</span><span class=p>.</span><span class=nx>write</span><span class=p>(</span><span class=s1>&#39;半亩方塘一鉴开 3\r\n&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nx>ws</span><span class=p>.</span><span class=nx>write</span><span class=p>(</span><span class=s1>&#39;半亩方塘一鉴开 4&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 关闭通道
+</span></span></span><span class=line><span class=cl><span class=nx>ws</span><span class=p>.</span><span class=nx>close</span><span class=p>()</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=7><li>文件写入场景</li></ol><ul><li>下载文件</li><li>安装软件</li><li>保存程序日志，例如 Git 日志</li><li>录制视频</li></ul><blockquote><p>需要把数据持久化保存时，就应该想到文件写入。</p></blockquote><h4 id=文件读取>文件读取</h4><ol><li>异步和同步读取</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>const</span> <span class=nx>fs</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;fs&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 异步读取
+</span></span></span><span class=line><span class=cl><span class=nx>fs</span><span class=p>.</span><span class=nx>readFile</span><span class=p>(</span><span class=s1>&#39;./观书有感.txt&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>err</span><span class=p>,</span> <span class=nx>data</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=nx>err</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;读取失败&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>data</span><span class=p>)</span> <span class=c1>// 输出为 Buffer，因此要转成字符串
+</span></span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>data</span><span class=p>.</span><span class=nx>toString</span><span class=p>())</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 同步读取
+</span></span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nx>dataSync</span> <span class=o>=</span> <span class=nx>fs</span><span class=p>.</span><span class=nx>readFileSync</span><span class=p>(</span><span class=s1>&#39;./观书有感.txt&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>dataSync</span><span class=p>.</span><span class=nx>toString</span><span class=p>())</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=2><li>读取文件应用场景</li></ol><ul><li>电脑开机</li><li>程序运行</li><li>编辑器打开文件</li><li>查看图片</li><li>播放视频、音乐</li><li>用 <code>git log</code> 查看日志</li><li>上传文件（读取文件后再传到服务端）</li><li>查看聊天记录</li></ul><ol start=3><li>流式读取</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>const</span> <span class=nx>fs</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;fs&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 创建读取流对象
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>rs</span> <span class=o>=</span> <span class=nx>fs</span><span class=p>.</span><span class=nx>createReadStream</span><span class=p>(</span><span class=s1>&#39;../资料/笑看风云.mp4&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// data 事件中的 chunk 表示一块数据
+</span></span></span><span class=line><span class=cl><span class=nx>rs</span><span class=p>.</span><span class=nx>on</span><span class=p>(</span><span class=s1>&#39;data&#39;</span><span class=p>,</span> <span class=nx>chunk</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>chunk</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>chunk</span><span class=p>.</span><span class=nx>length</span><span class=p>)</span> <span class=c1>// 66536 字节，约 64 KB
+</span></span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>rs</span><span class=p>.</span><span class=nx>on</span><span class=p>(</span><span class=s1>&#39;end&#39;</span><span class=p>,</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;读取完成&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span></code></pre></td></tr></table></div></div><h4 id=文件复制案例>文件复制案例</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>const</span> <span class=nx>fs</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;fs&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>process</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;process&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 方式 1：readFile，一次性读入内存
+</span></span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nx>data</span> <span class=o>=</span> <span class=nx>fs</span><span class=p>.</span><span class=nx>readFileSync</span><span class=p>(</span><span class=s1>&#39;../资料/笑看风云.mp4&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nx>fs</span><span class=p>.</span><span class=nx>writeFileSync</span><span class=p>(</span><span class=s1>&#39;../资料/笑看风云复制.mp4&#39;</span><span class=p>,</span> <span class=nx>data</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 检查内存使用量，rss 字段单位是字节
+</span></span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>process</span><span class=p>.</span><span class=nx>memoryUsage</span><span class=p>())</span> <span class=c1>// 110710784 字节，约 105 MB
+</span></span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 方式 2：流式操作
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>ws</span> <span class=o>=</span> <span class=nx>fs</span><span class=p>.</span><span class=nx>createWriteStream</span><span class=p>(</span><span class=s1>&#39;../资料/笑看风云流式复制.mp4&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>rs</span> <span class=o>=</span> <span class=nx>fs</span><span class=p>.</span><span class=nx>createReadStream</span><span class=p>(</span><span class=s1>&#39;../资料/笑看风云.mp4&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// rs.pipe(ws) 会自动处理背压，比手动监听 data 再 write 更稳妥
+</span></span></span><span class=line><span class=cl><span class=nx>rs</span><span class=p>.</span><span class=nx>pipe</span><span class=p>(</span><span class=nx>ws</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>方式 1 会把整个文件读进内存。如果 MP4 资源有 78 MB，内存占用可能明显增加；方式 2 通常只保留正在处理的数据块，内存压力小很多。这里的“只占 64 KB”是理想情况，实际还会受到读取速度和写入速度差异的影响。</p><h4 id=文件的重命名和移动>文件的重命名和移动</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>const</span> <span class=nx>fs</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;fs&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 重命名
+</span></span></span><span class=line><span class=cl><span class=nx>fs</span><span class=p>.</span><span class=nx>rename</span><span class=p>(</span><span class=s1>&#39;./座右铭.txt&#39;</span><span class=p>,</span> <span class=s1>&#39;./论语.txt&#39;</span><span class=p>,</span> <span class=nx>err</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=nx>err</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;重命名失败&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;重命名成功&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 移动文件：把目标路径写成另一个文件夹即可
+</span></span></span><span class=line><span class=cl><span class=nx>fs</span><span class=p>.</span><span class=nx>rename</span><span class=p>(</span><span class=s1>&#39;./座右铭.txt&#39;</span><span class=p>,</span> <span class=s1>&#39;../资料/移动文件.txt&#39;</span><span class=p>,</span> <span class=nx>err</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=nx>err</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;移动失败&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;移动成功&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span></code></pre></td></tr></table></div></div><h4 id=文件删除>文件删除</h4><blockquote><p>同步函数也有对应版本，例如 <code>unlinkSync</code>；写法更直接，但需要自己处理异常。</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>const</span> <span class=nx>fs</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;fs&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 调用 unlink 方法，删除文件
+</span></span></span><span class=line><span class=cl><span class=nx>fs</span><span class=p>.</span><span class=nx>unlink</span><span class=p>(</span><span class=s1>&#39;./观书有感.txt&#39;</span><span class=p>,</span> <span class=nx>err</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=nx>err</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;删除失败&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;删除成功&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// Node.js 14.4 及以上可以使用 rm
+</span></span></span><span class=line><span class=cl><span class=nx>fs</span><span class=p>.</span><span class=nx>rm</span><span class=p>(</span><span class=s1>&#39;../资料/移动文件.txt&#39;</span><span class=p>,</span> <span class=nx>err</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=nx>err</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;删除失败&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;删除成功&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span></code></pre></td></tr></table></div></div><h4 id=文件夹操作>文件夹操作</h4><p>参数 1 是路径，参数 2 是可选的 options，最后传入回调函数。</p><ol><li>创建文件夹</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>const</span> <span class=nx>fs</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;fs&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>fs</span><span class=p>.</span><span class=nx>mkdir</span><span class=p>(</span><span class=s1>&#39;./html&#39;</span><span class=p>,</span> <span class=nx>err</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=nx>err</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;创建失败&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;创建成功&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=2><li>递归创建</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=nx>fs</span><span class=p>.</span><span class=nx>mkdir</span><span class=p>(</span><span class=s1>&#39;./a/b/c&#39;</span><span class=p>,</span> <span class=p>{</span> <span class=nx>recursive</span><span class=o>:</span> <span class=kc>true</span> <span class=p>},</span> <span class=nx>err</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=nx>err</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;创建失败&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;创建成功&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=3><li>读取文件夹</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=nx>fs</span><span class=p>.</span><span class=nx>readdir</span><span class=p>(</span><span class=s1>&#39;../资料&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>err</span><span class=p>,</span> <span class=nx>data</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=nx>err</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;读取失败&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>data</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=4><li>删除文件夹</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=nx>fs</span><span class=p>.</span><span class=nx>rmdir</span><span class=p>(</span><span class=s1>&#39;./html&#39;</span><span class=p>,</span> <span class=nx>err</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=nx>err</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;删除失败&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;删除成功&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=5><li>递归删除</li></ol><p>旧版本可以用 <code>rmdir</code> 配合 <code>{ recursive: true }</code>，现在更推荐使用 <code>rm</code>：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=nx>fs</span><span class=p>.</span><span class=nx>rm</span><span class=p>(</span><span class=s1>&#39;./a&#39;</span><span class=p>,</span> <span class=p>{</span> <span class=nx>recursive</span><span class=o>:</span> <span class=kc>true</span> <span class=p>},</span> <span class=nx>err</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=nx>err</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;删除失败&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;删除成功&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span></code></pre></td></tr></table></div></div><h4 id=目前的学习提醒>目前的学习提醒</h4><ul><li>同步文件操作会阻塞当前线程，服务端请求里要谨慎使用。</li><li><code>allocUnsafe</code> 速度更快，但使用前要确认数据会被完整覆盖，不能把旧内存内容直接返回给用户。</li><li>处理大文件时优先考虑 stream 和背压，不要默认把整个文件一次性读进内存。</li><li>这些例子是学习记录，不是可直接用于生产环境的完整错误处理方案。</li></ul></section><footer class=article-footer><section class=article-tags><a href=/tags/node.js/>Node.js</a>
+<a href=/tags/javascript/>JavaScript</a>
+<a href=/tags/buffer/>Buffer</a>
+<a href=/tags/fs/>Fs</a>
+<a href=/tags/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/>文件系统</a>
+<a href=/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/>学习笔记</a></section><section class=article-copyright><svg class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>404_@林达所作</span></section></footer></article><aside class=related-content--wrapper><h2 class=section-title>相关文章</h2><div class=related-content><div class="flex article-list--tile"><article><a href=/p/javascript-%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E5%88%9D%E6%AD%A5%E7%90%86%E8%A7%A3%E5%90%8C%E6%AD%A5%E5%BE%AE%E4%BB%BB%E5%8A%A1%E5%AE%8F%E4%BB%BB%E5%8A%A1/><div class=article-details><h2 class=article-title>JavaScript 事件循环初步理解：同步、微任务、宏任务</h2></div></a></article><article><a href=/p/vue3-%E4%B8%AD-watchwatcheffectcomputed-%E6%80%8E%E4%B9%88%E9%80%89/><div class=article-details><h2 class=article-title>Vue3 中 watch、watchEffect、computed 怎么选</h2></div></a></article><article><a href=/p/vue3-%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E4%B8%8E%E6%9C%AC%E5%9C%B0%E9%A2%84%E8%A7%88%E7%9A%84%E5%B8%B8%E8%A7%81%E5%86%99%E6%B3%95/><div class=article-details><h2 class=article-title>Vue3 图片上传与本地预览的常见写法</h2></div></a></article><article><a href=/p/element-plus-%E8%A1%A8%E6%A0%BC%E5%88%86%E9%A1%B5%E5%BA%8F%E5%8F%B7%E4%B8%8E%E8%AF%B7%E6%B1%82%E7%8A%B6%E6%80%81%E6%95%B4%E7%90%86/><div class=article-details><h2 class=article-title>Element Plus 表格分页、序号与请求状态整理</h2></div></a></article><article><a href=/p/0603-%E6%89%8B%E6%92%B8%E5%A5%BD%E7%9C%8B%E6%9F%B1%E7%8A%B6%E5%9B%BE%E7%9A%84%E8%AE%B0%E5%BD%95/><div class=article-details><h2 class=article-title>手撸好看柱状图的记录</h2></div></a></article></div></div></aside><link rel=preconnect href=https://giscus.app crossorigin><section class=giscus-shell aria-label=文章评论 aria-busy=true><div class=giscus-loading data-giscus-loading><span class=giscus-loading__icon aria-hidden=true><svg viewBox="0 0 24 24" focusable="false"><path d="M5 6.5A2.5 2.5.0 017.5 4h9A2.5 2.5.0 0119 6.5v6A2.5 2.5.0 0116.5 15H12l-4.5 4v-4.12A2.5 2.5.0 015 12.5z"/><path d="M8.5 8.5h7m-7 3h4"/></svg>
+</span><span class=giscus-loading__copy><strong>评论区</strong>
+<small data-giscus-loading-text>正在连接 GitHub Discussions…</small></span></div><div class=giscus-sync-status data-giscus-sync-status role=status aria-live=polite aria-hidden=true><span class=giscus-sync-status__spinner aria-hidden=true></span>
+<span data-giscus-sync-text>正在同步 GitHub…</span></div><div class=giscus></div></section><script src=https://giscus.app/client.js data-repo=linsk27/linsk27.github.io data-repo-id=R_kgDOOD0tQw data-category=Announcements data-category-id=DIC_kwDOOD0tQ84DGF8H data-mapping=pathname data-strict=0 data-reactions-enabled=1 data-emit-metadata=1 data-input-position=bottom data-theme=light data-lang=zh-CN data-loading=eager crossorigin=anonymous async></script><script>(function(){const e=document.querySelector(".giscus-shell");if(!e)return;const t=e.querySelector("[data-giscus-loading-text]");let n;const s=new MutationObserver(()=>{o()});function o(){if(!e.querySelector("iframe.giscus-frame"))return;e.classList.add("is-loaded"),e.setAttribute("aria-busy","false"),window.clearTimeout(n),s.disconnect()}s.observe(e,{childList:!0,subtree:!0}),o(),n=window.setTimeout(()=>{if(e.querySelector("iframe.giscus-frame")||!t)return;t.textContent="加载时间有点长，评论很快就会出现…"},12e3)})(),function(){const t=document.querySelector(".giscus-shell");if(!t)return;const e=t.querySelector("[data-giscus-sync-status]"),o=t.querySelector("[data-giscus-sync-text]");let i,n;function a(){if(!e)return;e.classList.remove("is-visible"),e.setAttribute("aria-hidden","true")}function s(t,n,s){if(!e||!o)return;o.textContent=t,e.dataset.state=n||"loading",e.classList.add("is-visible"),e.setAttribute("aria-hidden","false"),window.clearTimeout(i),s&&(i=window.setTimeout(a,s))}window.addEventListener("message",e=>{if(e.origin!=="https://giscus.app")return;if(!e.data||!e.data.giscus)return;const t=e.data.giscus;if(t.error){s("同步失败，请稍后重试","error",5e3);return}if(!t.discussion)return;const o=t.discussion,i=[o.totalCommentCount,o.totalReplyCount,o.reactionCount].join(":");n&&i!==n&&s("已同步","success",1100),n=i}),window.addEventListener("blur",()=>{const e=document.querySelector("iframe.giscus-frame");e&&document.activeElement===e&&s("正在同步 GitHub…","loading",7e3)})}();function setGiscusTheme(e){const t=document.querySelector("iframe.giscus-frame");t&&t.contentWindow.postMessage({giscus:{setConfig:{theme:e}}},"https://giscus.app")}(function(){addEventListener("message",t=>{if(t.origin!=="https://giscus.app"||!t.data||!t.data.giscus)return;e()}),window.addEventListener("onColorSchemeChange",e);function e(){setGiscusTheme(document.documentElement.dataset.scheme==="light"?"light":"dark_dimmed")}})()</script><style>.giscus-shell{position:relative;min-height:154px;margin-top:var(--section-separation)}.giscus-sync-status{position:absolute;z-index:2;top:-2rem;right:0;display:inline-flex;align-items:center;gap:.42rem;padding:.28rem .55rem;border:1px solid var(--card-separator-color);border-radius:999px;background:var(--card-background);color:var(--card-text-color-tertiary);box-shadow:var(--shadow-l1);font-size:.7rem;opacity:0;pointer-events:none;transform:translateY(3px);transition:opacity .2s ease,transform .2s ease}.giscus-sync-status.is-visible{opacity:1;transform:translateY(0)}.giscus-sync-status[data-state=success]{color:#2f7d55}.giscus-sync-status[data-state=error]{color:#b34b4b}.giscus-sync-status__spinner{width:.72rem;height:.72rem;border:1.5px solid;border-right-color:transparent;border-radius:50%;animation:giscus-sync-spin .8s linear infinite}.giscus-sync-status[data-state=success] .giscus-sync-status__spinner,.giscus-sync-status[data-state=error] .giscus-sync-status__spinner{display:none}.giscus-loading{position:relative;display:flex;align-items:center;gap:.85rem;min-height:118px;overflow:hidden;padding:var(--card-padding);border:1px solid var(--card-separator-color);border-radius:var(--card-border-radius);background:var(--card-background);box-shadow:var(--shadow-l1);color:var(--card-text-color-secondary)}.giscus-loading::after{position:absolute;inset:0;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.42) 50%,transparent 65%);content:"";transform:translateX(-100%);animation:giscus-loading-shimmer 1.8s ease-in-out infinite;pointer-events:none}.giscus-loading__icon{display:grid;flex:0 0 2.2rem;width:2.2rem;height:2.2rem;place-items:center;border-radius:11px;background:rgba(27,54,93,9%);color:var(--accent-color)}.giscus-loading__icon svg{width:1.2rem;height:1.2rem;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.65}.giscus-loading__copy{display:grid;gap:.28rem}.giscus-loading__copy strong{color:var(--card-text-color-main);font-size:1rem}.giscus-loading__copy small{color:var(--card-text-color-tertiary);font-size:.78rem}.giscus{opacity:0;transition:opacity .24s ease}.giscus-shell.is-loaded .giscus-loading{display:none}.giscus-shell.is-loaded .giscus{opacity:1}@keyframes giscus-loading-shimmer{to{transform:translateX(100%)}}@keyframes giscus-sync-spin{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){.giscus-loading::after{animation:none}.giscus{transition:none}.giscus-sync-status{transition:none}.giscus-sync-status__spinner{animation:none}}</style><footer class=site-footer><section class=copyright>&copy;
+2024 -
+2026 404_@林达</section><section class=powerby>使用 <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> 构建<br>主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.30.0>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js defer></script><script src=https://npm.elemecdn.com/nprogress@0.2.0/nprogress.js crossorigin=anonymous></script><link rel=stylesheet href=https://npm.elemecdn.com/nprogress@0.2.0/nprogress.css crossorigin=anonymous><script>NProgress.start(),document.addEventListener("readystatechange",()=>{document.readyState==="interactive"&&NProgress.inc(.8),document.readyState==="complete"&&NProgress.done()})</script><script defer src=https://cn.vercount.one/js></script><script>function showHideView(){const e=document.querySelectorAll("#viewCount");if(e.length){const t=document.querySelector(".article-page");t||e.forEach(e=>{e.style.display="none"})}}showHideView()</script></body></html>
