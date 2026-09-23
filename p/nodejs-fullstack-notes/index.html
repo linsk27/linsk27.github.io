@@ -364,7 +364,7 @@
 </span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;删除成功&#39;</span><span class=p>)</span>
 </span></span><span class=line><span class=cl><span class=p>})</span>
 </span></span></code></pre></td></tr></table></div></div><h4 id=目前的学习提醒>目前的学习提醒</h4><ul><li>同步文件操作会阻塞当前线程，服务端请求里要谨慎使用。</li><li><code>allocUnsafe</code> 速度更快，但使用前要确认数据会被完整覆盖，不能把旧内存内容直接返回给用户。</li><li>处理大文件时优先考虑 stream 和背压，不要默认把整个文件一次性读进内存。</li><li>这些例子是学习记录，不是可直接用于生产环境的完整错误处理方案。</li></ul></section><footer class=article-footer><section class=article-tags><a href=/tags/node.js/>Node.js</a>
-<a href=/tags/javascript/>Javascript</a>
+<a href=/tags/javascript/>JavaScript</a>
 <a href=/tags/buffer/>Buffer</a>
 <a href=/tags/fs/>Fs</a>
 <a href=/tags/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/>文件系统</a>
