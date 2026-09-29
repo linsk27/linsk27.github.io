@@ -1029,7 +1029,7 @@
 </span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;服务已经启动&#39;</span><span class=p>)</span>
 </span></span><span class=line><span class=cl><span class=p>})</span>
 </span></span></code></pre></td></tr></table></div></div><p>当文件有很多的时候，就要再次优化，见后文</p><h4 id=静态资源服务>静态资源服务</h4><ol><li>静态资源的封装导入
-目录结构：</li></ol><blockquote><p>page属于静态资源目录</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+目录结构：</li></ol><blockquote><p>page属于静态资源目录</p></blockquote><p><img src=/p/nodejs-fullstack-notes/image-20260927182516334.png width=225 height=275 srcset="/p/nodejs-fullstack-notes/image-20260927182516334_hu_444f286f97defa3f.png 480w, /p/nodejs-fullstack-notes/image-20260927182516334_hu_5a4aca28366ca50c.png 1024w" loading=lazy alt=静态资源目录结构 class=gallery-image data-flex-grow=81 data-flex-basis=196px></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -1109,8 +1109,8 @@ url、src等，常用<code>&lt;link rel="stylesheet" href="/css/index.css" /></c
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>contentType</span> <span class=o>=</span> <span class=nx>mime</span><span class=p>[</span><span class=nx>ext</span><span class=p>]</span> <span class=o>||</span> <span class=s1>&#39;application/octet-stream&#39;</span>
 </span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>contentType</span><span class=p>)</span> <span class=c1>// text/css;charset=utf-8
-</span></span></span></code></pre></td></tr></table></div></div><ol start=4><li>err错误处理</li></ol><p>通过读取err打印出来的code类型去进行状态码反馈，如404、403等，详情可见官网的error的错误类型</p></section><footer class=article-footer><section class=article-tags><a href=/tags/node.js/>Node.js</a>
-<a href=/tags/javascript/>JavaScript</a>
+</span></span></span></code></pre></td></tr></table></div></div><p><img src=/p/nodejs-fullstack-notes/image-20260930023153777.png width=1080 height=140 srcset="/p/nodejs-fullstack-notes/image-20260930023153777_hu_e9a382f54ae99ee9.png 480w, /p/nodejs-fullstack-notes/image-20260930023153777_hu_f49d0a4f982c40c0.png 1024w" loading=lazy alt=静态资源服务运行示意 class=gallery-image data-flex-grow=771 data-flex-basis=1851px></p><ol start=4><li>err错误处理</li></ol><p>通过读取err打印出来的code类型去进行状态码反馈，如404、403等，详情可见官网的error的错误类型</p></section><footer class=article-footer><section class=article-tags><a href=/tags/node.js/>Node.js</a>
+<a href=/tags/javascript/>Javascript</a>
 <a href=/tags/buffer/>Buffer</a>
 <a href=/tags/fs/>Fs</a>
 <a href=/tags/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/>文件系统</a>

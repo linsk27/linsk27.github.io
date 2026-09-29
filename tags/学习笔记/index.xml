@@ -1401,6 +1401,16 @@
 &lt;blockquote&gt;
 &lt;p&gt;page属于静态资源目录&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/p/nodejs-fullstack-notes/image-20260927182516334.png"
+width="225"
+height="275"
+srcset="https://linsk27.github.io/p/nodejs-fullstack-notes/image-20260927182516334_hu_444f286f97defa3f.png 480w, https://linsk27.github.io/p/nodejs-fullstack-notes/image-20260927182516334_hu_5a4aca28366ca50c.png 1024w"
+loading="lazy"
+alt="静态资源目录结构"
+class="gallery-image"
+data-flex-grow="81"
+data-flex-basis="196px"
+&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -1505,7 +1515,17 @@ url、src等，常用&lt;code&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;contentType&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;// text/css;charset=utf-8
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;ol start="4"&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://linsk27.github.io/p/nodejs-fullstack-notes/image-20260930023153777.png"
+width="1080"
+height="140"
+srcset="https://linsk27.github.io/p/nodejs-fullstack-notes/image-20260930023153777_hu_e9a382f54ae99ee9.png 480w, https://linsk27.github.io/p/nodejs-fullstack-notes/image-20260930023153777_hu_f49d0a4f982c40c0.png 1024w"
+loading="lazy"
+alt="静态资源服务运行示意"
+class="gallery-image"
+data-flex-grow="771"
+data-flex-basis="1851px"
+&gt;&lt;/p&gt;
+&lt;ol start="4"&gt;
 &lt;li&gt;err错误处理&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;通过读取err打印出来的code类型去进行状态码反馈，如404、403等，详情可见官网的error的错误类型&lt;/p&gt;</description></item></channel></rss>
