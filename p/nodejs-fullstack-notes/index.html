@@ -1,7 +1,7 @@
-<!doctype html><html lang=zh-cn dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="记录我学习 Node.js 基础模块时的笔记，先从 Buffer 和 fs 开始，边学边补充，不把它当成已经完成的教程。"><meta name=keywords content="Node.js 学习,Buffer,fs 模块,文件读写,Node.js 流"><title>Node.js 全栈学习笔记（持续更新）</title><meta name=google-site-verification content="ojZXN_87I2cwlf5nsEcatA8ibUhHz-Wol2E4dfd561g"><meta name=msvalidate.01 content="12336DB9361DCE2DB03C4A3340A146A2"><link rel=canonical href=https://linsk27.github.io/p/nodejs-fullstack-notes/><link rel=stylesheet href=/scss/style.min.3c7b822e59a6f059797debb79f71a5dc2d843af0423e2d5fac74771f1af877b0.css><meta property='og:title' content="Node.js 全栈学习笔记（持续更新）"><meta property='og:description' content="记录我学习 Node.js 基础模块时的笔记，先从 Buffer 和 fs 开始，边学边补充，不把它当成已经完成的教程。"><meta property='og:url' content='https://linsk27.github.io/p/nodejs-fullstack-notes/'><meta property='og:site_name' content='404_@林达'><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='Node.js'><meta property='article:tag' content='JavaScript'><meta property='article:tag' content='Buffer'><meta property='article:tag' content='fs'><meta property='article:tag' content='文件系统'><meta property='article:tag' content='学习笔记'><meta property='article:published_time' content='2026-09-23T00:00:00+00:00'><meta property='article:modified_time' content='2026-09-23T00:00:00+00:00'><meta name=twitter:title content="Node.js 全栈学习笔记（持续更新）"><meta name=twitter:description content="记录我学习 Node.js 基础模块时的笔记，先从 Buffer 和 fs 开始，边学边补充，不把它当成已经完成的教程。"><link rel="shortcut icon" href=/favicon.ico><script type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://linsk27.github.io/#person","name":"404_@林达","url":"https://linsk27.github.io/","sameAs":["https://github.com/linsk27","https://linsk27.github.io/about/","https://space.bilibili.com/674582664"],"knowsAbout":["Vue","TypeScript","Three.js","CSS3DRenderer","WebGL Portfolio","GitHub Actions","Local Development Tools","Alibaba Cloud Ops","Flask","MySQL","Data Visualization","Nuxt","ECharts","Smart Community Dashboard","Security Monitoring","Energy Monitoring","CIM Platform UI"]},{"@type":"WebSite","@id":"https://linsk27.github.io/#website","name":"404_@林达","url":"https://linsk27.github.io/","description":"404_@林达 的个人主页，记录前端项目、开发者工具、数据可视化和全栈实践。","potentialAction":{"@type":"SearchAction","target":"https://linsk27.github.io/search/?keyword={search_term_string}","query-input":"required name=search_term_string"},"publisher":{"@id":"https://linsk27.github.io/#person"}},{"@type":"ProfilePage","@id":"https://linsk27.github.io/about/#profile","name":"关于 404_@林达","url":"https://linsk27.github.io/about/","description":"404_@林达 的 GitHub 个人介绍页，记录前端学习、项目实践、开发者工具、数据可视化和全栈练习。","isPartOf":{"@id":"https://linsk27.github.io/#website"},"mainEntity":{"@id":"https://linsk27.github.io/#person"}},{"@type":"CollectionPage","@id":"https://linsk27.github.io/projects/#collection","name":"404_@林达 Projects","url":"https://linsk27.github.io/projects/","description":"Dev Cockpit, Local AI Ops, ProofPR, Signal Atlas, feidu, AI Vue Flask Blog, echarts-learn, bilibili-nuxt3 and other developer-tool, Three.js, Vue, Nuxt, ECharts and full-stack projects by 404_@林达.","isPartOf":{"@id":"https://linsk27.github.io/#website"},"about":{"@id":"https://linsk27.github.io/#person"},"hasPart":[{"@type":"SoftwareSourceCode","name":"Signal Atlas","codeRepository":"https://github.com/linsk-labs/signal-atlas","programmingLanguage":["JavaScript","HTML","CSS"],"description":"Immersive Three.js workstation with a live CSS3D monitor, original linsk27 desktop, real content routes, and documented attribution for the MIT upstream outer scene.","image":"https://linsk27.github.io/img/projects/signal-atlas-reference-edition-desk-v0.25.7.png","url":"https://linsk27.github.io/projects/signal-atlas/"},{"@type":"SoftwareSourceCode","name":"Local AI Ops","codeRepository":"https://github.com/linsk-labs/local-ai-ops","programmingLanguage":["Python","TypeScript"],"description":"Local LAN Alibaba Cloud ops console for cloud resource sync, monitoring checks, alert workflow, and troubleshooting suggestions.","image":"https://linsk27.github.io/img/projects/local-ai-ops-empty-dashboard.png","url":"https://linsk27.github.io/projects/local-ai-ops/"},{"@type":"SoftwareSourceCode","name":"Dev Cockpit","codeRepository":"https://github.com/linsk-labs/local-dev-cockpit","programmingLanguage":["TypeScript","Vue"],"description":"Local development workbench for stack detection, commands, ports, Python environments, Git state, runtime status, project context, and resource organization.","image":"https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png","url":"https://linsk27.github.io/projects/dev-cockpit/"},{"@type":"SoftwareSourceCode","name":"ProofPR","codeRepository":"https://github.com/linsk-labs/proof-pr","programmingLanguage":["TypeScript","JavaScript"],"description":"Deterministic GitHub Action and CLI for pull request evidence checks, review gates, dependency signals, workflow permissions, secrets, and MCP configuration.","image":"https://linsk27.github.io/img/projects/proofpr-github-action-pr-review-report.png","url":"https://linsk27.github.io/projects/proofpr/"},{"@type":"SoftwareSourceCode","name":"feidu","codeRepository":"https://github.com/linsk27/feidu","programmingLanguage":["Vue","TypeScript"],"description":"Nuxt 3, Vue, Tailwind CSS and ECharts smart community dashboard for community management, security monitoring, CIM platform, energy monitoring, and energy analysis screens.","image":"https://linsk27.github.io/img/projects/feidu-smart-community-dashboard.jpg","url":"https://linsk27.github.io/projects/feidu/"},{"@type":"SoftwareSourceCode","name":"AI-Vue3-python-flask-Blog","codeRepository":"https://github.com/linsk27/AI-Vue3-python-flask-Blog","programmingLanguage":["Vue","Python","TypeScript"],"description":"Vue 3, Flask, MySQL and AI blog system for full-stack practice, course design, graduation project, and secondary development.","image":"https://linsk27.github.io/img/projects/ai-vue-flask-blog-home-page.png","url":"https://linsk27.github.io/projects/ai-vue-flask-blog/"},{"@type":"SoftwareSourceCode","name":"bilibili-nuxt3","codeRepository":"https://github.com/linsk27/bilibili-nuxt3","programmingLanguage":["TypeScript","Vue"],"description":"Nuxt 3, Vue, TypeScript and Vant mobile project practice for SSR, SEO, channel navigation, video lists, detail pages, and mobile UI structure.","image":"https://linsk27.github.io/img/projects/bilibili-nuxt3-mobile-preview.jpg","url":"https://linsk27.github.io/projects/bilibili-nuxt3/"},{"@type":"SoftwareSourceCode","name":"echarts-learn","codeRepository":"https://github.com/linsk27/echarts-learn","programmingLanguage":["Vue","TypeScript"],"description":"Vue, Nuxt and ECharts data visualization dashboard practice for bar charts, radar charts, relation graphs, ring charts, word cloud, and dashboard UI.","image":"https://linsk27.github.io/img/projects/echarts-learn-dashboard.png","url":"https://linsk27.github.io/projects/echarts-learn/"}]}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://linsk27.github.io/"},{"@type":"ListItem","position":2,"name":"Node.js 全栈学习笔记（持续更新）","item":"https://linsk27.github.io/p/nodejs-fullstack-notes/"}]}</script></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><div id=article-toolbar style=position:sticky;top:5px;z-index:1000><a href=/ class=back-home><svg class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
-<span>返回</span></a></div><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><ol><li><a href=#buffer缓冲器>Buffer（缓冲器）</a><ol><li><a href=#概念>概念</a></li><li><a href=#特点>特点</a></li><li><a href=#创建方式>创建方式</a></li><li><a href=#buffer-的元素转换>buffer 的元素转换</a></li><li><a href=#注意>注意</a></li></ol></li><li><a href=#fs模块->fs模块 *</a><ol><li><a href=#概念与使用>概念与使用</a></li><li><a href=#文件写入>文件写入</a></li><li><a href=#文件读取>文件读取</a></li><li><a href=#文件复制案例>文件复制案例*</a></li><li><a href=#文件的重命名和移动>文件的重命名和移动</a></li><li><a href=#文件删除>文件删除</a></li><li><a href=#文件夹操作>文件夹操作</a></li><li><a href=#查看资源信息>查看资源信息</a></li><li><a href=#fs路径>fs路径</a></li><li><a href=#批量重命名练习>批量重命名练习</a></li><li><a href=#path模块>path模块</a></li><li><a href=#注意-1>注意</a></li></ol></li><li><a href=#http模块>HTTP模块</a><ol><li><a href=#获取请求行和请求头信息>获取请求行和请求头信息</a></li><li><a href=#获取请求体信息>获取请求体信息</a></li><li><a href=#获取url的请求参数和查询字符串>获取url的请求参数和查询字符串</a></li><li><a href=#http请求练习>http请求练习</a></li><li><a href=#设置http响应报文>设置http响应报文</a></li><li><a href=#响应报文练习>响应报文练习</a></li><li><a href=#响应练习扩展>响应练习扩展</a></li><li><a href=#静态资源服务>静态资源服务</a></li></ol></li></ol></li></ol></nav></div></section></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/%E5%90%8E%E7%AB%AF/>后端</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/p/nodejs-fullstack-notes/>Node.js 全栈学习笔记（持续更新）</a></h2><h3 class=article-subtitle>记录我学习 Node.js 基础模块时的笔记，先从 Buffer 和 fs 开始，边学边补充，不把它当成已经完成的教程。</h3></div><footer class=article-time><div><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<!doctype html><html lang=zh-cn dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="持续记录我的 Node.js 学习过程，目前学到 Buffer、fs、HTTP、CommonJS 和 Express，包含路由、中间件、EJS 与文件上传练习。"><meta name=keywords content="Node.js 学习,Buffer,fs 模块,文件读写,Node.js 流"><title>Node.js 全栈学习笔记（持续更新）</title><meta name=google-site-verification content="ojZXN_87I2cwlf5nsEcatA8ibUhHz-Wol2E4dfd561g"><meta name=msvalidate.01 content="12336DB9361DCE2DB03C4A3340A146A2"><link rel=canonical href=https://linsk27.github.io/p/nodejs-fullstack-notes/><link rel=stylesheet href=/scss/style.min.3c7b822e59a6f059797debb79f71a5dc2d843af0423e2d5fac74771f1af877b0.css><meta property='og:title' content="Node.js 全栈学习笔记（持续更新）"><meta property='og:description' content="持续记录我的 Node.js 学习过程，目前学到 Buffer、fs、HTTP、CommonJS 和 Express，包含路由、中间件、EJS 与文件上传练习。"><meta property='og:url' content='https://linsk27.github.io/p/nodejs-fullstack-notes/'><meta property='og:site_name' content='404_@林达'><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='Node.js'><meta property='article:tag' content='JavaScript'><meta property='article:tag' content='Buffer'><meta property='article:tag' content='fs'><meta property='article:tag' content='文件系统'><meta property='article:tag' content='学习笔记'><meta property='article:published_time' content='2026-09-23T00:00:00+00:00'><meta property='article:modified_time' content='2026-10-06T00:00:00+00:00'><meta name=twitter:title content="Node.js 全栈学习笔记（持续更新）"><meta name=twitter:description content="持续记录我的 Node.js 学习过程，目前学到 Buffer、fs、HTTP、CommonJS 和 Express，包含路由、中间件、EJS 与文件上传练习。"><link rel="shortcut icon" href=/favicon.ico><script type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://linsk27.github.io/#person","name":"404_@林达","url":"https://linsk27.github.io/","sameAs":["https://github.com/linsk27","https://linsk27.github.io/about/","https://space.bilibili.com/674582664"],"knowsAbout":["Vue","TypeScript","Three.js","CSS3DRenderer","WebGL Portfolio","GitHub Actions","Local Development Tools","Alibaba Cloud Ops","Flask","MySQL","Data Visualization","Nuxt","ECharts","Smart Community Dashboard","Security Monitoring","Energy Monitoring","CIM Platform UI"]},{"@type":"WebSite","@id":"https://linsk27.github.io/#website","name":"404_@林达","url":"https://linsk27.github.io/","description":"404_@林达 的个人主页，记录前端项目、开发者工具、数据可视化和全栈实践。","potentialAction":{"@type":"SearchAction","target":"https://linsk27.github.io/search/?keyword={search_term_string}","query-input":"required name=search_term_string"},"publisher":{"@id":"https://linsk27.github.io/#person"}},{"@type":"ProfilePage","@id":"https://linsk27.github.io/about/#profile","name":"关于 404_@林达","url":"https://linsk27.github.io/about/","description":"404_@林达 的 GitHub 个人介绍页，记录前端学习、项目实践、开发者工具、数据可视化和全栈练习。","isPartOf":{"@id":"https://linsk27.github.io/#website"},"mainEntity":{"@id":"https://linsk27.github.io/#person"}},{"@type":"CollectionPage","@id":"https://linsk27.github.io/projects/#collection","name":"404_@林达 Projects","url":"https://linsk27.github.io/projects/","description":"Dev Cockpit, Local AI Ops, ProofPR, Signal Atlas, feidu, AI Vue Flask Blog, echarts-learn, bilibili-nuxt3 and other developer-tool, Three.js, Vue, Nuxt, ECharts and full-stack projects by 404_@林达.","isPartOf":{"@id":"https://linsk27.github.io/#website"},"about":{"@id":"https://linsk27.github.io/#person"},"hasPart":[{"@type":"SoftwareSourceCode","name":"Signal Atlas","codeRepository":"https://github.com/linsk-labs/signal-atlas","programmingLanguage":["JavaScript","HTML","CSS"],"description":"Immersive Three.js workstation with a live CSS3D monitor, original linsk27 desktop, real content routes, and documented attribution for the MIT upstream outer scene.","image":"https://linsk27.github.io/img/projects/signal-atlas-reference-edition-desk-v0.25.7.png","url":"https://linsk27.github.io/projects/signal-atlas/"},{"@type":"SoftwareSourceCode","name":"Local AI Ops","codeRepository":"https://github.com/linsk-labs/local-ai-ops","programmingLanguage":["Python","TypeScript"],"description":"Local LAN Alibaba Cloud ops console for cloud resource sync, monitoring checks, alert workflow, and troubleshooting suggestions.","image":"https://linsk27.github.io/img/projects/local-ai-ops-empty-dashboard.png","url":"https://linsk27.github.io/projects/local-ai-ops/"},{"@type":"SoftwareSourceCode","name":"Dev Cockpit","codeRepository":"https://github.com/linsk-labs/local-dev-cockpit","programmingLanguage":["TypeScript","Vue"],"description":"Local development workbench for stack detection, commands, ports, Python environments, Git state, runtime status, project context, and resource organization.","image":"https://linsk27.github.io/img/projects/dev-cockpit-resource-radar-cards.png","url":"https://linsk27.github.io/projects/dev-cockpit/"},{"@type":"SoftwareSourceCode","name":"ProofPR","codeRepository":"https://github.com/linsk-labs/proof-pr","programmingLanguage":["TypeScript","JavaScript"],"description":"Deterministic GitHub Action and CLI for pull request evidence checks, review gates, dependency signals, workflow permissions, secrets, and MCP configuration.","image":"https://linsk27.github.io/img/projects/proofpr-github-action-pr-review-report.png","url":"https://linsk27.github.io/projects/proofpr/"},{"@type":"SoftwareSourceCode","name":"feidu","codeRepository":"https://github.com/linsk27/feidu","programmingLanguage":["Vue","TypeScript"],"description":"Nuxt 3, Vue, Tailwind CSS and ECharts smart community dashboard for community management, security monitoring, CIM platform, energy monitoring, and energy analysis screens.","image":"https://linsk27.github.io/img/projects/feidu-smart-community-dashboard.jpg","url":"https://linsk27.github.io/projects/feidu/"},{"@type":"SoftwareSourceCode","name":"AI-Vue3-python-flask-Blog","codeRepository":"https://github.com/linsk27/AI-Vue3-python-flask-Blog","programmingLanguage":["Vue","Python","TypeScript"],"description":"Vue 3, Flask, MySQL and AI blog system for full-stack practice, course design, graduation project, and secondary development.","image":"https://linsk27.github.io/img/projects/ai-vue-flask-blog-home-page.png","url":"https://linsk27.github.io/projects/ai-vue-flask-blog/"},{"@type":"SoftwareSourceCode","name":"bilibili-nuxt3","codeRepository":"https://github.com/linsk27/bilibili-nuxt3","programmingLanguage":["TypeScript","Vue"],"description":"Nuxt 3, Vue, TypeScript and Vant mobile project practice for SSR, SEO, channel navigation, video lists, detail pages, and mobile UI structure.","image":"https://linsk27.github.io/img/projects/bilibili-nuxt3-mobile-preview.jpg","url":"https://linsk27.github.io/projects/bilibili-nuxt3/"},{"@type":"SoftwareSourceCode","name":"echarts-learn","codeRepository":"https://github.com/linsk27/echarts-learn","programmingLanguage":["Vue","TypeScript"],"description":"Vue, Nuxt and ECharts data visualization dashboard practice for bar charts, radar charts, relation graphs, ring charts, word cloud, and dashboard UI.","image":"https://linsk27.github.io/img/projects/echarts-learn-dashboard.png","url":"https://linsk27.github.io/projects/echarts-learn/"}]}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://linsk27.github.io/"},{"@type":"ListItem","position":2,"name":"Node.js 全栈学习笔记（持续更新）","item":"https://linsk27.github.io/p/nodejs-fullstack-notes/"}]}</script></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><div id=article-toolbar style=position:sticky;top:5px;z-index:1000><a href=/ class=back-home><svg class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>返回</span></a></div><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><ol><li><a href=#buffer缓冲器>Buffer（缓冲器）</a><ol><li><a href=#概念>概念</a></li><li><a href=#特点>特点</a></li><li><a href=#创建方式>创建方式</a></li><li><a href=#buffer-的元素转换>buffer 的元素转换</a></li><li><a href=#注意>注意</a></li></ol></li><li><a href=#fs模块->fs模块 *</a><ol><li><a href=#概念与使用>概念与使用</a></li><li><a href=#文件写入>文件写入</a></li><li><a href=#文件读取>文件读取</a></li><li><a href=#文件复制案例>文件复制案例*</a></li><li><a href=#文件的重命名和移动>文件的重命名和移动</a></li><li><a href=#文件删除>文件删除</a></li><li><a href=#文件夹操作>文件夹操作</a></li><li><a href=#查看资源信息>查看资源信息</a></li><li><a href=#fs路径>fs路径</a></li><li><a href=#批量重命名练习>批量重命名练习</a></li><li><a href=#path模块>path模块</a></li><li><a href=#注意-1>注意</a></li></ol></li><li><a href=#http模块>HTTP模块</a><ol><li><a href=#获取请求行和请求头信息>获取请求行和请求头信息</a></li><li><a href=#获取请求体信息>获取请求体信息</a></li><li><a href=#获取url的请求参数和查询字符串>获取url的请求参数和查询字符串</a></li><li><a href=#http请求练习>http请求练习</a></li><li><a href=#设置http响应报文>设置http响应报文</a></li><li><a href=#响应报文练习>响应报文练习</a></li><li><a href=#响应练习扩展>响应练习扩展</a></li><li><a href=#静态资源服务>静态资源服务</a></li></ol></li><li><a href=#commonjs规范模块化>CommonJS规范模块化</a><ol><li><a href=#暴露数据及文件导入>暴露数据及文件导入</a></li><li><a href=#导入文件夹>导入文件夹</a></li><li><a href=#require的导入原理>require的导入原理</a></li></ol></li><li><a href=#包管理工具>包管理工具</a></li><li><a href=#express框架>express框架</a><ol><li><a href=#路由>路由</a></li><li><a href=#获取请求参数>获取请求参数</a></li><li><a href=#获取路由参数-params>获取路由参数 （params）</a></li><li><a href=#路由参数练习>路由参数练习</a></li><li><a href=#设置响应>设置响应</a></li><li><a href=#其他响应>其他响应</a></li><li><a href=#express中间件>express中间件</a></li><li><a href=#获取请求体数据>获取请求体数据</a></li><li><a href=#防盗链>防盗链</a></li><li><a href=#路由模块化-开发范式>路由模块化 *（开发范式）</a></li><li><a href=#ejs模板引擎了解即可>ejs模板引擎(了解即可)</a></li><li><a href=#express-generator工具快速搭建express框架项目>express-generator工具，快速搭建express框架项目</a></li><li><a href=#处理文件上传>处理文件上传</a></li><li><a href=#唯一id标识npm包>唯一id标识npm包</a></li></ol></li></ol></li></ol></nav></div></section></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/%E5%90%8E%E7%AB%AF/>后端</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/p/nodejs-fullstack-notes/>Node.js 全栈学习笔记（持续更新）</a></h2><h3 class=article-subtitle>持续记录我的 Node.js 学习过程，目前学到 Buffer、fs、HTTP、CommonJS 和 Express，包含路由、中间件、EJS 与文件上传练习。</h3></div><footer class=article-time><div><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
 <time class=article-time--published>2026-09-23</time></div><div id=viewCount><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-eye"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12a2 2 0 104 0 2 2 0 00-4 0"/><path d="M21 12c-2.4 4-5.4 6-9 6s-6.6-2-9-6c2.4-4 5.4-6 9-6s6.6 2 9 6"/></svg>
-<time class=article-time--reading><span id=vercount_value_page_pv>loading... </span>次</time></div></footer></div></header><section class=article-content><p>这是一篇还在更新中的 Node.js 学习笔记。现在先记录我已经遇到的基础模块和代码例子，后面会继续补充网络、服务端和全栈开发相关内容。笔记里的理解会随着实践调整，适合和代码一起对照着看。</p><h3 id=buffer缓冲器>Buffer（缓冲器）</h3><h4 id=概念>概念</h4><ul><li>一个类似于Array的对象，即表示一段固定长度的内存空间，用于处理二进制数据</li></ul><h4 id=特点>特点</h4><ul><li>Buffer大小固定且无法调整</li><li>性能较好，直接对计算机内存进行操作</li><li>每个元素的大小为1字节（byte），即8个bit</li></ul><h4 id=创建方式>创建方式</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+<time class=article-time--reading><span id=vercount_value_page_pv>loading... </span>次</time></div></footer></div></header><section class=article-content><p>这是一篇还在更新的 Node.js 学习笔记，记录我学到的知识点和练习代码。目前从 Buffer、文件读写和 HTTP 学到了 Express，后面会边学边补。</p><h3 id=buffer缓冲器>Buffer（缓冲器）</h3><h4 id=概念>概念</h4><ul><li>一个类似于Array的对象，即表示一段固定长度的内存空间，用于处理二进制数据</li></ul><h4 id=特点>特点</h4><ul><li>Buffer大小固定且无法调整</li><li>性能较好，直接对计算机内存进行操作</li><li>每个元素的大小为1字节（byte），即8个bit</li></ul><h4 id=创建方式>创建方式</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -552,23 +552,63 @@
 </span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;出现错误：&#39;</span><span class=p>)</span>
 </span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>err</span><span class=p>)</span>
 </span></span><span class=line><span class=cl><span class=p>}</span>
-</span></span></code></pre></td></tr></table></div></div><h4 id=path模块>path模块</h4><ol><li>path.resolve 解决路径问题的规范（常用）</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span><span class=lnt>2
-</span><span class=lnt>3
-</span><span class=lnt>4
-</span><span class=lnt>5
-</span><span class=lnt>6
-</span><span class=lnt>7
-</span><span class=lnt>8
+</span></span></code></pre></td></tr></table></div></div><h4 id=path模块>path模块</h4><ol><li>path.resolve 解决路径问题的规范（常用）</li></ol><blockquote><p>调试环境：当前 js 文件所在目录（基准路径）：<code>D:\代码学习\后端\node.js后端\express框架</code></p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>const</span> <span class=nx>path</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;path&#39;</span><span class=p>)</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>path</span><span class=p>.</span><span class=nx>resolve</span><span class=p>(</span><span class=nx>__dirname</span><span class=p>,.</span><span class=o>/</span><span class=nx>index</span><span class=p>.</span><span class=nx>html</span><span class=p>))</span>
-</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>path</span><span class=p>.</span><span class=nx>resolve</span><span class=p>(</span><span class=nx>__dirname</span><span class=p>,</span><span class=nx>index</span><span class=p>.</span><span class=nx>html</span><span class=p>))</span>
-</span></span><span class=line><span class=cl><span class=c1>// 两者输出都为 &#39;\&#39; 的拼接标准斜杠
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>path</span><span class=p>.</span><span class=nx>resolve</span><span class=p>(</span><span class=nx>__dirname</span><span class=p>,</span> <span class=s1>&#39;./index.html&#39;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=c1>// D:\代码学习\后端\node.js后端\express框架\index.html
+</span></span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>path</span><span class=p>.</span><span class=nx>resolve</span><span class=p>(</span><span class=nx>__dirname</span><span class=p>,</span> <span class=s1>&#39;index.html&#39;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=c1>// D:\代码学习\后端\node.js后端\express框架\index.html
+</span></span></span><span class=line><span class=cl><span class=c1>// ✅ 上面两者输出结果一致，自动转为系统标准分隔符 Windows为 \
 </span></span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>path</span><span class=p>.</span><span class=nx>resolve</span><span class=p>(</span><span class=nx>__dirname</span><span class=p>,</span><span class=sr>/index.html)) /</span><span class=o>/</span><span class=nx>输出为D</span><span class=o>:</span><span class=err>\</span><span class=nx>index</span><span class=p>.</span><span class=nx>html</span>
-</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>path</span><span class=p>.</span><span class=nx>resolve</span><span class=p>(</span><span class=nx>__dirname</span><span class=p>,</span><span class=err>/index.html,./text)) //输出为D:\index.html\test</span>
-</span></span></code></pre></td></tr></table></div></div><ol start=2><li>sep 分隔符，获取当前操作系统的路径分隔符</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></span><span class=line><span class=cl><span class=c1>// ⚠️ 重点坑：第二个参数开头带 /，代表绝对路径，直接抛弃前面所有内容
+</span></span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>path</span><span class=p>.</span><span class=nx>resolve</span><span class=p>(</span><span class=nx>__dirname</span><span class=p>,</span> <span class=s1>&#39;/index.html&#39;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=c1>// D:\index.html
+</span></span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// ⚠️ 只要任意片段以 / 开头，该片段左侧全部作废，继续向右拼接剩下片段
+</span></span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>path</span><span class=p>.</span><span class=nx>resolve</span><span class=p>(</span><span class=nx>__dirname</span><span class=p>,</span> <span class=s1>&#39;/index.html&#39;</span><span class=p>,</span> <span class=s1>&#39;./test&#39;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=c1>// D:\index.html\test
+</span></span></span></code></pre></td></tr></table></div></div><ol start=2><li>path.json 和 path.resolve区别</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>const</span> <span class=nx>path</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;path&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>path</span><span class=p>.</span><span class=nx>join</span><span class=p>(</span><span class=nx>__dirname</span><span class=p>,</span> <span class=s1>&#39;./index.html&#39;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=c1>// D:\代码学习\后端\node.js后端\express框架\index.html
+</span></span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>path</span><span class=p>.</span><span class=nx>join</span><span class=p>(</span><span class=nx>__dirname</span><span class=p>,</span> <span class=s1>&#39;index.html&#39;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=c1>// D:\代码学习\后端\node.js后端\express框架\index.html
+</span></span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// ✅ join不会跳到磁盘根，忽略片段开头的 /
+</span></span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>path</span><span class=p>.</span><span class=nx>join</span><span class=p>(</span><span class=nx>__dirname</span><span class=p>,</span> <span class=s1>&#39;/index.html&#39;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=c1>// D:\代码学习\后端\node.js后端\express框架\index.html
+</span></span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>path</span><span class=p>.</span><span class=nx>join</span><span class=p>(</span><span class=nx>__dirname</span><span class=p>,</span> <span class=s1>&#39;/index.html&#39;</span><span class=p>,</span> <span class=s1>&#39;./test&#39;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=c1>// D:\代码学习\后端\node.js后端\express框架\index.html\test
+</span></span></span></code></pre></td></tr></table></div></div><ol start=2><li>sep 分隔符，获取当前操作系统的路径分隔符</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>const</span> <span class=nx>path</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;path&#39;</span><span class=p>)</span>
@@ -710,28 +750,16 @@
 </span><span class=lnt> 8
 </span><span class=lnt> 9
 </span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>const</span> <span class=nx>http</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;http&#39;</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>server</span> <span class=o>=</span> <span class=nx>http</span><span class=p>.</span><span class=nx>createServer</span><span class=p>((</span><span class=nx>request</span><span class=p>,</span> <span class=nx>response</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=c1>// 实例化url对象
-</span></span></span><span class=line><span class=cl>    <span class=kd>let</span> <span class=nx>url</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>URL</span><span class=p>(</span><span class=nx>request</span><span class=p>.</span><span class=nx>url</span><span class=p>,</span> <span class=s1>&#39;http://127.0.0.1&#39;</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>    <span class=c1>// 输出路径，即接口请求的路径如/,/favicon.ico,/index.css,login等
-</span></span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>url</span><span class=p>.</span><span class=nx>pathname</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>    <span class=c1>// 输出keyword查询字符串
-</span></span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>url</span><span class=p>.</span><span class=nx>searchParams</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;keyword&#39;</span><span class=p>))</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=nx>response</span><span class=p>.</span><span class=nx>end</span><span class=p>(</span><span class=s1>&#39;url new&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=kd>let</span> <span class=nx>url</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>URL</span><span class=p>(</span><span class=nx>request</span><span class=p>.</span><span class=nx>url</span><span class=p>,</span> <span class=s1>&#39;http://127.0.0.1&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;pathname输出路径:&#39;</span><span class=p>,</span> <span class=nx>url</span><span class=p>.</span><span class=nx>pathname</span><span class=p>)</span> <span class=c1>// 访问 /search?keyword=nodejs 输出：/search
+</span></span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>url</span><span class=p>.</span><span class=nx>searchParams</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;keyword&#39;</span><span class=p>))</span> <span class=c1>// 访问 /search?keyword=nodejs 输出：nodejs
+</span></span></span><span class=line><span class=cl>    <span class=nx>response</span><span class=p>.</span><span class=nx>end</span><span class=p>(</span><span class=s1>&#39;url new&#39;</span><span class=p>)</span>
 </span></span><span class=line><span class=cl><span class=p>})</span>
-</span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=nx>server</span><span class=p>.</span><span class=nx>listen</span><span class=p>(</span><span class=mi>9000</span><span class=p>,</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;服务已经启动&#39;</span><span class=p>)</span>
-</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;服务已经启动&#39;</span><span class=p>)</span> <span class=c1>// 服务启动成功打印：服务已经启动
+</span></span></span><span class=line><span class=cl><span class=p>})</span>
 </span></span></code></pre></td></tr></table></div></div><h4 id=http请求练习>http请求练习</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
@@ -978,7 +1006,7 @@
 </span></span><span class=line><span class=cl><span class=nx>server</span><span class=p>.</span><span class=nx>listen</span><span class=p>(</span><span class=mi>9000</span><span class=p>,</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;服务已经启动&#39;</span><span class=p>)</span>
 </span></span><span class=line><span class=cl><span class=p>})</span>
-</span></span></code></pre></td></tr></table></div></div><h4 id=响应练习扩展>响应练习扩展</h4><p>如果进行目录及js，css，html拆分，考虑浏览器渲染原理以及响应体的资源请求路由没有判断，一直返回html，因此需要优化</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span></span></code></pre></td></tr></table></div></div><h4 id=响应练习扩展>响应练习扩展</h4><p>如果进行目录及js，css，html拆分，考虑浏览器渲染原理以及响应体的资源请求路由没有判断，一直返回html文件，导致js和css无法导入到html（可从浏览器控制台查看网络接口的访问），因此需要优化</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -1029,7 +1057,7 @@
 </span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;服务已经启动&#39;</span><span class=p>)</span>
 </span></span><span class=line><span class=cl><span class=p>})</span>
 </span></span></code></pre></td></tr></table></div></div><p>当文件有很多的时候，就要再次优化，见后文</p><h4 id=静态资源服务>静态资源服务</h4><ol><li>静态资源的封装导入
-目录结构：</li></ol><blockquote><p>page属于静态资源目录</p></blockquote><p><img src=/p/nodejs-fullstack-notes/image-20260927182516334.png width=225 height=275 srcset="/p/nodejs-fullstack-notes/image-20260927182516334_hu_444f286f97defa3f.png 480w, /p/nodejs-fullstack-notes/image-20260927182516334_hu_5a4aca28366ca50c.png 1024w" loading=lazy alt=静态资源目录结构 class=gallery-image data-flex-grow=81 data-flex-basis=196px></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+目录结构：</li></ol><blockquote><p><img src=/p/nodejs-fullstack-notes/image-20260927182516334.png width=225 height=275 srcset="/p/nodejs-fullstack-notes/image-20260927182516334_hu_444f286f97defa3f.png 480w, /p/nodejs-fullstack-notes/image-20260927182516334_hu_5a4aca28366ca50c.png 1024w" loading=lazy alt=静态资源目录结构 class=gallery-image data-flex-grow=81 data-flex-basis=196px></p><p>page属于静态资源目录</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -1109,13 +1137,1063 @@ url、src等，常用<code>&lt;link rel="stylesheet" href="/css/index.css" /></c
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>contentType</span> <span class=o>=</span> <span class=nx>mime</span><span class=p>[</span><span class=nx>ext</span><span class=p>]</span> <span class=o>||</span> <span class=s1>&#39;application/octet-stream&#39;</span>
 </span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>contentType</span><span class=p>)</span> <span class=c1>// text/css;charset=utf-8
-</span></span></span></code></pre></td></tr></table></div></div><p><img src=/p/nodejs-fullstack-notes/image-20260930023153777.png width=1080 height=140 srcset="/p/nodejs-fullstack-notes/image-20260930023153777_hu_e9a382f54ae99ee9.png 480w, /p/nodejs-fullstack-notes/image-20260930023153777_hu_f49d0a4f982c40c0.png 1024w" loading=lazy alt=静态资源服务运行示意 class=gallery-image data-flex-grow=771 data-flex-basis=1851px></p><ol start=4><li>err错误处理</li></ol><p>通过读取err打印出来的code类型去进行状态码反馈，如404、403等，详情可见官网的error的错误类型</p></section><footer class=article-footer><section class=article-tags><a href=/tags/node.js/>Node.js</a>
-<a href=/tags/javascript/>Javascript</a>
+</span></span></span></code></pre></td></tr></table></div></div><ol start=4><li>err错误处理</li></ol><p><img src=/p/nodejs-fullstack-notes/image-20260930023153777.png width=1080 height=140 srcset="/p/nodejs-fullstack-notes/image-20260930023153777_hu_e9a382f54ae99ee9.png 480w, /p/nodejs-fullstack-notes/image-20260930023153777_hu_f49d0a4f982c40c0.png 1024w" loading=lazy alt="文件不存在时的 ENOENT 错误信息" class=gallery-image data-flex-grow=771 data-flex-basis=1851px></p><p>通过读取err打印出来的code类型去进行状态码反馈，如404、403等，详情可见官网的error的错误类型</p><h3 id=commonjs规范模块化>CommonJS规范模块化</h3><h4 id=暴露数据及文件导入>暴露数据及文件导入</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>const</span> <span class=nx>duanzi</span> <span class=o>=</span> <span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;我是个段子&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>lezi</span> <span class=o>=</span> <span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;我是个乐子&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=c1>// exports.duanzi = duanzi
+</span></span></span><span class=line><span class=cl><span class=c1>// exports.lezi = lezi
+</span></span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 直接用这种比较好，因为exports不能用直接=value的方式，而module.exports = &#39;111&#39;可以
+</span></span></span><span class=line><span class=cl><span class=c1>// 因为require返回结果是module中的exports的值而不是exports。因此当exports = 521的时候拿不到结果
+</span></span></span><span class=line><span class=cl><span class=c1>// exports.duanzi = duanzi可以是因为属于对象的引用数据（地址），modules同样可以访问到 exports = modules.exports = {}
+</span></span></span><span class=line><span class=cl><span class=nx>module</span><span class=p>.</span><span class=nx>exports</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>duanzi</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nx>lezi</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>const</span> <span class=nx>modules</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;./01-暴露的方式&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>modules</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>modules</span><span class=p>.</span><span class=nx>duanzi</span><span class=p>())</span>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>modules</span><span class=p>.</span><span class=nx>lezi</span><span class=p>())</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>log</span><span class=o>:</span>
+</span></span><span class=line><span class=cl><span class=p>{</span> <span class=nx>duanzi</span><span class=o>:</span> <span class=p>[</span><span class=nb>Function</span><span class=o>:</span> <span class=nx>duanzi</span><span class=p>],</span> <span class=nx>lezi</span><span class=o>:</span> <span class=p>[</span><span class=nb>Function</span><span class=o>:</span> <span class=nx>lezi</span><span class=p>]</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=nx>我是个段子</span>
+</span></span><span class=line><span class=cl><span class=kc>undefined</span>
+</span></span><span class=line><span class=cl><span class=nx>我是个乐子</span>
+</span></span><span class=line><span class=cl><span class=kc>undefined</span>
+</span></span></code></pre></td></tr></table></div></div><blockquote><p>ps：</p><ol><li>不加文件后缀也会直接匹配，如果同名会从js优先匹配</li><li>自定义后缀文件如.abc文件，默认为js文件</li><li>路径推荐使用相对路径&rsquo;./&rsquo;</li></ol></blockquote><h4 id=导入文件夹>导入文件夹</h4><ol><li>会检查是否有package.json文件是否存在，并且检查其main属性的指向文件。如果存在则导入，不存在则报错。
+如package.json文件不存在，则默认检查文件夹下的index.js或者index.json文件，没有则报错</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;main&#34;</span><span class=p>:</span> <span class=s2>&#34;./app.js&#34;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h4 id=require的导入原理>require的导入原理</h4><ol><li>将相对路径转为绝对路径，定位目标文件</li><li>缓存检测</li><li>读取文件代码</li><li>包裹为一个函数，然后执行</li><li>缓存结果</li><li>返回module.exports的值</li></ol><h3 id=包管理工具>包管理工具</h3><h3 id=express框架>express框架</h3><blockquote><p>创建express项目：npm init => npm i express</p></blockquote><h4 id=路由>路由</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// 导入express
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>express</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;express&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 创建应用对象
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>app</span> <span class=o>=</span> <span class=nx>express</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 创建路由
+</span></span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;/&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>res</span><span class=p>.</span><span class=nx>end</span><span class=p>(</span><span class=s1>&#39;hello express&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;/home&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>res</span><span class=p>.</span><span class=nx>end</span><span class=p>(</span><span class=s1>&#39;home&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>post</span><span class=p>(</span><span class=s1>&#39;/login&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>res</span><span class=p>.</span><span class=nx>end</span><span class=p>(</span><span class=s1>&#39;login login&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl><span class=c1>// 所有请求都可跳转
+</span></span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>all</span><span class=p>(</span><span class=s1>&#39;/test&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>res</span><span class=p>.</span><span class=nx>end</span><span class=p>(</span><span class=s1>&#39;test,all request is ok&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl><span class=c1>// 通配符 404响应，兜底路由规则
+</span></span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>all</span><span class=p>(</span><span class=s1>&#39;*&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>res</span><span class=p>.</span><span class=nx>end</span><span class=p>(</span><span class=s1>&#39;404 Not Found&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>listen</span><span class=p>(</span><span class=mi>3000</span><span class=p>,</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;express服务已启动，端口3000正在监听中...&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span></code></pre></td></tr></table></div></div><h4 id=获取请求参数>获取请求参数</h4><blockquote><p>兼容原生，大同小异</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// 导入express
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>express</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;express&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 创建应用对象
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>app</span> <span class=o>=</span> <span class=nx>express</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 创建路由
+</span></span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;/&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 原生操作
+</span></span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;[ req.url ] &gt;&#39;</span><span class=p>,</span> <span class=nx>req</span><span class=p>.</span><span class=nx>url</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;[ req.method ] &gt;&#39;</span><span class=p>,</span> <span class=nx>req</span><span class=p>.</span><span class=nx>method</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;[ req.httpVersion ] &gt;&#39;</span><span class=p>,</span> <span class=nx>req</span><span class=p>.</span><span class=nx>httpVersion</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;[ req.headers ] &gt;&#39;</span><span class=p>,</span> <span class=nx>req</span><span class=p>.</span><span class=nx>headers</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=c1>// express 操作
+</span></span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;[ req.path ] &gt;&#39;</span><span class=p>,</span> <span class=nx>req</span><span class=p>.</span><span class=nx>path</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;[ req.query ] &gt;&#39;</span><span class=p>,</span> <span class=nx>req</span><span class=p>.</span><span class=nx>query</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 获取IP
+</span></span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;[ req.ip ] &gt;&#39;</span><span class=p>,</span> <span class=nx>req</span><span class=p>.</span><span class=nx>ip</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 获取请求头
+</span></span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;[ req.host ] &gt;&#39;</span><span class=p>,</span> <span class=nx>req</span><span class=p>.</span><span class=nx>host</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nx>res</span><span class=p>.</span><span class=nx>end</span><span class=p>(</span><span class=s1>&#39;hello express&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>listen</span><span class=p>(</span><span class=mi>3000</span><span class=p>,</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;express服务已启动，端口3000正在监听中...&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>log</span><span class=o>:----------------------</span>
+</span></span><span class=line><span class=cl><span class=p>[</span> <span class=nx>req</span><span class=p>.</span><span class=nx>url</span> <span class=p>]</span> <span class=o>&gt;</span> <span class=err>/?a=100&amp;b=200</span>
+</span></span><span class=line><span class=cl><span class=p>[</span> <span class=nx>req</span><span class=p>.</span><span class=nx>method</span> <span class=p>]</span> <span class=o>&gt;</span> <span class=nx>GET</span>
+</span></span><span class=line><span class=cl><span class=p>[</span> <span class=nx>req</span><span class=p>.</span><span class=nx>httpVersion</span> <span class=p>]</span> <span class=o>&gt;</span> <span class=mf>1.1</span>
+</span></span><span class=line><span class=cl><span class=p>[</span> <span class=nx>req</span><span class=p>.</span><span class=nx>headers</span> <span class=p>]</span> <span class=o>&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>host</span><span class=o>:</span> <span class=s1>&#39;127.0.0.1:3000&#39;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nx>connection</span><span class=o>:</span> <span class=s1>&#39;keep-alive&#39;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=s1>&#39;cache-control&#39;</span><span class=o>:</span> <span class=s1>&#39;max-age=0&#39;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=s1>&#39;sec-ch-ua&#39;</span><span class=o>:</span> <span class=s1>&#39;&#34;Chromium&#34;;v=&#34;154&#34;, &#34;Google Chrome&#34;;v=&#34;154&#34;, &#34;Not 			  A(Brand&#34;;v=&#34;99&#34;&#39;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl><span class=c1>// ...省略
+</span></span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>[</span> <span class=nx>req</span><span class=p>.</span><span class=nx>path</span> <span class=p>]</span> <span class=o>&gt;</span> <span class=err>/</span>
+</span></span><span class=line><span class=cl><span class=p>[</span> <span class=nx>req</span><span class=p>.</span><span class=nx>query</span> <span class=p>]</span> <span class=o>&gt;</span> <span class=p>[</span><span class=nb>Object</span><span class=o>:</span> <span class=kc>null</span> <span class=nx>prototype</span><span class=p>]</span> <span class=p>{</span> <span class=nx>a</span><span class=o>:</span> <span class=s1>&#39;100&#39;</span><span class=p>,</span> <span class=nx>b</span><span class=o>:</span> <span class=s1>&#39;200&#39;</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>[</span> <span class=nx>req</span><span class=p>.</span><span class=nx>ip</span> <span class=p>]</span> <span class=o>&gt;</span> <span class=o>::</span><span class=nx>ffff</span><span class=o>:</span><span class=mf>127.0</span><span class=p>.</span><span class=mf>0.1</span>
+</span></span><span class=line><span class=cl><span class=p>[</span> <span class=nx>req</span><span class=p>.</span><span class=nx>host</span> <span class=p>]</span> <span class=o>&gt;</span> <span class=mf>127.0</span><span class=p>.</span><span class=mf>0.1</span><span class=o>:</span><span class=mi>3000</span>
+</span></span></code></pre></td></tr></table></div></div><h4 id=获取路由参数-params>获取路由参数 （params）</h4><p>示例：京东商城的商品访问，路由路径皆为各个商品的id.html，因此通过动态路由匹配，获取对应路由信息，从而匹配对应的商品资源</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// 导入express
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>express</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;express&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 创建应用对象
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>app</span> <span class=o>=</span> <span class=nx>express</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 创建路由
+</span></span></span><span class=line><span class=cl><span class=c1>// app.get(&#39;/1000031.html&#39;, (req, res) =&gt; {
+</span></span></span><span class=line><span class=cl><span class=c1>//     res.setHeader(&#39;content-type&#39;, &#39;text/html;charset=utf-8&#39;)
+</span></span></span><span class=line><span class=cl><span class=c1>//     res.end(&#39;商品详情&#39;)
+</span></span></span><span class=line><span class=cl><span class=c1>// })
+</span></span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 但是商品有成千上万，因此要做动态路由的匹配
+</span></span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;/:id.html&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 获取url 路由参数,字段名字&#39;.id&#39;需要和路由保持一致
+</span></span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;[ req.params.id ] &gt;&#39;</span><span class=p>,</span> <span class=nx>req</span><span class=p>.</span><span class=nx>params</span><span class=p>.</span><span class=nx>id</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nx>res</span><span class=p>.</span><span class=nx>setHeader</span><span class=p>(</span><span class=s1>&#39;content-type&#39;</span><span class=p>,</span> <span class=s1>&#39;text/html;charset=utf-8&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=nx>res</span><span class=p>.</span><span class=nx>end</span><span class=p>(</span><span class=s1>&#39;商品详情&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>listen</span><span class=p>(</span><span class=mi>3000</span><span class=p>,</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;express服务已启动，端口3000正在监听中...&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span></code></pre></td></tr></table></div></div><h4 id=路由参数练习>路由参数练习</h4><blockquote><ul><li><code>require('./xxx.json')</code>：<strong>一次性加载、不会实时更新</strong>，适合项目固定配置（服务启动后json不再改动）。</li><li><code>fs读取 + JSON.parse</code>：<strong>每次读取都拿最新文件内容</strong>，适合运行中会修改的json数据。</li></ul></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// 导入express
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>express</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;express&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=p>{</span> <span class=nx>singers</span> <span class=p>}</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;./05-singers.json&#39;</span><span class=p>)</span>	<span class=c1>// 为何不用fs见上文
+</span></span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 创建应用对象
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>app</span> <span class=o>=</span> <span class=nx>express</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 创建路由
+</span></span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;/singers/:id.html&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kd>let</span> <span class=nx>result</span> <span class=o>=</span> <span class=nx>singers</span><span class=p>.</span><span class=nx>find</span><span class=p>(</span><span class=nx>item</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=p>(</span><span class=nx>item</span><span class=p>.</span><span class=nx>id</span> <span class=o>==</span> <span class=nx>req</span><span class=p>.</span><span class=nx>params</span><span class=p>.</span><span class=nx>id</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=k>return</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>})</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;[ result ] &gt;&#39;</span><span class=p>,</span> <span class=nx>result</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=o>!</span><span class=nx>result</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>res</span><span class=p>.</span><span class=nx>end</span><span class=p>(</span><span class=s1>&#39;404 没有找到对应歌手&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=nx>res</span><span class=p>.</span><span class=nx>end</span><span class=p>(</span><span class=sb>`
+</span></span></span><span class=line><span class=cl><span class=sb>        &lt;!doctype html&gt;
+</span></span></span><span class=line><span class=cl><span class=sb>
+</span></span></span><span class=line><span class=cl><span class=sb>&lt;html lang=&#34;en&#34;&gt;
+</span></span></span><span class=line><span class=cl><span class=sb>    &lt;head&gt;
+</span></span></span><span class=line><span class=cl><span class=sb>        &lt;meta charset=&#34;UTF-8&#34; /&gt;
+</span></span></span><span class=line><span class=cl><span class=sb>
+</span></span></span><span class=line><span class=cl><span class=sb>        &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34; /&gt;
+</span></span></span><span class=line><span class=cl><span class=sb>
+</span></span></span><span class=line><span class=cl><span class=sb>        &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34; /&gt;
+</span></span></span><span class=line><span class=cl><span class=sb>
+</span></span></span><span class=line><span class=cl><span class=sb>        &lt;title&gt;Document&lt;/title&gt;
+</span></span></span><span class=line><span class=cl><span class=sb>    &lt;/head&gt;
+</span></span></span><span class=line><span class=cl><span class=sb>
+</span></span></span><span class=line><span class=cl><span class=sb>    &lt;body&gt;
+</span></span></span><span class=line><span class=cl><span class=sb>        &lt;h2&gt;</span><span class=si>${</span><span class=nx>result</span><span class=p>.</span><span class=nx>singer_name</span><span class=si>}</span><span class=sb>&lt;/好&gt;
+</span></span></span><span class=line><span class=cl><span class=sb>        &lt;br&gt;
+</span></span></span><span class=line><span class=cl><span class=sb>        &lt;img src=&#34;</span><span class=si>${</span><span class=nx>result</span><span class=p>.</span><span class=nx>singer_pic</span><span class=si>}</span><span class=sb>&#34;/&gt;
+</span></span></span><span class=line><span class=cl><span class=sb>    &lt;/body&gt;
+</span></span></span><span class=line><span class=cl><span class=sb>&lt;/html&gt;
+</span></span></span><span class=line><span class=cl><span class=sb>
+</span></span></span><span class=line><span class=cl><span class=sb>        `</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>listen</span><span class=p>(</span><span class=mi>3000</span><span class=p>,</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;express服务已启动，端口3000正在监听中...&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span></code></pre></td></tr></table></div></div><h4 id=设置响应>设置响应</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// 导入express
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>express</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;express&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 创建应用对象
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>app</span> <span class=o>=</span> <span class=nx>express</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 创建路由
+</span></span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;/response&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 原生响应
+</span></span></span><span class=line><span class=cl>    <span class=c1>// res.statusCode = 200 // 默认状态码为200
+</span></span></span><span class=line><span class=cl>    <span class=c1>// res.statusMessage = &#39;i love u&#39;
+</span></span></span><span class=line><span class=cl>    <span class=c1>// res.setHeader(&#39;Content-Type&#39;, &#39;text/plain;charset=utf-8&#39;)
+</span></span></span><span class=line><span class=cl>    <span class=c1>// res.write(&#39;love&#39;)
+</span></span></span><span class=line><span class=cl>    <span class=c1>// res.end(&#39;响应报文&#39;)
+</span></span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=c1>// express响应
+</span></span></span><span class=line><span class=cl>    <span class=c1>// res.status(500)
+</span></span></span><span class=line><span class=cl>    <span class=c1>// res.set(&#39;aaa&#39;, &#39;bbb&#39;)
+</span></span></span><span class=line><span class=cl>    <span class=c1>// res.send(&#39;你好 Express&#39;) // express的send方法内置utf-8配置
+</span></span></span><span class=line><span class=cl>    <span class=c1>// 连贯设置
+</span></span></span><span class=line><span class=cl>    <span class=c1>// res.status(500).set(&#39;abc&#39;, &#39;def&#39;).send(&#39;这都是 OK 的&#39;)
+</span></span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>listen</span><span class=p>(</span><span class=mi>3000</span><span class=p>,</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;express服务已启动，端口3000正在监听中...&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span></code></pre></td></tr></table></div></div><h4 id=其他响应>其他响应</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// 导入express
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>express</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;express&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 创建应用对象
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>app</span> <span class=o>=</span> <span class=nx>express</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 创建路由
+</span></span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;/other&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 跳转响应
+</span></span></span><span class=line><span class=cl>    <span class=c1>// res.redirect(&#39;http://atguigu.com&#39;)
+</span></span></span><span class=line><span class=cl>    <span class=c1>// 下载响应
+</span></span></span><span class=line><span class=cl>    <span class=c1>// res.download(__dirname + &#39;/package.json&#39;)
+</span></span></span><span class=line><span class=cl>    <span class=c1>// JSON响应
+</span></span></span><span class=line><span class=cl>    <span class=c1>// res.json({
+</span></span></span><span class=line><span class=cl>    <span class=c1>//     name: &#39;linda&#39;,
+</span></span></span><span class=line><span class=cl>    <span class=c1>//     slogon: &#39;我想要工作&#39;
+</span></span></span><span class=line><span class=cl>    <span class=c1>// })
+</span></span></span><span class=line><span class=cl>    <span class=c1>//响应文件内容
+</span></span></span><span class=line><span class=cl>    <span class=c1>// res.sendFile(__dirname + &#39;/02-form.html&#39;)
+</span></span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>listen</span><span class=p>(</span><span class=mi>3000</span><span class=p>,</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;express服务已启动，端口3000正在监听中...&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span></code></pre></td></tr></table></div></div><h4 id=express中间件>express中间件</h4><ol><li>概念</li></ol><ul><li>本质是一个<strong>回调函数</strong></li><li>参数：和路由函数类似，（req，res）</li></ul><ol start=2><li>作用</li></ol><ul><li>封装公共操作，简化代码</li></ul><ol start=3><li>类型</li></ol><ul><li>全局中间件</li><li>路由中间件</li></ul><ol start=4><li>全局中间件</li></ol><ul><li>常用场景：</li></ul><blockquote><p>访问日志打印（如下例子）</p><p>全局错误捕获</p><p>CORS跨域处理（设置响应头，放行跨域请求）</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=cm>/**
+</span></span></span><span class=line><span class=cl><span class=cm> * 记录url和ip
+</span></span></span><span class=line><span class=cl><span class=cm> */</span>
+</span></span><span class=line><span class=cl><span class=c1>// 导入express
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>express</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;express&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>fs</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;fs&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>path</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;path&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=c1>// 创建应用对象
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>app</span> <span class=o>=</span> <span class=nx>express</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=c1>// 声明中间件函数
+</span></span></span><span class=line><span class=cl><span class=kd>function</span> <span class=nx>recordMiddleware</span><span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>,</span> <span class=nx>next</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 获取url和ip
+</span></span></span><span class=line><span class=cl>    <span class=kd>let</span> <span class=p>{</span> <span class=nx>url</span><span class=p>,</span> <span class=nx>ip</span> <span class=p>}</span> <span class=o>=</span> <span class=nx>req</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;[ url,ip ] &gt;&#39;</span><span class=p>,</span> <span class=nx>url</span><span class=p>,</span> <span class=nx>ip</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 将信息保存于文件中
+</span></span></span><span class=line><span class=cl>    <span class=c1>// fs.appendFileSync(&#39;./08-access.log&#39;, `${url}  ${ip}\r\n`) // ❌！！！这里写的时候路径直接用了&#39;./&#39;，回顾上文这里文件创建会取决于cmd的执行目录
+</span></span></span><span class=line><span class=cl>    <span class=nx>fs</span><span class=p>.</span><span class=nx>appendFileSync</span><span class=p>(</span><span class=nx>path</span><span class=p>.</span><span class=nx>resolve</span><span class=p>(</span><span class=nx>__dirname</span><span class=p>,</span> <span class=s1>&#39;08-access.log&#39;</span><span class=p>),</span> <span class=sb>`</span><span class=si>${</span><span class=nx>url</span><span class=si>}</span><span class=sb>  </span><span class=si>${</span><span class=nx>ip</span><span class=si>}</span><span class=sb>\r\n`</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 调用next，必须加
+</span></span></span><span class=line><span class=cl>    <span class=nx>next</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 全局中间件挂载
+</span></span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>use</span><span class=p>(</span><span class=nx>recordMiddleware</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 创建路由
+</span></span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;/home&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>res</span><span class=p>.</span><span class=nx>send</span><span class=p>(</span><span class=s1>&#39;前台首页&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;/admin&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>res</span><span class=p>.</span><span class=nx>send</span><span class=p>(</span><span class=s1>&#39;后台首页&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// Express5 无法使用之前的app.all(&#39;*&#39;,()=&gt;{})来做404。
+</span></span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>use</span><span class=p>((</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>res</span><span class=p>.</span><span class=nx>status</span><span class=p>(</span><span class=mi>404</span><span class=p>).</span><span class=nx>send</span><span class=p>(</span><span class=s1>&#39;404 页面不存在&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>listen</span><span class=p>(</span><span class=mi>3000</span><span class=p>,</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;express服务已启动，端口3000正在监听中...&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=5><li>路由中间件</li></ol><ul><li>常用场景：页面检验登录信息</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=cm>/**
+</span></span></span><span class=line><span class=cl><span class=cm> * 针对/admin，/setting的请求，要求url携带code=521参数，如未携带显示暗号错误
+</span></span></span><span class=line><span class=cl><span class=cm> */</span>
+</span></span><span class=line><span class=cl><span class=c1>// 导入express
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>express</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;express&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 创建应用对象
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>app</span> <span class=o>=</span> <span class=nx>express</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 创建路由
+</span></span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;/home&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>res</span><span class=p>.</span><span class=nx>send</span><span class=p>(</span><span class=s1>&#39;主页&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl><span class=c1>// 创建路由中间件
+</span></span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nx>checkCodeMiddleware</span> <span class=o>=</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>,</span> <span class=nx>next</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=nx>req</span><span class=p>.</span><span class=nx>query</span><span class=p>.</span><span class=nx>code</span> <span class=o>===</span> <span class=s1>&#39;521&#39;</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>next</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>res</span><span class=p>.</span><span class=nx>send</span><span class=p>(</span><span class=s1>&#39;暗号错误&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;/setting&#39;</span><span class=p>,</span> <span class=nx>checkCodeMiddleware</span><span class=p>,</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>res</span><span class=p>.</span><span class=nx>send</span><span class=p>(</span><span class=s1>&#39;后台设置&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;/admin&#39;</span><span class=p>,</span> <span class=nx>checkCodeMiddleware</span><span class=p>,</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>res</span><span class=p>.</span><span class=nx>send</span><span class=p>(</span><span class=s1>&#39;后台首页&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// Express5 无法使用之前的app.all(&#39;*&#39;,()=&gt;{})来做404。
+</span></span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>use</span><span class=p>((</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>res</span><span class=p>.</span><span class=nx>status</span><span class=p>(</span><span class=mi>404</span><span class=p>).</span><span class=nx>send</span><span class=p>(</span><span class=s1>&#39;404 页面不存在&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>listen</span><span class=p>(</span><span class=mi>3000</span><span class=p>,</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;express服务已启动，端口3000正在监听中...&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=6><li>静态资源中间件</li></ol><ul><li>区别于“08-静态资源服务”栏目的内容，这里更加便捷了</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// 导入express
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>express</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;express&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>path</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;path&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 创建应用对象
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>app</span> <span class=o>=</span> <span class=nx>express</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 静态资源中间件设置
+</span></span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>use</span><span class=p>(</span><span class=nx>express</span><span class=p>.</span><span class=kr>static</span><span class=p>(</span><span class=nx>path</span><span class=p>.</span><span class=nx>resolve</span><span class=p>(</span><span class=nx>__dirname</span><span class=p>,</span> <span class=s1>&#39;./public&#39;</span><span class=p>)))</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 创建路由
+</span></span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;/&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>res</span><span class=p>.</span><span class=nx>send</span><span class=p>(</span><span class=s1>&#39;我才是真的表格！！！&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// Express5 无法使用之前的app.all(&#39;*&#39;,()=&gt;{})来做404。
+</span></span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>use</span><span class=p>((</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>res</span><span class=p>.</span><span class=nx>status</span><span class=p>(</span><span class=mi>404</span><span class=p>).</span><span class=nx>send</span><span class=p>(</span><span class=s1>&#39;404 页面不存在&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>listen</span><span class=p>(</span><span class=mi>3000</span><span class=p>,</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;express服务已启动，端口3000正在监听中...&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li>注意点</li></ul><blockquote><ol><li>静态资源匹配下，如果根路由没有返回，则会自动匹配public下的index.html文件</li><li>如果静态资源匹配和路由匹配相同，谁先响应匹配谁，看同步函数的代码顺序</li></ol></blockquote><h4 id=获取请求体数据>获取请求体数据</h4><ul><li>使用中间件body-parser</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-cmd data-lang=cmd><span class=line><span class=cl>npm i body-parser
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=cm>/**
+</span></span></span><span class=line><span class=cl><span class=cm> * 搭建HTTP服务
+</span></span></span><span class=line><span class=cl><span class=cm> *
+</span></span></span><span class=line><span class=cl><span class=cm> * GET  /login  登录页
+</span></span></span><span class=line><span class=cl><span class=cm> * POST /login 获取表单中的用户名和密码
+</span></span></span><span class=line><span class=cl><span class=cm> */</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>express</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;express&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>path</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;path&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=c1>// 导入中间件
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>bodyParser</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;body-parser&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=c1>// 创建实例
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>app</span> <span class=o>=</span> <span class=nx>express</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 解析JSON格式的请求体中间件
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>jsonParser</span> <span class=o>=</span> <span class=nx>bodyParser</span><span class=p>.</span><span class=nx>json</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=c1>// 解析querystring格式的请求体中间件
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>urlencodeedParser</span> <span class=o>=</span> <span class=nx>bodyParser</span><span class=p>.</span><span class=nx>urlencoded</span><span class=p>({</span> <span class=nx>extended</span><span class=o>:</span> <span class=kc>false</span> <span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;/login&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>res</span><span class=p>.</span><span class=nx>sendFile</span><span class=p>(</span><span class=nx>path</span><span class=p>.</span><span class=nx>resolve</span><span class=p>(</span><span class=nx>__dirname</span><span class=p>,</span> <span class=s1>&#39;./11-form.html&#39;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>post</span><span class=p>(</span><span class=s1>&#39;/login&#39;</span><span class=p>,</span> <span class=nx>urlencodeedParser</span><span class=p>,</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;[ req.body ] &gt;&#39;</span><span class=p>,</span> <span class=nx>req</span><span class=p>.</span><span class=nx>body</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=nx>res</span><span class=p>.</span><span class=nx>send</span><span class=p>(</span><span class=s1>&#39;获取表单响应&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>listen</span><span class=p>(</span><span class=mi>3000</span><span class=p>,</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;在监听3000端口&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span></code></pre></td></tr></table></div></div><h4 id=防盗链>防盗链</h4><ul><li>防止外部网站盗用我们的网站资源</li><li>如请求头的referer字段，显示了请求域名是多少，判断为外来域名，因此图片不返回响应</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>const</span> <span class=nx>express</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;express&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>path</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;path&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>app</span> <span class=o>=</span> <span class=nx>express</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 防盗链中间件
+</span></span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>use</span><span class=p>((</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>,</span> <span class=nx>next</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 检测请求头中的referer 是否为127.0.0.1
+</span></span></span><span class=line><span class=cl>    <span class=kd>let</span> <span class=nx>referer</span> <span class=o>=</span> <span class=nx>req</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;referer&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;[ referer ] &gt;&#39;</span><span class=p>,</span> <span class=nx>referer</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=nx>referer</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=kr>const</span> <span class=nx>url</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>URL</span><span class=p>(</span><span class=nx>referer</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=kd>let</span> <span class=nx>hostname</span> <span class=o>=</span> <span class=nx>url</span><span class=p>.</span><span class=nx>hostname</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=p>(</span><span class=nx>hostname</span> <span class=o>!==</span> <span class=s1>&#39;127.0.0.1&#39;</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=nx>res</span><span class=p>.</span><span class=nx>status</span><span class=p>(</span><span class=mi>404</span><span class=p>).</span><span class=nx>send</span><span class=p>(</span><span class=s1>&#39;&lt;h1&gt;404 NOT FOUND&lt;/h1&gt;&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>            <span class=k>return</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=nx>next</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>use</span><span class=p>(</span><span class=nx>express</span><span class=p>.</span><span class=kr>static</span><span class=p>(</span><span class=nx>path</span><span class=p>.</span><span class=nx>resolve</span><span class=p>(</span><span class=nx>__dirname</span><span class=p>,</span> <span class=s1>&#39;./public&#39;</span><span class=p>)))</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;/&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>res</span><span class=p>.</span><span class=nx>send</span><span class=p>(</span><span class=s1>&#39;Hello World!&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>listen</span><span class=p>(</span><span class=mi>3000</span><span class=p>,</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;Server is running on port 3000&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span></code></pre></td></tr></table></div></div><blockquote><p>此处防盗链防止了127.0.0.1以外的域名访问静态资源，如果想只防盗图片的访问的话，则需要再做一层校验</p></blockquote><h4 id=路由模块化-开发范式>路由模块化 *（开发范式）</h4><ul><li>路由的模块化更容易维护，如中间件和相同类似的路由维护。</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// ./routes/homeRouter.js
+</span></span></span><span class=line><span class=cl><span class=c1>// 导入express
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>express</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;express&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 创建路由对象
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>router</span> <span class=o>=</span> <span class=nx>express</span><span class=p>.</span><span class=nx>Router</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 创建路由规则
+</span></span></span><span class=line><span class=cl><span class=nx>router</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;/home&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>res</span><span class=p>.</span><span class=nx>send</span><span class=p>(</span><span class=s1>&#39;主页&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>router</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;/home/search&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>res</span><span class=p>.</span><span class=nx>send</span><span class=p>(</span><span class=s1>&#39;路由搜索&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 暴露router
+</span></span></span><span class=line><span class=cl><span class=nx>module</span><span class=p>.</span><span class=nx>exports</span> <span class=o>=</span> <span class=nx>router</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=cm>/**
+</span></span></span><span class=line><span class=cl><span class=cm> * 针对/admin，/setting的请求，要求url携带code=521参数，如未携带显示暗号错误
+</span></span></span><span class=line><span class=cl><span class=cm> */</span>
+</span></span><span class=line><span class=cl><span class=c1>// 导入express
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>express</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;express&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>homeRouter</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;./routes/homeRouter&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>adminRouter</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;./routes/adminRouter&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=c1>// 创建应用对象
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>app</span> <span class=o>=</span> <span class=nx>express</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=c1>// 路由导入
+</span></span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>use</span><span class=p>(</span><span class=nx>homeRouter</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>use</span><span class=p>(</span><span class=nx>adminRouter</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>listen</span><span class=p>(</span><span class=mi>3000</span><span class=p>,</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;express服务已启动，端口3000正在监听中...&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li>路由导入模板时可增加路由前缀<code>app.use('home',homeRouter)</code>，此时homeRouter.js的文件可变化为</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// ./routes/homeRouter.js
+</span></span></span><span class=line><span class=cl><span class=c1>// 导入express
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>express</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;express&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 创建路由对象
+</span></span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>router</span> <span class=o>=</span> <span class=nx>express</span><span class=p>.</span><span class=nx>Router</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 创建路由规则
+</span></span></span><span class=line><span class=cl><span class=nx>router</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;/&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>res</span><span class=p>.</span><span class=nx>send</span><span class=p>(</span><span class=s1>&#39;主页&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>router</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;/search&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>res</span><span class=p>.</span><span class=nx>send</span><span class=p>(</span><span class=s1>&#39;路由搜索&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 暴露router
+</span></span></span><span class=line><span class=cl><span class=nx>module</span><span class=p>.</span><span class=nx>exports</span> <span class=o>=</span> <span class=nx>router</span>
+</span></span></code></pre></td></tr></table></div></div><h4 id=ejs模板引擎了解即可>ejs模板引擎(了解即可)</h4><blockquote><p>EJS：嵌入式JS模板引擎，Express服务端渲染SSR，类比Java Thymeleaf / Python Jinja2 学习目标：看懂基础语法，理解SSR思想，新项目基本不用</p></blockquote><ol><li>安装</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>npm i express ejs
+</span></span></code></pre></td></tr></table></div></div><ol start=2><li>Express配置</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-gdscript3 data-lang=gdscript3><span class=line><span class=cl><span class=k>const</span> <span class=n>express</span> <span class=o>=</span> <span class=n>require</span><span class=p>(</span><span class=s1>&#39;express&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=k>const</span> <span class=n>app</span> <span class=o>=</span> <span class=n>express</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=n>app</span><span class=o>.</span><span class=n>set</span><span class=p>(</span><span class=s1>&#39;view engine&#39;</span><span class=p>,</span><span class=s1>&#39;ejs&#39;</span><span class=p>)</span> <span class=o>//</span> <span class=err>设置模板引擎</span>
+</span></span><span class=line><span class=cl><span class=n>app</span><span class=o>.</span><span class=n>set</span><span class=p>(</span><span class=s1>&#39;views&#39;</span><span class=p>,</span><span class=s1>&#39;./views&#39;</span><span class=p>)</span> <span class=o>//</span> <span class=err>模板存放目录，默认</span><span class=n>views</span>
+</span></span><span class=line><span class=cl><span class=n>app</span><span class=o>.</span><span class=n>listen</span><span class=p>(</span><span class=mi>3000</span><span class=p>,()</span><span class=o>=&gt;</span><span class=n>console</span><span class=o>.</span><span class=n>log</span><span class=p>(</span><span class=s1>&#39;服务启动&#39;</span><span class=p>))</span>
+</span></span></code></pre></td></tr></table></div></div><p>目录：<code>项目/views/xxx.ejs</code></p><ol start=3><li>路由渲染</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>app.get(&#39;/&#39;,(req,res)=&gt;{
+</span></span><span class=line><span class=cl>  // res.render(模板名, 传给模板的数据)
+</span></span><span class=line><span class=cl>  res.render(&#39;index&#39;,{name:&#39;小明&#39;,arr:[&#39;A&#39;,&#39;B&#39;]})
+</span></span><span class=line><span class=cl>})
+</span></span></code></pre></td></tr></table></div></div><ol start=4><li>EJS标记</li></ol><div class=table-wrapper><table><thead><tr><th>标记</th><th>作用</th></tr></thead><tbody><tr><td><code>&lt;% js代码 %></code></td><td>执行JS，不输出（if/for）</td></tr><tr><td><code>&lt;%= 变量 %></code></td><td>输出变量，自动转义HTML，防XSS ✅推荐</td></tr><tr><td><code>&lt;%- 变量 %></code></td><td>原样输出HTML标签，不安全慎用</td></tr><tr><td><code>&lt;%- include('part/header') %></code></td><td>引入公共模板片段</td></tr></tbody></table></div><ol start=5><li>模板示例 views/index.ejs</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>&lt;p&gt;名字：&lt;%= name %&gt;&lt;/p&gt;
+</span></span><span class=line><span class=cl>&lt;% if(name){ %&gt;
+</span></span><span class=line><span class=cl>  &lt;p&gt;有用户名&lt;/p&gt;
+</span></span><span class=line><span class=cl>&lt;% } %&gt;
+</span></span><span class=line><span class=cl>&lt;ul&gt;
+</span></span><span class=line><span class=cl>&lt;% for(let item of arr){ %&gt;
+</span></span><span class=line><span class=cl>  &lt;li&gt;&lt;%= item %&gt;&lt;/li&gt;
+</span></span><span class=line><span class=cl>&lt;% } %&gt;
+</span></span><span class=line><span class=cl>&lt;/ul&gt;
+</span></span></code></pre></td></tr></table></div></div><ol start=6><li>要点总结</li></ol><ul><li>模板JS运行在<strong>服务器</strong>，不是浏览器，即SSR</li><li><code>res.render</code> 自动读取ejs，拼接完整HTML返回浏览器</li><li>适用：老项目；现代开发优先前后端分离，SSR用Next/Nuxt</li><li><code>&lt;%- include()</code> 复用页面头部底部</li></ul><ol start=7><li>我发现res.sendFile和res.render都可以响应html文件，区别就是render属于服务端渲染，后续可加参数进行模板传值，而sendFile是读取磁盘上的静态资源文件</li></ol><h4 id=express-generator工具快速搭建express框架项目>express-generator工具，快速搭建express框架项目</h4><ul><li>不需要再重复一点一点敲，直接在脚手架基础上开发即可</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-cmd data-lang=cmd><span class=line><span class=cl>//方式1.
+</span></span><span class=line><span class=cl>npx express-generator
+</span></span><span class=line><span class=cl>//方式2.
+</span></span><span class=line><span class=cl>npm install -g express-generator
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>//创建方式
+</span></span><span class=line><span class=cl>express -e 15-generator   //即可创建出该命名项目，-e表示支持ejs
+</span></span></code></pre></td></tr></table></div></div><h4 id=处理文件上传>处理文件上传</h4><ul><li><code>npm i formidable</code>,这里使用的是<code>npm install formidable@2</code>版本，目前是3</li></ul><p>基于express-geanrator搭建框架，在index.js做文件上传路由操作</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>var</span> <span class=nx>express</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;express&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kd>var</span> <span class=nx>router</span> <span class=o>=</span> <span class=nx>express</span><span class=p>.</span><span class=nx>Router</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>formidable</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;formidable&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=cm>/* GET home page. */</span>
+</span></span><span class=line><span class=cl><span class=nx>router</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;/&#39;</span><span class=p>,</span> <span class=kd>function</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>,</span> <span class=nx>next</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>res</span><span class=p>.</span><span class=nx>render</span><span class=p>(</span><span class=s1>&#39;index&#39;</span><span class=p>,</span> <span class=p>{</span> <span class=nx>title</span><span class=o>:</span> <span class=s1>&#39;Express&#39;</span> <span class=p>})</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>//显示网页的表单
+</span></span></span><span class=line><span class=cl><span class=nx>router</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;/portrait&#39;</span><span class=p>,</span> <span class=kd>function</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>res</span><span class=p>.</span><span class=nx>render</span><span class=p>(</span><span class=s1>&#39;portrait&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl><span class=nx>router</span><span class=p>.</span><span class=nx>post</span><span class=p>(</span><span class=s1>&#39;/portrait&#39;</span><span class=p>,</span> <span class=kd>function</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>//创建form对象
+</span></span></span><span class=line><span class=cl>    <span class=kr>const</span> <span class=nx>form</span> <span class=o>=</span> <span class=nx>formidable</span><span class=p>({</span>
+</span></span><span class=line><span class=cl>        <span class=nx>multiples</span><span class=o>:</span> <span class=kc>true</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>        <span class=c1>// 设置上传文件的保存目录
+</span></span></span><span class=line><span class=cl>        <span class=nx>uploadDir</span><span class=o>:</span> <span class=nx>__dirname</span> <span class=o>+</span> <span class=s1>&#39;/../public/images&#39;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>        <span class=c1>// 保存文件后缀
+</span></span></span><span class=line><span class=cl>        <span class=nx>keepExtensions</span><span class=o>:</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>    <span class=p>})</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 解析请求报文
+</span></span></span><span class=line><span class=cl>    <span class=nx>form</span><span class=p>.</span><span class=nx>parse</span><span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=p>(</span><span class=nx>err</span><span class=p>,</span> <span class=nx>fields</span><span class=p>,</span> <span class=nx>files</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=p>(</span><span class=nx>err</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=nx>next</span><span class=p>(</span><span class=nx>err</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>            <span class=k>return</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=c1>// console.log(&#39;[ fields ] &gt;&#39;, fields) // 保存非文件数据的字段   {username:&#39;abc&#39;}
+</span></span></span><span class=line><span class=cl>        <span class=c1>// console.log(&#39;[ files ] &gt;&#39;, files) // 保存文件数据的字段
+</span></span></span><span class=line><span class=cl>        <span class=c1>// 服务器保存该图片的访问url
+</span></span></span><span class=line><span class=cl>        <span class=c1>// /images/bzu57fhd4mc7t2x16kx294qz5.jpg
+</span></span></span><span class=line><span class=cl>        <span class=kd>let</span> <span class=nx>url</span> <span class=o>=</span> <span class=s1>&#39;/images/&#39;</span> <span class=o>+</span> <span class=nx>files</span><span class=p>.</span><span class=nx>portrait</span><span class=p>.</span><span class=nx>newFilename</span> <span class=c1>// 将来将此数据保存在数据库中
+</span></span></span><span class=line><span class=cl>        <span class=nx>res</span><span class=p>.</span><span class=nx>send</span><span class=p>(</span><span class=nx>url</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>})</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>module</span><span class=p>.</span><span class=nx>exports</span> <span class=o>=</span> <span class=nx>router</span>
+</span></span></code></pre></td></tr></table></div></div><p>对应的portrait.ejs</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>// 文件上传
+</span></span><span class=line><span class=cl><span class=cp>&lt;!DOCTYPE html&gt;</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>html</span> <span class=na>lang</span><span class=o>=</span><span class=s>&#34;en&#34;</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>head</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=p>&lt;</span><span class=nt>meta</span> <span class=na>charset</span><span class=o>=</span><span class=s>&#34;UTF-8&#34;</span> <span class=p>/&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=p>&lt;</span><span class=nt>meta</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;viewport&#34;</span> <span class=na>content</span><span class=o>=</span><span class=s>&#34;width=device-width, initial-scale=1.0&#34;</span> <span class=p>/&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=p>&lt;</span><span class=nt>title</span><span class=p>&gt;</span>文件上传<span class=p>&lt;/</span><span class=nt>title</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;/</span><span class=nt>head</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>body</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=c>&lt;!-- enctype=&#34;multipart/form-data&#34; 文件上传的必须属性 --&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=p>&lt;</span><span class=nt>form</span> <span class=na>action</span><span class=o>=</span><span class=s>&#34;/portrait&#34;</span> <span class=na>method</span><span class=o>=</span><span class=s>&#34;post&#34;</span> <span class=na>enctype</span><span class=o>=</span><span class=s>&#34;multipart/form-data&#34;</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>            用户名
+</span></span><span class=line><span class=cl>            <span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;text&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;username&#34;</span> <span class=p>/&gt;</span>
+</span></span><span class=line><span class=cl>            头像
+</span></span><span class=line><span class=cl>            <span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;file&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;portrait&#34;</span> <span class=p>/&gt;</span>
+</span></span><span class=line><span class=cl>            <span class=p>&lt;</span><span class=nt>button</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;submit&#34;</span><span class=p>&gt;</span>上传<span class=p>&lt;/</span><span class=nt>button</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=p>&lt;/</span><span class=nt>form</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;/</span><span class=nt>body</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>html</span><span class=p>&gt;</span>
+</span></span></code></pre></td></tr></table></div></div><h4 id=唯一id标识npm包>唯一id标识npm包</h4><ul><li>uuid</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>const</span> <span class=p>{</span> <span class=nx>v4</span><span class=o>:</span> <span class=nx>uuidv4</span> <span class=p>}</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;uuid&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>id</span> <span class=o>=</span> <span class=nx>uuidv4</span><span class=p>()</span> <span class=c1>// 示例：b3a2f078-901c-4221-b978-27218ac34123
+</span></span></span></code></pre></td></tr></table></div></div><ul><li>nanoid</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>const</span> <span class=p>{</span> <span class=nx>nanoid</span> <span class=p>}</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;nanoid&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>id</span> <span class=o>=</span> <span class=nx>nanoid</span><span class=p>(</span><span class=mi>10</span><span class=p>)</span> <span class=c1>// 10位短字符串
+</span></span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/node.js/>Node.js</a>
+<a href=/tags/javascript/>JavaScript</a>
 <a href=/tags/buffer/>Buffer</a>
 <a href=/tags/fs/>Fs</a>
 <a href=/tags/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/>文件系统</a>
 <a href=/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/>学习笔记</a></section><section class=article-copyright><svg class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
-<span>404_@林达所作</span></section></footer></article><link rel=preconnect href=https://giscus.app crossorigin><section class=giscus-shell aria-label=文章评论 aria-busy=true><div class=giscus-loading data-giscus-loading><span class=giscus-loading__icon aria-hidden=true><svg viewBox="0 0 24 24" focusable="false"><path d="M5 6.5A2.5 2.5.0 017.5 4h9A2.5 2.5.0 0119 6.5v6A2.5 2.5.0 0116.5 15H12l-4.5 4v-4.12A2.5 2.5.0 015 12.5z"/><path d="M8.5 8.5h7m-7 3h4"/></svg>
+<span>404_@林达所作</span></section><section class=article-lastmod><svg class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<span>最后更新于 Oct 06, 2026 00:00 UTC</span></section></footer></article><link rel=preconnect href=https://giscus.app crossorigin><section class=giscus-shell aria-label=文章评论 aria-busy=true><div class=giscus-loading data-giscus-loading><span class=giscus-loading__icon aria-hidden=true><svg viewBox="0 0 24 24" focusable="false"><path d="M5 6.5A2.5 2.5.0 017.5 4h9A2.5 2.5.0 0119 6.5v6A2.5 2.5.0 0116.5 15H12l-4.5 4v-4.12A2.5 2.5.0 015 12.5z"/><path d="M8.5 8.5h7m-7 3h4"/></svg>
 </span><span class=giscus-loading__copy><strong>评论区</strong>
 <small data-giscus-loading-text>正在连接 GitHub Discussions…</small></span></div><div class=giscus-sync-status data-giscus-sync-status role=status aria-live=polite aria-hidden=true><span class=giscus-sync-status__spinner aria-hidden=true></span>
 <span data-giscus-sync-text>正在同步 GitHub…</span></div><div class=giscus></div></section><script src=https://giscus.app/client.js data-repo=linsk27/linsk27.github.io data-repo-id=R_kgDOOD0tQw data-category=Announcements data-category-id=DIC_kwDOOD0tQ84DGF8H data-mapping=pathname data-strict=0 data-reactions-enabled=1 data-emit-metadata=1 data-input-position=bottom data-theme=light data-lang=zh-CN data-loading=eager crossorigin=anonymous async></script><script>(function(){const e=document.querySelector(".giscus-shell");if(!e)return;const t=e.querySelector("[data-giscus-loading-text]");let n;const s=new MutationObserver(()=>{o()});function o(){if(!e.querySelector("iframe.giscus-frame"))return;e.classList.add("is-loaded"),e.setAttribute("aria-busy","false"),window.clearTimeout(n),s.disconnect()}s.observe(e,{childList:!0,subtree:!0}),o(),n=window.setTimeout(()=>{if(e.querySelector("iframe.giscus-frame")||!t)return;t.textContent="加载时间有点长，评论很快就会出现…"},12e3)})(),function(){const t=document.querySelector(".giscus-shell");if(!t)return;const e=t.querySelector("[data-giscus-sync-status]"),o=t.querySelector("[data-giscus-sync-text]");let i,n;function a(){if(!e)return;e.classList.remove("is-visible"),e.setAttribute("aria-hidden","true")}function s(t,n,s){if(!e||!o)return;o.textContent=t,e.dataset.state=n||"loading",e.classList.add("is-visible"),e.setAttribute("aria-hidden","false"),window.clearTimeout(i),s&&(i=window.setTimeout(a,s))}window.addEventListener("message",e=>{if(e.origin!=="https://giscus.app")return;if(!e.data||!e.data.giscus)return;const t=e.data.giscus;if(t.error){s("同步失败，请稍后重试","error",5e3);return}if(!t.discussion)return;const o=t.discussion,i=[o.totalCommentCount,o.totalReplyCount,o.reactionCount].join(":");n&&i!==n&&s("已同步","success",1100),n=i}),window.addEventListener("blur",()=>{const e=document.querySelector("iframe.giscus-frame");e&&document.activeElement===e&&s("正在同步 GitHub…","loading",7e3)})}();function setGiscusTheme(e){const t=document.querySelector("iframe.giscus-frame");t&&t.contentWindow.postMessage({giscus:{setConfig:{theme:e}}},"https://giscus.app")}(function(){addEventListener("message",t=>{if(t.origin!=="https://giscus.app"||!t.data||!t.data.giscus)return;e()}),window.addEventListener("onColorSchemeChange",e);function e(){setGiscusTheme(document.documentElement.dataset.scheme==="light"?"light":"dark_dimmed")}})()</script><style>.giscus-shell{position:relative;min-height:154px;margin-top:var(--section-separation)}.giscus-sync-status{position:absolute;z-index:2;top:-2rem;right:0;display:inline-flex;align-items:center;gap:.42rem;padding:.28rem .55rem;border:1px solid var(--card-separator-color);border-radius:999px;background:var(--card-background);color:var(--card-text-color-tertiary);box-shadow:var(--shadow-l1);font-size:.7rem;opacity:0;pointer-events:none;transform:translateY(3px);transition:opacity .2s ease,transform .2s ease}.giscus-sync-status.is-visible{opacity:1;transform:translateY(0)}.giscus-sync-status[data-state=success]{color:#2f7d55}.giscus-sync-status[data-state=error]{color:#b34b4b}.giscus-sync-status__spinner{width:.72rem;height:.72rem;border:1.5px solid;border-right-color:transparent;border-radius:50%;animation:giscus-sync-spin .8s linear infinite}.giscus-sync-status[data-state=success] .giscus-sync-status__spinner,.giscus-sync-status[data-state=error] .giscus-sync-status__spinner{display:none}.giscus-loading{position:relative;display:flex;align-items:center;gap:.85rem;min-height:118px;overflow:hidden;padding:var(--card-padding);border:1px solid var(--card-separator-color);border-radius:var(--card-border-radius);background:var(--card-background);box-shadow:var(--shadow-l1);color:var(--card-text-color-secondary)}.giscus-loading::after{position:absolute;inset:0;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.42) 50%,transparent 65%);content:"";transform:translateX(-100%);animation:giscus-loading-shimmer 1.8s ease-in-out infinite;pointer-events:none}.giscus-loading__icon{display:grid;flex:0 0 2.2rem;width:2.2rem;height:2.2rem;place-items:center;border-radius:11px;background:rgba(27,54,93,9%);color:var(--accent-color)}.giscus-loading__icon svg{width:1.2rem;height:1.2rem;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.65}.giscus-loading__copy{display:grid;gap:.28rem}.giscus-loading__copy strong{color:var(--card-text-color-main);font-size:1rem}.giscus-loading__copy small{color:var(--card-text-color-tertiary);font-size:.78rem}.giscus{opacity:0;transition:opacity .24s ease}.giscus-shell.is-loaded .giscus-loading{display:none}.giscus-shell.is-loaded .giscus{opacity:1}@keyframes giscus-loading-shimmer{to{transform:translateX(100%)}}@keyframes giscus-sync-spin{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){.giscus-loading::after{animation:none}.giscus{transition:none}.giscus-sync-status{transition:none}.giscus-sync-status__spinner{animation:none}}</style><footer class=site-footer><section class=copyright>&copy;
