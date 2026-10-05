@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Fs on 404_@林达</title><link>https://linsk27.github.io/tags/fs/</link><description>Recent content in Fs on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Tue, 06 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://linsk27.github.io/tags/fs/index.xml" rel="self" type="application/rss+xml"/><item><title>Node.js 全栈学习笔记（持续更新）</title><link>https://linsk27.github.io/p/nodejs-fullstack-notes/</link><pubDate>Wed, 23 Sep 2026 00:00:00 +0000</pubDate><guid>https://linsk27.github.io/p/nodejs-fullstack-notes/</guid><description>&lt;p&gt;这是一篇还在更新的 Node.js 学习笔记，记录我学到的知识点和练习代码。目前从 Buffer、文件读写和 HTTP 学到了 Express，后面会边学边补。&lt;/p&gt;
-&lt;h3 id="buffer缓冲器"&gt;Buffer（缓冲器）
-&lt;/h3&gt;&lt;h4 id="概念"&gt;概念
-&lt;/h4&gt;&lt;ul&gt;
+&lt;h2 id="buffer缓冲器"&gt;Buffer（缓冲器）
+&lt;/h2&gt;&lt;h3 id="概念"&gt;概念
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;一个类似于Array的对象，即表示一段固定长度的内存空间，用于处理二进制数据&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id="特点"&gt;特点
-&lt;/h4&gt;&lt;ul&gt;
+&lt;h3 id="特点"&gt;特点
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;Buffer大小固定且无法调整&lt;/li&gt;
 &lt;li&gt;性能较好，直接对计算机内存进行操作&lt;/li&gt;
 &lt;li&gt;每个元素的大小为1字节（byte），即8个bit&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id="创建方式"&gt;创建方式
-&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;h3 id="创建方式"&gt;创建方式
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
 &lt;/span&gt;&lt;span class="lnt"&gt; 2
@@ -47,8 +47,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// Buffer底层存储的是字节（本质二进制数据）。
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id="buffer-的元素转换"&gt;buffer 的元素转换
-&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;/div&gt;&lt;h3 id="buffer-的元素转换"&gt;buffer 的元素转换
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;span class="lnt"&gt;2
@@ -68,8 +68,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;buf&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;toString&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="c1"&gt;//01101000
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id="注意"&gt;注意
-&lt;/h4&gt;&lt;ul&gt;
+&lt;/div&gt;&lt;h3 id="注意"&gt;注意
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;溢出&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;因为8位数二进制最多为255&lt;/p&gt;
@@ -87,16 +87,16 @@
 &lt;li&gt;中文&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;一个中文utf-8中占3个字节&lt;/p&gt;
-&lt;h3 id="fs模块-"&gt;fs模块 *
-&lt;/h3&gt;&lt;h4 id="概念与使用"&gt;概念与使用
-&lt;/h4&gt;&lt;p&gt;fs模块可以实现与硬盘的交互，例如&lt;/p&gt;
+&lt;h2 id="fs模块-"&gt;fs模块 *
+&lt;/h2&gt;&lt;h3 id="概念与使用"&gt;概念与使用
+&lt;/h3&gt;&lt;p&gt;fs模块可以实现与硬盘的交互，例如&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;文件的创建、删除、重命名、移动&lt;/li&gt;
 &lt;li&gt;文件内容的写入读取&lt;/li&gt;
 &lt;li&gt;文件夹的相关操作&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id="文件写入"&gt;文件写入
-&lt;/h4&gt;&lt;blockquote&gt;
+&lt;h3 id="文件写入"&gt;文件写入
+&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;换行得用\r\n&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ol&gt;
@@ -247,8 +247,8 @@
 &lt;blockquote&gt;
 &lt;p&gt;需持久化保存数据的时候，就应该想到文件写入&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id="文件读取"&gt;文件读取
-&lt;/h4&gt;&lt;ol&gt;
+&lt;h3 id="文件读取"&gt;文件读取
+&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;异步和同步读取&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
@@ -333,8 +333,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;})&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id="文件复制案例"&gt;文件复制案例*
-&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;/div&gt;&lt;h3 id="文件复制案例"&gt;文件复制案例*
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
 &lt;/span&gt;&lt;span class="lnt"&gt; 2
@@ -397,8 +397,8 @@
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;方式2性能更好，比如MP4资源为78MB，则方式1内存资源占用78M，而理想状态方式2只占64KB，为什么理想，是因为读取速度比写入速度快，因此会大于64KB，但是也优于方式1&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id="文件的重命名和移动"&gt;文件的重命名和移动
-&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;h3 id="文件的重命名和移动"&gt;文件的重命名和移动
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
 &lt;/span&gt;&lt;span class="lnt"&gt; 2
@@ -440,8 +440,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;})&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id="文件删除"&gt;文件删除
-&lt;/h4&gt;&lt;blockquote&gt;
+&lt;/div&gt;&lt;h3 id="文件删除"&gt;文件删除
+&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;一样有同步函数，较简单&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
@@ -486,8 +486,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;})&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id="文件夹操作"&gt;文件夹操作
-&lt;/h4&gt;&lt;p&gt;参数1path路径，参数2options选型配置（可选），回调函数&lt;/p&gt;
+&lt;/div&gt;&lt;h3 id="文件夹操作"&gt;文件夹操作
+&lt;/h3&gt;&lt;p&gt;参数1path路径，参数2options选型配置（可选），回调函数&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;创建文件&lt;/li&gt;
 &lt;/ol&gt;
@@ -637,8 +637,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;})&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id="查看资源信息"&gt;查看资源信息
-&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;/div&gt;&lt;h3 id="查看资源信息"&gt;查看资源信息
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
 &lt;/span&gt;&lt;span class="lnt"&gt; 2
@@ -674,8 +674,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 常用信息size，最后访问时间atime，文件创建时间birthtimeMs，最后修改时间mtime，最后一次修改文件状态的时间ctime
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id="fs路径"&gt;fs路径
-&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;/div&gt;&lt;h3 id="fs路径"&gt;fs路径
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
 &lt;/span&gt;&lt;span class="lnt"&gt; 2
@@ -709,8 +709,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nx"&gt;fs&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;writeFileSync&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;path&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;love&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id="批量重命名练习"&gt;批量重命名练习
-&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;/div&gt;&lt;h3 id="批量重命名练习"&gt;批量重命名练习
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
 &lt;/span&gt;&lt;span class="lnt"&gt; 2
@@ -814,8 +814,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id="path模块"&gt;path模块
-&lt;/h4&gt;&lt;ol&gt;
+&lt;/div&gt;&lt;h3 id="path模块"&gt;path模块
+&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;path.resolve 解决路径问题的规范（常用）&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
@@ -926,13 +926,13 @@
 &lt;blockquote&gt;
 &lt;p&gt;3和4都是字符串处理函数，不经过磁盘扫描&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id="注意-1"&gt;注意
-&lt;/h4&gt;&lt;ul&gt;
+&lt;h3 id="注意-1"&gt;注意
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;同步函数没有回调参数,如需捕获错误需通过try{}catch{}&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="http模块"&gt;HTTP模块
-&lt;/h3&gt;&lt;h4 id="获取请求行和请求头信息"&gt;获取请求行和请求头信息
-&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;h2 id="http模块"&gt;HTTP模块
+&lt;/h2&gt;&lt;h3 id="获取请求行和请求头信息"&gt;获取请求行和请求头信息
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
 &lt;/span&gt;&lt;span class="lnt"&gt; 2
@@ -974,8 +974,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;})&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id="获取请求体信息"&gt;获取请求体信息
-&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;/div&gt;&lt;h3 id="获取请求体信息"&gt;获取请求体信息
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
 &lt;/span&gt;&lt;span class="lnt"&gt; 2
@@ -1073,8 +1073,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;})&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id="获取url的请求参数和查询字符串"&gt;获取url的请求参数和查询字符串
-&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;/div&gt;&lt;h3 id="获取url的请求参数和查询字符串"&gt;获取url的请求参数和查询字符串
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
 &lt;/span&gt;&lt;span class="lnt"&gt; 2
@@ -1100,8 +1100,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;})&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id="http请求练习"&gt;http请求练习
-&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;/div&gt;&lt;h3 id="http请求练习"&gt;http请求练习
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
 &lt;/span&gt;&lt;span class="lnt"&gt; 2
@@ -1153,8 +1153,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;})&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id="设置http响应报文"&gt;设置http响应报文
-&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;/div&gt;&lt;h3 id="设置http响应报文"&gt;设置http响应报文
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
 &lt;/span&gt;&lt;span class="lnt"&gt; 2
@@ -1216,8 +1216,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;})&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id="响应报文练习"&gt;响应报文练习
-&lt;/h4&gt;&lt;p&gt;实现四行三列的表格，点击项对应变色&lt;/p&gt;
+&lt;/div&gt;&lt;h3 id="响应报文练习"&gt;响应报文练习
+&lt;/h3&gt;&lt;p&gt;实现四行三列的表格，点击项对应变色&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -1374,8 +1374,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;})&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id="响应练习扩展"&gt;响应练习扩展
-&lt;/h4&gt;&lt;p&gt;如果进行目录及js，css，html拆分，考虑浏览器渲染原理以及响应体的资源请求路由没有判断，一直返回html文件，导致js和css无法导入到html（可从浏览器控制台查看网络接口的访问），因此需要优化&lt;/p&gt;
+&lt;/div&gt;&lt;h3 id="响应练习扩展"&gt;响应练习扩展
+&lt;/h3&gt;&lt;p&gt;如果进行目录及js，css，html拆分，考虑浏览器渲染原理以及响应体的资源请求路由没有判断，一直返回html文件，导致js和css无法导入到html（可从浏览器控制台查看网络接口的访问），因此需要优化&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -1433,8 +1433,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;当文件有很多的时候，就要再次优化，见后文&lt;/p&gt;
-&lt;h4 id="静态资源服务"&gt;静态资源服务
-&lt;/h4&gt;&lt;ol&gt;
+&lt;h3 id="静态资源服务"&gt;静态资源服务
+&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;静态资源的封装导入
 目录结构：&lt;/li&gt;
 &lt;/ol&gt;
@@ -1569,9 +1569,9 @@ data-flex-grow="771"
 data-flex-basis="1851px"
 &gt;&lt;/p&gt;
 &lt;p&gt;通过读取err打印出来的code类型去进行状态码反馈，如404、403等，详情可见官网的error的错误类型&lt;/p&gt;
-&lt;h3 id="commonjs规范模块化"&gt;CommonJS规范模块化
-&lt;/h3&gt;&lt;h4 id="暴露数据及文件导入"&gt;暴露数据及文件导入
-&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;h2 id="commonjs规范模块化"&gt;CommonJS规范模块化
+&lt;/h2&gt;&lt;h3 id="暴露数据及文件导入"&gt;暴露数据及文件导入
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
 &lt;/span&gt;&lt;span class="lnt"&gt; 2
@@ -1645,8 +1645,8 @@ data-flex-basis="1851px"
 &lt;li&gt;路径推荐使用相对路径&amp;rsquo;./&amp;rsquo;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/blockquote&gt;
-&lt;h4 id="导入文件夹"&gt;导入文件夹
-&lt;/h4&gt;&lt;ol&gt;
+&lt;h3 id="导入文件夹"&gt;导入文件夹
+&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;会检查是否有package.json文件是否存在，并且检查其main属性的指向文件。如果存在则导入，不存在则报错。
 如package.json文件不存在，则默认检查文件夹下的index.js或者index.json文件，没有则报错&lt;/li&gt;
 &lt;/ol&gt;
@@ -1662,8 +1662,8 @@ data-flex-basis="1851px"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id="require的导入原理"&gt;require的导入原理
-&lt;/h4&gt;&lt;ol&gt;
+&lt;/div&gt;&lt;h3 id="require的导入原理"&gt;require的导入原理
+&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;将相对路径转为绝对路径，定位目标文件&lt;/li&gt;
 &lt;li&gt;缓存检测&lt;/li&gt;
 &lt;li&gt;读取文件代码&lt;/li&gt;
@@ -1671,13 +1671,13 @@ data-flex-basis="1851px"
 &lt;li&gt;缓存结果&lt;/li&gt;
 &lt;li&gt;返回module.exports的值&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id="包管理工具"&gt;包管理工具
-&lt;/h3&gt;&lt;h3 id="express框架"&gt;express框架
-&lt;/h3&gt;&lt;blockquote&gt;
+&lt;h2 id="包管理工具"&gt;包管理工具
+&lt;/h2&gt;&lt;h2 id="express框架"&gt;express框架
+&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;创建express项目：npm init =&amp;gt; npm i express&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id="路由"&gt;路由
-&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;h3 id="路由"&gt;路由
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
 &lt;/span&gt;&lt;span class="lnt"&gt; 2
@@ -1737,8 +1737,8 @@ data-flex-basis="1851px"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;})&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id="获取请求参数"&gt;获取请求参数
-&lt;/h4&gt;&lt;blockquote&gt;
+&lt;/div&gt;&lt;h3 id="获取请求参数"&gt;获取请求参数
+&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;兼容原生，大同小异&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
@@ -1837,8 +1837,8 @@ data-flex-basis="1851px"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="nx"&gt;req&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;host&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mf"&gt;127.0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;3000&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id="获取路由参数-params"&gt;获取路由参数 （params）
-&lt;/h4&gt;&lt;p&gt;示例：京东商城的商品访问，路由路径皆为各个商品的id.html，因此通过动态路由匹配，获取对应路由信息，从而匹配对应的商品资源&lt;/p&gt;
+&lt;/div&gt;&lt;h3 id="获取路由参数-params"&gt;获取路由参数 （params）
+&lt;/h3&gt;&lt;p&gt;示例：京东商城的商品访问，路由路径皆为各个商品的id.html，因此通过动态路由匹配，获取对应路由信息，从而匹配对应的商品资源&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -1893,8 +1893,8 @@ data-flex-basis="1851px"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;})&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id="路由参数练习"&gt;路由参数练习
-&lt;/h4&gt;&lt;blockquote&gt;
+&lt;/div&gt;&lt;h3 id="路由参数练习"&gt;路由参数练习
+&lt;/h3&gt;&lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;require('./xxx.json')&lt;/code&gt;：&lt;strong&gt;一次性加载、不会实时更新&lt;/strong&gt;，适合项目固定配置（服务启动后json不再改动）。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;fs读取 + JSON.parse&lt;/code&gt;：&lt;strong&gt;每次读取都拿最新文件内容&lt;/strong&gt;，适合运行中会修改的json数据。&lt;/li&gt;
@@ -1998,8 +1998,8 @@ data-flex-basis="1851px"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;})&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id="设置响应"&gt;设置响应
-&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;/div&gt;&lt;h3 id="设置响应"&gt;设置响应
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
 &lt;/span&gt;&lt;span class="lnt"&gt; 2
@@ -2057,8 +2057,8 @@ data-flex-basis="1851px"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;})&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id="其他响应"&gt;其他响应
-&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;/div&gt;&lt;h3 id="其他响应"&gt;其他响应
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
 &lt;/span&gt;&lt;span class="lnt"&gt; 2
@@ -2112,8 +2112,8 @@ data-flex-basis="1851px"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;})&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id="express中间件"&gt;express中间件
-&lt;/h4&gt;&lt;ol&gt;
+&lt;/div&gt;&lt;h3 id="express中间件"&gt;express中间件
+&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;概念&lt;/li&gt;
 &lt;/ol&gt;
 &lt;ul&gt;
@@ -2385,8 +2385,8 @@ data-flex-basis="1851px"
 &lt;li&gt;如果静态资源匹配和路由匹配相同，谁先响应匹配谁，看同步函数的代码顺序&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/blockquote&gt;
-&lt;h4 id="获取请求体数据"&gt;获取请求体数据
-&lt;/h4&gt;&lt;ul&gt;
+&lt;h3 id="获取请求体数据"&gt;获取请求体数据
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;使用中间件body-parser&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
@@ -2463,8 +2463,8 @@ data-flex-basis="1851px"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;})&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id="防盗链"&gt;防盗链
-&lt;/h4&gt;&lt;ul&gt;
+&lt;/div&gt;&lt;h3 id="防盗链"&gt;防盗链
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;防止外部网站盗用我们的网站资源&lt;/li&gt;
 &lt;li&gt;如请求头的referer字段，显示了请求域名是多少，判断为外来域名，因此图片不返回响应&lt;/li&gt;
 &lt;/ul&gt;
@@ -2535,8 +2535,8 @@ data-flex-basis="1851px"
 &lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;此处防盗链防止了127.0.0.1以外的域名访问静态资源，如果想只防盗图片的访问的话，则需要再做一层校验&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id="路由模块化-开发范式"&gt;路由模块化 *（开发范式）
-&lt;/h4&gt;&lt;ul&gt;
+&lt;h3 id="路由模块化-开发范式"&gt;路由模块化 *（开发范式）
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;路由的模块化更容易维护，如中间件和相同类似的路由维护。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
@@ -2664,8 +2664,8 @@ data-flex-basis="1851px"
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nx"&gt;module&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;exports&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;router&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id="ejs模板引擎了解即可"&gt;ejs模板引擎(了解即可)
-&lt;/h4&gt;&lt;blockquote&gt;
+&lt;/div&gt;&lt;h3 id="ejs模板引擎了解即可"&gt;ejs模板引擎(了解即可)
+&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;EJS：嵌入式JS模板引擎，Express服务端渲染SSR，类比Java Thymeleaf / Python Jinja2 学习目标：看懂基础语法，理解SSR思想，新项目基本不用&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ol&gt;
@@ -2784,8 +2784,8 @@ data-flex-basis="1851px"
 &lt;ol start="7"&gt;
 &lt;li&gt;我发现res.sendFile和res.render都可以响应html文件，区别就是render属于服务端渲染，后续可加参数进行模板传值，而sendFile是读取磁盘上的静态资源文件&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h4 id="express-generator工具快速搭建express框架项目"&gt;express-generator工具，快速搭建express框架项目
-&lt;/h4&gt;&lt;ul&gt;
+&lt;h3 id="express-generator工具快速搭建express框架项目"&gt;express-generator工具，快速搭建express框架项目
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;不需要再重复一点一点敲，直接在脚手架基础上开发即可&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
@@ -2810,8 +2810,8 @@ data-flex-basis="1851px"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;express -e 15-generator //即可创建出该命名项目，-e表示支持ejs
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id="处理文件上传"&gt;处理文件上传
-&lt;/h4&gt;&lt;ul&gt;
+&lt;/div&gt;&lt;h3 id="处理文件上传"&gt;处理文件上传
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;npm i formidable&lt;/code&gt;,这里使用的是&lt;code&gt;npm install formidable@2&lt;/code&gt;版本，目前是3&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;基于express-geanrator搭建框架，在index.js做文件上传路由操作&lt;/p&gt;
@@ -2944,8 +2944,8 @@ data-flex-basis="1851px"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id="唯一id标识npm包"&gt;唯一id标识npm包
-&lt;/h4&gt;&lt;ul&gt;
+&lt;/div&gt;&lt;h3 id="唯一id标识npm包"&gt;唯一id标识npm包
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;uuid&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
