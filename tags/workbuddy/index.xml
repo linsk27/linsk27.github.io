@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WorkBuddy on 404_@林达</title><link>https://linsk27.github.io/tags/workbuddy/</link><description>Recent content in WorkBuddy on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Fri, 09 Oct 2026 15:54:34 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/workbuddy/index.xml" rel="self" type="application/rss+xml"/><item><title>WorkBuddy + Obsidian：用 AI 维护一个会自己长大的知识库</title><link>https://linsk27.github.io/p/1009-workbuddy-obsidian/</link><pubDate>Fri, 09 Oct 2026 15:54:34 +0800</pubDate><guid>https://linsk27.github.io/p/1009-workbuddy-obsidian/</guid><description>&lt;img src="https://linsk27.github.io/p/1009-workbuddy-obsidian/obsidian-vault.png" alt="Featured image of post WorkBuddy + Obsidian：用 AI 维护一个会自己长大的知识库" /&gt;&lt;p&gt;起因很简单：笔记写了三年，多到自己都不想翻。&lt;/p&gt;
+&lt;h2 id="一痛点笔记越多越像垃圾场"&gt;一、痛点：笔记越多，越像垃圾场
+&lt;/h2&gt;&lt;p&gt;我攒了一堆 Markdown 笔记 —— Typora 写的、从自己 Hugo 博客导出的、还有各处抄下来存档的。文件名五花八门，图片散在五个不同的图床，同一件事在两篇笔记里说法还不一样。&lt;/p&gt;
+&lt;p&gt;量不算大，但&amp;quot;能直接用&amp;quot;的没几份：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;找不到&lt;/strong&gt; —— 想查某个知识点，不知道该翻哪一篇&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不放心&lt;/strong&gt; —— 笔记是几年前写的，里面的 API 可能早就废弃了&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不成体系&lt;/strong&gt; —— 知识点是散的，面试要用的时候串不起来&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我试过纯手动整理，结论是：&lt;strong&gt;整理笔记这件事会持续消耗意志力，而意志力是会用完的。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id="二为什么是-obsidian--workbuddy"&gt;二、为什么是 Obsidian + WorkBuddy
+&lt;/h2&gt;&lt;p&gt;分工原则一句话：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;素材只读，wiki 由 AI 写，我只负责&amp;quot;给素材&amp;quot;和&amp;quot;提问&amp;quot;。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Obsidian&lt;/strong&gt; 负责&amp;quot;装&amp;quot;：纯本地 Markdown 文件夹、&lt;code&gt;[[双链]]&lt;/code&gt;、关系图谱、全文搜索。数据在自己硬盘上，不怕平台跑路。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;WorkBuddy&lt;/strong&gt; 负责&amp;quot;干&amp;quot;：能读写本地文件、跑脚本、抓网页、读 PDF，关键是 —— &lt;strong&gt;你说人话，它干活&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;两者之间靠一个 skill 粘起来，这也是整篇文章的主角。&lt;/p&gt;
+&lt;h2 id="三核心一个叫-karpathy-llm-wiki-的-skill"&gt;三、核心：一个叫 Karpathy LLM Wiki 的 skill
+&lt;/h2&gt;&lt;p&gt;整套玩法的发动机，是 WorkBuddy 里的一个 skill —— &lt;strong&gt;Karpathy LLM Wiki&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;它来自 Andrej Karpathy 提出的「LLM Wiki」思路：&lt;strong&gt;不要 RAG，要&amp;quot;增量编译&amp;quot;。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;传统做法（RAG）是你每问一次，就去素材库里检索一遍；而它反着来 —— 你每丢进来一份素材，它就&lt;strong&gt;读一遍、提炼要点，然后写进 wiki&lt;/strong&gt;，顺手更新相关页面、标注和新结论矛盾的地方，把零散的信息缝合成一张网。&lt;/p&gt;
+&lt;p&gt;所以这个 wiki 是一个&lt;strong&gt;会复利的产物&lt;/strong&gt;：交叉引用早就连好了，矛盾被标出来了，综述反映的是你读过的全部内容。&lt;strong&gt;素材越多、问得越多，它就越厚、越准。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;它把内容分成三层，边界很清楚：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;层&lt;/th&gt;
+&lt;th&gt;谁维护&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;素材 raw/&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;你&lt;/td&gt;
+&lt;td&gt;只许放，不许改 —— 唯一的事实来源&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;wiki/&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;AI&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;摘要、概念页、综述、对比…… 你只读不写&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;WIKI-SCHEMA.md&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;你和 AI 共同演进&lt;/td&gt;
+&lt;td&gt;约定目录、分类、页面格式&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;一句话概括分工：&lt;strong&gt;你负责喂素材、提问题；AI 负责写页面、查矛盾。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id="四日常只有三个指令"&gt;四、日常只有三个指令
+&lt;/h2&gt;&lt;p&gt;整套工作流，你只需要记住三个动词：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;指令&lt;/th&gt;
+&lt;th&gt;你说的话&lt;/th&gt;
+&lt;th&gt;它做的事&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;入库 Ingest&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;把这篇素材入库&amp;rdquo;&lt;/td&gt;
+&lt;td&gt;读素材 → 写摘要页 → 更新目录 → 顺带更新相关页面 → 记一条日志&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;提问 Query&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;XX 这个知识，我库里是怎么说的？&amp;rdquo;&lt;/td&gt;
+&lt;td&gt;先读目录定位，再综合出答案并给出引用；&lt;strong&gt;好答案会落盘成新页面&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;体检 Lint&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;给知识库做一次体检&amp;rdquo;&lt;/td&gt;
+&lt;td&gt;找矛盾、过时断言、孤儿页、缺失的双链和内容缺口&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;就这三句。剩下的它自己会做。&lt;/p&gt;
+&lt;h2 id="五它长什么样能干嘛"&gt;五、它长什么样、能干嘛
+&lt;/h2&gt;&lt;p&gt;&lt;img src="https://linsk27.github.io/p/1009-workbuddy-obsidian/obsidian-vault.png"
+width="1920"
+height="1020"
+srcset="https://linsk27.github.io/p/1009-workbuddy-obsidian/obsidian-vault_hu_1afe8db358fa45ee.png 480w, https://linsk27.github.io/p/1009-workbuddy-obsidian/obsidian-vault_hu_c1299b96b0d575e0.png 1024w"
+loading="lazy"
+alt="Obsidian 里的知识库：左侧文件树、中间的笔记属性、右侧的关系图谱"
+class="gallery-image"
+data-flex-grow="188"
+data-flex-basis="451px"
+&gt;&lt;/p&gt;
+&lt;p&gt;上图就是它跑起来的样子 —— 左边是文件树，中间是笔记的属性（frontmatter 可视化），右边是&lt;strong&gt;关系图谱&lt;/strong&gt;。具体价值有这么几个：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;知识沉淀&lt;/strong&gt;：每读一份素材，wiki 就更厚一点。它是&lt;strong&gt;资产&lt;/strong&gt;而不是消耗品 —— 你今天读的东西，半年后还能被检索、被引用、被缝合进新的结论里。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;在 WorkBuddy 里直接检索&lt;/strong&gt;：不用自己翻文件，直接问就行（&amp;ldquo;我之前整理过的那几个坑是哪些？&amp;quot;），它会读相关页面、给出&lt;strong&gt;带引用的答案&lt;/strong&gt;；如果这个回答有价值，还能让它落盘成一个新页面，而不是沉在聊天记录里。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;双链 + 图谱&lt;/strong&gt;：页面之间用 &lt;code&gt;[[双链]]&lt;/code&gt; 连起来，Obsidian 的图谱会把这些连接画成一张网 —— 你能一眼看出哪些知识点是孤立的、哪些是核心枢纽。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;体检兜底&lt;/strong&gt;：内容一多就容易自己打架。定期跑一次体检，矛盾、过时、断链、缺口都会列出来。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;随时能搬走&lt;/strong&gt;：说到底就是一堆 &lt;code&gt;.md&lt;/code&gt; 文件，可以用 git 管版本，不绑定任何平台。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="六怎么开始"&gt;六、怎么开始
+&lt;/h2&gt;&lt;h3 id="第一步装-obsidian"&gt;第一步：装 Obsidian
+&lt;/h3&gt;&lt;p&gt;官网直接下载，Windows / macOS / Linux / 手机端都有，免费：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;下载地址：https://obsidian.md/download&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;先装好，但&lt;strong&gt;先别急着建仓库&lt;/strong&gt; —— 下一步会告诉你仓库放哪。&lt;/p&gt;
+&lt;h3 id="第二步让-workbuddy-帮你把仓库建好"&gt;第二步：让 WorkBuddy 帮你把仓库建好
+&lt;/h3&gt;&lt;p&gt;在 WorkBuddy 里启用 &lt;strong&gt;Karpathy LLM Wiki&lt;/strong&gt; skill（其他能装 skill、能读写本地文件的 agent 同理），然后说一句：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;帮我建一个个人知识库。&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;它会自动把整套结构和约定建出来：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;wiki-knowledge/
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── raw/ # 原始素材（只读）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── assets/ # 本地化的图片
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── wiki/ # AI 维护的页面
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ ├── index.md # 内容目录
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── log.md # 操作日志
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;└── WIKI-SCHEMA.md # 约定：目录 / 分类 / 页面格式
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：这一步你不用手动建任何文件夹、也不用自己写配置文件 —— 那都是 skill 的活。你只需要说一句话。&lt;/p&gt;
+&lt;h3 id="第三步把仓库导进-obsidian"&gt;第三步：把仓库导进 Obsidian
+&lt;/h3&gt;&lt;p&gt;打开 Obsidian，选 &lt;strong&gt;「打开文件夹作为仓库」&lt;/strong&gt;，把它刚建好的那个目录选进去。完成，界面就和上面那张图一样了。&lt;/p&gt;
+&lt;h3 id="第四步日常就三个指令"&gt;第四步：日常就三个指令
+&lt;/h3&gt;&lt;p&gt;把新素材丢进 &lt;code&gt;raw/&lt;/code&gt;，说&amp;quot;入库&amp;rdquo;；有问题就问；想保持整洁就说&amp;quot;体检&amp;quot;。就这三句。&lt;/p&gt;
+&lt;h3 id="第五步进阶--让它自己跑"&gt;第五步：进阶 —— 让它自己跑
+&lt;/h3&gt;&lt;p&gt;真正把&amp;quot;意志力&amp;quot;这件事彻底解决掉的，是&lt;strong&gt;定时任务&lt;/strong&gt;。在 WorkBuddy 里给这个知识库挂上两个定时任务：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;定时摄入&lt;/strong&gt;：比如每周一次，自动把 &lt;code&gt;raw/&lt;/code&gt; 里还没处理的素材入库&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;定时体检&lt;/strong&gt;：比如每周一次，自动跑一遍 lint，把矛盾、孤儿页、内容缺口整理好发给你&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;之后就可以躺平了：素材随手丢，AI 每周自己整理、自己查错。&lt;/p&gt;
+&lt;h3 id="最后安利一下"&gt;最后，安利一下
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;成本几乎为零&lt;/strong&gt;：Obsidian 免费，数据全在你本地，没有订阅、没有额度。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不绑定平台&lt;/strong&gt;：产物就是一堆 Markdown，哪天不想用了，打包带走。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;越用越值钱&lt;/strong&gt;：它是个&lt;strong&gt;复利资产&lt;/strong&gt; —— 不像聊天记录，问完就沉底了；这里的每一次沉淀都留在库里，等着被下一次引用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;谁都适合&lt;/strong&gt;：笔记多但烂在手里的、天天读论文的、做竞品调研的、准备面试要串知识点的，都能直接用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一句话总结：&lt;strong&gt;你负责喂养和提问，AI 负责整理和查错。&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;参考自：Andrej Karpathy 的 LLM Wiki（gist）、WorkBuddy「Karpathy LLM Wiki」skill、个人知识库实操记录（2026-10）&lt;/p&gt;
+&lt;/blockquote&gt;</description></item></channel></rss>
