@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WorkBuddy on 404_@林达</title><link>https://linsk27.github.io/tags/workbuddy/</link><description>Recent content in WorkBuddy on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Tue, 13 Oct 2026 20:45:00 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/workbuddy/index.xml" rel="self" type="application/rss+xml"/><item><title>【workbuddy】+OC Ferry 免费模型使用！！！</title><link>https://linsk27.github.io/p/1013-oc-ferry/</link><pubDate>Tue, 13 Oct 2026 20:45:00 +0800</pubDate><guid>https://linsk27.github.io/p/1013-oc-ferry/</guid><description>&lt;img src="https://linsk27.github.io/p/1013-oc-ferry/oc-ferry-dark.png" alt="Featured image of post 【workbuddy】+OC Ferry 免费模型使用！！！" /&gt;&lt;p&gt;&lt;strong&gt;一句话&lt;/strong&gt;：&lt;strong&gt;OC Ferry&lt;/strong&gt; 是个开源小工具，作用是&lt;strong&gt;把 OpenCode 的免费模型接进 WorkBuddy 用&lt;/strong&gt;。项目地址 &lt;code&gt;HRuiCcc/RuiC-oc-ferry&lt;/code&gt;，MIT 协议。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WorkBuddy on 404_@林达</title><link>https://linsk27.github.io/tags/workbuddy/</link><description>Recent content in WorkBuddy on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Tue, 13 Oct 2026 23:30:00 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/workbuddy/index.xml" rel="self" type="application/rss+xml"/><item><title>【workbuddy】+OC Ferry 免费模型使用！！！</title><link>https://linsk27.github.io/p/1013-oc-ferry/</link><pubDate>Tue, 13 Oct 2026 20:45:00 +0800</pubDate><guid>https://linsk27.github.io/p/1013-oc-ferry/</guid><description>&lt;img src="https://linsk27.github.io/p/1013-oc-ferry/oc-ferry-dark.png" alt="Featured image of post 【workbuddy】+OC Ferry 免费模型使用！！！" /&gt;&lt;p&gt;&lt;strong&gt;一句话&lt;/strong&gt;：&lt;strong&gt;OC Ferry&lt;/strong&gt; 是个开源小工具，作用是&lt;strong&gt;把 OpenCode 的免费模型接进 WorkBuddy 用&lt;/strong&gt;。项目地址 &lt;code&gt;HRuiCcc/RuiC-oc-ferry&lt;/code&gt;，MIT 协议。&lt;/p&gt;
 &lt;h2 id="一它的原理"&gt;一、它的原理
 &lt;/h2&gt;&lt;p&gt;WorkBuddy 支持填&lt;strong&gt;自定义模型&lt;/strong&gt;（写在 &lt;code&gt;~/.workbuddy/models.json&lt;/code&gt;），填进去就走你自己的配额。OpenCode 那边有一批免费模型额度。看着挺简单 —— 在 WorkBuddy 里加个接口地址不就完了？&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;不行，卡在一个地方&lt;/strong&gt;：&lt;/p&gt;
@@ -104,6 +104,140 @@ data-flex-basis="379px"
 &lt;li&gt;主仓库：https://github.com/HRuiCcc/RuiC-oc-ferry&lt;/li&gt;
 &lt;li&gt;Windows 非官方 fork：https://github.com/Chemingitch/RuiC-oc-ferry-windows&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2 id="五这-10-款模型都是什么来头"&gt;五、这 10 款模型都是什么来头
+&lt;/h2&gt;&lt;p&gt;装完之后，你的模型列表里会多出一批 &lt;code&gt;OC · 名字&lt;/code&gt; —— 名字全都眼生。我把本机检测通过的那 10 款整理成了一张表，出厂时间、Artificial Analysis 智能指数、实测能力一起摆出来：&lt;/p&gt;
+&lt;div class="ferry-pool"&gt;
+&lt;style&gt;
+.ferry-pool{margin:2.4rem 0 2rem}
+.ferry-pool .fp-head{font-size:1.55rem;font-weight:600;color:var(--card-text-color-main);line-height:1.5}
+.ferry-pool .fp-sub{margin:.4rem 0 1.1rem;font-size:1.2rem;color:var(--card-text-color-tertiary);line-height:1.7}
+.ferry-pool .fp-table{width:100%;border-collapse:collapse;table-layout:fixed;margin:0;font-size:1.35rem}
+.ferry-pool .fp-table th{padding:.5rem .45rem .6rem;border:none;border-bottom:1px solid var(--card-separator-color);font-size:1.2rem;font-weight:600;color:var(--card-text-color-tertiary);text-align:left;white-space:nowrap}
+.ferry-pool .fp-table td{padding:.82rem .45rem;border:none;border-bottom:1px solid var(--card-separator-color);vertical-align:top;line-height:1.6;color:var(--card-text-color-secondary)}
+.ferry-pool .fp-table .c-date{white-space:nowrap}
+.ferry-pool .fp-table .c-vendor{word-break:break-word}
+.ferry-pool .fp-table tbody tr:last-child td{border-bottom:none}
+.ferry-pool .fp-table tbody tr:nth-child(even){background:none}
+.ferry-pool .fp-table tbody tr:hover td{background:rgba(127,127,127,.07)}
+.ferry-pool .fp-name{font-size:1.4rem;font-weight:600;color:var(--card-text-color-main)}
+.ferry-pool .fp-spec{margin-top:.25rem;font-size:1.2rem;color:var(--card-text-color-tertiary);line-height:1.5}
+.ferry-pool .fp-num{font-size:1.4rem;font-weight:600;color:var(--card-text-color-main)}
+.ferry-pool .fp-na{font-size:1.2rem;color:var(--card-text-color-tertiary)}
+.ferry-pool .fp-bar{height:4px;border-radius:2px;background:rgba(127,127,127,.18);margin-top:.4rem}
+.ferry-pool .fp-bar i{display:block;height:4px;border-radius:2px}
+.ferry-pool .fp-tier{display:inline-block;padding:.05rem .55rem;border-radius:9px;font-size:1.2rem;font-weight:500;white-space:nowrap;line-height:1.8}
+.ferry-pool .t-s{color:#3B6D11;background:rgba(99,153,34,.14)}
+.ferry-pool .t-a{color:#0F6E56;background:rgba(29,158,117,.14)}
+.ferry-pool .t-b{color:#854F0B;background:rgba(186,117,23,.14)}
+.ferry-pool .t-c{color:#5F5E5A;background:rgba(127,127,127,.14)}
+.ferry-pool .t-n{color:#7A7972;background:rgba(127,127,127,.12)}
+.ferry-pool .fp-note{margin:1.1rem 0 0;font-size:1.2rem;color:var(--card-text-color-tertiary);line-height:1.75}
+[data-scheme="dark"] .ferry-pool .t-s{color:#97C459}
+[data-scheme="dark"] .ferry-pool .t-a{color:#5DCAA5}
+[data-scheme="dark"] .ferry-pool .t-b{color:#EF9F27}
+[data-scheme="dark"] .ferry-pool .t-c{color:#B4B2A9}
+[data-scheme="dark"] .ferry-pool .t-n{color:#9A998F}
+@media (max-width:767px){
+.ferry-pool .fp-table,.ferry-pool .fp-table tbody{display:block;width:100%}
+.ferry-pool .fp-table thead{display:none}
+.ferry-pool .fp-table tr{display:flex;flex-wrap:wrap;align-items:flex-start;padding:.95rem 0;border-bottom:1px solid var(--card-separator-color)}
+.ferry-pool .fp-table tbody tr:last-child{border-bottom:none}
+.ferry-pool .fp-table td{display:block;width:auto;padding:0;border:none}
+.ferry-pool .fp-table .c-name{order:1;flex:1 1 100%}
+.ferry-pool .fp-table .c-vendor{order:2;flex:0 0 auto;margin-top:.55rem}
+.ferry-pool .fp-table .c-date{order:3;flex:0 0 auto;margin-top:.55rem}
+.ferry-pool .fp-table .c-aa{order:4;flex:0 0 auto;margin-top:.55rem}
+.ferry-pool .fp-table .c-tier{order:5;flex:0 0 auto;margin-top:.5rem;margin-left:auto}
+.ferry-pool .fp-table .c-desc{order:6;flex:1 1 100%;margin-top:.6rem}
+.ferry-pool .fp-table .c-vendor::after{content:" ·";color:var(--card-text-color-tertiary)}
+.ferry-pool .fp-table .c-date::after{content:" ·";color:var(--card-text-color-tertiary)}
+.ferry-pool .fp-table .c-aa .fp-num::before{content:"AA ";font-size:1.1rem;font-weight:400;color:var(--card-text-color-tertiary)}
+.ferry-pool .fp-table .c-aa .fp-bar{display:none}
+.ferry-pool .fp-table tbody tr:hover td{background:none}
+}
+&lt;/style&gt;
+&lt;div class="fp-head"&gt;OC Ferry 免费模型池 · 出厂时间与智能能力评估&lt;/div&gt;
+&lt;div class="fp-sub"&gt;10 款可用模型 · 按综合档位排序 · AA 指数为 Artificial Analysis 现行口径（榜首约 58 分） · † = 隐身模型，身份为社区猜测&lt;/div&gt;
+&lt;table class="fp-table"&gt;
+&lt;colgroup&gt;&lt;col style="width:19%"&gt;&lt;col style="width:12%"&gt;&lt;col style="width:12%"&gt;&lt;col style="width:9%"&gt;&lt;col style="width:36%"&gt;&lt;col style="width:12%"&gt;&lt;/colgroup&gt;
+&lt;thead&gt;&lt;tr&gt;&lt;th&gt;模型 / 部署规格&lt;/th&gt;&lt;th&gt;厂商&lt;/th&gt;&lt;th&gt;出厂时间&lt;/th&gt;&lt;th&gt;AA 指数&lt;/th&gt;&lt;th&gt;智能能力评估&lt;/th&gt;&lt;th&gt;档位&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td class="c-name"&gt;&lt;div class="fp-name"&gt;Muse Spark 1.3&lt;/div&gt;&lt;div class="fp-spec"&gt;1M ctx · 131K 出 · 图/视频 · 工具 ✕&lt;/div&gt;&lt;/td&gt;
+&lt;td class="c-vendor"&gt;Meta&lt;/td&gt;&lt;td class="c-date"&gt;2026-09-02&lt;/td&gt;
+&lt;td class="c-aa"&gt;&lt;div class="fp-num"&gt;48&lt;/div&gt;&lt;div class="fp-bar"&gt;&lt;i style="width:83%;background:#97C459"&gt;&lt;/i&gt;&lt;/div&gt;&lt;/td&gt;
+&lt;td class="c-desc"&gt;全场最高分。编码与超长上下文极强（512K–1M 档 98.1 分）；但 Zen 免费档工具协议不兼容，本机已按「仅对话」导入，适合纯对话与写作&lt;/td&gt;
+&lt;td class="c-tier"&gt;&lt;span class="fp-tier t-s"&gt;S · 仅对话&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class="c-name"&gt;&lt;div class="fp-name"&gt;Step 5 Preview&lt;/div&gt;&lt;div class="fp-spec"&gt;1M ctx · 65K 出 · 视觉 · 工具 ✓&lt;/div&gt;&lt;/td&gt;
+&lt;td class="c-vendor"&gt;阶跃星辰&lt;/td&gt;&lt;td class="c-date"&gt;2026-09-20&lt;/td&gt;
+&lt;td class="c-aa"&gt;&lt;div class="fp-num"&gt;44&lt;/div&gt;&lt;div class="fp-bar"&gt;&lt;i style="width:76%;background:#97C459"&gt;&lt;/i&gt;&lt;/div&gt;&lt;/td&gt;
+&lt;td class="c-desc"&gt;国产开源前三。DeepSWE 67.7、FrontierFinance 66.4（全球第二）；600B/27B MoE；10-15 权重开源；零数据保留。综合最强可用款&lt;/td&gt;
+&lt;td class="c-tier"&gt;&lt;span class="fp-tier t-s"&gt;S&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class="c-name"&gt;&lt;div class="fp-name"&gt;MiMo-V2.6-Flash&lt;/div&gt;&lt;div class="fp-spec"&gt;200K ctx · 32K 出 · 图/视/音 · 工具 ✓&lt;/div&gt;&lt;/td&gt;
+&lt;td class="c-vendor"&gt;小米&lt;/td&gt;&lt;td class="c-date"&gt;2026-09-22&lt;/td&gt;
+&lt;td class="c-aa"&gt;&lt;div class="fp-num"&gt;38&lt;/div&gt;&lt;div class="fp-bar"&gt;&lt;i style="width:66%;background:#5DCAA5"&gt;&lt;/i&gt;&lt;/div&gt;&lt;/td&gt;
+&lt;td class="c-desc"&gt;MIT 开源全模态。DeepSWE 67.9、CyberGym 95.1；RL 训练成本 85 万美元全公开；标称 1M、Zen 部署 200K。均衡主力&lt;/td&gt;
+&lt;td class="c-tier"&gt;&lt;span class="fp-tier t-a"&gt;A&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class="c-name"&gt;&lt;div class="fp-name"&gt;Space Bunny †&lt;/div&gt;&lt;div class="fp-spec"&gt;1M ctx · 512K 出 · 图 · 工具 ✓&lt;/div&gt;&lt;/td&gt;
+&lt;td class="c-vendor"&gt;隐身&lt;/td&gt;&lt;td class="c-date"&gt;2026-09 下旬&lt;/td&gt;
+&lt;td class="c-aa"&gt;&lt;div class="fp-na"&gt;未收录&lt;/div&gt;&lt;/td&gt;
+&lt;td class="c-desc"&gt;社区实测 15/15 任务全过，三款隐身中最快、单任务成本最低；512K 超大输出；零保留。智能体任务强力备选，身份悬空是唯一风险&lt;/td&gt;
+&lt;td class="c-tier"&gt;&lt;span class="fp-tier t-a"&gt;A&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class="c-name"&gt;&lt;div class="fp-name"&gt;Nemotron 3 Ultra&lt;/div&gt;&lt;div class="fp-spec"&gt;1M ctx · 128K 出 · 纯文本 · 工具 ✓&lt;/div&gt;&lt;/td&gt;
+&lt;td class="c-vendor"&gt;NVIDIA&lt;/td&gt;&lt;td class="c-date"&gt;2026-06-04&lt;/td&gt;
+&lt;td class="c-aa"&gt;&lt;div class="fp-num"&gt;23&lt;/div&gt;&lt;div class="fp-bar"&gt;&lt;i style="width:40%;background:#EF9F27"&gt;&lt;/i&gt;&lt;/div&gt;&lt;/td&gt;
+&lt;td class="c-desc"&gt;550B/55B 开放旗舰，发布时为美国最强开放权重（旧口径 47.7）；1M 纯文本，长文档/长日志输入专家，通用智能一般&lt;/td&gt;
+&lt;td class="c-tier"&gt;&lt;span class="fp-tier t-b"&gt;B · 长文本&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class="c-name"&gt;&lt;div class="fp-name"&gt;Ling 3.1 Flash&lt;/div&gt;&lt;div class="fp-spec"&gt;262K ctx · 32K 出 · 纯文本 · 工具 ✓&lt;/div&gt;&lt;/td&gt;
+&lt;td class="c-vendor"&gt;蚂蚁 InclusionAI&lt;/td&gt;&lt;td class="c-date"&gt;2026-09-30&lt;/td&gt;
+&lt;td class="c-aa"&gt;&lt;div class="fp-na"&gt;未收录&lt;/div&gt;&lt;/td&gt;
+&lt;td class="c-desc"&gt;560B/25B 新一代 flash；官方自报 FrontierSWE 75.16、GDPVal Elo 1673（未经第三方复现）；本池上下文最短，长任务受限&lt;/td&gt;
+&lt;td class="c-tier"&gt;&lt;span class="fp-tier t-b"&gt;B&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class="c-name"&gt;&lt;div class="fp-name"&gt;Big Pickle †&lt;/div&gt;&lt;div class="fp-spec"&gt;200K ctx · 32K 出 · 纯文本 · 工具 ✓&lt;/div&gt;&lt;/td&gt;
+&lt;td class="c-vendor"&gt;隐身&lt;/td&gt;&lt;td class="c-date"&gt;2025-10&lt;/td&gt;
+&lt;td class="c-aa"&gt;&lt;div class="fp-na"&gt;未收录&lt;/div&gt;&lt;/td&gt;
+&lt;td class="c-desc"&gt;唯一横跨 2026 三个免费批次的老将；实测 12/15，最难任务三次超时；200K 上下文，已显老态，建议让位于新模型&lt;/td&gt;
+&lt;td class="c-tier"&gt;&lt;span class="fp-tier t-c"&gt;C&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class="c-name"&gt;&lt;div class="fp-name"&gt;Nemotron 3.5 Lightning&lt;/div&gt;&lt;div class="fp-spec"&gt;262K ctx · 262K 出 · 纯文本 · 工具 ✓&lt;/div&gt;&lt;/td&gt;
+&lt;td class="c-vendor"&gt;NVIDIA&lt;/td&gt;&lt;td class="c-date"&gt;2026-08-11&lt;/td&gt;
+&lt;td class="c-aa"&gt;&lt;div class="fp-num"&gt;13&lt;/div&gt;&lt;div class="fp-bar"&gt;&lt;i style="width:22%;background:#B4B2A9"&gt;&lt;/i&gt;&lt;/div&gt;&lt;/td&gt;
+&lt;td class="c-desc"&gt;Ultra 的 30B 蒸馏速度版（约 670 tok/s）；定位常驻 agent 执行层，轻任务/高并发专用，复杂推理弱&lt;/td&gt;
+&lt;td class="c-tier"&gt;&lt;span class="fp-tier t-c"&gt;C · 速度&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class="c-name"&gt;&lt;div class="fp-name"&gt;LongCat 2.5 Preview&lt;/div&gt;&lt;div class="fp-spec"&gt;1M ctx · 131K 出 · 图 · 工具 ✓&lt;/div&gt;&lt;/td&gt;
+&lt;td class="c-vendor"&gt;美团&lt;/td&gt;&lt;td class="c-date"&gt;2026-09-26&lt;/td&gt;
+&lt;td class="c-aa"&gt;&lt;div class="fp-na"&gt;未收录&lt;/div&gt;&lt;/td&gt;
+&lt;td class="c-desc"&gt;「1.6T 参数」实为 2.0 旧数，官方未公布 2.5 参数；未开源、官方文档图文口径自相矛盾；零保留。整体待第三方验证&lt;/td&gt;
+&lt;td class="c-tier"&gt;&lt;span class="fp-tier t-c"&gt;C · 待验证&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class="c-name"&gt;&lt;div class="fp-name"&gt;Cat Jam †&lt;/div&gt;&lt;div class="fp-spec"&gt;262K ctx · 131K 出 · 纯文本 · 工具 ✓&lt;/div&gt;&lt;/td&gt;
+&lt;td class="c-vendor"&gt;未知&lt;/td&gt;&lt;td class="c-date"&gt;2026-10 新现&lt;/td&gt;
+&lt;td class="c-aa"&gt;&lt;div class="fp-na"&gt;无资料&lt;/div&gt;&lt;/td&gt;
+&lt;td class="c-desc"&gt;10 月刚进池的隐身模型，连官方免费名单都未列入，零公开资料；规格不俗（5 档推理可调），建议小额试用观察&lt;/td&gt;
+&lt;td class="c-tier"&gt;&lt;span class="fp-tier t-n"&gt;未评&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class="fp-note"&gt;数据政策：零保留 = Space Bunny / LongCat / Step 5；免费期可能用于训练 = Big Pickle / MiMo / Muse Spark / Ling；Nemotron 两款跑 NVIDIA 试用端点，勿提交机密数据。免费池限时轮换：Exo Free 刚因 410 下线，名单每周可能变化。&lt;/div&gt;
+&lt;div class="fp-note"&gt;规格列来自本机 OC Ferry 目录实测（2026-10-13），与厂商标称可能不同；「官方自报」为厂商发布会数字，非第三方复现。&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;一句话总结：&lt;strong&gt;能当主力的只有 Step 5，MiMo 均衡，Muse Spark 分数最高但只能纯对话&lt;/strong&gt;，其余按需取用。&lt;/p&gt;
 &lt;h2 id="小结"&gt;小结
 &lt;/h2&gt;&lt;p&gt;一个 120 星、10 月 10 号才创建的小项目，但把&amp;quot;能不能用&amp;quot;这件事想得比很多大项目清楚：&lt;strong&gt;用隔离运行时绕过官方限制，用执行权归属守住安全边界，用缓存解决&amp;quot;每次都要重测&amp;quot;的体验问题&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;免费的东西都不稳定，这一点它自己也承认。但作为一条&amp;quot;积分不够时的备用通道&amp;quot;，它的可行性是成立的。&lt;/p&gt;
