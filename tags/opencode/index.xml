@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>OpenCode on 404_@林达</title><link>https://linsk27.github.io/tags/opencode/</link><description>Recent content in OpenCode on 404_@林达</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>404_@林达</copyright><lastBuildDate>Tue, 13 Oct 2026 20:45:00 +0800</lastBuildDate><atom:link href="https://linsk27.github.io/tags/opencode/index.xml" rel="self" type="application/rss+xml"/><item><title>【workbuddy】+OC Ferry 免费模型使用！！！</title><link>https://linsk27.github.io/p/1013-oc-ferry/</link><pubDate>Tue, 13 Oct 2026 20:45:00 +0800</pubDate><guid>https://linsk27.github.io/p/1013-oc-ferry/</guid><description>&lt;img src="https://linsk27.github.io/p/1013-oc-ferry/oc-ferry-dark.png" alt="Featured image of post 【workbuddy】+OC Ferry 免费模型使用！！！" /&gt;&lt;p&gt;&lt;strong&gt;一句话&lt;/strong&gt;：&lt;strong&gt;OC Ferry&lt;/strong&gt; 是个开源小工具，作用是&lt;strong&gt;把 OpenCode 的免费模型接进 WorkBuddy 用&lt;/strong&gt;。项目地址 &lt;code&gt;HRuiCcc/RuiC-oc-ferry&lt;/code&gt;，MIT 协议。&lt;/p&gt;
+&lt;h2 id="一它的原理"&gt;一、它的原理
+&lt;/h2&gt;&lt;p&gt;WorkBuddy 支持填&lt;strong&gt;自定义模型&lt;/strong&gt;（写在 &lt;code&gt;~/.workbuddy/models.json&lt;/code&gt;），填进去就走你自己的配额。OpenCode 那边有一批免费模型额度。看着挺简单 —— 在 WorkBuddy 里加个接口地址不就完了？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;不行，卡在一个地方&lt;/strong&gt;：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;OpenCode 的免费额度，只认&lt;strong&gt;从 OpenCode 自己内部发出&lt;/strong&gt;的请求。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;你把这个接口地址抄出来、用别的工具去调，服务端会发现&amp;quot;来源不对&amp;quot;，直接拒绝 —— 官方原话就是 &lt;code&gt;opencode's free tier can only be used from within opencode&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;所以 OC Ferry 的做法很直接：&lt;strong&gt;它不抄接口，而是在你电脑上放一份隔离的 OpenCode 运行时，让请求真的从 OpenCode 里面发出去。&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;WorkBuddy → 本机 127.0.0.1:41980 → 适配器 → 隔离的 OpenCode → 免费模型
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;围绕这条链路，它干三件事：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;挑&lt;/strong&gt; —— 把 OpenCode 里&lt;strong&gt;真正免费&lt;/strong&gt;的模型选出来。判断标准是价格字段（输入/输出/缓存读写）全为 0，&lt;strong&gt;不是&lt;/strong&gt;名字里有没有 &lt;code&gt;free&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;测&lt;/strong&gt; —— 挨个测它能不能给 WorkBuddy 干活。重点是能不能产生&lt;strong&gt;工具调用&lt;/strong&gt;（Agent 场景的命门）；只回文本的也不算失败，会降级成「可用 · 仅对话」并把工具关掉&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;接&lt;/strong&gt; —— 把测通的写进你的 &lt;code&gt;models.json&lt;/code&gt;，再起一个只监听本机的转发口，供 WorkBuddy 调用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="二可行性分析"&gt;二、可行性分析
+&lt;/h2&gt;&lt;h3 id="技术可行性成立-"&gt;技术可行性：成立 ✅
+&lt;/h3&gt;&lt;p&gt;关键就在&amp;quot;隔离运行时&amp;quot;这一层 —— 如果它是直接转发密钥，这个方案从第一天就不成立。工程细节上也做得比较实在：检测 &lt;strong&gt;3 路并发&lt;/strong&gt;（一轮约 60 秒），判定结果&lt;strong&gt;按模型缓存&lt;/strong&gt;（成功留 6 小时），所以重启基本是秒开，不会每次都全量重测。&lt;/p&gt;
+&lt;h3 id="安全可行性比预期周全-"&gt;安全可行性：比预期周全 ✅
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;网络面&lt;/strong&gt;：只监听 &lt;code&gt;127.0.0.1:41980&lt;/code&gt;，所有请求要带 &lt;code&gt;Bearer&lt;/code&gt; 密钥，&lt;strong&gt;带 &lt;code&gt;Origin&lt;/code&gt; 头的直接 403&lt;/strong&gt; —— 这个口不给浏览器用&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;权限面&lt;/strong&gt;：模型只能吐一段 &lt;strong&gt;JSON 信封&lt;/strong&gt;表达&amp;quot;我想做什么&amp;quot;，&lt;strong&gt;真正的执行权始终在 WorkBuddy 手里&lt;/strong&gt;。任何本机动作都会被拒绝或转交成外部工具调用 —— &lt;strong&gt;模型永远不会自己动手&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;写配置&lt;/strong&gt;：改 &lt;code&gt;models.json&lt;/code&gt; 前先备份、加锁、原子替换；&lt;strong&gt;只动它自己标记过的条目，你手写的一条都不碰&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;退出清理&lt;/strong&gt;：从托盘退出时，把自己导入的条目&lt;strong&gt;摘干净&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;后两条是我最看重的 —— 这决定了它是&amp;quot;能放心常驻的小工具&amp;quot;，而不是&amp;quot;会污染你配置的黑盒&amp;quot;。&lt;/p&gt;
+&lt;h3 id="使用可行性分平台-"&gt;使用可行性：分平台 ⚠️
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;装完即用，&lt;strong&gt;不需要另外装 Node.js&lt;/strong&gt;（打包后用的是 Electron 自带的 Node）&lt;/li&gt;
+&lt;li&gt;Windows 版安装时会写入&lt;strong&gt;开机自启&lt;/strong&gt;（&lt;code&gt;--hidden&lt;/code&gt;，开机只常驻托盘、不弹窗），等于&amp;quot;一直连着&amp;quot;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;关窗口 ≠ 退出&lt;/strong&gt;：关掉窗口它继续在托盘跑&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;要留意&lt;/strong&gt;：官方 Release 目前&lt;strong&gt;只发布了 macOS（Apple 芯片）&lt;/strong&gt; 的安装包；想在 Windows 上用，得走非官方 fork &lt;code&gt;Chemingitch/RuiC-oc-ferry-windows&lt;/code&gt;，或者自己 build&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="风险与边界-"&gt;风险与边界 ❌
+&lt;/h3&gt;&lt;p&gt;作者在 README 里专门写了一节「诚实交代」，照搬几条关键的：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;免费模型和额度&lt;strong&gt;由上游决定，随时可能变&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;检测通过只代表&amp;quot;这一次能按协议产生动作&amp;quot;，&lt;strong&gt;不代表完整工作流都验证过&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;启动后会自动发检测请求，&lt;strong&gt;会消耗少量免费额度&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;界面上显示的耗时是&lt;strong&gt;完整请求用时&lt;/strong&gt;，不是首字延迟；剩余额度上游不提供，查不到&lt;/li&gt;
+&lt;li&gt;系统代理只支持手动 HTTP/HTTPS，&lt;strong&gt;不支持 PAC / SOCKS&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;macOS 包未做 Apple 公证，首次打开可能要右键「打开」；若提示&amp;quot;已损坏&amp;quot;，先核对 sha256，再执行 &lt;code&gt;xattr -dr com.apple.quarantine &amp;quot;/Applications/OC Ferry.app&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="三值不值得用"&gt;三、值不值得用
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;值得一试，但别当主力。&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;结论&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;适合&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;想给 WorkBuddy 加一条免费备用通道的人；手上已经有 OpenCode；macOS 用户（体验最顺）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;不适合&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;指望它当生产力主力的人（免费池不稳）；Windows 且完全不想折腾的人&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;心态&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;当成&lt;strong&gt;体验通道 / 应急通道&lt;/strong&gt;，而不是日常主力模型&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;三条红线&lt;/strong&gt;：别拿它跑重要工作流；别把额度当成无限；模型有权限边界，重要操作自己盯一眼。&lt;/p&gt;
+&lt;h2 id="四怎么用"&gt;四、怎么用
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;其实就点两下。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;安装包打开后，&lt;strong&gt;首次启动会自动扫描免费模型 + 逐个检测 + 自动导入一次&lt;/strong&gt;。之后想重新来一遍：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;点 &lt;strong&gt;「检测全部」&lt;/strong&gt; —— 重新扫描并检测模型&lt;/li&gt;
+&lt;li&gt;点 &lt;strong&gt;「导入 WorkBuddy」&lt;/strong&gt; —— 把结果写进配置&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;完事。WorkBuddy 的模型列表里就会多出一批 &lt;code&gt;OC · 名字&lt;/code&gt; 的模型，选中即用。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://linsk27.github.io/p/1013-oc-ferry/oc-ferry-imported.png"
+width="1449"
+height="916"
+srcset="https://linsk27.github.io/p/1013-oc-ferry/oc-ferry-imported_hu_f7f45885d02be6f0.png 480w, https://linsk27.github.io/p/1013-oc-ferry/oc-ferry-imported_hu_5b307fd3b49c3b0f.png 1024w"
+loading="lazy"
+alt="左边是 OC Ferry 跑通的日志，右边是导入后 WorkBuddy 的模型列表"
+class="gallery-image"
+data-flex-grow="158"
+data-flex-basis="379px"
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;上图左边是跑通的日志（&lt;code&gt;ready at http://127.0.0.1:41980/v1; 12 free models; probing 12&lt;/code&gt;），右边是导入后 WorkBuddy 里的模型列表 —— 多出一批带 &lt;code&gt;OC ·&lt;/code&gt; 前缀的免费模型，选中即用。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;几个注意点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;要用就让它常驻&lt;/strong&gt; —— 关窗口它继续在托盘跑，但&lt;strong&gt;从托盘退出会把导入的条目摘掉&lt;/strong&gt;（保留你手写的）&lt;/li&gt;
+&lt;li&gt;只想重测某一个：进它的详情，点「只重测这一个」&lt;/li&gt;
+&lt;li&gt;主题切换：工具栏右上角，&lt;strong&gt;系统 / 浅色 / 深色&lt;/strong&gt;三档，选择会记住&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;下载&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;主仓库：https://github.com/HRuiCcc/RuiC-oc-ferry&lt;/li&gt;
+&lt;li&gt;Windows 非官方 fork：https://github.com/Chemingitch/RuiC-oc-ferry-windows&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="小结"&gt;小结
+&lt;/h2&gt;&lt;p&gt;一个 120 星、10 月 10 号才创建的小项目，但把&amp;quot;能不能用&amp;quot;这件事想得比很多大项目清楚：&lt;strong&gt;用隔离运行时绕过官方限制，用执行权归属守住安全边界，用缓存解决&amp;quot;每次都要重测&amp;quot;的体验问题&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;免费的东西都不稳定，这一点它自己也承认。但作为一条&amp;quot;积分不够时的备用通道&amp;quot;，它的可行性是成立的。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;项目地址：https://github.com/HRuiCcc/RuiC-oc-ferry （MIT）
+封面/配图来自项目仓库 &lt;code&gt;docs/screenshots&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</description></item></channel></rss>
